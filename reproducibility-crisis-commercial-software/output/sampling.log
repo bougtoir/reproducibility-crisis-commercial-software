@@ -1,0 +1,383 @@
+2026-03-26 12:25:01,826 [INFO] ============================================================
+2026-03-26 12:25:01,827 [INFO] REPRODUCIBILITY CRISIS EMPIRICAL STUDY
+2026-03-26 12:25:01,827 [INFO] PubMed Stratified Random Sampling Pipeline
+2026-03-26 12:25:01,827 [INFO] Date: 2026-03-26 12:25:01
+2026-03-26 12:25:01,827 [INFO] Target sample: 1000
+2026-03-26 12:25:01,827 [INFO] API Key: Not set (rate limited)
+2026-03-26 12:25:01,827 [INFO] ============================================================
+2026-03-26 12:25:01,827 [INFO] ============================================================
+2026-03-26 12:25:01,827 [INFO] Starting stratified random sampling
+2026-03-26 12:25:01,827 [INFO] Target total sample: 1000
+2026-03-26 12:25:01,827 [INFO] ============================================================
+2026-03-26 12:25:01,827 [INFO] 
+--- Stratum: Biomedical_Basic ---
+2026-03-26 12:25:02,486 [INFO]   Total available: 135,105
+2026-03-26 12:25:02,487 [INFO]   Target sample: 143
+2026-03-26 12:26:10,855 [INFO] ============================================================
+2026-03-26 12:26:10,855 [INFO] REPRODUCIBILITY CRISIS EMPIRICAL STUDY
+2026-03-26 12:26:10,856 [INFO] PubMed Stratified Random Sampling Pipeline
+2026-03-26 12:26:10,856 [INFO] Date: 2026-03-26 12:26:10
+2026-03-26 12:26:10,856 [INFO] Target sample: 1000
+2026-03-26 12:26:10,856 [INFO] API Key: Not set (rate limited)
+2026-03-26 12:26:10,856 [INFO] ============================================================
+2026-03-26 12:26:10,856 [INFO] ============================================================
+2026-03-26 12:26:10,856 [INFO] Starting stratified random sampling
+2026-03-26 12:26:10,856 [INFO] Target total sample: 1000
+2026-03-26 12:26:10,856 [INFO] ============================================================
+2026-03-26 12:26:10,856 [INFO] 
+--- Stratum: Biomedical_Basic ---
+2026-03-26 12:26:11,470 [INFO]   Total available: 135,105
+2026-03-26 12:26:11,470 [INFO]   Target sample: 143
+2026-03-26 12:26:12,132 [INFO]   Sampled: 0
+2026-03-26 12:26:12,133 [INFO] 
+--- Stratum: Clinical_Medicine ---
+2026-03-26 12:26:12,793 [INFO]   Total available: 1,723,588
+2026-03-26 12:26:12,794 [INFO]   Target sample: 143
+2026-03-26 12:26:13,553 [INFO]   Sampled: 0
+2026-03-26 12:26:13,553 [INFO] 
+--- Stratum: Chemistry_Materials ---
+2026-03-26 12:26:14,216 [INFO]   Total available: 265,124
+2026-03-26 12:26:14,216 [INFO]   Target sample: 143
+2026-03-26 12:26:14,920 [INFO]   Sampled: 0
+2026-03-26 12:26:14,921 [INFO] 
+--- Stratum: Physics_Engineering ---
+2026-03-26 12:26:15,519 [INFO]   Total available: 72,879
+2026-03-26 12:26:15,519 [INFO]   Target sample: 143
+2026-03-26 12:26:16,451 [INFO]   Sampled: 0
+2026-03-26 12:26:16,451 [INFO] 
+--- Stratum: Social_Behavioral ---
+2026-03-26 12:26:17,132 [INFO]   Total available: 2,088,838
+2026-03-26 12:26:17,133 [INFO]   Target sample: 143
+2026-03-26 12:26:17,837 [INFO]   Sampled: 0
+2026-03-26 12:26:17,837 [INFO] 
+--- Stratum: Computational_Science ---
+2026-03-26 12:26:18,485 [INFO]   Total available: 243,389
+2026-03-26 12:26:18,485 [INFO]   Target sample: 143
+2026-03-26 12:26:19,144 [INFO]   Sampled: 0
+2026-03-26 12:26:19,145 [INFO] 
+--- Stratum: Environmental_Earth ---
+2026-03-26 12:26:19,745 [INFO]   Total available: 66,694
+2026-03-26 12:26:19,745 [INFO]   Target sample: 142
+2026-03-26 12:26:20,387 [INFO]   Sampled: 0
+2026-03-26 12:26:20,387 [INFO] 
+Total PMIDs sampled: 0
+2026-03-26 12:26:20,391 [INFO] Saved 0 PMIDs to sampled_pmids.csv
+2026-03-26 12:26:20,391 [INFO] 
+============================================================
+2026-03-26 12:26:20,391 [INFO] Starting data extraction pipeline
+2026-03-26 12:26:20,392 [INFO] ============================================================
+2026-03-26 12:26:20,392 [INFO] 
+Processing stratum: Biomedical_Basic (0 papers)
+2026-03-26 12:26:20,400 [INFO]   Completed Biomedical_Basic: 0 records
+2026-03-26 12:26:20,400 [INFO] 
+Processing stratum: Clinical_Medicine (0 papers)
+2026-03-26 12:26:20,400 [INFO]   Completed Clinical_Medicine: 0 records
+2026-03-26 12:26:20,400 [INFO] 
+Processing stratum: Chemistry_Materials (0 papers)
+2026-03-26 12:26:20,401 [INFO]   Completed Chemistry_Materials: 0 records
+2026-03-26 12:26:20,401 [INFO] 
+Processing stratum: Physics_Engineering (0 papers)
+2026-03-26 12:26:20,401 [INFO]   Completed Physics_Engineering: 0 records
+2026-03-26 12:26:20,401 [INFO] 
+Processing stratum: Social_Behavioral (0 papers)
+2026-03-26 12:26:20,401 [INFO]   Completed Social_Behavioral: 0 records
+2026-03-26 12:26:20,401 [INFO] 
+Processing stratum: Computational_Science (0 papers)
+2026-03-26 12:26:20,402 [INFO]   Completed Computational_Science: 0 records
+2026-03-26 12:26:20,402 [INFO] 
+Processing stratum: Environmental_Earth (0 papers)
+2026-03-26 12:26:20,402 [INFO]   Completed Environmental_Earth: 0 records
+2026-03-26 12:26:20,403 [INFO] 
+Saved 0 records to extracted_data.csv
+2026-03-26 12:29:32,402 [INFO] ============================================================
+2026-03-26 12:29:32,402 [INFO] REPRODUCIBILITY CRISIS EMPIRICAL STUDY
+2026-03-26 12:29:32,402 [INFO] PubMed Stratified Random Sampling Pipeline
+2026-03-26 12:29:32,402 [INFO] Date: 2026-03-26 12:29:32
+2026-03-26 12:29:32,403 [INFO] Target sample: 1000
+2026-03-26 12:29:32,403 [INFO] API Key: Not set (rate limited)
+2026-03-26 12:29:32,403 [INFO] ============================================================
+2026-03-26 12:29:32,403 [INFO] ============================================================
+2026-03-26 12:29:32,403 [INFO] Starting stratified random sampling
+2026-03-26 12:29:32,403 [INFO] Target total sample: 1000
+2026-03-26 12:29:32,403 [INFO] ============================================================
+2026-03-26 12:29:32,403 [INFO] 
+--- Stratum: Biomedical_Basic ---
+2026-03-26 12:29:33,380 [INFO]   Total available: 135,105
+2026-03-26 12:29:33,381 [INFO]   Target sample: 143
+2026-03-26 12:29:35,547 [INFO]     Year 2020: 26,506 total, fetched 9999
+2026-03-26 12:29:37,612 [INFO]     Year 2021: 25,235 total, fetched 9999
+2026-03-26 12:29:39,402 [INFO]     Year 2022: 19,327 total, fetched 9999
+2026-03-26 12:29:41,363 [INFO]     Year 2023: 17,760 total, fetched 9999
+2026-03-26 12:29:43,367 [INFO]     Year 2024: 25,053 total, fetched 9999
+2026-03-26 12:29:45,425 [INFO]     Year 2025: 29,640 total, fetched 9999
+2026-03-26 12:29:45,427 [INFO]   Sampled: 143
+2026-03-26 12:29:45,427 [INFO] 
+--- Stratum: Clinical_Medicine ---
+2026-03-26 12:29:46,430 [INFO]   Total available: 1,723,588
+2026-03-26 12:29:46,431 [INFO]   Target sample: 143
+2026-03-26 12:29:48,197 [INFO]     Year 2020: 359,201 total, fetched 9999
+2026-03-26 12:29:49,880 [INFO]     Year 2021: 356,444 total, fetched 9999
+2026-03-26 12:29:51,559 [INFO]     Year 2022: 296,656 total, fetched 9999
+2026-03-26 12:29:53,173 [INFO]     Year 2023: 266,774 total, fetched 9999
+2026-03-26 12:29:54,886 [INFO]     Year 2024: 316,667 total, fetched 9999
+2026-03-26 12:29:56,651 [INFO]     Year 2025: 337,428 total, fetched 9999
+2026-03-26 12:29:56,652 [INFO]   Sampled: 143
+2026-03-26 12:29:56,652 [INFO] 
+--- Stratum: Chemistry_Materials ---
+2026-03-26 12:29:57,308 [INFO]   Total available: 265,124
+2026-03-26 12:29:57,309 [INFO]   Target sample: 143
+2026-03-26 12:29:58,832 [INFO]     Year 2020: 48,279 total, fetched 9999
+2026-03-26 12:30:00,339 [INFO]     Year 2021: 46,585 total, fetched 9999
+2026-03-26 12:30:01,925 [INFO]     Year 2022: 46,781 total, fetched 9999
+2026-03-26 12:30:03,448 [INFO]     Year 2023: 42,605 total, fetched 9999
+2026-03-26 12:30:04,999 [INFO]     Year 2024: 51,070 total, fetched 9999
+2026-03-26 12:30:06,670 [INFO]     Year 2025: 54,025 total, fetched 9999
+2026-03-26 12:30:06,672 [INFO]   Sampled: 143
+2026-03-26 12:30:06,672 [INFO] 
+--- Stratum: Physics_Engineering ---
+2026-03-26 12:30:07,244 [INFO]   Total available: 72,879
+2026-03-26 12:30:07,244 [INFO]   Target sample: 143
+2026-03-26 12:30:08,815 [INFO]     Year 2020: 13,861 total, fetched 9999
+2026-03-26 12:30:10,402 [INFO]     Year 2021: 14,134 total, fetched 9999
+2026-03-26 12:30:11,960 [INFO]     Year 2022: 13,554 total, fetched 9999
+2026-03-26 12:30:14,598 [INFO]     Year 2023: 10,180 total, fetched 9999
+2026-03-26 12:30:16,231 [INFO]     Year 2024: 12,802 total, fetched 9999
+2026-03-26 12:30:17,915 [INFO]     Year 2025: 14,719 total, fetched 9999
+2026-03-26 12:30:17,917 [INFO]   Sampled: 143
+2026-03-26 12:30:17,917 [INFO] 
+--- Stratum: Social_Behavioral ---
+2026-03-26 12:30:19,593 [INFO]   Total available: 2,088,838
+2026-03-26 12:30:19,594 [INFO]   Target sample: 143
+2026-03-26 12:30:21,282 [INFO]     Year 2020: 411,514 total, fetched 9999
+2026-03-26 12:30:22,874 [INFO]     Year 2021: 423,681 total, fetched 9999
+2026-03-26 12:30:24,457 [INFO]     Year 2022: 382,312 total, fetched 9999
+2026-03-26 12:30:28,066 [INFO]     Year 2023: 341,469 total, fetched 9999
+2026-03-26 12:30:31,880 [INFO]     Year 2024: 389,844 total, fetched 9999
+2026-03-26 12:30:33,410 [INFO]     Year 2025: 409,771 total, fetched 9999
+2026-03-26 12:30:33,412 [INFO]   Sampled: 143
+2026-03-26 12:30:33,412 [INFO] 
+--- Stratum: Computational_Science ---
+2026-03-26 12:30:35,039 [INFO]   Total available: 243,389
+2026-03-26 12:30:35,039 [INFO]   Target sample: 143
+2026-03-26 12:30:37,453 [INFO]     Year 2020: 31,282 total, fetched 9999
+2026-03-26 12:30:39,976 [INFO]     Year 2021: 37,710 total, fetched 9999
+2026-03-26 12:30:42,400 [INFO]     Year 2022: 39,357 total, fetched 9999
+2026-03-26 12:30:44,282 [INFO]     Year 2023: 34,908 total, fetched 9999
+2026-03-26 12:30:47,797 [INFO]     Year 2024: 48,794 total, fetched 9999
+2026-03-26 12:30:50,422 [INFO]     Year 2025: 63,413 total, fetched 9999
+2026-03-26 12:30:50,424 [INFO]   Sampled: 143
+2026-03-26 12:30:50,424 [INFO] 
+--- Stratum: Environmental_Earth ---
+2026-03-26 12:30:52,032 [INFO]   Total available: 66,694
+2026-03-26 12:30:52,032 [INFO]   Target sample: 142
+2026-03-26 12:30:54,598 [INFO]     Year 2020: 12,192 total, fetched 9999
+2026-03-26 12:30:56,455 [INFO]     Year 2021: 11,486 total, fetched 9999
+2026-03-26 12:30:58,125 [INFO]     Year 2022: 10,862 total, fetched 9999
+2026-03-26 12:31:00,391 [INFO]     Year 2023: 9,612 total, fetched 9612
+2026-03-26 12:31:02,498 [INFO]     Year 2024: 13,625 total, fetched 9999
+2026-03-26 12:31:04,375 [INFO]     Year 2025: 14,942 total, fetched 9999
+2026-03-26 12:31:04,377 [INFO]   Sampled: 142
+2026-03-26 12:31:04,377 [INFO] 
+Total PMIDs sampled: 1000
+2026-03-26 12:31:04,385 [INFO] Saved 1000 PMIDs to sampled_pmids.csv
+2026-03-26 12:31:04,385 [INFO] 
+============================================================
+2026-03-26 12:31:04,385 [INFO] Starting data extraction pipeline
+2026-03-26 12:31:04,385 [INFO] ============================================================
+2026-03-26 12:31:04,385 [INFO] 
+Processing stratum: Biomedical_Basic (143 papers)
+2026-03-26 12:31:43,536 [INFO] Loaded 1000 PMIDs from 7 strata
+2026-03-26 12:31:43,538 [INFO] 
+============================================================
+2026-03-26 12:31:43,538 [INFO] Starting data extraction pipeline
+2026-03-26 12:31:43,538 [INFO] ============================================================
+2026-03-26 12:31:43,538 [INFO] 
+Processing stratum: Biomedical_Basic (143 papers)
+2026-03-26 12:32:39,850 [INFO]   Completed Biomedical_Basic: 143 records
+2026-03-26 12:32:39,850 [INFO] 
+Processing stratum: Clinical_Medicine (143 papers)
+2026-03-26 12:33:28,396 [INFO]   Completed Clinical_Medicine: 143 records
+2026-03-26 12:33:28,396 [INFO] 
+Processing stratum: Chemistry_Materials (143 papers)
+2026-03-26 12:34:07,147 [INFO]   Completed Chemistry_Materials: 143 records
+2026-03-26 12:34:07,148 [INFO] 
+Processing stratum: Physics_Engineering (143 papers)
+2026-03-26 12:34:50,738 [INFO]   Completed Physics_Engineering: 143 records
+2026-03-26 12:34:50,738 [INFO] 
+Processing stratum: Social_Behavioral (143 papers)
+2026-03-26 12:35:34,601 [INFO]   Completed Social_Behavioral: 143 records
+2026-03-26 12:35:34,601 [INFO] 
+Processing stratum: Computational_Science (143 papers)
+2026-03-26 12:36:30,659 [INFO]   Completed Computational_Science: 143 records
+2026-03-26 12:36:30,660 [INFO] 
+Processing stratum: Environmental_Earth (142 papers)
+2026-03-26 12:37:13,245 [INFO]   Completed Environmental_Earth: 142 records
+2026-03-26 12:37:13,328 [INFO] 
+Saved 1000 records to extracted_data.csv
+2026-03-26 12:37:13,343 [INFO] 
+--- SUMMARY ---
+2026-03-26 12:37:13,343 [INFO]   total_papers: 1000
+2026-03-26 12:37:13,343 [INFO]   papers_with_software: 302
+2026-03-26 12:37:13,343 [INFO]   papers_with_commercial_sw: 187
+2026-03-26 12:37:13,343 [INFO]   papers_with_opensource_sw: 170
+2026-03-26 12:37:13,343 [INFO]   papers_with_version: 211
+2026-03-26 12:37:13,343 [INFO]   papers_with_code_available: 50
+2026-03-26 12:37:13,343 [INFO]   papers_with_data_available: 36
+2026-03-26 12:37:13,344 [INFO]   papers_with_pmc_fulltext: 490
+2026-03-26 12:37:13,344 [INFO]   papers_with_reproducibility_mention: 129
+2026-03-26 12:37:13,344 [INFO]   mean_software_per_paper: 0.548
+2026-03-26 12:37:13,344 [INFO]   mean_commercial_per_paper: 0.249
+2026-03-26 12:37:13,344 [INFO]   mean_version_mention_rate: 0.175
+2026-03-26 12:37:13,344 [INFO]   mean_replication_cost_usd: 324.078
+2026-03-26 12:37:13,344 [INFO]   median_replication_cost_usd: 0.000
+2026-03-26 12:37:13,344 [INFO] Extraction complete!
+2026-03-26 13:03:43,594 [INFO] ============================================================
+2026-03-26 13:03:43,594 [INFO] REPRODUCIBILITY CRISIS EMPIRICAL STUDY
+2026-03-26 13:03:43,594 [INFO] PubMed Stratified Random Sampling Pipeline
+2026-03-26 13:03:43,594 [INFO] Date: 2026-03-26 13:03:43
+2026-03-26 13:03:43,594 [INFO] Target sample: 10000
+2026-03-26 13:03:43,594 [INFO] API Key: Not set (rate limited)
+2026-03-26 13:03:43,594 [INFO] ============================================================
+2026-03-26 13:03:43,594 [INFO] ============================================================
+2026-03-26 13:03:43,595 [INFO] Starting stratified random sampling
+2026-03-26 13:03:43,595 [INFO] Target total sample: 10000
+2026-03-26 13:03:43,595 [INFO] ============================================================
+2026-03-26 13:03:43,595 [INFO] 
+--- Stratum: Biomedical_Basic ---
+2026-03-26 13:03:44,209 [INFO]   Total available: 135,105
+2026-03-26 13:03:44,209 [INFO]   Target sample: 1429
+2026-03-26 13:03:45,956 [INFO]     Year 2020: 26,506 total, fetched 9999
+2026-03-26 13:03:47,613 [INFO]     Year 2021: 25,235 total, fetched 9999
+2026-03-26 13:03:49,368 [INFO]     Year 2022: 19,327 total, fetched 9999
+2026-03-26 13:03:50,989 [INFO]     Year 2023: 17,760 total, fetched 9999
+2026-03-26 13:03:52,649 [INFO]     Year 2024: 25,053 total, fetched 9999
+2026-03-26 13:03:54,367 [INFO]     Year 2025: 29,640 total, fetched 9999
+2026-03-26 13:03:54,369 [INFO]   Sampled: 1429
+2026-03-26 13:03:54,370 [INFO] 
+--- Stratum: Clinical_Medicine ---
+2026-03-26 13:03:55,033 [INFO]   Total available: 1,723,588
+2026-03-26 13:03:55,034 [INFO]   Target sample: 1429
+2026-03-26 13:03:56,589 [INFO]     Year 2020: 359,201 total, fetched 9999
+2026-03-26 13:03:58,590 [INFO]     Year 2021: 356,444 total, fetched 9999
+2026-03-26 13:04:00,187 [INFO]     Year 2022: 296,656 total, fetched 9999
+2026-03-26 13:04:01,710 [INFO]     Year 2023: 266,774 total, fetched 9999
+2026-03-26 13:04:03,341 [INFO]     Year 2024: 316,667 total, fetched 9999
+2026-03-26 13:04:04,914 [INFO]     Year 2025: 337,428 total, fetched 9999
+2026-03-26 13:04:04,916 [INFO]   Sampled: 1429
+2026-03-26 13:04:04,916 [INFO] 
+--- Stratum: Chemistry_Materials ---
+2026-03-26 13:04:05,574 [INFO]   Total available: 265,124
+2026-03-26 13:04:05,574 [INFO]   Target sample: 1429
+2026-03-26 13:04:07,086 [INFO]     Year 2020: 48,279 total, fetched 9999
+2026-03-26 13:04:09,908 [INFO]     Year 2021: 46,585 total, fetched 9999
+2026-03-26 13:04:11,467 [INFO]     Year 2022: 46,781 total, fetched 9999
+2026-03-26 13:04:13,052 [INFO]     Year 2023: 42,605 total, fetched 9999
+2026-03-26 13:04:14,585 [INFO]     Year 2024: 51,070 total, fetched 9999
+2026-03-26 13:04:16,307 [INFO]     Year 2025: 54,025 total, fetched 9999
+2026-03-26 13:04:16,310 [INFO]   Sampled: 1429
+2026-03-26 13:04:16,310 [INFO] 
+--- Stratum: Physics_Engineering ---
+2026-03-26 13:04:16,908 [INFO]   Total available: 72,879
+2026-03-26 13:04:16,908 [INFO]   Target sample: 1429
+2026-03-26 13:04:18,499 [INFO]     Year 2020: 13,861 total, fetched 9999
+2026-03-26 13:04:20,076 [INFO]     Year 2021: 14,134 total, fetched 9999
+2026-03-26 13:04:21,614 [INFO]     Year 2022: 13,554 total, fetched 9999
+2026-03-26 13:04:23,205 [INFO]     Year 2023: 10,180 total, fetched 9999
+2026-03-26 13:04:24,783 [INFO]     Year 2024: 12,802 total, fetched 9999
+2026-03-26 13:04:26,394 [INFO]     Year 2025: 14,719 total, fetched 9999
+2026-03-26 13:04:26,397 [INFO]   Sampled: 1429
+2026-03-26 13:04:26,397 [INFO] 
+--- Stratum: Social_Behavioral ---
+2026-03-26 13:04:27,079 [INFO]   Total available: 2,088,838
+2026-03-26 13:04:27,079 [INFO]   Target sample: 1429
+2026-03-26 13:04:28,645 [INFO]     Year 2020: 411,514 total, fetched 9999
+2026-03-26 13:04:30,164 [INFO]     Year 2021: 423,681 total, fetched 9999
+2026-03-26 13:04:31,726 [INFO]     Year 2022: 382,312 total, fetched 9999
+2026-03-26 13:04:33,281 [INFO]     Year 2023: 341,469 total, fetched 9999
+2026-03-26 13:04:34,893 [INFO]     Year 2024: 389,844 total, fetched 9999
+2026-03-26 13:04:36,479 [INFO]     Year 2025: 409,771 total, fetched 9999
+2026-03-26 13:04:36,482 [INFO]   Sampled: 1429
+2026-03-26 13:04:36,482 [INFO] 
+--- Stratum: Computational_Science ---
+2026-03-26 13:04:37,084 [INFO]   Total available: 243,389
+2026-03-26 13:04:37,084 [INFO]   Target sample: 1429
+2026-03-26 13:04:38,765 [INFO]     Year 2020: 31,282 total, fetched 9999
+2026-03-26 13:04:40,412 [INFO]     Year 2021: 37,710 total, fetched 9999
+2026-03-26 13:04:42,030 [INFO]     Year 2022: 39,357 total, fetched 9999
+2026-03-26 13:04:43,648 [INFO]     Year 2023: 34,908 total, fetched 9999
+2026-03-26 13:04:45,253 [INFO]     Year 2024: 48,794 total, fetched 9999
+2026-03-26 13:04:46,855 [INFO]     Year 2025: 63,413 total, fetched 9999
+2026-03-26 13:04:46,858 [INFO]   Sampled: 1429
+2026-03-26 13:04:46,858 [INFO] 
+--- Stratum: Environmental_Earth ---
+2026-03-26 13:04:47,444 [INFO]   Total available: 66,694
+2026-03-26 13:04:47,444 [INFO]   Target sample: 1426
+2026-03-26 13:04:49,018 [INFO]     Year 2020: 12,192 total, fetched 9999
+2026-03-26 13:04:50,531 [INFO]     Year 2021: 11,486 total, fetched 9999
+2026-03-26 13:04:52,108 [INFO]     Year 2022: 10,862 total, fetched 9999
+2026-03-26 13:04:53,647 [INFO]     Year 2023: 9,612 total, fetched 9612
+2026-03-26 13:04:55,317 [INFO]     Year 2024: 13,625 total, fetched 9999
+2026-03-26 13:04:56,939 [INFO]     Year 2025: 14,942 total, fetched 9999
+2026-03-26 13:04:56,943 [INFO]   Sampled: 1426
+2026-03-26 13:04:56,943 [INFO] 
+Total PMIDs sampled: 10000
+2026-03-26 13:04:56,969 [INFO] Saved 10000 PMIDs to sampled_pmids.csv
+2026-03-26 13:04:56,969 [INFO] 
+============================================================
+2026-03-26 13:04:56,969 [INFO] Starting data extraction pipeline
+2026-03-26 13:04:56,969 [INFO] ============================================================
+2026-03-26 13:04:56,969 [INFO] 
+Processing stratum: Biomedical_Basic (1429 papers)
+2026-03-26 13:07:26,512 [WARNING] Request failed (attempt 1/5): 400 Client Error: Bad Request for url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC11567005&rettype=xml&retmode=xml. Retrying in 1s...
+2026-03-26 13:14:04,318 [WARNING] Request failed (attempt 1/5): 400 Client Error: Bad Request for url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4398881&rettype=xml&retmode=xml. Retrying in 1s...
+2026-03-26 13:14:43,081 [INFO] Loaded 10000 PMIDs from 7 strata
+2026-03-26 13:14:43,084 [INFO] 
+============================================================
+2026-03-26 13:14:43,084 [INFO] Starting data extraction pipeline
+2026-03-26 13:14:43,084 [INFO] ============================================================
+2026-03-26 13:14:43,084 [INFO] 
+Processing stratum: Biomedical_Basic (1429 papers)
+2026-03-26 13:23:11,698 [WARNING] Request failed (attempt 1/5): 400 Client Error: Bad Request for url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC11554524&rettype=xml&retmode=xml. Retrying in 1s...
+2026-03-26 13:25:14,677 [INFO]   Completed Biomedical_Basic: 1429 records
+2026-03-26 13:25:14,677 [INFO] 
+Processing stratum: Clinical_Medicine (1429 papers)
+2026-03-26 13:32:14,354 [WARNING] Request failed (attempt 1/5): ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')). Retrying in 1s...
+2026-03-26 13:34:20,464 [INFO]   Completed Clinical_Medicine: 1429 records
+2026-03-26 13:34:20,464 [INFO] 
+Processing stratum: Chemistry_Materials (1429 papers)
+2026-03-26 13:40:52,571 [INFO]   Completed Chemistry_Materials: 1429 records
+2026-03-26 13:40:52,571 [INFO] 
+Processing stratum: Physics_Engineering (1429 papers)
+2026-03-26 13:43:45,735 [WARNING] Request failed (attempt 1/5): 500 Server Error: Internal Server Error for url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=8357194&rettype=xml&retmode=xml. Retrying in 1s...
+2026-03-26 13:48:35,771 [INFO]   Completed Physics_Engineering: 1429 records
+2026-03-26 13:48:35,771 [INFO] 
+Processing stratum: Social_Behavioral (1429 papers)
+2026-03-26 13:56:35,091 [INFO]   Completed Social_Behavioral: 1429 records
+2026-03-26 13:56:35,091 [INFO] 
+Processing stratum: Computational_Science (1429 papers)
+2026-03-26 13:57:13,606 [WARNING] Request failed (attempt 1/5): 500 Server Error: Internal Server Error for url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC10575037&rettype=xml&retmode=xml. Retrying in 1s...
+2026-03-26 14:02:04,542 [WARNING] Request failed (attempt 1/5): 400 Client Error: Bad Request for url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC10691545&rettype=xml&retmode=xml. Retrying in 1s...
+2026-03-26 14:07:39,860 [WARNING] Request failed (attempt 1/5): 500 Server Error: Internal Server Error for url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC7746747&rettype=xml&retmode=xml. Retrying in 1s...
+2026-03-26 14:07:47,399 [INFO]   Completed Computational_Science: 1429 records
+2026-03-26 14:07:47,399 [INFO] 
+Processing stratum: Environmental_Earth (1426 papers)
+2026-03-26 14:14:24,257 [INFO]   Completed Environmental_Earth: 1426 records
+2026-03-26 14:14:24,910 [INFO] 
+Saved 10000 records to extracted_data.csv
+2026-03-26 14:14:24,932 [INFO] 
+--- SUMMARY ---
+2026-03-26 14:14:24,932 [INFO]   total_papers: 10000
+2026-03-26 14:14:24,933 [INFO]   papers_with_software: 2922
+2026-03-26 14:14:24,933 [INFO]   papers_with_commercial_sw: 1853
+2026-03-26 14:14:24,933 [INFO]   papers_with_opensource_sw: 1653
+2026-03-26 14:14:24,933 [INFO]   papers_with_version: 2015
+2026-03-26 14:14:24,933 [INFO]   papers_with_code_available: 529
+2026-03-26 14:14:24,933 [INFO]   papers_with_data_available: 367
+2026-03-26 14:14:24,933 [INFO]   papers_with_pmc_fulltext: 4816
+2026-03-26 14:14:24,933 [INFO]   papers_with_reproducibility_mention: 1262
+2026-03-26 14:14:24,933 [INFO]   mean_software_per_paper: 0.511
+2026-03-26 14:14:24,933 [INFO]   mean_commercial_per_paper: 0.231
+2026-03-26 14:14:24,933 [INFO]   mean_version_mention_rate: 0.170
+2026-03-26 14:14:24,933 [INFO]   mean_replication_cost_usd: 340.377
+2026-03-26 14:14:24,933 [INFO]   median_replication_cost_usd: 0.000
+2026-03-26 14:14:24,933 [INFO] Extraction complete!

@@ -1,0 +1,76 @@
+{
+  "overall": {
+    "total_papers": 10000,
+    "papers_with_software": 2922,
+    "papers_with_commercial_sw": 1853,
+    "papers_with_opensource_sw": 1653,
+    "papers_with_version": 2015,
+    "papers_with_code_available": 529,
+    "papers_with_data_available": 367,
+    "papers_with_pmc_fulltext": 4816,
+    "papers_with_reproducibility_mention": 1262,
+    "mean_software_per_paper": 0.5113,
+    "mean_commercial_per_paper": 0.2307,
+    "mean_version_mention_rate": 0.17045327561327564,
+    "mean_replication_cost_usd": 340.377,
+    "median_replication_cost_usd": 0.0
+  },
+  "by_stratum": {
+    "Biomedical_Basic": {
+      "n": 1429,
+      "sw_detection_rate": 0.40307907627711687,
+      "commercial_rate": 0.20643806857942618,
+      "version_mention_rate": 0.22433618399328686,
+      "code_available_rate": 0.10496850944716585,
+      "mean_replication_cost": 351.6039188243527
+    },
+    "Clinical_Medicine": {
+      "n": 1429,
+      "sw_detection_rate": 0.3212036389083275,
+      "commercial_rate": 0.2624212736179146,
+      "version_mention_rate": 0.22292812156353092,
+      "code_available_rate": 0.023792862141357594,
+      "mean_replication_cost": 486.51364590622813
+    },
+    "Chemistry_Materials": {
+      "n": 1429,
+      "sw_detection_rate": 0.2365290412876137,
+      "commercial_rate": 0.1728481455563331,
+      "version_mention_rate": 0.12231858220311684,
+      "code_available_rate": 0.021693491952414275,
+      "mean_replication_cost": 261.0643806857943
+    },
+    "Physics_Engineering": {
+      "n": 1429,
+      "sw_detection_rate": 0.21973407977606718,
+      "commercial_rate": 0.16655003498950316,
+      "version_mention_rate": 0.08698390482855142,
+      "code_available_rate": 0.052484254723582924,
+      "mean_replication_cost": 406.1035689293212
+    },
+    "Social_Behavioral": {
+      "n": 1429,
+      "sw_detection_rate": 0.30300909727081876,
+      "commercial_rate": 0.25052484254723584,
+      "version_mention_rate": 0.22271985071145323,
+      "code_available_rate": 0.013296011196641007,
+      "mean_replication_cost": 449.9475157452764
+    },
+    "Computational_Science": {
+      "n": 1429,
+      "sw_detection_rate": 0.37438768369489156,
+      "commercial_rate": 0.15255423372988103,
+      "version_mention_rate": 0.19162501249625113,
+      "code_available_rate": 0.12596221133659902,
+      "mean_replication_cost": 275.42757172848144
+    },
+    "Environmental_Earth": {
+      "n": 1426,
+      "sw_detection_rate": 0.18723702664796635,
+      "commercial_rate": 0.08555399719495091,
+      "version_mention_rate": 0.12215988779803645,
+      "code_available_rate": 0.028050490883590462,
+      "mean_replication_cost": 151.5820476858345
+    }
+  }
+}
