@@ -118,9 +118,9 @@ def create_english_paper():
     # ── Introduction / Background & Summary ──
     add_heading(doc, 'Background & Summary')
     
-    add_para(doc, '''More than a decade after the term "reproducibility crisis" entered mainstream scientific discourse, significant progress has been made in establishing norms for data sharing and code availability. Baker's landmark 2016 survey in Nature revealed that over 70% of researchers had tried and failed to reproduce another scientist's experiments, catalyzing institutional responses from funding agencies, publishers, and professional societies. Subsequent efforts have focused on open data mandates, code sharing policies, and the development of reproducibility-enhancing tools such as containerization platforms (Docker, Singularity) and workflow management systems (Nextflow, Snakemake).''')
+    add_para(doc, '''More than a decade after the term "reproducibility crisis" entered mainstream scientific discourse, significant progress has been made in establishing norms for data sharing and code availability. Baker's landmark 2016 survey in Nature revealed that over 70% of researchers had tried and failed to reproduce another scientist's experiments [1], catalyzing institutional responses from funding agencies, publishers, and professional societies. The FAIR Guiding Principles [7] have provided a foundational framework for scientific data management, while early work by Gentleman and Temple Lang [8] established the concept of computable documents integrating code and narrative. Subsequent efforts have focused on open data mandates, code sharing policies [13], and the development of reproducibility-enhancing tools such as containerization platforms (Docker, Singularity) and workflow management systems (Nextflow, Snakemake).''')
     
-    add_para(doc, '''However, these efforts have largely overlooked a fundamental barrier: the dependency of published research on commercial software. When a researcher reports using "SPSS version 26" or "MATLAB R2021a" in their methods section, an implicit assumption is made that future researchers can access these exact tools to verify the findings. In practice, this assumption frequently fails. Commercial software vendors typically do not provide access to legacy versions, subscription models prevent access after license expiration, and the substantial cost of proprietary licenses creates financial barriers to replication, particularly for researchers in low- and middle-income countries.''')
+    add_para(doc, '''However, these efforts have largely overlooked a fundamental barrier: the dependency of published research on commercial software. Miyakawa [11] has highlighted the broader crisis of missing raw data in published research, while Konkol et al. [12] documented the challenges of computational reproducibility in geoscientific papers. When a researcher reports using "SPSS version 26" or "MATLAB R2021a" in their methods section, an implicit assumption is made that future researchers can access these exact tools to verify the findings. In practice, this assumption frequently fails. Commercial software vendors typically do not provide access to legacy versions, subscription models prevent access after license expiration, and the substantial cost of proprietary licenses creates financial barriers to replication, particularly for researchers in low- and middle-income countries.''')
     
     add_para(doc, '''This paper addresses two interconnected questions: (1) How prevalent is commercial software dependency in contemporary published research, and what are the associated costs and barriers to replication? (2) What policies do major software vendors have regarding access to legacy versions and verification-purpose licensing? To answer these questions, we conducted a large-scale empirical study of software mentions in published papers and a systematic policy survey of commercial software vendors.''')
     
@@ -194,7 +194,7 @@ def create_english_paper():
                f'Figure 1. Software mention rates by research field, stratified by software type (any software, commercial only, open-source only). N={overall["total_papers"]:,} papers.')
     
     add_heading(doc, 'Commercial Software Landscape', level=2)
-    add_para(doc, f'''The five most frequently cited commercial software tools were SPSS (n={comm_counter.get("SPSS",0)}, {comm_counter.get("SPSS",0)/overall["total_papers"]*100:.1f}%), GraphPad Prism (n={comm_counter.get("GraphPad Prism",0)}, {comm_counter.get("GraphPad Prism",0)/overall["total_papers"]*100:.1f}%), MATLAB (n={comm_counter.get("MATLAB",0)}, {comm_counter.get("MATLAB",0)/overall["total_papers"]*100:.1f}%), Microsoft Excel (n={comm_counter.get("Microsoft Excel",0)}, {comm_counter.get("Microsoft Excel",0)/overall["total_papers"]*100:.1f}%), and Stata (n={comm_counter.get("Stata",0)}, {comm_counter.get("Stata",0)/overall["total_papers"]*100:.1f}%). Among open-source tools, R dominated (n={all_sw_counter.get("R",0)}), followed by Cytoscape (n={all_sw_counter.get("Cytoscape",0)}), ImageJ (n={all_sw_counter.get("ImageJ",0)}), ggplot2 (n={all_sw_counter.get("ggplot2",0)}), and Python (n={all_sw_counter.get("Python",0)}).''')
+    add_para(doc, f'''The five most frequently cited commercial software tools were SPSS (n={comm_counter.get("SPSS",0)}, {comm_counter.get("SPSS",0)/overall["total_papers"]*100:.1f}%), GraphPad Prism (n={comm_counter.get("GraphPad Prism",0)}, {comm_counter.get("GraphPad Prism",0)/overall["total_papers"]*100:.1f}%), MATLAB (n={comm_counter.get("MATLAB",0)}, {comm_counter.get("MATLAB",0)/overall["total_papers"]*100:.1f}%), Microsoft Excel (n={comm_counter.get("Microsoft Excel",0)}, {comm_counter.get("Microsoft Excel",0)/overall["total_papers"]*100:.1f}%), and Stata (n={comm_counter.get("Stata",0)}, {comm_counter.get("Stata",0)/overall["total_papers"]*100:.1f}%) (Fig. 2). Among open-source tools, R dominated (n={all_sw_counter.get("R",0)}), followed by Cytoscape (n={all_sw_counter.get("Cytoscape",0)}), ImageJ (n={all_sw_counter.get("ImageJ",0)}), ggplot2 (n={all_sw_counter.get("ggplot2",0)}), and Python (n={all_sw_counter.get("Python",0)}).''')
     
     add_figure(doc, FIG_DIR / 'fig5_software_landscape.png',
                f'Figure 2. Top 20 software tools in published research (N={overall["total_papers"]:,}), colored by license type (red=commercial, green=open-source).')
@@ -211,7 +211,7 @@ def create_english_paper():
                'Figure 4. (a) Version mention rates among papers citing software, and (b) code and data availability statement rates, by research field.')
     
     add_heading(doc, 'Version Availability Assessment', level=2)
-    add_para(doc, '''For commercial software citations that included version numbers, we assessed whether those specific versions are currently obtainable. The majority of cited versions were classified as "likely unavailable" — meaning the vendor does not offer legacy version access, and only the current version is available for purchase or subscription. This finding quantifies the "version accessibility gap": even when researchers diligently report which software version they used, replication may be impossible because that version cannot be obtained.''')
+    add_para(doc, '''For commercial software citations that included version numbers, we assessed whether those specific versions are currently obtainable (Fig. 5). The majority of cited versions were classified as "likely unavailable" — meaning the vendor does not offer legacy version access, and only the current version is available for purchase or subscription. This finding quantifies the "version accessibility gap": even when researchers diligently report which software version they used, replication may be impossible because that version cannot be obtained.''')
     
     add_figure(doc, FIG_DIR / 'fig6_version_availability.png',
                'Figure 5. Availability assessment of commercial software versions cited in published papers.')
@@ -273,7 +273,7 @@ def create_english_paper():
     add_para(doc, f'''The estimated mean replication cost of ${costs_nz.mean():,.0f} for papers using commercial software represents a non-trivial financial barrier, particularly for independent verification efforts and researchers in resource-limited settings. This cost is borne entirely by the researcher attempting replication, creating an asymmetry where the original research may have been conducted with institutional site licenses, but replication requires individual purchases. The total estimated cost to replicate all {len(costs_nz)} commercial-software-dependent papers in our sample would be approximately ${costs_nz.sum():,.0f}.''')
     
     add_heading(doc, 'Comparison with Existing Literature', level=2)
-    add_para(doc, '''Our findings extend the foundational work of Collberg et al. (2015), who reported that only 32.3% of computational papers could be successfully reproduced, by quantifying the specific contribution of commercial software dependency to this reproducibility failure. While previous studies have focused on code availability, data sharing, and computational environment reproducibility, our work specifically addresses the software licensing and version accessibility dimensions.''')
+    add_para(doc, '''Our findings extend the foundational work of Collberg et al. [3], who reported that only 32.3% of computational papers could be successfully reproduced, by quantifying the specific contribution of commercial software dependency to this reproducibility failure. Krafczyk et al. [14] further demonstrated the risks of misinterpretation when attempting to reproduce computational results, reinforcing the importance of exact software version availability. While previous studies have focused on code availability, data sharing, and computational environment reproducibility, our work specifically addresses the software licensing and version accessibility dimensions.''')
     
     add_para(doc, '''The proposal by Cohen-Sasson and Tur-Sinai (2022) for "Replication Agreements" provides a legal framework that complements our empirical findings. Our data demonstrate the scale of the problem that such agreements would need to address: {0} distinct commercial software tools across {1} published papers, with an average of {2:.2f} commercial tools per paper among those using commercial software.'''.format(
         len(comm_counter), overall["total_papers"], 
@@ -412,9 +412,9 @@ def create_japanese_paper():
     # ── 背景と概要 ──
     add_heading(doc, '背景と概要（Background & Summary）')
     
-    add_para(doc, '''「再現性の危機」という言葉が科学界の主流に入ってから10年以上が経過し、データ共有やコードの利用可能性に関する規範の確立において大きな進展が見られた。2016年のBakerによるNature誌のランドマーク調査では、研究者の70%以上が他の科学者の実験の再現に失敗した経験があることが明らかにされ、資金配分機関、出版社、学会による制度的対応が促進された。その後の取り組みは、オープンデータの義務化、コード共有ポリシー、コンテナ化プラットフォーム（Docker、Singularity）やワークフロー管理システム（Nextflow、Snakemake）などの再現性向上ツールの開発に焦点を当ててきた。''')
+    add_para(doc, '''「再現性の危機」という言葉が科学界の主流に入ってから10年以上が経過し、データ共有やコードの利用可能性に関する規範の確立において大きな進展が見られた。2016年のBakerによるNature誌のランドマーク調査では、研究者の70%以上が他の科学者の実験の再現に失敗した経験があることが明らかにされ[1]、資金配分機関、出版社、学会による制度的対応が促進された。FAIR原則[7]は科学データ管理の基盤的フレームワークを提供し、GentlemanとTemple Lang [8]はコードとナラティブを統合した計算可能文書の概念を確立した。その後の取り組みは、オープンデータの義務化、コード共有ポリシー[13]、コンテナ化プラットフォーム（Docker、Singularity）やワークフロー管理システム（Nextflow、Snakemake）などの再現性向上ツールの開発に焦点を当ててきた。''')
     
-    add_para(doc, '''しかし、これらの取り組みは根本的な障壁を大きく見過ごしてきた。すなわち、出版された研究の商用ソフトウェアへの依存である。研究者がMethodsセクションで「SPSS version 26」や「MATLAB R2021a」の使用を報告する際、将来の研究者がこれらの正確なツールにアクセスして知見を検証できるという暗黙の前提が存在する。実際には、この前提は頻繁に破綻する。商用ソフトウェアベンダーは通常、旧バージョンへのアクセスを提供せず、サブスクリプションモデルではライセンス期限後のアクセスが阻止され、プロプライエタリライセンスの高額なコストが特に低中所得国の研究者にとって追試の経済的障壁を生み出している。''')
+    add_para(doc, '''しかし、これらの取り組みは根本的な障壁を大きく見過ごしてきた。すなわち、出版された研究の商用ソフトウェアへの依存である。Miyakawa [11]は出版研究における生データ欠如のより広範な危機を指摘し、Konkol ら[12]は地球科学論文における計算再現性の課題を文書化した。研究者がMethodsセクションで「SPSS version 26」や「MATLAB R2021a」の使用を報告する際、将来の研究者がこれらの正確なツールにアクセスして知見を検証できるという暗黙の前提が存在する。実際には、この前提は頻繁に破綻する。商用ソフトウェアベンダーは通常、旧バージョンへのアクセスを提供せず、サブスクリプションモデルではライセンス期限後のアクセスが阻止され、プロプライエタリライセンスの高額なコストが特に低中所得国の研究者にとって追試の経済的障壁を生み出している。''')
     
     add_para(doc, '''本論文は2つの相互に関連する問いに取り組む：(1) 現代の学術論文において商用ソフトウェア依存はどの程度普及しており、追試に伴うコストと障壁はどの程度か？ (2) 主要ソフトウェアベンダーは旧バージョンへのアクセスおよび検証目的ライセンスについてどのようなポリシーを持っているか？ これらの問いに答えるため、出版論文におけるソフトウェア言及の大規模実証研究と商用ソフトウェアベンダーの体系的ポリシー調査を実施した。''')
     
@@ -461,7 +461,7 @@ def create_japanese_paper():
                f'図1. 研究分野別ソフトウェア言及率（全ソフトウェア、商用のみ、オープンソースのみ）。N={overall["total_papers"]:,}本。')
     
     add_heading(doc, '商用ソフトウェアの全体像', level=2)
-    add_para(doc, f'''最も頻繁に引用された商用ソフトウェアはSPSS（n={comm_counter.get("SPSS",0)}）、GraphPad Prism（n={comm_counter.get("GraphPad Prism",0)}）、MATLAB（n={comm_counter.get("MATLAB",0)}）、Microsoft Excel（n={comm_counter.get("Microsoft Excel",0)}）、Stata（n={comm_counter.get("Stata",0)}）であった。オープンソースツールではR（n={all_sw_counter.get("R",0)}）が圧倒的に多く、Cytoscape、ImageJ、ggplot2、Pythonが続いた。''')
+    add_para(doc, f'''最も頻繁に引用された商用ソフトウェアはSPSS（n={comm_counter.get("SPSS",0)}）、GraphPad Prism（n={comm_counter.get("GraphPad Prism",0)}）、MATLAB（n={comm_counter.get("MATLAB",0)}）、Microsoft Excel（n={comm_counter.get("Microsoft Excel",0)}）、Stata（n={comm_counter.get("Stata",0)}）であった（図2）。オープンソースツールではR（n={all_sw_counter.get("R",0)}）が圧倒的に多く、Cytoscape、ImageJ、ggplot2、Pythonが続いた。''')
     
     add_figure(doc, FIG_DIR / 'fig5_software_landscape.png',
                '図2. 学術論文における上位20ソフトウェアツール（赤=商用、緑=オープンソース）。')
@@ -470,7 +470,7 @@ def create_japanese_paper():
                '図3. 7研究分野における上位15ソフトウェアの使用分布ヒートマップ。')
     
     add_heading(doc, 'バージョン報告と入手可能性', level=2)
-    add_para(doc, f'''バージョン番号は{overall["papers_with_version"]:,}本（{overall["papers_with_version"]/overall["total_papers"]*100:.1f}%）で報告されていた。検出されたソフトウェアのうちバージョン番号が付随する平均割合は{overall["mean_version_mention_rate"]*100:.1f}%であった。引用された商用ソフトウェアバージョンの大多数は「入手困難」に分類された。''')
+    add_para(doc, f'''バージョン番号は{overall["papers_with_version"]:,}本（{overall["papers_with_version"]/overall["total_papers"]*100:.1f}%）で報告されていた。検出されたソフトウェアのうちバージョン番号が付随する平均割合は{overall["mean_version_mention_rate"]*100:.1f}%であった。引用された商用ソフトウェアバージョンの大多数は「入手困難」に分類された（図5）。''')
     
     add_figure(doc, FIG_DIR / 'fig3_version_and_availability.png',
                '図4. (a) バージョン言及率と(b) コード/データ利用可能性声明（研究分野別）。')
@@ -512,7 +512,7 @@ def create_japanese_paper():
     add_heading(doc, '考察（Discussion）')
     
     add_heading(doc, 'バージョンアクセシビリティギャップ', level=2)
-    add_para(doc, f'''本研究の知見は、再現性の危機のこれまで定量化されていなかった側面、すなわちバージョンアクセシビリティギャップを明らかにした。商用ソフトウェアを使用した{overall["papers_with_commercial_sw"]:,}本の論文の大多数が、もはやベンダーから入手できないバージョンを引用していた。バージョン報告率がわずか{overall["mean_version_mention_rate"]*100:.1f}%という事実と相まって、複合的な問題が生じている。''')
+    add_para(doc, f'''本研究の知見は、再現性の危機のこれまで定量化されていなかった側面、すなわちバージョンアクセシビリティギャップを明らかにした。Collbergら[3]は計算論文のわずか32.3%しか再現に成功しなかったと報告しており、Krafczykら[14]は計算結果の再現における誤解のリスクをさらに実証した。商用ソフトウェアを使用した{overall["papers_with_commercial_sw"]:,}本の論文の大多数が、もはやベンダーから入手できないバージョンを引用していた。バージョン報告率がわずか{overall["mean_version_mention_rate"]*100:.1f}%という事実と相まって、複合的な問題が生じている。''')
     
     add_para(doc, '''特に、2025年2月のMathematica v14.1のライセンス機構変更は象徴的事例である。この変更により、研究者は出版された研究で使用された正確なソフトウェアバージョンをアクティベートできなくなり、ベンダーの決定が一瞬にして計算研究の再現性を損なう可能性を例証した。''')
     
