@@ -192,12 +192,108 @@ def acquire_corpus_articles(source: Path, destination: Path) -> None:
     snapshot(destination / "acquisition_audit.json", (json.dumps(report, indent=2) + "\n").encode())
 
 
+def audit_articles(metadata: Path, source: Path, allow_partial: bool = False) -> dict[str, object]:
+    expected = verify_metadata(metadata)
+    if (source / "metadata_index_snapshot.csv").read_bytes() != (
+        metadata / "metadata_index.csv"
+    ).read_bytes():
+        raise ValueError("Article acquisition uses another metadata snapshot")
+    index_bytes = (source / "article_index.csv").read_bytes()
+    rows = read_csv(source / "article_index.csv")
+    if (
+        len(rows) > len(expected)
+        or [row["paper_id"] for row in rows] != [
+            row["paper_id"] for row in expected[:len(rows)]
+        ]
+        or (not allow_partial and len(rows) != len(expected))
+    ):
+        raise ValueError("Article index does not cover the required ordered frame")
+    for row, reference in zip(rows, expected, strict=False):
+        fields = ("paper_id", "pmid", "pmcid", "frame_sha256")
+        if any(row[field] != reference[field] for field in fields) or (
+            row["metadata_sha256"] != reference["source_snapshot_sha256"]
+        ):
+            raise ValueError("Article index identity or metadata binding differs")
+        pmcid = reference["pmcid"]
+        selected = (
+            reference["status"] == "identity_verified"
+            and reference["open_access_flag"] == "Y"
+            and pmcid.startswith("PMC")
+            and pmcid[3:].isdigit()
+        )
+        if not selected:
+            if row["status"] != "pmc_endpoint_not_selected_other_sources_unassessed" or any(
+                row[field] for field in (
+                    "response_sha256", "response_path", "http_status", "validation_error"
+                )
+            ):
+                raise ValueError("Unselected endpoint has an unsupported acquisition assertion")
+            continue
+        relative = Path(row["response_path"])
+        if relative.is_absolute() or ".." in relative.parts:
+            raise ValueError("Article snapshot must remain inside the evidence directory")
+        body_path = source / relative
+        if not body_path.resolve().is_relative_to(source.resolve()):
+            raise ValueError("Article snapshot leaves the evidence directory")
+        body = body_path.read_bytes()
+        receipt = mapping(json.loads(body_path.with_name("receipt.json").read_bytes()))
+        if (
+            sha256(body) != row["response_sha256"]
+            or receipt["sha256"] != row["response_sha256"]
+            or receipt["bytes"] != len(body)
+            or receipt["identifier"] != pmcid
+            or receipt["url"] != f"{API}/{pmcid}/fullTextXML"
+            or str(receipt["http_status"]) != row["http_status"]
+        ):
+            raise ValueError("Article receipt does not support the indexed bytes and request")
+        status, validation_error = "request_failed_not_access_verdict", ""
+        if receipt["http_status"] == 200:
+            try:
+                validation = verify_article(body, row["pmid"], pmcid)
+            except (ValueError, ET.ParseError) as error:
+                status = "unverified_article_response"
+                validation_error = f"{type(error).__name__}: {error}"
+            else:
+                retained = json.loads(body_path.with_name("article_validation.json").read_bytes())
+                if retained != validation:
+                    raise ValueError("Stored JATS validation differs from the retained article")
+                status = "identity_verified_article"
+        if row["status"] != status or row["validation_error"] != validation_error:
+            raise ValueError("Indexed article verdict conflicts with its source")
+    if (source / "article_index.csv").read_bytes() != index_bytes:
+        raise ValueError("Article index changed during audit; wait for acquisition to stop")
+    return {
+        "scope": "retained_acquisition_audit_only_not_G1_G5_classification",
+        "frame_sha256": expected[0]["frame_sha256"],
+        "metadata_index_sha256": sha256((metadata / "metadata_index.csv").read_bytes()),
+        "article_index_sha256": sha256(index_bytes),
+        "papers_in_frame": len(expected),
+        "indexed_papers": len(rows),
+        "unprocessed_papers": len(expected) - len(rows),
+        "coverage": "complete_frame_index" if len(rows) == len(expected) else "partial_frame_index",
+        "endpoint_scope": "open_PMC_JATS_only_other_sources_unassessed",
+        "metadata_status_counts": dict(Counter(row["status"] for row in expected)),
+        "article_status_counts": dict(Counter(row["status"] for row in rows)),
+        "input_access": "not_assessed",
+        "pilot_completed": False,
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--metadata", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--audit-report", type=Path)
+    parser.add_argument("--allow-partial", action="store_true")
     args = parser.parse_args()
-    acquire_corpus_articles(args.metadata, args.output)
+    if args.audit_report is not None:
+        report = audit_articles(args.metadata, args.output, args.allow_partial)
+        snapshot(args.audit_report, (json.dumps(report, indent=2) + "\n").encode())
+        print(json.dumps(report, indent=2))
+    elif args.allow_partial:
+        parser.error("--allow-partial requires --audit-report")
+    else:
+        acquire_corpus_articles(args.metadata, args.output)
 
 
 if __name__ == "__main__":

@@ -132,6 +132,12 @@ inputs; lawful alternative full-text sources still require investigation.
 These candidate acquisitions are neither final pilot selection nor G1–G5 labels.
 Raw evidence remains Git-ignored and must be recovered through the session's
 private evidence archive when moving to another machine.
+After acquisition stops, run `paper2.corpus_evidence` with the same `--metadata`
+and `--output` plus a new `--audit-report` path. The offline audit independently
+recomputes article identities and receipt/index assertions. An interrupted index
+requires explicit `--allow-partial`; its remaining frame rows stay unprocessed.
+Complete index coverage means the configured PMC endpoints were assessed, not
+that every paper's full text or research inputs are available.
 Candidate reviews select numbered source segments; retained quotations are
 resolved from those immutable segments without model rewriting. Invalid segment
 IDs, unbound quotations, overlong summaries and incomplete responses remain

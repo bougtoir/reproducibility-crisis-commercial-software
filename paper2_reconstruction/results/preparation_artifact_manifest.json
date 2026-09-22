@@ -132,8 +132,8 @@
     "sha256": "4e791cda43b5f246c91817e1b3845b46c40e1f84656e797244c5abc27435e18c"
   },
   "src/paper2/corpus_evidence.py": {
-    "bytes": 9039,
-    "sha256": "9e1dbd619f0078dd11bfc834f0b17cf65622003000942c7b595ca3d2f11ed455"
+    "bytes": 14116,
+    "sha256": "130b0883e90cd84a08c1954b9b82feb8094b1ea55b0075959c2694b5aa5a1616"
   },
   "src/paper2/documents.py": {
     "bytes": 33171,
@@ -280,8 +280,8 @@
     "sha256": "f00f00bd727ee1e1999032529b643fd7f20b4999f7412b4fa9f5571258777986"
   },
   "README.md": {
-    "bytes": 11154,
-    "sha256": "eeb73c13963856bf427b8fd52e4eb60085a78c20aef5d421ba0b18482fb3fb71"
+    "bytes": 11618,
+    "sha256": "9b488acdf4bac996c09f9e5095025b0869d0787318299f4a9136fb3d0ed94ed3"
   },
   "Makefile": {
     "bytes": 422,
@@ -310,6 +310,10 @@
   "tests/test_api_deadline.py": {
     "bytes": 2858,
     "sha256": "a7b8ebf5fc29a4cc898be629a86ad8900783865262a6c8b915a359eab660752c"
+  },
+  "tests/test_article_audit.py": {
+    "bytes": 6174,
+    "sha256": "37a7bb9a0c8c681a9dd02517a3cba4af73f4a9cb6fe4331ed534f1b084ae340b"
   },
   "tests/test_candidate_review.py": {
     "bytes": 1187,
