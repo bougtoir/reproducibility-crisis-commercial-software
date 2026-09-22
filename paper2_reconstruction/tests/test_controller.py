@@ -1,5 +1,6 @@
 import io
 import json
+import sys
 import tarfile
 from pathlib import Path
 
@@ -7,7 +8,22 @@ import pytest
 
 from paper2.controller import Journal, Limits, decode_action
 from paper2.core import sha256
-from paper2.isolation import regular_tar_members
+from paper2.isolation import bounded_capture, regular_tar_members
+
+
+def test_capture_enforces_live_output_and_time_limits() -> None:
+    output, errors, status, reason = bounded_capture(
+        [sys.executable, "-c", "print('observed')"], seconds=2, byte_limit=64
+    )
+    assert (output, errors, status, reason) == (b"observed\n", b"", 0, "completed")
+    output, errors, _, reason = bounded_capture(
+        [sys.executable, "-c", "print('x' * 10000)"], seconds=2, byte_limit=64
+    )
+    assert reason == "output_limit" and len(output) + len(errors) == 64
+    _, _, _, reason = bounded_capture(
+        [sys.executable, "-c", "import time; time.sleep(30)"], seconds=0.05, byte_limit=64
+    )
+    assert reason == "timeout"
 
 
 def tar_member(name: str, *, kind: bytes = tarfile.REGTYPE) -> bytes:

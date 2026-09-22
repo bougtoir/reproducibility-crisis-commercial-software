@@ -37,8 +37,10 @@ def regular_tar_members(raw: bytes) -> dict[str, bytes]:
     if len(raw) > MAX_ARTIFACT_BYTES:
         raise ValueError("Worker artifact archive exceeded the fixed export limit")
     files: dict[str, bytes] = {}
-    with tarfile.open(fileobj=io.BytesIO(raw), mode="r:") as archive:
-        for member in archive.getmembers():
+    with tarfile.open(fileobj=io.BytesIO(raw), mode="r|") as archive:
+        for index, member in enumerate(archive):
+            if index >= 1000:
+                raise ValueError("Worker artifact archive has excessive members")
             parts = tuple(part for part in PurePosixPath(member.name).parts if part != ".")
             if not parts:
                 continue
@@ -57,6 +59,57 @@ def regular_tar_members(raw: bytes) -> dict[str, bytes]:
                 raise ValueError("Worker artifact could not be read")
             files[name] = payload.read()
     return files
+
+
+def bounded_capture(
+    arguments: list[str], seconds: float, byte_limit: int
+) -> tuple[bytes, bytes, int | None, str]:
+    if seconds <= 0 or byte_limit <= 0:
+        raise ValueError("Capture limits must be positive")
+    process = subprocess.Popen(
+        arguments, stdout=subprocess.PIPE, stderr=subprocess.PIPE, env={"PATH": "/usr/bin:/bin"}
+    )
+    streams: dict[str, bytearray] = {"stdout": bytearray(), "stderr": bytearray()}
+    total = 0
+    reason = "completed"
+    started = time.monotonic()
+    try:
+        with selectors.DefaultSelector() as selector:
+            assert process.stdout is not None and process.stderr is not None
+            selector.register(process.stdout, selectors.EVENT_READ, "stdout")
+            selector.register(process.stderr, selectors.EVENT_READ, "stderr")
+            while selector.get_map():
+                remaining = seconds - (time.monotonic() - started)
+                if remaining <= 0:
+                    reason = "timeout"
+                    break
+                for key, _ in selector.select(min(0.1, remaining)):
+                    chunk = os.read(key.fd, 65536)
+                    if not chunk:
+                        selector.unregister(key.fileobj)
+                        continue
+                    retained = chunk[: byte_limit - total]
+                    streams[key.data].extend(retained)
+                    total += len(retained)
+                    if len(retained) != len(chunk):
+                        reason = "output_limit"
+                        break
+                if reason != "completed":
+                    break
+            if reason == "completed":
+                try:
+                    process.wait(timeout=max(0.001, seconds - (time.monotonic() - started)))
+                except subprocess.TimeoutExpired:
+                    reason = "timeout"
+    finally:
+        if process.poll() is None:
+            process.kill()
+        process.wait()
+        if process.stdout is not None:
+            process.stdout.close()
+        if process.stderr is not None:
+            process.stderr.close()
+    return bytes(streams["stdout"]), bytes(streams["stderr"]), process.returncode, reason
 
 
 class Worker:
@@ -157,16 +210,17 @@ class Worker:
             "a=tarfile.open(fileobj=sys.stdout.buffer,mode='w|');"
             "a.add('/work',arcname='.',recursive=True);a.close()"
         )
-        result = subprocess.run(
+        output, errors, status, reason = bounded_capture(
             [DOCKER, "exec", self.name, "python", "-c", exporter],
-            check=True,
-            capture_output=True,
-            timeout=30,
-            env={"PATH": "/usr/bin:/bin"},
+            seconds=30,
+            byte_limit=MAX_ARTIFACT_BYTES,
         )
-        snapshot(destination / "artifacts.tar", result.stdout)
+        snapshot(destination / "artifacts.tar", output)
+        snapshot(destination / "export.stderr", errors)
+        if reason != "completed" or status != 0:
+            raise ValueError(f"Worker artifact export stopped: {reason}; status={status}")
         records = []
-        for name, payload in regular_tar_members(result.stdout).items():
+        for name, payload in regular_tar_members(output).items():
             snapshot(destination / "files" / name, payload)
             records.append({"path": name, "bytes": len(payload), "sha256": sha256(payload)})
         return records

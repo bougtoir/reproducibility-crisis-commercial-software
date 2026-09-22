@@ -148,8 +148,8 @@
     "sha256": "8f7996bdd4ceedcf0c0ed7a2450a5c9b1dc0fbb0a97648f9c731eac1aa5a7014"
   },
   "src/paper2/isolation.py": {
-    "bytes": 10679,
-    "sha256": "fe0a2d150c25bd8a66dea7af41062cd343ac8b82d5f9c15ef32e3eeb56a48bb6"
+    "bytes": 13134,
+    "sha256": "ab148f485c69b8e089da2583b025affaa084eda500f88d8b66781f23c5e799d8"
   },
   "src/paper2/model_api.py": {
     "bytes": 5668,
@@ -308,8 +308,8 @@
     "sha256": "6e9172096341f80fa68390feb4b5ad08b5532fa4514294dba75ae17af3036e30"
   },
   "tests/test_controller.py": {
-    "bytes": 2415,
-    "sha256": "f38579092e728e22f11ec5c110482a51c46e61c92e66a5ec127873db9c4c1b5a"
+    "bytes": 3105,
+    "sha256": "bef40b06caa783e061bf255637c7e7ab678af29379c45f629a0ec193e39540dc"
   },
   "tests/test_core.py": {
     "bytes": 5745,
