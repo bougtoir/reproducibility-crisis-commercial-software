@@ -1,4 +1,7 @@
 FROM python@sha256:65a93d69fa75478d554f4ad27c85c1e69fa184956261b4301ebaf6dbb0a3543d
 COPY requirements-science.lock /opt/requirements-science.lock
 RUN python -m pip install --no-cache-dir --only-binary=:all: --require-hashes -r /opt/requirements-science.lock
+RUN apt-get update \
+    && apt-get install --no-install-recommends -y clustalw=2.1+lgpl-7 iqtree=2.0.7+dfsg-1 \
+    && rm -rf /var/lib/apt/lists/*
 ENV OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=/work/.matplotlib HOME=/work

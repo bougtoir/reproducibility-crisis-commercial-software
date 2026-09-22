@@ -156,8 +156,8 @@
     "sha256": "1f3a6646a855fc925c4418116d0113997b81dd771248b876ed7259743701498b"
   },
   "src/paper2/scientific_image.py": {
-    "bytes": 3779,
-    "sha256": "470557f07f05bbc6adc7222fb9c985cc6411ba597781e0ace0b8da011c804da2"
+    "bytes": 6757,
+    "sha256": "7e5f744afa80a2240363f6ea24f84fb27e2a608d51e32a68c46af83a1d0d43bf"
   },
   "src/paper2/timestamp.py": {
     "bytes": 3940,
@@ -264,8 +264,8 @@
     "sha256": "380188bf46d1f864d59c14182a9e3a552de1b6760d2f7e70286e5a6d01b5d574"
   },
   "Dockerfile.science": {
-    "bytes": 363,
-    "sha256": "e00941ae9d15b1288f37d45a56c00deb3907378eae7a490a5085a9f70aa93239"
+    "bytes": 511,
+    "sha256": "5ba0a8360a9f45c8e7b2105c2fe1df03a447d265afb2c1934cc45263848a6b77"
   },
   ".dockerignore": {
     "bytes": 50,
@@ -276,8 +276,8 @@
     "sha256": "f00f00bd727ee1e1999032529b643fd7f20b4999f7412b4fa9f5571258777986"
   },
   "README.md": {
-    "bytes": 9501,
-    "sha256": "d9f4176f6dda0ac93f482c7bbb2aab0ea7a8b24ffdb349569b6190ea07932590"
+    "bytes": 9814,
+    "sha256": "93d09d52d23f4d7233d6b5a2b4cd316b8354ed899b8ad8fc8356f3624bcdb1af"
   },
   "Makefile": {
     "bytes": 422,

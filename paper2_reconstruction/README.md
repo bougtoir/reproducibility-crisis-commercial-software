@@ -101,8 +101,12 @@ process, preserving the archive and hashes. Absolute/traversing paths, links,
 special files, duplicate members and oversized exports are rejected.
 Its demonstration is synthetic; claimed reports are not adjudicated outcomes.
 The scientific-image command builds a hash-locked general Python stack using
-binary wheels, runs import and containment checks, and records the immutable
-local image identifier. It does not establish paper-specific dependency closure.
+binary wheels and version-pinned ClustalW/IQ-TREE packages. It checks imports,
+containment and alignment/tree construction on explicitly synthetic sequences,
+retaining the outputs, executable hashes and installed system-package inventory.
+The immutable local image identifier binds that environment; transitive apt
+versions are recorded but are not fully locked for future rebuilds.
+These checks do not establish paper-specific dependency closure or scientific validity.
 The API socket timeout is limited by the remaining run budget, but strict in-flight
 wall enforcement and hidden provider accounting remain unqualified.
 
