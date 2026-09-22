@@ -1,6 +1,8 @@
 import argparse
 import http.client
 import json
+import math
+import multiprocessing
 import os
 import time
 from dataclasses import asdict, dataclass
@@ -28,6 +30,65 @@ class Completion:
     prompt_tokens: int
     completion_tokens: int
     elapsed_seconds: float
+
+
+def bounded_complete(
+    messages: list[dict[str, str]], archive: Path, max_tokens: int, timeout_seconds: int = 120
+) -> Completion:
+    if not 1 <= timeout_seconds <= 120:
+        raise ValueError("API deadline must be between one and 120 seconds")
+    archive.mkdir(parents=True, exist_ok=False)
+    context = json.dumps(messages, ensure_ascii=False).encode()
+    snapshot(archive / "context.json", context)
+    process = multiprocessing.get_context("spawn").Process(
+        target=complete, args=(messages, archive / "api", max_tokens, timeout_seconds)
+    )
+    started = time.monotonic()
+    process.start()
+    process.join(max(0, timeout_seconds - (time.monotonic() - started)))
+    timed_out = process.is_alive()
+    if timed_out:
+        process.kill()
+        process.join()
+    boundary = {
+        "scope": "controller_API_process_boundary",
+        "deadline_seconds": timeout_seconds,
+        "elapsed_seconds": time.monotonic() - started,
+        "context_sha256": sha256(context),
+        "exitcode": process.exitcode,
+        "status": "deadline_exceeded" if timed_out else "process_exited",
+        "provider_inflight_cancellation": "not_confirmed" if timed_out else "not_requested",
+        "retries": 0,
+    }
+    snapshot(archive / "boundary.json", (json.dumps(boundary, indent=2) + "\n").encode())
+    if timed_out or process.exitcode != 0:
+        raise RuntimeError(
+            "Model API process stopped; provider usage may be unknown; request not retried"
+        )
+    value = mapping(json.loads((archive / "api/completion.json").read_bytes()))
+    text_fields = ("response_id", "reported_model", "model_version", "content", "finish_reason")
+    if any(not isinstance(value[field], str) for field in text_fields):
+        raise ValueError("Stored completion has invalid text fields")
+    prompt_tokens, completion_tokens = value["prompt_tokens"], value["completion_tokens"]
+    elapsed = value["elapsed_seconds"]
+    if (
+        type(prompt_tokens) is not int
+        or type(completion_tokens) is not int
+        or not isinstance(elapsed, float | int)
+        or min(prompt_tokens, completion_tokens, elapsed) < 0
+        or not math.isfinite(elapsed)
+    ):
+        raise ValueError("Stored completion has invalid usage fields")
+    return Completion(
+        str(value["response_id"]),
+        str(value["reported_model"]),
+        str(value["model_version"]),
+        str(value["content"]),
+        str(value["finish_reason"]),
+        prompt_tokens,
+        completion_tokens,
+        float(elapsed),
+    )
 
 
 def complete(

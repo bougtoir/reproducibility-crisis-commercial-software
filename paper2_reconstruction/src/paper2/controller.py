@@ -9,7 +9,7 @@ from pathlib import Path
 
 from paper2.core import sha256, snapshot
 from paper2.isolation import IMAGE, Worker
-from paper2.model_api import MODEL, complete, mapping
+from paper2.model_api import MODEL, bounded_complete, mapping
 
 SYSTEM = """You are an isolated publication-only reconstruction instrument.
 Respond only with JSON: {"action":"python","code":"..."} or
@@ -136,7 +136,7 @@ def run(
     )
     worker: Worker | None = None
     started = time.monotonic()
-    tokens, calls, requests = 0, 0, 0
+    tokens, calls, requests, accounted_requests = 0, 0, 0, 0
     reason = "not_started"
     report: dict[str, object] | None = None
     artifacts: list[dict[str, object]] = []
@@ -157,13 +157,14 @@ def run(
             journal.record("request_start", {"request_index": request_index})
             requests += 1
             remaining = max(1, min(120, int(limits.seconds - (time.monotonic() - started))))
-            response = complete(
+            response = bounded_complete(
                 messages,
                 destination / f"api-{request_index:04d}",
                 limits.max_completion_tokens,
                 remaining,
             )
             tokens += response.prompt_tokens + response.completion_tokens
+            accounted_requests += 1
             journal.record("response", asdict(response))
             if time.monotonic() - started >= limits.seconds:
                 reason = "wall_limit"
@@ -226,7 +227,12 @@ def run(
         "stop_reason": reason,
         "requests": requests,
         "tool_calls": calls,
-        "provider_accounted_tokens": tokens,
+        "provider_accounted_tokens": tokens if requests == accounted_requests else "unknown",
+        "known_provider_accounted_tokens": tokens,
+        "api_requests_with_usage": accounted_requests,
+        "usage_completeness": (
+            "complete_for_requested_calls" if requests == accounted_requests else "partial"
+        ),
         "elapsed_seconds": time.monotonic() - started,
         "claimed_report": report,
         "worker_artifacts": artifacts,
@@ -283,7 +289,7 @@ def qualify(destination: Path) -> dict[str, object]:
             "scientific_dependency_closure_and_packages",
             "custodian_and_independent_adjudication",
             "external_timestamp_and_reveal_enforcement",
-            "API_call_inflight_wall_budget_and_provider_hidden_accounting",
+            "provider_hidden_accounting_and_server_side_cancellation",
         ],
     }
     snapshot(destination / "report.json", (json.dumps(result, indent=2) + "\n").encode())

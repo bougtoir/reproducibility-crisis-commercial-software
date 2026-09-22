@@ -107,8 +107,22 @@ retaining the outputs, executable hashes and installed system-package inventory.
 The immutable local image identifier binds that environment; transitive apt
 versions are recorded but are not fully locked for future rebuilds.
 These checks do not establish paper-specific dependency closure or scientific validity.
-The API socket timeout is limited by the remaining run budget, but strict in-flight
-wall enforcement and hidden provider accounting remain unqualified.
+The controller runs each API call in a separate trusted process with a wall deadline
+limited by the remaining run budget. Expired calls stop without retry; a receipt
+preserves unknown usage and does not assert server-side cancellation. Hidden
+provider accounting and cancellation after a disconnected request remain unobservable.
+
+`paper2.packages` checks the allowed/blocked CSV templates before preparing a
+worker mount. Pass `--evidence-root`, `--allowed`, `--blocked`, `--output`,
+`--paper-id` and `--policy-version`. Paths in the custody CSVs are relative to the
+evidence root; `item_id` becomes the safe filename inside `output/input`.
+It requires reviewed exact hashes, byte sizes, UTC dates, explicit rights and
+complete allowed artifacts. Only the `input` directory may be mounted; the
+blocked manifest and custody records remain outside it. Exact reviewed ZIP
+members retain archive lineage; other content transformations are not qualified.
+Unknown decisions, hash conflicts, symlinks, traversal and excessive sizes fail
+closed. Mechanical checks do not establish the correctness or independence of
+the declared custodian review and do not authorize empirical runs.
 
 The candidate acquisition command ranks one unassessed candidate per assigned field,
 preserves exact Europe PMC metadata and permitted full-text XML responses with
@@ -118,6 +132,10 @@ inputs; lawful alternative full-text sources still require investigation.
 These candidate acquisitions are neither final pilot selection nor G1–G5 labels.
 Raw evidence remains Git-ignored and must be recovered through the session's
 private evidence archive when moving to another machine.
+Candidate reviews select numbered source segments; retained quotations are
+resolved from those immutable segments without model rewriting. Invalid segment
+IDs, unbound quotations, overlong summaries and incomplete responses remain
+unresolved. These machine proposals do not validate G1–G5 or select pilot targets.
 
 The corpus-metadata command queries the complete unique-PMID frame in bounded
 batches. Invalid batch envelopes are retained and decomposed into smaller requests;
