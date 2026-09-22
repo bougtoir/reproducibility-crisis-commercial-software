@@ -2,7 +2,9 @@
   "study_status": "PREPARATION_ONLY_NOT_SUBMISSION_READY",
   "corpus_identity": "VOR-linked deposited corpus located and commit pinned",
   "distinct_10000_paper_precondition": "not_met",
-  "paper_frame_decision": "awaiting_author_confirmation",
+  "paper_frame_decision": "approved_unique_pmid",
+  "paper_frame_size": 9935,
+  "paper_frame_sha256": "b62c21dea2110e4472e7f8c76046fc1caaffa554fcf5b5f5c3d79db8fec56b2a",
   "historical_extraction_validation": "not_verified_no_annotations_recovered",
   "historical_raw_API_snapshots": "not_recovered",
   "pilot": "NOT_COMPLETED",
@@ -13,7 +15,7 @@
   "blind_freeze": "NOT_COMPLETED",
   "descriptive_reveal": "NOT_COMPLETED",
   "human_validation": "NOT_COMPLETED",
-  "firewall_harness": "proposed_not_implemented_or_validated",
+  "firewall_harness": "prototype_only_full_information_firewall_unqualified",
   "primary_success_rate": "not_assessable",
   "sources_verified": 8
 }

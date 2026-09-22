@@ -21,8 +21,11 @@ The source is the VOR-linked EPJ deposit, identified in the acquisition ledger.
 Preserve all rows. The automatically generated source audit distinguishes source
 records, unique PMIDs and overlapping field memberships. The requested distinct
 paper count is not met by the inspected deposit. No new papers are substituted.
-The unique-PMID inference frame remains a proposed resolution awaiting author
-confirmation or recovery of a corrected, validated source.
+The author approved the unique-PMID inference frame while retaining all original
+rows. The verbatim decision is in `data/frame_decision.json`; the generated
+`results/frame_manifest.json` binds the decision, source and inference-frame hashes.
+This resolves the Paper II identity rule, not the historical distinct-paper claim,
+classification validity or prospective protocol freeze.
 
 Paper identity is PMID; duplicate DOIs or titles trigger review, not automatic
 merging. Records are traceable by commit, file and one-based data-row position.
@@ -55,7 +58,7 @@ not evidence that the underlying data do not exist.
 
 ## Prospective pilot and freeze sequence
 
-After frame resolution and harness qualification, select seven pilot papers,
+After harness qualification, select seven pilot papers,
 one from each nonempty disjoint field assignment, by the deterministic hash
 procedure in SAP. These are feasibility cases excluded from the main sample.
 Use main-frame replacements only if prospectively ineligible, recording every

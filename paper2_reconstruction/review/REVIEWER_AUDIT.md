@@ -6,7 +6,7 @@
 
 | Domain | Finding | Scientific severity / benefit / feasibility | Disposition |
 |---|---|---|---|
-| Frame | Requested distinct-paper count differs from the deposited unique-PMID count. | Fatal denominator issue; high benefit; needs source decision. | Preserve every source row; derive identity bridge; await corrected source or explicit paper-frame confirmation. |
+| Frame | Requested distinct-paper count differs from the deposited unique-PMID count. | Resolved for Paper II by explicit author approval; historical discrepancy remains. | Author approved unique-PMID identity; retain every source row and membership, with source/decision/frame hashes. |
 | Empirical evidence | No pilot, main runs, frozen targets, blind freeze, reveal or human outcomes exist. | Fatal to an empirical result paper; indispensable; requires real work. | No rates, fabricated tables or completed-study abstract. All documents labelled preparation. |
 | Measurement | General Devin tools do not establish the specified information boundary. | Fatal to a blind independent-reconstruction claim; high benefit; needs enforced harness and qualification. | Separate audit sessions never counted as experimental replicates; main launch prohibited in this build. |
 | Historical variables | Existing availability flags are text-detection proxies; validation annotations not located. | Major if used as access truth; high benefit; new access/classification evidence required. | Rename as historical detections; no conversion to gates or failures. |

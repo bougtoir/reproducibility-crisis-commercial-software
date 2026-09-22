@@ -1,0 +1,238 @@
+import argparse
+import json
+import os
+import selectors
+import subprocess
+import time
+import uuid
+from dataclasses import asdict, dataclass
+from datetime import datetime, timezone
+from pathlib import Path
+
+from paper2.core import sha256, snapshot
+
+IMAGE = "python@sha256:65a93d69fa75478d554f4ad27c85c1e69fa184956261b4301ebaf6dbb0a3543d"
+DOCKER = "/usr/bin/docker"
+
+
+@dataclass(frozen=True)
+class Execution:
+    code_sha256: str
+    returncode: int
+    output: str
+    stop_reason: str
+    elapsed_seconds: float
+
+
+def docker(*arguments: str) -> str:
+    return subprocess.check_output(
+        [DOCKER, *arguments], text=True, timeout=30, env={"PATH": "/usr/bin:/bin"}
+    ).strip()
+
+
+class Worker:
+    def __init__(self, package: Path, expected: dict[str, str]) -> None:
+        actual: dict[str, str] = {}
+        for path in package.rglob("*"):
+            if path.is_symlink():
+                raise ValueError("Input packages must not contain symlinks")
+            if path.is_file():
+                actual[str(path.relative_to(package))] = sha256(path.read_bytes())
+        if not expected or actual != expected or package.is_symlink():
+            raise ValueError("Input package differs from exact approved manifest")
+        self.name = f"paper2-qualification-{uuid.uuid4().hex}"
+        self.closed = False
+        docker(
+            "run",
+            "--detach",
+            "--name",
+            self.name,
+            "--network",
+            "none",
+            "--read-only",
+            "--user",
+            "65534:65534",
+            "--cap-drop",
+            "ALL",
+            "--security-opt",
+            "no-new-privileges",
+            "--pids-limit",
+            "64",
+            "--memory",
+            "2g",
+            "--memory-swap",
+            "2g",
+            "--cpus",
+            "1",
+            "--workdir",
+            "/work",
+            "--tmpfs",
+            "/work:rw,nosuid,nodev,size=512m,mode=1777",
+            "--tmpfs",
+            "/tmp:rw,nosuid,nodev,size=64m,mode=1777",
+            "--mount",
+            f"type=bind,source={package.resolve()},target=/input,readonly",
+            IMAGE,
+            "sleep",
+            "infinity",
+        )
+        self.inspection = docker("inspect", self.name)
+
+    def execute(self, code: str, seconds: float = 30, max_output: int = 65536) -> Execution:
+        if self.closed:
+            raise RuntimeError("A sealed worker cannot execute additional code")
+        start = time.monotonic()
+        output = bytearray()
+        reason = "completed"
+        with (
+            subprocess.Popen(
+                [DOCKER, "exec", self.name, "python", "-I", "-u", "-c", code],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                env={"PATH": "/usr/bin:/bin"},
+            ) as process,
+            selectors.DefaultSelector() as selector,
+        ):
+            assert process.stdout is not None
+            selector.register(process.stdout, selectors.EVENT_READ)
+            while selector.get_map():
+                remaining = seconds - (time.monotonic() - start)
+                if remaining <= 0:
+                    reason = "wall_limit"
+                    break
+                for key, _ in selector.select(min(remaining, 0.2)):
+                    chunk = os.read(key.fd, min(8192, max_output + 1 - len(output)))
+                    if not chunk:
+                        selector.unregister(key.fileobj)
+                        continue
+                    output.extend(chunk)
+                if len(output) > max_output:
+                    reason = "output_limit"
+                    break
+            if reason != "completed":
+                docker("kill", self.name)
+                self.closed = True
+                process.kill()
+            returncode = process.wait(timeout=10)
+        return Execution(
+            sha256(code.encode()),
+            returncode,
+            bytes(output[:max_output]).decode(errors="replace"),
+            reason,
+            time.monotonic() - start,
+        )
+
+    def close(self) -> None:
+        docker("rm", "--force", self.name)
+        self.closed = True
+
+
+PROBES = """
+import json
+import os
+import socket
+from pathlib import Path
+
+checks = {"nonroot": os.getuid() == 65534}
+checks["input_readable"] = Path("/input/allowed.txt").read_text() == "SYNTHETIC_ALLOWED"
+checks["no_host_canary"] = not Path(HOST_CANARY_PATH).exists()
+checks["no_docker_socket"] = not Path("/var/run/docker.sock").exists()
+checks["no_api_credential"] = "DEEPSEEK_API_KEY" not in os.environ
+checks["no_sibling_state"] = not Path("/work/sibling.txt").exists()
+for name, path in (
+    ("input_readonly", "/input/write-test"),
+    ("root_readonly", "/root-write-test"),
+):
+    try:
+        Path(path).write_text("synthetic")
+        checks[name] = False
+    except OSError:
+        checks[name] = True
+with socket.socket() as connection:
+    connection.settimeout(2)
+    try:
+        connection.connect(("1.1.1.1", 443))
+        checks["external_network_denied"] = False
+    except OSError:
+        checks["external_network_denied"] = True
+status = Path("/proc/self/status").read_text()
+checks["capabilities_empty"] = "CapEff:\\t0000000000000000" in status
+checks["no_new_privileges"] = "NoNewPrivs:\\t1" in status
+checks["seccomp_filter"] = "Seccomp:\\t2" in status
+checks["memory_limit"] = Path("/sys/fs/cgroup/memory.max").read_text().strip() == "2147483648"
+checks["pids_limit"] = Path("/sys/fs/cgroup/pids.max").read_text().strip() == "64"
+Path("/work/sibling.txt").write_text("SYNTHETIC_SIBLING")
+print(json.dumps(checks, sort_keys=True))
+"""
+
+
+def qualification(destination: Path) -> dict[str, object]:
+    destination.mkdir(parents=True, exist_ok=False)
+    package = destination / "package"
+    package.mkdir()
+    snapshot(package / "allowed.txt", b"SYNTHETIC_ALLOWED")
+    snapshot(destination / "host-canary.txt", b"SYNTHETIC_FORBIDDEN")
+    probes = PROBES.replace(
+        "HOST_CANARY_PATH", json.dumps(str((destination / "host-canary.txt").resolve()))
+    )
+    snapshot(destination / "probes.py", probes.encode())
+    expected = {"allowed.txt": sha256(b"SYNTHETIC_ALLOWED")}
+    executions = []
+    all_passed = True
+    for index in range(2):
+        worker = Worker(package, expected)
+        try:
+            snapshot(destination / f"worker-{index}.json", worker.inspection.encode())
+            result = worker.execute(probes)
+            snapshot(
+                destination / f"probe-{index}.json", json.dumps(asdict(result), indent=2).encode()
+            )
+            checks: dict[str, bool] = json.loads(result.output)
+            passed = (
+                result.returncode == 0
+                and result.stop_reason == "completed"
+                and len(checks) == 14
+                and all(checks.values())
+            )
+            all_passed = all_passed and passed
+            executions.append(checks)
+            limit = worker.execute("while True: pass", seconds=1)
+            all_passed = all_passed and limit.stop_reason == "wall_limit"
+            snapshot(
+                destination / f"timeout-{index}.json", json.dumps(asdict(limit), indent=2).encode()
+            )
+        finally:
+            worker.close()
+    report: dict[str, object] = {
+        "status": "execution_controls_pass" if all_passed else "execution_controls_failed",
+        "scope": "synthetic_software_qualification_only",
+        "main_study_authorized": False,
+        "pilot_authorized": False,
+        "image": IMAGE,
+        "harness_sha256": sha256(Path(__file__).read_bytes()),
+        "recorded_at_utc": datetime.now(timezone.utc).isoformat(),
+        "checks": executions,
+        "unqualified": [
+            "model_API_controller_and_effective_context",
+            "package_custodian_review_and_broker",
+            "dependency_closure_and_scientific_packages",
+            "telemetry_completeness_and_budget_comparability",
+            "independent_adjudication_and_external_freeze",
+        ],
+    }
+    snapshot(destination / "report.json", (json.dumps(report, indent=2) + "\n").encode())
+    return report
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, required=True)
+    args = parser.parse_args()
+    report = qualification(args.output)
+    print(json.dumps(report, indent=2))
+    if report["status"] != "execution_controls_pass":
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()

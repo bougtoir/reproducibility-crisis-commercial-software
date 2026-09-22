@@ -1,5 +1,8 @@
 import json
+import os
 import zipfile
+from datetime import datetime, timezone
+from io import BytesIO
 from pathlib import Path
 
 import matplotlib
@@ -19,6 +22,18 @@ from paper2.build import ROOT
 from paper2.core import Row, read_csv, sha256
 
 STATUS = "PREPARATION DRAFT — NOT SUBMISSION READY"
+BUILD_TIME = datetime.fromtimestamp(
+    int(os.environ.get("SOURCE_DATE_EPOCH", "315532800")), timezone.utc
+)
+ARTIFACT_NAMES = (
+    "Preparation_draft_EN.docx",
+    "Supplement_protocols_DRAFT_EN.docx",
+    "Editable_tables_EN.docx",
+    "Figures_editable_EN.pptx",
+    "figure1_framework.svg",
+    "figure1_framework.pdf",
+    "figure1_framework.png",
+)
 TITLE = "From scientific description to independent computational reconstruction"
 SUBTITLE = "Prospective Paper II study linked to the EPJ commercial-software corpus"
 CAPTION = (
@@ -70,6 +85,8 @@ def style_document(document: WordDocument) -> None:
     normal.paragraph_format.space_after = Pt(6)
     document.core_properties.author = "Paper II preparation; authorship not finalized"
     document.core_properties.subject = STATUS
+    document.core_properties.created = BUILD_TIME
+    document.core_properties.modified = BUILD_TIME
     footer = section.footer.paragraphs[0]
     footer.text = STATUS
     footer.runs[0].font.size = Pt(8)
@@ -134,6 +151,7 @@ def markdown(document: WordDocument, text: str) -> None:
 
 
 def framework(output: Path) -> None:
+    matplotlib.rcParams["svg.hashsalt"] = "paper2-framework-v1"
     matplotlib.rcParams["svg.fonttype"] = "none"
     matplotlib.rcParams["pdf.fonttype"] = 42
     figure, axis = plt.subplots(figsize=(13.333, 7.5))
@@ -208,7 +226,17 @@ def framework(output: Path) -> None:
     )
     figure.tight_layout()
     for suffix in ("svg", "pdf", "png"):
-        figure.savefig(output / f"figure1_framework.{suffix}", dpi=300, facecolor="white")
+        metadata: dict[str, object] = (
+            {"CreationDate": BUILD_TIME, "ModDate": BUILD_TIME}
+            if suffix == "pdf"
+            else {"Date": BUILD_TIME.isoformat()}
+        )
+        figure.savefig(
+            output / f"figure1_framework.{suffix}",
+            dpi=300,
+            facecolor="white",
+            metadata=metadata,
+        )
     plt.close(figure)
     svg = output / "figure1_framework.svg"
     svg.write_text("\n".join(line.rstrip() for line in svg.read_text().splitlines()) + "\n")
@@ -216,6 +244,8 @@ def framework(output: Path) -> None:
 
 def slides(output: Path, characteristics: list[Row]) -> None:
     presentation = Presentation()
+    presentation.core_properties.created = BUILD_TIME
+    presentation.core_properties.modified = BUILD_TIME
     presentation.slide_width = SlideInches(13.333)
     presentation.slide_height = SlideInches(7.5)
     slide = presentation.slides.add_slide(presentation.slide_layouts[6])
@@ -322,6 +352,22 @@ def reference_text(row: Row) -> str:
     return f"{authors} ({row['year']}). {row['title']}. {row['publication_status']}. {row['URL']}"
 
 
+def zip_member(archive: zipfile.ZipFile, name: str, content: bytes) -> None:
+    stamp = BUILD_TIME.timetuple()
+    member = zipfile.ZipInfo(name, (stamp.tm_year, stamp.tm_mon, stamp.tm_mday, 0, 0, 0))
+    member.compress_type = zipfile.ZIP_DEFLATED
+    member.external_attr = 0o100644 << 16
+    archive.writestr(member, content)
+
+
+def normalize_office_archive(path: Path) -> None:
+    output = BytesIO()
+    with zipfile.ZipFile(path) as original, zipfile.ZipFile(output, "w") as normalized:
+        for name in sorted(original.namelist()):
+            zip_member(normalized, name, original.read(name))
+    path.write_bytes(output.getvalue())
+
+
 def build_documents() -> None:
     output = ROOT / "manuscript"
     output.mkdir(parents=True, exist_ok=True)
@@ -349,8 +395,8 @@ def build_documents() -> None:
         "agent, information boundary and resource budget, without consulting the original "
         "implementation or purchasing study-specific commercial software. The source audit "
         f"identified {values['source_records']:,} deposited records representing "
-        f"{values['unique_pmids']:,} distinct PMIDs, requiring an explicit paper-level frame "
-        "decision. Existing software and availability variables are retained as historical "
+        f"{values['unique_pmids']:,} distinct PMIDs. The author approved the unique-PMID "
+        "frame while preserving every deposited row. Existing variables remain historical "
         "text detections rather than validated access assessments. The proposed design "
         "separates eligibility, input and resource access, specification, implementation, "
         "execution, numerical agreement and target-linked conclusion preservation. Three "
@@ -423,7 +469,7 @@ def build_documents() -> None:
         ),
         (
             "2.2 Sampling and target selection",
-            "After source resolution, a diverse pilot will finalize operational rules. The "
+            "Using the approved frame, a diverse pilot will finalize operational rules. The "
             "main sample is approximately 100 papers, stratified using a deterministic disjoint "
             "assignment of the seven overlapping EPJ fields. Save within-field sampling "
             "probabilities and weights. Before each run, select one central target by the frozen "
@@ -519,7 +565,7 @@ def build_documents() -> None:
     )
     paragraph(
         document,
-        "Submission is on hold for source-frame resolution, qualification of an enforced "
+        "Submission is on hold for qualification of an enforced "
         "information firewall, pilot and prospective freeze, actual classification and "
         "reconstruction evidence, and human-validation status. This document must not be "
         "submitted as a completed empirical study or presented as a frozen protocol.",
@@ -606,6 +652,9 @@ def build_documents() -> None:
         ],
     )
     tables.save(str(output / "Editable_tables_EN.docx"))
+    for name in ARTIFACT_NAMES:
+        if name.endswith((".docx", ".pptx")):
+            normalize_office_archive(output / name)
     audit = (
         "# Repository audit — observed source only\n\n"
         f"Source records: {values['source_records']:,}; unique PMIDs: "
@@ -614,22 +663,29 @@ def build_documents() -> None:
         "annotations were recovered in the audited public sources. Sampling candidates and "
         "original API snapshots are unavailable; historical flags are text-detection proxies. "
         "No replacement sample, blind reconstruction or human validation has occurred.\n\n"
+        "The author approved the unique-PMID inference frame while preserving all source rows; "
+        "data/frame_decision.json and results/frame_manifest.json record its provenance.\n\n"
         "See results/manuscript_values.csv for machine-readable numerical provenance, "
         "data/acquisition_ledger.csv for exact source hashes, review/EVIDENCE.md for retained "
         "audit evidence, and results/readiness.json for incomplete study gates.\n"
     )
     (ROOT / "review/REPOSITORY_AUDIT.md").write_text(audit)
     files = [
-        *output.iterdir(),
+        *(output / name for name in ARTIFACT_NAMES),
         *sorted((ROOT / "protocols").glob("*.md")),
         *sorted((ROOT / "results").glob("*.csv")),
         *sorted((ROOT / "results").glob("*.json")),
         *sorted((ROOT / "src/paper2").glob("*.py")),
         *sorted((ROOT / "data/derived").glob("*.csv")),
         *sorted((ROOT / "data").glob("*.csv")),
+        *sorted((ROOT / "data").glob("*.json")),
         *sorted((ROOT / "schemas").glob("*")),
         ROOT / "requirements.lock",
         ROOT / "pyproject.toml",
+        ROOT / "README.md",
+        ROOT / "Makefile",
+        *sorted((ROOT / "review").glob("*.md")),
+        *sorted((ROOT / "tests").glob("*.py")),
     ]
     manifest = {
         str(path.relative_to(ROOT)): {
@@ -647,15 +703,9 @@ def build_documents() -> None:
     with zipfile.ZipFile(
         dist / "PaperII_preparation_NOT_SUBMISSION_READY.zip", "w", compression=zipfile.ZIP_DEFLATED
     ) as archive:
-        for path in sorted(ROOT.rglob("*")):
-            relative = path.relative_to(ROOT)
-            if not path.is_file() or any(
-                part.startswith(".") or part == "__pycache__" for part in relative.parts
-            ):
-                continue
-            if relative.parts[0] in {"dist", "workflow"} or relative.parts[:2] == ("data", "raw"):
-                continue
-            archive.write(path, relative)
+        for path in sorted({*files, ROOT / "results/preparation_artifact_manifest.json"}):
+            if path.is_file():
+                zip_member(archive, str(path.relative_to(ROOT)), path.read_bytes())
 
 
 if __name__ == "__main__":

@@ -1,0 +1,16 @@
+{
+  "status": "approved_unique_pmid",
+  "author_decision_file": "data/frame_decision.json",
+  "author_decision_sha256": "b4bc8ecd21b5d3c57c3394f5e2a69a721a86f618892134a4e0ef2cf366d5d43b",
+  "decision_recorded_at_utc": "2026-09-22T13:25:53Z",
+  "source_commit": "2414f8d65cf2fe33c744c0a62cc05b6c77868367",
+  "source_sha256": "08068a5662968c8ffd1b70c7d61b3a6a4ed0cc42dda02f40ca0d113be3b750d0",
+  "identity": "PMID",
+  "paper_count": 9935,
+  "source_record_count": 10000,
+  "field_assignment": "minimum SHA256(paper2-field-v1|paper_id|recorded_field)",
+  "scope": "fixed_deposited_corpus_only",
+  "protocol_freeze": "not_implied",
+  "frame_file": "data/derived/inference_frame.csv",
+  "frame_sha256": "b62c21dea2110e4472e7f8c76046fc1caaffa554fcf5b5f5c3d79db8fec56b2a"
+}

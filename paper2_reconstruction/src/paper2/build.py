@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from paper2.core import FIELDS, Row, paper_registry, read_csv, sha256, snapshot, wilson, write_csv
+from paper2.frame import confirm_frame
 
 ROOT = Path(__file__).resolve().parents[2]
 REPO = ROOT.parent
@@ -206,6 +207,47 @@ def prepare_experiment_tables(derived: Path) -> None:
         write_csv(path, [], columns)
 
 
+def funnel_queue(records: list[Row], *, paper_level: bool) -> list[Row]:
+    return [
+        {
+            **(
+                {
+                    "paper_id": row["paper_id"],
+                    "source_record_ids": row["source_record_ids"],
+                    "epj_fields": row["epj_fields"],
+                    "sampling_stratum": row["sampling_stratum"],
+                }
+                if paper_level
+                else {
+                    "source_record_id": row["source_record_id"],
+                    "paper_id": row["paper_id"],
+                    "epj_field": row["epj_field"],
+                }
+            ),
+            "G1_computationally_testable": "uncertain",
+            "G1_reason": "not_assessed",
+            "G2_principal_target_identifiable": "uncertain",
+            "G3_input_accessibility": "unknown",
+            "G4_resource_accessibility": "unknown",
+            "G5_specification_sufficient_for_attempt": "uncertain",
+            "G6_implementation_created": "not_assessed",
+            "G7_execution_successful": "not_assessed",
+            "G8_numerical_target_reproduced": "not_assessed",
+            "G9_corresponding_conclusion_preserved": "not_assessed",
+            "assessment_status": "NOT_STARTED",
+            "evidence_id": "not_assessable",
+        }
+        for row in records
+    ]
+
+
+def protect_funnel(path: Path, paper_template: list[Row], legacy_template: list[Row]) -> None:
+    if path.exists() and read_csv(path) not in (paper_template, legacy_template):
+        raise ValueError(
+            f"Preparation build must not overwrite modified funnel assessments: {path}"
+        )
+
+
 def build() -> dict[str, object]:
     prepare_experiment_tables(ROOT / "data/derived")
     ledger = acquire_pinned_source()
@@ -222,29 +264,20 @@ def build() -> dict[str, object]:
     results.mkdir(parents=True, exist_ok=True)
     write_csv(derived / "paper_registry.csv", registry, list(registry[0]))
     write_csv(derived / "source_record_bridge.csv", bridge, list(bridge[0]))
+    frame, frame_manifest = confirm_frame(
+        registry, ROOT / "data/frame_decision.json", REVISION, PINS["output/extracted_data.csv"]
+    )
+    funnel = funnel_queue(frame, paper_level=True)
+    funnel_path = derived / "funnel_NOT_ASSESSED.csv"
+    protect_funnel(funnel_path, funnel, funnel_queue(bridge, paper_level=False))
+    frame_path = derived / "inference_frame.csv"
+    write_csv(frame_path, frame, list(frame[0]))
+    frame_manifest["frame_file"] = str(frame_path.relative_to(ROOT))
+    frame_manifest["frame_sha256"] = sha256(frame_path.read_bytes())
+    (results / "frame_manifest.json").write_text(json.dumps(frame_manifest, indent=2) + "\n")
     duplicate_rows = [r for r in registry if int(r["record_multiplicity"]) > 1]
     write_csv(derived / "duplicate_pmids.csv", duplicate_rows, list(registry[0]))
-    funnel = [
-        {
-            "source_record_id": row["source_record_id"],
-            "paper_id": row["paper_id"],
-            "epj_field": row["epj_field"],
-            "G1_computationally_testable": "uncertain",
-            "G1_reason": "not_assessed",
-            "G2_principal_target_identifiable": "uncertain",
-            "G3_input_accessibility": "unknown",
-            "G4_resource_accessibility": "unknown",
-            "G5_specification_sufficient_for_attempt": "uncertain",
-            "G6_implementation_created": "not_assessed",
-            "G7_execution_successful": "not_assessed",
-            "G8_numerical_target_reproduced": "not_assessed",
-            "G9_corresponding_conclusion_preserved": "not_assessed",
-            "assessment_status": "NOT_STARTED",
-            "evidence_id": "not_assessable",
-        }
-        for row in bridge
-    ]
-    write_csv(derived / "funnel_NOT_ASSESSED.csv", funnel, list(funnel[0]))
+    write_csv(funnel_path, funnel, list(funnel[0]))
     characteristics = []
     for field in FIELDS:
         records = [r for r in rows if r["stratum"] == field]
@@ -316,7 +349,9 @@ def build() -> dict[str, object]:
         "study_status": "PREPARATION_ONLY_NOT_SUBMISSION_READY",
         "corpus_identity": "VOR-linked deposited corpus located and commit pinned",
         "distinct_10000_paper_precondition": "not_met",
-        "paper_frame_decision": "awaiting_author_confirmation",
+        "paper_frame_decision": frame_manifest["status"],
+        "paper_frame_size": len(frame),
+        "paper_frame_sha256": frame_manifest["frame_sha256"],
         "historical_extraction_validation": "not_verified_no_annotations_recovered",
         "historical_raw_API_snapshots": "not_recovered",
         "pilot": "NOT_COMPLETED",
@@ -327,7 +362,7 @@ def build() -> dict[str, object]:
         "blind_freeze": "NOT_COMPLETED",
         "descriptive_reveal": "NOT_COMPLETED",
         "human_validation": "NOT_COMPLETED",
-        "firewall_harness": "proposed_not_implemented_or_validated",
+        "firewall_harness": "prototype_only_full_information_firewall_unqualified",
         "primary_success_rate": "not_assessable",
         "sources_verified": len(ledger),
     }

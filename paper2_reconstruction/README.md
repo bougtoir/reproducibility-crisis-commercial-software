@@ -34,8 +34,11 @@ draft, with prospective Methods and an observed source audit, not Paper II resul
   `data/raw/epj` are ignored by Git and can be recovered from the pinned public
   commit. `data/acquisition_ledger.csv` records exact provenance and checksums.
 - `data/derived/source_record_bridge.csv` retains every source row and field.
-  `paper_registry.csv` is a derived unique-PMID identity view, **not an approved
-  replacement sampling frame**. No replacement papers have been sampled.
+  `paper_registry.csv` is the derived unique-PMID identity view.
+  The author approved this identity rule in `data/frame_decision.json`.
+  `inference_frame.csv` contains one row per PMID with a deterministic disjoint
+  sampling stratum; `results/frame_manifest.json` binds it to that decision and
+  the unchanged deposit. No replacement papers have been sampled.
 - EPJ code/data/software indicators are historical text detections. They are not
   access, eligibility, target, specification, or reconstruction assessments.
 - `funnel_NOT_ASSESSED.csv` is an explicitly unassessed work queue. Empty
@@ -53,7 +56,35 @@ draft, with prospective Methods and an observed source audit, not Paper II resul
 Implemented: source snapshot/integrity checks, duplicate/conflict detection,
 row/paper/membership separation, precision planning, deterministic stratified
 sampling utility, missing-aware fixed-three-run aggregation, basic outcome/time
-validation, reported-decimal comparison, document generation and unit tests.
+validation, reported-decimal comparison, deterministic document generation and
+unit tests. The build refuses to overwrite modified paper-level funnel assessments
+or populated experiment tables. Document metadata uses `SOURCE_DATE_EPOCH`
+(default 1980-01-01 UTC), fixed SVG IDs and normalized Office/ZIP entries.
+
+Infrastructure probes are separate from the preparation build:
+
+```sh
+cd paper2_reconstruction
+PYTHONPATH=src .venv/bin/python -m paper2.isolation --output data/raw/isolation-new-run
+PYTHONPATH=src .venv/bin/python -m paper2.model_api --output data/raw/api-new-run
+PYTHONPATH=src .venv/bin/python -m paper2.acquisition --output data/raw/candidate-acquisition
+```
+
+The first command requires Linux Docker/cgroup v2 and the pinned Python image;
+the second requires `DEEPSEEK_API_KEY` in the process environment and makes two
+billable synthetic calls. Use a new output directory for every qualification.
+The API client retains final content and token usage, never private reasoning or
+the credential. Qualification uses one CPU and 2 GiB, not the proposed scientific
+run envelope, and does not authorize a pilot or main experiment.
+
+The acquisition command ranks one unassessed candidate per assigned field,
+preserves exact Europe PMC metadata and permitted full-text XML responses with
+UTC/hash/rights receipts, and resumes from integrity-checked snapshots. HTTP errors,
+missing PMC records and non-open metadata flags do not establish unavailable
+inputs; lawful alternative full-text sources still require investigation.
+These candidate acquisitions are neither final pilot selection nor G1–G5 labels.
+Raw evidence remains Git-ignored and must be recovered through the session's
+private evidence archive when moving to another machine.
 
 Not implemented or validated: acquisition/classification of all paper texts,
 an enforced solver information firewall, agent run controller, full target-type
@@ -68,5 +99,6 @@ Work is directly on the public EPJ-linked repository, in a separate feature bran
 the original study is untouched. A private `wip` synchronization is not needed for
 these changes. Do not merge other unrelated directories or upload full-text evidence.
 Release only the reviewed Paper II code, lawful derived identifiers, protocols,
-result provenance, and regenerated document artifacts. Resolve the source-frame
-discrepancy and collect actual study evidence before tagging a submission release.
+result provenance, and regenerated document artifacts. The original distinct-paper
+claim remains discrepant, but the author has approved the unique-PMID frame for
+Paper II. Collect actual study evidence before tagging a submission release.

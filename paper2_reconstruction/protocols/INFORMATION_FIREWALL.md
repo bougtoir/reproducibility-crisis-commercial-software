@@ -1,6 +1,12 @@
 # Information firewall
 
-**DRAFT — NOT IMPLEMENTED OR VALIDATED. Separate VMs alone are insufficient.**
+**DRAFT — FULL FIREWALL NOT QUALIFIED. Separate VMs alone are insufficient.**
+
+`paper2.isolation` and `paper2.model_api` provide synthetic execution-isolation
+and API smoke qualifications only. Neither authorizes pilot or main runs.
+The current execution probe uses one CPU, 2 GiB RAM and 512 MiB work storage;
+it does not validate the larger proposed scientific-run envelope. A model alias
+without a provider-reported version remains explicitly version-unverified.
 
 Allowed: publication text, methodological supplements including published
 scientific pseudocode, vetted public inputs, necessary general references and

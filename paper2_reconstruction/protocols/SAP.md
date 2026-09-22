@@ -4,7 +4,10 @@
 
 ## Estimands and denominators
 
-The population is the fixed, confirmed unique-paper corpus, not all publications.
+The population is the author-approved unique-PMID frame derived from the fixed
+deposit, not all publications. Its exact count, ordered CSV hash and source/decision
+provenance are in `results/frame_manifest.json`. Preserve source rows and all recorded
+field memberships in the separate bridge; no replacement publications are added.
 Let E denote G1=yes papers and U denote G1=uncertain papers. The proposed primary
 estimand is end-to-end policy demonstration among E, with all verified access
 barriers retained. For an assessable attempted paper the endpoint is at least
