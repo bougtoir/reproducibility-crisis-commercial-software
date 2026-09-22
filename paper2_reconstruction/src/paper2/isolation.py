@@ -1,18 +1,21 @@
 import argparse
+import io
 import json
 import os
 import selectors
 import subprocess
+import tarfile
 import time
 import uuid
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 from paper2.core import sha256, snapshot
 
 IMAGE = "python@sha256:65a93d69fa75478d554f4ad27c85c1e69fa184956261b4301ebaf6dbb0a3543d"
 DOCKER = "/usr/bin/docker"
+MAX_ARTIFACT_BYTES = 64 * 1024 * 1024
 
 
 @dataclass(frozen=True)
@@ -30,8 +33,34 @@ def docker(*arguments: str) -> str:
     ).strip()
 
 
+def regular_tar_members(raw: bytes) -> dict[str, bytes]:
+    if len(raw) > MAX_ARTIFACT_BYTES:
+        raise ValueError("Worker artifact archive exceeded the fixed export limit")
+    files: dict[str, bytes] = {}
+    with tarfile.open(fileobj=io.BytesIO(raw), mode="r:") as archive:
+        for member in archive.getmembers():
+            parts = tuple(part for part in PurePosixPath(member.name).parts if part != ".")
+            if not parts:
+                continue
+            unsafe_path = (
+                ".." in parts or PurePosixPath(member.name).is_absolute() or len(parts) > 12
+            )
+            if member.isdir() and not unsafe_path:
+                continue
+            if not member.isfile() or member.size > MAX_ARTIFACT_BYTES or unsafe_path:
+                raise ValueError("Worker artifacts contain an unsafe or non-regular member")
+            name = str(PurePosixPath(*parts))
+            if name in files or len(files) >= 1000:
+                raise ValueError("Worker artifact archive has duplicate or excessive members")
+            payload = archive.extractfile(member)
+            if payload is None:
+                raise ValueError("Worker artifact could not be read")
+            files[name] = payload.read()
+    return files
+
+
 class Worker:
-    def __init__(self, package: Path, expected: dict[str, str]) -> None:
+    def __init__(self, package: Path, expected: dict[str, str], image: str = IMAGE) -> None:
         actual: dict[str, str] = {}
         for path in package.rglob("*"):
             if path.is_symlink():
@@ -72,7 +101,7 @@ class Worker:
             "/tmp:rw,nosuid,nodev,size=64m,mode=1777",
             "--mount",
             f"type=bind,source={package.resolve()},target=/input,readonly",
-            IMAGE,
+            image,
             "sleep",
             "infinity",
         )
@@ -121,6 +150,26 @@ class Worker:
             reason,
             time.monotonic() - start,
         )
+
+    def export_artifacts(self, destination: Path) -> list[dict[str, object]]:
+        exporter = (
+            "import sys,tarfile;"
+            "a=tarfile.open(fileobj=sys.stdout.buffer,mode='w|');"
+            "a.add('/work',arcname='.',recursive=True);a.close()"
+        )
+        result = subprocess.run(
+            [DOCKER, "exec", self.name, "python", "-c", exporter],
+            check=True,
+            capture_output=True,
+            timeout=30,
+            env={"PATH": "/usr/bin:/bin"},
+        )
+        snapshot(destination / "artifacts.tar", result.stdout)
+        records = []
+        for name, payload in regular_tar_members(result.stdout).items():
+            snapshot(destination / "files" / name, payload)
+            records.append({"path": name, "bytes": len(payload), "sha256": sha256(payload)})
+        return records
 
     def close(self) -> None:
         docker("rm", "--force", self.name)

@@ -57,7 +57,9 @@ Implemented: source snapshot/integrity checks, duplicate/conflict detection,
 row/paper/membership separation, precision planning, deterministic stratified
 sampling utility, missing-aware fixed-three-run aggregation, basic outcome/time
 validation, reported-decimal comparison, deterministic document generation and
-unit tests. The build refuses to overwrite modified paper-level funnel assessments
+unit tests. Exact finite-population intervals and stratified policy identification
+bounds are implemented and tested, including unresolved outcomes and gates.
+The build refuses to overwrite modified paper-level funnel assessments
 or populated experiment tables. Document metadata uses `SOURCE_DATE_EPOCH`
 (default 1980-01-01 UTC), fixed SVG IDs and normalized Office/ZIP entries.
 
@@ -67,8 +69,23 @@ Infrastructure probes are separate from the preparation build:
 cd paper2_reconstruction
 PYTHONPATH=src .venv/bin/python -m paper2.isolation --output data/raw/isolation-new-run
 PYTHONPATH=src .venv/bin/python -m paper2.model_api --output data/raw/api-new-run
+PYTHONPATH=src .venv/bin/python -m paper2.controller --output data/raw/controller-new-run
+PYTHONPATH=src .venv/bin/python -m paper2.scientific_image --output data/raw/science-new-run
 PYTHONPATH=src .venv/bin/python -m paper2.acquisition --output data/raw/candidate-acquisition
+PYTHONPATH=src .venv/bin/python -m paper2.corpus_acquisition --output data/raw/corpus-metadata
+PYTHONPATH=src .venv/bin/python -m paper2.corpus_evidence \
+  --metadata data/raw/corpus-metadata --output data/raw/corpus-articles
 ```
+
+Candidate evidence can be reviewed separately with `paper2.candidate_review`,
+passing `--source` for the candidate-acquisition directory and `--output` for a
+new private review directory. This instrument preserves final model responses
+and checks citations against the retained publication bytes. Rejected evidence
+remains unresolved; absent full text cannot establish a negative gate. Its
+proposals are neither validated funnel labels nor selected targets. It does not
+modify the funnel. An existing review directory resumes retained calls without
+reissuing them; changed source text or prompts require a separately named run.
+PDF extraction requires the system `pdftotext` utility.
 
 The first command requires Linux Docker/cgroup v2 and the pinned Python image;
 the second requires `DEEPSEEK_API_KEY` in the process environment and makes two
@@ -77,7 +94,19 @@ The API client retains final content and token usage, never private reasoning or
 the credential. Qualification uses one CPU and 2 GiB, not the proposed scientific
 run envelope, and does not authorize a pilot or main experiment.
 
-The acquisition command ranks one unassessed candidate per assigned field,
+The controller permits only isolated Python and a structured final report, hashes
+the effective context and tool registry, and seals a chained event journal.
+Before removing a live worker it exports its work files through the isolated
+process, preserving the archive and hashes. Absolute/traversing paths, links,
+special files, duplicate members and oversized exports are rejected.
+Its demonstration is synthetic; claimed reports are not adjudicated outcomes.
+The scientific-image command builds a hash-locked general Python stack using
+binary wheels, runs import and containment checks, and records the immutable
+local image identifier. It does not establish paper-specific dependency closure.
+The API socket timeout is limited by the remaining run budget, but strict in-flight
+wall enforcement and hidden provider accounting remain unqualified.
+
+The candidate acquisition command ranks one unassessed candidate per assigned field,
 preserves exact Europe PMC metadata and permitted full-text XML responses with
 UTC/hash/rights receipts, and resumes from integrity-checked snapshots. HTTP errors,
 missing PMC records and non-open metadata flags do not establish unavailable
@@ -86,9 +115,33 @@ These candidate acquisitions are neither final pilot selection nor G1–G5 label
 Raw evidence remains Git-ignored and must be recovered through the session's
 private evidence archive when moving to another machine.
 
-Not implemented or validated: acquisition/classification of all paper texts,
-an enforced solver information firewall, agent run controller, full target-type
-scoring, pilot, protocol timestamp service, human assessments, empirical statistical
+The corpus-metadata command queries the complete unique-PMID frame in bounded
+batches. Invalid batch envelopes are retained and decomposed into smaller requests;
+invalid single-record responses remain unknown. Every accepted record must have
+the requested PMID and MED source. The index distinguishes identity verification,
+not returned, invalid response and request failure. It stops after three consecutive
+failed HTTP batches and preserves the partial index. Metadata alone is not a
+full-text or input-access assessment.
+
+`corpus_evidence` first verifies exact ordered frame coverage and every metadata
+receipt/index assertion. It then retrieves standalone PMC article XML where the
+metadata identifies an open endpoint, with two concurrent requests at most.
+Article acceptance requires matching PMID/PMCID and a nonempty JATS body.
+Failed, mismatched and unselected endpoints remain distinct; no status establishes
+input-data availability or absence of lawful alternative article sources.
+Article licences are retained for local review; no third-party bodies are published.
+
+`paper2.timestamp --source FILE --output NEW_DIRECTORY` sends only an RFC 3161
+SHA-256 digest request to FreeTSA, retains the payload/request/response and pinned
+CA certificate, and verifies the signed response using OpenSSL. The external
+timestamp proves existence of those bytes, not protocol adequacy, preregistration
+or study completion. Synthetic reports may be timestamped without freezing any
+scientific protocol.
+
+Not implemented or validated: complete classification of all paper texts,
+the complete solver information firewall, an authorized empirical run controller,
+full target-type
+scoring, pilot, prospective protocol freeze, human assessments, empirical statistical
 models, or final journal submission. The contract and protocol documents are
 explicitly **DRAFT — NOT FROZEN**. A normal Devin child session is not evidence of
 the specified isolation.

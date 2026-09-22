@@ -1,0 +1,4 @@
+FROM python@sha256:65a93d69fa75478d554f4ad27c85c1e69fa184956261b4301ebaf6dbb0a3543d
+COPY requirements-science.lock /opt/requirements-science.lock
+RUN python -m pip install --no-cache-dir --only-binary=:all: --require-hashes -r /opt/requirements-science.lock
+ENV OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=/work/.matplotlib HOME=/work

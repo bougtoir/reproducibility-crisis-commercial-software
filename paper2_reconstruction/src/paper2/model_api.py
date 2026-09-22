@@ -30,7 +30,9 @@ class Completion:
     elapsed_seconds: float
 
 
-def complete(messages: list[dict[str, str]], archive: Path, max_tokens: int) -> Completion:
+def complete(
+    messages: list[dict[str, str]], archive: Path, max_tokens: int, timeout_seconds: int = 120
+) -> Completion:
     archive.mkdir(parents=True, exist_ok=False)
     request = {
         "model": MODEL,
@@ -44,7 +46,9 @@ def complete(messages: list[dict[str, str]], archive: Path, max_tokens: int) -> 
     payload = json.dumps(request, ensure_ascii=False).encode()
     snapshot(archive / "request.json", payload)
     start = time.monotonic()
-    connection = http.client.HTTPSConnection("api.deepseek.com", timeout=120)
+    if timeout_seconds < 1 or timeout_seconds > 120:
+        raise ValueError("API timeout must be between one and 120 seconds")
+    connection = http.client.HTTPSConnection("api.deepseek.com", timeout=timeout_seconds)
     try:
         connection.request(
             "POST",

@@ -14,7 +14,13 @@ from paper2.model_api import mapping
 API = "https://www.ebi.ac.uk/europepmc/webservices/rest"
 
 
-def acquire(url: str, identifier: str, directory: Path) -> tuple[Path, dict[str, object]]:
+def acquire(
+    url: str,
+    identifier: str,
+    directory: Path,
+    *,
+    request_conditions: str = "GET; exact identifier; no supplements or implementation fetched",
+) -> tuple[Path, dict[str, object]]:
     target = directory / sha256(url.encode())
     receipt_path, body_path = target / "receipt.json", target / "body"
     if receipt_path.exists():
@@ -41,7 +47,7 @@ def acquire(url: str, identifier: str, directory: Path) -> tuple[Path, dict[str,
         "identifier": identifier,
         "version": "live_service_snapshot; see response for record version",
         "retrieved_at_utc": datetime.now(timezone.utc).isoformat(),
-        "request_conditions": "GET; exact identifier; no supplements or implementation fetched",
+        "request_conditions": request_conditions,
         "http_status": status,
         "error": error,
         "content_type": content_type,

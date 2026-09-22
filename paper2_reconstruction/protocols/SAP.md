@@ -66,8 +66,11 @@ and alpha=0.05; aggregate simultaneous lower and upper K_h bounds, then divide b
 counts to the upper headline bound. Label this as a sampling-and-identification
 envelope when unknown gates remain. This conservative interval avoids zero estimated
 variance in all-success/all-failure strata. Census strata have exact totals.
-The estimator and interval need dedicated implementation and validation before
-protocol freeze; they are not part of the current preparation build.
+The estimator and interval are implemented in `src/paper2/estimation.py`.
+Exhaustive enumeration checks finite-population coverage for all sample sizes
+and success totals in populations up to 12; boundary, census, unequal-weight,
+unknown-outcome and denominator checks are also included. These software tests
+are not empirical study estimates; protocol freeze remains pending.
 
 If a paper outcome is unresolved, calculate endpoint lower/upper estimates by
 assigning unresolved outcomes 0/1 solely for identification bounds, explicitly
