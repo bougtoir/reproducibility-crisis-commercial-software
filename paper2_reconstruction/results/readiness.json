@@ -1,0 +1,19 @@
+{
+  "study_status": "PREPARATION_ONLY_NOT_SUBMISSION_READY",
+  "corpus_identity": "VOR-linked deposited corpus located and commit pinned",
+  "distinct_10000_paper_precondition": "not_met",
+  "paper_frame_decision": "awaiting_author_confirmation",
+  "historical_extraction_validation": "not_verified_no_annotations_recovered",
+  "historical_raw_API_snapshots": "not_recovered",
+  "pilot": "NOT_COMPLETED",
+  "protocol_freeze": "NOT_COMPLETED",
+  "funnel_assessment": "NOT_STARTED",
+  "intensive_sample": "NOT_SELECTED",
+  "reconstruction_experiments": "NOT_COMPLETED",
+  "blind_freeze": "NOT_COMPLETED",
+  "descriptive_reveal": "NOT_COMPLETED",
+  "human_validation": "NOT_COMPLETED",
+  "firewall_harness": "proposed_not_implemented_or_validated",
+  "primary_success_rate": "not_assessable",
+  "sources_verified": 8
+}

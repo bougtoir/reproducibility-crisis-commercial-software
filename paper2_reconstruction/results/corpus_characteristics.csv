@@ -1,0 +1,8 @@
+field,source_rows,unique_pmids_within_field,commercial_mentions,open_source_mentions,code_statement_detected,data_statement_detected
+Biomedical_Basic,1429,1429,295,427,150,79
+Clinical_Medicine,1429,1429,375,173,34,36
+Chemistry_Materials,1429,1429,247,202,31,36
+Physics_Engineering,1429,1428,238,118,75,35
+Social_Behavioral,1429,1429,358,117,19,34
+Computational_Science,1429,1429,218,432,180,100
+Environmental_Earth,1426,1423,122,184,40,47

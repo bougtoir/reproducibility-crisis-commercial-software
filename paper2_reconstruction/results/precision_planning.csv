@@ -1,0 +1,6 @@
+planned_n,assumed_p,wilson_lower,wilson_upper,total_width,half_width,interpretation
+100,0.2,0.133366933,0.288829166,0.155462232,0.077731116,analytic_planning_not_empirical; unweighted_binomial_reference
+100,0.3,0.218948853,0.395848546,0.176899693,0.088449847,analytic_planning_not_empirical; unweighted_binomial_reference
+100,0.5,0.403831530,0.596168470,0.192336939,0.096168470,analytic_planning_not_empirical; unweighted_binomial_reference
+100,0.7,0.604151454,0.781051147,0.176899693,0.088449847,analytic_planning_not_empirical; unweighted_binomial_reference
+100,0.8,0.711170834,0.866633067,0.155462232,0.077731116,analytic_planning_not_empirical; unweighted_binomial_reference

@@ -1,0 +1,13 @@
+{
+  "source_records": 10000,
+  "unique_pmids": 9935,
+  "excess_records": 65,
+  "duplicated_pmids": 64,
+  "double_occurrence_pmids": 63,
+  "triple_occurrence_pmids": 1,
+  "unique_pmid_field_pairs": 9996,
+  "within_field_excess_records": 4,
+  "multi_field_pmids": 60,
+  "epj_fields": 7,
+  "missing_doi_records": 134
+}
