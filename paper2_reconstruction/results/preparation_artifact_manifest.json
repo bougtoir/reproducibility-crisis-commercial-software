@@ -87,6 +87,10 @@
     "bytes": 578,
     "sha256": "3e7fd8b2900ca0cd95d780522b65cfc9514647e86137aaee327d71b5b19be2b2"
   },
+  "results/corpus_article_acquisition_audit.json": {
+    "bytes": 903,
+    "sha256": "2d0b70053fd62ee7a75243e8b119a0dac4c1ed19f93350f477529ba96d344398"
+  },
   "results/corpus_audit.json": {
     "bytes": 316,
     "sha256": "a81414f1dd6834f611ab3035b13d5bed2c7ce4cc1e9d4714d119f6a36fc3ba79"
@@ -288,8 +292,8 @@
     "sha256": "8b98b8d55a241e92ef3de34ccc936235ac1b31df75e41b9f5ac906c41d6a11d6"
   },
   "review/EVIDENCE.md": {
-    "bytes": 2395,
-    "sha256": "130ccd8d65f9be0e9590a506e5179508db25e31963162a2d62a9c51ed1385439"
+    "bytes": 3749,
+    "sha256": "2c4a95b3bf15249532a33b6797097135bd9cc7dfdde2739ed22d9518c3914866"
   },
   "review/JOURNAL_REQUIREMENTS.md": {
     "bytes": 2673,

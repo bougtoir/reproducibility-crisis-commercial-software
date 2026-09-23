@@ -31,3 +31,23 @@ need any internal archive. Public `data/verified_references.csv` preserves the
 primary-source URLs, publication/version status, supported claims and caveats.
 Policy and literary claims must be rechecked from those public primary sources
 before the eventual submission. Do not redistribute the raw evidence wholesale.
+
+## Corpus article acquisition (2026-09-22/23)
+
+`results/corpus_article_acquisition_audit.json` is a copy of the retained
+post-acquisition audit of the private `data/raw/corpus-articles-20260922`
+directory. Acquisition was interrupted once at 7,680 indexed rows (the interrupted
+index is retained as `article_index_interrupted_7680rows_20260922.csv`) and then
+resumed from the immutable receipts without re-fetching or overwriting any body;
+the final index covers the exact ordered 9,935-paper frame. Only the open Europe
+PMC JATS endpoint was assessed: 3,966 identity-verified articles, 5,957 papers
+with no PMC endpoint selected (other sources unassessed), 11 persistent HTTP 500
+responses and 1 body-less JATS response. A second attempt for those 12 papers
+(`data/raw/corpus-articles-retry-20260923`, first attempt retained) reproduced
+the same server-side results. None of these states is a G1–G5 verdict, an
+input-availability finding or a full-text-availability finding for the corpus.
+The author confirmed on 2026-09-23 that no local full text exists for the three
+closed-access pilot candidates (PMID 38007008, 41336033, 38950848); they remain
+unresolved and no replacement candidate was drawn
+(`data/raw/candidate-alternatives-20260922/author_disposition_20260922.json`).
+Article bodies are third-party content and are not redistributed here.

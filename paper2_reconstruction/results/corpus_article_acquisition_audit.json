@@ -1,0 +1,23 @@
+{
+  "scope": "retained_acquisition_audit_only_not_G1_G5_classification",
+  "frame_sha256": "b62c21dea2110e4472e7f8c76046fc1caaffa554fcf5b5f5c3d79db8fec56b2a",
+  "metadata_index_sha256": "715262eb3bda5623a20753d20c4a392b269bbaf93cf092b36c1b776e9663cde9",
+  "article_index_sha256": "b533c3b85c80f6d99d97196d14adff5331096e516deeffc9d2f8bffc8ffb9192",
+  "papers_in_frame": 9935,
+  "indexed_papers": 9935,
+  "unprocessed_papers": 0,
+  "coverage": "complete_frame_index",
+  "endpoint_scope": "open_PMC_JATS_only_other_sources_unassessed",
+  "metadata_status_counts": {
+    "identity_verified": 9934,
+    "not_returned": 1
+  },
+  "article_status_counts": {
+    "pmc_endpoint_not_selected_other_sources_unassessed": 5957,
+    "identity_verified_article": 3966,
+    "request_failed_not_access_verdict": 11,
+    "unverified_article_response": 1
+  },
+  "input_access": "not_assessed",
+  "pilot_completed": false
+}
