@@ -55,12 +55,15 @@ Article bodies are third-party content and are not redistributed here.
 ## Pilot candidate screening (2026-09-23)
 
 `results/pilot_candidate_screening.json` summarizes `paper2.funnel_screen` over
-the first four deterministic candidates per field (28 papers; private run
-`data/raw/pilot-screen-20260923`, 261,555 provider-accounted tokens). For the 17
-candidates without open PMC text, OpenAlex best-OA locations were checked and
-retained (`data/raw/pilot-oa-locations-20260923`): one CC-BY publisher PDF was
-retrieved (PMID 39774361); one hybrid-OA publisher PDF returned HTTP 403 to the
-scripted request (PMID 33944686; not an access verdict); two reported OA without a
-PDF location; thirteen are closed at every reported location. Provisional G1/G2
-proposals are machine output bound to retained source segments and await human
-adjudication; no pilot case has been selected and the funnel is unchanged.
+the first nine deterministic candidates per field (63 papers; private run
+`data/raw/pilot-screen-20260923`, 472,329 provider-accounted tokens). Nine ranks
+were needed because Environmental_Earth has no open PMC text before rank 9. For
+the 41 candidates without open PMC text, OpenAlex best-OA locations were checked
+and retained (`data/raw/pilot-oa-locations-20260923`): two licensed publisher PDFs
+were retrieved (CC-BY, CC-BY-NC), three OA PDF locations returned HTTP 403 to the
+scripted request (not access verdicts), ten report OA with a landing page only
+(text not retained), and 26 are closed at every reported location. Provisional
+G1/G2 proposals are machine output bound to retained source segments;
+`results/pilot_adjudication_request.md` lists the first lawfully retained
+candidate per field for human G1–G5 adjudication. No pilot case has been selected
+and the funnel is unchanged.

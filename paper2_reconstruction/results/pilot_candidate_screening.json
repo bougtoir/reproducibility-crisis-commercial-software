@@ -1,22 +1,65 @@
 {
   "scope": "provisional_pilot_candidate_screening_not_validated_G1_G5_not_selection",
-  "screen_index_sha256": "e14a38b266bf532dd623b0bba77c5b0402d633852828d62a952f0e7fab427197",
-  "candidates_per_field": 4,
-  "papers_screened": 28,
+  "screen_index_sha256": "b1a1bbf31f122e9bdd298743cbed299a462133fd25f5e130bb31e08032d998a8",
+  "oa_location_index_sha256": "cb2ca2272dd2985dc7dceaf6e7f90ee04ad0f830110dc7874825b4c71d4f40da",
+  "candidates_per_field": 9,
+  "papers_screened": 63,
   "article_text_route_counts": {
-    "open_pmc_jats": 11,
-    "openalex_closed_no_lawful_public_text_located": 13,
+    "open_pmc_jats": 22,
+    "openalex_closed_no_lawful_public_text_located": 26,
+    "openalex_oa_pdf_http_403_not_access_verdict": 3,
+    "openalex_oa_hybrid_landing_page_only_text_not_retained": 4,
     "openalex_oa_pdf_retrieved_license_cc-by": 1,
-    "openalex_oa_pdf_http_403_not_access_verdict": 1,
-    "openalex_oa_bronze_no_pdf_url_at_best_location": 1,
-    "openalex_oa_green_no_pdf_url_at_best_location": 1
+    "openalex_oa_pdf_retrieved_license_cc-by-nc": 1,
+    "openalex_oa_bronze_landing_page_only_text_not_retained": 2,
+    "openalex_oa_green_landing_page_only_text_not_retained": 1,
+    "openalex_oa_gold_landing_page_only_text_not_retained": 2,
+    "openalex_oa_diamond_landing_page_only_text_not_retained": 1
   },
   "screen_status_counts": {
-    "provisional_machine_review_not_validated_or_selected": 21,
-    "abstract_only_negative_not_validated": 6,
+    "provisional_machine_review_not_validated_or_selected": 49,
+    "abstract_only_negative_not_validated": 13,
     "rejected_source_evidence": 1
   },
-  "provider_accounted_tokens_total": 261555,
+  "provider_accounted_tokens_total": 472329,
+  "first_candidate_with_lawfully_retained_text_per_field": {
+    "Biomedical_Basic": {
+      "paper_id": "PMID:41032336",
+      "candidate_rank": 1,
+      "article_text_route": "open_pmc_jats"
+    },
+    "Chemistry_Materials": {
+      "paper_id": "PMID:36358920",
+      "candidate_rank": 2,
+      "article_text_route": "open_pmc_jats"
+    },
+    "Clinical_Medicine": {
+      "paper_id": "PMID:39730532",
+      "candidate_rank": 1,
+      "article_text_route": "open_pmc_jats"
+    },
+    "Computational_Science": {
+      "paper_id": "PMID:36409083",
+      "candidate_rank": 3,
+      "article_text_route": "open_pmc_jats"
+    },
+    "Environmental_Earth": {
+      "paper_id": "PMID:39472468",
+      "candidate_rank": 9,
+      "article_text_route": "open_pmc_jats"
+    },
+    "Physics_Engineering": {
+      "paper_id": "PMID:34031721",
+      "candidate_rank": 2,
+      "article_text_route": "open_pmc_jats"
+    },
+    "Social_Behavioral": {
+      "paper_id": "PMID:33574863",
+      "candidate_rank": 4,
+      "article_text_route": "open_pmc_jats"
+    }
+  },
+  "first_candidate_note": "lowest deterministic rank whose article text is retained through a lawful route; earlier-ranked candidates without retained text remain prospectively unavailable to the pilot, not excluded from the frame; human adjudication of G1-G5 is still required before any pilot case is selected",
   "papers": [
     {
       "paper_id": "PMID:41032336",
@@ -55,6 +98,51 @@
       "screen_status": "provisional_machine_review_not_validated_or_selected"
     },
     {
+      "paper_id": "PMID:39603203",
+      "sampling_stratum": "Biomedical_Basic",
+      "candidate_rank": 5,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:36008468",
+      "sampling_stratum": "Biomedical_Basic",
+      "candidate_rank": 6,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:36066280",
+      "sampling_stratum": "Biomedical_Basic",
+      "candidate_rank": 7,
+      "article_text_route": "openalex_oa_pdf_http_403_not_access_verdict",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "abstract_only_negative_not_validated"
+    },
+    {
+      "paper_id": "PMID:41278475",
+      "sampling_stratum": "Biomedical_Basic",
+      "candidate_rank": 8,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:40914411",
+      "sampling_stratum": "Biomedical_Basic",
+      "candidate_rank": 9,
+      "article_text_route": "openalex_oa_hybrid_landing_page_only_text_not_retained",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "abstract_only_negative_not_validated"
+    },
+    {
       "paper_id": "PMID:39730532",
       "sampling_stratum": "Clinical_Medicine",
       "candidate_rank": 1,
@@ -88,6 +176,51 @@
       "article_text_route": "open_pmc_jats",
       "provisional_G1": "yes",
       "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:34949294",
+      "sampling_stratum": "Clinical_Medicine",
+      "candidate_rank": 5,
+      "article_text_route": "openalex_oa_pdf_retrieved_license_cc-by-nc",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:41475060",
+      "sampling_stratum": "Clinical_Medicine",
+      "candidate_rank": 6,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:36599232",
+      "sampling_stratum": "Clinical_Medicine",
+      "candidate_rank": 7,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:41467303",
+      "sampling_stratum": "Clinical_Medicine",
+      "candidate_rank": 8,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:35213950",
+      "sampling_stratum": "Clinical_Medicine",
+      "candidate_rank": 9,
+      "article_text_route": "openalex_oa_pdf_http_403_not_access_verdict",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
       "screen_status": "provisional_machine_review_not_validated_or_selected"
     },
     {
@@ -127,6 +260,51 @@
       "screen_status": "abstract_only_negative_not_validated"
     },
     {
+      "paper_id": "PMID:36209891",
+      "sampling_stratum": "Chemistry_Materials",
+      "candidate_rank": 5,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:34885787",
+      "sampling_stratum": "Chemistry_Materials",
+      "candidate_rank": 6,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:39515141",
+      "sampling_stratum": "Chemistry_Materials",
+      "candidate_rank": 7,
+      "article_text_route": "openalex_oa_hybrid_landing_page_only_text_not_retained",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:41140815",
+      "sampling_stratum": "Chemistry_Materials",
+      "candidate_rank": 8,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:36244534",
+      "sampling_stratum": "Chemistry_Materials",
+      "candidate_rank": 9,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "abstract_only_negative_not_validated"
+    },
+    {
       "paper_id": "PMID:33944686",
       "sampling_stratum": "Physics_Engineering",
       "candidate_rank": 1,
@@ -148,7 +326,7 @@
       "paper_id": "PMID:36804744",
       "sampling_stratum": "Physics_Engineering",
       "candidate_rank": 3,
-      "article_text_route": "openalex_oa_bronze_no_pdf_url_at_best_location",
+      "article_text_route": "openalex_oa_bronze_landing_page_only_text_not_retained",
       "provisional_G1": "uncertain",
       "provisional_G2": "uncertain",
       "screen_status": "abstract_only_negative_not_validated"
@@ -157,7 +335,52 @@
       "paper_id": "PMID:35313293",
       "sampling_stratum": "Physics_Engineering",
       "candidate_rank": 4,
-      "article_text_route": "openalex_oa_green_no_pdf_url_at_best_location",
+      "article_text_route": "openalex_oa_green_landing_page_only_text_not_retained",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:38873850",
+      "sampling_stratum": "Physics_Engineering",
+      "candidate_rank": 5,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:36236913",
+      "sampling_stratum": "Physics_Engineering",
+      "candidate_rank": 6,
+      "article_text_route": "openalex_oa_gold_landing_page_only_text_not_retained",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:36560183",
+      "sampling_stratum": "Physics_Engineering",
+      "candidate_rank": 7,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:35378520",
+      "sampling_stratum": "Physics_Engineering",
+      "candidate_rank": 8,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:37080210",
+      "sampling_stratum": "Physics_Engineering",
+      "candidate_rank": 9,
+      "article_text_route": "openalex_oa_hybrid_landing_page_only_text_not_retained",
       "provisional_G1": "yes",
       "provisional_G2": "yes",
       "screen_status": "provisional_machine_review_not_validated_or_selected"
@@ -199,6 +422,51 @@
       "screen_status": "provisional_machine_review_not_validated_or_selected"
     },
     {
+      "paper_id": "PMID:34213460",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 5,
+      "article_text_route": "openalex_oa_hybrid_landing_page_only_text_not_retained",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "abstract_only_negative_not_validated"
+    },
+    {
+      "paper_id": "PMID:40496022",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 6,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:36701571",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 7,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "abstract_only_negative_not_validated"
+    },
+    {
+      "paper_id": "PMID:35017324",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 8,
+      "article_text_route": "openalex_oa_diamond_landing_page_only_text_not_retained",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:34974093",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 9,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "abstract_only_negative_not_validated"
+    },
+    {
       "paper_id": "PMID:41336033",
       "sampling_stratum": "Computational_Science",
       "candidate_rank": 1,
@@ -229,6 +497,51 @@
       "paper_id": "PMID:34680891",
       "sampling_stratum": "Computational_Science",
       "candidate_rank": 4,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:36293016",
+      "sampling_stratum": "Computational_Science",
+      "candidate_rank": 5,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:37767905",
+      "sampling_stratum": "Computational_Science",
+      "candidate_rank": 6,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:38097055",
+      "sampling_stratum": "Computational_Science",
+      "candidate_rank": 7,
+      "article_text_route": "openalex_oa_gold_landing_page_only_text_not_retained",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:36236716",
+      "sampling_stratum": "Computational_Science",
+      "candidate_rank": 8,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:36286480",
+      "sampling_stratum": "Computational_Science",
+      "candidate_rank": 9,
       "article_text_route": "open_pmc_jats",
       "provisional_G1": "yes",
       "provisional_G2": "yes",
@@ -269,6 +582,51 @@
       "provisional_G1": "uncertain",
       "provisional_G2": "uncertain",
       "screen_status": "abstract_only_negative_not_validated"
+    },
+    {
+      "paper_id": "PMID:32091631",
+      "sampling_stratum": "Environmental_Earth",
+      "candidate_rank": 5,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:34748839",
+      "sampling_stratum": "Environmental_Earth",
+      "candidate_rank": 6,
+      "article_text_route": "openalex_oa_bronze_landing_page_only_text_not_retained",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:33979923",
+      "sampling_stratum": "Environmental_Earth",
+      "candidate_rank": 7,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:35244499",
+      "sampling_stratum": "Environmental_Earth",
+      "candidate_rank": 8,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "abstract_only_negative_not_validated"
+    },
+    {
+      "paper_id": "PMID:39472468",
+      "sampling_stratum": "Environmental_Earth",
+      "candidate_rank": 9,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
     }
   ],
   "pilot_selected": false,

@@ -104,8 +104,8 @@
     "sha256": "4bffb62fbf6a5d3b271cf14e8dadc1ef7def895e09367fb8c749a0dbc12d8ce9"
   },
   "results/pilot_candidate_screening.json": {
-    "bytes": 10008,
-    "sha256": "56e233cd2cf8aeb35c602412cef8ff5363b3e461e675c454605113104a174dda"
+    "bytes": 23370,
+    "sha256": "ba0d43c57278b0243b6226fdcb6aa62d3e85b9976379056988956e2a9a82090b"
   },
   "results/readiness.json": {
     "bytes": 943,
@@ -300,8 +300,8 @@
     "sha256": "8b98b8d55a241e92ef3de34ccc936235ac1b31df75e41b9f5ac906c41d6a11d6"
   },
   "review/EVIDENCE.md": {
-    "bytes": 4582,
-    "sha256": "29ac44d3c173efbcc85455d0c55eef6d5699227864da21c14b79852ff8e741a4"
+    "bytes": 4769,
+    "sha256": "3882ec6a77d8679dcc24057fdda696086abe5b064ed4a9d5acc2a0b04da35278"
   },
   "review/JOURNAL_REQUIREMENTS.md": {
     "bytes": 2673,
