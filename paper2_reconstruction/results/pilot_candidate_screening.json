@@ -1,0 +1,276 @@
+{
+  "scope": "provisional_pilot_candidate_screening_not_validated_G1_G5_not_selection",
+  "screen_index_sha256": "e14a38b266bf532dd623b0bba77c5b0402d633852828d62a952f0e7fab427197",
+  "candidates_per_field": 4,
+  "papers_screened": 28,
+  "article_text_route_counts": {
+    "open_pmc_jats": 11,
+    "openalex_closed_no_lawful_public_text_located": 13,
+    "openalex_oa_pdf_retrieved_license_cc-by": 1,
+    "openalex_oa_pdf_http_403_not_access_verdict": 1,
+    "openalex_oa_bronze_no_pdf_url_at_best_location": 1,
+    "openalex_oa_green_no_pdf_url_at_best_location": 1
+  },
+  "screen_status_counts": {
+    "provisional_machine_review_not_validated_or_selected": 21,
+    "abstract_only_negative_not_validated": 6,
+    "rejected_source_evidence": 1
+  },
+  "provider_accounted_tokens_total": 261555,
+  "papers": [
+    {
+      "paper_id": "PMID:41032336",
+      "sampling_stratum": "Biomedical_Basic",
+      "candidate_rank": 1,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:41273055",
+      "sampling_stratum": "Biomedical_Basic",
+      "candidate_rank": 2,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "abstract_only_negative_not_validated"
+    },
+    {
+      "paper_id": "PMID:36493775",
+      "sampling_stratum": "Biomedical_Basic",
+      "candidate_rank": 3,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:37298942",
+      "sampling_stratum": "Biomedical_Basic",
+      "candidate_rank": 4,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:39730532",
+      "sampling_stratum": "Clinical_Medicine",
+      "candidate_rank": 1,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:39738679",
+      "sampling_stratum": "Clinical_Medicine",
+      "candidate_rank": 2,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:39774361",
+      "sampling_stratum": "Clinical_Medicine",
+      "candidate_rank": 3,
+      "article_text_route": "openalex_oa_pdf_retrieved_license_cc-by",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "rejected_source_evidence"
+    },
+    {
+      "paper_id": "PMID:33396838",
+      "sampling_stratum": "Clinical_Medicine",
+      "candidate_rank": 4,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:38007008",
+      "sampling_stratum": "Chemistry_Materials",
+      "candidate_rank": 1,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "abstract_only_negative_not_validated"
+    },
+    {
+      "paper_id": "PMID:36358920",
+      "sampling_stratum": "Chemistry_Materials",
+      "candidate_rank": 2,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:37959749",
+      "sampling_stratum": "Chemistry_Materials",
+      "candidate_rank": 3,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:41267241",
+      "sampling_stratum": "Chemistry_Materials",
+      "candidate_rank": 4,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "abstract_only_negative_not_validated"
+    },
+    {
+      "paper_id": "PMID:33944686",
+      "sampling_stratum": "Physics_Engineering",
+      "candidate_rank": 1,
+      "article_text_route": "openalex_oa_pdf_http_403_not_access_verdict",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:34031721",
+      "sampling_stratum": "Physics_Engineering",
+      "candidate_rank": 2,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:36804744",
+      "sampling_stratum": "Physics_Engineering",
+      "candidate_rank": 3,
+      "article_text_route": "openalex_oa_bronze_no_pdf_url_at_best_location",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "abstract_only_negative_not_validated"
+    },
+    {
+      "paper_id": "PMID:35313293",
+      "sampling_stratum": "Physics_Engineering",
+      "candidate_rank": 4,
+      "article_text_route": "openalex_oa_green_no_pdf_url_at_best_location",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:41445340",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 1,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:41831936",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 2,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "abstract_only_negative_not_validated"
+    },
+    {
+      "paper_id": "PMID:35654511",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 3,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:33574863",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 4,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:41336033",
+      "sampling_stratum": "Computational_Science",
+      "candidate_rank": 1,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:34891985",
+      "sampling_stratum": "Computational_Science",
+      "candidate_rank": 2,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:36409083",
+      "sampling_stratum": "Computational_Science",
+      "candidate_rank": 3,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:34680891",
+      "sampling_stratum": "Computational_Science",
+      "candidate_rank": 4,
+      "article_text_route": "open_pmc_jats",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:38950848",
+      "sampling_stratum": "Environmental_Earth",
+      "candidate_rank": 1,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:40482329",
+      "sampling_stratum": "Environmental_Earth",
+      "candidate_rank": 2,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:35122167",
+      "sampling_stratum": "Environmental_Earth",
+      "candidate_rank": 3,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "yes",
+      "provisional_G2": "yes",
+      "screen_status": "provisional_machine_review_not_validated_or_selected"
+    },
+    {
+      "paper_id": "PMID:41224038",
+      "sampling_stratum": "Environmental_Earth",
+      "candidate_rank": 4,
+      "article_text_route": "openalex_closed_no_lawful_public_text_located",
+      "provisional_G1": "uncertain",
+      "provisional_G2": "uncertain",
+      "screen_status": "abstract_only_negative_not_validated"
+    }
+  ],
+  "pilot_selected": false,
+  "funnel_updated": false
+}

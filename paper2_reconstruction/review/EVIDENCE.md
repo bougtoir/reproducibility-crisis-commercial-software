@@ -51,3 +51,16 @@ closed-access pilot candidates (PMID 38007008, 41336033, 38950848); they remain
 unresolved and no replacement candidate was drawn
 (`data/raw/candidate-alternatives-20260922/author_disposition_20260922.json`).
 Article bodies are third-party content and are not redistributed here.
+
+## Pilot candidate screening (2026-09-23)
+
+`results/pilot_candidate_screening.json` summarizes `paper2.funnel_screen` over
+the first four deterministic candidates per field (28 papers; private run
+`data/raw/pilot-screen-20260923`, 261,555 provider-accounted tokens). For the 17
+candidates without open PMC text, OpenAlex best-OA locations were checked and
+retained (`data/raw/pilot-oa-locations-20260923`): one CC-BY publisher PDF was
+retrieved (PMID 39774361); one hybrid-OA publisher PDF returned HTTP 403 to the
+scripted request (PMID 33944686; not an access verdict); two reported OA without a
+PDF location; thirteen are closed at every reported location. Provisional G1/G2
+proposals are machine output bound to retained source segments and await human
+adjudication; no pilot case has been selected and the funnel is unchanged.

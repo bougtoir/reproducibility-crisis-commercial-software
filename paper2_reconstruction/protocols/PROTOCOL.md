@@ -56,6 +56,16 @@ individual institutional permissions are restricted even when no fee is charged.
 Transient failed downloads remain unknown after a documented limited retry policy,
 not evidence that the underlying data do not exist.
 
+Article-text obtainability is recorded separately from G1–G5 as a prospective
+access status: `lawful_text_retained` (identity-verified open PMC JATS, a
+licensed publisher/repository copy, or an author-supplied copy), `no_lawful_public_text_located` (only closed locations found after the documented route checks) or
+`route_check_incomplete`. A paper whose allowed material cannot be lawfully
+retained before the pilot cannot be a pilot case and is recorded as prospectively
+unavailable to the pilot with the routes checked; this is not a G3 input verdict,
+not a G1 negative and does not remove the paper from the main frame. Machine
+screening of retained text yields provisional G1/G2 proposals only; human
+adjudication against the retained bytes is required before any gate is recorded.
+
 ## Prospective pilot and freeze sequence
 
 After harness qualification, select seven pilot papers,

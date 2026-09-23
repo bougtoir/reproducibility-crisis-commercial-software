@@ -75,7 +75,19 @@ PYTHONPATH=src .venv/bin/python -m paper2.acquisition --output data/raw/candidat
 PYTHONPATH=src .venv/bin/python -m paper2.corpus_acquisition --output data/raw/corpus-metadata
 PYTHONPATH=src .venv/bin/python -m paper2.corpus_evidence \
   --metadata data/raw/corpus-metadata --output data/raw/corpus-articles
+PYTHONPATH=src .venv/bin/python -m paper2.funnel_screen \
+  --metadata data/raw/corpus-metadata --articles data/raw/corpus-articles \
+  --output data/raw/pilot-screen --candidates-per-field 4
 ```
+
+`paper2.funnel_screen` applies the candidate-review instrument to frame papers
+in the deterministic pilot order, using only the retained identity-verified
+metadata record and, when present, the retained open PMC JATS article of the same
+paper (hash-checked against the corpus indexes). It records the article-text
+route separately from the provisional G1/G2 proposals, downgrades abstract-only
+negatives to uncertain, retains interrupted API calls as unknown usage without
+retrying, and never writes to the funnel. `results/pilot_candidate_screening.json`
+summarizes one such run; it is neither validated classification nor pilot selection.
 
 Candidate evidence can be reviewed separately with `paper2.candidate_review`,
 passing `--source` for the candidate-acquisition directory and `--output` for a
