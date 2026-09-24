@@ -117,3 +117,51 @@ model-side retrieval tool restriction for provider-hosted tools, three-slot
 scheduling and budget comparability, and independent human adjudicator
 governance. This is a control test on one candidate article, not a
 reconstruction attempt; no pilot or main run is authorized.
+
+## Lawful public input acquisition for the provisional pilot (2026-09-24)
+
+`paper2.pilot_inputs` resolved the deposit route named in each provisional pilot
+article and retained every listing response and every retrievable file under
+`data/raw/pilot-inputs-20260924/` with URL, accession, UTC time, request
+conditions, byte count, SHA-256, rights and completeness in a content-addressed
+ledger. Four papers name no public route: ADNI requires a data-use application,
+two state author request only, and one points to supplementary material only.
+ENA `PRJEB51705` and NGDC `PRJCA012518` announce only sequencing archives far
+above the 64 MiB retention cap. ProteomeXchange `PXD027610` is announced through
+iProX and exposes no file sizes, so its completeness is recorded as
+`service_announces_no_file_sizes` rather than assumed. Zenodo record
+`10.5281/zenodo.6377228` yielded eleven retained tabular files; these are the
+figure source tables of the target statistic itself, so they are held as raw
+evidence for post-reveal validation and were withheld from every solver as
+outcome leakage. No deposited study input was simultaneously public, below the
+cap, machine-readable and free of outcome leakage. Route failures are recorded as
+route observations, not as G3 input verdicts.
+
+## Provisional pilot execution (2026-09-24)
+
+Executed under deviation `DEV-2026-09-24-02`
+(`data/adjudication/pilot_execution_DEV-2026-09-24-02.json`) on the author's
+explicit authorisation while author verification of G1–G5 remains pending. Seven
+provisional papers, one per stratum, three independent slots each. Every slot
+received its own broker journal, its own served package (the hash-checked article
+plus the pinned free-software closure) and a fresh isolated worker with no shared
+mutable state and no parent or sibling debugging. Target and allowed manifests
+were hashed and RFC 3161 timestamped before the first solver call, and the sealed
+blind outcomes were timestamped before any reveal-class request; no reveal and no
+adjudication were performed (`results/provisional_pilot_summary.json`; full run
+evidence, which quotes restricted article text, is retained privately in
+`/home/ubuntu/paper2_evidence/pilot-20260924b`).
+
+A first harness iteration (`/home/ubuntu/paper2_evidence/pilot-20260924`) is
+retained rather than discarded: twenty of its twenty-one slots stopped on harness
+limits rather than on study evidence, so it measures the harness, not the papers.
+The harness was then changed — full tool output retained but truncated in the
+model context, an oversized print no longer terminating the worker, a truncated
+or malformed action returned to the solver within a fixed budget, and a larger
+run envelope — and all twenty-one slots were re-run. In that iteration twelve
+slots returned a sealed report and nine exhausted the context budget. No slot
+executed the target computation, because no deposited input was served; every
+sealed report recorded a null observed value with explicit missing-input failure
+codes, and none manufactured a value or an agreement. L1–L5 outcomes remain
+unadjudicated, pilot runs are excluded from the main sample, and no success rate
+is assessable.

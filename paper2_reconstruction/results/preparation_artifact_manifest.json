@@ -4,8 +4,8 @@
     "sha256": "4212f30a8b59853ea27eaf667ec250ab5e39f9e0a36d5e1e21ee573b107e974c"
   },
   "manuscript/Supplement_protocols_DRAFT_EN.docx": {
-    "bytes": 52620,
-    "sha256": "05ee18b5e12f9e8a24c0731631c61146ecdd55b4c5425905e7de01857ff9640c"
+    "bytes": 52848,
+    "sha256": "a1676407deb8ee3355102b5b6818877051edef062b4eb3e8a9fa49453ba1c68c"
   },
   "manuscript/Editable_tables_EN.docx": {
     "bytes": 38108,
@@ -44,12 +44,12 @@
     "sha256": "58b48d75cb4cfcefc789c049e5c1a0c3e505fa1e110ec9670d93e50f80be872e"
   },
   "protocols/INFORMATION_FIREWALL.md": {
-    "bytes": 3742,
-    "sha256": "b4ea98abc5046b1bc94bcd013311be312de97380e4798cd66fc889f2bdc4ba2c"
+    "bytes": 4146,
+    "sha256": "7802b558013a24984d4caa216c40f96f234d64149e7fd336924cb48626328f56"
   },
   "protocols/PROTOCOL.md": {
-    "bytes": 6954,
-    "sha256": "604e8469cc0c9a0e00f6c744ba477bcb64b4ea8f379f3e5058265089d8837993"
+    "bytes": 7139,
+    "sha256": "a976f198ff262323e6b8cec34e48589f294265cfcec583d0574621c4779b2dd1"
   },
   "protocols/QC_PROTOCOL.md": {
     "bytes": 2911,
@@ -119,9 +119,13 @@
     "bytes": 4617,
     "sha256": "ae489daf806a79b633f8f516692be411b84d20744a7b3d453fca085bc5bc7821"
   },
+  "results/provisional_pilot_summary.json": {
+    "bytes": 1132,
+    "sha256": "cc82904dae430dc45b66720cb6865fbb7d5ece9f27c6e7f07910f6d91ec3c747"
+  },
   "results/readiness.json": {
-    "bytes": 1277,
-    "sha256": "c37e2fda235d7f22648e09ea39ae11eee69869a52da72ce1f7f96e2956dd61e5"
+    "bytes": 1543,
+    "sha256": "d9680b1c96a1f01af568aedf8ae21000074fc3896a8f9df310e027d5d12d0c5c"
   },
   "src/paper2/__init__.py": {
     "bytes": 63,
@@ -132,16 +136,16 @@
     "sha256": "5034fb59fe7609f612ba9474a665a259768057e3bc07163f6ede4c9d3be47540"
   },
   "src/paper2/build.py": {
-    "bytes": 14706,
-    "sha256": "cfab0e02dcfd2ef3b3fdfbf033195267e9b22a967738803f0b28528a400a0381"
+    "bytes": 15065,
+    "sha256": "ba4798929790466bc641ee0f5c34bc59ceeeef9c74e972d89247615c0bbaba19"
   },
   "src/paper2/candidate_review.py": {
     "bytes": 11746,
     "sha256": "5445e8240e2a901e90f5c1c6d13d452d7c0e747c96d6b74d9447823972cb7572"
   },
   "src/paper2/controller.py": {
-    "bytes": 12674,
-    "sha256": "aab29ab37ed8981589c807c364cdba24314ec64e44dc987868f449f90f2f33bd"
+    "bytes": 14603,
+    "sha256": "a9478e5ac674055eec58ce1fb8aabe013471b5948911320892eb70040cdc70e5"
   },
   "src/paper2/core.py": {
     "bytes": 9762,
@@ -176,8 +180,8 @@
     "sha256": "87b59167e9a920c934098ed17065ab2e2afd3dde83b6364be1fcef79ed6b6772"
   },
   "src/paper2/isolation.py": {
-    "bytes": 13134,
-    "sha256": "ab148f485c69b8e089da2583b025affaa084eda500f88d8b66781f23c5e799d8"
+    "bytes": 13173,
+    "sha256": "7f9cd03915e7009da67bbda9815d91ece0170ab985077d1462a7967aa60caa48"
   },
   "src/paper2/model_api.py": {
     "bytes": 8249,
@@ -186,6 +190,14 @@
   "src/paper2/packages.py": {
     "bytes": 7918,
     "sha256": "d49264c742265b78ecf51db3af5ea9789fb30468da81ffb809dc0df5297af405"
+  },
+  "src/paper2/pilot.py": {
+    "bytes": 15005,
+    "sha256": "14f9552e811c20ae6560b821a0e4490632ad589cd7e361bd5e217200e087f3a6"
+  },
+  "src/paper2/pilot_inputs.py": {
+    "bytes": 10782,
+    "sha256": "e2a4173b15e590dcd671e219466870d07c65e615973daaeddc6b609f3ea2d232"
   },
   "src/paper2/primary_adjudication.py": {
     "bytes": 9404,
@@ -320,8 +332,8 @@
     "sha256": "8b98b8d55a241e92ef3de34ccc936235ac1b31df75e41b9f5ac906c41d6a11d6"
   },
   "review/EVIDENCE.md": {
-    "bytes": 8135,
-    "sha256": "b021bbc123f167a4539175be5facab751dce420fb27be363f288cce5f065b5d6"
+    "bytes": 11323,
+    "sha256": "f6e9d52f6fa6224a06492764926974e0d18faac01e1ccad23819c76588acd148"
   },
   "review/JOURNAL_REQUIREMENTS.md": {
     "bytes": 2673,
@@ -402,6 +414,14 @@
   "tests/test_packages.py": {
     "bytes": 4205,
     "sha256": "59ce7a62de54e86ff5f7a8d929bb0aaca960fca17db50246cb924abfbe0d7ad1"
+  },
+  "tests/test_pilot.py": {
+    "bytes": 3671,
+    "sha256": "de9413b8f1f06639d142c0ee64a366365461edefe3b928e3b0875edb2949bb49"
+  },
+  "tests/test_pilot_inputs.py": {
+    "bytes": 2923,
+    "sha256": "4e7f84b9cafff5b463306f16f1bc8a3575135ddea387d4ab67ce0cce0c3390a2"
   },
   "tests/test_preparation.py": {
     "bytes": 3400,

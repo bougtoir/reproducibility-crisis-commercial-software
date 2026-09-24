@@ -10,7 +10,12 @@ negative cases (`results/firewall_qualification.json`, policy
 `firewall-qualification-2026-09-24`). Still unqualified: model-side retrieval
 tool restriction for provider-hosted tools, three-slot scheduling and budget
 comparability, and independent human adjudicator governance. None of these
-qualifications authorizes pilot or main runs.
+qualifications authorizes main runs. The provisional pilot (`paper2.pilot`,
+deviation `DEV-2026-09-24-02`) ran inside these qualified controls: one broker
+journal, one served package and one fresh worker per slot, manifests hashed and
+externally timestamped before the first solver call, and outcomes sealed and
+timestamped before any reveal-class request. The unqualified areas above still
+apply to it and are recorded as limitations of those runs.
 The current execution probe uses one CPU, 2 GiB RAM and 512 MiB work storage;
 it does not validate the larger proposed scientific-run envelope. A model alias
 without a provider-reported version remains explicitly version-unverified.

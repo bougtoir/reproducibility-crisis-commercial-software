@@ -35,6 +35,8 @@ TOOLS = {
     },
     "final": {"handler": "seal_claimed_report_without_adjudication"},
 }
+FEEDBACK_BYTES = 6000
+MALFORMED_BUDGET = 3
 REPORT_KEYS = {
     "observed_value",
     "conclusion",
@@ -108,6 +110,7 @@ def run(
     destination: Path,
     limits: Limits,
     image: str = IMAGE,
+    scope: str = "synthetic_controller_qualification_only",
 ) -> dict[str, object]:
     limits.validate()
     destination.mkdir(parents=True, exist_ok=False)
@@ -117,7 +120,7 @@ def run(
     journal.record(
         "contract",
         {
-            "scope": "synthetic_controller_qualification_only",
+            "scope": scope,
             "limits": asdict(limits),
             "package_manifest": expected,
             "package_manifest_sha256": sha256(json.dumps(expected, sort_keys=True).encode()),
@@ -137,6 +140,7 @@ def run(
     worker: Worker | None = None
     started = time.monotonic()
     tokens, calls, requests, accounted_requests = 0, 0, 0, 0
+    malformed = 0
     reason = "not_started"
     report: dict[str, object] | None = None
     artifacts: list[dict[str, object]] = []
@@ -172,10 +176,47 @@ def run(
             if tokens > limits.tokens:
                 reason = "provider_token_overrun"
                 break
-            if response.reported_model != MODEL or response.finish_reason != "stop":
-                reason = "provider_identity_or_completion_invalid"
+            if response.reported_model != MODEL:
+                reason = "provider_identity_invalid"
                 break
-            action, value = decode_action(response.content)
+            try:
+                if response.finish_reason != "stop":
+                    raise ValueError(f"completion stopped on {response.finish_reason}")
+                action, value = decode_action(response.content)
+            except ValueError as error:
+                malformed += 1
+                journal.record(
+                    "malformed_action",
+                    {
+                        "attempt": malformed,
+                        "finish_reason": response.finish_reason,
+                        "detail": str(error),
+                    },
+                )
+                if malformed > MALFORMED_BUDGET:
+                    reason = "malformed_action_limit"
+                    break
+                messages.extend(
+                    [
+                        {"role": "assistant", "content": response.content},
+                        {
+                            "role": "user",
+                            "content": json.dumps(
+                                {
+                                    "harness_observation": "unusable_response",
+                                    "detail": str(error),
+                                    "required": (
+                                        "one complete JSON object: "
+                                        '{"action":"python","code":"..."} or '
+                                        '{"action":"final","report":{...}}; '
+                                        "keep it short enough to finish"
+                                    ),
+                                }
+                            ),
+                        },
+                    ]
+                )
+                continue
             if action == "final":
                 assert isinstance(value, dict)
                 report, reason = value, "final_report"
@@ -190,13 +231,18 @@ def run(
             execution = worker.execute(value, seconds=seconds)
             calls += 1
             journal.record("execution", asdict(execution))
-            if execution.stop_reason != "completed":
+            if execution.stop_reason == "wall_limit":
                 reason = execution.stop_reason
                 break
+            observation = asdict(execution)
+            if len(execution.output) > FEEDBACK_BYTES:
+                observation["output"] = execution.output[:FEEDBACK_BYTES]
+                observation["output_truncated_in_context"] = True
+                observation["full_output_bytes"] = len(execution.output)
             messages.extend(
                 [
                     {"role": "assistant", "content": response.content},
-                    {"role": "user", "content": json.dumps(asdict(execution))},
+                    {"role": "user", "content": json.dumps(observation)},
                 ]
             )
     except (
@@ -223,7 +269,7 @@ def run(
                     reason = "artifact_export_error"
             worker.close()
     result: dict[str, object] = {
-        "scope": "synthetic_controller_qualification_only",
+        "scope": scope,
         "stop_reason": reason,
         "requests": requests,
         "tool_calls": calls,

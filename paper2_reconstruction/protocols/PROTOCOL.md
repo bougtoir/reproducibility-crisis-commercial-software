@@ -1,6 +1,9 @@
 # Paper II protocol
 
-**DRAFT — NOT FROZEN. No pilot or main reconstruction experiment has occurred.**
+**DRAFT — NOT FROZEN. A provisional pilot has been executed under deviation
+`DEV-2026-09-24-02` with author verification of G1–G5 still pending; its runs are
+sealed unadjudicated and excluded from the main sample. No main reconstruction
+experiment has occurred.**
 
 ## Question and scope
 

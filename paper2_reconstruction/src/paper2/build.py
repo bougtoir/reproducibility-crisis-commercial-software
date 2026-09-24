@@ -354,7 +354,12 @@ def build() -> dict[str, object]:
         "paper_frame_sha256": frame_manifest["frame_sha256"],
         "historical_extraction_validation": "not_verified_no_annotations_recovered",
         "historical_raw_API_snapshots": "not_recovered",
-        "pilot": "NOT_COMPLETED",
+        "pilot": (
+            "PROVISIONAL_RUNS_SEALED_UNADJUDICATED; "
+            "results/provisional_pilot_summary.json; DEV-2026-09-24-02; "
+            "no deposited study input was serveable, so no slot executed the target "
+            "computation and no L1-L5 outcome is adjudicated"
+        ),
         "protocol_freeze": "NOT_COMPLETED",
         "funnel_assessment": "NOT_STARTED",
         "primary_gate_adjudication": (
@@ -364,7 +369,9 @@ def build() -> dict[str, object]:
         "pilot_selection": "PROVISIONAL_NOT_FROZEN",
         "intensive_sample": "NOT_SELECTED",
         "reconstruction_experiments": "NOT_COMPLETED",
-        "blind_freeze": "NOT_COMPLETED",
+        "blind_freeze": (
+            "PROVISIONAL_PILOT_OUTCOMES_SEALED_AND_TIMESTAMPED; main sample NOT_COMPLETED"
+        ),
         "descriptive_reveal": "NOT_COMPLETED",
         "human_validation": "NOT_COMPLETED",
         "firewall_harness": (

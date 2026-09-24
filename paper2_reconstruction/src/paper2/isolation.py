@@ -192,9 +192,10 @@ class Worker:
                     reason = "output_limit"
                     break
             if reason != "completed":
+                process.kill()
+            if reason == "wall_limit":
                 docker("kill", self.name)
                 self.closed = True
-                process.kill()
             returncode = process.wait(timeout=10)
         return Execution(
             sha256(code.encode()),
