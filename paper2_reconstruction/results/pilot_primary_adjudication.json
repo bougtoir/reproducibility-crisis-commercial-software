@@ -1,0 +1,121 @@
+{
+  "scope": "devin_primary_assessment_pending_author_verification_not_formal_human_adjudication",
+  "record_sha256": "20a93bc75bfe8d120b1a2ff8a2c05567bffbca4388e68ba4ebb23aeeac3e6277",
+  "deviation_id": "DEV-2026-09-23-01",
+  "author_verification": "pending",
+  "papers_assessed": 11,
+  "provisional_pilot_cases": {
+    "Biomedical_Basic": {
+      "paper_id": "PMID:36493775",
+      "candidate_rank": 3,
+      "target_candidate": "Per-region Spearman rho between within-region genetic diversity (mean pairwise 1 - f3) and time period; reported as rho > 0.94, one-sided p < 0.04 in all regions except the Aegean (Figure 4; Zenodo Table Z4).",
+      "G3_input_accessibility": "public"
+    },
+    "Chemistry_Materials": {
+      "paper_id": "PMID:36358920",
+      "candidate_rank": 2,
+      "target_candidate": "Number of differential proteins at W1 vs W0 within the experimental group: 12 upregulated and 15 downregulated (Table 1).",
+      "G3_input_accessibility": "public"
+    },
+    "Clinical_Medicine": {
+      "paper_id": "PMID:39730532",
+      "candidate_rank": 1,
+      "target_candidate": "Test-set accuracy for AD vs CN classification = 91.84% (Table 5).",
+      "G3_input_accessibility": "restricted_but_potentially_accessible"
+    },
+    "Computational_Science": {
+      "paper_id": "PMID:36409083",
+      "candidate_rank": 3,
+      "target_candidate": "Lineage-specific presence of the spl serine protease gene cluster: present only in ST5 and ST239 among the 142 represented ST59/ST398/ST239/ST5 isolates (Fig. 2A).",
+      "G3_input_accessibility": "public"
+    },
+    "Environmental_Earth": {
+      "paper_id": "PMID:39472468",
+      "candidate_rank": 9,
+      "target_candidate": "Overall accuracy of the Random Forest genotype calls on experimental Fluidigm pools = 99% (abstract; Fig. 3H).",
+      "G3_input_accessibility": "restricted_but_potentially_accessible"
+    },
+    "Physics_Engineering": {
+      "paper_id": "PMID:34031721",
+      "candidate_rank": 2,
+      "target_candidate": "Reduction in number of movements with Click-On vs DROP-IN probe during the phantom exercise = 40% (Results, Fig. 3).",
+      "G3_input_accessibility": "restricted_but_potentially_accessible"
+    },
+    "Social_Behavioral": {
+      "paper_id": "PMID:33584682",
+      "candidate_rank": 12,
+      "target_candidate": "Spearman correlation between LN Env-specific TFH cells post-priming and rectal Env-specific IgA titers (Figure 3F/G and Table 2; abstract order of appearance).",
+      "G3_input_accessibility": "insufficiently_identified"
+    }
+  },
+  "replaced_candidates": [
+    {
+      "paper_id": "PMID:41032336",
+      "sampling_stratum": "Biomedical_Basic",
+      "candidate_rank": 1,
+      "G1_computationally_testable": "no"
+    },
+    {
+      "paper_id": "PMID:33574863",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 4,
+      "G1_computationally_testable": "no"
+    },
+    {
+      "paper_id": "PMID:40496022",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 6,
+      "G1_computationally_testable": "no"
+    },
+    {
+      "paper_id": "PMID:41497311",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 10,
+      "G1_computationally_testable": "uncertain"
+    }
+  ],
+  "gate_counts": {
+    "G1_computationally_testable": {
+      "no": 3,
+      "uncertain": 1,
+      "yes": 7
+    },
+    "G2_principal_target_identifiable": {
+      "not_applicable": 3,
+      "uncertain": 3,
+      "yes": 5
+    },
+    "G3_input_accessibility": {
+      "insufficiently_identified": 1,
+      "not_applicable": 3,
+      "public": 3,
+      "restricted_but_potentially_accessible": 4
+    },
+    "G4_resource_accessibility": {
+      "available": 7,
+      "not_applicable": 3,
+      "uncertain": 1
+    },
+    "G5_specification_sufficient_for_attempt": {
+      "insufficient": 1,
+      "not_applicable": 3,
+      "uncertain": 7
+    }
+  },
+  "deterministic_candidate_chain": {
+    "strata": 7,
+    "candidates_consumed": 32,
+    "skip_reason_counts": {
+      "skipped_no_lawful_public_text_located_closed_at_reported_locations": 16,
+      "skipped_oa_bronze_landing_page_only_text_not_retained": 1,
+      "skipped_oa_diamond_landing_page_only_text_not_retained": 1,
+      "skipped_oa_hybrid_landing_page_only_text_not_retained": 1,
+      "skipped_oa_hybrid_pdf_request_http_403_not_an_access_verdict_text_not_retained": 1,
+      "skipped_primary_G1=no_G2=not_applicable": 3,
+      "skipped_primary_G1=uncertain_G2=uncertain": 1,
+      "skipped_route_check_incomplete_doi_missing": 1
+    }
+  },
+  "formal_funnel_updated": false,
+  "pilot_selection_frozen": false
+}

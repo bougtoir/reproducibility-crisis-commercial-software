@@ -89,6 +89,19 @@ negatives to uncertain, retains interrupted API calls as unknown usage without
 retrying, and never writes to the funnel. `results/pilot_candidate_screening.json`
 summarizes one such run; it is neither validated classification nor pilot selection.
 
+```sh
+PYTHONPATH=src .venv/bin/python -m paper2.primary_adjudication
+```
+
+`paper2.primary_adjudication` validates a delegated primary G1–G5 record in
+`data/adjudication/` against the retained screen bytes: every gate must use a
+protocol vocabulary value, every cited quote must appear verbatim inside the cited
+retained segment, a pilot case requires primary G1=yes with G2 not negative, and
+each stratum must consume its deterministic candidate order without gaps. It
+writes `results/pilot_primary_adjudication.{csv,json}` and never writes to the
+funnel; the records it renders remain provisional until author verification is
+recorded.
+
 Candidate evidence can be reviewed separately with `paper2.candidate_review`,
 passing `--source` for the candidate-acquisition directory and `--output` for a
 new private review directory. This instrument preserves final model responses

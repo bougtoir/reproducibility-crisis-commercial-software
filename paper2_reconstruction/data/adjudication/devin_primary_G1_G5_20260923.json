@@ -1,0 +1,628 @@
+{
+  "record_id": "devin_primary_G1_G5_20260923",
+  "scope": "devin_primary_assessment_pending_author_verification_not_formal_human_adjudication",
+  "adjudicator": "Devin (delegated first-pass adjudicator)",
+  "delegation_basis": "Author instruction 2026-09-23: 「devin一次判定で進めて / あとから検証します」",
+  "author_verification": "pending",
+  "recorded_utc": "2026-09-24T09:39:49Z",
+  "assessment_period_utc": "2026-09-23T13:00Z to 2026-09-24T09:39Z (single delegated pass; screen and OA evidence acquired in the same window)",
+  "screen_directory": "data/raw/pilot-screen-20260923",
+  "evidence_rule": "Every gate cites segment IDs of the hash-checked retained article text in the screen directory; quotes must occur verbatim inside the cited segment. Original code, repositories and author implementations were not consulted.",
+  "pilot_eligibility_rule": "A candidate is a provisional pilot case only if article text is lawfully retained, primary G1 = yes and primary G2 != no. Candidates failing this rule are replaced by the next candidate in deterministic order within the same stratum; every skipped candidate and reason is retained here. G3/G4/G5 never cause replacement (access and specification failures are study outcomes).",
+  "deviation": {
+    "deviation_id": "DEV-2026-09-23-01",
+    "protocol_clause": "protocols/PROTOCOL.md: 'human adjudication against the retained bytes is required before any gate is recorded'",
+    "description": "Initial G1-G5 adjudication of pilot candidates was performed by Devin from the retained bytes instead of the author. The author will verify or overturn each gate afterwards. Records below are therefore provisional; the formal funnel file remains NOT_STARTED until author verification is recorded.",
+    "consequence": "Pilot selection derived from these gates is provisional. If author verification changes a gate that affects eligibility, the affected stratum must be re-selected before any blind run using that stratum is counted."
+  },
+  "assessments": [
+    {
+      "paper_id": "PMID:41032336",
+      "sampling_stratum": "Biomedical_Basic",
+      "candidate_rank": 1,
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "no",
+      "G1_reason": "Central claims are wet-lab outcomes: colony pigmentation of 42 strains on a new differential medium. The ML phylogeny (ClustalW/MEGA X) only supports strain identification and is not a central claim.",
+      "G2_principal_target_identifiable": "not_applicable",
+      "G3_input_accessibility": "not_applicable",
+      "G4_resource_accessibility": "not_applicable",
+      "G5_specification_sufficient_for_attempt": "not_applicable",
+      "target_candidate": "none (no central computational output)",
+      "alternatives_considered": "cpn60/16S maximum-likelihood phylogeny (MEGA X 10.2.4, GTR+G+I) considered and rejected as ancillary identification, not a central claim.",
+      "pilot_decision": "not_pilot_case_replaced",
+      "evidence": [
+        {
+          "segment_id": "S0038",
+          "quote": "formed yellow or orange colonies on the differential medium",
+          "gate": "G1"
+        },
+        {
+          "segment_id": "S0034",
+          "quote": "by MEGAX (10.2.4) was then used to generate a Maximum Likelihood phylogeny",
+          "gate": "G1"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:36493775",
+      "sampling_stratum": "Biomedical_Basic",
+      "candidate_rank": 3,
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "Central claim (within-region genetic diversity increases monotonically through the Holocene) is a statistical estimate computed from genotype data: pairwise (1 - f3) distances and Spearman correlation with time.",
+      "G2_principal_target_identifiable": "yes",
+      "G3_input_accessibility": "public",
+      "G3_note": "BAM data at ENA PRJEB51705; genotype Dataset1 and raw figure tables at Zenodo 10.5281/zenodo.6377228. Deposit contents not yet downloaded or verified.",
+      "G4_resource_accessibility": "available",
+      "G4_note": "Named tools (AdmixTools, EIGENSOFT, ANGSD, samtools, msprime) are free/open-source; versions reported. Full BAM reprocessing likely exceeds the 4 vCPU/120 min run budget; the Zenodo genotype dataset may suffice for the target.",
+      "G5_specification_sufficient_for_attempt": "uncertain",
+      "G5_note": "Methods give tools and parameters but the exact grouping of individuals into regions/time periods and the diversity statistic construction depend on supplementary tables not yet examined.",
+      "target_candidate": "Per-region Spearman rho between within-region genetic diversity (mean pairwise 1 - f3) and time period; reported as rho > 0.94, one-sided p < 0.04 in all regions except the Aegean (Figure 4; Zenodo Table Z4).",
+      "alternatives_considered": "Inter-regional (1 - f3) differentiation pattern (Figure 5) and X-vs-autosome distance residuals (Figure 6B) were later in order of appearance and less central to the stated summary.",
+      "pilot_decision": "provisional_pilot_case",
+      "evidence": [
+        {
+          "segment_id": "S0079",
+          "quote": "rho > 0.94, one-sided p < 0.04",
+          "gate": "G1,G2"
+        },
+        {
+          "segment_id": "S0406",
+          "quote": "PRJEB51705",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0408",
+          "quote": "zenodo.6377228",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0141",
+          "quote": "AdmixTools",
+          "gate": "G4"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:39730532",
+      "sampling_stratum": "Clinical_Medicine",
+      "candidate_rank": 1,
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "Central claim is a predictive-evaluation metric (test accuracy of a hybrid CNN + classical-feature classifier on MRI).",
+      "G2_principal_target_identifiable": "yes",
+      "G3_input_accessibility": "restricted_but_potentially_accessible",
+      "G3_note": "ADNI MRI requires an individual data-use application approved by ADNI; the article calls it publicly available via the ADNI access page. Not obtainable by ordinary free registration open to any reader.",
+      "G4_resource_accessibility": "available",
+      "G4_note": "Preprocessing/segmentation reported in MATLAB (commercial, version unspecified); CNN in Keras/Python. The described functions are replicable with free tools under the commercial-software policy.",
+      "G5_specification_sufficient_for_attempt": "uncertain",
+      "G5_note": "Subject selection from ADNI, exact scan lists and train/validation/test split are not published; the CNN architecture is described but hyperparameters would need assumptions.",
+      "target_candidate": "Test-set accuracy for AD vs CN classification = 91.84% (Table 5).",
+      "alternatives_considered": "sMCI vs pMCI test accuracy 80.85% (Table 4) is secondary in the abstract's ordering.",
+      "pilot_decision": "provisional_pilot_case",
+      "evidence": [
+        {
+          "segment_id": "S0087",
+          "quote": "Its test accuracy stood at 91.84% in CN vs AD classification paradigm",
+          "gate": "G1,G2"
+        },
+        {
+          "segment_id": "S0036",
+          "quote": "Alzheimer’s Disease Neuroimaging Initiative",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0112",
+          "quote": "https://adni.loni.usc.edu/data-samples/access-data/",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0047",
+          "quote": "MATLAB",
+          "gate": "G4"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:36358920",
+      "sampling_stratum": "Chemistry_Materials",
+      "candidate_rank": 2,
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "Central claim (numbers of differential urinary proteins between time points/groups) is produced by DIA quantification followed by fold-change and t-test screening.",
+      "G2_principal_target_identifiable": "yes",
+      "G3_input_accessibility": "public",
+      "G3_note": "Mass spectrometry raw data deposited at ProteomeXchange/iProX PXD027610; deposit contents not yet downloaded or verified.",
+      "G4_resource_accessibility": "uncertain",
+      "G4_note": "DIA quantification was done with Spectronaut Pulsar X and library search with Proteome Discoverer 2.1 (both commercial). Free alternatives (e.g. DIA-NN, FragPipe) exist but equivalence is not established; the differential-screening step itself (FC >= 1.5 or <= 0.67, p < 0.05) is trivially free.",
+      "G5_specification_sufficient_for_attempt": "uncertain",
+      "G5_note": "Database, tolerances and screening thresholds are specified; library-search and DIA settings are partially specified. 69 DIA samples likely exceed the run compute budget if reprocessed from raw.",
+      "target_candidate": "Number of differential proteins at W1 vs W0 within the experimental group: 12 upregulated and 15 downregulated (Table 1).",
+      "alternatives_considered": "Oil Red O staining area (17.78% vs 0.88%) is a wet-lab measurement; later between-group comparisons appear after Table 1.",
+      "pilot_decision": "provisional_pilot_case",
+      "evidence": [
+        {
+          "segment_id": "S0042",
+          "quote": "12 proteins were significantly upregulated",
+          "gate": "G1,G2"
+        },
+        {
+          "segment_id": "S0041",
+          "quote": "PXD027610",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0030",
+          "quote": "Spectronaut",
+          "gate": "G4"
+        },
+        {
+          "segment_id": "S0028",
+          "quote": "Proteome Discoverer",
+          "gate": "G4"
+        },
+        {
+          "segment_id": "S0035",
+          "quote": "FC) between the two groups ≥1.5",
+          "gate": "G5"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:34031721",
+      "sampling_stratum": "Physics_Engineering",
+      "candidate_rank": 2,
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "Central dexterity claim (40% fewer movements, reduced path length/time) is computed from video-based marker tracking and movement-feature extraction followed by paired t-tests.",
+      "G2_principal_target_identifiable": "yes",
+      "G3_input_accessibility": "restricted_but_potentially_accessible",
+      "G3_note": "Video/tracking data and code are 'available on reasonable request'; no deposit.",
+      "G4_resource_accessibility": "available",
+      "G4_note": "Custom computer-vision tracking software is unpublished; the described marker segmentation and feature extraction are implementable with free tools. SPSS 25 paired t-test is replicable.",
+      "G5_specification_sufficient_for_attempt": "insufficient",
+      "G5_note": "Marker segmentation, interpolation/median-filter parameters and movement-count definition are described qualitatively only; without the request-only videos no attempt can proceed past access.",
+      "target_candidate": "Reduction in number of movements with Click-On vs DROP-IN probe during the phantom exercise = 40% (Results, Fig. 3).",
+      "alternatives_considered": "Tracking accuracy (1.10/0.50/0.88 mm) is a validation metric, not the principal effect; in vivo task-completion increase (60%) appears later.",
+      "pilot_decision": "provisional_pilot_case",
+      "evidence": [
+        {
+          "segment_id": "S0054",
+          "quote": "movements required to perform the exercise by 40%",
+          "gate": "G1,G2"
+        },
+        {
+          "segment_id": "S0034",
+          "quote": "Custom computer-vision software was created to segment the markers",
+          "gate": "G4,G5"
+        },
+        {
+          "segment_id": "S0046",
+          "quote": "paired-samples t test with the SPSS statistical software package",
+          "gate": "G4"
+        },
+        {
+          "segment_id": "S0085",
+          "quote": "Available on reasonable request",
+          "gate": "G3"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:33574863",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 4,
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "no",
+      "G1_reason": "Central claims are wet-lab measurements (lignin degradation ratios, LiP/MnP enzyme activities, GC-MS product identification). Statistics are mean ± SD and one-way ANOVA/Duncan on unpublished replicates; no central computational transformation.",
+      "G2_principal_target_identifiable": "not_applicable",
+      "G3_input_accessibility": "not_applicable",
+      "G4_resource_accessibility": "not_applicable",
+      "G5_specification_sufficient_for_attempt": "not_applicable",
+      "target_candidate": "none",
+      "alternatives_considered": "ANOVA of enzyme activities considered; the reported outputs are measured values whose raw replicates are not reported, so the computation is ancillary.",
+      "pilot_decision": "not_pilot_case_replaced",
+      "evidence": [
+        {
+          "segment_id": "S0034",
+          "quote": "Duncan",
+          "gate": "G1"
+        },
+        {
+          "segment_id": "S0034",
+          "quote": "Origin 2018",
+          "gate": "G1"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:40496022",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 6,
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "no",
+      "G1_reason": "Collaboration profile article describing a serosurveillance platform; states no data are associated with the article and presents no central computational result.",
+      "G2_principal_target_identifiable": "not_applicable",
+      "G3_input_accessibility": "not_applicable",
+      "G4_resource_accessibility": "not_applicable",
+      "G5_specification_sufficient_for_attempt": "not_applicable",
+      "target_candidate": "none",
+      "alternatives_considered": "none",
+      "pilot_decision": "not_pilot_case_replaced",
+      "evidence": [
+        {
+          "segment_id": "S0133",
+          "quote": "No data are associated with this article",
+          "gate": "G1"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:41497311",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 10,
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "uncertain",
+      "G1_reason": "Mixed-methods study; the headline quantitative result (56.8% perceiving T1D as a barrier) is a proportion of 51 respondents, and the main conclusions are thematic. Chi-square/relative-risk analyses exist but are not the central claim.",
+      "G2_principal_target_identifiable": "uncertain",
+      "G3_input_accessibility": "restricted_but_potentially_accessible",
+      "G3_note": "Participant-level data available on request only, with privacy restrictions.",
+      "G4_resource_accessibility": "available",
+      "G4_note": "SPSS descriptive statistics and chi-square are replicable with free tools.",
+      "G5_specification_sufficient_for_attempt": "uncertain",
+      "target_candidate": "Proportion perceiving T1D as a barrier to obesity treatment = 56.8% (Results).",
+      "alternatives_considered": "Relative risks of contributory factors (Table) considered; their centrality is unclear.",
+      "pilot_decision": "not_pilot_case_replaced",
+      "evidence": [
+        {
+          "segment_id": "S0006",
+          "quote": "56.8%",
+          "gate": "G1,G2"
+        },
+        {
+          "segment_id": "S0132",
+          "quote": "available upon request from the corresponding author",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0028",
+          "quote": "SPSS",
+          "gate": "G4"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:33584682",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 12,
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "Central claims are statistical associations (Spearman correlations, Mann-Whitney/Wilcoxon tests) between flow-cytometry-derived cell frequencies and antibody titers; reproducing them requires applying the tests to the per-animal values.",
+      "G2_principal_target_identifiable": "uncertain",
+      "G2_note": "Many correlations are reported with equal prominence; the abstract lists several. Target chosen by order of appearance in the abstract; author verification of centrality requested.",
+      "G3_input_accessibility": "insufficiently_identified",
+      "G3_note": "Data statement says original contributions are in the article/Supplementary Material; whether per-animal values are tabulated (vs plotted only) has not been verified.",
+      "G4_resource_accessibility": "available",
+      "G4_note": "GraphPad Prism statistics are replicable with free tools.",
+      "G5_specification_sufficient_for_attempt": "uncertain",
+      "G5_note": "Test choices are named; exact input values, timepoints and handling of ties/one- vs two-sided tests need confirmation from figures/supplement.",
+      "target_candidate": "Spearman correlation between LN Env-specific TFH cells post-priming and rectal Env-specific IgA titers (Figure 3F/G and Table 2; abstract order of appearance).",
+      "alternatives_considered": "Correlation of GC B cells with vaginal Env-specific IgG; cTFH post-2nd-boost vs viral load; co-culture IgA release (later in abstract).",
+      "pilot_decision": "provisional_pilot_case",
+      "evidence": [
+        {
+          "segment_id": "S0007",
+          "quote": "correlated negatively with vaginal Env-specific IgG titers but positively with rectal Env-specific IgA titers",
+          "gate": "G1,G2"
+        },
+        {
+          "segment_id": "S0067",
+          "quote": "Spearman correlations were used",
+          "gate": "G1,G4"
+        },
+        {
+          "segment_id": "S0067",
+          "quote": "GraphPad Prism",
+          "gate": "G4"
+        },
+        {
+          "segment_id": "S0267",
+          "quote": "included in the article/ Supplementary Material",
+          "gate": "G3"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:36409083",
+      "sampling_stratum": "Computational_Science",
+      "candidate_rank": 3,
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "Core-genome phylogeny (Roary + IQ-TREE) and lineage-specific gene distribution from 142 sequenced genomes are central computational results alongside wet-lab phenotypes.",
+      "G2_principal_target_identifiable": "uncertain",
+      "G2_note": "The paper mixes epidemiological proportions, phylogeny, gene-presence tables and phenotypes without a single stated primary endpoint. Provisional target chosen as the first objectively assessable genomic table; author verification requested.",
+      "G3_input_accessibility": "public",
+      "G3_note": "Genome sequences under NGDC BioProject PRJCA012518; deposit not yet downloaded or verified.",
+      "G4_resource_accessibility": "available",
+      "G4_note": "Roary v3.12.2, IQ-TREE, RAST web annotation, PubMLST, ResFinder are free; GraphPad Prism 8 statistics replicable. RAST version/availability is a web-service dependency.",
+      "G5_specification_sufficient_for_attempt": "uncertain",
+      "G5_note": "Tool names given; assembly, annotation and Roary/IQ-TREE parameters largely default/unspecified. 142 genomes through Roary may approach the compute budget.",
+      "target_candidate": "Lineage-specific presence of the spl serine protease gene cluster: present only in ST5 and ST239 among the 142 represented ST59/ST398/ST239/ST5 isolates (Fig. 2A).",
+      "alternatives_considered": "Decline of ST239 from 15.47% (2013) to 3.35% (2018-2020) is a proportion of isolate counts; core-genome tree topology lacks a numerical comparison rule.",
+      "pilot_decision": "provisional_pilot_case",
+      "evidence": [
+        {
+          "segment_id": "S0028",
+          "quote": "present only in ST5 and ST239",
+          "gate": "G2"
+        },
+        {
+          "segment_id": "S0112",
+          "quote": "PRJCA012518",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0092",
+          "quote": "Roary v3.12.2",
+          "gate": "G4"
+        },
+        {
+          "segment_id": "S0023",
+          "quote": "15.47%",
+          "gate": "G2"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:39472468",
+      "sampling_stratum": "Environmental_Earth",
+      "candidate_rank": 9,
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "Central methodological claim is the performance of SNP-specific Random Forest genotype-calling models (accuracy/sensitivity/OOB error) trained on Fluidigm fluorescence intensities.",
+      "G2_principal_target_identifiable": "yes",
+      "G3_input_accessibility": "restricted_but_potentially_accessible",
+      "G3_note": "Assay description is in the supplement, but the fluorescence-intensity training/test datasets are available from the corresponding author on reasonable request only.",
+      "G4_resource_accessibility": "available",
+      "G4_note": "R 4.0.4 and randomForest 4.6-14 are free. Fluidigm hardware is only needed to generate inputs, not to analyse them.",
+      "G5_specification_sufficient_for_attempt": "uncertain",
+      "G5_note": "Model features, 50/50 split and filtering thresholds (OOB > 0.05, sensitivity < 0.9) are specified; random seeds, ntree/mtry and control-correction details need confirmation.",
+      "target_candidate": "Overall accuracy of the Random Forest genotype calls on experimental Fluidigm pools = 99% (abstract; Fig. 3H).",
+      "alternatives_considered": "96% accuracy vs sequence data; 31 SNP assays passing filters (Fig. 4); 21% accuracy gain from control correction (paired t-test).",
+      "pilot_decision": "provisional_pilot_case",
+      "evidence": [
+        {
+          "segment_id": "S0007",
+          "quote": "99% accuracy",
+          "gate": "G1,G2"
+        },
+        {
+          "segment_id": "S0145",
+          "quote": "available from the corresponding author on reasonable request",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0049",
+          "quote": "randomForest",
+          "gate": "G4"
+        },
+        {
+          "segment_id": "S0090",
+          "quote": "OOB error was greater than 0.05",
+          "gate": "G5"
+        }
+      ]
+    }
+  ],
+  "deterministic_candidate_chain": {
+    "rule": "Candidates are consumed in the deterministic hash order of paper2.acquisition.candidate_order. A candidate is skipped only for missing lawfully retained article text or for primary G1/G2 ineligibility, never for reconstruction difficulty. Skipped-for-text candidates remain unadjudicated, not negative.",
+    "strata": {
+      "Biomedical_Basic": [
+        {
+          "paper_id": "PMID:41032336",
+          "candidate_rank": 1,
+          "article_text_status": "identity_verified_open_pmc_jats",
+          "disposition": "skipped_primary_G1=no_G2=not_applicable"
+        },
+        {
+          "paper_id": "PMID:41273055",
+          "candidate_rank": 2,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:36493775",
+          "candidate_rank": 3,
+          "article_text_status": "identity_verified_open_pmc_jats",
+          "disposition": "selected_provisional_pilot_case"
+        }
+      ],
+      "Chemistry_Materials": [
+        {
+          "paper_id": "PMID:38007008",
+          "candidate_rank": 1,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:36358920",
+          "candidate_rank": 2,
+          "article_text_status": "identity_verified_open_pmc_jats",
+          "disposition": "selected_provisional_pilot_case"
+        }
+      ],
+      "Clinical_Medicine": [
+        {
+          "paper_id": "PMID:39730532",
+          "candidate_rank": 1,
+          "article_text_status": "identity_verified_open_pmc_jats",
+          "disposition": "selected_provisional_pilot_case"
+        }
+      ],
+      "Computational_Science": [
+        {
+          "paper_id": "PMID:41336033",
+          "candidate_rank": 1,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:34891985",
+          "candidate_rank": 2,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:36409083",
+          "candidate_rank": 3,
+          "article_text_status": "identity_verified_open_pmc_jats",
+          "disposition": "selected_provisional_pilot_case"
+        }
+      ],
+      "Environmental_Earth": [
+        {
+          "paper_id": "PMID:38950848",
+          "candidate_rank": 1,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:40482329",
+          "candidate_rank": 2,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:35122167",
+          "candidate_rank": 3,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:41224038",
+          "candidate_rank": 4,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:32091631",
+          "candidate_rank": 5,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:34748839",
+          "candidate_rank": 6,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_oa_bronze_landing_page_only_text_not_retained"
+        },
+        {
+          "paper_id": "PMID:33979923",
+          "candidate_rank": 7,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:35244499",
+          "candidate_rank": 8,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:39472468",
+          "candidate_rank": 9,
+          "article_text_status": "identity_verified_open_pmc_jats",
+          "disposition": "selected_provisional_pilot_case"
+        }
+      ],
+      "Physics_Engineering": [
+        {
+          "paper_id": "PMID:33944686",
+          "candidate_rank": 1,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_oa_hybrid_pdf_request_http_403_not_an_access_verdict_text_not_retained"
+        },
+        {
+          "paper_id": "PMID:34031721",
+          "candidate_rank": 2,
+          "article_text_status": "identity_verified_open_pmc_jats",
+          "disposition": "selected_provisional_pilot_case"
+        }
+      ],
+      "Social_Behavioral": [
+        {
+          "paper_id": "PMID:41445340",
+          "candidate_rank": 1,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:41831936",
+          "candidate_rank": 2,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:35654511",
+          "candidate_rank": 3,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:33574863",
+          "candidate_rank": 4,
+          "article_text_status": "identity_verified_open_pmc_jats",
+          "disposition": "skipped_primary_G1=no_G2=not_applicable"
+        },
+        {
+          "paper_id": "PMID:34213460",
+          "candidate_rank": 5,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_oa_hybrid_landing_page_only_text_not_retained"
+        },
+        {
+          "paper_id": "PMID:40496022",
+          "candidate_rank": 6,
+          "article_text_status": "identity_verified_open_pmc_jats",
+          "disposition": "skipped_primary_G1=no_G2=not_applicable"
+        },
+        {
+          "paper_id": "PMID:36701571",
+          "candidate_rank": 7,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:35017324",
+          "candidate_rank": 8,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_oa_diamond_landing_page_only_text_not_retained"
+        },
+        {
+          "paper_id": "PMID:34974093",
+          "candidate_rank": 9,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_no_lawful_public_text_located_closed_at_reported_locations"
+        },
+        {
+          "paper_id": "PMID:41497311",
+          "candidate_rank": 10,
+          "article_text_status": "identity_verified_open_pmc_jats",
+          "disposition": "skipped_primary_G1=uncertain_G2=uncertain"
+        },
+        {
+          "paper_id": "PMID:38252604",
+          "candidate_rank": 11,
+          "article_text_status": "no_open_pmc_endpoint_other_routes_unassessed",
+          "disposition": "skipped_route_check_incomplete_doi_missing"
+        },
+        {
+          "paper_id": "PMID:33584682",
+          "candidate_rank": 12,
+          "article_text_status": "identity_verified_open_pmc_jats",
+          "disposition": "selected_provisional_pilot_case"
+        }
+      ]
+    }
+  }
+}

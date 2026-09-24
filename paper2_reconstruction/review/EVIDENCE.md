@@ -67,3 +67,26 @@ G1/G2 proposals are machine output bound to retained source segments;
 `results/pilot_adjudication_request.md` lists the first lawfully retained
 candidate per field for human G1–G5 adjudication. No pilot case has been selected
 and the funnel is unchanged.
+
+## Delegated primary G1–G5 adjudication (2026-09-24)
+
+On author instruction the first-pass G1–G5 adjudication was recorded by Devin
+instead of the author, as deviation `DEV-2026-09-23-01`
+(`data/adjudication/devin_primary_G1_G5_20260923.json`). Eleven candidates were
+assessed against the hash-checked retained article bytes;
+`paper2.primary_adjudication` re-validates every gate value, requires each cited
+quote to occur verbatim inside the cited retained segment, and requires each
+stratum to consume its deterministic order without gaps
+(`results/pilot_primary_adjudication.json`, `results/pilot_primary_adjudication.csv`).
+Three candidates were skipped for primary G1=no and one for unresolved G1/G2;
+candidates without lawfully retained text remain unadjudicated rather than
+negative, and their OA route evidence for ranks 10–13 is retained in
+`data/raw/pilot-oa-locations-ranks10-13-20260923` (PMID 38252604 has no DOI in the
+frame, so its route check is incomplete). G3/G4/G5 never caused replacement: the
+provisional set retains restricted-input, commercial-software and
+insufficient-specification cases as study outcomes. The screening order was
+extended to 13 ranks per field only to reach the next lawfully retained
+Social_Behavioral candidate (`results/pilot_candidate_screening.json`,
+`extension_20260923_to_13_ranks`). These gates are provisional pending author
+verification; the funnel remains `NOT_STARTED`, pilot selection is not frozen, and
+no reconstruction has been attempted.

@@ -630,5 +630,38 @@
     }
   ],
   "pilot_selected": false,
-  "funnel_updated": false
+  "funnel_updated": false,
+  "extension_20260923_to_13_ranks": {
+    "candidates_per_field": 13,
+    "papers_screened": 91,
+    "screen_index_sha256": "864fa9dd91c686e1489490aba5a4bb9acbf47834f424c2911432530115f821ed",
+    "ranks_10_to_13_status_counts": {
+      "provisional_machine_review_not_validated_or_selected": 25,
+      "abstract_only_negative_not_validated": 3
+    },
+    "ranks_10_to_13_article_text_status_counts": {
+      "no_open_pmc_endpoint_other_routes_unassessed": 14,
+      "identity_verified_open_pmc_jats": 14
+    },
+    "openalex_route_check_for_ranks_10_to_13": {
+      "index_path": "data/raw/pilot-oa-locations-ranks10-13-20260923/oa_location_index.csv",
+      "index_sha256": "a277e1f46dddc9ec44ba48d023899e56b00bf8f9e867ffc7688b947a7dc1c7b2",
+      "papers_checked": 14,
+      "scope": "oa_location_discovery_only_no_article_text_retrieved_not_an_input_access_verdict",
+      "oa_status_counts": {
+        "closed": 7,
+        "bronze": 1,
+        "gold": 1,
+        "hybrid": 3,
+        "green": 1,
+        "not_reported": 1
+      },
+      "route_check_incomplete": [
+        "PMID:38252604"
+      ]
+    },
+    "provider_accounted_tokens_total_all_ranks": 727624,
+    "rows_with_non_numeric_token_accounting": 0,
+    "reason": "Devin primary adjudication found G1=no/uncertain for the first three lawful-text Social_Behavioral candidates; ordering extended to locate the next lawful-text candidate."
+  }
 }
