@@ -1,9 +1,16 @@
 # Information firewall
 
-**DRAFT — FULL FIREWALL NOT QUALIFIED. Separate VMs alone are insufficient.**
+**DRAFT — PARTIALLY QUALIFIED. Separate VMs alone are insufficient.**
 
 `paper2.isolation` and `paper2.model_api` provide synthetic execution-isolation
-and API smoke qualifications only. Neither authorizes pilot or main runs.
+and API smoke qualifications only. `paper2.firewall` qualifies the custodian,
+broker, access telemetry, dependency closure, resource stop and
+freeze-before-reveal controls on a retained pilot article with adversarial
+negative cases (`results/firewall_qualification.json`, policy
+`firewall-qualification-2026-09-24`). Still unqualified: model-side retrieval
+tool restriction for provider-hosted tools, three-slot scheduling and budget
+comparability, and independent human adjudicator governance. None of these
+qualifications authorizes pilot or main runs.
 The current execution probe uses one CPU, 2 GiB RAM and 512 MiB work storage;
 it does not validate the larger proposed scientific-run envelope. A model alias
 without a provider-reported version remains explicitly version-unverified.
@@ -40,9 +47,10 @@ Qualification must demonstrate: forbidden canary artifact cannot be read by
 shell/browser/model-side tools; archive member and transitive dependency controls;
 no cross-run read/write; effective-context inventory; complete access telemetry;
 fixed resource stops; and frozen-outcome-before-reveal enforcement. These checks
-must themselves have evidence and adversarial negative cases. The present
-Devin preparation workflow does not implement these controls and must not be
-relabelled a blinded reconstruction experiment.
+must themselves have evidence and adversarial negative cases. The preparation
+workflow that produced the protocols and candidate screening must not be
+relabelled a blinded reconstruction experiment; the firewall qualification run
+is a control test, not an outcome.
 
 Contamination: stop, seal evidence, adjudicate independently. Suspected or unknown
 firewall status is unresolved for the clean primary analysis; confirmed

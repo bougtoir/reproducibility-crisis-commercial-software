@@ -90,3 +90,30 @@ Social_Behavioral candidate (`results/pilot_candidate_screening.json`,
 `extension_20260923_to_13_ranks`). These gates are provisional pending author
 verification; the funnel remains `NOT_STARTED`, pilot selection is not frozen, and
 no reconstruction has been attempted.
+
+## Information-firewall control qualification (2026-09-24)
+
+`paper2.firewall` separates custodian, broker, solver and reveal-reviewer roles
+around one quarantined mixed archive holding the seven provisional pilot articles
+(hash-checked retained open PMC JATS), a pinned free-software closure
+(`packaging`, `python-dateutil`, `six`; hashes from `requirements.lock`, wheels
+and ledger retained in `data/raw/vetted-wheels-20260924`, closure verified from
+wheel `Requires-Dist` metadata) and two synthetic forbidden members standing in
+for the original implementation and author notes. The broker defaults to deny,
+serves only reviewed exact members to named actors, and writes a hash-chained
+event for every request. Adversarial cases (blocked member, reveal member to a
+solver, reveal member before freeze, unlisted item, unauthorised actor, tampered
+custodian bytes in tests) were all denied and journalled. Inside the isolated
+worker the solver saw only the served members, could not reach the host canary,
+the archive, the network, the Docker socket or API credentials, imported the
+closure offline from the served wheels, and a runaway step was stopped at the
+wall limit. The sealed control outcome received an RFC 3161 receipt from the
+pinned FreeTSA anchor before the reveal member was released to the reveal
+reviewer only; a mutated outcome no longer matched the receipt
+(`results/firewall_qualification.json`, all nine controls pass; the full run,
+including served article bytes, is retained privately in
+`/home/ubuntu/paper2_evidence/firewall-qual-20260924b`). Still unqualified:
+model-side retrieval tool restriction for provider-hosted tools, three-slot
+scheduling and budget comparability, and independent human adjudicator
+governance. This is a control test on one candidate article, not a
+reconstruction attempt; no pilot or main run is authorized.

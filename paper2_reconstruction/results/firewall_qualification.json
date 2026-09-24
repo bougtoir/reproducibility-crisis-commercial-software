@@ -1,0 +1,79 @@
+{
+  "status": "firewall_controls_pass",
+  "scope": "custodian_broker_telemetry_dependency_and_freeze_controls_on_retained_pilot_article; not a reconstruction attempt and not an outcome",
+  "policy_version": "firewall-qualification-2026-09-24",
+  "recorded_at_utc": "2026-09-24T09:47:34.319354+00:00",
+  "pilot_article_paper_id": "PMID:33584682",
+  "pilot_articles_in_archive": [
+    "PMID:33584682",
+    "PMID:34031721",
+    "PMID:36358920",
+    "PMID:36409083",
+    "PMID:36493775",
+    "PMID:39472468",
+    "PMID:39730532"
+  ],
+  "archive_sha256": "43915153abb706131ed97babe80441eea993f14c45ab14116bddd0ca9253792d",
+  "served_manifest": {
+    "33584682.xml": "4b476d4d774b84461c9bef261b4935bd3e5b6f151529e439dcb1014031f4c5dd",
+    "packaging-26.3-py3-none-any.whl": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+    "python_dateutil-2.9.0.post0-py2.py3-none-any.whl": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427",
+    "six-1.17.0-py2.py3-none-any.whl": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+  },
+  "dependency_closure": {
+    "packaging-26.3-py3-none-any.whl": "packaging==26.3",
+    "python_dateutil-2.9.0.post0-py2.py3-none-any.whl": "python-dateutil==2.9.0.post0",
+    "six-1.17.0-py2.py3-none-any.whl": "six==1.17.0"
+  },
+  "controls": {
+    "solver_probes": true,
+    "resource_stop_enforced": true,
+    "all_negative_cases_denied": true,
+    "reveal_denied_to_solver_after_freeze": true,
+    "reveal_served_to_reviewer_after_freeze": true,
+    "freeze_receipt_verified": true,
+    "post_freeze_mutation_detected": true,
+    "telemetry_chain_intact": true,
+    "every_denial_recorded": true
+  },
+  "solver_checks": {
+    "canary_host_path_unreadable": true,
+    "custodian_archive_unreadable": true,
+    "dependency_closure_imports_offline": true,
+    "dependency_modules_come_from_served_wheels": true,
+    "network_denied": true,
+    "no_api_credential": true,
+    "no_canary_member_served": true,
+    "no_docker_socket": true,
+    "package_readonly": true,
+    "served_article_is_readable_jats": true,
+    "served_members_match_manifest": true
+  },
+  "negative_cases": {
+    "blocked_author_material_denied": "denied: blocked item: author implementation material is never served",
+    "reveal_item_denied_to_solver": "denied: reveal-class item is not available to this actor",
+    "reveal_item_denied_before_freeze": "denied: reveal-class item requested before the blind outcome freeze",
+    "unlisted_item_denied": "denied: unlisted item; default deny",
+    "unauthorised_actor_denied": "denied: actor is not authorised to receive served members"
+  },
+  "freeze_and_reveal": {
+    "reveal_after_freeze_to_reveal_reviewer": "served",
+    "reveal_after_freeze_to_solver": "denied: reveal-class item is not available to this actor",
+    "post_freeze_outcome_mutation_detected": "True"
+  },
+  "freeze_receipt": {
+    "outcome_sha256": "f05e2b6ea0a97ef06f9f7f303de9d9cd13f2c59b6720a06f0d2397b0064b5b89",
+    "timestamp_response_sha256": "7f06c1e8c306febd7fa93cc9b9b7a48dc20ce2bb2609bc5cfd0da1049ed46fcf",
+    "authority": "https://freetsa.org/tsr"
+  },
+  "access_events": 13,
+  "journal_head_sha256": "9cd6f55c9d58aa23b523e4813e55cea6acf5f21b4d5e91bad28d30e83fcba4d4",
+  "pilot_authorized": false,
+  "main_study_authorized": false,
+  "unqualified": [
+    "model_side_retrieval_tool_restriction_for_provider_hosted_tools",
+    "three_slot_cross_run_scheduling_and_budget_comparability",
+    "independent_human_adjudicator_governance",
+    "prior_model_training_exposure_cannot_be_certified_absent"
+  ]
+}

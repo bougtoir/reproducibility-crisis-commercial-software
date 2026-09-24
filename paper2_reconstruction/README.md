@@ -70,6 +70,7 @@ cd paper2_reconstruction
 PYTHONPATH=src .venv/bin/python -m paper2.isolation --output data/raw/isolation-new-run
 PYTHONPATH=src .venv/bin/python -m paper2.model_api --output data/raw/api-new-run
 PYTHONPATH=src .venv/bin/python -m paper2.controller --output data/raw/controller-new-run
+PYTHONPATH=src .venv/bin/python -m paper2.firewall --output data/raw/firewall-new-run
 PYTHONPATH=src .venv/bin/python -m paper2.scientific_image --output data/raw/science-new-run
 PYTHONPATH=src .venv/bin/python -m paper2.acquisition --output data/raw/candidate-acquisition
 PYTHONPATH=src .venv/bin/python -m paper2.corpus_acquisition --output data/raw/corpus-metadata

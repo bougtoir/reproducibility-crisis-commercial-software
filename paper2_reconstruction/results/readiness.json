@@ -17,7 +17,7 @@
   "blind_freeze": "NOT_COMPLETED",
   "descriptive_reveal": "NOT_COMPLETED",
   "human_validation": "NOT_COMPLETED",
-  "firewall_harness": "prototype_only_full_information_firewall_unqualified",
+  "firewall_harness": "custodian_broker_telemetry_dependency_freeze_controls_pass; results/firewall_qualification.json; model_side_tool_restriction_three_slot_scheduling_and_human_adjudicator_governance_unqualified",
   "primary_success_rate": "not_assessable",
   "sources_verified": 8
 }
