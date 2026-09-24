@@ -103,6 +103,31 @@ writes `results/pilot_primary_adjudication.{csv,json}` and never writes to the
 funnel; the records it renders remain provisional until author verification is
 recorded.
 
+```sh
+PYTHONPATH=src .venv/bin/python -m paper2.second_pass
+PYTHONPATH=src .venv/bin/python -m paper2.access_layer layer
+PYTHONPATH=src .venv/bin/python -m paper2.amended_selection
+```
+
+`paper2.second_pass` re-reads every retained gate of the delegated primary record
+against the hash-checked segments and writes `results/second_pass_G1_G5.{csv,json}`;
+it is a Devin re-verification, and author verification stays `pending` in every
+record. `paper2.access_layer freeze` hash-froze and RFC 3161 timestamped protocol
+amendment `AMEND-2026-09-24-03` (`data/adjudication/amendment_AMEND-2026-09-24-03.json`)
+before any screening under it; `layer` builds and validates the
+`ACCESSIBILITY_GATE_FAILED` record of the seven provisional pilot papers and
+rejects any outcome or rate field. `paper2.deposit_screen statements|routes|retain`
+screens the ordered candidate frame for deposit statements, resolves anonymous
+listing routes under the amendment caps (`data/raw/deposit-screen-20260924/`,
+git-ignored raw evidence) and retains segmented article text for every
+route-eligible candidate; `routes --continue-from --amended-record --fields`
+resumes one stratum's deterministic chain after a deposit inspection excluded its
+first route-eligible candidate. `paper2.amended_selection` validates the delegated
+amended G1–G5 record against those retained segments and the hash-chained route
+records and writes `results/amended_candidate_selection.{csv,json}`; its
+dispositions are sampling-frame decisions pending author verification, and the
+summary carries no reconstruction rate because no candidate has been attempted.
+
 Candidate evidence can be reviewed separately with `paper2.candidate_review`,
 passing `--source` for the candidate-acquisition directory and `--output` for a
 new private review directory. This instrument preserves final model responses

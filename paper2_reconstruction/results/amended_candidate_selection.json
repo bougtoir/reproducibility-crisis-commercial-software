@@ -1,0 +1,72 @@
+{
+  "scope": "devin_delegated_assessment_of_amended_route_eligible_candidates_pending_author_verification_not_formal_human_adjudication",
+  "amendment_id": "AMEND-2026-09-24-03",
+  "record_sha256": "f5ca2812e7458fccfd6e5bbc35158e74db6e655e72c971e77a4548c5f244959c",
+  "route_records": [
+    {
+      "path": "stage_b_routes.json",
+      "sha256": "d0bc1430d5bcc1f6e01ba4759395cf1491bdf561bea7d849a238fe340a31ddb4"
+    },
+    {
+      "path": "stage_b_routes_continuation_chemistry.json",
+      "sha256": "474f03cc04d893eac5fe5616325dcfec46e75ce5a94f2dc4addfdf0b83785922"
+    }
+  ],
+  "author_verification": "pending",
+  "route_eligible_assessed": 8,
+  "main_sample_candidates": {
+    "Biomedical_Basic": {
+      "paper_id": "PMID:39327328",
+      "candidate_rank": "14",
+      "disposition": "main_sample_candidate_conditional_on_author_target_prespecification",
+      "target_candidate": "candidate: average nucleotide identity range between OlVA genome variants (92-99.8%) - requires author pre-specification"
+    },
+    "Chemistry_Materials": {
+      "paper_id": "PMID:35003117",
+      "candidate_rank": "46",
+      "disposition": "main_sample_candidate",
+      "target_candidate": "number of differentially expressed genes (6762; 5949 down, 813 up) between 3D and 2D RAW264.7 macrophages from GSE186841 counts"
+    },
+    "Clinical_Medicine": {
+      "paper_id": "PMID:41444829",
+      "candidate_rank": "46",
+      "disposition": "main_sample_candidate",
+      "target_candidate": "held-out test-set accuracy (98%) and AUC (0.98) of the tumour detection model"
+    },
+    "Computational_Science": {
+      "paper_id": "PMID:36286480",
+      "candidate_rank": "9",
+      "disposition": "main_sample_candidate_conditional_on_input_completeness_check",
+      "target_candidate": "r^2 between MixviR-estimated and expected lineage frequencies for the SARS-CoV-2 standards (0.817) using reads from PRJNA827817"
+    },
+    "Environmental_Earth": {
+      "paper_id": "PMID:35388942",
+      "candidate_rank": "59",
+      "disposition": "main_sample_candidate",
+      "target_candidate": "annual intensity of tree leaning series and count of active leaning events (>2) per year from Data S2; ANCOVA slope difference between young and mature trees"
+    },
+    "Physics_Engineering": {
+      "paper_id": "PMID:35767539",
+      "candidate_rank": "202",
+      "disposition": "main_sample_candidate",
+      "target_candidate": "least-squares estimates of f_n parameters on WoS-Stat: mu_n = 33.263, sigma_n = 14.743, kappa_n = 17242.068, eta_n = 328.047"
+    },
+    "Social_Behavioral": {
+      "paper_id": "PMID:35136578",
+      "candidate_rank": "59",
+      "disposition": "main_sample_candidate",
+      "target_candidate": "odds ratio for previous exposure to colic (OR = 32.250) and p-values for the ten risk factors in Table 2"
+    }
+  },
+  "excluded_after_deposit_inspection": [
+    {
+      "paper_id": "PMID:41466177",
+      "sampling_stratum": "Chemistry_Materials",
+      "disposition": "excluded_deposited_output_only",
+      "outcome_leakage": "target_disclosed_by_deposited_file"
+    }
+  ],
+  "strata_without_main_sample_candidate": [],
+  "reconstruction_started": false,
+  "rates": "not applicable: no candidate has reached a reconstruction attempt"
+}

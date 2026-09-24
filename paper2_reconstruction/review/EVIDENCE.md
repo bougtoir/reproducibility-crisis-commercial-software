@@ -165,3 +165,59 @@ sealed report recorded a null observed value with explicit missing-input failure
 codes, and none manufactured a value or an agreement. L1–L5 outcomes remain
 unadjudicated, pilot runs are excluded from the main sample, and no success rate
 is assessable.
+
+## Second-pass gate verification, accessibility layer and amended criterion (2026-09-24)
+
+On author instruction the provisional pilot papers were removed from the main
+reconstruction sample before any adjudication. `paper2.second_pass` re-read all
+37 retained quotes of the eleven primary G1–G5 assessments against the
+hash-checked segments and confirmed every gate without correction
+(`results/second_pass_G1_G5.json`); this is a Devin re-verification, and author
+verification of G1–G5 remains `pending` in every record. Protocol amendment
+`AMEND-2026-09-24-03` (`protocols/AMENDMENT_AMEND-2026-09-24-03_deposited_data_criterion.md`,
+SHA-256 `e4c8f82d…74d23`) was hash-frozen and RFC 3161 timestamped
+(`data/adjudication/amendment_AMEND-2026-09-24-03.json`, receipt directory
+alongside) before any candidate was screened under it. It requires that a third
+party can obtain the deposited analysis data lawfully and immediately through an
+anonymous machine-readable listing, that every needed file has an announced size
+within the 2 GiB / 8 GiB caps, and that the deposit is not itself the target
+output. The seven provisional papers are recorded as the
+`ACCESSIBILITY_GATE_FAILED` layer (`data/adjudication/accessibility_gate_failed_20260924.json`:
+above-cap/output-only, size-unannounced, application-required,
+listing-unavailable, author-request-only ×2, supplement-only-unverified), a
+pre-reproducibility access-barrier audit sample for an auxiliary analysis or a
+separate paper. Its validator rejects any outcome or rate field: no member
+reached a reconstruction attempt, so no success or failure rate exists for them.
+
+## Amended candidate selection (2026-09-24)
+
+`paper2.deposit_screen` screened the ordered frame to 400 ranks per stratum
+(2,800 candidates; Stage A `stage_a_statements_400.json`): 1,688 without lawfully
+retained text, 409 naming no deposit, 248 author-request-only, 166
+supplement-only, 61 code-only, 14 application-required and 214 naming an open
+route. Stage B resolved open routes stratum by stratum in deterministic order
+until one candidate passed the caps (430 candidates recorded with their
+exclusion class; 7 route-eligible; `stage_b_routes.json`, every listing response
+retained with URL, UTC time, bytes and SHA-256 under
+`data/raw/deposit-screen-20260924/routes/`). Devin assessed each route-eligible
+candidate's G1–G5 against the retained article segments and the custodian
+inspected the structure of every deposit small enough to retrieve (private
+receipts in `/home/ubuntu/paper2_evidence/deposit-inputs-20260924`; no analysis
+run, no values compared, nothing served to any solver). GEO `GSE291941`
+(PMID:41466177, Chemistry_Materials) bundles raw counts with log2FC, p-value and
+FDR columns for the target comparison and was excluded as
+`deposited_output_only`; the Chemistry_Materials chain was then resumed from
+rank 42 with that exclusion carried as a prior class
+(`stage_b_routes_continuation_chemistry.json`, hash-chained to Stage B), reaching
+GEO `GSE186841` (PMID:35003117, two per-sample count tables, no result columns)
+at rank 46. `paper2.amended_selection` re-validates every quote, rank, route
+class and leakage class and writes `results/amended_candidate_selection.{csv,json}`:
+one main-sample candidate in each of the seven strata (four unconditional; the
+Biomedical_Basic target requires author pre-specification and the
+Computational_Science candidate an input-completeness check before freeze).
+Dryad file downloads for two candidates required a browser JavaScript challenge
+but no account, payment or contact, and were retained anonymously; this route
+condition is recorded. These dispositions are sampling-frame decisions from a
+delegated record pending author verification; the funnel is not updated, no
+target manifest is frozen, no reconstruction has started, and the summary
+carries no rate.

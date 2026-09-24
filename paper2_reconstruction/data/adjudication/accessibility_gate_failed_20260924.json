@@ -1,0 +1,312 @@
+{
+  "record_id": "accessibility_gate_failed_20260924",
+  "layer": "ACCESSIBILITY_GATE_FAILED",
+  "scope": "pre_reproducibility_access_barrier_audit_sample; excluded from the main reconstruction sample; retained for an auxiliary access-availability analysis or a separate paper",
+  "amendment_id": "AMEND-2026-09-24-03",
+  "amendment_document_sha256": "e4c8f82d6773af43a506edcbe00bfaa096a904b8939dcbb07f014fe7e4e74d23",
+  "primary_record_sha256": "20a93bc75bfe8d120b1a2ff8a2c05567bffbca4388e68ba4ebb23aeeac3e6277",
+  "input_ledger_sha256": "daa02ae91e54a4ffa5d808b056421c0e2fb03cb9eb7a3f7f305c2ba853ec0dfc",
+  "pilot_summary_sha256": "cc82904dae430dc45b66720cb6865fbb7d5ece9f27c6e7f07910f6d91ec3c747",
+  "pilot_deviation": "DEV-2026-09-24-02",
+  "gate_verification": {
+    "author_verification": "pending",
+    "devin_second_pass": "each retained gate re-read against the hash-checked retained segments on 2026-09-24 and left unchanged; primary G3 values are superseded for sampling purposes by the amendment exclusion classes"
+  },
+  "rates": "prohibited: no member reached a reconstruction attempt",
+  "class_table_note": "supplement_only_unverified extends the frozen amendment table: the only named input location is article supplementary material whose contents were not verified as the consumed analysis data (criterion 1 unmet, not a no_deposit_named verdict)",
+  "recorded_utc": "2026-09-24T11:58:23.266747+00:00",
+  "members": [
+    {
+      "paper_id": "PMID:36493775",
+      "sampling_stratum": "Biomedical_Basic",
+      "candidate_rank": 3,
+      "layer": "ACCESSIBILITY_GATE_FAILED",
+      "main_sample_membership": "excluded",
+      "commercial_software_reproducibility_sample": "not_a_member",
+      "primary_gates": {
+        "G1_computationally_testable": "yes",
+        "G2_principal_target_identifiable": "yes",
+        "G3_input_accessibility": "public",
+        "G4_resource_accessibility": "available",
+        "G5_specification_sufficient_for_attempt": "uncertain"
+      },
+      "target_candidate": "Per-region Spearman rho between within-region genetic diversity (mean pairwise 1 - f3) and time period; reported as rho > 0.94, one-sided p < 0.04 in all regions except the Aegean (Figure 4; Zenodo Table Z4).",
+      "evidence_segment_ids": [
+        "S0079",
+        "S0406",
+        "S0408",
+        "S0141"
+      ],
+      "access_routes": [
+        {
+          "accession": "10.5281/zenodo.6377228",
+          "kind": "zenodo",
+          "pilot_input_status": "public_files_retained_below_cap",
+          "route_note": "genotype dataset and raw figure tables named in the article data statement",
+          "exclusion_class": "deposited_output_only",
+          "listing_sha256": "34f28a302f43f3f473b4760c85a413df4e2ba20688fcaefe317f4102154797d8",
+          "listed_files": 16,
+          "listed_bytes": 821512618
+        },
+        {
+          "accession": "PRJEB51705",
+          "kind": "ena_filereport",
+          "pilot_input_status": "listing_retained_no_file_below_cap_and_analysis_ready",
+          "route_note": "raw BAM/read deposit; volume expected to exceed the per-file cap and run budget",
+          "exclusion_class": "above_cap",
+          "listing_sha256": "fd850a4e006bcb9944255adf718f003e2796dc9ec73c8928108775b02a366ac3",
+          "listed_files": 0,
+          "listed_bytes": 0
+        }
+      ],
+      "exclusion_classes": [
+        "above_cap",
+        "deposited_output_only"
+      ],
+      "reconstruction_attempt_reached": false,
+      "provisional_pilot_slots": 3,
+      "note": "pilot slots ran without any deposited input; their sealed reports are harness observations of input absence, not reconstruction outcomes"
+    },
+    {
+      "paper_id": "PMID:36358920",
+      "sampling_stratum": "Chemistry_Materials",
+      "candidate_rank": 2,
+      "layer": "ACCESSIBILITY_GATE_FAILED",
+      "main_sample_membership": "excluded",
+      "commercial_software_reproducibility_sample": "not_a_member",
+      "primary_gates": {
+        "G1_computationally_testable": "yes",
+        "G2_principal_target_identifiable": "yes",
+        "G3_input_accessibility": "public",
+        "G4_resource_accessibility": "uncertain",
+        "G5_specification_sufficient_for_attempt": "uncertain"
+      },
+      "target_candidate": "Number of differential proteins at W1 vs W0 within the experimental group: 12 upregulated and 15 downregulated (Table 1).",
+      "evidence_segment_ids": [
+        "S0042",
+        "S0041",
+        "S0030",
+        "S0028",
+        "S0035"
+      ],
+      "access_routes": [
+        {
+          "accession": "PXD027610",
+          "kind": "proteomexchange",
+          "pilot_input_status": "listing_retained_no_file_below_cap_and_analysis_ready",
+          "route_note": "DIA mass-spectrometry deposit named in the article",
+          "exclusion_class": "size_unannounced",
+          "listing_sha256": "97e66f9ba8a0e5618406a73859f21b8408df860cb39d0fb2855d17df62bafc4e",
+          "listed_files": 89,
+          "listed_bytes": 0
+        }
+      ],
+      "exclusion_classes": [
+        "size_unannounced"
+      ],
+      "reconstruction_attempt_reached": false,
+      "provisional_pilot_slots": 3,
+      "note": "pilot slots ran without any deposited input; their sealed reports are harness observations of input absence, not reconstruction outcomes"
+    },
+    {
+      "paper_id": "PMID:39730532",
+      "sampling_stratum": "Clinical_Medicine",
+      "candidate_rank": 1,
+      "layer": "ACCESSIBILITY_GATE_FAILED",
+      "main_sample_membership": "excluded",
+      "commercial_software_reproducibility_sample": "not_a_member",
+      "primary_gates": {
+        "G1_computationally_testable": "yes",
+        "G2_principal_target_identifiable": "yes",
+        "G3_input_accessibility": "restricted_but_potentially_accessible",
+        "G4_resource_accessibility": "available",
+        "G5_specification_sufficient_for_attempt": "uncertain"
+      },
+      "target_candidate": "Test-set accuracy for AD vs CN classification = 91.84% (Table 5).",
+      "evidence_segment_ids": [
+        "S0087",
+        "S0036",
+        "S0112",
+        "S0047"
+      ],
+      "access_routes": [
+        {
+          "accession": "ADNI",
+          "kind": "application_required",
+          "pilot_input_status": "not_retrievable_by_public_route_application_required",
+          "route_note": "ADNI requires an individually approved data-use application; not obtainable by free registration open to any reader",
+          "exclusion_class": "application_required",
+          "listing_sha256": "",
+          "listed_files": 0,
+          "listed_bytes": 0
+        }
+      ],
+      "exclusion_classes": [
+        "application_required"
+      ],
+      "reconstruction_attempt_reached": false,
+      "provisional_pilot_slots": 3,
+      "note": "pilot slots ran without any deposited input; their sealed reports are harness observations of input absence, not reconstruction outcomes"
+    },
+    {
+      "paper_id": "PMID:36409083",
+      "sampling_stratum": "Computational_Science",
+      "candidate_rank": 3,
+      "layer": "ACCESSIBILITY_GATE_FAILED",
+      "main_sample_membership": "excluded",
+      "commercial_software_reproducibility_sample": "not_a_member",
+      "primary_gates": {
+        "G1_computationally_testable": "yes",
+        "G2_principal_target_identifiable": "uncertain",
+        "G3_input_accessibility": "public",
+        "G4_resource_accessibility": "available",
+        "G5_specification_sufficient_for_attempt": "uncertain"
+      },
+      "target_candidate": "Lineage-specific presence of the spl serine protease gene cluster: present only in ST5 and ST239 among the 142 represented ST59/ST398/ST239/ST5 isolates (Fig. 2A).",
+      "evidence_segment_ids": [
+        "S0028",
+        "S0112",
+        "S0092",
+        "S0023"
+      ],
+      "access_routes": [
+        {
+          "accession": "PRJCA012518",
+          "kind": "ngdc_bioproject",
+          "pilot_input_status": "listing_retained_no_file_below_cap_and_analysis_ready",
+          "route_note": "genome deposit named in the article; service exposes no documented file API",
+          "exclusion_class": "listing_unavailable",
+          "listing_sha256": "e88b9befa33bd1c38f67f37ccf90f2eda004b72549356029b099992516e5503f",
+          "listed_files": 0,
+          "listed_bytes": 0
+        }
+      ],
+      "exclusion_classes": [
+        "listing_unavailable"
+      ],
+      "reconstruction_attempt_reached": false,
+      "provisional_pilot_slots": 3,
+      "note": "pilot slots ran without any deposited input; their sealed reports are harness observations of input absence, not reconstruction outcomes"
+    },
+    {
+      "paper_id": "PMID:39472468",
+      "sampling_stratum": "Environmental_Earth",
+      "candidate_rank": 9,
+      "layer": "ACCESSIBILITY_GATE_FAILED",
+      "main_sample_membership": "excluded",
+      "commercial_software_reproducibility_sample": "not_a_member",
+      "primary_gates": {
+        "G1_computationally_testable": "yes",
+        "G2_principal_target_identifiable": "yes",
+        "G3_input_accessibility": "restricted_but_potentially_accessible",
+        "G4_resource_accessibility": "available",
+        "G5_specification_sufficient_for_attempt": "uncertain"
+      },
+      "target_candidate": "Overall accuracy of the Random Forest genotype calls on experimental Fluidigm pools = 99% (abstract; Fig. 3H).",
+      "evidence_segment_ids": [
+        "S0007",
+        "S0145",
+        "S0049",
+        "S0090"
+      ],
+      "access_routes": [
+        {
+          "accession": "author_request",
+          "kind": "on_request_only",
+          "pilot_input_status": "not_retrievable_by_public_route_on_request_only",
+          "route_note": "fluorescence training/test datasets available from the corresponding author on reasonable request only",
+          "exclusion_class": "author_request_only",
+          "listing_sha256": "",
+          "listed_files": 0,
+          "listed_bytes": 0
+        }
+      ],
+      "exclusion_classes": [
+        "author_request_only"
+      ],
+      "reconstruction_attempt_reached": false,
+      "provisional_pilot_slots": 3,
+      "note": "pilot slots ran without any deposited input; their sealed reports are harness observations of input absence, not reconstruction outcomes"
+    },
+    {
+      "paper_id": "PMID:34031721",
+      "sampling_stratum": "Physics_Engineering",
+      "candidate_rank": 2,
+      "layer": "ACCESSIBILITY_GATE_FAILED",
+      "main_sample_membership": "excluded",
+      "commercial_software_reproducibility_sample": "not_a_member",
+      "primary_gates": {
+        "G1_computationally_testable": "yes",
+        "G2_principal_target_identifiable": "yes",
+        "G3_input_accessibility": "restricted_but_potentially_accessible",
+        "G4_resource_accessibility": "available",
+        "G5_specification_sufficient_for_attempt": "insufficient"
+      },
+      "target_candidate": "Reduction in number of movements with Click-On vs DROP-IN probe during the phantom exercise = 40% (Results, Fig. 3).",
+      "evidence_segment_ids": [
+        "S0054",
+        "S0034",
+        "S0046",
+        "S0085"
+      ],
+      "access_routes": [
+        {
+          "accession": "author_request",
+          "kind": "on_request_only",
+          "pilot_input_status": "not_retrievable_by_public_route_on_request_only",
+          "route_note": "video/tracking data and code available on reasonable request; no deposit",
+          "exclusion_class": "author_request_only",
+          "listing_sha256": "",
+          "listed_files": 0,
+          "listed_bytes": 0
+        }
+      ],
+      "exclusion_classes": [
+        "author_request_only"
+      ],
+      "reconstruction_attempt_reached": false,
+      "provisional_pilot_slots": 3,
+      "note": "pilot slots ran without any deposited input; their sealed reports are harness observations of input absence, not reconstruction outcomes"
+    },
+    {
+      "paper_id": "PMID:33584682",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": 12,
+      "layer": "ACCESSIBILITY_GATE_FAILED",
+      "main_sample_membership": "excluded",
+      "commercial_software_reproducibility_sample": "not_a_member",
+      "primary_gates": {
+        "G1_computationally_testable": "yes",
+        "G2_principal_target_identifiable": "uncertain",
+        "G3_input_accessibility": "insufficiently_identified",
+        "G4_resource_accessibility": "available",
+        "G5_specification_sufficient_for_attempt": "uncertain"
+      },
+      "target_candidate": "Spearman correlation between LN Env-specific TFH cells post-priming and rectal Env-specific IgA titers (Figure 3F/G and Table 2; abstract order of appearance).",
+      "evidence_segment_ids": [
+        "S0007",
+        "S0067",
+        "S0067",
+        "S0267"
+      ],
+      "access_routes": [
+        {
+          "accession": "article_supplementary_material",
+          "kind": "supplement_only",
+          "pilot_input_status": "not_retrievable_by_public_route_supplement_only",
+          "route_note": "data statement points to the article and Supplementary Material only",
+          "exclusion_class": "supplement_only_unverified",
+          "listing_sha256": "",
+          "listed_files": 0,
+          "listed_bytes": 0
+        }
+      ],
+      "exclusion_classes": [
+        "supplement_only_unverified"
+      ],
+      "reconstruction_attempt_reached": false,
+      "provisional_pilot_slots": 3,
+      "note": "pilot slots ran without any deposited input; their sealed reports are harness observations of input absence, not reconstruction outcomes"
+    }
+  ]
+}

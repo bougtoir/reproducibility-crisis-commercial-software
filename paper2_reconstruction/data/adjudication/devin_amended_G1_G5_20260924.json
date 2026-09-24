@@ -1,0 +1,421 @@
+{
+  "record_id": "devin_amended_G1_G5_20260924",
+  "scope": "devin_delegated_assessment_of_amended_route_eligible_candidates_pending_author_verification_not_formal_human_adjudication",
+  "adjudicator": "Devin (delegated first-pass adjudicator)",
+  "delegation_basis": "Author instruction 2026-09-23: 「devin一次判定で進めて / あとから検証します」; author instruction 2026-09-24: revise the candidate criterion first, freeze it, then select new candidates.",
+  "author_verification": "pending",
+  "amendment_id": "AMEND-2026-09-24-03",
+  "recorded_utc": "2026-09-24T12:40:00Z; Chemistry_Materials continuation assessed 2026-09-24T12:25:00Z",
+  "screen_directory": "data/raw/deposit-screen-20260924/screen",
+  "route_record": [
+    "data/raw/deposit-screen-20260924/stage_b_routes.json",
+    "data/raw/deposit-screen-20260924/stage_b_routes_continuation_chemistry.json"
+  ],
+  "evidence_rule": "Every gate cites segment IDs of the hash-checked retained article text in the screen directory; quotes must occur verbatim inside the cited segment. Original code, repositories, notebooks and author implementations were not consulted; files classified as implementation material in the route record were not opened.",
+  "deposit_inspection_rule": "For deposits small enough to retrieve, the custodian retrieved the public files anonymously, retained them outside the public repository with a receipt (URL, UTC time, bytes, SHA-256, request conditions) and inspected only file structure (sheet names, column headers, first rows) to classify the deposit as analysis input, mixed input/output, or output. No analysis was run and no values were compared with the article. Files were not served to any reconstruction slot.",
+  "custodian_input_archive": "/home/ubuntu/paper2_evidence/deposit-inputs-20260924 (private; not committed; receipts per file)",
+  "main_sample_rule": "A route-eligible candidate becomes a main-sample candidate only if G1 = yes, G2 != no, the Stage B route has no exclusion class, the inspected deposit is analysis input (not the target output), and no file that would be served leaks the principal target. Candidates failing the deposit-role or leakage check are excluded with a recorded class; they are not reconstruction outcomes.",
+  "assessments": [
+    {
+      "paper_id": "PMID:39327328",
+      "sampling_stratum": "Biomedical_Basic",
+      "candidate_rank": "14",
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "Central claims are genome sequences and sequence-identity/phylogenetic statistics computed from deposited reads (assembly, BLAST, MEGA X phylogeny, ANI/AAI).",
+      "G2_principal_target_identifiable": "uncertain",
+      "G2_reason": "Several numeric outputs are reported (>99.7% nucleotide identity for OlVV variants; 92-99.8% ANI between OlVA genomes; 22-63% AAI); the article does not single out one principal statistic, and identity values depend on assembled contigs that are themselves outputs (GenBank). A pre-specified target would have to be chosen by the author before blind slots are opened.",
+      "G3_input_accessibility": "public",
+      "G3_reason": "Trimmed reads are deposited under NCBI SRA BioProject PRJNA852409; the Stage B route lists sized files within the amendment caps and requires no account.",
+      "G4_resource_accessibility": "available",
+      "G4_reason": "SPAdes, BLAST, MEGA X and ORF finder are free; no commercial software is named for the computational claims.",
+      "G5_specification_sufficient_for_attempt": "uncertain",
+      "G5_reason": "Assembler version and meta option are stated, but contig retention criteria and identity computation windows are only partly specified.",
+      "target_candidate": "candidate: average nucleotide identity range between OlVA genome variants (92-99.8%) - requires author pre-specification",
+      "alternatives_considered": "HSP70 phylogeny topology (qualitative; rejected); AAI ranges to related closteroviruses (depends on reference set).",
+      "pilot_decision": "provisional_pilot_case",
+      "deposit_role": "input_raw_reads_not_inspected",
+      "deposit_inspection": "Not retrieved: SRA run files are ~0.4-1 GiB each; only the listing was inspected. Listing shows read runs, not assembled contigs, so no target leakage is expected from the deposit itself; GenBank assemblies (outputs) are outside the served deposit.",
+      "outcome_leakage": "none_expected_listing_only",
+      "amended_disposition": "main_sample_candidate_conditional_on_author_target_prespecification",
+      "evidence": [
+        {
+          "segment_id": "S0015",
+          "quote": "NCBI SRA BioProject number PRJNA852409 for the trimmed sequence reads",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0016",
+          "quote": "Reads were assembled using SPAdes 3.14.0 [ 7 ], using the meta option [ 8 ]",
+          "gate": "G4"
+        },
+        {
+          "segment_id": "S0028",
+          "quote": "> 99.7% nucleotide sequence identity for all variants",
+          "gate": "G2"
+        },
+        {
+          "segment_id": "S0033",
+          "quote": "Average nucleotide identity (ANI) values varied between 92 and 99.8% between OlVA genomes",
+          "gate": "G1"
+        },
+        {
+          "segment_id": "S0018",
+          "quote": "maximum-likelihood phylogenetic analysis in MEGA X [ 14 ], using the best-fit substitution models",
+          "gate": "G5"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:41444829",
+      "sampling_stratum": "Clinical_Medicine",
+      "candidate_rank": "46",
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "Central claim is machine-learning detection of brain tumours from nanosensor spectral features (accuracy, F1, AUC on a held-out test set).",
+      "G2_principal_target_identifiable": "yes",
+      "G2_reason": "Test-set accuracy of 98% (F1 0.98, AUC 0.98) for tumour detection is the headline result in abstract and results.",
+      "G3_input_accessibility": "public",
+      "G3_reason": "Raw spectral data and labels are deposited on Zenodo 17343533 (Corrections.zip, Labels.zip, Experiments.zip); Scripts.zip is implementation material and is withheld from the blind slots.",
+      "G4_resource_accessibility": "available",
+      "G4_reason": "scikit-learn gradient boosting and HyperOpt are free.",
+      "G5_specification_sufficient_for_attempt": "uncertain",
+      "G5_reason": "Feature selection (ANOVA, P<0.10, 58 of 126 features), 5-fold CV and Bayesian tuning are described; the exact train/test split and hyperparameter search space sit in supplementary tables and the deposit README, so an attempt is possible but the split may not be recoverable without the withheld scripts.",
+      "target_candidate": "held-out test-set accuracy (98%) and AUC (0.98) of the tumour detection model",
+      "alternatives_considered": "External validation accuracy 89.8% (depends on separate cohort); glioma-vs-meningioma accuracy 71%.",
+      "pilot_decision": "provisional_pilot_case",
+      "deposit_role": "input_with_implementation_withheld",
+      "deposit_inspection": "Not retrieved (Experiments.zip ~1.6 GiB); listing inspected. Data archives and one code archive coexist in the record; the code archive is labelled implementation_withheld in the route record and would not be served.",
+      "outcome_leakage": "none_expected_listing_only_unless_archives_contain_model_outputs",
+      "amended_disposition": "main_sample_candidate",
+      "evidence": [
+        {
+          "segment_id": "S0036",
+          "quote": "model exhibited a test F 1 -score of 0.98, an accuracy of 98%, an 88% sensitivity at 95% specificity, and an area under the curve (AUC) of the receiver operating characteristic (ROC) curve of 0.98",
+          "gate": "G2"
+        },
+        {
+          "segment_id": "S0215",
+          "quote": "Raw spectral data are available via Zenodo at 10.5281/zenodo.17343533",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0216",
+          "quote": "The code used to develop the claims made in the Article and the Supplementary Information is available via Zenodo at 10.5281/zenodo.17343533",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0175",
+          "quote": "Using algorithms implemented in scikit-learn, we optimized models based on gradient boosting for binary classification",
+          "gate": "G4"
+        },
+        {
+          "segment_id": "S0174",
+          "quote": "We found that 58 of the 126 features had significant differences between means ( P < 0.10)",
+          "gate": "G5"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:41466177",
+      "sampling_stratum": "Chemistry_Materials",
+      "candidate_rank": "41",
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "Central transcriptomic claims are differential-expression counts computed with DESeq2/HTSeq from RNA-seq (e.g. 560 genes at 1 h, 2,531 at 24 h; 32% of coding RNAs regulated).",
+      "G2_principal_target_identifiable": "yes",
+      "G2_reason": "Number of differentially expressed transcripts at 1 h versus t0 (560; log2FC >= 1 or <= -1, FDR < 0.05) is explicitly stated.",
+      "G3_input_accessibility": "public",
+      "G3_reason": "Route is public and sized (GEO GSE291941), so G3 itself is not the barrier. The paper is excluded under the amendment leakage clause: the single deposited xlsx bundles raw counts and TPM with the DESeq2 log2FC, p-value and FDR columns for every contrast, so serving it would disclose the target. Column stripping by the custodian is not a permitted transformation. ProteomeXchange raw data have unannounced sizes.",
+      "G4_resource_accessibility": "available",
+      "G4_reason": "DESeq2, HTSeq and DAVID are free; Proteome Discoverer 2.5 (commercial) is used only for the proteomic branch.",
+      "G5_specification_sufficient_for_attempt": "sufficient",
+      "G5_reason": "Reference genome, DESeq2 version, thresholds and replicate structure are stated.",
+      "target_candidate": "number of differentially expressed transcripts at 1 h hypoxia versus t0 (560)",
+      "alternatives_considered": "Percentage of proteome differentially expressed at 24 h (42%; depends on ProteomeXchange raw files with unannounced size).",
+      "pilot_decision": "not_pilot_case_replaced",
+      "deposit_role": "mixed_input_and_target_output_in_one_file",
+      "deposit_inspection": "GSE291941_all_samples_processed_data_HESNARD.xlsx retrieved anonymously (14,129,075 bytes; SHA-256 f11c39b48fb52dfd...). Header inspection: 94 columns including log2fc_*, pvalue_*, fdr_* for every contrast alongside tpm_*, gm_*, raw_* per replicate. No values were compared with the article.",
+      "outcome_leakage": "target_disclosed_by_deposited_file",
+      "amended_disposition": "excluded_deposited_output_only",
+      "evidence": [
+        {
+          "segment_id": "S0078",
+          "quote": "560 genes were differentially expressed at 1 h compared to t0 (21% O 2 )",
+          "gate": "G2"
+        },
+        {
+          "segment_id": "S0033",
+          "quote": "Data were analyzed using DESeq2 (version 1.38 [ 42 ]), and HTSeq (version 2.0.2) was used to quantify the transcripts",
+          "gate": "G4"
+        },
+        {
+          "segment_id": "S0037",
+          "quote": "Only genes showing a significant expression change with an FDR < 0.05 were considered",
+          "gate": "G5"
+        },
+        {
+          "segment_id": "S0047",
+          "quote": "Raw files were processed in Proteome Discoverer 2.5",
+          "gate": "G4"
+        },
+        {
+          "segment_id": "S0078",
+          "quote": "32% of the detected coding RNAs were significantly regulated during hypoxia",
+          "gate": "G1"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:35767539",
+      "sampling_stratum": "Physics_Engineering",
+      "candidate_rank": "202",
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "Central claims are parameter estimates of distribution functions fitted to a citation network and K-L divergence comparisons of a generative model against the data.",
+      "G2_principal_target_identifiable": "yes",
+      "G2_reason": "Least-squares estimates for f_n on WoS-Stat are stated numerically (mu_n = 33.263, sigma_n = 14.743, kappa_n = 17242.068, eta_n = 328.047).",
+      "G3_input_accessibility": "public",
+      "G3_reason": "WoS-Stat (wos-stat_nodes.csv 5.6 MB, wos-stat_edges.csv 14.0 MB, README) is deposited on Dryad z8w9ghxfh under CC0; anonymous download succeeded through a browser. Note: Dryad's download endpoint is behind an Anubis JavaScript proof-of-work challenge, so non-browser clients receive 403/401; this is recorded as a route condition, not an access barrier.",
+      "G4_resource_accessibility": "available",
+      "G4_reason": "Python, SciPy, NetworkX and SNAP are free.",
+      "G5_specification_sufficient_for_attempt": "uncertain",
+      "G5_reason": "Functional forms and the fitting method are stated, but the exact definitions of n(t), c(s) aggregation windows and the fit range (t >= 10 for f_c, f_o) need reading of the full methods; an attempt is possible.",
+      "target_candidate": "least-squares estimates of f_n parameters on WoS-Stat: mu_n = 33.263, sigma_n = 14.743, kappa_n = 17242.068, eta_n = 328.047",
+      "alternatives_considered": "f_c and f_o estimates (gamma_c = 2.509, mu_c = -1.427, sigma_c = 14.361, kappa_c = 10.191; sigma_o = 8.116); K-L divergence minimising beta (simulation-dependent, rejected).",
+      "pilot_decision": "provisional_pilot_case",
+      "deposit_role": "input_raw_network",
+      "deposit_inspection": "Files retrieved anonymously via browser; headers: nodes (node_id, publication_year, uid), edges (from, to). README describes the columns and gives a NetworkX loading example only. No fitted parameters or statistics are contained.",
+      "outcome_leakage": "none",
+      "amended_disposition": "main_sample_candidate",
+      "evidence": [
+        {
+          "segment_id": "S0052",
+          "quote": "We estimate these functions for WoS-Stat",
+          "gate": "G1"
+        },
+        {
+          "segment_id": "S0052",
+          "quote": "For f n , We adopt the least squares method to estimate parameters and obtain estimates",
+          "gate": "G2"
+        },
+        {
+          "segment_id": "S0053",
+          "quote": "For f c , it is also estimated by the least squares method; accordingly, we obtain estimates",
+          "gate": "G5"
+        },
+        {
+          "segment_id": "S0054",
+          "quote": "We estimated parameters of f c and f o using c ( s , t ) and p out T ( k , t ) in t ≥ 10",
+          "gate": "G5"
+        },
+        {
+          "segment_id": "S0065",
+          "quote": "we compared the Kullback–Leibler (K–L) divergence [ 18 ] between the simulated network and the original data WoS-Stat",
+          "gate": "G1"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:35136578",
+      "sampling_stratum": "Social_Behavioral",
+      "candidate_rank": "59",
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "Central claims are statistical associations (logistic regression odds ratios / relative risks, chi-square style p-values) between risk factors and colic in 115 horses computed from a deposited spreadsheet.",
+      "G2_principal_target_identifiable": "yes",
+      "G2_reason": "Odds ratio for previous exposure to colic (OR = 32.250, p < 0.000) and the set of significant risk factors in Table 2 are explicitly reported.",
+      "G3_input_accessibility": "public",
+      "G3_reason": "Figshare 15148851 (Risk factor in horse with colic.xlsx, 51,989 bytes, CC BY) downloaded anonymously; sheets Risk factor (125 rows x 17), Clinical sign, Hematology contain per-horse raw records.",
+      "G4_resource_accessibility": "available",
+      "G4_reason": "SPSS v.25 (IBM) is the commercial software used; logistic regression, OR/RR and one-way ANOVA with Tukey are reproducible in free software.",
+      "G5_specification_sufficient_for_attempt": "uncertain",
+      "G5_reason": "Variable selection into the final logistic model 'depending on p-values' is not fully specified; univariable OR/RR and ANOVA are specified.",
+      "target_candidate": "odds ratio for previous exposure to colic (OR = 32.250) and p-values for the ten risk factors in Table 2",
+      "alternatives_considered": "Pre- vs post-treatment ANOVA on hematological variables (Table 3); serum cortisol change (p < 0.05).",
+      "pilot_decision": "provisional_pilot_case",
+      "deposit_role": "input_raw_records",
+      "deposit_inspection": "Downloaded; header inspection shows coded per-horse risk factors, clinical signs and hematology values. No aggregated statistics or p-values are contained. The companion Figshare item 16617511 (ARRIVE checklist) is not analysis data and is not served.",
+      "outcome_leakage": "none",
+      "amended_disposition": "main_sample_candidate",
+      "evidence": [
+        {
+          "segment_id": "S0031",
+          "quote": "The final analysis was done using logistic regression analysis with selected variables depending on p-values",
+          "gate": "G5"
+        },
+        {
+          "segment_id": "S0032",
+          "quote": "Statistical analysis was performed using SPSS v.25 software (IBM, Armonk, NY, USA)",
+          "gate": "G4"
+        },
+        {
+          "segment_id": "S0037",
+          "quote": "previous exposure to colic (p < 0.000; OR = 32.250)",
+          "gate": "G2"
+        },
+        {
+          "segment_id": "S0078",
+          "quote": "Figshare: Risk factor in horse with colic. https://doi.org/10.6084/m9.figshare.15148851.v1",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0008",
+          "quote": "Of the 115 horses, 96 were diagnosed with colic",
+          "gate": "G1"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:36286480",
+      "sampling_stratum": "Computational_Science",
+      "candidate_rank": "9",
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "Central claims are validation statistics of a lineage-mixture estimator (proportion of characteristic mutations detected; r^2 between estimated and expected lineage frequencies) computed from sequencing data of known mixtures.",
+      "G2_principal_target_identifiable": "yes",
+      "G2_reason": "r^2 = 0.995 (M. tuberculosis standards) and r^2 = 0.817 (SARS-CoV-2 standards) between estimated and expected lineage frequencies are stated.",
+      "G3_input_accessibility": "unknown",
+      "G3_reason": "SARS-CoV-2 raw reads are deposited under BioProject PRJNA827817 (sized, within caps). The article also requires lineage-characteristic mutation lists and VCF generation; the M. tuberculosis validation reads and the mutation lists are not confirmed in the Stage B route and may sit in the withheld software repository.",
+      "G4_resource_accessibility": "available",
+      "G4_reason": "BCFtools/GATK and R are free; the article is itself a software paper whose package (MixviR) is the original implementation and is withheld.",
+      "G5_specification_sufficient_for_attempt": "uncertain",
+      "G5_reason": "The mixture design (seven SARS-CoV-2 standards, six M. tuberculosis standards) and estimator concept are described, but the frequency-estimation rule is defined by the package; reconstruction from text alone is a genuine test of specification sufficiency.",
+      "target_candidate": "r^2 between MixviR-estimated and expected lineage frequencies for the SARS-CoV-2 standards (0.817) using reads from PRJNA827817",
+      "alternatives_considered": "M. tuberculosis r^2 = 0.995 (input deposit not confirmed in route record); proportion of characteristic mutations detected (90-100%).",
+      "pilot_decision": "provisional_pilot_case",
+      "deposit_role": "input_raw_reads_not_inspected",
+      "deposit_inspection": "Not retrieved; listing inspected only. Expected lineage frequencies of the standards are stated in the article and figure, which is unavoidable and is not deposit leakage.",
+      "outcome_leakage": "none_expected_listing_only",
+      "amended_disposition": "main_sample_candidate_conditional_on_input_completeness_check",
+      "evidence": [
+        {
+          "segment_id": "S0006",
+          "quote": "we report MixviR, an R package for exploring, analyzing, and visualizing genomic data from potentially mixed samples",
+          "gate": "G4"
+        },
+        {
+          "segment_id": "S0027",
+          "quote": "MixviR’s estimates of the frequencies of each lineage were also broadly consistent with expectations (see Fig. S1A in the supplemental material; r 2 = 0.817)",
+          "gate": "G2"
+        },
+        {
+          "segment_id": "S0031",
+          "quote": "MixviR correctly identified and provided relative frequencies very consistent with the expectations for all lineages ( Fig. 3B ; Fig. S1B; r 2 = 0.995)",
+          "gate": "G2"
+        },
+        {
+          "segment_id": "S0021",
+          "quote": "These VCF files can be generated with a number of common workflows, including those utilizing BCFtools ( 21 ), the GATK ( 22 )",
+          "gate": "G5"
+        },
+        {
+          "segment_id": "S0026",
+          "quote": "Sequencing coverage for the full SARS-CoV-2 data set was estimated to be >4,900 reads per base position",
+          "gate": "G1"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:35388942",
+      "sampling_stratum": "Environmental_Earth",
+      "candidate_rank": "59",
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "Central claims are dendrochronological indices (annual intensity of tree leaning = max/average ring width; reaction wood formation = max/average wood radius), event counts and ANCOVA slope comparisons computed from deposited ring-width tables.",
+      "G2_principal_target_identifiable": "yes",
+      "G2_reason": "Annual intensity of tree leaning and its peak-count series (Figure 6c) and ANCOVA of regression slopes for young versus mature trees are defined operationally.",
+      "G3_input_accessibility": "public",
+      "G3_reason": "Dryad dr7sqv9z5 Data_S1-3.xlsx (200,249 bytes, CC0) downloaded anonymously via browser (Anubis JavaScript challenge; see PMID:35767539 note). Data S2 holds ring widths per sample and direction; Data S3 holds wood radius per sample.",
+      "G4_resource_accessibility": "available",
+      "G4_reason": "COFECHA is free; SigmaPlot v14.0 (commercial) was used for statistics that are reproducible in free software.",
+      "G5_specification_sufficient_for_attempt": "sufficient",
+      "G5_reason": "Index definitions, thresholds (>2 for active leaning; >1 for reaction wood), age cut (150 years) and ANCOVA design are stated.",
+      "target_candidate": "annual intensity of tree leaning series and count of active leaning events (>2) per year from Data S2; ANCOVA slope difference between young and mature trees",
+      "alternatives_considered": "Soil carbon stock ANOVA (Figure 2, Data S1) - Data S1 is a summary table of stocks, closer to an output; rejected as principal target.",
+      "pilot_decision": "provisional_pilot_case",
+      "deposit_role": "input_raw_measurements_with_one_summary_sheet",
+      "deposit_inspection": "Header inspection: Data S1 (29 rows) = carbon stocks by substrate/terrain (summary used for Figure 2); Data S2 (203 rows x 71) = tree ring widths by sample and direction; Data S3 (201 rows x 68) = wood radius by sample. S2/S3 are raw measurement series; the leaning indices are not tabulated.",
+      "outcome_leakage": "none_for_principal_target (Data S1 discloses Figure 2 stocks, which are not the target)",
+      "amended_disposition": "main_sample_candidate",
+      "evidence": [
+        {
+          "segment_id": "S0032",
+          "quote": "The annual intensity of tree leaning was defined as the ratio of maximum annual tree ring width to average annual tree ring width (Data S1)",
+          "gate": "G2"
+        },
+        {
+          "segment_id": "S0033",
+          "quote": "Peaks of annual intensity of tree leaning >2 were identified as active tree leaning events",
+          "gate": "G5"
+        },
+        {
+          "segment_id": "S0034",
+          "quote": "tree ring widths were summed to calculate wood increment curves (Data S2)",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0037",
+          "quote": "differences in linear regression slopes between young and mature trees were tested analysis of covariance (ANCOVA)",
+          "gate": "G1"
+        },
+        {
+          "segment_id": "S0038",
+          "quote": "were performed using the SigmaPlot software v14.0 (SPSS Inc.)",
+          "gate": "G4"
+        }
+      ]
+    },
+    {
+      "paper_id": "PMID:35003117",
+      "sampling_stratum": "Chemistry_Materials",
+      "candidate_rank": "46",
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "The transcriptome result is a differential-expression screen (DEGseq, |log2FC| >= 1, q < 0.05) on deposited per-sample gene counts, yielding counts of DEGs and up/down-regulated genes.",
+      "G2_principal_target_identifiable": "yes",
+      "G2_reason": "Results state 6762 differentially expressed genes, 5949 down- and 813 up-regulated, between 3D- and 2D-cultured macrophages; the wet-lab claims (SEM, cell cycle, CAM) are not computationally testable and are not the target.",
+      "G3_input_accessibility": "public",
+      "G3_reason": "GEO GSE186841: GSE186841_RAW.tar (430,080 bytes) holds two gene count tables (GSM5662247_2D_count, GSM5662248_3D_count) retrievable anonymously.",
+      "G4_resource_accessibility": "available",
+      "G4_reason": "DEGseq is a free Bioconductor package; GraphPad Prism 7 and SPSS 21 are named only for wet-lab statistics.",
+      "G5_specification_sufficient_for_attempt": "uncertain",
+      "G5_reason": "Thresholds are stated (|log2FC| >= 1, q < 0.05; fold change > 2), but the DEGseq method variant, normalisation and the meaning of 'in both males and females' with one count column per condition are not specified; the article also mixes RNA-seq with an Affymetrix array description.",
+      "target_candidate": "number of differentially expressed genes (6762; 5949 down, 813 up) between 3D and 2D RAW264.7 macrophages from GSE186841 counts",
+      "alternatives_considered": "Table 1 log2 fold changes of VEGF/Notch pathway genes (printed in the article; disclosed, not a blind target); five most significant DEGs (Gsta3, Angpt4, Cryab, Cyp2e1, Ahsg).",
+      "pilot_decision": "provisional_pilot_case",
+      "deposit_role": "input_raw_counts",
+      "deposit_inspection": "Custodian retrieved GSE186841_RAW.tar and filelist.txt (receipts retained). Two gzip TSVs, each 52,550 Ensembl mouse gene rows x one integer count column (2D, 3D). No DEG list, fold change, p-value or annotation columns.",
+      "outcome_leakage": "none_in_deposited_files",
+      "amended_disposition": "main_sample_candidate",
+      "evidence": [
+        {
+          "segment_id": "S0024",
+          "quote": "DEGs were screened using Degseq, with |log2 fold change| ≥ 1 and q",
+          "gate": "G1"
+        },
+        {
+          "segment_id": "S0050",
+          "quote": "RNA-seq detected 18580 genes in the 2D group and 15777 genes in the 3D group, among which 6762 were differentially expressed (fold change > 2, p = 0.05, p adj = 0.05) in both males and females. A total of 5949 genes were downregulated and 813 were upregulated.",
+          "gate": "G2"
+        },
+        {
+          "segment_id": "S0086",
+          "quote": "https://www.ncbi.nlm.nih.gov/gds , accession ID: GSE186841",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0039",
+          "quote": "GraphPad Prism 7 (GraphPad Software, Inc., La Jolla, CA, USA) was used for statistical analysis",
+          "gate": "G4"
+        },
+        {
+          "segment_id": "S0024",
+          "quote": "Gene expression data were generated using Affymetrix GeneChip Human Genome U133 Plus 2.0",
+          "gate": "G5"
+        }
+      ]
+    }
+  ],
+  "continuation_note": "Chemistry_Materials: after PMID:41466177 was excluded on deposit inspection, the deterministic Stage B chain was resumed for that stratum only (ranks 42-46) with the exclusion carried as a prior class; PMID:35003117 (rank 46, GEO GSE186841) was the first route-eligible candidate."
+}

@@ -1,0 +1,13 @@
+{
+  "source_sha256": "e4c8f82d6773af43a506edcbe00bfaa096a904b8939dcbb07f014fe7e4e74d23",
+  "source_bytes": 4847,
+  "source_name": "AMENDMENT_AMEND-2026-09-24-03_deposited_data_criterion.md",
+  "url": "https://freetsa.org/tsr",
+  "retrieved_at_utc": "2026-09-24T11:57:00.877812+00:00",
+  "request_conditions": "POST RFC3161 SHA-256 digest and nonce; source bytes not transmitted",
+  "request_sha256": "bb1183d47cac1aef57672a0d24db877fed522d394b4f17a0a72d721b156f2dcf",
+  "response_sha256": "92d26d1b34780fa8cba4476fe3c804d742e2c946ab0679fc844e2f70ed92d2c9",
+  "response_bytes": 4642,
+  "http_status": 200,
+  "trust_anchor_sha256": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438"
+}

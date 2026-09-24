@@ -1,0 +1,14 @@
+{
+  "amendment_id": "AMEND-2026-09-24-03",
+  "scope": "protocol_amendment_hash_frozen_before_any_screening_under_it",
+  "instruction_basis": "Author instruction 2026-09-24: restrict the main analysis to papers with deposited analysis data that a third party can obtain lawfully and immediately; retain excluded papers with reasons; hold the seven provisional pilot papers in a separate accessibility layer without any reconstruction success or failure rate.",
+  "document": "protocols/AMENDMENT_AMEND-2026-09-24-03_deposited_data_criterion.md",
+  "document_sha256": "e4c8f82d6773af43a506edcbe00bfaa096a904b8939dcbb07f014fe7e4e74d23",
+  "document_bytes": 4847,
+  "timestamp_response_sha256": "92d26d1b34780fa8cba4476fe3c804d742e2c946ab0679fc844e2f70ed92d2c9",
+  "timestamp_status": "cryptographically_verified_against_pinned_freetsa_ca",
+  "timestamp_receipt_dir": "data/raw/amendment-AMEND-2026-09-24-03",
+  "frozen_at_utc": "2026-09-24T11:57:00.877812+00:00",
+  "applies_to": "every candidate screened after frozen_at_utc",
+  "main_sample_estimand": "reconstruction success among computational papers with immediately obtainable deposited analysis data"
+}

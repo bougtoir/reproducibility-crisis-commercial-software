@@ -77,6 +77,21 @@ lawfully retained text or for G1/G2 ineligibility, never for G3, G4, G5 or
 expected reconstruction difficulty, and every skipped candidate is retained with
 its reason in the deterministic chain.
 
+**Amendment AMEND-2026-09-24-03** (`AMENDMENT_AMEND-2026-09-24-03_deposited_data_criterion.md`,
+hash-frozen and RFC 3161 timestamped before any screening under it) restricts
+the main reconstruction sample to papers whose deposited analysis data a third
+party can obtain lawfully and immediately. Under the amendment, author-request,
+application-required, institutional-licence, size-unannounced, above-cap,
+listing-unavailable and output-only deposits are sampling-frame exclusions
+recorded with their class, not G3 study outcomes. Papers that pass G1/G2 but
+fail the amended access criterion form the `ACCESSIBILITY_GATE_FAILED` layer
+(`data/adjudication/accessibility_gate_failed_*.json`): an audit sample of
+pre-reproducibility access barriers for an auxiliary analysis or a separate
+paper, from which no reconstruction success or failure rate may be computed
+because no member reached a reconstruction attempt. The seven papers of the
+provisional pilot `DEV-2026-09-24-02` are the first members of that layer and
+are not in the commercial-software reproducibility sample.
+
 ## Prospective pilot and freeze sequence
 
 After harness qualification, select seven pilot papers,
