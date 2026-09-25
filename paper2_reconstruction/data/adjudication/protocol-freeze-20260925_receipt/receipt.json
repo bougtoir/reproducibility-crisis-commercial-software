@@ -1,0 +1,13 @@
+{
+  "source_sha256": "f3bdc79848672d06785081e339c8e6c26da26cae73b878d49687b933c2f4ef0f",
+  "source_bytes": 3918,
+  "source_name": "protocol_freeze_20260925.json",
+  "url": "https://freetsa.org/tsr",
+  "retrieved_at_utc": "2026-09-25T02:52:55.330569+00:00",
+  "request_conditions": "POST RFC3161 SHA-256 digest and nonce; source bytes not transmitted",
+  "request_sha256": "ebd46aa34468bfdd7109218076888966c551318a41a0ce0be3728b0e1893a223",
+  "response_sha256": "4de791f38c26e12dc4296ff0461a2beae14eb6a2e11c2a5aa02bafe19a981b4b",
+  "response_bytes": 4643,
+  "http_status": 200,
+  "trust_anchor_sha256": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438"
+}

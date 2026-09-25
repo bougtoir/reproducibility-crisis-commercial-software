@@ -1,9 +1,12 @@
 # Paper II protocol
 
-**DRAFT — NOT FROZEN. A provisional pilot has been executed under deviation
-`DEV-2026-09-24-02` with investigator verification of G1–G5 still pending; its runs are
-sealed unadjudicated and excluded from the main sample. No main reconstruction
-experiment has occurred.**
+**FROZEN 2026-09-25 by AMEND-2026-09-25-05 after the seven-paper prospective
+pilot (`PILOT-FREEZE-2026-09-25`) was executed, sealed and procedurally
+reviewed. The frozen text hash and RFC 3161 timestamp are in
+`data/adjudication/protocol_freeze_20260925.json`. Investigator verification of
+delegated G1–G5 gates remains pending; pilot and accessibility-layer papers are
+excluded from the primary denominator. No main-study slot had opened at the
+freeze. Later changes require a numbered amendment.**
 
 ## Question and scope
 

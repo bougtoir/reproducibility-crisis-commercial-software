@@ -1,0 +1,1399 @@
+{
+  "adjudication": "not_performed",
+  "amendment": "AMEND-2026-09-25-04",
+  "deviation": "DEV-2026-09-24-02",
+  "freeze_sha256": "43cc2ec8a280d04e71b860b7f1135e0106be41f125b8b5643ab289968428b34f",
+  "frozen_manifest_sha256": "258ff4d943077cbd4bb13d16d13e665b32e81ca9cf146b753adf018e1db6f69b",
+  "frozen_manifest_timestamp_sha256": "030af2b352cd67a7f3b41fa3bc1158b2cb0b967292374f13a08b0703b2b281ad",
+  "harness_iteration": "harness-iteration-3",
+  "investigator_verification": "pending",
+  "main_sample_membership": "excluded",
+  "reveal": "not_performed",
+  "runs": [
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "dd8bba806382b07c5aa4f1912fd64ab39c1254500fa81e7dfa2a134b78209a97",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 28.92156972199973,
+      "instruction_sha256": "d30ba8d9d8ed80914839d7b0dd4ba0e8623db8ad8511d478ef87c408668b1cde",
+      "paper_id": "PMID:33016314",
+      "provider_accounted_tokens": 314752,
+      "requests": 22,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 201,
+      "served_manifest_sha256": "36b0940cdc015dd07173ca93aa4e096334c3fbb69cb0a8785d51e11d144e2517",
+      "slot": 1,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 22,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "36fe31b8fe9fc45972732599d6c8ff464c8efd880a3a1ab4977d9708a4a76261",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 29.279197419999946,
+      "instruction_sha256": "89ad034be6b30d840fcd962e2a2b98ed8945b4ee9681ed2f1acedc3dca4c1bd3",
+      "paper_id": "PMID:33016314",
+      "provider_accounted_tokens": 314322,
+      "requests": 21,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 201,
+      "served_manifest_sha256": "36b0940cdc015dd07173ca93aa4e096334c3fbb69cb0a8785d51e11d144e2517",
+      "slot": 2,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 21,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "5c5e6e4565d19091b9ae4da993d7f96ba851e8b41db16a465fea4cddb079935d",
+      "adjudication": "not_performed",
+      "claimed_report": {
+        "ambiguities": [
+          "The publication's exact filtering, clustering identity threshold, chimera handling and reference-database version usage were not extracted before termination.",
+          "Whether the reported OTU counts refer to the combined data set or per marker (16S vs ITS) separately was not confirmed from the text."
+        ],
+        "artifact_paths": [],
+        "assumptions": [
+          "The publication describes the method; its own text is the only methodological source permitted.",
+          "Served reads under /input/reads and references under /input/references would be the inputs for a faithful reimplementation.",
+          "No original implementation, processed OTU table or repository was available, so the filtered-data OTU counts must be recomputed from raw reads."
+        ],
+        "conclusion": "The run was terminated by the harness before any analysis could be executed: the response stream was cut off on length while repeatedly probing the publication text, so no reads were processed and no OTU counts were computed. The target (number of unique bacterial 16S OTUs and fungal ITS OTUs in the filtered data set) was therefore not observed.",
+        "failure_codes": [
+          "RUN_TERMINATED_LENGTH_LIMIT",
+          "NO_ANALYSIS_EXECUTED",
+          "TARGET_NOT_OBSERVED"
+        ],
+        "observed_value": null
+      },
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 25.976552979999724,
+      "instruction_sha256": "58be18761014057679655f90b18678d86236c847a0688c7fdb01681c86712930",
+      "paper_id": "PMID:33016314",
+      "provider_accounted_tokens": 26131,
+      "requests": 2,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 201,
+      "served_manifest_sha256": "36b0940cdc015dd07173ca93aa4e096334c3fbb69cb0a8785d51e11d144e2517",
+      "slot": 3,
+      "stop_reason": "final_report",
+      "tool_calls": 0,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "6e307f8278c0499115661140319ea4a0f9d8c3a57497a1ec51013ff8b0f5024a",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 138.98605322300045,
+      "instruction_sha256": "daa1878f09b8f258485bb9c9f01f08f1644de97b02762b26283c322b213fe190",
+      "paper_id": "PMID:35003117",
+      "provider_accounted_tokens": 336484,
+      "requests": 32,
+      "sampling_stratum": "Chemistry_Materials",
+      "served_files": 6,
+      "served_manifest_sha256": "4682dd271c2ebc94e573af9b87d5fa35812b027a737a657bf62b3323734bcad0",
+      "slot": 1,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 31,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "6c4091f119a5149351494a1df187105c7cf43a875258261b2cfea42b3219fcc8",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 42.17955589399935,
+      "instruction_sha256": "545d82cdce0f1f49bc07ac6279787b6f3a0152995f97efd6fad69524ea902703",
+      "paper_id": "PMID:35003117",
+      "provider_accounted_tokens": 317558,
+      "requests": 24,
+      "sampling_stratum": "Chemistry_Materials",
+      "served_files": 6,
+      "served_manifest_sha256": "4682dd271c2ebc94e573af9b87d5fa35812b027a737a657bf62b3323734bcad0",
+      "slot": 2,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 24,
+      "worker_artifacts": [
+        {
+          "bytes": 26210,
+          "path": "degexp2.R",
+          "sha256": "cca2fb9d666e3aefacd64c653c7d93faa7f8ef831bba339de7525f5d804e099e"
+        },
+        {
+          "bytes": 43079,
+          "path": "paper.txt",
+          "sha256": "3c278f08f4196d861beda19422030fdbf3d032def0dbb36d1f11e68ec0cc8bbe"
+        }
+      ]
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "ad6f296774de55a04e857066058fd54c74ba655bea11a33df70e6bd53739a9c4",
+      "adjudication": "not_performed",
+      "claimed_report": {
+        "ambiguities": [
+          "The publication's direction labels (5949 down / 813 up) are opposite in sign to the DEGseq log2(3D/2D) convention; the total and the two directional counts are unambiguous, but which direction is called 'up' vs 'down' depends on the reference group. Reported here as in the publication.",
+          "The publication text mentions both 'fold change > 2' and '|log2 fold change| >= 1' in different places; these are equivalent and both were applied."
+        ],
+        "artifact_paths": [
+          "/work/scratch/counts.tsv",
+          "/work/scratch/run2.R",
+          "/work/scratch/degout/output_score.txt",
+          "/work/scratch/degout/output.html"
+        ],
+        "assumptions": [
+          "DEGseq MARS method used, as the publication states DEGs were screened using Degseq.",
+          "Thresholds taken from the publication: fold change > 2 (equivalently |log2 fold change| >= 1), p = 0.05, q (padj) = 0.05.",
+          "Counts used as raw read counts with library-size normalization performed internally by DEGseq (depth1=14371084, depth2=16652503).",
+          "Direction labels follow the publication: the 5949-gene group is reported as down-regulated and the 813-gene group as up-regulated (in DEGseq output, log2FC = log2(3D/2D); the 5949 group has log2FC > 1 and the 813 group has log2FC < -1).",
+          "All 52550 genes present in both count files were used; no additional filtering was applied beyond the published thresholds."
+        ],
+        "conclusion": "Reproduced the published DEG counts for 3D- vs 2D-cultured RAW264.7 macrophages using DEGseq (MARS method) on the two served count files (GSM5662247 2D, GSM5662248 3D), with the published thresholds fold change > 2 (|log2FC| >= 1), p = 0.05 and q/padj = 0.05. Observed total = 6762, with 5949 in one direction and 813 in the other, exactly matching the publication's reported 6762 / 5949 down / 813 up.",
+        "failure_codes": [],
+        "observed_value": {
+          "down_regulated": 5949,
+          "total_differentially_expressed_genes": 6762,
+          "up_regulated": 813
+        }
+      },
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 69.19419888799985,
+      "instruction_sha256": "c946af1f6eac123993bdc638cac0d747a61b0a5744462b3867e3fe697c6dbcae",
+      "paper_id": "PMID:35003117",
+      "provider_accounted_tokens": 245987,
+      "requests": 25,
+      "sampling_stratum": "Chemistry_Materials",
+      "served_files": 6,
+      "served_manifest_sha256": "4682dd271c2ebc94e573af9b87d5fa35812b027a737a657bf62b3323734bcad0",
+      "slot": 3,
+      "stop_reason": "final_report",
+      "tool_calls": 24,
+      "worker_artifacts": [
+        {
+          "bytes": 144,
+          "path": ".cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-le64.cache-8",
+          "sha256": "60e290d40220b8aeb12564e19ccc7facbb93fb2bb67098692694d4de3f607d1a"
+        },
+        {
+          "bytes": 104,
+          "path": ".cache/fontconfig/4c599c202bc5c08e2d34565a40eac3b2-le64.cache-8",
+          "sha256": "3e61f6f0fac7d9133bc9e690a6897e29bcd777aa8ef204d385d6849539256436"
+        },
+        {
+          "bytes": 160,
+          "path": ".cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-le64.cache-8",
+          "sha256": "f520080407196d1d84f7a56c6010f48ec22b842e6a02005c846540d5880cfbab"
+        },
+        {
+          "bytes": 200,
+          "path": ".cache/fontconfig/CACHEDIR.TAG",
+          "sha256": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682"
+        },
+        {
+          "bytes": 16136,
+          "path": ".cache/fontconfig/d589a48862398ed80a3d6066f4f56f4c-le64.cache-8",
+          "sha256": "2b46c83910a1b2db5b9af96e0b0c6327f9ab53194659974978755c08d212b9aa"
+        }
+      ]
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "82131ebe2f9239c7a4927d72b9281c081e97a78b648e9ea60fac1b688f2fe589",
+      "adjudication": "not_performed",
+      "claimed_report": {
+        "ambiguities": [
+          "The publication does not state the reference category for body condition score; the reported value 0.022 uniquely identifies good vs poor.",
+          "The publication reports OR = n/a for several variables and does not describe handling of multi-category variables in the final model."
+        ],
+        "artifact_paths": [],
+        "assumptions": [
+          "OR computed from the deposited 2x2 contingency tables as the exponentiated logistic-regression coefficient for the single predictor, consistent with the publication's logistic regression analysis.",
+          "For body condition score the reference category is 'poor' (coded 0) and the reported OR 0.022 is for 'good' (coded 1) versus 'poor'; the reverse coding gives 45.9, which does not match the publication.",
+          "Horse column coding 0=normal, 1=colic as documented in the deposit's legend rows.",
+          "Only the two target variables were reconstructed; no alternative specifications were explored."
+        ],
+        "conclusion": "Reconstructed Table 2 odds ratios from the deposited risk-factor dataset (n=115; 96 colic, 19 normal) using the publication's stated method (chi-square screening followed by logistic regression; OR from conditional logistic regression). Previous exposure to colic: 2x2 counts absent 15 normal/10 colic, present 4 normal/86 colic gives OR = (86*15)/(4*10) = 32.25, matching the published 32.250. Body condition score: poor 2 normal/81 colic, good 17 normal/15 colic; the published OR = 0.022 corresponds to good vs poor, OR = (15*2)/(17*81) = 0.02179, matching the published 0.022. Single-predictor logistic regression reproduces both exactly (32.250 and 0.021786).",
+        "failure_codes": [],
+        "observed_value": {
+          "body_condition_score_OR": 0.02178649237472767,
+          "previous_exposure_to_colic_OR": 32.25
+        }
+      },
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 20.780151231999298,
+      "instruction_sha256": "7f863fedabd69091d325498c0d7d31332849ca6e5dc69748b3a41a6b324a2c04",
+      "paper_id": "PMID:35136578",
+      "provider_accounted_tokens": 84294,
+      "requests": 12,
+      "sampling_stratum": "Social_Behavioral",
+      "served_files": 5,
+      "served_manifest_sha256": "0cbc3e548eeca33f89cad2c5021fc87e73ba75037fea3a24d726c6c19a484e31",
+      "slot": 1,
+      "stop_reason": "final_report",
+      "tool_calls": 10,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "8ee091bda0f2add60abcc844b828cf42fa6f0adb682dcc7b0f7ff0ae4c637a19",
+      "adjudication": "not_performed",
+      "claimed_report": {
+        "ambiguities": [
+          "The publication does not state the exact reference category for each OR; the reported values match the dataset's 0/1 coding directly.",
+          "Table 2 lists OR only on one row per variable; the complementary category's OR is its reciprocal."
+        ],
+        "artifact_paths": [],
+        "assumptions": [
+          "The publication reports OR from logistic regression; the deposited data allow exact univariable logistic regression, which reproduces the published ORs for these two variables.",
+          "Coding follows the dataset's own legend: Horse 0=normal, 1=colic; Previous exposure colic 0=absent, 1=present; Body condition score 0=poor, 1=good.",
+          "The OR for body condition score is reported for the 'good' category relative to 'poor' (the row carrying the OR in Table 2), giving 0.022.",
+          "The 115 data rows (rows 0-114) were used; rows 115-119 are legend/blank rows and were excluded.",
+          "SPSS v.25 was the original software; statsmodels Logit was used as the equivalent available implementation."
+        ],
+        "conclusion": "Reconstructed Table 2 odds ratios from the deposited dataset (Risk_factor_in_horse_with_colic.xlsx, sheet 'Risk factor', 115 horses: 96 colic, 19 normal) using univariable logistic regression as described in the publication's Statistical analysis section (Chi-square screening followed by logistic regression; OR reported). Previous exposure to colic: OR = 32.250 (p = 1.11e-07), matching the published Table 2 value of 32.250. Body condition score: OR = 0.022 (p = 1.66e-06), matching the published Table 2 value of 0.022. Both target values are reproduced exactly from the served inputs.",
+        "failure_codes": [],
+        "observed_value": {
+          "body_condition_score_OR": 0.02178649237472766,
+          "previous_exposure_to_colic_OR": 32.25
+        }
+      },
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 26.72533310200015,
+      "instruction_sha256": "344f315d45ad67c02be6452a95e5a04e4021f9626107ab5bce92394e7cb0d4c7",
+      "paper_id": "PMID:35136578",
+      "provider_accounted_tokens": 109944,
+      "requests": 14,
+      "sampling_stratum": "Social_Behavioral",
+      "served_files": 5,
+      "served_manifest_sha256": "0cbc3e548eeca33f89cad2c5021fc87e73ba75037fea3a24d726c6c19a484e31",
+      "slot": 2,
+      "stop_reason": "final_report",
+      "tool_calls": 13,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "2fcc628adc09f009b2b2a06e13a7ef82600567387955a59ff9e553baed80bf83",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 39.33549641100035,
+      "instruction_sha256": "944555c281347dade6554b00d97669be91d183ede3e79094ec62e196fcb813c5",
+      "paper_id": "PMID:35136578",
+      "provider_accounted_tokens": 319833,
+      "requests": 22,
+      "sampling_stratum": "Social_Behavioral",
+      "served_files": 5,
+      "served_manifest_sha256": "0cbc3e548eeca33f89cad2c5021fc87e73ba75037fea3a24d726c6c19a484e31",
+      "slot": 3,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 22,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "d3f45014bc743109e5aea110dbcfeb9a0b7075c594c458c4e8f9f273626bfebc",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 42.8242018560004,
+      "instruction_sha256": "fefd3bb6b41a3c59e9ad2ff4fa4d0a935bb212af0e66d95802f68c7aad813037",
+      "paper_id": "PMID:35388942",
+      "provider_accounted_tokens": 329058,
+      "requests": 22,
+      "sampling_stratum": "Environmental_Earth",
+      "served_files": 5,
+      "served_manifest_sha256": "d7f5fd653e85364e6a609cae4cbe937aca52bfa194eaeaccdff4d1b939b63dca",
+      "slot": 1,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 22,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "64d2fbc0c0ee15e7856d86f5efbfe80f073ac2ac275713a1b8ba6d89741e70ca",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 33.12901666900052,
+      "instruction_sha256": "801e0b4e4f1965573381e909203a4cc01ec08b4a2e0220d11d473c98feb6fe7c",
+      "paper_id": "PMID:35388942",
+      "provider_accounted_tokens": 304877,
+      "requests": 22,
+      "sampling_stratum": "Environmental_Earth",
+      "served_files": 5,
+      "served_manifest_sha256": "d7f5fd653e85364e6a609cae4cbe937aca52bfa194eaeaccdff4d1b939b63dca",
+      "slot": 2,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 22,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "d7cbc0aaa96e9f4715b6752eaf2b558644223e39a67f435b44406cd9a5c676a7",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 46.962159939999765,
+      "instruction_sha256": "6f58db68a8522e8fe9c0902b7baa105504d57f292a3c391cd84ded3b1ebb6e78",
+      "paper_id": "PMID:35388942",
+      "provider_accounted_tokens": 324378,
+      "requests": 22,
+      "sampling_stratum": "Environmental_Earth",
+      "served_files": 5,
+      "served_manifest_sha256": "d7f5fd653e85364e6a609cae4cbe937aca52bfa194eaeaccdff4d1b939b63dca",
+      "slot": 3,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 22,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "9cfd115fe9c5cda95aba0bbf2c35dca3b172d2e5e3ef075364f8c21fe5eb9ea2",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 23.65169397199952,
+      "instruction_sha256": "d46b6c292204e043bc863330acf5dee04b2342677a99ab3d9ccf28970fd843b7",
+      "paper_id": "PMID:35767539",
+      "provider_accounted_tokens": 281338,
+      "requests": 20,
+      "sampling_stratum": "Physics_Engineering",
+      "served_files": 7,
+      "served_manifest_sha256": "84db89e614d14187904fb7006f51176cff93df0dfdd825e367df6a55a3235601",
+      "slot": 1,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 18,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "e75e7b22899a6cbe90f5e75d1f0655a356a7c77363e0a8024e91ad1d28dae77e",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 36.7914443869995,
+      "instruction_sha256": "41b15122572ca25c96c908d4da3bcd179c3a3fe079fe1385dd3847be17c75863",
+      "paper_id": "PMID:35767539",
+      "provider_accounted_tokens": 320478,
+      "requests": 23,
+      "sampling_stratum": "Physics_Engineering",
+      "served_files": 7,
+      "served_manifest_sha256": "84db89e614d14187904fb7006f51176cff93df0dfdd825e367df6a55a3235601",
+      "slot": 2,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 23,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "a37ce8bb4da4b15742f486557726140431be9c3e628bf8f84cfdb738d8ef6c78",
+      "adjudication": "not_performed",
+      "claimed_report": {
+        "ambiguities": [
+          "The publication does not state the exact optimizer or convergence criterion used for the least-squares fit; the small kappa_n discrepancy (17242.080 vs 17242.068) is consistent with optimizer tolerance.",
+          "The publication does not explicitly define eta_n's estimator; RMS residual was used because it reproduces the published value exactly."
+        ],
+        "artifact_paths": [],
+        "assumptions": [
+          "Time index t = 1 corresponds to publication year 1981 and t = T = 36 to 2016, as implied by 'n(t) for t in {1,2,...,T}' and the 36-year span 1981-2016.",
+          "n(t) is the count of nodes per publication year taken directly from wos-stat_nodes.csv (179483 nodes total, matching the published count).",
+          "Least squares was applied to the raw counts n(t) (not to a normalized or floored version), using the logistic mean function f_n.",
+          "eta_n is reported as the root-mean-square of the least-squares residuals (sqrt(mean(residual^2))), which reproduces the published value 328.047.",
+          "Optimization used scipy.optimize.least_squares (Levenberg-Marquardt) with tight tolerances; no alternative specifications were explored."
+        ],
+        "conclusion": "The published logistic function f_n(t | mu_n, sigma_n, kappa_n) = kappa_n / (1 + exp(-(t - mu_n)/sigma_n)) was fitted by ordinary least squares to the annual paper counts n(t) of WoS-Stat, where t = 1..T indexes publication years 1981..2016 (T = 36) and n(t) is the number of nodes with that publication year in wos-stat_nodes.csv. The reconstruction reproduces the published estimates: mu_n = 33.263, sigma_n = 14.743, kappa_n = 17242.080 (published kappa_n = 17242.068, difference 0.012 attributable to optimizer tolerance), and the residual scale eta_n = 328.047 (RMS of residuals), matching the published eta_n = 328.047.",
+        "failure_codes": [],
+        "observed_value": {
+          "eta_n": 328.047,
+          "kappa_n": 17242.08,
+          "mu_n": 33.263,
+          "sigma_n": 14.743
+        }
+      },
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 33.690807625999696,
+      "instruction_sha256": "54da5f2f7f436e896bd034afa5c2928a3fd9776d59013c5c8704f806c4cd8c31",
+      "paper_id": "PMID:35767539",
+      "provider_accounted_tokens": 220216,
+      "requests": 18,
+      "sampling_stratum": "Physics_Engineering",
+      "served_files": 7,
+      "served_manifest_sha256": "84db89e614d14187904fb7006f51176cff93df0dfdd825e367df6a55a3235601",
+      "slot": 3,
+      "stop_reason": "final_report",
+      "tool_calls": 17,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "868015d1b8f20f2344b3a7de9955c813e1007a8a23428d75480dc3912bb6acc5",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 42.28742033100025,
+      "instruction_sha256": "5ffacfa5045ff572bfb7d0cb15b8c43b35d19708099582503b28d9eb2553d767",
+      "paper_id": "PMID:36286480",
+      "provider_accounted_tokens": 327382,
+      "requests": 25,
+      "sampling_stratum": "Computational_Science",
+      "served_files": 23,
+      "served_manifest_sha256": "2b3dca95245eb8463385a6171eba48368291b7a66627327043de177fdab3fa94",
+      "slot": 1,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 25,
+      "worker_artifacts": [
+        {
+          "bytes": 28183,
+          "path": ".cache/pip/wheels/8b/44/e0/88d6c1da5f4cbf6185340f4179ac236d065769323d7ec5cc99/constellations-0.1.3-py3-none-any.whl",
+          "sha256": "a3e4973c56cccc9980f792297bba30c0b69638a3548ac33fc6897fd6e6f41359"
+        },
+        {
+          "bytes": 255,
+          "path": ".cache/pip/wheels/8b/44/e0/88d6c1da5f4cbf6185340f4179ac236d065769323d7ec5cc99/origin.json",
+          "sha256": "f0e553d958d8c3a4438b63a502465a7fa703d25f1bd1c8374f1a0d24af842fa1"
+        },
+        {
+          "bytes": 230,
+          "path": ".local/bin/constellations",
+          "sha256": "adfb0873fcf766b395253cac00c30dbd82d528478f9690c977d858b2a7bf1d53"
+        },
+        {
+          "bytes": 46548,
+          "path": ".local/lib/python3.11/site-packages/__pycache__/six.cpython-311.pyc",
+          "sha256": "0725ee38dee2a5f56d840062807db59fb711a691608c0a027f290549fe98610b"
+        },
+        {
+          "bytes": 52,
+          "path": ".local/lib/python3.11/site-packages/constellations/__init__.py",
+          "sha256": "8a412bd1153d4106d47b8a1d3ddd22263825e67845f743108f538ac7f2404777"
+        },
+        {
+          "bytes": 233,
+          "path": ".local/lib/python3.11/site-packages/constellations/__pycache__/__init__.cpython-311.pyc",
+          "sha256": "91542ee580eb55b54e092ace148b0e64a16cf9a55d46fc07e80631b7ee257fc7"
+        },
+        {
+          "bytes": 33771,
+          "path": ".local/lib/python3.11/site-packages/constellations/data/SARS-CoV-2.json",
+          "sha256": "2dcd4a5c7ea6f4d0718fbdde568ceb19b528484d5e447452da8fada25186a861"
+        },
+        {
+          "bytes": 870,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cA.23.1+E484K.json",
+          "sha256": "8bb227ff09194c81388c99f4f89b527aa2fbd31b964d8a39a86459c10aefea66"
+        },
+        {
+          "bytes": 702,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cA.23.1.json",
+          "sha256": "d28767e8685dfe5b8a46b9351698228478c818aa79378005e99a6cc71f63e45a"
+        },
+        {
+          "bytes": 538,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cAV1.json",
+          "sha256": "991bc15db01f0fb5f644a00ec4a99c219bef6cc05fdb9f4a9df843206b5baa91"
+        },
+        {
+          "bytes": 545,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cAY.4.2.json",
+          "sha256": "feacd7c6d1ed74d6f52ed4be77f0cf3bd185d5be4e525f4f323de101a05ea20b"
+        },
+        {
+          "bytes": 1135,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cAY.4.json",
+          "sha256": "3fc1efe33f0bf9db1a094edc7f799a7e877696973c5ca93567e292b81be5b53a"
+        },
+        {
+          "bytes": 919,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cB.1.1.318.json",
+          "sha256": "a1bfbfcf20801d71e31c6c49a9ecc20d67ec2d9929db5819cc6f327a40e0e213"
+        },
+        {
+          "bytes": 1550,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cB.1.1.529.json",
+          "sha256": "b65c52eef1878937465d889416b870a051fedc9ae714513393ad68e2f081eb5d"
+        },
+        {
+          "bytes": 926,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cB.1.1.7+E484K.json",
+          "sha256": "0f3873e393e25db0aafd3a6a33643cb12cb0a3690a203bd2f2d5d4e1d4110821"
+        },
+        {
+          "bytes": 843,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cB.1.1.7.json",
+          "sha256": "57fe67f2305dca27ffd2bea736b0ab6288753f6b4a34f717f5532bb252f6ed53"
+        },
+        {
+          "bytes": 863,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cB.1.351.json",
+          "sha256": "89f8eceb138350acababfa21d2920c79d6609028856a61ef3f7d8a70c08d7304"
+        },
+        {
+          "bytes": 841,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cB.1.427.json",
+          "sha256": "f44e8857d66bd098ebe18b928065225f233169fdc568b2827ac2663588034633"
+        },
+        {
+          "bytes": 865,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cB.1.429.json",
+          "sha256": "78d26dca38e7beadfefc633e9e51e9db26606719332fa9eddf4b15f4e300619d"
+        },
+        {
+          "bytes": 952,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cB.1.525.json",
+          "sha256": "a3703ae96ec0e1fa6bbfb250a45028483454d7142f8b6b43ae0cbf80f786dbe3"
+        },
+        {
+          "bytes": 808,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cB.1.526.json",
+          "sha256": "f06f4cf9c2f5ed98e0208d99ee88144b76c1724d7c3a78fdccc0fb854f6d96cb"
+        },
+        {
+          "bytes": 896,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cB.1.617.1.json",
+          "sha256": "bbe1426dbaf2a1a3b977bbe7188ed8885f23405b4926dc920e7e970afe76fa78"
+        },
+        {
+          "bytes": 1023,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cB.1.617.2+K417N.json",
+          "sha256": "d52c19f74262ab7e7f52a37d48fe4847ae0b4be9c2aecc459fbcaabde6f28b61"
+        },
+        {
+          "bytes": 1098,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cB.1.617.2.json",
+          "sha256": "6973ec8294fd62a1a1d150c16bfac85f75144e8ddca073131650b796381590de"
+        },
+        {
+          "bytes": 912,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cB.1.617.3.json",
+          "sha256": "6476300b399ef70911ac3132f740ee1fdfb41826ea1d7f0112d48630ba493843"
+        },
+        {
+          "bytes": 1304,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cB.1.621.json",
+          "sha256": "833c73e1d5adcf3801db9b9878badefce00de76d3415e3d8fffc5bac9928c99f"
+        },
+        {
+          "bytes": 1332,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cBA.1.json",
+          "sha256": "4b81384ad6f83fcf2235235d45e04477172b1e6fda3fcba039c9981ffc46e50d"
+        },
+        {
+          "bytes": 1389,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cBA.2.json",
+          "sha256": "47cd3a451ff1dfafc75de327343974a9ae82278a2669d75e6a3d61b269b12dcd"
+        },
+        {
+          "bytes": 1224,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cBA.3.json",
+          "sha256": "eb01d91246d47dd04c7ad13c46bcb0975ff63f8d24a1bdc311526909b53f38e4"
+        },
+        {
+          "bytes": 742,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cC.37.json",
+          "sha256": "b3c593e1e041f1ac42b2da520e4369d1d8e8c51c00d76eacf6f9ac5f18debbcb"
+        },
+        {
+          "bytes": 964,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cP.1.json",
+          "sha256": "7c05bfa1bec051b13493384720e3991f21c5c723ed84c887884d6cb8560f3b9f"
+        },
+        {
+          "bytes": 686,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cP.2.json",
+          "sha256": "70d4bc6a09ae1f30ec3af4de75f75566804113946cdb7b5c3fddb55bc00a7387"
+        },
+        {
+          "bytes": 1028,
+          "path": ".local/lib/python3.11/site-packages/constellations/definitions/cP.3.json",
+          "sha256": "d43dd3681eeeb6715a0334d9a7fd905aa96192ec5cd156701214f2243ba6c34a"
+        },
+        {
+          "bytes": 4,
+          "path": ".local/lib/python3.11/site-packages/constellations-0.1.3.dist-info/INSTALLER",
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+        },
+        {
+          "bytes": 298,
+          "path": ".local/lib/python3.11/site-packages/constellations-0.1.3.dist-info/METADATA",
+          "sha256": "221826509b9fb36272a00d206e8a1e9e885ea8c7256f1c10bcca2dc539a5c1a7"
+        },
+        {
+          "bytes": 3674,
+          "path": ".local/lib/python3.11/site-packages/constellations-0.1.3.dist-info/RECORD",
+          "sha256": "c2e98234d66f1ad0764c87d2b01dc9ad85ef941d9f515a5c73249050f806d723"
+        },
+        {
+          "bytes": 0,
+          "path": ".local/lib/python3.11/site-packages/constellations-0.1.3.dist-info/REQUESTED",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 91,
+          "path": ".local/lib/python3.11/site-packages/constellations-0.1.3.dist-info/WHEEL",
+          "sha256": "4a63b1614ee9ccd281a804af409ec38d7dd719417dda5ac684c6f747afe28aa2"
+        },
+        {
+          "bytes": 255,
+          "path": ".local/lib/python3.11/site-packages/constellations-0.1.3.dist-info/direct_url.json",
+          "sha256": "f0e553d958d8c3a4438b63a502465a7fa703d25f1bd1c8374f1a0d24af842fa1"
+        },
+        {
+          "bytes": 63,
+          "path": ".local/lib/python3.11/site-packages/constellations-0.1.3.dist-info/entry_points.txt",
+          "sha256": "0d0eb7a44aa19fecca6f74bc333c9dcb127044ebf486568875c0e6b53e669d06"
+        },
+        {
+          "bytes": 375,
+          "path": ".local/lib/python3.11/site-packages/constellations-0.1.3.dist-info/licenses/LICENSE.md",
+          "sha256": "949748548835bcd3942a552dc90f894a2bab4bfbdf751709abec49cb4e700f0f"
+        },
+        {
+          "bytes": 15,
+          "path": ".local/lib/python3.11/site-packages/constellations-0.1.3.dist-info/top_level.txt",
+          "sha256": "2cb186e062048cc20dc807da3ea88b5120daf7ae7ea098090b2ca38deed9284f"
+        },
+        {
+          "bytes": 620,
+          "path": ".local/lib/python3.11/site-packages/dateutil/__init__.py",
+          "sha256": "32a6a6ebb58ef4891399417223aeaf4ba2284974e9f46dfcf0369d1f62c230b6"
+        },
+        {
+          "bytes": 1370,
+          "path": ".local/lib/python3.11/site-packages/dateutil/__pycache__/__init__.cpython-311.pyc",
+          "sha256": "dffc6b62b0d69bddf5612e984d0bbc91f230826a446b36a4fa4b830de3051dd3"
+        },
+        {
+          "bytes": 1986,
+          "path": ".local/lib/python3.11/site-packages/dateutil/__pycache__/_common.cpython-311.pyc",
+          "sha256": "12d5d44047f1737ce2dbb511c931ee2e50f8bc14b5c01034b9f8392eefd963f3"
+        },
+        {
+          "bytes": 287,
+          "path": ".local/lib/python3.11/site-packages/dateutil/__pycache__/_version.cpython-311.pyc",
+          "sha256": "9feefc0f0ae6bcd1406aa7009c9d5b7a08effd4ef08a447f8d13aa8155b4a33d"
+        },
+        {
+          "bytes": 2912,
+          "path": ".local/lib/python3.11/site-packages/dateutil/__pycache__/easter.cpython-311.pyc",
+          "sha256": "4aa6ed3cebfe37f1fe7938d107f005d426d21b0cd497782a6df9da005d21f8f9"
+        },
+        {
+          "bytes": 26537,
+          "path": ".local/lib/python3.11/site-packages/dateutil/__pycache__/relativedelta.cpython-311.pyc",
+          "sha256": "94ef142c10eed7cafd27b5519257aeeaca79cf7a027fa0ca048c7df25e0b22c2"
+        },
+        {
+          "bytes": 74035,
+          "path": ".local/lib/python3.11/site-packages/dateutil/__pycache__/rrule.cpython-311.pyc",
+          "sha256": "b06293fb2577f4bf859f761df65eb671f4c32a4c813d1feff6abf976e2d9b784"
+        },
+        {
+          "bytes": 199,
+          "path": ".local/lib/python3.11/site-packages/dateutil/__pycache__/tzwin.cpython-311.pyc",
+          "sha256": "776b31ce345cdc76759a1cbe295d526c3c007d18e00c22b6956c7dfaf43cb3eb"
+        },
+        {
+          "bytes": 2668,
+          "path": ".local/lib/python3.11/site-packages/dateutil/__pycache__/utils.cpython-311.pyc",
+          "sha256": "da513912676a527f2a298d7448be4b172614767afee80b41fdb23ec45e6f8954"
+        },
+        {
+          "bytes": 932,
+          "path": ".local/lib/python3.11/site-packages/dateutil/_common.py",
+          "sha256": "efbc34cb2b64af19586d29fefa50d53d431a6d45d147d237941bffbd0454a946"
+        },
+        {
+          "bytes": 166,
+          "path": ".local/lib/python3.11/site-packages/dateutil/_version.py",
+          "sha256": "055d37d4ec430c09b2e7c9de520e72caa2e42daa88c3b89b2bd02cde388c89bd"
+        },
+        {
+          "bytes": 2678,
+          "path": ".local/lib/python3.11/site-packages/dateutil/easter.py",
+          "sha256": "772062fa52af8a61f5bbf93aa7b6742492bbd9086a56d541b2a072be910f2af7"
+        },
+        {
+          "bytes": 1766,
+          "path": ".local/lib/python3.11/site-packages/dateutil/parser/__init__.py",
+          "sha256": "c1693a185bb14e98e8820086b6091c789a2d8b8a558e5e3f7c7417a4d39a4988"
+        },
+        {
+          "bytes": 3124,
+          "path": ".local/lib/python3.11/site-packages/dateutil/parser/__pycache__/__init__.cpython-311.pyc",
+          "sha256": "be3bdf35a62d848752a14e58ad43428de9ab7ec8a36d8fbef8318d99339265fe"
+        },
+        {
+          "bytes": 69775,
+          "path": ".local/lib/python3.11/site-packages/dateutil/parser/__pycache__/_parser.cpython-311.pyc",
+          "sha256": "e9624471f760dc11b1071d77c84c0bc8390a96f1e71c5d519607945f0253ee1c"
+        },
+        {
+          "bytes": 17331,
+          "path": ".local/lib/python3.11/site-packages/dateutil/parser/__pycache__/isoparser.cpython-311.pyc",
+          "sha256": "9d2ca787666deb80a968793153e4d8b29bb79891ee5f57c2e259b4821c4cd2bb"
+        },
+        {
+          "bytes": 58796,
+          "path": ".local/lib/python3.11/site-packages/dateutil/parser/_parser.py",
+          "sha256": "ee494377289c92c401fd7825fb7500981c33098a2bd40219aa4948713e9d1fff"
+        },
+        {
+          "bytes": 13233,
+          "path": ".local/lib/python3.11/site-packages/dateutil/parser/isoparser.py",
+          "sha256": "f05cbdf7d6e709dd5fad274e62e3ab6967c94ed7795bba90e7537036e1ff8573"
+        },
+        {
+          "bytes": 24903,
+          "path": ".local/lib/python3.11/site-packages/dateutil/relativedelta.py",
+          "sha256": "218fe6825323a196d87ebbe5a1363671ed366a25633c892265faa03536517ee0"
+        },
+        {
+          "bytes": 66557,
+          "path": ".local/lib/python3.11/site-packages/dateutil/rrule.py",
+          "sha256": "289cca95a09dd6311bbb8037f1996db256a801487d9d26dd6ce15d8e9ef429ec"
+        },
+        {
+          "bytes": 444,
+          "path": ".local/lib/python3.11/site-packages/dateutil/tz/__init__.py",
+          "sha256": "17e333d77bfa8d8b1e92541ff537bd27a9f370b0e6ab8ee03916bad4adf9fc50"
+        },
+        {
+          "bytes": 793,
+          "path": ".local/lib/python3.11/site-packages/dateutil/tz/__pycache__/__init__.cpython-311.pyc",
+          "sha256": "4580d83e9860e8ef829bb6bedc34698a82b797a2513296b24ad350762dcbfbff"
+        },
+        {
+          "bytes": 15231,
+          "path": ".local/lib/python3.11/site-packages/dateutil/tz/__pycache__/_common.cpython-311.pyc",
+          "sha256": "b11b32fbd470185a4f605349c0ae95663eccb32d89f69808d127be96c3308137"
+        },
+        {
+          "bytes": 5190,
+          "path": ".local/lib/python3.11/site-packages/dateutil/tz/__pycache__/_factories.cpython-311.pyc",
+          "sha256": "64776da848b99e34170d1f549bcf3db67697b67dc54baa2c4acaf0857ca403ef"
+        },
+        {
+          "bytes": 70469,
+          "path": ".local/lib/python3.11/site-packages/dateutil/tz/__pycache__/tz.cpython-311.pyc",
+          "sha256": "3bebdebbac6142cb3f100ac31f5b70a11c4c07d511c363886c9eb710a23bc092"
+        },
+        {
+          "bytes": 18379,
+          "path": ".local/lib/python3.11/site-packages/dateutil/tz/__pycache__/win.cpython-311.pyc",
+          "sha256": "ec2f9094d180bbf0c4ed0cb8553b028e472147bf1e60fc1a82f4065a952ee8fa"
+        },
+        {
+          "bytes": 12977,
+          "path": ".local/lib/python3.11/site-packages/dateutil/tz/_common.py",
+          "sha256": "720cc34c036c397bc473ce9c605efb12c962b9269bf0fbb0a6c979f9b5f7fd2e"
+        },
+        {
+          "bytes": 2569,
+          "path": ".local/lib/python3.11/site-packages/dateutil/tz/_factories.py",
+          "sha256": "ba76fa5d0357acf32f7a4b13094f8083c8e6559b384a88e83d47001e95a7aef5"
+        },
+        {
+          "bytes": 62855,
+          "path": ".local/lib/python3.11/site-packages/dateutil/tz/tz.py",
+          "sha256": "1149c474c7de4e15e263a978b21f7205a6d9eb7fcf3b3cb4d734ac87db619f5a"
+        },
+        {
+          "bytes": 12935,
+          "path": ".local/lib/python3.11/site-packages/dateutil/tz/win.py",
+          "sha256": "c49b335a04b0135c4fc7f1c98f86647a9cae902fe1372d35e9631c5e16d1681f"
+        },
+        {
+          "bytes": 59,
+          "path": ".local/lib/python3.11/site-packages/dateutil/tzwin.py",
+          "sha256": "ec0af8bdd4029e733498a4773148db20ab19ac155f1e0770b0965cfe619845ec"
+        },
+        {
+          "bytes": 1965,
+          "path": ".local/lib/python3.11/site-packages/dateutil/utils.py",
+          "sha256": "74a09c844c3c78e6e2d25a064f1f75ba70719bfed41a5537bff16314c76ac183"
+        },
+        {
+          "bytes": 5889,
+          "path": ".local/lib/python3.11/site-packages/dateutil/zoneinfo/__init__.py",
+          "sha256": "298834a6d842323729e4c5d21220499f79cc8d978d65abfbae5270e7eb73d52e"
+        },
+        {
+          "bytes": 8445,
+          "path": ".local/lib/python3.11/site-packages/dateutil/zoneinfo/__pycache__/__init__.cpython-311.pyc",
+          "sha256": "6743388f4c1ada428dd2ea7eeb420aa9da055a4eb9fa4bd6765304343ecccac3"
+        },
+        {
+          "bytes": 4615,
+          "path": ".local/lib/python3.11/site-packages/dateutil/zoneinfo/__pycache__/rebuild.cpython-311.pyc",
+          "sha256": "d416a9af80b98288707a78a69f3ab82e63243de1c2d1fbe9f59b4696e3e85108"
+        },
+        {
+          "bytes": 156400,
+          "path": ".local/lib/python3.11/site-packages/dateutil/zoneinfo/dateutil-zoneinfo.tar.gz",
+          "sha256": "d3ea52e7b6e968de0d884df1288193596fa95b803db4f92a18279a7398004475"
+        },
+        {
+          "bytes": 2392,
+          "path": ".local/lib/python3.11/site-packages/dateutil/zoneinfo/rebuild.py",
+          "sha256": "322a98cc2207bcd6cc1fe2dd4582effb84f410803b8432ade462d1d084532dd2"
+        },
+        {
+          "bytes": 494,
+          "path": ".local/lib/python3.11/site-packages/packaging/__init__.py",
+          "sha256": "6e758cdd0028b2cad74c739b9adc9c9f06f054932306280b878bfe59d39219b5"
+        },
+        {
+          "bytes": 532,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/__init__.cpython-311.pyc",
+          "sha256": "dc5514d4871a387ceb4a9da682d6eb5b93de8f1447dcc38cd2bd48082a340788"
+        },
+        {
+          "bytes": 5398,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/_elffile.cpython-311.pyc",
+          "sha256": "db31142379f80f879acb6cb6f18a3ccfd40bc8d15d242e6dc523d5b0361fd8c3"
+        },
+        {
+          "bytes": 11785,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/_manylinux.cpython-311.pyc",
+          "sha256": "c634f38eda0f5e7ff79059ab526a42de5be4e69055b5549d5cc0f2ec89a3bf90"
+        },
+        {
+          "bytes": 5381,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/_musllinux.cpython-311.pyc",
+          "sha256": "9a8e62909c4aae5a54473f2cb867246792b80d84784eab5091006d9bccddac37"
+        },
+        {
+          "bytes": 19083,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/_parser.cpython-311.pyc",
+          "sha256": "d81da0e8485faf6e8f218c636c5b0af613e79031f826cf1e036e0dafff5eddbd"
+        },
+        {
+          "bytes": 32336,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/_ranges.cpython-311.pyc",
+          "sha256": "66b313cabd9c92bd49d289cd98f2d2b68e772a1071db82e70270613de96e64fb"
+        },
+        {
+          "bytes": 1792,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/_structures.cpython-311.pyc",
+          "sha256": "3fdc21f811d93456a49f610f7004aff8808c861ae7427d229fa822bf823f16d0"
+        },
+        {
+          "bytes": 9032,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/_tokenizer.cpython-311.pyc",
+          "sha256": "ecee7eb7ade53f8526c5c32703cba6a07d94c042669ca915aaee1fe2b961d41d"
+        },
+        {
+          "bytes": 13732,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/dependency_groups.cpython-311.pyc",
+          "sha256": "9cb286441975b246e4466db0ed0069c82f6fac73c3b13e51cace2d8c10b52c14"
+        },
+        {
+          "bytes": 17295,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/direct_url.cpython-311.pyc",
+          "sha256": "b15b8fc973b760fbf80d70747cbe8ba2956fffdf26fcdbf244fafec6193ac419"
+        },
+        {
+          "bytes": 4755,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/errors.cpython-311.pyc",
+          "sha256": "a6f73b7cc662a83f9c0a75db05cc1977b7ee9aafc1fcdd15ec18ba7622991479"
+        },
+        {
+          "bytes": 23382,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/markers.cpython-311.pyc",
+          "sha256": "36d815d905526a560c299a6a25ed3f37c64ffca6be9e0f8b680e60f337196923"
+        },
+        {
+          "bytes": 38252,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/metadata.cpython-311.pyc",
+          "sha256": "4557ceb918b0bace7de5e971a6b4d80b3ee787190e4f4a983179a702e556a3e9"
+        },
+        {
+          "bytes": 43159,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/pylock.cpython-311.pyc",
+          "sha256": "79d35f206982d89d2ee7f12dd2ad85333f1713925803cf58c21e70efa1f7f6a8"
+        },
+        {
+          "bytes": 77305,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/ranges.cpython-311.pyc",
+          "sha256": "d26735267ff782c349e6d251e78fb6db484ca26eae66f1edd85f4635fcd2da75"
+        },
+        {
+          "bytes": 9331,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/requirements.cpython-311.pyc",
+          "sha256": "9351bbcab34bd552a2a2d86d7b1fb8b618695bf600b4910a584fe5ef779dc004"
+        },
+        {
+          "bytes": 61091,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/specifiers.cpython-311.pyc",
+          "sha256": "504548690d8670c7d89c83b25e54e9ecc21236f0d6e120256ff00af04795ea36"
+        },
+        {
+          "bytes": 45770,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/tags.cpython-311.pyc",
+          "sha256": "fe178c71e1e91a9f3729db41195b301c69cb92ef5c16db8cf31f73c724d29f5c"
+        },
+        {
+          "bytes": 14145,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/utils.cpython-311.pyc",
+          "sha256": "b0016b35a284f23ebc568727d25a2f606a0cfd8d77b1781bb4aa4442ec267839"
+        },
+        {
+          "bytes": 44484,
+          "path": ".local/lib/python3.11/site-packages/packaging/__pycache__/version.cpython-311.pyc",
+          "sha256": "fc8dcec98e713d896b8290c5720d239652fb559a10ad5b5f3b1e9c01e52de64c"
+        },
+        {
+          "bytes": 3236,
+          "path": ".local/lib/python3.11/site-packages/packaging/_elffile.py",
+          "sha256": "1f025f54c573f1a85740c4fbd908cc1d1fb0c177c14377ebf5f09d6cd5368780"
+        },
+        {
+          "bytes": 10000,
+          "path": ".local/lib/python3.11/site-packages/packaging/_manylinux.py",
+          "sha256": "5b6e84324c42538ab4cdb148e2430fdba36f04427b0efda55bea083a35fa6136"
+        },
+        {
+          "bytes": 2774,
+          "path": ".local/lib/python3.11/site-packages/packaging/_musllinux.py",
+          "sha256": "0328fb827b1170c77df4c107d49be8df8d37262103490a61e8acad8a2f9cadff"
+        },
+        {
+          "bytes": 12639,
+          "path": ".local/lib/python3.11/site-packages/packaging/_parser.py",
+          "sha256": "88a348115209327497e453b635e5db099fd592f9335d710c7313b29cdb30c50c"
+        },
+        {
+          "bytes": 30850,
+          "path": ".local/lib/python3.11/site-packages/packaging/_ranges.py",
+          "sha256": "b7b595f2e692aeb3697c545b85c24cbbcb4552f2adc6d9059aa82d0877e816b7"
+        },
+        {
+          "bytes": 1109,
+          "path": ".local/lib/python3.11/site-packages/packaging/_structures.py",
+          "sha256": "eb48d16c5efca7ccf930a9cd77a700a6b80e69d0891d5d03966526441a8565cb"
+        },
+        {
+          "bytes": 5573,
+          "path": ".local/lib/python3.11/site-packages/packaging/_tokenizer.py",
+          "sha256": "cc25e57c0d564c89e15073471d6e1c264299ca946fb17c0e1e4af54ef7713ee6"
+        },
+        {
+          "bytes": 11224,
+          "path": ".local/lib/python3.11/site-packages/packaging/dependency_groups.py",
+          "sha256": "5309cc564ca3022dfb594816e9d593bb09cdf34208c1fb8c5ec9afb6c670278c"
+        },
+        {
+          "bytes": 11645,
+          "path": ".local/lib/python3.11/site-packages/packaging/direct_url.py",
+          "sha256": "843baa95d04cbb49288de9d9fd77ee946e862cb603123e7e46a69e171fa7d06b"
+        },
+        {
+          "bytes": 2680,
+          "path": ".local/lib/python3.11/site-packages/packaging/errors.py",
+          "sha256": "ea17c461701ff2ffc817ae7e94569d24e30889e04fdb120ab721178c6d67188b"
+        },
+        {
+          "bytes": 7859,
+          "path": ".local/lib/python3.11/site-packages/packaging/licenses/__init__.py",
+          "sha256": "590d12eee73ddbec53b4e9ee5bfc64d9cb3aacb4940e8ebcba260757ce56740b"
+        },
+        {
+          "bytes": 6792,
+          "path": ".local/lib/python3.11/site-packages/packaging/licenses/__pycache__/__init__.cpython-311.pyc",
+          "sha256": "65a4ccbdca2a0e84264261647d03cace35cbdcb36cc01151d12d71aa29f3143e"
+        },
+        {
+          "bytes": 52880,
+          "path": ".local/lib/python3.11/site-packages/packaging/licenses/__pycache__/_spdx.cpython-311.pyc",
+          "sha256": "d86c83b6f92e26a0d9c747859f295351b1ff587654f960a44554a7ea328ebec4"
+        },
+        {
+          "bytes": 51122,
+          "path": ".local/lib/python3.11/site-packages/packaging/licenses/_spdx.py",
+          "sha256": "596ec35e2ca0ebcba9fd8343ff0a51625af548786257815f24b41f7e08613314"
+        },
+        {
+          "bytes": 20554,
+          "path": ".local/lib/python3.11/site-packages/packaging/markers.py",
+          "sha256": "6cbe860d35d98d2b599e7f0ec73feab124e015711b30be9045e678c92940d9cc"
+        },
+        {
+          "bytes": 42059,
+          "path": ".local/lib/python3.11/site-packages/packaging/metadata.py",
+          "sha256": "934149f420a5449e6f376aa61d6f26a0823eb82cc7c6a1c8cde5aa7be43d0f63"
+        },
+        {
+          "bytes": 0,
+          "path": ".local/lib/python3.11/site-packages/packaging/py.typed",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 35232,
+          "path": ".local/lib/python3.11/site-packages/packaging/pylock.py",
+          "sha256": "1bce0a9fe63e42b87e8ced05da272baf16a68aa704b3718405e2735a6112467c"
+        },
+        {
+          "bytes": 83054,
+          "path": ".local/lib/python3.11/site-packages/packaging/ranges.py",
+          "sha256": "b4781ce913e5dff9e07906f20585c54c3028e1f7ff56341828e79d522ddbfab6"
+        },
+        {
+          "bytes": 7040,
+          "path": ".local/lib/python3.11/site-packages/packaging/requirements.py",
+          "sha256": "459476eb2107fe30e6b1310051a5bdb44c7d3b7f78e0e87bada268282cba62f5"
+        },
+        {
+          "bytes": 52798,
+          "path": ".local/lib/python3.11/site-packages/packaging/specifiers.py",
+          "sha256": "661ad31ddf45ffb861d2626734f4e3d66966029b8fdb79586bb105825d8d9d59"
+        },
+        {
+          "bytes": 38302,
+          "path": ".local/lib/python3.11/site-packages/packaging/tags.py",
+          "sha256": "0e717a082a79620d79cf0321b420df15593c4916fcda03c27cb9d82e07ef5d6e"
+        },
+        {
+          "bytes": 12215,
+          "path": ".local/lib/python3.11/site-packages/packaging/utils.py",
+          "sha256": "a13742cd9994eeca5adfb0249d126408c478026eb1f48cb97afbf2fe9f28ecc6"
+        },
+        {
+          "bytes": 39040,
+          "path": ".local/lib/python3.11/site-packages/packaging/version.py",
+          "sha256": "558b2fb50fd198c660a4c082f96b8919c565911b6b4b6e07f34b6b60c074be97"
+        },
+        {
+          "bytes": 4,
+          "path": ".local/lib/python3.11/site-packages/packaging-26.3.dist-info/INSTALLER",
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+        },
+        {
+          "bytes": 3544,
+          "path": ".local/lib/python3.11/site-packages/packaging-26.3.dist-info/METADATA",
+          "sha256": "70fdb89fc4d4a9a043bf7372b8972bcc883fddff34ab55e9cf80d73875384763"
+        },
+        {
+          "bytes": 3767,
+          "path": ".local/lib/python3.11/site-packages/packaging-26.3.dist-info/RECORD",
+          "sha256": "de5ce74ed339b6dafdc84a326582ce306a4735fb84ce946b9c0c4e8ac400e6bc"
+        },
+        {
+          "bytes": 0,
+          "path": ".local/lib/python3.11/site-packages/packaging-26.3.dist-info/REQUESTED",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 82,
+          "path": ".local/lib/python3.11/site-packages/packaging-26.3.dist-info/WHEEL",
+          "sha256": "1b68144734c4b66791f27add5d425f3620775585718a03d0f9b110ba3a4d88db"
+        },
+        {
+          "bytes": 247,
+          "path": ".local/lib/python3.11/site-packages/packaging-26.3.dist-info/direct_url.json",
+          "sha256": "2a2f960f940f08123fa6ff0b9ffb2f8e51cc722cc9e1fc3908377cbf715bafda"
+        },
+        {
+          "bytes": 197,
+          "path": ".local/lib/python3.11/site-packages/packaging-26.3.dist-info/licenses/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        },
+        {
+          "bytes": 10174,
+          "path": ".local/lib/python3.11/site-packages/packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "bytes": 1344,
+          "path": ".local/lib/python3.11/site-packages/packaging-26.3.dist-info/licenses/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        },
+        {
+          "bytes": 4,
+          "path": ".local/lib/python3.11/site-packages/python_dateutil-2.9.0.post0.dist-info/INSTALLER",
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+        },
+        {
+          "bytes": 2889,
+          "path": ".local/lib/python3.11/site-packages/python_dateutil-2.9.0.post0.dist-info/LICENSE",
+          "sha256": "ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e"
+        },
+        {
+          "bytes": 8354,
+          "path": ".local/lib/python3.11/site-packages/python_dateutil-2.9.0.post0.dist-info/METADATA",
+          "sha256": "a9d436da322be808332f98d88325998e87cb693a678a9969feb4cfad729a6e93"
+        },
+        {
+          "bytes": 3337,
+          "path": ".local/lib/python3.11/site-packages/python_dateutil-2.9.0.post0.dist-info/RECORD",
+          "sha256": "31d4f084fc6a0c69d082d40686ddc1c8c459241774cf88b5f8ccf3520c8c0e9a"
+        },
+        {
+          "bytes": 0,
+          "path": ".local/lib/python3.11/site-packages/python_dateutil-2.9.0.post0.dist-info/REQUESTED",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 110,
+          "path": ".local/lib/python3.11/site-packages/python_dateutil-2.9.0.post0.dist-info/WHEEL",
+          "sha256": "f86fedd281ae13b503d03ad2a55667ab584730157d0c3d97912e6fed7a664e79"
+        },
+        {
+          "bytes": 264,
+          "path": ".local/lib/python3.11/site-packages/python_dateutil-2.9.0.post0.dist-info/direct_url.json",
+          "sha256": "00321ab385527b9dc44b2089e6a148d33bbeaad16ed81aef94c3538f70eb5d4e"
+        },
+        {
+          "bytes": 9,
+          "path": ".local/lib/python3.11/site-packages/python_dateutil-2.9.0.post0.dist-info/top_level.txt",
+          "sha256": "e2d8dd5a485166f17b2c0fc161efcbf60076c3fa766becf9cba02b8da464a2df"
+        },
+        {
+          "bytes": 1,
+          "path": ".local/lib/python3.11/site-packages/python_dateutil-2.9.0.post0.dist-info/zip-safe",
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "bytes": 4,
+          "path": ".local/lib/python3.11/site-packages/six-1.17.0.dist-info/INSTALLER",
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+        },
+        {
+          "bytes": 1066,
+          "path": ".local/lib/python3.11/site-packages/six-1.17.0.dist-info/LICENSE",
+          "sha256": "4375ba20e2b9c6c4e7cad2940a628fd90e95cc3d50ee92aae755715d8ba1fbd0"
+        },
+        {
+          "bytes": 1658,
+          "path": ".local/lib/python3.11/site-packages/six-1.17.0.dist-info/METADATA",
+          "sha256": "562042078c2752549f6d8a7c86dbc5dd708088a7be6d80672ec7b07100b72468"
+        },
+        {
+          "bytes": 739,
+          "path": ".local/lib/python3.11/site-packages/six-1.17.0.dist-info/RECORD",
+          "sha256": "a2e06e33e1d0fdea30833e4c6896f5c49755fcc4a0667ba2e5bd4a13d43a5d2d"
+        },
+        {
+          "bytes": 0,
+          "path": ".local/lib/python3.11/site-packages/six-1.17.0.dist-info/REQUESTED",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 109,
+          "path": ".local/lib/python3.11/site-packages/six-1.17.0.dist-info/WHEEL",
+          "sha256": "a7178d5f925db427b9f0f51260ff6ea6673b8dd44f82f4f41a6f646f5487955c"
+        },
+        {
+          "bytes": 247,
+          "path": ".local/lib/python3.11/site-packages/six-1.17.0.dist-info/direct_url.json",
+          "sha256": "d2e5b8c7f3c149ed49aa2dd267b1d0bf707bd82b64127b06e25883ed917692c9"
+        },
+        {
+          "bytes": 4,
+          "path": ".local/lib/python3.11/site-packages/six-1.17.0.dist-info/top_level.txt",
+          "sha256": "fe2547fe2604b445e70fc9d819062960552f9145bdb043b51986e478a4806a2b"
+        },
+        {
+          "bytes": 34703,
+          "path": ".local/lib/python3.11/site-packages/six.py",
+          "sha256": "c51c91f703d3d4b3696c923cb5fec213e05e75d9215393befac7f2fa6a3904df"
+        }
+      ]
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "07a578389e6d55c5a6f736961e7737fd842e7936e4a826433b72f84ff88eb3ec",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 38.486263232000056,
+      "instruction_sha256": "37e2ac79a168c909caacd52fa45d28973668926abc9b93cbb43e864c4596f234",
+      "paper_id": "PMID:36286480",
+      "provider_accounted_tokens": 296959,
+      "requests": 24,
+      "sampling_stratum": "Computational_Science",
+      "served_files": 23,
+      "served_manifest_sha256": "2b3dca95245eb8463385a6171eba48368291b7a66627327043de177fdab3fa94",
+      "slot": 2,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 24,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "6a533bd07a2d104fd3bb991949a596a1d3dacf3159ded83e4318cff4ad15316f",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 41.28072937500019,
+      "instruction_sha256": "f91436ddd4a80a723636e3b207d7f3124736c4aef33ebb0c2b8581ddbe9670ad",
+      "paper_id": "PMID:36286480",
+      "provider_accounted_tokens": 327208,
+      "requests": 24,
+      "sampling_stratum": "Computational_Science",
+      "served_files": 23,
+      "served_manifest_sha256": "2b3dca95245eb8463385a6171eba48368291b7a66627327043de177fdab3fa94",
+      "slot": 3,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 24,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "8cae2f79f570989a19f8620168f696292c19032033a51fc329a4cc721861a1e3",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 48.123044355000275,
+      "instruction_sha256": "5e7caf09fe3bf8e4023af2be67bd082205609e60b52a2a506fd2168f23fa1562",
+      "paper_id": "PMID:41444829",
+      "provider_accounted_tokens": 338360,
+      "requests": 28,
+      "sampling_stratum": "Clinical_Medicine",
+      "served_files": 8,
+      "served_manifest_sha256": "51c61b76cf35aaea3094f244fb9f7f845135fb38b061da7033341d37a311b7d4",
+      "slot": 1,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 28,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "e176180c67a05e922e465e2c45f29896c58a063f0f9557207fb4ccdb2ad2960b",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 51.916786409999986,
+      "instruction_sha256": "92fb74e6c0ae095fb3c90f895ccf94b704dbb7ac0dc29d012f98268a5da3ac4b",
+      "paper_id": "PMID:41444829",
+      "provider_accounted_tokens": 318354,
+      "requests": 27,
+      "sampling_stratum": "Clinical_Medicine",
+      "served_files": 8,
+      "served_manifest_sha256": "51c61b76cf35aaea3094f244fb9f7f845135fb38b061da7033341d37a311b7d4",
+      "slot": 2,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 27,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "17b5e88dadd103c49708ab7a9f335a4f37745516e72383aa744f1cd679cd3cdc",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 36.138888495000174,
+      "instruction_sha256": "12e85d8b18482528dcec9d23199c7ec5ca663e3c2f9eaf93bbad39043921d979",
+      "paper_id": "PMID:41444829",
+      "provider_accounted_tokens": 309444,
+      "requests": 24,
+      "sampling_stratum": "Clinical_Medicine",
+      "served_files": 8,
+      "served_manifest_sha256": "51c61b76cf35aaea3094f244fb9f7f845135fb38b061da7033341d37a311b7d4",
+      "slot": 3,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 24,
+      "worker_artifacts": [
+        {
+          "bytes": 37071,
+          "path": "Labels_upload.xlsx",
+          "sha256": "e8e68ce46334289e79e962a81f3eb0f5c3a45d6c231102fc6dac1f3a789dc2c8"
+        }
+      ]
+    }
+  ],
+  "scope": "prospective_pilot_blind_outcomes_sealed_before_adjudication_and_reveal",
+  "sealed_at_utc": "2026-09-25T02:42:24.697598+00:00"
+}

@@ -54,9 +54,18 @@ class Limits:
     tool_calls: int = 8
     max_completion_tokens: int = 1024
     step_seconds: int = 30
+    worker_memory: str = "2g"
+    work_disk: bool = False
 
     def validate(self) -> None:
-        if min(asdict(self).values()) < 1 or self.max_completion_tokens >= self.tokens:
+        counts = (
+            self.seconds,
+            self.tokens,
+            self.tool_calls,
+            self.max_completion_tokens,
+            self.step_seconds,
+        )
+        if min(counts) < 1 or self.max_completion_tokens >= self.tokens:
             raise ValueError(
                 "Run limits must be positive with completion below the total token limit"
             )
@@ -145,7 +154,13 @@ def run(
     report: dict[str, object] | None = None
     artifacts: list[dict[str, object]] = []
     try:
-        worker = Worker(package, expected, image)
+        worker = Worker(
+            package,
+            expected,
+            image,
+            memory=limits.worker_memory,
+            work=destination / "work" if limits.work_disk else None,
+        )
         journal.record("worker_inspection", json.loads(worker.inspection))
         while True:
             if time.monotonic() - started >= limits.seconds:

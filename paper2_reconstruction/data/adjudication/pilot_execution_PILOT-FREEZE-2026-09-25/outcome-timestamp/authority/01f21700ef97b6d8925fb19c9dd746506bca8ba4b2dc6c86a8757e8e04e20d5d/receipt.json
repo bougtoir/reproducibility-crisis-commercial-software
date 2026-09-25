@@ -1,0 +1,16 @@
+{
+  "url": "https://freetsa.org/files/cacert.pem",
+  "final_url": "https://freetsa.org/files/cacert.pem",
+  "identifier": "FreeTSA_CA",
+  "version": "live_service_snapshot; see response for record version",
+  "retrieved_at_utc": "2026-09-25T02:42:24.818508+00:00",
+  "request_conditions": "GET timestamp authority trust anchor; compare to published SHA-256",
+  "http_status": 200,
+  "error": "",
+  "content_type": "application/pem-certificate-chain",
+  "path": "/home/ubuntu/paper2_evidence/pilot-run-20260925/destination/outcome-timestamp/authority/01f21700ef97b6d8925fb19c9dd746506bca8ba4b2dc6c86a8757e8e04e20d5d/body",
+  "bytes": 2833,
+  "sha256": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438",
+  "rights": "local evidence only; record/article-specific reuse rights require review",
+  "completeness": "complete_response"
+}

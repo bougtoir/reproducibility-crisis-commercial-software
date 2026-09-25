@@ -1,0 +1,13 @@
+{
+  "source_sha256": "2f25f5d30f0c671cedf15a203b33e8263a7fa1fa63c9f04e7f10daa91cc4dd5c",
+  "source_bytes": 19692,
+  "source_name": "pilot_procedural_review_20260925.json",
+  "url": "https://freetsa.org/tsr",
+  "retrieved_at_utc": "2026-09-25T02:49:18.024632+00:00",
+  "request_conditions": "POST RFC3161 SHA-256 digest and nonce; source bytes not transmitted",
+  "request_sha256": "d65eec4a915de409b56047bd52d702a5e9a3410cb5702788b7f08e80ad4455c0",
+  "response_sha256": "783b1997a5c46bfa87c05e59373ae0a7038d4d2411a4bf1ce786ed4fdbbb6913",
+  "response_bytes": 4644,
+  "http_status": 200,
+  "trust_anchor_sha256": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438"
+}

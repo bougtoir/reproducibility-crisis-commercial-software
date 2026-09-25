@@ -221,3 +221,55 @@ condition is recorded. These dispositions are sampling-frame decisions from a
 delegated record pending investigator verification; the funnel is not updated, no
 target manifest is frozen, no reconstruction has started, and the summary
 carries no rate.
+
+## Prospective pilot: freeze, execution, procedural review and protocol freeze (2026-09-25)
+
+Under AMEND-2026-09-25-04 the seven amended candidates became the
+`PROSPECTIVE_PILOT` set (outside the primary denominator). `paper2.prospective_freeze`
+wrote the ten-field specification for each (target as comparison criterion only,
+target location with retained quotes, required inputs with per-file SHA-256 and
+bytes, allowed resources, blocked original artifacts, metric, agreement rule,
+conclusion rule, ceiling, stopping rule) together with delegated G1–G5 second-pass
+states (`pilot_prospective_freeze_20260925.json`, SHA-256
+`43cc2ec8…8b34f`, RFC 3161 receipt `pilot-freeze-20260925_receipt/`). All inputs
+were lawful anonymous deposits or public references persisted under
+`/home/ubuntu/paper2_evidence/pilot-inputs-20260925` (ENA PRJNA641521: 192 files,
+PRJNA827817: 14 files; GEO GSE186841; Zenodo 17343533 filtered to raw `.txt`
+only; Dryad dr7sqv9z5 and z8w9ghxfh; Figshare 15148851; SILVA 128, UNITE 7.2,
+SARS-CoV-2 reference/annotation, ARTIC V4.1, constellations v0.1.3). Target-bearing
+files were excluded as leakage and recorded. `paper2.pilot_run` executed exactly
+three sequential blind slots per paper on one VM (21 slots, `paper2-science`
+image, no network, non-root, capability-dropped, blind instruction carries the
+`blind_target` not the reported value) and sealed the outcome before any reveal
+(`pilot_execution_PILOT-FREEZE-2026-09-25/blind_outcome.json`, SHA-256
+`485967ff…b1f3db`, timestamped). `paper2.pilot_review` then produced the
+prespecified procedural review (`pilot_procedural_review_20260925.json`): 16/21
+slots stopped at the 400,000 cumulative-token ceiling after a median of 23.5 tool
+calls and ≤139 s (PD-01), free-text failure codes (PD-02), one report without any
+execution (PD-03) and reported values without exported artifacts while the served
+publication displays the value (PD-04). No value was adjudicated and no rate
+computed. AMEND-2026-09-25-05 fixes the dispositions (token ceiling 1,500,000 for
+consistency with the unchanged 40-call ceiling; taxonomy-only failure codes;
+`no_execution_report` state; value-provenance requirement for L3/L4) and
+`paper2.protocol_freeze` hashed PROTOCOL, SAP, TOLERANCE_RULES, FAILURE_TAXONOMY,
+TARGET_SELECTION_RULES, INFORMATION_FIREWALL, REVEAL_PROTOCOL, the amendments and
+the logging-schema modules (`protocol_freeze_20260925.json`, SHA-256
+`f3bdc798…4ef0f`, timestamped).
+
+## Eligible population and main-cohort selection (2026-09-25)
+
+Stage A was run over the whole 9,935-paper frame (`stage_a_statements_full.json`;
+819 papers name an open route) and Stage B exhaustively resolved every open route
+(1,355 route resolutions, listings retained under
+`/home/ubuntu/paper2_evidence/deposit-routes-full-20260925`; summary
+`results/deposit_route_screen_full_20260925.{json,csv}`). Attrition to the eligible
+reconstruction population (461): no lawful text 5,969; no deposit named 1,472;
+author-request-only 827; supplement-only 569; code-only 270; above cap 143;
+size unannounced 87; listing unavailable 68; application required 52; output-only
+2; input mismatch 1; accessibility layer 7; prospective pilot 7. `paper2.main_selection`
+drew the SAP cohort (N=100; N_h/n_h Biomedical 131/29, Computational 112/24,
+Environmental 83/18, Clinical 51/11, Chemistry 35/8, Social 29/6, Physics 20/4;
+within-field order SHA-256(`paper2-main-v1|paper_id`); π_h and weights saved) with
+no outcome read (`main_cohort_20260925.json`, SHA-256 `c9370893…86b4f`,
+timestamped). No main-study paper has been G1–G5 assessed, target-frozen,
+input-acquired or reconstructed; that is the next stage.

@@ -1,0 +1,101 @@
+{
+  "freeze_id": "PROTOCOL-FREEZE-2026-09-25",
+  "amendment": "AMEND-2026-09-25-05",
+  "basis_review_id": "PILOT-REVIEW-2026-09-25",
+  "basis_review_sha256": "2f25f5d30f0c671cedf15a203b33e8263a7fa1fa63c9f04e7f10daa91cc4dd5c",
+  "basis_blind_outcome_sha256": "485967ff8a1caf85c1d9b1bc102ada617219e3636ea22b7dcbbc5337bb81f3db",
+  "documents": {
+    "protocols/PROTOCOL.md": {
+      "sha256": "20779a915f9269a5286441ab9fb1ca307b7f6bde1edd1c3f26618ca2514bf0f3",
+      "bytes": 8466
+    },
+    "protocols/SAP.md": {
+      "sha256": "c18121fc9081c2073617584fd5cb1f48287d9bb66673331903085ae762e1f0a3",
+      "bytes": 7885
+    },
+    "protocols/TOLERANCE_RULES.md": {
+      "sha256": "ff1d4cf9a2dd6b2ca4fcb011ffb3e0fa702aa09de7f15ebf02fee26184331c66",
+      "bytes": 2761
+    },
+    "protocols/FAILURE_TAXONOMY.md": {
+      "sha256": "5cb4a21e38ce93aa5065a7be2c1431cf59d411eb914d7d49708a27922dd8b927",
+      "bytes": 1931
+    },
+    "protocols/TARGET_SELECTION_RULES.md": {
+      "sha256": "fc879735acc5698093d1476db7e4d87ac4174807f5cbea0eb2068e91162a99da",
+      "bytes": 1404
+    },
+    "protocols/INFORMATION_FIREWALL.md": {
+      "sha256": "7802b558013a24984d4caa216c40f96f234d64149e7fd336924cb48626328f56",
+      "bytes": 4146
+    },
+    "protocols/REVEAL_PROTOCOL.md": {
+      "sha256": "161062fa86abf11b7657d22b2483ed10b139536f9f37d050755a316c179d9c12",
+      "bytes": 1429
+    },
+    "protocols/AMENDMENT_AMEND-2026-09-24-03_deposited_data_criterion.md": {
+      "sha256": "e4c8f82d6773af43a506edcbe00bfaa096a904b8939dcbb07f014fe7e4e74d23",
+      "bytes": 4847
+    },
+    "protocols/AMENDMENT_AMEND-2026-09-25-04_pilot_role_and_prospective_freeze.md": {
+      "sha256": "a880449395cd08392cdffdf95264bcfddfd662911b8ca4467d895aa460a8dcfe",
+      "bytes": 5733
+    },
+    "protocols/AMENDMENT_AMEND-2026-09-25-05_final_protocol_freeze.md": {
+      "sha256": "bea06616d5fdb3d6f3dbfdc1a07fefee0527d0809861b307a85c070fbb1899fe",
+      "bytes": 6201
+    }
+  },
+  "logging_schema_modules": {
+    "src/paper2/controller.py": "e24386a805299ed455d4f3620104a822bb3d844de9239ec25203ac74255bb11f",
+    "src/paper2/isolation.py": "7b615acf47144f2f505ea23fdf6befb5016e791b4ed80c41bf34d866bca30f40",
+    "src/paper2/protocol_freeze.py": "dd829bbc54963660cb25d9b42116ff4792005e5960abb36824aeb20859224dfe"
+  },
+  "final_ceiling": {
+    "slots_per_paper": 3,
+    "wall_seconds_per_slot": 14400,
+    "step_seconds": 3600,
+    "provider_tokens_per_slot": 1500000,
+    "tool_calls_per_slot": 40,
+    "max_completion_tokens": 8192,
+    "worker_cpus": 1,
+    "worker_memory": "3g",
+    "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+    "network": "none",
+    "image": "paper2-science:pilot-2026-09-25"
+  },
+  "pilot_ceiling": {
+    "slots_per_paper": 3,
+    "wall_seconds_per_slot": 14400,
+    "step_seconds": 3600,
+    "provider_tokens_per_slot": 400000,
+    "tool_calls_per_slot": 40,
+    "max_completion_tokens": 8192,
+    "worker_cpus": 1,
+    "worker_memory": "3g",
+    "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+    "network": "none",
+    "image": "paper2-science:pilot-2026-09-25"
+  },
+  "ceiling_change": {
+    "provider_tokens_per_slot": {
+      "from": 400000,
+      "to": 1500000,
+      "reason": "PD-01 internal consistency with the unchanged tool-call ceiling"
+    }
+  },
+  "slot_states": [
+    "completed_report",
+    "no_execution_report",
+    "ceiling_stop",
+    "harness_error"
+  ],
+  "failure_code_rule": "taxonomy identifiers only; other tokens retained verbatim as F99",
+  "value_provenance_rule": "L3/L4 require the value in journaled execution output",
+  "primary_endpoint": "at_least_two_valid_successes_among_three_fixed_slots",
+  "pilot_in_primary_denominator": false,
+  "paper_iii_analyses": "not_performed",
+  "original_author_contact": "none",
+  "investigator_verification": "pending",
+  "frozen_at_utc": "2026-09-25T02:52:55.149150+00:00"
+}

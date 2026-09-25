@@ -11,7 +11,7 @@ from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 
-from paper2.core import sha256, snapshot
+from paper2.core import sha256, sha256_file, snapshot
 
 IMAGE = "python@sha256:65a93d69fa75478d554f4ad27c85c1e69fa184956261b4301ebaf6dbb0a3543d"
 DOCKER = "/usr/bin/docker"
@@ -113,17 +113,36 @@ def bounded_capture(
 
 
 class Worker:
-    def __init__(self, package: Path, expected: dict[str, str], image: str = IMAGE) -> None:
+    def __init__(
+        self,
+        package: Path,
+        expected: dict[str, str],
+        image: str = IMAGE,
+        *,
+        memory: str = "2g",
+        work: Path | None = None,
+    ) -> None:
+        """Start an isolated worker over an exact package.
+
+        ``work`` selects a disk-backed writable /work directory instead of the default
+        512 MiB tmpfs, for runs whose intermediate files exceed memory-backed storage.
+        """
         actual: dict[str, str] = {}
         for path in package.rglob("*"):
             if path.is_symlink():
                 raise ValueError("Input packages must not contain symlinks")
             if path.is_file():
-                actual[str(path.relative_to(package))] = sha256(path.read_bytes())
+                actual[str(path.relative_to(package))] = sha256_file(path)
         if not expected or actual != expected or package.is_symlink():
             raise ValueError("Input package differs from exact approved manifest")
         self.name = f"paper2-qualification-{uuid.uuid4().hex}"
         self.closed = False
+        if work is None:
+            work_mount = ("--tmpfs", "/work:rw,nosuid,nodev,size=512m,mode=1777")
+        else:
+            work.mkdir(parents=True, exist_ok=True)
+            work.chmod(0o1777)
+            work_mount = ("--mount", f"type=bind,source={work.resolve()},target=/work")
         docker(
             "run",
             "--detach",
@@ -141,15 +160,14 @@ class Worker:
             "--pids-limit",
             "64",
             "--memory",
-            "2g",
+            memory,
             "--memory-swap",
-            "2g",
+            memory,
             "--cpus",
             "1",
             "--workdir",
             "/work",
-            "--tmpfs",
-            "/work:rw,nosuid,nodev,size=512m,mode=1777",
+            *work_mount,
             "--tmpfs",
             "/tmp:rw,nosuid,nodev,size=64m,mode=1777",
             "--mount",
@@ -209,7 +227,8 @@ class Worker:
         exporter = (
             "import sys,tarfile;"
             "a=tarfile.open(fileobj=sys.stdout.buffer,mode='w|');"
-            "a.add('/work',arcname='.',recursive=True);a.close()"
+            "a.add('/work',arcname='.',recursive=True,"
+            "filter=lambda i: None if i.name.split('/')[1:2]==['scratch'] else i);a.close()"
         )
         output, errors, status, reason = bounded_capture(
             [DOCKER, "exec", self.name, "python", "-c", exporter],

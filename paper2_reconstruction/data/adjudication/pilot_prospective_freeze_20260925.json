@@ -1,0 +1,2543 @@
+{
+  "freeze_id": "PILOT-FREEZE-2026-09-25",
+  "amendment": "AMEND-2026-09-25-04",
+  "frozen_at_utc": "2026-09-25T02:21:32.817176+00:00",
+  "verifier": "Devin delegated second pass over retained article text and acquired inputs",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "original_author_contact": "none",
+  "denominator_role": "excluded_from_primary_reconstruction_rate",
+  "paper_iii_analyses": "not_performed",
+  "papers": [
+    {
+      "paper_id": "PMID:33016314",
+      "sampling_stratum": "Biomedical_Basic",
+      "role": "prospective_pilot_pipeline_validation_only",
+      "article_source_sha256": "c75a408ab0bdc03aab13f2aa28cdf4608c46c6e35a97190560d452cf3a48f7a4",
+      "exact_target": "Number of unique OTUs in the filtered data set: 2763 bacterial (16S rRNA, Illumina MiSeq) and 357 fungal (ITS, PacBio Sequel II)",
+      "blind_target": "The number of unique bacterial (16S rRNA) OTUs and the number of unique fungal (ITS) OTUs in the filtered data set, as reported in the Results",
+      "target_type": "count",
+      "target_location": "Results, first paragraph of the sequencing-data description",
+      "location_evidence": [
+        {
+          "segment_id": "S0067",
+          "quote": "which were clustered into 2763 unique bacterial OTUs and 357 unique fungal OTUs"
+        },
+        {
+          "segment_id": "S0057",
+          "quote": "threshold of 8) at 97% sequence similarity with unoise3 as part of usearch v11.0.667. Singletons were removed (abundance threshold 2)"
+        }
+      ],
+      "required_inputs": [
+        {
+          "served_as": "reads/illumina/SRR12080957.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080957 library CH63 SRR12080957.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080957/a8a48e3b13bd8971b12c3a47c2f835c9a1486b94557969cccea6765ffb8c7a5b/body",
+          "bytes": 8208247,
+          "sha256": "8d2be4789dea16ab5a2ff5c9c4a175cb462107931f1da2cd3139b4125537bc34"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080960.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080960 library CH60 SRR12080960.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080960/1f0e1c3f097292216e0bb9c63333b1a38c30abf0d382e93e36b13ce7291fbb79/body",
+          "bytes": 8317923,
+          "sha256": "059089f977f6bb8384f9ba737439a45edf3fb688ebbc8d969fb15bcab402538b"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080961.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080961 library CH59 SRR12080961.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080961/84ca642df1aa59b7bf0e586b07e0e2d66ee2249d28f1ba960fa49f551401c192/body",
+          "bytes": 6114592,
+          "sha256": "43e643947f9be645bfb5742b17545b112766b3d900ca1dcb5fc0c4dbb435e152"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080962.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080962 library CH58 SRR12080962.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080962/d8631457a7b3e51e0ee75ee2d641847c8c02321d659f8d3794d456b36e0c0471/body",
+          "bytes": 6798335,
+          "sha256": "95e497b05a6fcb35ed8af4d511ea0288509282747c950eca8f16bd02df5bb2b6"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080963.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080963 library CH57 SRR12080963.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080963/01cb9a84ef007d50d96e98ac897a309c50b2c151f0292a98af944700c3012c9e/body",
+          "bytes": 8425563,
+          "sha256": "6b3c3624dc8a880f87a810d88d8b95c3b08e155a91f319f31924be42d4ad0be4"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080969.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080969 library CH52 SRR12080969.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080969/9c706bf1b94e1b071f5e7576d0e90358917e87149ea797af07ec63f06a49ffe3/body",
+          "bytes": 8820442,
+          "sha256": "91c1cfdbec8f377ff3c71b107bfe39f3c4cc5d64ba4fe19f8560885526ec6496"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080971.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080971 library CH50 SRR12080971.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080971/a810eaca54de5018e67eaffb99c86ba1f23ae5f38b6f4c38791036349d9fbee4/body",
+          "bytes": 11596934,
+          "sha256": "ad649a5d5136a157c10786539762bc9d2602c51dc169a6eaa675c5d00bbb9501"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080973.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080973 library CH96 SRR12080973.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080973/d5eaecd8a03e911f28a979b6f17e68c05faa86578ce6aef5cadf613c7883e36c/body",
+          "bytes": 6572889,
+          "sha256": "ed3cf5f08931937c932d33310c33b45c37612926a750eb5349a728b16b075106"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080974.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080974 library CH95 SRR12080974.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080974/a5e73c315f91c08beca99d046ddf0bfb912533d476521acd21e352857b0a2ef8/body",
+          "bytes": 5488584,
+          "sha256": "88672f2202a243329bcdd366d89f2b94b66c8f1412cf4ea5bfdfe20ecc3f6439"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080975.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080975 library CH8 SRR12080975.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080975/a10e860477a24e52d4e5089e3cb084add7c835ae55ce0c2b8892bc10c6f68736/body",
+          "bytes": 9325145,
+          "sha256": "43f7a7fa07973ee7115ffed0996b87c3896950b812336e9f2683e83b33837506"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080977.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080977 library CH93 SRR12080977.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080977/e37608e782fa317c09303f2699777c0669348605a6356f33120ade0f9c9a5224/body",
+          "bytes": 5025010,
+          "sha256": "2fab40a974bd94e0ff8ba3bd2be8ed943bcce13f4ca49b6846b36552a2d94c93"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080985.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080985 library CH85 SRR12080985.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080985/f299819702b90af12b7c19b827f3518c1d313b83b808441c579af0c932798f69/body",
+          "bytes": 6716100,
+          "sha256": "1725a9f1fd5590124e01de5623e4be41394eb868d7d8baeb969772ca37979013"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080988.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080988 library CH83 SRR12080988.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080988/cc6829938727fa6b29831fa0b84ad624b871aceb994be42a3183affd1f14b215/body",
+          "bytes": 6801410,
+          "sha256": "ad02bc2228e2917d78e781a84d0c38c56ea3de1d06d063f765799c1488369c73"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080989.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080989 library CH82 SRR12080989.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080989/bbb4ba90fccecf30408d26ca4bbb73894d865005df2ecd9c324ddba6af8445c2/body",
+          "bytes": 6931023,
+          "sha256": "c78fa9d20963c85e24d998043c2d49ac6ce5f6524288153d06390268b4667bf8"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080992.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080992 library CH79 SRR12080992.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080992/986ddff563e0fa3a89c3b3e6b03163d444f9b6764884209619f36ff469341248/body",
+          "bytes": 7494301,
+          "sha256": "da2ad5df202f85d8ce365cf04278b969f70d24520a0150e9d2521dea8ee91e11"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081001.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081001 library CH47 SRR12081001.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081001/6804c496b53b30e3a61de1426da8c1e542c720a2fe8c859b306c213abb26862b/body",
+          "bytes": 8629144,
+          "sha256": "f2bcb69f4c3c7846d2b084de8f99536117a18eced38852250bbe12626ff2f994"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081003.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081003 library CH45 SRR12081003.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081003/1c5e78facf19c9969a6d325a7c007ae507dc26d62483fedf7bc1dba14e902e26/body",
+          "bytes": 7688117,
+          "sha256": "8efc1c2e942fac36acf602c161604361aa156f3e607fff773766a22766630103"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081006.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081006 library CH42 SRR12081006.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081006/9f85264d6024928bbc41975ba205cff0275c1f85cf370d24678fddb1034b491a/body",
+          "bytes": 9909319,
+          "sha256": "69018b5b5e29c9937da139fa40fb474fdb58e4cee507e86f86909d92409397b3"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081007.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081007 library CH41 SRR12081007.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081007/e1f87b2710e3a608ab74b2764b319a2f01bdcef63653bfed14d5d081c80f9c0e/body",
+          "bytes": 7244961,
+          "sha256": "cd8edf01337b88a77162f6b97fef21376db443f58363875568cd29f015cd171f"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081030.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081030 library CH3 SRR12081030.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081030/25dd9a57e277997a96ccbd07ed9df77241ecae3aa0f919aebf5297ffc4b4b8e5/body",
+          "bytes": 13777374,
+          "sha256": "533d1fe7d79da7871b2c50dd6321e0339f1ab81691cc12c5a501ea3935708c1b"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081033.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081033 library CH18 SRR12081033.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081033/17c660fb03f92cacec4f80dc8ab50b0f83d8333ff8d5c502192e8c1576e39aa2/body",
+          "bytes": 10609213,
+          "sha256": "1fabfea6afb4268212a43c0375d7e13302eafd629a25da4e6b944637564a72e6"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081035.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081035 library CH16 SRR12081035.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081035/b079a9105017f17c0087c8b41cd91bd47a5493c30b5009ff2c9224d32010064a/body",
+          "bytes": 7498129,
+          "sha256": "b0b41fade525ceeefe1f0311387ed81a7288d85e4b1e2fe9a0bfd5a7943f3e79"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081040.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081040 library CH11 SRR12081040.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081040/a726c69bac7dd1f0f25119aec62baf2289ba5da623b9e510370718fb0580122a/body",
+          "bytes": 7529764,
+          "sha256": "92887968ea14e1dff20d4a5e05c24c8bbbcb55788d20339455bd3cf64adf3efe"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081042.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081042 library CH1 SRR12081042.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081042/736d243736f32ab5f790614653c869f8b29c6ded62e36cb074c8e799fa24197c/body",
+          "bytes": 8802610,
+          "sha256": "54607658396be19c98437806374c70f230df3f3438c988a10d07da801116496e"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082197_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082197 library 66_SoilClim_CH_Fungi SRR12082197_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082197/8d502795e0752222de83d74bcc7cf15d5d6cb6a7d04499b6e2ac667bbbcbe119/body",
+          "bytes": 606052,
+          "sha256": "f8c13d3c9f0a26e7ef9187c7ba14ad756516da6ea716f5158abe84fc5e5a8968"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082198_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082198 library 65_SoilClim_CH_Fungi SRR12082198_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082198/7fec15424c64ef0e944e07fb5488068ea50daf4a32dd00776b2dd03838c91267/body",
+          "bytes": 462884,
+          "sha256": "39903a4375b1cbd23fb4e85ca3c13361738d6fc2a487783741e3b922dd928a38"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082201_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082201 library 62_SoilClim_CH_Fungi SRR12082201_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082201/27a746dca0776792d6625515e9494361ff40f16504a32c648ce3e66f4c108471/body",
+          "bytes": 733996,
+          "sha256": "2d280afabcc4bec69143a3f34aea74b2d9940bf36a4e39b7ae924676b91cd91c"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082208_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082208 library 56_SoilClim_CH_Fungi SRR12082208_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082208/9bfe1ac13591d38abce27aec29ea1841695e4dc7dc22d2c11f6f95872c0acce9/body",
+          "bytes": 356059,
+          "sha256": "7cb2600f7c9a6af79698159c9f8f6c78f66e0366d56bf0c7d7c34fe8b5eb2b16"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082210_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082210 library 54_SoilClim_CH_Fungi SRR12082210_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082210/8d9719b41e164635188a830cfc969d6f91605216d8ea731f73d893e9cba7b924/body",
+          "bytes": 536647,
+          "sha256": "f8db5950c4da064d0ad418da44840558aca8b0486c8981e66de7cb24b7419d32"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082211_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082211 library 53_SoilClim_CH_Fungi SRR12082211_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082211/0add1172c34e9e7aaab467cb2d19162ff1f9da885b29e050cd68dce80891957c/body",
+          "bytes": 751512,
+          "sha256": "cd5a8e32d2d0c74012c79164e25b5951d7cc88fe587f8b1437d2ed3f27982940"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082220_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082220 library 45_SoilClim_CH_Fungi SRR12082220_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082220/fb18582ee908535830461b68658db15efd1211896a035b689988a7a783ac6214/body",
+          "bytes": 846232,
+          "sha256": "72528a96f976659f817af8ddba27c8fa1806d61c7e5c80732377a5c97c01bd03"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082225_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082225 library 5_SoilClim_CH_Fungi SRR12082225_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082225/3447b95ec3db68621a44b72fa96ee81c5f1a04c590cade1ee9c44fabf5a9324b/body",
+          "bytes": 615810,
+          "sha256": "2d481fb92745b76f67c7f0a2a3a6962a43cfc2e98c7144e096cff9ab007c3448"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082226_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082226 library 40_SoilClim_CH_Fungi SRR12082226_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082226/549a62b75edb1b41a97211059a9c7e178deebadf61775bf61f4c4562418df797/body",
+          "bytes": 742154,
+          "sha256": "404c506d18dcb11ba439f25e52e6282b3e9a18e2fd1e3eabd32f7e058c5781de"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082227_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082227 library 39_SoilClim_CH_Fungi SRR12082227_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082227/131cf7ed7df6812a18dea25e42532caf44ee0794f3710c0670ddf33f0986ff31/body",
+          "bytes": 689892,
+          "sha256": "113fac703b5d49b000c71690a56de7969d043ea08ff002f2adc31e42dcf3544f"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082235_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082235 library 31_SoilClim_CH_Fungi SRR12082235_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082235/61ce9bd4a8c1416a9de3e451e84c69be960af57ea4a35444e94cdc7125f0bc35/body",
+          "bytes": 424252,
+          "sha256": "da5d9534d8db798691c5ca7b29dba81c3f66be93c989a86deed8b8adc0c71362"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082242_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082242 library 25_SoilClim_CH_Fungi SRR12082242_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082242/0f50d275f2f7c21ef7a9cf17c7ea55172367e46bf1d37fd0d3d6c9ad09bace58/body",
+          "bytes": 471251,
+          "sha256": "bcb4a487fb4a72d0919bd45b1e4d4d2d7351b1e0d2e8406672f1809a22c4eef5"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082253_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082253 library 88_SoilClim_CH_Fungi SRR12082253_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082253/5ef4ce88919d07e2c911b68c8eefb101ce1d6fd72340131c78b77b58216ee902/body",
+          "bytes": 744729,
+          "sha256": "268d5f127965e5c7ac3728daf9aedcec4e1734cb0420f4ce86a62f3fd49c8638"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082264_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082264 library 78_SoilClim_CH_Fungi SRR12082264_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082264/42c2099e48e29619f3e6b0684921c424e6ce45e30b15e7f0c0c37da2c06855fb/body",
+          "bytes": 710104,
+          "sha256": "989428f377544eb05fcabb92e4520db86a021459a5e00705fa57c95b62ad0fa6"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082271_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082271 library 71_SoilClim_CH_Fungi SRR12082271_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082271/8e601d80c05a05eefc08a6b10ad4f9029bcd894a96b1661e639b96c05dcbe225/body",
+          "bytes": 745225,
+          "sha256": "636c77303a2f21f5055e80bf442f85a2047e51b9f3abcc5679cde1d98725a95a"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082274_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082274 library 69_SoilClim_CH_Fungi SRR12082274_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082274/8155bcb350017b9dcd0a7b253cde1e94ae1c03b718cc6b5c28fc570d494c1d6a/body",
+          "bytes": 570076,
+          "sha256": "d69d543e8b6b98de4a090d982b618b4b4e6a715dfa31d33a48d8208ece6ce4fa"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082276_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082276 library 23_SoilClim_CH_Fungi SRR12082276_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082276/8de916646a60bec749021540664bfd22f220faa6c9fe40a9b5dc3244089fa928/body",
+          "bytes": 787853,
+          "sha256": "902870857b2263706c0cff3d724a7a6c9470a03a83338fef088976b7cf38b59f"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082278_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082278 library 21_SoilClim_CH_Fungi SRR12082278_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082278/f673af51cfa10fbb70d1ad768a294e910354817e8584b060617f93e17d8ace08/body",
+          "bytes": 470583,
+          "sha256": "965d2c94740a835e8ab11a88982453c1ca9c10f05c7c4efb2dfd76466a606878"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082279_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082279 library 3_SoilClim_CH_Fungi SRR12082279_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082279/580e49313644235cf2021526be11fef91f726b1d7c61c707eb9f1cfa8cf1705e/body",
+          "bytes": 526117,
+          "sha256": "dcea5d45f7eeaf9bc8d0f77140b18021ddfa400ca067f9968f9ac22530bd4ac4"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082286_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082286 library 14_SoilClim_CH_Fungi SRR12082286_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082286/3ee0015b6d167de50d9ff4798144d62293ac2138e6edf7ffcb20f50e9ddc1c33/body",
+          "bytes": 525404,
+          "sha256": "daa578708e79d856f65b2379f32d61412e86b0438744f1ab54c96412f82a3eae"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082289_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082289 library 11_SoilClim_CH_Fungi SRR12082289_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082289/c1b74cbb5b80ecca2c00c4ad030026eea86aae087b751a9164d9784fbfbf5cbd/body",
+          "bytes": 455831,
+          "sha256": "18f1001192c85fadf2b1341ff0ed4448f35fcff48a5cd6c5fa2ec2418c91c596"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082291_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082291 library 1_SoilClim_CH_Fungi SRR12082291_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082291/24856cf141750debdf1789df9d4cd5d3d9b32ce11b776723dfafa563eb1e48e3/body",
+          "bytes": 471573,
+          "sha256": "5152f9f3c89b247b9c57b391627ed62de1259feb0e495c407da1ebb68bed59e6"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080947.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080947 library CH72 SRR12080947.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080947/24704501a6158e7a3804e7500c536467639e80d2245d54204977f9b0592340d6/body",
+          "bytes": 9850787,
+          "sha256": "3cbc772ef1707d6b4a9153e48b7320f59a94583512f500e1c014cf8d60e06a6f"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080953.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080953 library CH10 SRR12080953.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080953/4fdeb394e4c5b8fbfda54b5adcf74adea484c835946950b0e2fff1e6fd631e19/body",
+          "bytes": 7206427,
+          "sha256": "0507e29c90ab76702934ff11449a605a6f3d65a79f567f19b170a284ed2f2404"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080956.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080956 library CH64 SRR12080956.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080956/e9eccad301422826d688d37aff85ce864a5a4732bd6e3b64159a1b916d792aeb/body",
+          "bytes": 6532157,
+          "sha256": "9088867170321c33de258d7ed4c91456e210022e24e1dc1ce744a192153cff71"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080959.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080959 library CH61 SRR12080959.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080959/534bc239a6cfeabc7839ed644578d52b8b55cb19a079257da5497abfd2f18548/body",
+          "bytes": 8194485,
+          "sha256": "e5f1740e574c35e90f512c8c959b706326499149d23e55a8742959cb47f565c3"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080965.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080965 library CH56 SRR12080965.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080965/dcf293479e8f50d66906f4f8d92b320c52462928fdc7a31f7d6c818602a76b64/body",
+          "bytes": 17462429,
+          "sha256": "fa845cc07dc3da4759cf89a50db24f486bd8709db280ce255137fd8746b5a0f1"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080978.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080978 library CH92 SRR12080978.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080978/46bfa3942f9ab6497134bf965d95bbbcf14f344b0a7dace162800af403ed98b9/body",
+          "bytes": 5943669,
+          "sha256": "d8b3c1a2c50ad7688ad123e3ee19636ae075fd5eb4d86e8626ea83d7f6b5562e"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080981.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080981 library CH89 SRR12080981.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080981/ac4a627942d5392a7615dd241912b7c13f9ec15a1dfa5fb4bc4c76c891ab5986/body",
+          "bytes": 6706880,
+          "sha256": "b076e3a926aadc62bc5cd97a7aa1c626e4a6d8b2ce29528be2b984c5b0a0234e"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080982.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080982 library CH88 SRR12080982.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080982/c68e22b92ec3852401cf232662f4417c1a887e8ddc02b12c765da974c547fd29/body",
+          "bytes": 6898681,
+          "sha256": "3b7f6dc64198464fb0bbbfc6956f750472989cb0f1171966f121ad5035b48b77"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080995.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080995 library CH76 SRR12080995.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080995/58b2dece46fecb4d7bccebd9ba7f671694bf1d16d4084723eb54998c2c84120f/body",
+          "bytes": 5431682,
+          "sha256": "d9c91ec2af9434153a28cf83e66e2580deca5857fc560e132bec4b7a7c105e5a"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080998.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080998 library CH74 SRR12080998.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080998/4b19a60637f87994bf23fc28a1a847092489e4ec854047e9d47b79d8493824e0/body",
+          "bytes": 7675073,
+          "sha256": "f7beb6b2d172af385f753289f5991891cbdb6fae31970b379b06374ca294f8e5"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081025.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081025 library CH25 SRR12081025.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081025/08804d3a30069bf0f88d5a718460279562923272f7513b57c5da82682656d8d4/body",
+          "bytes": 7954640,
+          "sha256": "64d19d869f9026cbc0161c0a44a62f22961ee875c62cdab836383f537a4dc1fa"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081026.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081026 library CH24 SRR12081026.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081026/cd2921cd9b8eba3433a3ee132398f9455854c9d846daf40ec429b57de305ec45/body",
+          "bytes": 7728321,
+          "sha256": "9df3640f780650ebabd7a15ab50e9f6d874a03e49d20895680653aea1b3b593d"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081028.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081028 library CH22 SRR12081028.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081028/92502e51eb2e00bbb3346b9a64ba47fd597a57800c38d5b13022a90a913ad170/body",
+          "bytes": 10724353,
+          "sha256": "1068328f66e79468d484f0b79cf3f859e1cc5e2d9918d41bdb0044ba09168974"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081031.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081031 library CH20 SRR12081031.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081031/95ff870b60e0e0a2f1b480a9a02fd01e2fae57f549b3e4f78328fa558d63014a/body",
+          "bytes": 9892302,
+          "sha256": "ab7b625806191d49f97b35a5aa4f5f526bf54f10c0579304879cf4dabbb4c26b"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082205_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082205 library 59_SoilClim_CH_Fungi SRR12082205_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082205/fe024960260d03cfcb0614a94db42de2bcfc8a97bdb30eb1925a44322c7488bc/body",
+          "bytes": 655938,
+          "sha256": "02ee42b49b8e1e75a56d4a606e515f00e5e4c02514593f4537c1f29b3afd010b"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082212_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082212 library 52_SoilClim_CH_Fungi SRR12082212_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082212/d99d377df06027a2f1d77e5c5a5cb350f71c1bbc279374e2622af69ebc59119b/body",
+          "bytes": 684998,
+          "sha256": "e87bc09bf1b1a3839407db490259cc23053cdba7a25b45575c731c8a5a141504"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082213_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082213 library 51_SoilClim_CH_Fungi SRR12082213_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082213/89845eff188a2f089e4f2847d66e5c3a802472533a3004ed2b35fe1b87f70d52/body",
+          "bytes": 824365,
+          "sha256": "52acedc3b18c048eb878e03d067bbc931aaa721097d70ea97ad766d2b09bcbd5"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082216_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082216 library 49_SoilClim_CH_Fungi SRR12082216_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082216/7c278832e13163aa01f6c5fb1684ab2a6a6638a70244e176531c74067d6d7624/body",
+          "bytes": 846598,
+          "sha256": "7c392f7081b1fe997a1b8285f180209001dd16a0d3bf88308a7b800809d0d0ed"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082219_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082219 library 46_SoilClim_CH_Fungi SRR12082219_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082219/ed389f7a33bc1671242d7cfd91bd28009e4f7450b3d779a1808a458d2df56003/body",
+          "bytes": 647321,
+          "sha256": "44e8efa7cfe23b3817b9995236e2fa0d914060e6909e621387f4c224c6f5e407"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082228_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082228 library 38_SoilClim_CH_Fungi SRR12082228_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082228/5b9d9c394a2bd631ad884e01e1750c269a7245e204caf1717e6ca7e65df24104/body",
+          "bytes": 429635,
+          "sha256": "7d08d82a288b5b3451d87d978d72a4910ca6de3da33593e6eff67c7268c39fa6"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082239_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082239 library 28_SoilClim_CH_Fungi SRR12082239_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082239/0b6d71f53242eee5bce6fa575e8a4944c5bc02f623970a4c7fdc4845631def0d/body",
+          "bytes": 910222,
+          "sha256": "fe595b892a4e2fddb8fb2a15cda6a5c14ad7b82d959cacac47bd7b3618dc8ba6"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082246_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082246 library 94_SoilClim_CH_Fungi SRR12082246_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082246/e9c46a926fc632a5f7530784a5fbb9ad163f16845dc905ba2940b08692cbaec2/body",
+          "bytes": 1062267,
+          "sha256": "3c74a439c6b6007a30d945cc186e0c51196522753accd455da4e4aeff3d52c60"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082249_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082249 library 91_SoilClim_CH_Fungi SRR12082249_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082249/81339c152a7bacadaa2b57002af6936e36d636af421ed564afd21f4da90dd75e/body",
+          "bytes": 680096,
+          "sha256": "242f0ccb2ecaad1d01b71da4dab5664864e902c2574020ab110134676e64eebb"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082251_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082251 library 90_SoilClim_CH_Fungi SRR12082251_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082251/1e674adf329275802da056f3620583d365e2fdbc11c69f35a2fd057f19983917/body",
+          "bytes": 826103,
+          "sha256": "1566188f4787345504389c8efc4170aeda33a83c51fe3d2574cb4fc74b27bc7f"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082252_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082252 library 89_SoilClim_CH_Fungi SRR12082252_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082252/5e76fc193a702fa7c345130948523cdc4b620464fd1a71299eb4fec90c6cc4dc/body",
+          "bytes": 682524,
+          "sha256": "d42552455e1ecc8e5ed08c1213897eaffaadcd6d2bf2ab603ef6dd3a025990a4"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082263_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082263 library 79_SoilClim_CH_Fungi SRR12082263_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082263/98202a4c841276bf4930984946edc4966c9297686aa4e5c4338a5ff899926a88/body",
+          "bytes": 640357,
+          "sha256": "015862ceb883e084a2240d40ebebc626f84b9412c9b98b27525677c0e5b36e1f"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082268_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082268 library 74_SoilClim_CH_Fungi SRR12082268_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082268/0a0291bbabaf70799545f1a498f10362c23eb3d25272055bd688ba2b8f0f5210/body",
+          "bytes": 609030,
+          "sha256": "993f6df39afceb4cda86c5445bd31d4be1d34a2dd52ca992c40722784e054860"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082269_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082269 library 73_SoilClim_CH_Fungi SRR12082269_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082269/17b4dc00ea051517ebb95c954d5cfa673cc1e8517e8dbff3d025f04f9a727da1/body",
+          "bytes": 661871,
+          "sha256": "fe1dd3d0a2b86aacc26c7ca28dca4825911c665a47a506ddf8eb54b9b88b0ca5"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082277_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082277 library 22_SoilClim_CH_Fungi SRR12082277_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082277/06e95fecc5e0f8ef533b2327ebd9524f5bf6551ecf3464cd48159015a4896fac/body",
+          "bytes": 758555,
+          "sha256": "f68183aca301a4a2a5d8e9e815e71bea0831ddc2fbfad43eabf90b479c31f6bc"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082284_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082284 library 16_SoilClim_CH_Fungi SRR12082284_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082284/f222a1dc929a9b8126f0747c08d1d1c45dfcae4b33b4c42beb28197b7e2949a4/body",
+          "bytes": 741032,
+          "sha256": "167dfeaa6dba9edfdad6c807b55580120ce7c545fa0d9e408b2173c7e25b3279"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080948.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080948 library CH71 SRR12080948.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080948/719ae5eb7770e15207fdacd668cf4fb722bb785dd7108882c0a67713adf15bfa/body",
+          "bytes": 8392053,
+          "sha256": "7b2a68864e2d22bcc4ae572fcc96b9fe9f61607b030744bd4023fb95feee6328"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080951.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080951 library CH68 SRR12080951.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080951/50699470741d57b0cbc2ad1c3c24b3693dc31706d88708c2e74a3acc301ba974/body",
+          "bytes": 11937447,
+          "sha256": "a14c6a74a8f98f9a85985a891df77211ee05ca4d5119292201a5ac234afd69df"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080955.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080955 library CH65 SRR12080955.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080955/c576d532ea1387c78f25bfeb37989d919130569b1cbf2d46ae03d86338ddcdd6/body",
+          "bytes": 8423915,
+          "sha256": "85262cfdd02ec11569fe273c7f2f83ff13ccd66560a0ca1d51ea010d7779cfb8"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080967.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080967 library CH54 SRR12080967.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080967/a29a8eeae9717b55b06c8fb357e0643b2cc0dd552d393e492ebf39af1ba103cf/body",
+          "bytes": 9890501,
+          "sha256": "67396082760cd984b22f1c79e4db6c554e2120ff43f3b4cb259e2973a6fb4380"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080968.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080968 library CH53 SRR12080968.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080968/40cfff7c6abec1b61b2220490a16c5e0d8a0c7fa36015b554d7cb4b2f97bee19/body",
+          "bytes": 10989290,
+          "sha256": "58c013f83f462c3a69584072bc97de0e37465e44a689729858baacc69942a739"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080970.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080970 library CH51 SRR12080970.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080970/a6208e8877c4c90a33d14cbc591f47d1688d2d383ceb177970b1eb192e5496d5/body",
+          "bytes": 11890718,
+          "sha256": "9101dfc5889eb09112c7b34b76b8f81fd6f9d7d369b801e78035fef75fe9890e"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080972.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080972 library CH49 SRR12080972.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080972/dc2fca891081fe830eb93928948c427deb824b86f5ff5c5803b2f6cb5e79e7a4/body",
+          "bytes": 7911652,
+          "sha256": "2f5d07c11eef6f4faff4d8278f79cb8ad5cbdf77b259da1152a5917fd059b771"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080979.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080979 library CH91 SRR12080979.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080979/68b5686fb47a9a5d169287cf109a2dfbfb2ebae523f0ca7a755967d99be84ed4/body",
+          "bytes": 7260548,
+          "sha256": "71f70fecb9eb9af32854472939687511435270afad51e855c19095a183a23b34"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080980.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080980 library CH90 SRR12080980.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080980/442110a5d75f5a396cb00b845f1e3c1406d3ed15ccbd387203246c24ca9f52e3/body",
+          "bytes": 6910896,
+          "sha256": "07924049ab4274407262d141434143fcfc98508c414a053a6c58546bf49deee4"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080986.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080986 library CH7 SRR12080986.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080986/07bfa3577c3324639aae49bccd5daa57e764e3d5240466e05aa35c57e83e6dbd/body",
+          "bytes": 10755140,
+          "sha256": "fa336d63d3f6b2253beb542ddef43cbd3510cb30387da5610ee4d9b166e51f07"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080994.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080994 library CH77 SRR12080994.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080994/599a2a609b2aebba5c93831379225da2f9d31ce96b675bf54c42c76b95ec3e55/body",
+          "bytes": 8163969,
+          "sha256": "99c04095a491e19563cc38df243494ca354ac42fac33e0967b8bd15bd63003c9"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080996.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080996 library CH75 SRR12080996.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080996/44708464c666c13f8ef16c81d4c9080179ca85d51efdc6182958b4d731a1e87b/body",
+          "bytes": 5745446,
+          "sha256": "e7040960a30cd25ce60d5779bce84cd31b155009749d234d3f6625648c5c59cc"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080997.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080997 library CH6 SRR12080997.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080997/177d7450d7d028c8f804fdf3e2653de078281c52852d0c26ada16c9d1a6f1f19/body",
+          "bytes": 9472512,
+          "sha256": "2f5c64b65ab4eb0dbfdaf7342fa0c36bca79a1c533b281ff11fa65d2a996b96d"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081002.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081002 library CH46 SRR12081002.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081002/a360382c502965fa266099b808760c4e34c4f4d0eb35d7799f3e0ee8a4fa98bd/body",
+          "bytes": 5915722,
+          "sha256": "6baeeb93ed53ede7326cddce9ad5314ec744b2dbff3680a1e7dd8cc572d21666"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081004.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081004 library CH44 SRR12081004.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081004/46431ff213e6f22328db5a5a0ec1552c7859221bb9ab49f7ef2b2c06dcea4f52/body",
+          "bytes": 8083333,
+          "sha256": "4590d2b9161e3a7a7651a18965651c5befac443434b3cd45d36f55e1a3b66865"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081005.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081005 library CH43 SRR12081005.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081005/8faffe181e53a823aad28bc81052e3d3dad44069a2d2a44aaab41d1250821991/body",
+          "bytes": 9106616,
+          "sha256": "9b39aa81aa59997fde02de1955cefe4ce69e29400d0147f1f5901710a4aab0d9"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081009.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081009 library CH40 SRR12081009.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081009/c99da0f35652568b2d68ec1355c839291a02b33f3868840db839133cbcc7f4bb/body",
+          "bytes": 13422639,
+          "sha256": "5f7c6a0acc2cc1644229fd6851d3956695716fa86a44bc7ac98060ff507dbd8a"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081010.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081010 library CH39 SRR12081010.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081010/f5cd34a4d52c8e8f0c174cc59a637eeb9967373304b1b576e18e827353fb0337/body",
+          "bytes": 10327300,
+          "sha256": "aaefb408ee7a7d7bb39fb7647709af464178f97dc8c383100e5c94e5bf05bcf4"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081011.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081011 library CH38 SRR12081011.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081011/44b378bceeefd06ff5f68c2dcd5db231da8243c6334ea7c54c39140e60565012/body",
+          "bytes": 10979523,
+          "sha256": "9be9723af933c72e826fbb9cce4e25a265c3d2346d4d38410293637d482d6250"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081012.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081012 library CH37 SRR12081012.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081012/7e43fc3c8f1aa1dff621f912154efc627d9ded64e0b5f9f4536916d3cd33de68/body",
+          "bytes": 9884708,
+          "sha256": "d0076077d02c28ee935ad375b60051d56f53b2f0cc52cc572d396151f6ac73df"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081021.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081021 library CH29 SRR12081021.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081021/1f1ce114f606c243ab234bffe5d70c7232873fb7e873ee3c67d1b8cae5f059c7/body",
+          "bytes": 10237017,
+          "sha256": "691b7d65e7a3b5367023845a922133f46864bdb56e5b5bbbf14cfb8b8c824808"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081024.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081024 library CH26 SRR12081024.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081024/0551cdbea9d6d19737367b8466e92c9c39f225e27caa800a03e0dd752e655b72/body",
+          "bytes": 8978487,
+          "sha256": "4f83d231594bc28eccc7c866e7eecc9a0baa042bbcb2be3d9c1728dc3f34bda3"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081027.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081027 library CH23 SRR12081027.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081027/500769d06d5b3fa8883bb8ae79cb37ad671b6eddf89da150c5765e225f0fc706/body",
+          "bytes": 9876974,
+          "sha256": "071a4ce5781c9742e8db2158248589594d81f080ad16dfcf0da38e93ea987775"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081034.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081034 library CH17 SRR12081034.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081034/bcc3d1d37a7f3c523e8ad56f169f94f6b6fb586c749ba097acd16fa6b18eaae8/body",
+          "bytes": 9398058,
+          "sha256": "2a5e019cbcb112f106588ba44ff7c3aefb1b0d76141554c97fcb98613c462b20"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081037.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081037 library CH14 SRR12081037.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081037/10a5195b9b412b19477e316a732998ffd4f489392269e07813766924b10ab338/body",
+          "bytes": 8110961,
+          "sha256": "c5ba1d7cb1c7bb1b42de54cf7769da549a870536e34bfd3daa04629e5da83970"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081038.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081038 library CH13 SRR12081038.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081038/906ea595cb8a652c891719f9ab53da0efeca3d406b0898dff879e34acdc3ddc9/body",
+          "bytes": 8139124,
+          "sha256": "d464daf0dbe3ac0c86a5adca090c901059e7212f8602cbf14c3a14e1fdf886ec"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081039.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081039 library CH12 SRR12081039.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081039/e843a65fbd87e24df7209124bfd369bebc2a909edb3767c834c779a8b71a207d/body",
+          "bytes": 9931678,
+          "sha256": "24296b06096c05b2ac85011f037e01c5cd08db8cab53696ed644182dc3424759"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082196_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082196 library 67_SoilClim_CH_Fungi SRR12082196_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082196/77223681d0388d564b361fe7c0c1033150d82216c3a5631c8f9f8a5c43a65f52/body",
+          "bytes": 667741,
+          "sha256": "055e0123893d80814d3d34f8c4086015664317f034280e3fb268659df4bc38e4"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082207_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082207 library 57_SoilClim_CH_Fungi SRR12082207_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082207/a2ba09a58bd524123ed6193c34c3e527168c158b54d52c5b136c7e58c7bed4df/body",
+          "bytes": 656219,
+          "sha256": "184d20697bf96f6e503da673a484f66b2e8349bb3f7d200a42fc55a41bc9f1e5"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082218_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082218 library 47_SoilClim_CH_Fungi SRR12082218_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082218/05cf5614b9144538b4f4ff221f08deeb480c0050024d2ab9706641365496a44e/body",
+          "bytes": 1001296,
+          "sha256": "d007e9280b0a66c9376718ff73d94dc9c39042529c67907885bfee7f2dd0c64b"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082224_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082224 library 41_SoilClim_CH_Fungi SRR12082224_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082224/f1574a541539927244303555fee3a53ea3213d11caafc0ad3ead629883d4739b/body",
+          "bytes": 687603,
+          "sha256": "ec985bed32e5b14819cc9f4a4dcd694dfc4acddad9597585e6238e73874875d9"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082236_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082236 library 4_SoilClim_CH_Fungi SRR12082236_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082236/fb63179be20481d2d64b70e62f02de8eeaca19364a6d8c9b13570073d30de78a/body",
+          "bytes": 459506,
+          "sha256": "81c1c80698dbc08b70a18c7e5915643a96d2c9bc1b7d7c453299c17b7cf4c248"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082240_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082240 library 27_SoilClim_CH_Fungi SRR12082240_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082240/fea6c012f1cffa48cbbad77a1ec5d0d89613186a7c29b4c9e73af8931ee5136c/body",
+          "bytes": 542809,
+          "sha256": "7eb340dd55fc0933305f16d4dd602b006feeebca631fcfb775007f4c987522e6"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082241_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082241 library 26_SoilClim_CH_Fungi SRR12082241_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082241/4c7381d067c8b55017e2fba258c0b7e0bb1a987316ae60e32419cdc2cbcf7808/body",
+          "bytes": 511268,
+          "sha256": "3bd5975108051a78d2b2486cf55ff36fa4afc73f45c79a113c07fd871e2686f6"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082244_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082244 library 96_SoilClim_CH_Fungi SRR12082244_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082244/681f642253581791865c9353ba1451e95fa09b0d7ab72f2e2bbb4d6a725ffccc/body",
+          "bytes": 543533,
+          "sha256": "35cc86e08545d41f1c961019b01dea8b31b7d8c5f178b4ede6cd2b631fb4c9a9"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082254_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082254 library 87_SoilClim_CH_Fungi SRR12082254_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082254/03e8239fc3371ebe50474f7b1aa2a04742ef759834c23d8f52dfd61278b59aca/body",
+          "bytes": 725811,
+          "sha256": "4dcd4d59d6a111dc29498bc2692f909106f8d997f9796fcbb47bc0d6cf0aba91"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082262_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082262 library 80_SoilClim_CH_Fungi SRR12082262_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082262/ea97d4363520362551b986e308ce17517607460fc3e6a15bd81f6377b71e1cc1/body",
+          "bytes": 982243,
+          "sha256": "7e4e5c991aaf39e890d69b17d6a16a8b3948de40a0c4b8e6e3040f60d5bdb5eb"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082266_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082266 library 76_SoilClim_CH_Fungi SRR12082266_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082266/b8afeebfb621d83f920ea28b80f61ea93398e7f9d07a539ae8a6d9c25c565ee5/body",
+          "bytes": 1003218,
+          "sha256": "c689fff6c44b582b8494ea6b374adfd2f8fc2846666ec69ed0872dd78bb731a6"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082267_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082267 library 75_SoilClim_CH_Fungi SRR12082267_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082267/eb589de666c2b680a07c561a8b1d0c73c463131803c9daa6e958154d07fa4b8e/body",
+          "bytes": 634578,
+          "sha256": "ab256d30c4712acab5b0680983ff3d6e4a1f9594c3decff3797114f7659fb35e"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082280_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082280 library 20_SoilClim_CH_Fungi SRR12082280_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082280/cb02b7e7b4ebf12be897365e76ed36a02c1963f7b5c6ccb47a172b8634907346/body",
+          "bytes": 566637,
+          "sha256": "82bc368730e7ad0f13de9a5a5f73a4184e99943a8711192e4384613771d5659f"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082282_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082282 library 18_SoilClim_CH_Fungi SRR12082282_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082282/4509790d324921687daee0148345ae677cc56f51ca6a3a89efc81703ea0ef32f/body",
+          "bytes": 579458,
+          "sha256": "5be821b1da0bd614da166db7d71bb1b8b68636210affeb44019a9c106d79a38f"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082285_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082285 library 15_SoilClim_CH_Fungi SRR12082285_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082285/c832fe04faa00481e962c2d766c7ca0ea065b089e8f09ed78427a2ee59992e79/body",
+          "bytes": 802265,
+          "sha256": "1bb166ccc3464afeb7f83d66ae602a628b13421c29c81fbe25dfa52a417397c6"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082290_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082290 library 2_SoilClim_CH_Fungi SRR12082290_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082290/7099f68c651bf973032c889d2d06c799e9cb287e89f7c072dfefeedf0f154098/body",
+          "bytes": 537497,
+          "sha256": "9d01d31aacb305f706fbd1c51d478afef157944e4e56c64b0ab9dcabf720fb67"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080949.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080949 library CH70 SRR12080949.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080949/a9e58289af4b26596c30b04c2a6a0edf1bb6e23507876f1704df81e80ed5bf49/body",
+          "bytes": 12336916,
+          "sha256": "31881b361135bf4f672f25fc01d4400ae31e52d8959ba9c29f229b425314b046"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080950.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080950 library CH69 SRR12080950.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080950/4a1d32b3de27f881d15d7d7c4ce2fd180ec566c8181bff3c88171519c686e7b7/body",
+          "bytes": 6276281,
+          "sha256": "6776ecc90b2b8363b2a7b7c6b01ff273c4d901df9d22feeb29ce9f604a1a6b9c"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080958.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080958 library CH62 SRR12080958.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080958/985b9793d475f8ddeef3643862065411db16cc9ef97c7748bc23354b844d25c7/body",
+          "bytes": 8468149,
+          "sha256": "48bb541a7402f62ad9c7caa9c3160ba7f79a9bc64c754a4a2c239f517f5c082e"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080964.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080964 library CH9 SRR12080964.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080964/1591820479bcf0b7e0ea44ce0205205c16cbc6127fdab9081aae56e2ade94bea/body",
+          "bytes": 7584051,
+          "sha256": "c169c88cf7787dad7b2ef0abab08a7d21713bb3795d20096f9415d7236641eac"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080966.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080966 library CH55 SRR12080966.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080966/967e8d8842fa44a0db0269a7b2b1f48ede856d23fb49369d30cce1364cc18349/body",
+          "bytes": 9950107,
+          "sha256": "b8728f4aecc21febf2936581bf72e17b21f451365fb880705dece2aacd474cb8"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080976.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080976 library CH94 SRR12080976.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080976/e17c1f0e12f144e47e03d90901e553ad2adc93193799557ddf6029e2d81817b6/body",
+          "bytes": 6906449,
+          "sha256": "cca11dcb1cd6200012e25100596e338d058ee9b51ed978ca6a09d122b192d90e"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080990.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080990 library CH81 SRR12080990.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080990/f7ebf1d83ee0a4e5a43aa65ce7b2a05d80bc4aa03a9d49ce19d5518a5bcbeda6/body",
+          "bytes": 5000264,
+          "sha256": "9225fec7a39ca511b8d4c2f7c5333572f3c1a5b9f09be0a05689ffad71b76a64"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080991.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080991 library CH80 SRR12080991.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080991/c0fc15a36904998ec43da2e1f1b35bc7b97516c52c657fbe0e413504c552f97e/body",
+          "bytes": 6647803,
+          "sha256": "84fd9995836ce9039b8f72ec66a779362d508fad0098b976203999b947fb1282"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080993.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080993 library CH78 SRR12080993.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080993/6bbbc0d51d2af737850face65d69a3020699f23e2f468d80916b7bc4f6db089b/body",
+          "bytes": 6508172,
+          "sha256": "138d3bccef72ac21620ae9e506e5209f861a6e0d21a575f664d221c3370cd09b"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080999.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080999 library CH73 SRR12080999.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080999/82d90b69f6b8b090ababdb80f535e32043e43e8d7d69ceaa9775f9d087fc2d3d/body",
+          "bytes": 6950928,
+          "sha256": "9181c7f9d543b572503e3695b46255aaa7d828a0c930ec0de58f3ed74c3658c8"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081008.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081008 library CH5 SRR12081008.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081008/e42da270cbdbb8e7bf0780a27b78f076bbede1e5c4f9c550438caa56c0f7f376/body",
+          "bytes": 16161335,
+          "sha256": "0bb1be4880d50903dd95a8cc9436aab4a9ee23489bf2e9176e64ec61f12407ad"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081017.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081017 library CH32 SRR12081017.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081017/a9b6bc0f16cf8703a94344e557a211e492b60192ee7591610ae99b29e5c1496a/body",
+          "bytes": 7196715,
+          "sha256": "3479f358fda36d4d1ce90acd5bf2f9e903e4b6531b89b2fbcc5dccafc31f182f"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081022.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081022 library CH28 SRR12081022.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081022/a97966c561e63d25d9209832a94cb8fe0a2e6aa5f8ceaa7b3ba2c74bffb5f75e/body",
+          "bytes": 6824839,
+          "sha256": "39e6de94ec8cd8b47f0b555c6fa2606df8049e7043cdeeebcdfae9b2660b6438"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081036.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081036 library CH15 SRR12081036.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081036/39240615344fe8b879f5b141235c1b77fea58521558492004845d62bd917b6ce/body",
+          "bytes": 7054613,
+          "sha256": "a6e5e869995bf55d6676892b3be8a68a9cd44113c88073cbc030671fab4a0a35"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081041.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081041 library CH2 SRR12081041.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081041/242e3b8407fcd11ff33f05534d05605043db89f6a5f4f57fc3d17d9c1f4c606b/body",
+          "bytes": 16619347,
+          "sha256": "5e8feb058e133c87bc52ec08f310b9f14cb7793fc03a38f2f38dd7568e495ec3"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082203_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082203 library 7_SoilClim_CH_Fungi SRR12082203_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082203/23bf1b51630a37e9b2dee69beaedea7262d5a8b0431aeb3d63598b3603ac5d43/body",
+          "bytes": 706368,
+          "sha256": "95ee02c76f0aa42f0e13d9ab990fba5e1e2c764dda8493e5b71546ca972a70c4"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082204_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082204 library 60_SoilClim_CH_Fungi SRR12082204_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082204/5194c284c318d9cf57a73d37fb2068fe1214afc08ee1b127956052520336ffc1/body",
+          "bytes": 610062,
+          "sha256": "4234b92e5bb1120322d0da81dad0c20dbe5deeb055ca25f1379d0aca57482620"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082206_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082206 library 58_SoilClim_CH_Fungi SRR12082206_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082206/197ea8ed4dc363741d7908043bd1f4759482a89102e3642a7631dd0327864280/body",
+          "bytes": 805668,
+          "sha256": "d5d8ce236f8ec92ccc00cb734ca0d1825a5e61ce3cd2ae154569588141d1b973"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082214_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082214 library 6_SoilClim_CH_Fungi SRR12082214_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082214/5efe1e4f013cb789958d1ff8e925935cca422d7c6cc475a7437c0139aeb41042/body",
+          "bytes": 1009221,
+          "sha256": "2ddacc34e62ce07da0e3ab118de22989d5fdfd85acac1847d585b29ff1918fa3"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082221_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082221 library 44_SoilClim_CH_Fungi SRR12082221_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082221/2cdce76551bd13636a00a0c915237a7881068dec46e4116cbde84934d2fd772a/body",
+          "bytes": 624056,
+          "sha256": "503c6dc8029365c9509312e674d4f5154e5207e9c0cf3e2673a0d272c9f9b098"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082229_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082229 library 37_SoilClim_CH_Fungi SRR12082229_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082229/1d2e928337f721388e4fd60347dc9afe586189c664fcaa487e213bbd483e53dc/body",
+          "bytes": 632163,
+          "sha256": "bc2b0b6b19523c1fdea5c7334f9ec6e95aba0a28b12523d08d6424a5b9defb6e"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082231_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082231 library 35_SoilClim_CH_Fungi SRR12082231_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082231/b7d982be73edcefa9ac1381786ec14c414ad5cde03a2114669407b2917d66cb7/body",
+          "bytes": 561348,
+          "sha256": "52921ffd222d7491420b54e25f88b00c274a6d3213423fc3a52866b724a84607"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082238_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082238 library 29_SoilClim_CH_Fungi SRR12082238_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082238/adeef5920851aa0241c4a45452e61f33040d770ab8d2b5f727aea305588842c6/body",
+          "bytes": 865533,
+          "sha256": "583e784c1c505d73f3d906017d2f3dac1978ca4ec6059b1640ca9aa1de9dc228"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082247_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082247 library 93_SoilClim_CH_Fungi SRR12082247_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082247/cc11802f266e5c20606ae519460a3c27ae74d867cf02d68d98ee963f46588638/body",
+          "bytes": 901126,
+          "sha256": "41b14ca4705bfc3eb4b1834849d99243b8cac2fac8d7aa901b0347c989ba6a0c"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082259_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082259 library 82_SoilClim_CH_Fungi SRR12082259_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082259/1407ede6150973a014fbcfee40b5bccf1327015e9f65a165dcd472c537ea4dd2/body",
+          "bytes": 817812,
+          "sha256": "9b4f7f2046bf83b12d1894b6f5e34fb005d8a996aabaa4c7822d4e45294665c4"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082260_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082260 library 81_SoilClim_CH_Fungi SRR12082260_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082260/2705a92da56e618c6427f93bdc8ba1cab71b8d4264fdba9198931ec4d3161e3b/body",
+          "bytes": 731035,
+          "sha256": "d9018c66ef5472dd8b20ddede8ac84131d36752af635cda935ea3e58db358e41"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082261_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082261 library 9_SoilClim_CH_Fungi SRR12082261_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082261/42ffefae02a8af232f91c5a9ba9e7b73a33577146cd205f2c21c6d699060517f/body",
+          "bytes": 843156,
+          "sha256": "70e0efda05ab9551b656f20e3e7a2ef3d013b50a8f8787fd54354970e22ba392"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082270_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082270 library 72_SoilClim_CH_Fungi SRR12082270_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082270/3f33587e75ce8bf035ad4e42217cf0e48f06089957881b44a8abf39d2e5c70c5/body",
+          "bytes": 871801,
+          "sha256": "efd0145440870e48d5811d68a50f484abd7cbdf982bdc8a5d4a925b86d7c993d"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082272_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082272 library 8_SoilClim_CH_Fungi SRR12082272_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082272/879b1076ac3ce764ef23049ab4f661c0fb683b47e030efb7b0d6aa81545b197b/body",
+          "bytes": 670418,
+          "sha256": "77f127c3f2b214479602652b02115cabc7acf7f32c86711dc71af5591ef31dd4"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082273_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082273 library 70_SoilClim_CH_Fungi SRR12082273_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082273/44872e8e4ca1d9cc516a20fd3336eee6ae555f3fa2e2ae8cdef8fecea7c5189b/body",
+          "bytes": 224122,
+          "sha256": "582862eaa688e9750740f8e9f11c648f08246834b6345b8530a90c282e1baf63"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082275_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082275 library 68_SoilClim_CH_Fungi SRR12082275_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082275/3c9c0b5318e288c3c07b9514c4ee73404c9a0d6a0d29fb6926d92bdbb907116d/body",
+          "bytes": 732456,
+          "sha256": "77359f0325d54367c962bd70e484fdda04a35c76115848882a925a96b22c221d"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082281_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082281 library 19_SoilClim_CH_Fungi SRR12082281_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082281/3d97b6b246a5b2c7fce0dd2e6c411173c07d817887604af3a8a30fee0d656b20/body",
+          "bytes": 685266,
+          "sha256": "3207262f5fcb534dab95b872f13a6072ba7a87849b0f56afa4ca5f197b87741a"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082283_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082283 library 17_SoilClim_CH_Fungi SRR12082283_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082283/1c71cfc4f950250610c01136f910636e2bffd6957e6bbb033599ac4629c178c8/body",
+          "bytes": 435131,
+          "sha256": "6d8ae774ab09f3d80a6ba14839077399398257dcadb6dd3f35c0c6a39038c7f9"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082288_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082288 library 12_SoilClim_CH_Fungi SRR12082288_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082288/727762cd180d514c2f479852e7cc942a2fa1d18ea909880b2b177e4e03a24c79/body",
+          "bytes": 498947,
+          "sha256": "cb3aaa15f8d22798247bc69a2f75641251d0a6543cc8ae037d0a6dc256793ff3"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080952.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080952 library CH67 SRR12080952.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080952/06f51e76bda730d59e64b6febfab1febf0c19e3682d342399478995f2f6634b4/body",
+          "bytes": 11345980,
+          "sha256": "105c2a86d2946b7b5f9e98d5405159436007b9fbbc72fcc56f791776327e781f"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080954.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080954 library CH66 SRR12080954.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080954/a83fe2e8a29fee8de69a68fe66b66d02cda9a1f4a2ce9d0b4539fea22e97d39e/body",
+          "bytes": 12123124,
+          "sha256": "1f379ffaf9262120c77ad0292e93f0078026dd26844ede35bc31c49dbb253875"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080983.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080983 library CH87 SRR12080983.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080983/e3850f1b80c28d41874e9d854b06e3b50a82ef87b218bcd8f6009eddcc5dd469/body",
+          "bytes": 7964596,
+          "sha256": "04c8ae7d2d8dc21d3fbe0eb0c9fc4ee0965e663b13aee734ad65dc7976267193"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080984.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080984 library CH86 SRR12080984.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080984/edfa8c52497c740f46064e069eeef3de03cad271b034f851a906031803a30f46/body",
+          "bytes": 9055781,
+          "sha256": "1de95224adb7adfc915e7a6d440b9cb9c4fd65ccec2b8195be780ff1635cda8a"
+        },
+        {
+          "served_as": "reads/illumina/SRR12080987.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12080987 library CH84 SRR12080987.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12080987/7705b71a9eb4379360e12f9b3e54ebdd2e964c16c21f2566f5145451a28bc2a4/body",
+          "bytes": 10006138,
+          "sha256": "4f5f7cb5bf6aa12ea05c9bc9950711a2bab80d83dd4a14983c71fe2429bfa641"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081000.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081000 library CH48 SRR12081000.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081000/68190777e021eb18ba89473fdf10a6e43c709e1dd3f655dca10ad39d269f871a/body",
+          "bytes": 7718154,
+          "sha256": "d6e2328868c35088d0197317d2ddde400c57d7348366bb4e464f4d0d5e85bc9d"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081013.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081013 library CH36 SRR12081013.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081013/cfec2586075ba48b9242fa0ed1e34f1bfd125d3be2986eb990923cbe9b4b227b/body",
+          "bytes": 9021982,
+          "sha256": "08beecd20090815bb6f290ba0389c1150d90c259f5d3b2e1412f5acc083505a5"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081014.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081014 library CH35 SRR12081014.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081014/ba1e23d07f4f69f6ba77700b887660802beaa47be087e08a43718e4be020906d/body",
+          "bytes": 6697011,
+          "sha256": "273b606e780a1cd52705362408ab6a042b5c2cd134a5f3a1748305743e6c0c53"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081015.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081015 library CH34 SRR12081015.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081015/ba80d8082b7c2b941f6c664713d62b9dbb169fc1ea48a930f205b3cb90671b05/body",
+          "bytes": 14604643,
+          "sha256": "589f3a78f1d4143914f198ca15b20b30619b1e5bd67081a507791f48a1888436"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081016.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081016 library CH33 SRR12081016.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081016/0412a52af44d209daa63efea264a8f5ef847a1d0d7cc385ed1a084a663e61a7e/body",
+          "bytes": 8733308,
+          "sha256": "7a5d039d6736747fd829c291f4dd0b190cc29bf2688e7d591d18f8f08e1875c6"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081018.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081018 library CH31 SRR12081018.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081018/b6f9e714a901328c5678f195f03ca1e40671422e4003c54b0759c630d93ec9ba/body",
+          "bytes": 7495410,
+          "sha256": "20dba5e39b2c4c2c22a408c74a091a75cdb784e3c71ae0fa10a6857b58cc0717"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081019.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081019 library CH4 SRR12081019.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081019/f0c3ce59e52ebb16ab84d54c9a656d7f13c7d4f295a71e67d0bb88c1b2c6e992/body",
+          "bytes": 8527487,
+          "sha256": "5a471042ede303657b64eeedeab9b9117ec8e7e0733362b7389b8c230716da55"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081020.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081020 library CH30 SRR12081020.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081020/316e8df9f9dcb26c046fb2f9482c524521416a454581c9ab19067cb091e8c631/body",
+          "bytes": 8196561,
+          "sha256": "1bfca3b087dd0afc10c0c886f228a4054bb4873d5035f57a799e22019ea56492"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081023.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081023 library CH27 SRR12081023.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081023/44ee5a2535b6389e3c24b8d123dae2484b37f1e0f74e5b7e55e3e7a2eea4f4d0/body",
+          "bytes": 6975245,
+          "sha256": "0aa1b2217908d355bf6027f662706d5d2483ed9c82947efe9006e9763349b57c"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081029.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081029 library CH21 SRR12081029.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081029/b73238dbbfea73d866b7e84599a62dc168dec01adfcbbe2789c14fb35e72d2c0/body",
+          "bytes": 9946488,
+          "sha256": "c826825b3f7ddd5ab59158d7063f6984fc9b7c86aceb084ce9e080e85731fcca"
+        },
+        {
+          "served_as": "reads/illumina/SRR12081032.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12081032 library CH19 SRR12081032.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12081032/2c55c672fce341dd6a6dfc9392f58b67a2497f6b9ab534e3123bb4ac1cbb055e/body",
+          "bytes": 9938081,
+          "sha256": "54f6d7b73190853d56383d1c186bf66b3bd4aa62d63746a4b7d58dee9fd5cf51"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082199_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082199 library 64_SoilClim_CH_Fungi SRR12082199_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082199/c98b6dc3c0c733eb114f423eb2e8d1dfb4888ad7b205772c554943e544aef098/body",
+          "bytes": 755100,
+          "sha256": "6b4fe1fa9a5a7570967a448e5f14497604c5f65696f2e171f1c812c2d116da8d"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082200_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082200 library 63_SoilClim_CH_Fungi SRR12082200_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082200/fde1cb850deac1a92c19bc9a403ba6323a86283e34138f39fbbd499d736fee23/body",
+          "bytes": 681793,
+          "sha256": "069745d546df932644e06d6f6b0b9a02a2b17a63f748bf80b440c44ad65874d7"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082202_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082202 library 61_SoilClim_CH_Fungi SRR12082202_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082202/011eefb339c71b3b0e12daac802adbdf25c66bdc86feaeec16b17523f09c8b53/body",
+          "bytes": 538399,
+          "sha256": "09b59c96db4b772707ce201b28c8c82005f1e17c4a9ba381b829e51de5f8c36f"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082209_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082209 library 55_SoilClim_CH_Fungi SRR12082209_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082209/372a3edffdb3aa24d4ea4ace2c1b9e01b49a3a10eab0c79b371d7aa5f035ac3d/body",
+          "bytes": 623565,
+          "sha256": "9b55f5fc5fdda95b2428e9d784616162329caccd5d48b1024f7a16fd71b8c3e9"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082215_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082215 library 50_SoilClim_CH_Fungi SRR12082215_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082215/c42b49f84863682a874e343cfa0cd043e4e8739c8930bcd2f7098465e852fa4f/body",
+          "bytes": 594510,
+          "sha256": "ca49e39f17342a5fb3a6d573ccb71161785554d0bd3d1388f158830e940544ef"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082217_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082217 library 48_SoilClim_CH_Fungi SRR12082217_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082217/6619d80cc2f7a880be2673e61ae82c0407c06ad663581fd1402b669d74becdf3/body",
+          "bytes": 651472,
+          "sha256": "07f2469367562a7cd4e6ac495c9e3aa73636e6e961ff9d6c812787a8d7998377"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082222_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082222 library 43_SoilClim_CH_Fungi SRR12082222_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082222/edbccb88647fbfbd144464658ffefb5f6f672648fa2ff1029a00eebb6371ed46/body",
+          "bytes": 429057,
+          "sha256": "f94e235d54a2e584adb56b2606e45a0bfe0148e40288e4c3c373a9e34751faba"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082223_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082223 library 42_SoilClim_CH_Fungi SRR12082223_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082223/bcadc9017b3295281b791ffaf48155b8b8c06754ed913258832d7b3047c4eae6/body",
+          "bytes": 561322,
+          "sha256": "198eb365d67e4e0b68d29d460247567728ee6981390afc4292e4494bdaba6659"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082230_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082230 library 36_SoilClim_CH_Fungi SRR12082230_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082230/5a9f6fac67c38cccc64f05efe49339f618151a4f2800ff30035206ac089d21cf/body",
+          "bytes": 613007,
+          "sha256": "106414b5b8df7901916020c3118cde36dbdd285c88a23662c8e30d1f066d084e"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082232_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082232 library 34_SoilClim_CH_Fungi SRR12082232_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082232/a716d91971e86f09c408345a887e89e1326840dd1e279eafb0ee889bd7f6db82/body",
+          "bytes": 644640,
+          "sha256": "8f1aea1fe301404ed0a679dc7b6c7811ffa9dfe72eb06432085ff2b7bbbe080a"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082233_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082233 library 33_SoilClim_CH_Fungi SRR12082233_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082233/4c47d348ed89c6216ef96c3dfe85a3f179b8bc47623a97956d768650c9d9ee11/body",
+          "bytes": 861402,
+          "sha256": "2eb089e263799db658b1c5ea95bc0314a0daa7423fb921d7e813ace8ef04a162"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082234_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082234 library 32_SoilClim_CH_Fungi SRR12082234_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082234/8f9888b48055073013656835e9848d84302c3865193f01abcba6c80a716173d9/body",
+          "bytes": 968049,
+          "sha256": "f8bed0fc8fbb4936d590c0994c3929080b77cd0f52f7f668c0b6d635e5cf6017"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082237_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082237 library 30_SoilClim_CH_Fungi SRR12082237_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082237/aba555abbb7bc461ec5aab651f48f76fb90a890bb729dc3fd10cc11d3d9ae5fe/body",
+          "bytes": 799392,
+          "sha256": "0efc76ebeb176cb2790bae07d544df5ef4fe9d6c638b9156a51745335ac55d27"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082243_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082243 library 24_SoilClim_CH_Fungi SRR12082243_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082243/c8cd4d123bfb58c7d30f9835c53a72bb18441f07a66d9581b34617d9f852e332/body",
+          "bytes": 515004,
+          "sha256": "83e5085f6daeaf5e258368548da2e461881ad64dbab1da044641e70ed9784fd6"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082245_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082245 library 95_SoilClim_CH_Fungi SRR12082245_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082245/a500107f97728b8a36e86c9819323e0dff1b17e207d10c3882afa5cff4fd15e1/body",
+          "bytes": 692939,
+          "sha256": "bd70028cf3242e1688ecd46f706c0873c1c5bf0e11923d0fdcc3d5f499f08494"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082248_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082248 library 92_SoilClim_CH_Fungi SRR12082248_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082248/e50bbab793f1c970b1f95d6dc024d4632135ee03199d0556d594b6ec278b39b0/body",
+          "bytes": 585827,
+          "sha256": "c72b97f7b0c03494c7c38776eec1ebf4f61caa780c31976a908b8849aaa5e431"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082250_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082250 library 10_SoilClim_CH_Fungi SRR12082250_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082250/8ab56999fec0e5fa9d9fd2af14379d9fa95b6f8333e853756adc46860f3ec3b5/body",
+          "bytes": 535050,
+          "sha256": "33292a36b19e85461acce8aaccde013c9956bfd5fade11d3bba426154d04832c"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082255_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082255 library 86_SoilClim_CH_Fungi SRR12082255_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082255/6633e8f1d910252dfa1efb47ecdc7e180e4edc356fd3da55e6ca7f6bbff4570a/body",
+          "bytes": 544798,
+          "sha256": "66df5399757f98fb896656e87a72b6f57e99654d61ab382a2ced2c021b605710"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082256_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082256 library 85_SoilClim_CH_Fungi SRR12082256_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082256/6562fd48d122e6eaec5f6aa11d024373b82cb4318f931a2257489cf106b65148/body",
+          "bytes": 473282,
+          "sha256": "9700171b3d3338ce4e0dc10c0df4241e587048e0562f35f80027a5e5c0672907"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082257_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082257 library 84_SoilClim_CH_Fungi SRR12082257_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082257/17aeec66284d3c8746b33fd997d7aed61f0a64d965dbaa00b539dfa7c1565420/body",
+          "bytes": 518479,
+          "sha256": "7267f46b7162b8c59726a4b4752f1641499d902b96398a5c3737b136fa432c44"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082258_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082258 library 83_SoilClim_CH_Fungi SRR12082258_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082258/9fd7af3ecd61ef16a7df9efb195d8e920320ec1592e6cd0caeb207a5f543cec0/body",
+          "bytes": 587465,
+          "sha256": "d9cb228125b19208b1c7fbde63d20eaffbcfaed5e35f0fcc2b4c264d1befa927"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082265_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082265 library 77_SoilClim_CH_Fungi SRR12082265_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082265/e9f0c181f75b700e95a9a713a74b9bf0653dc817968b1a9217e5ec69641794a1/body",
+          "bytes": 746493,
+          "sha256": "8556b138de072f2bc76accbc5c0dd8f31c5c848a51c8507e092b7fd5f463567a"
+        },
+        {
+          "served_as": "reads/pacbio_smrt/SRR12082287_subreads.fastq.gz",
+          "identifier": "ena:PRJNA641521 SRR12082287 library 13_SoilClim_CH_Fungi SRR12082287_subreads.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA641521/SRR12082287/86ae3c0de5e6278d0328a90743bfcc04f2f93a76ed7f6a8e2838d743c9497c48/body",
+          "bytes": 536870,
+          "sha256": "98083c57cb6f51d7d951541eb1ce7ddd4763af2a8ab616c786c7117481eac5f9"
+        },
+        {
+          "served_as": "metadata/PRJNA641521_run_library_alias.tsv",
+          "identifier": "ena:PRJNA641521 run/library alias report (library CH1-CH96 per run)",
+          "role": "public_metadata",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/ena/PRJNA641521_alias.tsv",
+          "bytes": 28811,
+          "sha256": "503c6a209cd92edaa7df154c366f0c990979449e7b819b034364df91ce3066c6"
+        },
+        {
+          "served_as": "metadata/PRJNA641521_sample_metadata.tsv",
+          "identifier": "ena:PRJNA641521 sample/instrument metadata report",
+          "role": "public_metadata",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/ena/PRJNA641521_meta.tsv",
+          "bytes": 59469,
+          "sha256": "19aa760c26973c8daa78cb3ff542105b490c580340867b53e003a16944d7d8e5"
+        },
+        {
+          "served_as": "references/SILVA_128_SSURef_Nr99_tax_silva.fasta.gz",
+          "identifier": "SILVA release 128 SSURef_Nr99_tax_silva (md5 9f69e7583fca9b7900837279a3ad20ab)",
+          "role": "public_reference",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/references/silva_128/4ce89ce8894dbeb99cd5b54ab66224bdf5cc3bac03b92554a8424c53a5511ab5/body",
+          "bytes": 157269533,
+          "sha256": "d88075693ba2972fc85c76d01ea1d0a873a2d48dab6ff387b1b7fd90cb866cc8"
+        },
+        {
+          "served_as": "references/unite_v7.2_sh_general_release_01.12.2017.zip",
+          "identifier": "UNITE general FASTA release 7.2 (doi:10.15156/BIO/587475) main file",
+          "role": "public_reference",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/references/unite_7.2/f06afc35db284bc13083b528b80e45e05bed9e4e0f915dd26186888c59977ed8/body",
+          "bytes": 10424958,
+          "sha256": "b232f211e488c417b1d21eed2589ce6f1b618f1da21a9a42f81240bc66d1bb15"
+        },
+        {
+          "served_as": "references/unite_v7.2_sh_general_release_s_01.12.2017.zip",
+          "identifier": "UNITE general FASTA release 7.2 (doi:10.15156/BIO/587475) singletons file",
+          "role": "public_reference",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/references/unite_7.2/dc4c12058dbe02614c37043901a81cf3f86b015a2e91371b4c3511e07aa23813/body",
+          "bytes": 22501019,
+          "sha256": "c7a4d1c7c569f845218e396ceb8b99fa4ad98c15b375e08147e071ebbe5f775c"
+        }
+      ],
+      "required_inputs_count": 197,
+      "required_inputs_bytes": 1095273424,
+      "input_notes": [
+        "192 ENA runs: 96 Illumina MiSeq (bacteria) and 96 PacBio Sequel II (fungi), one FASTQ per run; ENA reports library_layout SINGLE for the MiSeq runs although the article describes merging of paired reads.",
+        "Reads are deposited per library (CH1-CH96), so the proprietary SMRT Link demultiplexing step named in the article precedes the served inputs."
+      ],
+      "allowed_resources": [
+        "vsearch 2.22.1 (free reimplementation of the usearch/unoise3 algorithms)",
+        "cutadapt, fastp, seqtk, Python scientific stack in the qualified image",
+        "SILVA 128 and UNITE 7.2 reference files served in the package"
+      ],
+      "blocked_original_artifacts": [
+        {
+          "artifact": "usearch v11.0.667 binary",
+          "reason": "proprietary freeware; not redistributable"
+        },
+        {
+          "artifact": "PacBio SMRT Link 6.0.0.47841",
+          "reason": "commercial software; step precedes deposit"
+        },
+        {
+          "artifact": "any author script or OTU table",
+          "reason": "author_implementation_material"
+        }
+      ],
+      "comparison_metric": "exact integer comparison of the two OTU counts",
+      "numerical_agreement_criterion": "both counts equal (2763 and 357); each component recorded separately",
+      "conclusion_criterion": "Conclusion agreement is scored only when the numerical criterion is met or when the publication states a directional claim that the observed value can be compared with; otherwise the conclusion component is not_assessable.",
+      "resource_ceiling": {
+        "slots_per_paper": 3,
+        "wall_seconds_per_slot": 14400,
+        "step_seconds": 3600,
+        "provider_tokens_per_slot": 400000,
+        "tool_calls_per_slot": 40,
+        "max_completion_tokens": 8192,
+        "worker_cpus": 1,
+        "worker_memory": "3g",
+        "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+        "network": "none",
+        "image": "paper2-science:pilot-2026-09-25"
+      },
+      "stopping_rule": [
+        "final report submitted by the slot",
+        "wall, step, token, tool-call or output ceiling reached (recorded as the stop reason)",
+        "required input absent from the served package: report null observation with F01/F18",
+        "specification gap that cannot be closed from the served text: report null with F04-F08",
+        "controller or worker error: recorded as harness stop, never as an outcome",
+        "no rerun, no extension and no rule change after the slot starts"
+      ],
+      "specification_gaps": [
+        "read type of the PacBio deposit (subreads vs CCS) not stated",
+        "MiSeq deposit layout (single) versus described paired-read merging",
+        "unoise3 is specified through usearch defaults not printed in the text"
+      ],
+      "gate_reviews": [
+        {
+          "gate": "G1",
+          "delegated_assessment": "yes",
+          "second_pass": "confirmed",
+          "rationale": "OTU table is a specified computation on reads"
+        },
+        {
+          "gate": "G2",
+          "delegated_assessment": "yes",
+          "second_pass": "confirmed",
+          "rationale": "two integer counts stated in S0067"
+        },
+        {
+          "gate": "G3",
+          "delegated_assessment": "public",
+          "second_pass": "confirmed",
+          "rationale": "all 192 FASTQ files downloaded anonymously and checksum-verified"
+        },
+        {
+          "gate": "G4",
+          "delegated_assessment": "available",
+          "second_pass": "confirmed_with_note",
+          "rationale": "usearch binary is proprietary freeware; vsearch is the free equivalent; SMRT Link demultiplexing precedes the deposited per-library reads"
+        },
+        {
+          "gate": "G5",
+          "delegated_assessment": "uncertain",
+          "second_pass": "confirmed",
+          "rationale": "layout and read-type ambiguities recorded as specification gaps"
+        }
+      ],
+      "delegated_assessment_sha256": "89f38a8ad96008fc43e3b9c16d518c1d87192094fcf8875339b38474188da0d7"
+    },
+    {
+      "paper_id": "PMID:35003117",
+      "sampling_stratum": "Chemistry_Materials",
+      "role": "prospective_pilot_pipeline_validation_only",
+      "article_source_sha256": "3a199831217522896019bfa8a0abe87c63213d9babcbc8322d21dda53009a020",
+      "exact_target": "Number of differentially expressed genes between 3D- and 2D-cultured RAW264.7 macrophages: 6762 total, 5949 down-regulated, 813 up-regulated",
+      "blind_target": "The number of differentially expressed genes between 3D- and 2D-cultured macrophages (total, down-regulated and up-regulated) under the published thresholds",
+      "target_type": "count",
+      "target_location": "Results, transcriptome paragraph",
+      "location_evidence": [
+        {
+          "segment_id": "S0050",
+          "quote": "among which 6762 were differentially expressed (fold change > 2, p = 0.05, p adj = 0.05) in both males and females. A total of 5949 genes were downregulated and 813 were upregulated."
+        },
+        {
+          "segment_id": "S0024",
+          "quote": "DEGs were screened using Degseq, with |log2 fold change| ≥ 1 and q"
+        }
+      ],
+      "required_inputs": [
+        {
+          "served_as": "deposit/GSM5662247_2D_count.txt.gz",
+          "identifier": "geo:GSE186841 GSM5662247 2D gene counts",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/deposit-inputs-20260924/PMID_35003117/x/GSM5662247_2D_count.txt.gz",
+          "bytes": 214565,
+          "sha256": "1287a7bf222bb26dca722cba75ef0a84592bc3e510799c86a953333561cecc7c"
+        },
+        {
+          "served_as": "deposit/GSM5662248_3D_count.txt.gz",
+          "identifier": "geo:GSE186841 GSM5662248 3D gene counts",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/deposit-inputs-20260924/PMID_35003117/x/GSM5662248_3D_count.txt.gz",
+          "bytes": 209827,
+          "sha256": "934cb71346fe0c494e8b7af7988d02d6ae91e091a30d1cfb561114734058be88"
+        }
+      ],
+      "required_inputs_count": 2,
+      "required_inputs_bytes": 424392,
+      "input_notes": [
+        "The two count tables are the members of GSE186841_RAW.tar (sha256 7584208757ee6522657de24b54b5c3f6ee3064a2af5c5ab4225fe74a960e4649)."
+      ],
+      "allowed_resources": [
+        "R 4.2.2 with DEGseq 1.52.0, edgeR and DESeq2 in the qualified image",
+        "Python scientific stack in the qualified image"
+      ],
+      "blocked_original_artifacts": [
+        {
+          "artifact": "author DEG lists or scripts",
+          "reason": "author_implementation_material"
+        }
+      ],
+      "comparison_metric": "exact integer comparison of total, down and up counts",
+      "numerical_agreement_criterion": "all three counts equal; components recorded separately",
+      "conclusion_criterion": "Conclusion agreement is scored only when the numerical criterion is met or when the publication states a directional claim that the observed value can be compared with; otherwise the conclusion component is not_assessable.",
+      "resource_ceiling": {
+        "slots_per_paper": 3,
+        "wall_seconds_per_slot": 14400,
+        "step_seconds": 3600,
+        "provider_tokens_per_slot": 400000,
+        "tool_calls_per_slot": 40,
+        "max_completion_tokens": 8192,
+        "worker_cpus": 1,
+        "worker_memory": "3g",
+        "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+        "network": "none",
+        "image": "paper2-science:pilot-2026-09-25"
+      },
+      "stopping_rule": [
+        "final report submitted by the slot",
+        "wall, step, token, tool-call or output ceiling reached (recorded as the stop reason)",
+        "required input absent from the served package: report null observation with F01/F18",
+        "specification gap that cannot be closed from the served text: report null with F04-F08",
+        "controller or worker error: recorded as harness stop, never as an outcome",
+        "no rerun, no extension and no rule change after the slot starts"
+      ],
+      "specification_gaps": [
+        "DEGseq method variant and normalisation not stated",
+        "'in both males and females' with one count column per condition",
+        "methods mix RNA-seq with an Affymetrix array description"
+      ],
+      "gate_reviews": [
+        {
+          "gate": "G1",
+          "delegated_assessment": "yes",
+          "second_pass": "confirmed",
+          "rationale": "DEG screen on deposited counts"
+        },
+        {
+          "gate": "G2",
+          "delegated_assessment": "yes",
+          "second_pass": "confirmed",
+          "rationale": "three counts stated in S0050"
+        },
+        {
+          "gate": "G3",
+          "delegated_assessment": "public",
+          "second_pass": "confirmed",
+          "rationale": "GEO archive retrieved anonymously"
+        },
+        {
+          "gate": "G4",
+          "delegated_assessment": "available",
+          "second_pass": "confirmed",
+          "rationale": "DEGseq 1.52.0 installed from Bioconductor 3.16"
+        },
+        {
+          "gate": "G5",
+          "delegated_assessment": "uncertain",
+          "second_pass": "confirmed",
+          "rationale": "gaps recorded; attempt possible"
+        }
+      ],
+      "delegated_assessment_sha256": "18f954ef7fb8c4e4f5a77d1962f637f5352997b2aa9838eaa8759869588fe84d"
+    },
+    {
+      "paper_id": "PMID:41444829",
+      "sampling_stratum": "Clinical_Medicine",
+      "role": "prospective_pilot_pipeline_validation_only",
+      "article_source_sha256": "337322233b5c89640e4e9f5ade7ede64573224d7718a5d71993d5ce605bb0fbe",
+      "exact_target": "Held-out test-set accuracy (98%) and ROC AUC (0.98) of the gradient-boosting tumour-detection model",
+      "blind_target": "Held-out test-set accuracy and ROC AUC of the published gradient-boosting tumour-detection model",
+      "target_type": "prediction_performance",
+      "target_location": "Results, model performance paragraph (Fig. 1e)",
+      "location_evidence": [
+        {
+          "segment_id": "S0036",
+          "quote": "an accuracy of 98%, an 88% sensitivity at 95% specificity, and an area under the curve (AUC) of the receiver operating characteristic (ROC) curve of 0.98"
+        },
+        {
+          "segment_id": "S0174",
+          "quote": "We found that 58 of the 126 features had significant differences between means ( P < 0.10)"
+        }
+      ],
+      "required_inputs": [
+        {
+          "served_as": "deposit/Experiments_raw_txt_only.zip",
+          "identifier": "zenodo:17343533 Experiments.zip raw per-well .txt spectra only (custodian-filtered; member manifest retained)",
+          "role": "custodian_filtered_deposit",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/served_packages/Experiments_raw_txt_only.zip",
+          "bytes": 188554615,
+          "sha256": "bad0a46ce6c74bf432fd2a1c847ea60b5f7d123ec7250d2fd1ccfb640e425fdd"
+        },
+        {
+          "served_as": "deposit/Experiments_raw_txt_only.manifest.json",
+          "identifier": "member manifest of the filtered archive with source archive sha256",
+          "role": "custodian_filtered_deposit",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/served_packages/Experiments_raw_txt_only.manifest.json",
+          "bytes": 4855445,
+          "sha256": "dd268e3e1b2d1526370fa897bed6e1a0ee2c17dd82149bd7ce60f2674739d973"
+        },
+        {
+          "served_as": "deposit/Labels.zip",
+          "identifier": "zenodo:17343533 Labels.zip",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/zenodo_labels_zip/53eb1c1ed9231da53552dac194f14fba9497dde2672263ec7ddb87726b5c8071/body",
+          "bytes": 32201,
+          "sha256": "b8e5d26bb3a0f0b194824d344bbd408315241a268b62eec8f627c0006a2e8776"
+        },
+        {
+          "served_as": "deposit/Corrections.zip",
+          "identifier": "zenodo:17343533 Corrections.zip",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/zenodo_corrections_zip/23bbc985e90bbc77eb5615bbd188779a2966d2f4d24f204bac1af19432088469/body",
+          "bytes": 9156,
+          "sha256": "80cfc4b4ae203f0dcdd2fbf2bb2e0eeab0c094363f6165154e3cd14acc42e168"
+        }
+      ],
+      "required_inputs_count": 4,
+      "required_inputs_bytes": 193451417,
+      "input_notes": [
+        "Experiments.zip (sha256 7f72f86d11a38c9b06c39ca3b9b3fbceba267373c3300fe71b6f3eec6efe9a1d, md5 verified) contains raw per-well .txt spectra plus author-processed .mat, 'with Fits' .csv and .png files; only the .txt members are served byte-identical."
+      ],
+      "allowed_resources": [
+        "scikit-learn, hyperopt-equivalent Bayesian optimisation or any free optimiser, Python scientific stack in the qualified image"
+      ],
+      "blocked_original_artifacts": [
+        {
+          "artifact": "Scripts.zip",
+          "reason": "author_implementation_material"
+        },
+        {
+          "artifact": ".mat, 'with Fits' .csv and .png members of Experiments.zip",
+          "reason": "author-processed intermediates derived by the withheld implementation"
+        }
+      ],
+      "comparison_metric": "accuracy and ROC AUC on the held-out test set as defined by the publication",
+      "numerical_agreement_criterion": "accuracy rounds to 98% and AUC rounds to 0.98 under nearest rounding; the split identity must match the publication or the component is not_assessable",
+      "conclusion_criterion": "Conclusion agreement is scored only when the numerical criterion is met or when the publication states a directional claim that the observed value can be compared with; otherwise the conclusion component is not_assessable.",
+      "resource_ceiling": {
+        "slots_per_paper": 3,
+        "wall_seconds_per_slot": 14400,
+        "step_seconds": 3600,
+        "provider_tokens_per_slot": 400000,
+        "tool_calls_per_slot": 40,
+        "max_completion_tokens": 8192,
+        "worker_cpus": 1,
+        "worker_memory": "3g",
+        "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+        "network": "none",
+        "image": "paper2-science:pilot-2026-09-25"
+      },
+      "stopping_rule": [
+        "final report submitted by the slot",
+        "wall, step, token, tool-call or output ceiling reached (recorded as the stop reason)",
+        "required input absent from the served package: report null observation with F01/F18",
+        "specification gap that cannot be closed from the served text: report null with F04-F08",
+        "controller or worker error: recorded as harness stop, never as an outcome",
+        "no rerun, no extension and no rule change after the slot starts"
+      ],
+      "specification_gaps": [
+        "train/test split membership and random seed sit in withheld scripts",
+        "hyperparameter search space in Supplementary Table 3 not retained",
+        "spectral preprocessing from raw .txt to the 126 QWN features not fully printed"
+      ],
+      "gate_reviews": [
+        {
+          "gate": "G1",
+          "delegated_assessment": "yes",
+          "second_pass": "confirmed",
+          "rationale": "ML performance on deposited spectra"
+        },
+        {
+          "gate": "G2",
+          "delegated_assessment": "yes",
+          "second_pass": "confirmed",
+          "rationale": "accuracy and AUC stated in S0036"
+        },
+        {
+          "gate": "G3",
+          "delegated_assessment": "public",
+          "second_pass": "confirmed",
+          "rationale": "all three data archives downloaded; Experiments.zip md5 verified"
+        },
+        {
+          "gate": "G4",
+          "delegated_assessment": "available",
+          "second_pass": "confirmed",
+          "rationale": "scikit-learn stack is free"
+        },
+        {
+          "gate": "G5",
+          "delegated_assessment": "uncertain",
+          "second_pass": "confirmed",
+          "rationale": "split identity likely unrecoverable; prediction rule requires identical split"
+        }
+      ],
+      "delegated_assessment_sha256": "1bfef2e39c930e84d08ed4aa6954d0503fcaf44e6c4b0f7e0f252224b46fa41a"
+    },
+    {
+      "paper_id": "PMID:36286480",
+      "sampling_stratum": "Computational_Science",
+      "role": "prospective_pilot_pipeline_validation_only",
+      "article_source_sha256": "85f8a966b78f240774e7298682eb7643be31e18ec050c34b55072a5d4e040b72",
+      "exact_target": "Coefficient of determination r^2 = 0.817 between estimated and expected lineage frequencies across the seven SARS-CoV-2 mixture standards",
+      "blind_target": "The coefficient of determination between estimated and expected lineage frequencies across the seven SARS-CoV-2 mixture samples",
+      "target_type": "deterministic_scalar",
+      "target_location": "Results, SARS-CoV-2 mixture validation paragraph (Fig. S1A)",
+      "location_evidence": [
+        {
+          "segment_id": "S0027",
+          "quote": "MixviR’s estimates of the frequencies of each lineage were also broadly consistent with expectations (see Fig. S1A in the supplemental material; r 2 = 0.817)"
+        },
+        {
+          "segment_id": "S0054",
+          "quote": "The presence of lineage l in sample i is inferred by comparing the ratio n li /N l to an adjustable threshold value (default = 0.5)"
+        }
+      ],
+      "required_inputs": [
+        {
+          "served_as": "reads/illumina/SRR18961847_1.fastq.gz",
+          "identifier": "ena:PRJNA827817 SRR18961847 library 375768398 SRR18961847_1.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA827817/SRR18961847/0c4fc3b3315e8f400eabf7809cd8f18fdfa21cb89b7597e51bece054cbc76e8b/body",
+          "bytes": 330904837,
+          "sha256": "f24585211af24ef9549c760730e9ee8412e14104ec689256afa170e9d5a485f2"
+        },
+        {
+          "served_as": "reads/illumina/SRR18961847_2.fastq.gz",
+          "identifier": "ena:PRJNA827817 SRR18961847 library 375768398 SRR18961847_2.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA827817/SRR18961847/0edbf9d7c8ce74edf0e97a4b320f1454af86f26838b1eeb5f966ff9cc279227f/body",
+          "bytes": 343050693,
+          "sha256": "606c8ed45287c56620f9df340e595c7d720612e680b341e6130114adab9760a1"
+        },
+        {
+          "served_as": "reads/illumina/SRR18962157_1.fastq.gz",
+          "identifier": "ena:PRJNA827817 SRR18962157 library 375768399 SRR18962157_1.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA827817/SRR18962157/b92a1209034a1a847104232e32c14f53bab1a4abbd02c962d88072065f837633/body",
+          "bytes": 317836542,
+          "sha256": "fcb6ecd0af191d291b9efd8cb3b42fe176e3dadf7e540d689b3596c4e87e7bc4"
+        },
+        {
+          "served_as": "reads/illumina/SRR18962157_2.fastq.gz",
+          "identifier": "ena:PRJNA827817 SRR18962157 library 375768399 SRR18962157_2.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA827817/SRR18962157/b208b72de38d1defbd00207fb83e648a0f54c298aa5c1034f8a86f80e1b3babb/body",
+          "bytes": 330429815,
+          "sha256": "534369aa3c477ed1359d3aa48dd4f96afcac95ed1a99e440ea1198a173286182"
+        },
+        {
+          "served_as": "reads/illumina/SRR18936975_1.fastq.gz",
+          "identifier": "ena:PRJNA827817 SRR18936975 library 375768396 SRR18936975_1.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA827817/SRR18936975/7ab40f2bce06976188fcc4264ac1a08f3314ed0ffa1ebcdeede2e6f96ffac5ba/body",
+          "bytes": 265371745,
+          "sha256": "c4fa8eaad5a969796e04b913503853c5aaf0538d597fc266008f75e17dd008dd"
+        },
+        {
+          "served_as": "reads/illumina/SRR18936975_2.fastq.gz",
+          "identifier": "ena:PRJNA827817 SRR18936975 library 375768396 SRR18936975_2.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA827817/SRR18936975/ff566ab935e1e1962c52bb6dc9040c3d1d3361f6437b9008a8be6ab1ab3210c2/body",
+          "bytes": 274453827,
+          "sha256": "937525730a6710affc9ab456c8aa54e631bd388cb60bb4961642245c9c5fedd8"
+        },
+        {
+          "served_as": "reads/illumina/SRR18962947_1.fastq.gz",
+          "identifier": "ena:PRJNA827817 SRR18962947 library 375768397 SRR18962947_1.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA827817/SRR18962947/5ce1f91f85a2dfc7607ce995c6f9da9bb55750354bdca819bedb2cd6afbba194/body",
+          "bytes": 287980041,
+          "sha256": "45276bccedb5556b139c9c2b8d2ddb9adeb82b2a487d5228868cbcf8755de63d"
+        },
+        {
+          "served_as": "reads/illumina/SRR18962947_2.fastq.gz",
+          "identifier": "ena:PRJNA827817 SRR18962947 library 375768397 SRR18962947_2.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA827817/SRR18962947/89fc4e6069291dd824d4b32011701847580cc82801f56d936a71f27cea9b8a68/body",
+          "bytes": 299895476,
+          "sha256": "94e5764d99fc3b9ccf9cababb0bd16581cd9b1529dc19a9bbd526d7b9f163d5c"
+        },
+        {
+          "served_as": "reads/illumina/SRR18962138_1.fastq.gz",
+          "identifier": "ena:PRJNA827817 SRR18962138 library 375768394 SRR18962138_1.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA827817/SRR18962138/b42a59108d5c1413bd9d49bfddbb1527d65509a7e5f5c074d7d491dffa6c89c0/body",
+          "bytes": 284932764,
+          "sha256": "18b7b73ad9aac61347b3a0eb8bb30a80794457cab51f5607ada86f945c66bdfe"
+        },
+        {
+          "served_as": "reads/illumina/SRR18962138_2.fastq.gz",
+          "identifier": "ena:PRJNA827817 SRR18962138 library 375768394 SRR18962138_2.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA827817/SRR18962138/6843b01d7b0760d55d8f0db68b30d00c8402a535f2a93d45248caa35ad754692/body",
+          "bytes": 293780868,
+          "sha256": "84d1273b3d8162b1815d75ca68da8b67ab8ae382813bbf9a6ba722590e5343a0"
+        },
+        {
+          "served_as": "reads/illumina/SRR18939817_1.fastq.gz",
+          "identifier": "ena:PRJNA827817 SRR18939817 library 375768395 SRR18939817_1.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA827817/SRR18939817/dc2bfc02c42ffe334652ca87171ced2f31332c13936848b200af4cdd75fb7705/body",
+          "bytes": 344974374,
+          "sha256": "51e822bb53333d6513779d9e662c9f78aafc6b5f8cbc69e26efbfb73ce7732f0"
+        },
+        {
+          "served_as": "reads/illumina/SRR18939817_2.fastq.gz",
+          "identifier": "ena:PRJNA827817 SRR18939817 library 375768395 SRR18939817_2.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA827817/SRR18939817/5538812312de5cd8a7d20e68f30671703e83c1017aade19e29ae33ec25875652/body",
+          "bytes": 358012636,
+          "sha256": "18c6e115d110ae2a7b0858fd89fd780eaf634708953db2fd8bb55fcca3ba4999"
+        },
+        {
+          "served_as": "reads/illumina/SRR18961947_1.fastq.gz",
+          "identifier": "ena:PRJNA827817 SRR18961947 library 375768393 SRR18961947_1.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA827817/SRR18961947/3e6588e0b3cac8fdcf5de290a91889d4aaffd004b6244be7f69b78070a195091/body",
+          "bytes": 310417358,
+          "sha256": "78083dc124e32c6bcd522c2c79c410c5be6e900c60b1f7637897cfaf0bb374e8"
+        },
+        {
+          "served_as": "reads/illumina/SRR18961947_2.fastq.gz",
+          "identifier": "ena:PRJNA827817 SRR18961947 library 375768393 SRR18961947_2.fastq.gz",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/ena_PRJNA827817/SRR18961947/856ededc4616512f1fdc522faabf3f873ec245854dadae83e499b42a6ddb485f/body",
+          "bytes": 323219630,
+          "sha256": "e27e21574182b7987e4f0cc2ae601409d1b7eca5d455bff068cd27c295a658da"
+        },
+        {
+          "served_as": "metadata/PRJNA827817_sample_metadata.tsv",
+          "identifier": "ena:PRJNA827817 sample metadata with expected lineage ratios",
+          "role": "public_metadata",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/ena/PRJNA827817_meta.tsv",
+          "bytes": 3761,
+          "sha256": "0442baed3b4c1847041db97efac12fff535b5acf057f60a4549f85d7bc4cd7ac"
+        },
+        {
+          "served_as": "references/GCF_009858895.2_ASM985889v3_genomic.fna.gz",
+          "identifier": "NCBI GCF_009858895.2 SARS-CoV-2 Wuhan-Hu-1 genome",
+          "role": "public_reference",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/references/sarscov2_reference/03ab67130690d605f27897e3689ab7cf0486dc636bc4166626eaa1df4de9d76b/body",
+          "bytes": 9591,
+          "sha256": "d359795c5b11e9fc9309d5b3edee2dde1040781cd6a13b09aa7f4aaad8f07816"
+        },
+        {
+          "served_as": "references/GCF_009858895.2_ASM985889v3_genomic.gff.gz",
+          "identifier": "NCBI GCF_009858895.2 annotation",
+          "role": "public_reference",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/references/sarscov2_reference/380847a8f026a6e12ae886e1dffaf600c005f271be9342bb6b28fda56aa85c74/body",
+          "bytes": 2914,
+          "sha256": "12301fd16cd0311b15ebc4038580edf22f7dc40a123050ef1a8707c9f9d9968e"
+        },
+        {
+          "served_as": "references/constellations-v0.1.3.tar.gz",
+          "identifier": "cov-lineages/constellations v0.1.3 (2022-02-08) lineage-defining sites",
+          "role": "public_reference",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/references/constellations_v0.1.3/650837027af00853938aafe440c4979d0f74d4fa6a25feef8f902a5cb5c1970b/body",
+          "bytes": 42154,
+          "sha256": "fbd905857e64e9b88139b751762343898c0cbcb7666285fc8af2c3bbc760e4a9"
+        },
+        {
+          "served_as": "references/artic_nCoV-2019_V4.1_primer.bed",
+          "identifier": "ARTIC nCoV-2019 V4.1 primer scheme",
+          "role": "public_reference",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/references/artic_v4_1/c91b17f2ac623b2694e098004650c0ae475dfb82417ea8ed4aefb373c31f5c9d/body",
+          "bytes": 15256,
+          "sha256": "08ae5d4ca1b95b576df3252ed5f6fefc976dd63d066cec81949c5cc43a814f9e"
+        }
+      ],
+      "required_inputs_count": 19,
+      "required_inputs_bytes": 4365334282,
+      "input_notes": [
+        "Expected lineage ratios are recorded in the public ENA sample descriptions (design inputs, not deposit leakage).",
+        "The article's mutation list is an outbreak.info snapshot of 2022-02-17 kept in the author repository; the served substitute is the independent cov-lineages/constellations release closest before that date. Version mismatch is a frozen, recorded input substitution (F18 risk).",
+        "The amplicon primer scheme is not stated in the retained text; the ARTIC V4.1 bed is provided as a public reference whose use is a recorded assumption."
+      ],
+      "allowed_resources": [
+        "minimap2, samtools, bcftools, ivar, fastp, cutadapt in the qualified image",
+        "Python and R scientific stacks in the qualified image"
+      ],
+      "blocked_original_artifacts": [
+        {
+          "artifact": "MixviR R package and GitHub repository",
+          "reason": "author_implementation_material"
+        },
+        {
+          "artifact": "DRAGEN COVID Lineage v3.5.10",
+          "reason": "commercial cloud application"
+        },
+        {
+          "artifact": "author mutation_files snapshot",
+          "reason": "author_implementation_material"
+        }
+      ],
+      "comparison_metric": "r^2 across all lineage-frequency pairs of the seven mixtures",
+      "numerical_agreement_criterion": "observed r^2 rounds to 0.817 at three decimals",
+      "conclusion_criterion": "Conclusion agreement is scored only when the numerical criterion is met or when the publication states a directional claim that the observed value can be compared with; otherwise the conclusion component is not_assessable.",
+      "resource_ceiling": {
+        "slots_per_paper": 3,
+        "wall_seconds_per_slot": 14400,
+        "step_seconds": 3600,
+        "provider_tokens_per_slot": 400000,
+        "tool_calls_per_slot": 40,
+        "max_completion_tokens": 8192,
+        "worker_cpus": 1,
+        "worker_memory": "3g",
+        "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+        "network": "none",
+        "image": "paper2-science:pilot-2026-09-25"
+      },
+      "stopping_rule": [
+        "final report submitted by the slot",
+        "wall, step, token, tool-call or output ceiling reached (recorded as the stop reason)",
+        "required input absent from the served package: report null observation with F01/F18",
+        "specification gap that cannot be closed from the served text: report null with F04-F08",
+        "controller or worker error: recorded as harness stop, never as an outcome",
+        "no rerun, no extension and no rule change after the slot starts"
+      ],
+      "specification_gaps": [
+        "variant-calling parameters other than the DRAGEN thresholds (=1) not stated",
+        "definition of the pairs entering r^2 (absent lineages as zero or excluded)",
+        "mutation list version differs from the author snapshot by construction"
+      ],
+      "gate_reviews": [
+        {
+          "gate": "G1",
+          "delegated_assessment": "yes",
+          "second_pass": "confirmed",
+          "rationale": "validation statistic from known mixtures"
+        },
+        {
+          "gate": "G2",
+          "delegated_assessment": "yes",
+          "second_pass": "confirmed",
+          "rationale": "r^2 = 0.817 stated in S0027"
+        },
+        {
+          "gate": "G3",
+          "delegated_assessment": "unknown",
+          "second_pass": "revised:public_with_substituted_reference",
+          "rationale": "all seven paired FASTQ sets downloaded and checksum-verified; the lineage-mutation list is available only as a substitute public release"
+        },
+        {
+          "gate": "G4",
+          "delegated_assessment": "available",
+          "second_pass": "confirmed",
+          "rationale": "article names BCFtools/GATK as accepted VCF generators"
+        },
+        {
+          "gate": "G5",
+          "delegated_assessment": "uncertain",
+          "second_pass": "confirmed",
+          "rationale": "estimator rule stated in S0054-S0055"
+        }
+      ],
+      "delegated_assessment_sha256": "b1c5dc3d4307009c8202bb34da056939f8e3a11fb084114ed08584817655fe1e"
+    },
+    {
+      "paper_id": "PMID:35388942",
+      "sampling_stratum": "Environmental_Earth",
+      "role": "prospective_pilot_pipeline_validation_only",
+      "article_source_sha256": "86ec5b9cae56dd90d1029544db76c10339b33d01f57a5cce549e5f4c1a514da6",
+      "exact_target": "Mean interval between active mound-rising events: 5.9 years before warming (1850-1961) and 3.0 years after warming (1961-2010)",
+      "blind_target": "The mean interval in years between active mound-rising (tree-leaning) events before warming and after warming, as defined in the publication",
+      "target_type": "deterministic_scalar",
+      "target_location": "Results, section on annual activities of tree leaning (Figure 6c)",
+      "location_evidence": [
+        {
+          "segment_id": "S0049",
+          "quote": "The interval between active mound‐rising events was shorter after warming (3.0 years) than the interval before warming (5.9 years; Figure 6c )"
+        },
+        {
+          "segment_id": "S0033",
+          "quote": "Peaks of annual intensity of tree leaning >2 were identified as active tree leaning events"
+        }
+      ],
+      "required_inputs": [
+        {
+          "served_as": "deposit/Data_S1-3.xlsx",
+          "identifier": "dryad:dr7sqv9z5 Data_S1-3.xlsx (file 1389355, version 168699)",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/dryad_dr7sqv9z5_Data_S1-3_browser/body",
+          "bytes": 200249,
+          "sha256": "c4f3897a1855a7e46c9d55d0a36846ec655d1f1f9468251448ec610b357f955e"
+        }
+      ],
+      "required_inputs_count": 1,
+      "required_inputs_bytes": 200249,
+      "input_notes": [
+        "Data S2 holds ring widths by sample and direction; Data S3 wood radius; Data S1 is a carbon-stock summary unrelated to the target."
+      ],
+      "allowed_resources": [
+        "Python scientific stack (pandas, numpy, scipy, openpyxl)"
+      ],
+      "blocked_original_artifacts": [
+        {
+          "artifact": "SigmaPlot 14.0 project files",
+          "reason": "commercial software; not deposited"
+        },
+        {
+          "artifact": "author event lists",
+          "reason": "author_implementation_material"
+        }
+      ],
+      "comparison_metric": "two mean intervals in years",
+      "numerical_agreement_criterion": "each interval rounds to the reported value at one decimal",
+      "conclusion_criterion": "Conclusion agreement is scored only when the numerical criterion is met or when the publication states a directional claim that the observed value can be compared with; otherwise the conclusion component is not_assessable.",
+      "resource_ceiling": {
+        "slots_per_paper": 3,
+        "wall_seconds_per_slot": 14400,
+        "step_seconds": 3600,
+        "provider_tokens_per_slot": 400000,
+        "tool_calls_per_slot": 40,
+        "max_completion_tokens": 8192,
+        "worker_cpus": 1,
+        "worker_memory": "3g",
+        "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+        "network": "none",
+        "image": "paper2-science:pilot-2026-09-25"
+      },
+      "stopping_rule": [
+        "final report submitted by the slot",
+        "wall, step, token, tool-call or output ceiling reached (recorded as the stop reason)",
+        "required input absent from the served package: report null observation with F01/F18",
+        "specification gap that cannot be closed from the served text: report null with F04-F08",
+        "controller or worker error: recorded as harness stop, never as an outcome",
+        "no rerun, no extension and no rule change after the slot starts"
+      ],
+      "specification_gaps": [
+        "event definition across trees (per tree vs pooled) and interval averaging rule",
+        "text cites Data S1 for the leaning ratio while the deposit's S1 is carbon stocks"
+      ],
+      "gate_reviews": [
+        {
+          "gate": "G1",
+          "delegated_assessment": "yes",
+          "second_pass": "confirmed",
+          "rationale": "indices and event counts from ring widths"
+        },
+        {
+          "gate": "G2",
+          "delegated_assessment": "yes",
+          "second_pass": "confirmed",
+          "rationale": "5.9 and 3.0 years stated in S0049"
+        },
+        {
+          "gate": "G3",
+          "delegated_assessment": "public",
+          "second_pass": "confirmed",
+          "rationale": "Dryad file downloaded; bytes match storageSize"
+        },
+        {
+          "gate": "G4",
+          "delegated_assessment": "available",
+          "second_pass": "confirmed",
+          "rationale": "free stack suffices"
+        },
+        {
+          "gate": "G5",
+          "delegated_assessment": "sufficient",
+          "second_pass": "revised:uncertain",
+          "rationale": "interval aggregation rule is not printed; recorded as a gap"
+        }
+      ],
+      "delegated_assessment_sha256": "5801195b1688ccbb1cf7ff771768cf974bd820f34d1903dcfeb8291e1f295dc3"
+    },
+    {
+      "paper_id": "PMID:35767539",
+      "sampling_stratum": "Physics_Engineering",
+      "role": "prospective_pilot_pipeline_validation_only",
+      "article_source_sha256": "61d4c5707381b8c7a6f96c24756b4c542960b03575d72f214314ca221357b07f",
+      "exact_target": "Least-squares estimates of the logistic paper-count function on WoS-Stat: mu_n = 33.263, sigma_n = 14.743, kappa_n = 17242.068",
+      "blind_target": "The least-squares parameter estimates (mu_n, sigma_n, kappa_n) of the published function f_n fitted to the annual paper counts of WoS-Stat",
+      "target_type": "deterministic_scalar",
+      "target_location": "Modeling of WoS-Stat network, estimation paragraph (Fig 5a)",
+      "location_evidence": [
+        {
+          "segment_id": "S0052",
+          "quote": "For f n , We adopt the least squares method to estimate parameters and obtain estimates μ ^ n = 33 . 263 , σ ^ n = 14 . 743 , κ ^ n ="
+        },
+        {
+          "segment_id": "S0053",
+          "quote": "17242 . 068 , and η ^ n = 328 . 047 ."
+        }
+      ],
+      "required_inputs": [
+        {
+          "served_as": "deposit/wos-stat_nodes.csv",
+          "identifier": "dryad:z8w9ghxfh nodes",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/dryad_z8w9ghxfh_browser/wos-stat_nodes.csv",
+          "bytes": 5632375,
+          "sha256": "df15c4e7413039adbe62d878dad03ce57f11528a5a644a36c570ab110e5c863c"
+        },
+        {
+          "served_as": "deposit/wos-stat_edges.csv",
+          "identifier": "dryad:z8w9ghxfh edges",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/dryad_z8w9ghxfh_browser/wos-stat_edges.csv",
+          "bytes": 13976322,
+          "sha256": "4aa565cf0cb24e34c364f7688ebd387074ab2b5b90e7209777c1ee81f44534e2"
+        },
+        {
+          "served_as": "deposit/README.md",
+          "identifier": "dryad:z8w9ghxfh README",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/dryad_z8w9ghxfh_browser/README.md",
+          "bytes": 1526,
+          "sha256": "f58e3fbe61060cd570690f26d064805111d7aa493dbf2853701f24a9c4419115"
+        }
+      ],
+      "required_inputs_count": 3,
+      "required_inputs_bytes": 19610223,
+      "input_notes": [
+        "Publication years 1981-2016 map to t = 1..36 per the article."
+      ],
+      "allowed_resources": [
+        "Python scientific stack (numpy, scipy, pandas, networkx)"
+      ],
+      "blocked_original_artifacts": [
+        {
+          "artifact": "author fitting scripts",
+          "reason": "author_implementation_material"
+        }
+      ],
+      "comparison_metric": "three parameter estimates",
+      "numerical_agreement_criterion": "each estimate rounds to the reported value at three decimals; eta_n recorded as a secondary component",
+      "conclusion_criterion": "Conclusion agreement is scored only when the numerical criterion is met or when the publication states a directional claim that the observed value can be compared with; otherwise the conclusion component is not_assessable.",
+      "resource_ceiling": {
+        "slots_per_paper": 3,
+        "wall_seconds_per_slot": 14400,
+        "step_seconds": 3600,
+        "provider_tokens_per_slot": 400000,
+        "tool_calls_per_slot": 40,
+        "max_completion_tokens": 8192,
+        "worker_cpus": 1,
+        "worker_memory": "3g",
+        "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+        "network": "none",
+        "image": "paper2-science:pilot-2026-09-25"
+      },
+      "stopping_rule": [
+        "final report submitted by the slot",
+        "wall, step, token, tool-call or output ceiling reached (recorded as the stop reason)",
+        "required input absent from the served package: report null observation with F01/F18",
+        "specification gap that cannot be closed from the served text: report null with F04-F08",
+        "controller or worker error: recorded as harness stop, never as an outcome",
+        "no rerun, no extension and no rule change after the slot starts"
+      ],
+      "specification_gaps": [
+        "least-squares initialisation and optimiser unspecified (F10 risk)",
+        "eta_n estimator definition not printed"
+      ],
+      "gate_reviews": [
+        {
+          "gate": "G1",
+          "delegated_assessment": "yes",
+          "second_pass": "confirmed",
+          "rationale": "parameter fit on deposited network"
+        },
+        {
+          "gate": "G2",
+          "delegated_assessment": "yes",
+          "second_pass": "confirmed",
+          "rationale": "estimates stated in S0052-S0053"
+        },
+        {
+          "gate": "G3",
+          "delegated_assessment": "public",
+          "second_pass": "confirmed",
+          "rationale": "three Dryad files downloaded and hashed"
+        },
+        {
+          "gate": "G4",
+          "delegated_assessment": "available",
+          "second_pass": "confirmed",
+          "rationale": "free stack suffices"
+        },
+        {
+          "gate": "G5",
+          "delegated_assessment": "uncertain",
+          "second_pass": "confirmed",
+          "rationale": "functional form and method stated"
+        }
+      ],
+      "delegated_assessment_sha256": "dbb36d8b7c45be06b961e1162b9c57e6b0f8cf0c272954d4072d364c6ac4ce00"
+    },
+    {
+      "paper_id": "PMID:35136578",
+      "sampling_stratum": "Social_Behavioral",
+      "role": "prospective_pilot_pipeline_validation_only",
+      "article_source_sha256": "f5212cb66aefc8635fbbc12c30d57763297fc8303d1729f7e64a0d0e5293144e",
+      "exact_target": "Odds ratio for previous exposure to colic (OR = 32.250) and body condition score (OR = 0.022) with the Table 2 significance pattern",
+      "blind_target": "The odds ratios for previous exposure to colic and for body condition score as reported in Table 2",
+      "target_type": "deterministic_scalar",
+      "target_location": "Results, clinical findings and risk factors (Table 2)",
+      "location_evidence": [
+        {
+          "segment_id": "S0037",
+          "quote": "previous exposure to colic (p < 0.000; OR = 32.250), body condition score (p < 0.000; OR = 0.022)"
+        },
+        {
+          "segment_id": "S0031",
+          "quote": "The final analysis was done using logistic regression analysis with selected variables depending on p-values."
+        }
+      ],
+      "required_inputs": [
+        {
+          "served_as": "deposit/Risk_factor_in_horse_with_colic.xlsx",
+          "identifier": "figshare:15148851 file 29101587",
+          "role": "deposited_input",
+          "source_path": "/home/ubuntu/paper2_evidence/pilot-inputs-20260925/files/figshare_colic_xlsx/ee96d0a66c653b6406fcd0af3db018a883e5b63a548122f7947b035cf7fed484/body",
+          "bytes": 51989,
+          "sha256": "86f310344bc3035aae873e309590f08ecd1b10aa0d432c5ced8366e3dbdeacf6"
+        }
+      ],
+      "required_inputs_count": 1,
+      "required_inputs_bytes": 51989,
+      "input_notes": [
+        "Sheets: Risk factor (per-horse coded factors), Clinical sign, Hematology."
+      ],
+      "allowed_resources": [
+        "Python scientific stack (statsmodels, scipy, pandas, openpyxl)"
+      ],
+      "blocked_original_artifacts": [
+        {
+          "artifact": "SPSS v.25 outputs or syntax",
+          "reason": "commercial software; not deposited"
+        }
+      ],
+      "comparison_metric": "two odds ratios",
+      "numerical_agreement_criterion": "each OR rounds to the reported value at three decimals",
+      "conclusion_criterion": "Conclusion agreement is scored only when the numerical criterion is met or when the publication states a directional claim that the observed value can be compared with; otherwise the conclusion component is not_assessable.",
+      "resource_ceiling": {
+        "slots_per_paper": 3,
+        "wall_seconds_per_slot": 14400,
+        "step_seconds": 3600,
+        "provider_tokens_per_slot": 400000,
+        "tool_calls_per_slot": 40,
+        "max_completion_tokens": 8192,
+        "worker_cpus": 1,
+        "worker_memory": "3g",
+        "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+        "network": "none",
+        "image": "paper2-science:pilot-2026-09-25"
+      },
+      "stopping_rule": [
+        "final report submitted by the slot",
+        "wall, step, token, tool-call or output ceiling reached (recorded as the stop reason)",
+        "required input absent from the served package: report null observation with F01/F18",
+        "specification gap that cannot be closed from the served text: report null with F04-F08",
+        "controller or worker error: recorded as harness stop, never as an outcome",
+        "no rerun, no extension and no rule change after the slot starts"
+      ],
+      "specification_gaps": [
+        "univariable versus multivariable origin of Table 2 ORs",
+        "variable selection rule 'depending on p-values' unspecified"
+      ],
+      "gate_reviews": [
+        {
+          "gate": "G1",
+          "delegated_assessment": "yes",
+          "second_pass": "confirmed",
+          "rationale": "regression on deposited records"
+        },
+        {
+          "gate": "G2",
+          "delegated_assessment": "yes",
+          "second_pass": "confirmed",
+          "rationale": "ORs stated in S0037"
+        },
+        {
+          "gate": "G3",
+          "delegated_assessment": "public",
+          "second_pass": "confirmed",
+          "rationale": "Figshare file downloaded anonymously"
+        },
+        {
+          "gate": "G4",
+          "delegated_assessment": "available",
+          "second_pass": "confirmed",
+          "rationale": "SPSS analyses reproducible in free software"
+        },
+        {
+          "gate": "G5",
+          "delegated_assessment": "uncertain",
+          "second_pass": "confirmed",
+          "rationale": "selection rule gap recorded"
+        }
+      ],
+      "delegated_assessment_sha256": "c96b9281c3f31aaa8b00449f5f2f9c6f659f413f9305276d675c9cfd87644533"
+    }
+  ]
+}

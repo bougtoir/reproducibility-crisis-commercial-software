@@ -1,0 +1,18 @@
+{
+  "status": "prospective_pilot_runs_sealed_unadjudicated",
+  "deviation": "DEV-2026-09-24-02",
+  "amendment": "AMEND-2026-09-25-04",
+  "harness_iteration": "harness-iteration-3",
+  "papers": 7,
+  "slots_per_paper": 3,
+  "runs": 21,
+  "blind_outcome_sha256": "485967ff8a1caf85c1d9b1bc102ada617219e3636ea22b7dcbbc5337bb81f3db",
+  "blind_outcome_timestamp_status": "cryptographically_verified_against_pinned_freetsa_ca",
+  "frozen_manifest_sha256": "258ff4d943077cbd4bb13d16d13e665b32e81ca9cf146b753adf018e1db6f69b",
+  "stop_reasons": [
+    "final_report",
+    "token_reserve_limit"
+  ],
+  "empirical_success_rate": "not_assessable_until_adjudication_and_human_validation",
+  "pilot_outcomes_in_main_sample": false
+}

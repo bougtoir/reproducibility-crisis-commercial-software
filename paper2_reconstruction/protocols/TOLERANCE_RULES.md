@@ -1,6 +1,8 @@
 # Target-specific agreement
 
-**DRAFT — NOT FROZEN; generic scalar comparison is implemented, other scorers pending.**
+**FROZEN 2026-09-25 by AMEND-2026-09-25-05. Generic scalar/count comparison is
+implemented; a non-scalar target may only be frozen for a main-study paper if
+its comparison rule below is complete at that paper's prospective freeze.**
 
 No universal percentage tolerance. Store both target and observed values,
 units, absolute error and meaningful relative error; relative error near zero
@@ -24,3 +26,8 @@ main runs; log the reason. No stochastic, figure or non-scalar target may be
 launched with an unresolved comparison rule. Numerical agreement does not itself
 prove faithful algorithm implementation. Review fidelity using the published
 method without introducing alternative analyses.
+
+Value provenance (AMEND-2026-09-25-05 §4): an observed value counts toward L3
+and L4 only if the adjudicator locates it, to its reported precision, in a
+journaled execution output produced by journaled code that reads served inputs.
+A value present only in the report is `not_established`.

@@ -1,0 +1,46 @@
+{
+  "allowed_items": {
+    "I000": "articles/33016314.xml",
+    "I001": "articles/35003117.xml",
+    "I002": "articles/35136578.xml",
+    "I003": "articles/35388942.xml",
+    "I004": "articles/35767539.xml",
+    "I005": "articles/36286480.xml",
+    "I006": "articles/41444829.xml",
+    "I007": "software/packaging-26.3-py3-none-any.whl",
+    "I008": "software/python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+    "I009": "software/six-1.17.0-py2.py3-none-any.whl"
+  },
+  "amendment": "AMEND-2026-09-25-04",
+  "archive_sha256": "46081f16b73b5a081ba8482dd18c6998a28373a0e1b2c098532ba6cc1834bab2",
+  "blocked_items": {
+    "I010": "implementation/original_pipeline.py",
+    "I011": "implementation/original_notes.txt"
+  },
+  "controller_sha256": "e24386a805299ed455d4f3620104a822bb3d844de9239ec25203ac74255bb11f",
+  "deviation": "DEV-2026-09-24-02",
+  "execution": "sequential_single_machine",
+  "firewall_sha256": "3583eb0a50fb4aaea7d8e2a6f85e452ff48348e14c99bbb80636d89d5ca974ed",
+  "freeze_id": "PILOT-FREEZE-2026-09-25",
+  "freeze_sha256": "43cc2ec8a280d04e71b860b7f1135e0106be41f125b8b5643ab289968428b34f",
+  "freeze_timestamp_response_sha256": "49f17892582e611313e6c4f8be887522ba2a50f3321d9b1fa5f8e8f3bedf95ff",
+  "frozen_at_utc": "2026-09-25T02:23:52.508605+00:00",
+  "harness_iteration": "harness-iteration-3",
+  "image": "paper2-science:pilot-2026-09-25",
+  "instruction_template_sha256": "92cff457c4f73b75a74e622e314232e27fb52dbd56cae435222b47059abffbda",
+  "investigator_verification": "pending",
+  "isolation_sha256": "7b615acf47144f2f505ea23fdf6befb5016e791b4ed80c41bf34d866bca30f40",
+  "limits": {
+    "max_completion_tokens": 8192,
+    "seconds": 14400,
+    "step_seconds": 3600,
+    "tokens": 400000,
+    "tool_calls": 40,
+    "work_disk": true,
+    "worker_memory": "3g"
+  },
+  "pilot_run_sha256": "213e89ed9796ddcd5b63b1dfe3fca80021b99f1ab628866bab71c60d19f2d9ca",
+  "policy_version": "firewall-qualification-2026-09-24",
+  "scope": "prospective_pilot_frozen_manifests_before_any_solver_call",
+  "slots_per_paper": 3
+}

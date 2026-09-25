@@ -1,6 +1,6 @@
 # Failure taxonomy
 
-**DRAFT — NOT FROZEN**
+**FROZEN 2026-09-25 by AMEND-2026-09-25-05. No code is added after the freeze.**
 
 | Code | Category |
 |---|---|
@@ -36,3 +36,8 @@ is not automatically F04. A difference from author code after reveal is descript
 evidence, not proof that the publication made reconstruction impossible. F11
 remains suspected unless evidence establishes a hidden step. F17 invalidates the
 slot for clean inference; it is not an ordinary failed reconstruction.
+
+Report `failure_codes` must be identifiers from this table. Any other token is
+retained verbatim, tabulated as F99 and adjudicated as unclassified. A final
+report with zero journaled executions is the slot state `no_execution_report`
+(L2 and L3 `not_reached`, observed value void), not a taxonomy code.

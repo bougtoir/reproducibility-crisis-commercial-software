@@ -1,6 +1,8 @@
 # Statistical analysis plan
 
-**DRAFT — NOT FROZEN. No main-study outcomes have been inspected.**
+**FROZEN 2026-09-25 by AMEND-2026-09-25-05 before main-cohort selection. No
+main-study outcome existed at the freeze; no pilot value had been adjudicated.
+Hash and RFC 3161 timestamp: `data/adjudication/protocol_freeze_20260925.json`.**
 
 ## Estimands and denominators
 
@@ -37,7 +39,14 @@ deficit, respecting its capacity; resolve ties lexicographically as implemented.
 Within field rank by SHA256 of `paper2-main-v1|paper_id`.
 Selection is reproducible and has equal within-field probability under the
 prespecified pseudorandom ranking model. Save seed, ordered frame hash, N_h, n_h,
-pi_h=n_h/N_h and weight N_h/n_h. No pilot or main selection has occurred.
+pi_h=n_h/N_h and weight N_h/n_h. The pilot cases removed are the seven
+`PROSPECTIVE_PILOT` papers of `PILOT-FREEZE-2026-09-25`; the seven
+`ACCESSIBILITY_GATE_FAILED` papers and every paper with a machine-readable
+exclusion class or with text inspected during any earlier candidate review are
+not eligible. Eligibility is the exhaustive Stage A/Stage B route record under
+AMEND-2026-09-24-03. Main selection is executed exactly once, after this freeze,
+by `src/paper2/main_selection.py`, and its record is timestamped before any
+selected paper's target freeze.
 
 This field-stratified design is the conservative default. Do not add commercial,
 code or data cross-strata unless the pilot shows adequate occupancy and the

@@ -484,18 +484,20 @@ def screen_routes(
     prior: dict[str, str],
     fields: tuple[str, ...] = FIELDS,
     already_screened: frozenset[str] = frozenset(),
+    exhaustive: bool = False,
 ) -> list[dict[str, object]]:
     """Resolve open routes stratum by stratum until one candidate passes the caps.
 
     ``already_screened`` papers were consumed by an earlier Stage B record and are
     skipped without re-resolution, so a continuation run resumes the deterministic
-    chain where the earlier record stopped.
+    chain where the earlier record stopped. With ``exhaustive`` every paper of every
+    stratum is resolved, which enumerates the route-eligible population.
     """
     rows = []
     for field in fields:
         passed = 0
         for row in statements:
-            if row["sampling_stratum"] != field or passed:
+            if row["sampling_stratum"] != field or (passed and not exhaustive):
                 continue
             if str(row["paper_id"]) in already_screened:
                 continue
@@ -600,6 +602,7 @@ def main() -> None:
     routes.add_argument("--fields", nargs="*", default=list(FIELDS))
     routes.add_argument("--continue-from", type=Path, default=None)
     routes.add_argument("--amended-record", type=Path, default=None)
+    routes.add_argument("--exhaustive", action="store_true")
     retain = sub.add_parser("retain")
     retain.add_argument("--routes", type=Path, required=True)
     retain.add_argument("--articles", type=Path, default=ROOT / "data/raw/corpus-articles-20260922")
@@ -653,10 +656,12 @@ def main() -> None:
             prior,
             tuple(args.fields),
             screened,
+            args.exhaustive,
         )
+        stage = "B_routes" if args.continue_from is None else "B_routes_continuation"
         out = {
             "amendment_id": AMENDMENT,
-            "stage": "B_routes" if args.continue_from is None else "B_routes_continuation",
+            "stage": "B_routes_exhaustive" if args.exhaustive else stage,
             "continues_from_sha256": (
                 sha256(args.continue_from.read_bytes()) if args.continue_from is not None else ""
             ),
