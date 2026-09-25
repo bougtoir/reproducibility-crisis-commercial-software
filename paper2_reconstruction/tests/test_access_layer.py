@@ -23,7 +23,7 @@ def member(**overrides: object) -> dict[str, object]:
 def layer(**overrides: object) -> dict[str, object]:
     payload: dict[str, object] = {
         "amendment_id": AMENDMENT,
-        "gate_verification": {"author_verification": "pending"},
+        "gate_verification": {"investigator_verification": "pending"},
         "rates": "prohibited: no member reached a reconstruction attempt",
         "members": [member()],
     }
@@ -34,7 +34,7 @@ def test_layer_validates_and_counts_classes() -> None:
     summary = validate_layer(layer())
     assert summary["members"] == 1
     assert summary["exclusion_class_counts"] == {"author_request_only": 1}
-    assert summary["author_verification"] == "pending"
+    assert summary["investigator_verification"] == "pending"
 
 
 def test_layer_rejects_outcome_fields() -> None:

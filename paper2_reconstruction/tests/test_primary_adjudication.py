@@ -48,8 +48,8 @@ def prepare(root: Path, assessments: list[dict[str, object]], chain: object) -> 
     snapshot(screen / "123" / "sources.json", json.dumps(sources).encode())
     record = {
         "record_id": "r",
-        "scope": "devin_primary_assessment_pending_author_verification",
-        "author_verification": "pending",
+        "scope": "devin_primary_assessment_pending_investigator_verification",
+        "investigator_verification": "pending",
         "deviation": {"deviation_id": "DEV-1"},
         "assessments": assessments,
         "deterministic_candidate_chain": {"rule": "deterministic", "strata": chain},
@@ -73,7 +73,7 @@ def test_validated_record_renders_pilot_cases(tmp_path: Path) -> None:
     assert summary["formal_funnel_updated"] is False
     assert summary["record_sha256"] == sha256(path.read_bytes())
     rows = (results / "pilot_primary_adjudication.csv").read_text()
-    assert "DEVIN_PRIMARY_PENDING_AUTHOR_VERIFICATION" in rows
+    assert "DEVIN_PRIMARY_PENDING_INVESTIGATOR_VERIFICATION" in rows
     assert sha256(ARTICLE) in rows
 
 

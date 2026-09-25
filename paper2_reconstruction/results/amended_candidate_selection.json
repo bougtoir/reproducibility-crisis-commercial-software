@@ -1,7 +1,7 @@
 {
-  "scope": "devin_delegated_assessment_of_amended_route_eligible_candidates_pending_author_verification_not_formal_human_adjudication",
+  "scope": "devin_delegated_assessment_of_amended_route_eligible_candidates_pending_investigator_verification_not_formal_human_adjudication",
   "amendment_id": "AMEND-2026-09-24-03",
-  "record_sha256": "f5ca2812e7458fccfd6e5bbc35158e74db6e655e72c971e77a4548c5f244959c",
+  "record_sha256": "e87493eeee839ad9621427a8f4dd146f448b2ee9eaf5242a62bfee6e7be8bec8",
   "route_records": [
     {
       "path": "stage_b_routes.json",
@@ -10,16 +10,20 @@
     {
       "path": "stage_b_routes_continuation_chemistry.json",
       "sha256": "474f03cc04d893eac5fe5616325dcfec46e75ce5a94f2dc4addfdf0b83785922"
+    },
+    {
+      "path": "stage_b_routes_continuation_biomedical.json",
+      "sha256": "2704744934ea156b9c9afeb71e855a5ab369bf17bc2a4a559b04bc9f71b43776"
     }
   ],
-  "author_verification": "pending",
-  "route_eligible_assessed": 8,
+  "investigator_verification": "pending",
+  "route_eligible_assessed": 9,
   "main_sample_candidates": {
     "Biomedical_Basic": {
-      "paper_id": "PMID:39327328",
-      "candidate_rank": "14",
-      "disposition": "main_sample_candidate_conditional_on_author_target_prespecification",
-      "target_candidate": "candidate: average nucleotide identity range between OlVA genome variants (92-99.8%) - requires author pre-specification"
+      "paper_id": "PMID:33016314",
+      "candidate_rank": "46",
+      "disposition": "main_sample_candidate",
+      "target_candidate": "number of unique OTUs after rare-OTU filtering: 2763 bacterial (16S MiSeq) and 357 fungal (ITS PacBio) from PRJNA641521 reads"
     },
     "Chemistry_Materials": {
       "paper_id": "PMID:35003117",
@@ -59,6 +63,12 @@
     }
   },
   "excluded_after_deposit_inspection": [
+    {
+      "paper_id": "PMID:39327328",
+      "sampling_stratum": "Biomedical_Basic",
+      "disposition": "excluded_deposited_input_mismatch",
+      "outcome_leakage": "not_applicable_inputs_not_deposited"
+    },
     {
       "paper_id": "PMID:41466177",
       "sampling_stratum": "Chemistry_Materials",

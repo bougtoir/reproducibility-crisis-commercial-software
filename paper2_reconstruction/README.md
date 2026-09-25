@@ -100,7 +100,7 @@ protocol vocabulary value, every cited quote must appear verbatim inside the cit
 retained segment, a pilot case requires primary G1=yes with G2 not negative, and
 each stratum must consume its deterministic candidate order without gaps. It
 writes `results/pilot_primary_adjudication.{csv,json}` and never writes to the
-funnel; the records it renders remain provisional until author verification is
+funnel; the records it renders remain provisional until investigator verification is
 recorded.
 
 ```sh
@@ -111,7 +111,7 @@ PYTHONPATH=src .venv/bin/python -m paper2.amended_selection
 
 `paper2.second_pass` re-reads every retained gate of the delegated primary record
 against the hash-checked segments and writes `results/second_pass_G1_G5.{csv,json}`;
-it is a Devin re-verification, and author verification stays `pending` in every
+it is a Devin re-verification, and investigator verification stays `pending` in every
 record. `paper2.access_layer freeze` hash-froze and RFC 3161 timestamped protocol
 amendment `AMEND-2026-09-24-03` (`data/adjudication/amendment_AMEND-2026-09-24-03.json`)
 before any screening under it; `layer` builds and validates the
@@ -125,7 +125,7 @@ resumes one stratum's deterministic chain after a deposit inspection excluded it
 first route-eligible candidate. `paper2.amended_selection` validates the delegated
 amended G1–G5 record against those retained segments and the hash-chained route
 records and writes `results/amended_candidate_selection.{csv,json}`; its
-dispositions are sampling-frame decisions pending author verification, and the
+dispositions are sampling-frame decisions pending investigator verification, and the
 summary carries no reconstruction rate because no candidate has been attempted.
 
 Candidate evidence can be reviewed separately with `paper2.candidate_review`,
@@ -232,5 +232,5 @@ the original study is untouched. A private `wip` synchronization is not needed f
 these changes. Do not merge other unrelated directories or upload full-text evidence.
 Release only the reviewed Paper II code, lawful derived identifiers, protocols,
 result provenance, and regenerated document artifacts. The original distinct-paper
-claim remains discrepant, but the author has approved the unique-PMID frame for
+claim remains discrepant, but the investigator has approved the unique-PMID frame for
 Paper II. Collect actual study evidence before tagging a submission release.

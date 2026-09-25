@@ -10,7 +10,7 @@
   "pilot": "PROVISIONAL_RUNS_SEALED_UNADJUDICATED; results/provisional_pilot_summary.json; DEV-2026-09-24-02; no deposited study input was serveable, so no slot executed the target computation and no L1-L5 outcome is adjudicated",
   "protocol_freeze": "NOT_COMPLETED",
   "funnel_assessment": "NOT_STARTED",
-  "primary_gate_adjudication": "devin_primary_pending_author_verification; data/adjudication/devin_primary_G1_G5_20260923.json; DEV-2026-09-23-01",
+  "primary_gate_adjudication": "devin_primary_pending_investigator_verification; data/adjudication/devin_primary_G1_G5_20260923.json; DEV-2026-09-23-01",
   "pilot_selection": "PROVISIONAL_NOT_FROZEN",
   "intensive_sample": "NOT_SELECTED",
   "reconstruction_experiments": "NOT_COMPLETED",

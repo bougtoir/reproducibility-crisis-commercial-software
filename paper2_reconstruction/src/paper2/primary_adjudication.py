@@ -13,7 +13,7 @@ import json
 from pathlib import Path
 
 from paper2.build import ROOT
-from paper2.core import sha256, write_csv
+from paper2.core import sha256, verification_status, write_csv
 from paper2.model_api import mapping
 
 GATES = ("G1", "G2", "G3", "G4", "G5")
@@ -103,7 +103,7 @@ def validate_assessment(screen: Path, row: dict[str, object]) -> dict[str, objec
         **{column: row.get(column, "") for column in COLUMNS if column in row},
         "article_source_sha256": digest,
         "evidence_segment_ids": ";".join(ids),
-        "assessment_status": "DEVIN_PRIMARY_PENDING_AUTHOR_VERIFICATION",
+        "assessment_status": "DEVIN_PRIMARY_PENDING_INVESTIGATOR_VERIFICATION",
     }
 
 
@@ -163,7 +163,7 @@ def render(record_path: Path, screen: Path, results: Path) -> dict[str, object]:
         "scope": str(record["scope"]),
         "record_sha256": sha256(record_path.read_bytes()),
         "deviation_id": mapping(record["deviation"])["deviation_id"],
-        "author_verification": str(record["author_verification"]),
+        "investigator_verification": verification_status(record),
         "papers_assessed": len(rows),
         "provisional_pilot_cases": {
             str(r["sampling_stratum"]): {

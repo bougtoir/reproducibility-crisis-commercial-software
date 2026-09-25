@@ -2,6 +2,8 @@ import argparse
 import json
 import time
 from datetime import datetime, timezone
+from hashlib import md5
+from hashlib import sha256 as sha256_stream
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
@@ -58,6 +60,76 @@ def acquire(
         "completeness": "complete_response"
         if status == 200
         else "failed_request_not_access_verdict",
+    }
+    snapshot(receipt_path, (json.dumps(receipt, indent=2) + "\n").encode())
+    return body_path, receipt
+
+
+def acquire_stream(
+    url: str,
+    identifier: str,
+    directory: Path,
+    *,
+    request_conditions: str,
+    expected_md5: str = "",
+    expected_bytes: int = 0,
+) -> tuple[Path, dict[str, object]]:
+    """Stream a large public file to persistent storage with an immutable receipt.
+
+    Large deposits cannot be held in memory, so the body is written in chunks and
+    hashed while streaming. An announced md5 or byte count from the repository
+    listing is verified against the retrieved bytes and recorded in the receipt.
+    """
+    target = directory / sha256(url.encode())
+    receipt_path, body_path = target / "receipt.json", target / "body"
+    if receipt_path.exists():
+        receipt = mapping(json.loads(receipt_path.read_text()))
+        if receipt["url"] != url:
+            raise ValueError("Stored acquisition differs from immutable receipt")
+        return body_path, receipt
+    target.mkdir(parents=True, exist_ok=True)
+    request = Request(url, headers={"User-Agent": "PaperIIResearch/0.1 (public deposit input)"})
+    digest, md5sum, size, status, error, content_type = sha256_stream(), md5(), 0, 0, "", ""
+    try:
+        with urlopen(request, timeout=180) as response, body_path.open("wb") as handle:
+            status = response.status
+            content_type = response.headers.get("Content-Type", "")
+            while True:
+                chunk = response.read(1 << 20)
+                if not chunk:
+                    break
+                handle.write(chunk)
+                digest.update(chunk)
+                md5sum.update(chunk)
+                size += len(chunk)
+    except HTTPError as exception:
+        status, error = exception.code, str(exception)
+    except (URLError, TimeoutError) as exception:
+        error = type(exception).__name__
+    complete = status == 200
+    if complete and expected_bytes and size != expected_bytes:
+        complete = False
+        error = f"byte count {size} differs from announced {expected_bytes}"
+    if complete and expected_md5 and md5sum.hexdigest() != expected_md5:
+        complete = False
+        error = f"md5 {md5sum.hexdigest()} differs from announced {expected_md5}"
+    receipt = {
+        "url": url,
+        "identifier": identifier,
+        "version": "live_service_snapshot; announced checksum recorded below",
+        "retrieved_at_utc": datetime.now(timezone.utc).isoformat(),
+        "request_conditions": request_conditions,
+        "http_status": status,
+        "error": error,
+        "content_type": content_type,
+        "path": str(body_path.resolve()),
+        "bytes": size,
+        "sha256": digest.hexdigest(),
+        "md5": md5sum.hexdigest(),
+        "announced_md5": expected_md5,
+        "announced_bytes": expected_bytes,
+        "rights": "local evidence only; deposit licence recorded in the listing evidence",
+        "completeness": "complete_response" if complete else "incomplete_not_access_verdict",
     }
     snapshot(receipt_path, (json.dumps(receipt, indent=2) + "\n").encode())
     return body_path, receipt

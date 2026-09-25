@@ -363,7 +363,7 @@ def build() -> dict[str, object]:
         "protocol_freeze": "NOT_COMPLETED",
         "funnel_assessment": "NOT_STARTED",
         "primary_gate_adjudication": (
-            "devin_primary_pending_author_verification; "
+            "devin_primary_pending_investigator_verification; "
             "data/adjudication/devin_primary_G1_G5_20260923.json; DEV-2026-09-23-01"
         ),
         "pilot_selection": "PROVISIONAL_NOT_FROZEN",

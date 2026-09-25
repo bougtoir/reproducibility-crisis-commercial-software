@@ -1,11 +1,11 @@
 {
   "record_id": "devin_amended_G1_G5_20260924",
-  "scope": "devin_delegated_assessment_of_amended_route_eligible_candidates_pending_author_verification_not_formal_human_adjudication",
+  "scope": "devin_delegated_assessment_of_amended_route_eligible_candidates_pending_investigator_verification_not_formal_human_adjudication",
   "adjudicator": "Devin (delegated first-pass adjudicator)",
   "delegation_basis": "Author instruction 2026-09-23: 「devin一次判定で進めて / あとから検証します」; author instruction 2026-09-24: revise the candidate criterion first, freeze it, then select new candidates.",
-  "author_verification": "pending",
+  "investigator_verification": "pending",
   "amendment_id": "AMEND-2026-09-24-03",
-  "recorded_utc": "2026-09-24T12:40:00Z; Chemistry_Materials continuation assessed 2026-09-24T12:25:00Z",
+  "recorded_utc": "2026-09-24T12:40:00Z; Chemistry_Materials continuation assessed 2026-09-24T12:25:00Z; Biomedical_Basic deposit inspection 2026-09-25T00:45:00Z",
   "screen_directory": "data/raw/deposit-screen-20260924/screen",
   "route_record": [
     "data/raw/deposit-screen-20260924/stage_b_routes.json",
@@ -31,13 +31,13 @@
       "G4_reason": "SPAdes, BLAST, MEGA X and ORF finder are free; no commercial software is named for the computational claims.",
       "G5_specification_sufficient_for_attempt": "uncertain",
       "G5_reason": "Assembler version and meta option are stated, but contig retention criteria and identity computation windows are only partly specified.",
-      "target_candidate": "candidate: average nucleotide identity range between OlVA genome variants (92-99.8%) - requires author pre-specification",
+      "target_candidate": "not frozen: inputs not deposited under the named route (AMEND-2026-09-25-04 class deposited_input_mismatch)",
       "alternatives_considered": "HSP70 phylogeny topology (qualitative; rejected); AAI ranges to related closteroviruses (depends on reference set).",
-      "pilot_decision": "provisional_pilot_case",
-      "deposit_role": "input_raw_reads_not_inspected",
-      "deposit_inspection": "Not retrieved: SRA run files are ~0.4-1 GiB each; only the listing was inspected. Listing shows read runs, not assembled contigs, so no target leakage is expected from the deposit itself; GenBank assemblies (outputs) are outside the served deposit.",
-      "outcome_leakage": "none_expected_listing_only",
-      "amended_disposition": "main_sample_candidate_conditional_on_author_target_prespecification",
+      "pilot_decision": "not_pilot_case_replaced",
+      "deposit_role": "deposit_does_not_contain_article_datasets",
+      "deposit_inspection": "ENA file report and sample metadata for PRJNA852409 retrieved anonymously on 2026-09-25 (/home/ubuntu/paper2_evidence/pilot-inputs-20260925/ena/PRJNA852409_filereport.tsv, PRJNA852409_meta.tsv). The BioProject lists 14 RNA-Seq runs (SRR19843005-SRR19843018) whose sample titles are 21-0127 to 21-0140. The article analyses 17 datasets named 22-0038 to 22-0054 and names no other accession, so the identifier sets are disjoint and the analysed reads are not deposited under the named route. No file was downloaded and no values were compared.",
+      "outcome_leakage": "not_applicable_inputs_not_deposited",
+      "amended_disposition": "excluded_deposited_input_mismatch",
       "evidence": [
         {
           "segment_id": "S0015",
@@ -63,6 +63,16 @@
           "segment_id": "S0018",
           "quote": "maximum-likelihood phylogenetic analysis in MEGA X [ 14 ], using the best-fit substitution models",
           "gate": "G5"
+        },
+        {
+          "segment_id": "S0027",
+          "quote": "representing 14 metaviromes (22–0038, 22–0039, 22–0040, 22–0041, 22–0042, 22–0043, 22–0044, 22–0046 , 22–0047, 22–0049, 22–0051, 22–0052, 22–0053",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0036",
+          "quote": "Frantoio (22–0054) cultivars",
+          "gate": "G3"
         }
       ]
     },
@@ -415,7 +425,57 @@
           "gate": "G5"
         }
       ]
+    },
+    {
+      "paper_id": "PMID:33016314",
+      "sampling_stratum": "Biomedical_Basic",
+      "candidate_rank": "46",
+      "article_text_status": "lawful_text_retained",
+      "G1_computationally_testable": "yes",
+      "G1_reason": "The amplicon pipeline (trimming, merging, primer removal, prinseq filtering, unoise3 denoising/clustering, sintax taxonomy, rare-OTU filter) is a specified computation on deposited reads that yields OTU counts.",
+      "G2_principal_target_identifiable": "yes",
+      "G2_reason": "Results state the filtered data set: 793 737 bacterial and 109 020 fungal sequences clustered into 2763 unique bacterial OTUs and 357 unique fungal OTUs; all downstream Bayesian and PERMANOVA results depend on this table.",
+      "G3_input_accessibility": "public",
+      "G3_reason": "BioProject PRJNA641521 answers an anonymous ENA file report with 192 runs, 904,989,634 announced bytes, largest file 17,462,429 bytes (within caps).",
+      "G4_resource_accessibility": "available",
+      "G4_reason": "mothur, prinseq-lite, usearch v11 (free 32-bit binary), SILVA v128 and UNITE 7.2 databases, R/phyloseq/vegan/brms are free; PacBio smrt link demultiplex/CCS steps precede the deposited per-run reads.",
+      "G5_specification_sufficient_for_attempt": "uncertain",
+      "G5_reason": "Trimming, merging, filtering, unoise3 and rare-OTU thresholds are stated with versions; whether the deposited PacBio reads are subreads or CCS reads, and the sample-to-run mapping, are not stated in the text.",
+      "target_candidate": "number of unique OTUs after rare-OTU filtering: 2763 bacterial (16S MiSeq) and 357 fungal (ITS PacBio) from PRJNA641521 reads",
+      "alternatives_considered": "Table 1 PERMANOVA statistics (depend on the OTU table and permutation seed); Table 2 yield medians (Bayesian, inputs not deposited); F = 18.58 betadisper (depends on OTU table).",
+      "pilot_decision": "provisional_pilot_case",
+      "deposit_role": "input_raw_reads",
+      "deposit_inspection": "ENA file report for PRJNA641521 retained anonymously on 2026-09-25 by the deterministic continuation screen (routes/); 192 runs with sizes, no processed tables, no OTU table and no result files listed. No read file was downloaded and no values were compared.",
+      "outcome_leakage": "none_in_deposited_files",
+      "amended_disposition": "main_sample_candidate",
+      "evidence": [
+        {
+          "segment_id": "S0056",
+          "quote": "Remaining sequences were denoised with usearch (Edgar 2016 ) and clustered into operational taxonomic units",
+          "gate": "G1"
+        },
+        {
+          "segment_id": "S0067",
+          "quote": "which were clustered into 2763 unique bacterial OTUs and 357 unique fungal OTUs.",
+          "gate": "G2"
+        },
+        {
+          "segment_id": "S0156",
+          "quote": "available in the NCBI Sequence Read Archive (SRA) database at https://www.ncbi.nlm.nih.gov/bioproject and can be accessed with the study accession number BioProject ID PRJNA641521.",
+          "gate": "G3"
+        },
+        {
+          "segment_id": "S0057",
+          "quote": "threshold of 8) at 97% sequence similarity with unoise3 as part of usearch v11.0.667.",
+          "gate": "G4"
+        },
+        {
+          "segment_id": "S0066",
+          "quote": "the data were filtered to remove rare OTUs (fewer than 20 reads occurring in fewer than 5% of the samples).",
+          "gate": "G5"
+        }
+      ]
     }
   ],
-  "continuation_note": "Chemistry_Materials: after PMID:41466177 was excluded on deposit inspection, the deterministic Stage B chain was resumed for that stratum only (ranks 42-46) with the exclusion carried as a prior class; PMID:35003117 (rank 46, GEO GSE186841) was the first route-eligible candidate."
+  "continuation_note": "Chemistry_Materials: after PMID:41466177 was excluded on deposit inspection, the deterministic Stage B chain was resumed for that stratum only (ranks 42-46) with the exclusion carried as a prior class; PMID:35003117 (rank 46, GEO GSE186841) was the first route-eligible candidate. Biomedical_Basic: PMID:39327328 was excluded on 2026-09-25 after ENA inspection of PRJNA852409 (sample titles 21-0127..21-0140 versus article datasets 22-0038..22-0054; class deposited_input_mismatch under AMEND-2026-09-25-04); the deterministic chain for that stratum resumes at rank 15. Biomedical_Basic continuation (stage_b_routes_continuation_biomedical.json) reached PMID:33016314 at rank 46 through BioProject PRJNA641521."
 }

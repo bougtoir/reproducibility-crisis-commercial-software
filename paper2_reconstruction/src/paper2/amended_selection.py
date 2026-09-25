@@ -4,7 +4,7 @@ The record holds G1-G5 assessments of every Stage B route-eligible candidate plu
 custodian deposit inspection. This module re-validates each quote against the
 retained article text, joins the Stage B route row, applies the main-sample rule
 and writes a results table. Nothing here is a reconstruction outcome: dispositions
-are sampling-frame decisions and remain pending author verification.
+are sampling-frame decisions and remain pending investigator verification.
 """
 
 from __future__ import annotations
@@ -50,18 +50,20 @@ def route_rows(routes: list[Path]) -> tuple[dict[str, dict[str, object]], set[st
     Later records override earlier rows (a continuation re-records a candidate whose
     deposit inspection excluded it); the returned set holds every paper that was
     route-eligible in any record, i.e. every paper that required a G1-G5 assessment.
+    Each continuation must hash-chain to a record that precedes it in the list; strata
+    are screened independently, so several continuations may chain to the same base.
     """
     by_paper: dict[str, dict[str, object]] = {}
     ever_eligible: set[str] = set()
-    previous = b""
+    seen: set[str] = set()
     for path in routes:
         data = path.read_bytes()
         payload = mapping(json.loads(data))
         if payload["amendment_id"] != AMENDMENT:
             raise ValueError(f"{path.name}: route record belongs to a different amendment")
-        if previous and payload.get("continues_from_sha256") != sha256(previous):
+        if seen and payload.get("continues_from_sha256") not in seen:
             raise ValueError(
-                f"{path.name}: continuation does not hash-chain to the previous record"
+                f"{path.name}: continuation does not hash-chain to an earlier record"
             )
         rows = payload["rows"]
         if not isinstance(rows, list):
@@ -70,7 +72,7 @@ def route_rows(routes: list[Path]) -> tuple[dict[str, dict[str, object]], set[st
             by_paper[str(mapping(r)["paper_id"])] = mapping(r)
             if mapping(r)["exclusion_class"] == "":
                 ever_eligible.add(str(mapping(r)["paper_id"]))
-        previous = data
+        seen.add(sha256(data))
     return by_paper, ever_eligible
 
 
@@ -96,9 +98,9 @@ def disposition_is_consistent(row: dict[str, object], route: dict[str, object]) 
 
 def render(record_path: Path, screen: Path, routes: list[Path], results: Path) -> dict[str, object]:
     record = mapping(json.loads(record_path.read_bytes()))
-    if record["amendment_id"] != AMENDMENT or record["author_verification"] != "pending":
+    if record["amendment_id"] != AMENDMENT or record["investigator_verification"] != "pending":
         raise ValueError(
-            "record must reference the frozen amendment and keep author verification pending"
+            "record must reference the frozen amendment and keep investigator verification pending"
         )
     assessments = record["assessments"]
     if not isinstance(assessments, list):
@@ -156,7 +158,7 @@ def render(record_path: Path, screen: Path, routes: list[Path], results: Path) -
         "amendment_id": AMENDMENT,
         "record_sha256": sha256(record_path.read_bytes()),
         "route_records": [{"path": p.name, "sha256": sha256(p.read_bytes())} for p in routes],
-        "author_verification": "pending",
+        "investigator_verification": "pending",
         "route_eligible_assessed": len(rows),
         "main_sample_candidates": {
             str(r["sampling_stratum"]): {
@@ -209,6 +211,11 @@ def main() -> None:
             / "raw"
             / "deposit-screen-20260924"
             / "stage_b_routes_continuation_chemistry.json",
+            ROOT
+            / "data"
+            / "raw"
+            / "deposit-screen-20260924"
+            / "stage_b_routes_continuation_biomedical.json",
         ],
     )
     parser.add_argument("--results", type=Path, default=ROOT / "results")

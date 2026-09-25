@@ -1,6 +1,6 @@
 {
   "record_id": "devin_second_pass_G1_G5_20260924",
-  "scope": "delegated_second_pass_reverification_pending_author_verification_not_formal_human_adjudication",
+  "scope": "delegated_second_pass_reverification_pending_investigator_verification_not_formal_human_adjudication",
   "reviewer": "Devin (delegated adjudicator, second pass)",
   "gates": [
     "G1",
@@ -15,8 +15,8 @@
   "notes_sha256": "62e665f9618c51a071675a1fe67e5c53b92705a0759f4411576f89db16555ceb",
   "screen_directory": "data/raw/pilot-screen-20260923",
   "evidence_rule": "Every primary evidence quote was re-checked verbatim inside the cited segment of the hash-checked retained article text, and each access class cites the retained data-availability statement verbatim.",
-  "author_verification": "pending",
-  "author_verification_note": "This record does not substitute for the author's verification; gates stay provisional and the funnel stays unassessed until the author records decisions.",
+  "investigator_verification": "pending",
+  "investigator_verification_note": "This record does not substitute for the investigator team's verification; gates stay provisional and the funnel stays unassessed until the investigator team records decisions.",
   "recorded_utc": "2026-09-24T12:01:08.861114+00:00",
   "papers": 11,
   "verdict_counts": {
@@ -45,7 +45,7 @@
       "availability_quote": "Sequence data have been deposited in Genbank under accession numbers PV699648 - PV699692 , and PV688339 .",
       "access_class_under_amendment": "deposited_output_only",
       "note": "G1 = no stands: the central claim is colony pigmentation of strains on a new differential medium and the MEGA X phylogeny supports strain identification only. The Genbank deposit holds identification sequences, not inputs to a central computation, so the paper is not rescued by the amendment.",
-      "author_verification": "pending"
+      "investigator_verification": "pending"
     },
     {
       "paper_id": "PMID:36493775",
@@ -67,7 +67,7 @@
       "availability_quote": "Raw data from Figures 4 , 5 , 6 B, and 6C (Tables Z4–Z7) were deposited in the Zenodo database at https://doi.org/10.5281/zenodo.6377228 .",
       "access_class_under_amendment": "deposited_output_only",
       "note": "G1 = yes and G2 = yes stand on the quoted per-region Spearman statement. The anonymous Zenodo route holds the figure-source tables that contain the target statistic itself, so it is outcome leakage rather than analysis input; the analysis input is the ENA BAM study PRJEB51705, whose listed volume is far above the amendment caps. G5 remains uncertain.",
-      "author_verification": "pending"
+      "investigator_verification": "pending"
     },
     {
       "paper_id": "PMID:39730532",
@@ -89,7 +89,7 @@
       "availability_quote": "link: https://adni.loni.usc.edu/data-samples/access-data/",
       "access_class_under_amendment": "application_required",
       "note": "G1 = yes and G2 = yes stand on the quoted 91.84% test accuracy. The only named input is ADNI, whose access runs through an application, so under the amendment this is a sampling-frame exclusion and not a G3 study outcome.",
-      "author_verification": "pending"
+      "investigator_verification": "pending"
     },
     {
       "paper_id": "PMID:36358920",
@@ -111,7 +111,7 @@
       "availability_quote": "deposited to the ProteomeXchange Consortium",
       "access_class_under_amendment": "size_unannounced",
       "note": "G1 = yes and G2 = yes stand on the quoted counts of 12 upregulated and 15 downregulated proteins. PXD027610 answers anonymously and lists 89 files, but the route announces no file sizes, so practical retrievability cannot be established; the state is preserved as unannounced rather than asserted as unavailable.",
-      "author_verification": "pending"
+      "investigator_verification": "pending"
     },
     {
       "paper_id": "PMID:34031721",
@@ -133,7 +133,7 @@
       "availability_quote": "Data availability Available on reasonable request.",
       "access_class_under_amendment": "author_request_only",
       "note": "G1 = yes and G2 = yes stand on the quoted 40% movement reduction; G5 = insufficient stands because the marker-segmentation software is described as custom without a specification sufficient for an independent attempt. The data statement names no deposit.",
-      "author_verification": "pending"
+      "investigator_verification": "pending"
     },
     {
       "paper_id": "PMID:33574863",
@@ -155,7 +155,7 @@
       "availability_quote": "The experimental data were statistically sorted via Office 2016",
       "access_class_under_amendment": "no_deposit_named",
       "note": "G1 = no stands: reported outcomes are wet-lab enzyme activities summarised with one-way ANOVA in Office and Origin, with no central computational output. No deposit is named in the retained text.",
-      "author_verification": "pending"
+      "investigator_verification": "pending"
     },
     {
       "paper_id": "PMID:40496022",
@@ -177,7 +177,7 @@
       "availability_quote": "No data are associated with this article.",
       "access_class_under_amendment": "no_deposit_named",
       "note": "G1 = no stands and the article itself states that no data are associated with it.",
-      "author_verification": "pending"
+      "investigator_verification": "pending"
     },
     {
       "paper_id": "PMID:41497311",
@@ -199,7 +199,7 @@
       "availability_quote": "The data that support the findings of this study are available upon request from the corresponding author.",
       "access_class_under_amendment": "author_request_only",
       "note": "G1 = uncertain and G2 = uncertain stand: the quoted 56.8% is a survey proportion whose computational character cannot be settled from the retained text. The data statement is request-only, so the paper is excluded from the main frame under the amendment regardless of how G1 resolves.",
-      "author_verification": "pending"
+      "investigator_verification": "pending"
     },
     {
       "paper_id": "PMID:33584682",
@@ -221,7 +221,7 @@
       "availability_quote": "The original contributions presented in the study are included in the article/",
       "access_class_under_amendment": "supplement_only_unverified",
       "note": "G1 = yes and G2 = uncertain stand: the abstract names correlated quantities without fixing one principal target. The statement points only to article and supplementary material with further inquiries to the corresponding author, so no deposited analysis dataset is identified.",
-      "author_verification": "pending"
+      "investigator_verification": "pending"
     },
     {
       "paper_id": "PMID:36409083",
@@ -243,7 +243,7 @@
       "availability_quote": "Raw Illumina short-read data from the 157 newly generated S. aureus isolates are available on NGDC with BioProject identifier (ID) PRJCA012518",
       "access_class_under_amendment": "listing_unavailable",
       "note": "G1 = yes and G2 = uncertain stand: the quoted spl-cluster statement is a presence/absence pattern rather than a single numeric target. The NGDC BioProject page exists but exposed no anonymous machine-readable file list, so listing availability is unestablished rather than denied.",
-      "author_verification": "pending"
+      "investigator_verification": "pending"
     },
     {
       "paper_id": "PMID:39472468",
@@ -265,7 +265,7 @@
       "availability_quote": "Additional datasets generated and analyzed during the current study are available from the corresponding author on reasonable request.",
       "access_class_under_amendment": "author_request_only",
       "note": "G1 = yes and G2 = yes stand on the quoted 99% Fluidigm-pool accuracy. The fluorescence intensities consumed by the Random Forest model are request-only, so the paper cannot enter the main frame under the amendment.",
-      "author_verification": "pending"
+      "investigator_verification": "pending"
     }
   ]
 }

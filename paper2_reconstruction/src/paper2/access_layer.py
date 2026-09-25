@@ -16,7 +16,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from paper2.build import ROOT
-from paper2.core import sha256
+from paper2.core import sha256, verification_status
 from paper2.model_api import mapping
 from paper2.timestamp import stamp
 
@@ -34,6 +34,7 @@ CLASSES = {
     "deposited_output_only",
     "code_only_deposit",
     "supplement_only_unverified",
+    "deposited_input_mismatch",
 }
 FORBIDDEN_KEY_TERMS = (
     "rate",
@@ -61,18 +62,44 @@ KIND_CLASS = {
 }
 
 
-def freeze_amendment(document: Path, destination: Path, record: Path) -> dict[str, object]:
+INSTRUCTION_BASIS = {
+    AMENDMENT: (
+        "Author instruction 2026-09-24: restrict the main analysis to papers with "
+        "deposited analysis data that a third party can obtain lawfully and "
+        "immediately; retain excluded papers with reasons; hold the seven "
+        "provisional pilot papers in a separate accessibility layer without any "
+        "reconstruction success or failure rate."
+    ),
+    "AMEND-2026-09-25-04": (
+        "Investigator instruction 2026-09-25: the seven AMEND-2026-09-24-03 candidates "
+        "are a prospective pilot outside the primary denominator; investigator "
+        "verification replaces author verification; ten fields are frozen per paper "
+        "before reconstruction; deposited_input_mismatch is an exclusion class; no "
+        "Paper III analysis."
+    ),
+}
+ESTIMAND = {
+    AMENDMENT: (
+        "reconstruction success among computational papers with immediately "
+        "obtainable deposited analysis data"
+    ),
+    "AMEND-2026-09-25-04": (
+        "unchanged from AMEND-2026-09-24-03; estimated only on the post-freeze main "
+        "cohort, never on the prospective pilot"
+    ),
+}
+
+
+def freeze_amendment(
+    document: Path, destination: Path, record: Path, amendment_id: str = AMENDMENT
+) -> dict[str, object]:
+    if amendment_id not in INSTRUCTION_BASIS or amendment_id not in document.name:
+        raise ValueError(f"unknown amendment or mismatched document for {amendment_id}")
     receipt = stamp(document, destination)
     payload = {
-        "amendment_id": AMENDMENT,
+        "amendment_id": amendment_id,
         "scope": "protocol_amendment_hash_frozen_before_any_screening_under_it",
-        "instruction_basis": (
-            "Author instruction 2026-09-24: restrict the main analysis to papers with "
-            "deposited analysis data that a third party can obtain lawfully and "
-            "immediately; retain excluded papers with reasons; hold the seven "
-            "provisional pilot papers in a separate accessibility layer without any "
-            "reconstruction success or failure rate."
-        ),
+        "instruction_basis": INSTRUCTION_BASIS[amendment_id],
         "document": str(document.relative_to(ROOT)),
         "document_sha256": receipt["source_sha256"],
         "document_bytes": receipt["source_bytes"],
@@ -81,10 +108,7 @@ def freeze_amendment(document: Path, destination: Path, record: Path) -> dict[st
         "timestamp_receipt_dir": str(destination),
         "frozen_at_utc": receipt["retrieved_at_utc"],
         "applies_to": "every candidate screened after frozen_at_utc",
-        "main_sample_estimand": (
-            "reconstruction success among computational papers with immediately "
-            "obtainable deposited analysis data"
-        ),
+        "main_sample_estimand": ESTIMAND[amendment_id],
     }
     record.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
     return payload
@@ -195,7 +219,7 @@ def build_layer(
         "pilot_summary_sha256": sha256(summary.read_bytes()),
         "pilot_deviation": pilot["deviation"],
         "gate_verification": {
-            "author_verification": "pending",
+            "investigator_verification": "pending",
             "devin_second_pass": (
                 "each retained gate re-read against the hash-checked retained segments on "
                 "2026-09-24 and left unchanged; primary G3 values are superseded for "
@@ -259,7 +283,7 @@ def validate_layer(payload: dict[str, object]) -> dict[str, object]:
         "members": len(members),
         "exclusion_class_counts": dict(sorted(counts.items())),
         "rates": payload["rates"],
-        "author_verification": mapping(payload["gate_verification"])["author_verification"],
+        "investigator_verification": verification_status(mapping(payload["gate_verification"])),
     }
 
 
@@ -278,6 +302,7 @@ def main() -> None:
         type=Path,
         default=ROOT / "data" / "adjudication" / f"amendment_{AMENDMENT}.json",
     )
+    freeze.add_argument("--amendment-id", default=AMENDMENT)
     layer = sub.add_parser("layer")
     layer.add_argument(
         "--primary",
@@ -300,7 +325,14 @@ def main() -> None:
     )
     args = parser.parse_args()
     if args.command == "freeze":
-        print(json.dumps(freeze_amendment(args.document, args.destination, args.record), indent=2))
+        print(
+            json.dumps(
+                freeze_amendment(
+                    args.document, args.destination, args.record, args.amendment_id
+                ),
+                indent=2,
+            )
+        )
     else:
         payload = build_layer(args.primary, args.ledger, args.amendment, args.summary, args.record)
         print(json.dumps(validate_layer(payload), indent=2))

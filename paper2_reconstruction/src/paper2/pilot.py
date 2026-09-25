@@ -2,7 +2,7 @@
 
 The pilot runs under deviation DEV-2026-09-24-02: the G1-G5 assessment behind the
 seven provisional papers is Devin's delegated first pass and is not yet verified
-by the author, so pilot outcomes stay outside the main sample.
+by the investigator, so pilot outcomes stay outside the main sample.
 
 Target and allowed manifests are hashed and externally timestamped before any
 solver call. Each slot gets its own broker journal, its own served package and a
@@ -21,7 +21,7 @@ from pathlib import Path
 
 from paper2.build import ROOT
 from paper2.controller import Journal, Limits, run
-from paper2.core import sha256, snapshot
+from paper2.core import sha256, snapshot, verification_status
 from paper2.firewall import (
     POLICY_VERSION,
     Broker,
@@ -193,7 +193,7 @@ def execute(
     frozen = {
         "scope": "provisional_pilot_frozen_manifests_before_any_solver_call",
         "deviation": DEVIATION,
-        "author_verification": "pending",
+        "investigator_verification": "pending",
         "policy_version": POLICY_VERSION,
         "frozen_at_utc": datetime.now(timezone.utc).isoformat(),
         "slots_per_paper": SLOTS,
@@ -236,7 +236,7 @@ def execute(
         "scope": "provisional_pilot_blind_outcomes_sealed_before_adjudication_and_reveal",
         "deviation": DEVIATION,
         "harness_iteration": ITERATION,
-        "author_verification": "pending",
+        "investigator_verification": "pending",
         "main_sample_membership": "excluded",
         "superseded_iteration": (
             "harness-iteration-1 retained at pilot-20260924; stopped mostly on harness "
@@ -295,7 +295,7 @@ def summarise(outcome: Path) -> dict[str, object]:
         "scope": "provisional_pilot_run_level_counts_only; not an adjudicated outcome",
         "deviation": sealed["deviation"],
         "harness_iteration": sealed.get("harness_iteration", "unrecorded"),
-        "author_verification": sealed["author_verification"],
+        "investigator_verification": verification_status(sealed),
         "main_sample_membership": sealed["main_sample_membership"],
         "blind_outcome_sha256": sha256(outcome.read_bytes()),
         "frozen_manifest_sha256": sealed["frozen_manifest_sha256"],

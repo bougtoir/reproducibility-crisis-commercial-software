@@ -4,8 +4,8 @@ The second pass re-reads every recorded gate against the same hash-checked
 retained article segments, re-checks every primary evidence quote verbatim and
 cites the retained data-availability statement behind each paper's access class
 under amendment AMEND-2026-09-24-03. It is a delegated re-verification, not
-author verification: `author_verification` stays pending until the author
-records gate decisions personally.
+investigator verification: `investigator_verification` stays pending until the
+investigator team records gate decisions personally.
 """
 
 from __future__ import annotations
@@ -39,7 +39,7 @@ COLUMNS = (
     "quotes_checked",
     "availability_segment_id",
     "access_class_under_amendment",
-    "author_verification",
+    "investigator_verification",
 )
 
 
@@ -89,7 +89,7 @@ def verify(screen: Path, row: dict[str, object], note: dict[str, object]) -> dic
         "availability_quote": note["availability_quote"],
         "access_class_under_amendment": access_class,
         "note": note["note"],
-        "author_verification": "pending",
+        "investigator_verification": "pending",
     }
 
 
@@ -118,7 +118,7 @@ def render(
     payload = {
         "record_id": "devin_second_pass_G1_G5_20260924",
         "scope": (
-            "delegated_second_pass_reverification_pending_author_verification_"
+            "delegated_second_pass_reverification_pending_investigator_verification_"
             "not_formal_human_adjudication"
         ),
         "reviewer": review["reviewer"],
@@ -133,10 +133,11 @@ def render(
             "of the hash-checked retained article text, and each access class cites the "
             "retained data-availability statement verbatim."
         ),
-        "author_verification": "pending",
-        "author_verification_note": (
-            "This record does not substitute for the author's verification; gates stay "
-            "provisional and the funnel stays unassessed until the author records decisions."
+        "investigator_verification": "pending",
+        "investigator_verification_note": (
+            "This record does not substitute for the investigator team's verification; gates stay "
+            "provisional and the funnel stays unassessed until the investigator team "
+            "records decisions."
         ),
         "recorded_utc": datetime.now(timezone.utc).isoformat(),
         "papers": len(rows),
@@ -163,7 +164,7 @@ def render(
                 "quotes_checked": row["quotes_rechecked"],
                 "availability_segment_id": row["availability_segment_id"],
                 "access_class_under_amendment": row["access_class_under_amendment"],
-                "author_verification": row["author_verification"],
+                "investigator_verification": row["investigator_verification"],
             }
             for row in rows
         ],
@@ -171,7 +172,7 @@ def render(
     )
     summary = {key: payload[key] for key in ("record_id", "papers", "verdict_counts")}
     summary["quotes_rechecked"] = payload["quotes_rechecked"]
-    summary["author_verification"] = payload["author_verification"]
+    summary["investigator_verification"] = payload["investigator_verification"]
     (results / "second_pass_G1_G5.json").write_text(
         json.dumps(summary, indent=2, ensure_ascii=False) + "\n"
     )
@@ -206,7 +207,7 @@ def main() -> None:
                 "papers": payload["papers"],
                 "verdict_counts": payload["verdict_counts"],
                 "quotes_rechecked": payload["quotes_rechecked"],
-                "author_verification": payload["author_verification"],
+                "investigator_verification": payload["investigator_verification"],
             },
             indent=2,
         )

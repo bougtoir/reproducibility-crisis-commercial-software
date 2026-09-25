@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from xml.etree import ElementTree
 
-from paper2.acquisition import acquire
+from paper2.acquisition import acquire, acquire_stream
 from paper2.build import ROOT
 from paper2.core import sha256, snapshot
 from paper2.model_api import mapping
@@ -291,12 +291,72 @@ def acquire_all(destination: Path) -> dict[str, object]:
     return ledger
 
 
+def fetch_ena_runs(report: Path, destination: Path, accession: str) -> dict[str, object]:
+    """Stream every FASTQ listed in a retained ENA file report to persistent storage.
+
+    The report is the retained anonymous ENA listing; each file is fetched over
+    HTTPS from the listed path, verified against the listed md5 and byte count, and
+    receipted. Nothing is unpacked or read.
+    """
+    lines = report.read_text().splitlines()
+    header = lines[0].split("\t")
+    rows = [dict(zip(header, line.split("\t"), strict=True)) for line in lines[1:]]
+    files: list[dict[str, object]] = []
+    for row in rows:
+        paths = row["fastq_ftp"].split(";")
+        md5s = row["fastq_md5"].split(";")
+        sizes = row["fastq_bytes"].split(";")
+        for path, digest, size in zip(paths, md5s, sizes, strict=True):
+            _, receipt = acquire_stream(
+                f"https://{path}",
+                f"ena:{accession} {row['run_accession']} {path.rsplit('/', 1)[-1]}",
+                destination / row["run_accession"],
+                request_conditions=(
+                    "GET anonymous ENA FASTQ mirror over HTTPS; path, md5 and bytes taken "
+                    "from the retained file report; no login, payment or author contact"
+                ),
+                expected_md5=digest,
+                expected_bytes=int(size),
+            )
+            files.append(
+                {
+                    "run_accession": row["run_accession"],
+                    "file": path.rsplit("/", 1)[-1],
+                    "bytes": receipt["bytes"],
+                    "sha256": receipt["sha256"],
+                    "completeness": receipt["completeness"],
+                }
+            )
+            print(row["run_accession"], receipt["bytes"], receipt["completeness"], flush=True)
+    ledger = {
+        "accession": accession,
+        "report_sha256": sha256(report.read_bytes()),
+        "retrieved_at_utc": datetime.now(timezone.utc).isoformat(),
+        "files": files,
+        "complete_files": sum(1 for f in files if f["completeness"] == "complete_response"),
+        "total_bytes": sum(int(str(f["bytes"])) for f in files),
+    }
+    snapshot(
+        destination / f"{accession}_fetch_ledger.json",
+        (json.dumps(ledger, indent=2) + "\n").encode(),
+    )
+    return ledger
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--output", type=Path, default=ROOT / "data" / "raw" / "pilot-inputs-20260924"
     )
+    parser.add_argument("--ena-report", type=Path)
+    parser.add_argument("--accession")
     args = parser.parse_args()
+    if args.ena_report is not None:
+        if args.accession is None:
+            raise SystemExit("--accession is required with --ena-report")
+        ena = fetch_ena_runs(args.ena_report, args.output, args.accession)
+        print(json.dumps({k: ena[k] for k in ("accession", "complete_files", "total_bytes")}))
+        return
     ledger = acquire_all(args.output)
     deposits = ledger["deposits"]
     summary = {

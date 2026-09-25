@@ -1,7 +1,7 @@
 # Paper II protocol
 
 **DRAFT — NOT FROZEN. A provisional pilot has been executed under deviation
-`DEV-2026-09-24-02` with author verification of G1–G5 still pending; its runs are
+`DEV-2026-09-24-02` with investigator verification of G1–G5 still pending; its runs are
 sealed unadjudicated and excluded from the main sample. No main reconstruction
 experiment has occurred.**
 
@@ -68,11 +68,11 @@ unavailable to the pilot with the routes checked; this is not a G3 input verdict
 not a G1 negative and does not remove the paper from the main frame. Machine
 screening of retained text yields provisional G1/G2 proposals only; human
 adjudication against the retained bytes is required before any gate is recorded.
-If the author delegates the first pass, the delegated gates are recorded as a
+If the investigator delegates the first pass, the delegated gates are recorded as a
 named primary-assessment record with a deviation entry, every gate citing segment
 IDs of the hash-checked retained bytes, and remain provisional: the funnel stays
-unassessed and no pilot selection is frozen until the author verifies or overturns
-each gate. Delegated or author adjudication may skip a candidate only for absent
+unassessed and no pilot selection is frozen until the investigator team verifies or overturns
+each gate. Delegated or human adjudication may skip a candidate only for absent
 lawfully retained text or for G1/G2 ineligibility, never for G3, G4, G5 or
 expected reconstruction difficulty, and every skipped candidate is retained with
 its reason in the deterministic chain.

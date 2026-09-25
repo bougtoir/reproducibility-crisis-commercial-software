@@ -73,7 +73,7 @@ def prepare(
     snapshot(screen / "123" / "sources.json", json.dumps(sources).encode())
     record = {
         "scope": "devin_delegated_amended_assessment",
-        "author_verification": "pending",
+        "investigator_verification": "pending",
         "amendment_id": AMENDMENT,
         "assessments": assessments,
     }
@@ -102,9 +102,9 @@ def test_main_sample_candidate_is_rendered_without_rates(tmp_path: Path) -> None
     assert summary["main_sample_candidates"]["Physics_Engineering"]["paper_id"] == "PMID:123"
     assert summary["reconstruction_started"] is False
     assert summary["rates"].startswith("not applicable")
-    assert summary["author_verification"] == "pending"
+    assert summary["investigator_verification"] == "pending"
     csv_text = (results / "amended_candidate_selection.csv").read_text()
-    assert "DEVIN_PRIMARY_PENDING_AUTHOR_VERIFICATION" in csv_text
+    assert "DEVIN_PRIMARY_PENDING_INVESTIGATOR_VERIFICATION" in csv_text
     assert "1000" in csv_text
 
 
@@ -138,10 +138,10 @@ def test_every_route_eligible_candidate_must_be_assessed(tmp_path: Path) -> None
         render(record, screen, routes, tmp_path)
 
 
-def test_author_verification_must_stay_pending(tmp_path: Path) -> None:
+def test_investigator_verification_must_stay_pending(tmp_path: Path) -> None:
     record, screen, routes = prepare(tmp_path, [assessment()], [route()])
     payload = json.loads(record.read_text())
-    payload["author_verification"] = "verified"
+    payload["investigator_verification"] = "verified"
     record.write_text(json.dumps(payload))
     with pytest.raises(ValueError, match="pending"):
         render(record, screen, routes, tmp_path)

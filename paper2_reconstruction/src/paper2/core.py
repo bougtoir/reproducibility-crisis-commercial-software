@@ -29,6 +29,18 @@ def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def verification_status(record: Mapping[str, object]) -> str:
+    """Read the human-verification state of a gate record.
+
+    Records written before amendment AMEND-2026-09-25-04 (terminology) spell the key
+    `author_verification`; they are hash-bound evidence and are read, not rewritten.
+    """
+    for key in ("investigator_verification", "author_verification"):
+        if key in record:
+            return str(record[key])
+    raise ValueError("record carries no investigator verification state")
+
+
 def read_csv(path: Path) -> list[Row]:
     with path.open(newline="", encoding="utf-8-sig") as handle:
         return list(csv.DictReader(handle))

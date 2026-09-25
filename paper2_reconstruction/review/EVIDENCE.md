@@ -71,7 +71,7 @@ and the funnel is unchanged.
 ## Delegated primary G1–G5 adjudication (2026-09-24)
 
 On author instruction the first-pass G1–G5 adjudication was recorded by Devin
-instead of the author, as deviation `DEV-2026-09-23-01`
+instead of the investigator, as deviation `DEV-2026-09-23-01`
 (`data/adjudication/devin_primary_G1_G5_20260923.json`). Eleven candidates were
 assessed against the hash-checked retained article bytes;
 `paper2.primary_adjudication` re-validates every gate value, requires each cited
@@ -87,7 +87,7 @@ provisional set retains restricted-input, commercial-software and
 insufficient-specification cases as study outcomes. The screening order was
 extended to 13 ranks per field only to reach the next lawfully retained
 Social_Behavioral candidate (`results/pilot_candidate_screening.json`,
-`extension_20260923_to_13_ranks`). These gates are provisional pending author
+`extension_20260923_to_13_ranks`). These gates are provisional pending investigator
 verification; the funnel remains `NOT_STARTED`, pilot selection is not frozen, and
 no reconstruction has been attempted.
 
@@ -140,8 +140,8 @@ route observations, not as G3 input verdicts.
 ## Provisional pilot execution (2026-09-24)
 
 Executed under deviation `DEV-2026-09-24-02`
-(`data/adjudication/pilot_execution_DEV-2026-09-24-02.json`) on the author's
-explicit authorisation while author verification of G1–G5 remains pending. Seven
+(`data/adjudication/pilot_execution_DEV-2026-09-24-02.json`) on the principal
+investigator's explicit authorisation while investigator verification of G1–G5 remains pending. Seven
 provisional papers, one per stratum, three independent slots each. Every slot
 received its own broker journal, its own served package (the hash-checked article
 plus the pinned free-software closure) and a fresh isolated worker with no shared
@@ -168,11 +168,11 @@ is assessable.
 
 ## Second-pass gate verification, accessibility layer and amended criterion (2026-09-24)
 
-On author instruction the provisional pilot papers were removed from the main
+On investigator instruction the provisional pilot papers were removed from the main
 reconstruction sample before any adjudication. `paper2.second_pass` re-read all
 37 retained quotes of the eleven primary G1–G5 assessments against the
 hash-checked segments and confirmed every gate without correction
-(`results/second_pass_G1_G5.json`); this is a Devin re-verification, and author
+(`results/second_pass_G1_G5.json`); this is a delegated re-verification, and investigator
 verification of G1–G5 remains `pending` in every record. Protocol amendment
 `AMEND-2026-09-24-03` (`protocols/AMENDMENT_AMEND-2026-09-24-03_deposited_data_criterion.md`,
 SHA-256 `e4c8f82d…74d23`) was hash-frozen and RFC 3161 timestamped
@@ -213,11 +213,11 @@ GEO `GSE186841` (PMID:35003117, two per-sample count tables, no result columns)
 at rank 46. `paper2.amended_selection` re-validates every quote, rank, route
 class and leakage class and writes `results/amended_candidate_selection.{csv,json}`:
 one main-sample candidate in each of the seven strata (four unconditional; the
-Biomedical_Basic target requires author pre-specification and the
+Biomedical_Basic target requires investigator pre-specification and the
 Computational_Science candidate an input-completeness check before freeze).
 Dryad file downloads for two candidates required a browser JavaScript challenge
 but no account, payment or contact, and were retained anonymously; this route
 condition is recorded. These dispositions are sampling-frame decisions from a
-delegated record pending author verification; the funnel is not updated, no
+delegated record pending investigator verification; the funnel is not updated, no
 target manifest is frozen, no reconstruction has started, and the summary
 carries no rate.
