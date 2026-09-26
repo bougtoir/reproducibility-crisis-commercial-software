@@ -1,0 +1,13 @@
+{
+  "source_sha256": "43cc2ec8a280d04e71b860b7f1135e0106be41f125b8b5643ab289968428b34f",
+  "source_bytes": 151530,
+  "source_name": "pilot_prospective_freeze_20260925.json",
+  "url": "https://freetsa.org/tsr",
+  "retrieved_at_utc": "2026-09-25T02:22:23.729824+00:00",
+  "request_conditions": "POST RFC3161 SHA-256 digest and nonce; source bytes not transmitted",
+  "request_sha256": "158cd1694a10a22e9539a1456fe73ee52d5c69b94bc120eeb5804d6f356630ee",
+  "response_sha256": "49f17892582e611313e6c4f8be887522ba2a50f3321d9b1fa5f8e8f3bedf95ff",
+  "response_bytes": 4643,
+  "http_status": 200,
+  "trust_anchor_sha256": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438"
+}

@@ -1,0 +1,14 @@
+{
+  "amendment_id": "AMEND-2026-09-25-04",
+  "scope": "protocol_amendment_hash_frozen_before_any_screening_under_it",
+  "instruction_basis": "Investigator instruction 2026-09-25: the seven AMEND-2026-09-24-03 candidates are a prospective pilot outside the primary denominator; investigator verification replaces author verification; ten fields are frozen per paper before reconstruction; deposited_input_mismatch is an exclusion class; no Paper III analysis.",
+  "document": "protocols/AMENDMENT_AMEND-2026-09-25-04_pilot_role_and_prospective_freeze.md",
+  "document_sha256": "a880449395cd08392cdffdf95264bcfddfd662911b8ca4467d895aa460a8dcfe",
+  "document_bytes": 5733,
+  "timestamp_response_sha256": "8a1a80b11b96dada98465147a36427b685a38e745705528742f5e2eea69c34e4",
+  "timestamp_status": "cryptographically_verified_against_pinned_freetsa_ca",
+  "timestamp_receipt_dir": "data/raw/amendment-AMEND-2026-09-25-04",
+  "frozen_at_utc": "2026-09-25T00:53:11.735886+00:00",
+  "applies_to": "every candidate screened after frozen_at_utc",
+  "main_sample_estimand": "unchanged from AMEND-2026-09-24-03; estimated only on the post-freeze main cohort, never on the prospective pilot"
+}

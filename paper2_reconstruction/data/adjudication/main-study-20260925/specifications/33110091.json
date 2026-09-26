@@ -1,0 +1,182 @@
+{
+  "paper_id": "PMID:33110091",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "1c86fc77675ee615bc1ed220a3377f391a8e6279fe3b573a3b3e8eb13254b7a6",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE141877",
+      "files": [
+        {
+          "name": "GSE141877_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-26T02:50:19.224395+00:00",
+  "api": {
+    "response_id": "c22812b5-2921-4bd5-aed2-6255c615028d",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 21216,
+    "completion_tokens": 2348
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0024",
+            "quote": "we first processed publicly available WGBS data derived from primordial germ cells (PGCs), spermatozoa and oocytes 2 , 33 , 47 . We then applied our recently developed allele-specific pipeline for Methylomic and Epigenomic Analysis (MEA) 48 to WGBS data generated from 2C (55× coverage) as well as 4C, ICM, E6.5 and E7.5 F1 (C57BL/6J × DBA/2J) hybrid embryos 16 ."
+          },
+          {
+            "segment_id": "S0115",
+            "quote": "Reads were trimmed using Trimmomatic v0.32 80 and processed for total and allele-specific alignments using MEA v1.0 48 using default parameters (STAR v2.4.0i, Bowtie2 v2.2.3 and Bismark v0.16.3 for RNA-, ChIP-seq and PBAT, respectively) and the mm10 reference genome."
+          }
+        ],
+        "rationale": "The principal result (PMA at 63 CGI promoters) is produced by computational analysis of WGBS data using the MEA pipeline, which a third party can re-run given the deposited data and public data."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0041",
+            "quote": "While the vast majority of CGI promoters hypomethylated in sperm maintain low paternal DNAme levels in 2C embryos, 63 showed clear evidence of PMA (defined as a ≥30% gain, Fig. 1f and Supplementary Data 1 )."
+          },
+          {
+            "segment_id": "S0094",
+            "quote": "we determined that ~4% of all hypomethylated regions in sperm, including at least 63 CGI promoters, are de novo methylated on the paternal genome by the 2C stage."
+          }
+        ],
+        "rationale": "The principal quantitative result is the count of CGI promoters showing PMA (63), which is a primary numerical endpoint stated in the abstract and results."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0132",
+            "quote": "Sequencing datasets generated in this study have been deposited in GEO under the accession number “ GSE141877 ”."
+          },
+          {
+            "segment_id": "S0116",
+            "quote": "All publicly available NGS data (Supplementary Data 2 ) was reprocessed as above, with the exception of WGBS datasets from sperm 2 , oocytes 33 , parthenotes 45 and primordial germ cells 47 , which were previously processed and filtered using identical parameters as in this study."
+          }
+        ],
+        "rationale": "The deposit GSE141877 contains raw sequencing data generated in this study, but the analysis also relies on many publicly available datasets not in this deposit. The listing shows only GSE141877_RAW.tar and filelist.txt, which likely contain raw data, but it is unclear if these are the exact inputs for the target analysis without further details."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0115",
+            "quote": "Reads were trimmed using Trimmomatic v0.32 80 and processed for total and allele-specific alignments using MEA v1.0 48 using default parameters (STAR v2.4.0i, Bowtie2 v2.2.3 and Bismark v0.16.3 for RNA-, ChIP-seq and PBAT, respectively) and the mm10 reference genome."
+          },
+          {
+            "segment_id": "S0119",
+            "quote": "Genome-wide 600 bp bins with 100 bp overlap were used to measure male/paternal allele DNAme dynamics in sperm and F1 hybrid 2C embryos. Bins covered by at least 2 CpGs separated by over 1 read length in each dataset were kept. Bins showing <20% DNAme in sperm and a ≥30% gain in 2C embryos were scored as showing PMA."
+          }
+        ],
+        "rationale": "The methods section describes the computational pipeline, parameters, and criteria for identifying PMA, sufficient for implementation without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0115",
+            "quote": "Reads were trimmed using Trimmomatic v0.32 80 and processed for total and allele-specific alignments using MEA v1.0 48 using default parameters (STAR v2.4.0i, Bowtie2 v2.2.3 and Bismark v0.16.3 for RNA-, ChIP-seq and PBAT, respectively) and the mm10 reference genome."
+          },
+          {
+            "segment_id": "S0133",
+            "quote": "Publicly available software and VisRseq v0.9.12 82 was used for analysis and graphical representation of data. A custom python v2 script was used for tabular data filtering and is available upon request."
+          }
+        ],
+        "rationale": "All software mentioned (Trimmomatic, MEA, STAR, Bowtie2, Bismark, VisRseq) are free and open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "Number of CGI promoters showing paternal DNA methylation acquisition (PMA) by the 2-cell stage: 63",
+    "target_values": [
+      "63"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of CpG island promoters that gain DNA methylation on the paternal genome from sperm to the 2-cell stage in F1 hybrid embryos.",
+    "target_type": "count",
+    "target_location": "Results, Fig. 1f and Supplementary Data 1",
+    "location_quotes": [
+      {
+        "segment_id": "S0041",
+        "quote": "While the vast majority of CGI promoters hypomethylated in sperm maintain low paternal DNAme levels in 2C embryos, 63 showed clear evidence of PMA (defined as a ≥30% gain, Fig. 1f and Supplementary Data 1 )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0115",
+        "quote": "Reads were trimmed using Trimmomatic v0.32 80 and processed for total and allele-specific alignments using MEA v1.0 48 using default parameters (STAR v2.4.0i, Bowtie2 v2.2.3 and Bismark v0.16.3 for RNA-, ChIP-seq and PBAT, respectively) and the mm10 reference genome."
+      },
+      {
+        "segment_id": "S0119",
+        "quote": "Genome-wide 600 bp bins with 100 bp overlap were used to measure male/paternal allele DNAme dynamics in sperm and F1 hybrid 2C embryos. Bins covered by at least 2 CpGs separated by over 1 read length in each dataset were kept. Bins showing <20% DNAme in sperm and a ≥30% gain in 2C embryos were scored as showing PMA."
+      },
+      {
+        "segment_id": "S0118",
+        "quote": "DNAme levels were calculated over CGI promoters using Bedops v2.4.27 81 and visualized using VisRseq v0.9.12 82 . Only CGI promoters that overlapped at least 2 informative CpGs separated by the maximum sequencing read length of the library were kept."
+      }
+    ],
+    "required_files": [
+      "GSE141877_RAW.tar"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit GSE141877 contains raw sequencing data generated in this study. However, the analysis also uses many publicly available datasets (e.g., sperm, oocyte, PGC WGBS) that are not in this deposit. The file GSE141877_RAW.tar likely contains raw FASTQ files for the samples generated in this study, but the exact contents are not listed. The target analysis requires allele-specific WGBS data from F1 hybrid 2C embryos, which may be included in this deposit.",
+    "leakage_files": [
+      {
+        "name": "filelist.txt",
+        "reason": "May contain a list of files that could include processed data or result tables, potentially revealing the target value."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "mm10 reference genome",
+        "version": "mm10"
+      },
+      {
+        "name": "NCBI RefSeq",
+        "version": "default in VisRseq"
+      },
+      {
+        "name": "Ensembl Regulatory features",
+        "version": "release 81"
+      },
+      {
+        "name": "UCSC CGI annotations",
+        "version": "last updated 2012-02-09"
+      }
+    ],
+    "comparison_metric": "The observed count of CGI promoters meeting the PMA criteria (≥30% gain in paternal DNAme from sperm to 2C) is compared to the reported count of 63.",
+    "numerical_agreement_criterion": "Counts exact: the number of CGI promoters identified as PMA must exactly match 63.",
+    "specification_gaps": "The exact set of CGI promoters used as the starting list (12,253 filtered autosomal CGI promoters) and the specific filtering steps (e.g., CpG density, H3K4me3 enrichment) are described but may require additional data (e.g., H3K4me3 ChIP-seq from sperm) not in the deposit. The allele-specific pipeline MEA v1.0 is publicly available but its exact parameters and implementation details may affect reproducibility. The definition of 'informative CpGs' and coverage thresholds are specified but may be sensitive to data processing choices.",
+    "alternatives_considered": [
+      {
+        "target": "Number of PMA loci that maintain DNAme to blastocyst stage (53)",
+        "reason": "This is a secondary result, not the principal quantitative endpoint; the primary result is the initial identification of PMA at 63 CGI promoters."
+      },
+      {
+        "target": "Percentage of hypomethylated regions showing PMA (~4%)",
+        "reason": "This is a derived proportion, but the count of 63 CGI promoters is more specific and directly tied to the main conclusion."
+      },
+      {
+        "target": "Number of androgenetic blastocyst CGI promoters with ≥10% gain (86)",
+        "reason": "This is from an independent analysis and not the primary allele-specific result in F1 hybrids."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

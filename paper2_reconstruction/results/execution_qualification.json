@@ -1,0 +1,50 @@
+{
+  "status": "execution_controls_pass",
+  "scope": "synthetic_software_qualification_only",
+  "main_study_authorized": false,
+  "pilot_authorized": false,
+  "image": "python@sha256:65a93d69fa75478d554f4ad27c85c1e69fa184956261b4301ebaf6dbb0a3543d",
+  "harness_sha256": "6460335e8481765a4196961ae04a57f44b5de215f20f0ce6dd1fc2712803f9d4",
+  "recorded_at_utc": "2026-09-22T13:34:39.247216+00:00",
+  "checks": [
+    {
+      "capabilities_empty": true,
+      "external_network_denied": true,
+      "input_readable": true,
+      "input_readonly": true,
+      "memory_limit": true,
+      "no_api_credential": true,
+      "no_docker_socket": true,
+      "no_host_canary": true,
+      "no_new_privileges": true,
+      "no_sibling_state": true,
+      "nonroot": true,
+      "pids_limit": true,
+      "root_readonly": true,
+      "seccomp_filter": true
+    },
+    {
+      "capabilities_empty": true,
+      "external_network_denied": true,
+      "input_readable": true,
+      "input_readonly": true,
+      "memory_limit": true,
+      "no_api_credential": true,
+      "no_docker_socket": true,
+      "no_host_canary": true,
+      "no_new_privileges": true,
+      "no_sibling_state": true,
+      "nonroot": true,
+      "pids_limit": true,
+      "root_readonly": true,
+      "seccomp_filter": true
+    }
+  ],
+  "unqualified": [
+    "model_API_controller_and_effective_context",
+    "package_custodian_review_and_broker",
+    "dependency_closure_and_scientific_packages",
+    "telemetry_completeness_and_budget_comparability",
+    "independent_adjudication_and_external_freeze"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "record_id": "pilot-execution-deviation-2026-09-24",
+  "deviation_id": "DEV-2026-09-24-02",
+  "scope": "Authorisation and conditions of the provisional pilot execution; not an outcome record",
+  "protocol_clause": "protocols/PROTOCOL.md: pilot cases are frozen only after the author has verified G1-G5 against the retained bytes",
+  "description": "The seven provisional pilot papers rest on Devin's delegated first-pass G1-G5 assessment (DEV-2026-09-23-01). The author has not yet verified or overturned those gates. The pilot was nevertheless executed so that harness behaviour and stopping points could be observed before the main sample.",
+  "authorisation": {
+    "granted_by": "author (Tatsuki Onishi)",
+    "granted_utc": "2026-09-24",
+    "verbatim_selection": "Devin一次判定のまま暫定パイロットをdeviation記録付きで実行する（API費用・長時間実行あり）",
+    "acknowledged": "API cost and long runtime"
+  },
+  "consequences": [
+    "Pilot runs are excluded from the main sample and from any success rate.",
+    "Pilot selection is not author-adjudicated and must not be presented as such.",
+    "If author verification overturns a gate that affects eligibility, the affected stratum is re-selected before any counted run.",
+    "Claimed reports are sealed unadjudicated; L1-L5 remain not_adjudicated until blind adjudication and human validation."
+  ],
+  "served_material": {
+    "per_slot": "one identity-verified open PMC JATS article plus the pinned free dependency closure",
+    "deposited_inputs_served": "none",
+    "reason": "No deposited study input was simultaneously public, below the 64 MiB retention cap, machine-readable and free of outcome leakage; see the retained acquisition ledger under data/raw/pilot-inputs-20260924/",
+    "outcome_leakage_exclusion": "The Zenodo record 10.5281/zenodo.6377228 files retained for PMID:36493775 are the figure source tables of the target itself. They are kept as raw evidence for post-reveal validation and were not served to any solver."
+  },
+  "execution_conditions": {
+    "slots_per_paper": 3,
+    "independence": "separate broker journal, separate served package, fresh isolated worker, no shared mutable state, no parent or sibling debugging",
+    "freeze_order": "target and allowed manifests hashed and RFC3161 timestamped before the first solver call; blind outcomes sealed and timestamped before any reveal-class request",
+    "reveal": "not_performed",
+    "adjudication": "not_performed"
+  },
+  "harness_iterations": [
+    {
+      "iteration": "harness-iteration-1",
+      "evidence": "/home/ubuntu/paper2_evidence/pilot-20260924 (private; contains article-derived text)",
+      "observation": "20 of 21 slots stopped on harness limits rather than on study evidence: context-budget exhaustion from full tool output, worker termination on a single oversized print, provider completion truncation and one malformed action.",
+      "disposition": "retained, not discarded; not usable as evidence about the papers"
+    },
+    {
+      "iteration": "harness-iteration-2",
+      "changes": [
+        "tool output is recorded in full and truncated only in the model context",
+        "an oversized print no longer terminates the run or the worker; only the wall limit does",
+        "a truncated or malformed action is recorded and returned to the solver within a fixed budget instead of ending the run",
+        "larger wall, token, completion and tool-call envelope"
+      ],
+      "evidence": "/home/ubuntu/paper2_evidence/pilot-20260924b (private)"
+    }
+  ],
+  "unqualified_at_execution_time": [
+    "provider-hosted model-side retrieval, web, Git, MCP and session tool restriction",
+    "three-slot scheduling and budget comparability",
+    "independent human adjudicator governance",
+    "prior model-training exposure, which cannot be certified absent at runtime"
+  ]
+}

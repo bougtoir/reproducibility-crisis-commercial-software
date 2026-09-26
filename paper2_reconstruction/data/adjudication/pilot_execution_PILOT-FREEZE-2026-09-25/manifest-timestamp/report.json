@@ -1,0 +1,17 @@
+{
+  "source_sha256": "258ff4d943077cbd4bb13d16d13e665b32e81ca9cf146b753adf018e1db6f69b",
+  "source_bytes": 2036,
+  "source_name": "frozen_manifest.json",
+  "url": "https://freetsa.org/tsr",
+  "retrieved_at_utc": "2026-09-25T02:23:52.689863+00:00",
+  "request_conditions": "POST RFC3161 SHA-256 digest and nonce; source bytes not transmitted",
+  "request_sha256": "959c4f6c6c392b028edae56b4a5fc731e659ed9f948b87a68612e1da2e0a47b1",
+  "response_sha256": "030af2b352cd67a7f3b41fa3bc1158b2cb0b967292374f13a08b0703b2b281ad",
+  "response_bytes": 4644,
+  "http_status": 200,
+  "trust_anchor_sha256": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438",
+  "status": "cryptographically_verified_against_pinned_freetsa_ca",
+  "scope": "file_existence_timestamp_only_not_study_readiness_or_preregistration",
+  "source_path": "/home/ubuntu/paper2_evidence/pilot-run-20260925/destination/frozen_manifest.json",
+  "receipt_path": "/home/ubuntu/paper2_evidence/pilot-run-20260925/destination/manifest-timestamp/receipt.json"
+}

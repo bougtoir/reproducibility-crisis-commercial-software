@@ -1,0 +1,13 @@
+FROM python@sha256:65a93d69fa75478d554f4ad27c85c1e69fa184956261b4301ebaf6dbb0a3543d
+COPY requirements-science.lock /opt/requirements-science.lock
+RUN python -m pip install --no-cache-dir --only-binary=:all: --require-hashes -r /opt/requirements-science.lock
+RUN apt-get update \
+    && apt-get install --no-install-recommends -y clustalw=2.1+lgpl-7 iqtree=2.0.7+dfsg-1 \
+       vsearch=2.22.1-1 minimap2=2.24+dfsg-3+b1 bcftools=1.16-1 samtools=1.16.1-1 \
+       cutadapt=4.2-1 fastp=0.23.2+dfsg-2+b1 seqtk=1.3-4 ivar=1.3.1+dfsg-7 \
+       r-base-core=4.2.2.20221110-2 r-base-dev=4.2.2.20221110-2 \
+       r-bioc-edger=3.40.2+dfsg-1 r-bioc-deseq2=1.38.3+dfsg-1 \
+       unzip=6.0-28+deb12u1 \
+    && rm -rf /var/lib/apt/lists/*
+RUN Rscript -e 'install.packages("BiocManager", repos="https://cloud.r-project.org"); BiocManager::install("DEGseq", update=FALSE, ask=FALSE, version="3.16"); library(DEGseq); cat(as.character(packageVersion("DEGseq")), "\n")'
+ENV OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=/work/.matplotlib HOME=/work R_LIBS_USER=/work/.Rlib

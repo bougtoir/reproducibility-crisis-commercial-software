@@ -1,0 +1,33 @@
+{
+  "scope": "provisional_pilot_run_level_counts_only; not an adjudicated outcome",
+  "deviation": "DEV-2026-09-24-02",
+  "harness_iteration": "harness-iteration-2",
+  "author_verification": "pending",
+  "main_sample_membership": "excluded",
+  "blind_outcome_sha256": "ab837a8af1024b5312a41ae3ab4269bc121260492821752577af10ed50a8c794",
+  "frozen_manifest_sha256": "eb061ceea70959c472a89bc2b85644735addab07ada820cbdcf6beec398880b1",
+  "sealed_at_utc": "2026-09-24T10:52:50.034802+00:00",
+  "papers": 7,
+  "runs": 21,
+  "slots_per_paper": {
+    "PMID:33584682": 3,
+    "PMID:34031721": 3,
+    "PMID:36358920": 3,
+    "PMID:36409083": 3,
+    "PMID:36493775": 3,
+    "PMID:39472468": 3,
+    "PMID:39730532": 3
+  },
+  "stop_reasons": {
+    "final_report": 12,
+    "token_reserve_limit": 9
+  },
+  "runs_with_claimed_report": 12,
+  "runs_with_non_null_observed_value": 0,
+  "runs_with_recorded_failure_codes": 12,
+  "deposited_input_files_served": 0,
+  "adjudication": "not_performed",
+  "reveal": "not_performed",
+  "L1_L5_outcomes": "not_adjudicated",
+  "primary_success_rate": "not_assessable_until_adjudication_and_human_validation"
+}

@@ -1,0 +1,14 @@
+{
+  "decision": "approved_unique_pmid",
+  "author": "Tatsuki Onishi",
+  "verbatim_author_selection": "公開原本を保持し、固有9,935論文を対象に進める",
+  "recorded_at_utc": "2026-09-22T13:25:53Z",
+  "timestamp_scope": "decision recording time; original message timestamp not exposed",
+  "source": "https://app.devin.ai/sessions/cca328bff0ef46719742af138ffe1fb1",
+  "source_commit": "2414f8d65cf2fe33c744c0a62cc05b6c77868367",
+  "source_sha256": "08068a5662968c8ffd1b70c7d61b3a6a4ed0cc42dda02f40ca0d113be3b750d0",
+  "identity": "PMID",
+  "original_rows": "preserve_all",
+  "scope": "fixed_deposited_corpus_only",
+  "protocol_freeze": "not_implied"
+}

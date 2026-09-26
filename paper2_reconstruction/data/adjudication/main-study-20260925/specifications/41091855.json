@@ -1,0 +1,187 @@
+{
+  "paper_id": "PMID:41091855",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "865c61ba18e1ba315f9b2bbe9e01828b2b69ad098aecde88b2099336df851dd9",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "zenodo",
+      "accession": "17186083",
+      "files": [
+        {
+          "name": "LDSC_ADGWAX_QTRAIT.RData",
+          "bytes": 332322
+        },
+        {
+          "name": "LDSC_G_FACTOR_QTRAIT.RData",
+          "bytes": 2184604
+        },
+        {
+          "name": "QTrait.r",
+          "bytes": 34644
+        },
+        {
+          "name": "QTrait_Zenodo.zip",
+          "bytes": 2521443
+        },
+        {
+          "name": "README.md",
+          "bytes": 1269
+        },
+        {
+          "name": "run_analysis.R",
+          "bytes": 2818
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-26T02:50:28.629833+00:00",
+  "api": {
+    "response_id": "eee1fcdf-93ea-4008-bbdf-dddd758cba9b",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 17166,
+    "completion_tokens": 2051
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0010",
+            "quote": "The Genomic SEM R package and the Q Trait function is available at https://github.com/GenomicSEM/GenomicSEM ."
+          },
+          {
+            "segment_id": "S0011",
+            "quote": "the exact version of the Q Trait function used, along with input data and scripts, has been archived on Zenodo (DOI: https://doi.org/10.5281/zenodo.17186083 )"
+          }
+        ],
+        "rationale": "The principal results are computed from GWAS summary statistics using the Q Trait function in the Genomic SEM R package, and the exact version, input data, and scripts are archived on Zenodo, so a third party can re-run the computation."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0080",
+            "quote": "we found evidence of heterogeneity in the associations between EA (Q Trait (2) = 36.75, P < 0.001; lSRMR = 0.13), cognitive performance (Q Trait (2) = 26.61, P < 0.001; lSRMR = 0.11) and the individual AD phenotypes"
+          },
+          {
+            "segment_id": "S0054",
+            "quote": "Table 1. Heterogeneity statistics and patterns of associations between case-control GWAS of Alzheimer’s disease (AD) and proxy-phenotype GWAX of maternal and paternal history of AD in relation to 14 biobehavioral external correlates."
+          }
+        ],
+        "rationale": "The paper's stated priority is the application of the Q Trait function to AD and cognitive g. The first principal quantitative result reported is the Q Trait statistic for educational attainment in the AD analysis (Q Trait(2)=36.75), which is the first row of Table 1 and the first result in the Results section."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0011",
+            "quote": "the exact version of the Q Trait function used, along with input data and scripts, has been archived on Zenodo (DOI: https://doi.org/10.5281/zenodo.17186083 )"
+          }
+        ],
+        "rationale": "The Zenodo deposit contains LDSC_ADGWAX_QTRAIT.RData and LDSC_G_FACTOR_QTRAIT.RData, which are the LDSC-derived genetic covariance matrices (S and V) that serve as the analysis inputs for the Q Trait function. These are minimally processed inputs, not the outputs of the Q Trait analysis."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0042",
+            "quote": "A χ 2 difference test is used to compare the common and independent pathways models, as indicated by the Q Trait heterogeneity index, which follows a χ 2 distribution with K − 1 degrees of freedom (where K represents the number of indicator traits loading on the common factor)."
+          },
+          {
+            "segment_id": "S0043",
+            "quote": "Q Trait = χ Independ e n t pathways model 2 - χ Common pathway model 2 with degrees of freedom equal to (K − 1)."
+          },
+          {
+            "segment_id": "S0047",
+            "quote": "lSRMR = 1 K ∑ k = 1 K ( r G Residual , k ) 2 where K is the number of indicator traits that load on the common factor, and r g Residual , k corresponds with the residual genetic correlation for indicator k ."
+          }
+        ],
+        "rationale": "The paper describes the Q Trait statistic as a chi-square difference test between common and independent pathways models, and the lSRMR as the root mean square of residual genetic correlations. The method is described well enough to implement without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0010",
+            "quote": "The Genomic SEM R package and the Q Trait function is available at https://github.com/GenomicSEM/GenomicSEM ."
+          }
+        ],
+        "rationale": "The method uses the Genomic SEM R package, which is open-source and freely available. No proprietary software is required."
+      }
+    },
+    "exact_target": "Q Trait statistic for the association between educational attainment and the Alzheimer's disease factor, reported as Q Trait (df = 2) = 36.75 in Table 1.",
+    "target_values": [
+      "36.75"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The Q Trait statistic for the association between educational attainment and the Alzheimer's disease factor, as reported in Table 1.",
+    "target_type": "scalar",
+    "target_location": "Table 1, first row (Educational attainment), column 'Q Trait (df = 2)'.",
+    "location_quotes": [
+      {
+        "segment_id": "S0054",
+        "quote": "Table 1. Heterogeneity statistics and patterns of associations between case-control GWAS of Alzheimer’s disease (AD) and proxy-phenotype GWAX of maternal and paternal history of AD in relation to 14 biobehavioral external correlates."
+      },
+      {
+        "segment_id": "S0055",
+        "quote": "Educational attainment −0.08 a (0.03) 36.75 a 0.13 b −0.16 a 5.25 (1) 0.08 b 33.85% Maternal GWAX"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0042",
+        "quote": "A χ 2 difference test is used to compare the common and independent pathways models, as indicated by the Q Trait heterogeneity index, which follows a χ 2 distribution with K − 1 degrees of freedom (where K represents the number of indicator traits loading on the common factor)."
+      },
+      {
+        "segment_id": "S0043",
+        "quote": "Q Trait = χ Independ e n t pathways model 2 - χ Common pathway model 2 with degrees of freedom equal to (K − 1)."
+      },
+      {
+        "segment_id": "S0030",
+        "quote": "The Q Trait function starts by fitting a genomic SEM common pathway model to estimate the regression coefficient relating the external correlate with the common factor ( Fig. 1 )."
+      }
+    ],
+    "required_files": [
+      "LDSC_ADGWAX_QTRAIT.RData",
+      "QTrait.r",
+      "run_analysis.R"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The file LDSC_ADGWAX_QTRAIT.RData contains the LDSC-derived genetic covariance matrix (S) and sampling covariance matrix (V) for the AD factor and external correlates. The script run_analysis.R and the Q Trait function file QTrait.r are needed to reproduce the analysis. The deposit also includes LDSC_G_FACTOR_QTRAIT.RData for the cognitive g factor analysis, but the target is from the AD analysis.",
+    "leakage_files": [
+      {
+        "name": "QTrait_Zenodo.zip",
+        "reason": "This zip archive likely contains the full analysis outputs, including the target value and derived result tables, and must not be served to avoid leaking the answer."
+      },
+      {
+        "name": "README.md",
+        "reason": "The README may describe the results or contain the target value; it should not be served to avoid leakage."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "The observed Q Trait statistic computed by the solver is compared to the reported value of 36.75.",
+    "numerical_agreement_criterion": "Scalars within displayed rounding bin: the reported value is 36.75, so the solver's computed value should round to 36.75 at two decimal places.",
+    "specification_gaps": "The paper does not specify the exact version of the Genomic SEM package or the Q Trait function used, nor the exact random seed or optimization settings. The LDSC estimation parameters (e.g., reference panel, SNP filtering) are not fully described in the paper, though the input data are provided.",
+    "alternatives_considered": [
+      {
+        "target": "Q Trait for cognitive performance in AD analysis (26.61)",
+        "reason": "This is the second result in Table 1 and not the first principal result; the paper's stated priority is the AD analysis, and educational attainment is the first external correlate listed."
+      },
+      {
+        "target": "lSRMR for educational attainment in AD analysis (0.13)",
+        "reason": "This is an effect size measure, not the principal test statistic; the Q Trait statistic is the primary omnibus test of heterogeneity."
+      },
+      {
+        "target": "Q Trait for cognitive performance in g factor analysis (2892.15)",
+        "reason": "This is from the second analysis (cognitive g) and is not the first principal result; the paper's stated priority is the AD analysis first."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

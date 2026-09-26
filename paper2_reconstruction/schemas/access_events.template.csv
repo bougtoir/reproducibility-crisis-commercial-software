@@ -1,0 +1,1 @@
+event_id,sequence,previous_event_hash,event_hash,utc_timestamp,monotonic_elapsed_ms,run_id,paper_id,session_id,actor,channel,operation,requested_locator,resolved_locator,policy_version,manifest_item_id,allow_deny_quarantine,decision_reason,response_status,response_bytes,response_sha256,retained_response_path,tool_call_id,parent_event_id

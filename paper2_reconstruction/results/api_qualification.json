@@ -1,0 +1,15 @@
+{
+  "status": "API_smoke_pass",
+  "scope": "synthetic_software_qualification_only",
+  "model": "deepseek-flash",
+  "controller_sha256": "a4876604debbdcef83745edd1c0652b398435d29fa20577f982eb073c2735d6a",
+  "registered_provider_tools": [],
+  "private_reasoning_stored": false,
+  "pilot_authorized": false,
+  "main_study_authorized": false,
+  "limits": [
+    "No empirical solver controller or adjudication has been qualified",
+    "Provider hidden context and training exposure are not observable",
+    "Provider model version is not reported; requested model is an alias"
+  ]
+}

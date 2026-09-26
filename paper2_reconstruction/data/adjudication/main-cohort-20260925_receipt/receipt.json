@@ -1,0 +1,13 @@
+{
+  "source_sha256": "c93708937c2ccf7f67d2e9c79b30db549caf6112ef7e5f82dd93e2becb286b4f",
+  "source_bytes": 42639,
+  "source_name": "main_cohort_20260925.json",
+  "url": "https://freetsa.org/tsr",
+  "retrieved_at_utc": "2026-09-25T03:03:53.968632+00:00",
+  "request_conditions": "POST RFC3161 SHA-256 digest and nonce; source bytes not transmitted",
+  "request_sha256": "cb6b440a398972afd0da1d967366a89c031c7e9c2f8eff15f8a5ebb596ca1c06",
+  "response_sha256": "07ffae120c62ff9c3bc16ddd60380ca97be596e931f6825db5d87668042d5a12",
+  "response_bytes": 4644,
+  "http_status": 200,
+  "trust_anchor_sha256": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438"
+}

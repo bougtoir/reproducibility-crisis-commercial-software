@@ -1,0 +1,13 @@
+{
+  "source_sha256": "485967ff8a1caf85c1d9b1bc102ada617219e3636ea22b7dcbbc5337bb81f3db",
+  "source_bytes": 67606,
+  "source_name": "blind_outcome.json",
+  "url": "https://freetsa.org/tsr",
+  "retrieved_at_utc": "2026-09-25T02:42:24.918370+00:00",
+  "request_conditions": "POST RFC3161 SHA-256 digest and nonce; source bytes not transmitted",
+  "request_sha256": "20e395d2a506f81b12232c2c1adb48bf5557b49e86606d6e48dea7af54889a32",
+  "response_sha256": "9fdb0e711955962443b2ba18d717de30c54221d9bf4e06c1676335fb171aa31f",
+  "response_bytes": 4643,
+  "http_status": 200,
+  "trust_anchor_sha256": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438"
+}
