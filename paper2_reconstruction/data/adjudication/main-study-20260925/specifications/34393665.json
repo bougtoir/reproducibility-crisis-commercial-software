@@ -1,0 +1,173 @@
+{
+  "paper_id": "PMID:34393665",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "7bd9609e9df9b945048fbc199a5a9902ca591106e3c775699c7f7bdd37895b80",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE32707",
+      "files": [
+        {
+          "name": "GSE32707_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "GSE32707_non_normalized.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE66890",
+      "files": [
+        {
+          "name": "GSE66890_Phenotype_data_Samples.xlsx",
+          "bytes": 0
+        },
+        {
+          "name": "GSE66890_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-26T02:49:38.963764+00:00",
+  "api": {
+    "response_id": "2ad65263-cc06-468e-995c-410e22dc7981",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 8758,
+    "completion_tokens": 1596
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0004",
+            "quote": "The mRNA profiles, including 60 blood samples with sepsis-induced ARDS and 86 blood samples with sepsis alone, were obtained from the Gene Expression Omnibus (GEO)."
+          },
+          {
+            "segment_id": "S0020",
+            "quote": "Subsequently, we performed the differential expression analysis of genes by the limma package of R language [ 15 ], with |log 2 (fold change [FC])| > 0.5 and p < 0.05 as the significant thresholds."
+          }
+        ],
+        "rationale": "The principal result (DEG counts) is produced by a computational analysis (limma) on public GEO data that a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0005",
+            "quote": "A total of 242 DEGs in GSE32707 and 102 DEGs in GSE66890 were identified."
+          }
+        ],
+        "rationale": "The paper states the DEG counts as a primary numerical result in the abstract and results; these are the first quantitative endpoints reported."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0018",
+            "quote": "The mRNA profiles of GSE32707 [ 14 ] and GSE66890 [ 10 ] were obtained from Gene Expression Omnibus (GEO, https://www.ncbi.nlm.nih.gov/geo/ )."
+          }
+        ],
+        "rationale": "The deposit listing includes raw and non-normalized data files for both GEO series, which are the analysis inputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0020",
+            "quote": "We removed the probes of mRNA profiles with missing value, and conducted the standardization by using robust multi-array (RMA) method. Subsequently, we performed the differential expression analysis of genes by the limma package of R language [ 15 ], with |log 2 (fold change [FC])| > 0.5 and p < 0.05 as the significant thresholds."
+          }
+        ],
+        "rationale": "The method for DEG identification is described with specific thresholds and software, sufficient to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0020",
+            "quote": "Subsequently, we performed the differential expression analysis of genes by the limma package of R language [ 15 ], with |log 2 (fold change [FC])| > 0.5 and p < 0.05 as the significant thresholds."
+          }
+        ],
+        "rationale": "The method uses R packages (limma, RMA) which are free and open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "Number of differentially expressed genes (DEGs) in GSE32707 and GSE66890 datasets, reported as 242 DEGs in GSE32707 and 102 DEGs in GSE66890.",
+    "target_values": [
+      "242",
+      "102"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The count of genes identified as differentially expressed between sepsis-induced ARDS and sepsis-alone samples in each of the two GEO datasets.",
+    "target_type": "count",
+    "target_location": "Abstract and Results section, first paragraph of Results.",
+    "location_quotes": [
+      {
+        "segment_id": "S0005",
+        "quote": "A total of 242 DEGs in GSE32707 and 102 DEGs in GSE66890 were identified."
+      },
+      {
+        "segment_id": "S0025",
+        "quote": "Then the differential expression analysis was performed in GSE32707 dataset, and 242 differentially expressed genes were identified in the group with sepsis-induced ARDS in comparison to that with sepsis alone, which consisted of 48 upregulated genes and 194 downregulated genes ( Figure 1A ), and the expression of 242 genes exhibited marked difference between the two groups ( Figure 1B ); In"
+      },
+      {
+        "segment_id": "S0026",
+        "quote": "GSE66890 dataset, we identified 102 differentially expressed genes between the group with sepsis-induced ARDS and the group with sepsis alone, consisting of 65 upregulated genes and 37 downregulated genes ( Figure 1C ), and the expression of 102 genes displayed obvious difference between the two groups ( Figure 1D )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0020",
+        "quote": "We removed the probes of mRNA profiles with missing value, and conducted the standardization by using robust multi-array (RMA) method. Subsequently, we performed the differential expression analysis of genes by the limma package of R language [ 15 ], with |log 2 (fold change [FC])| > 0.5 and p < 0.05 as the significant thresholds."
+      }
+    ],
+    "required_files": [
+      "GSE32707_RAW.tar",
+      "GSE66890_RAW.tar"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "GSE32707 and GSE66890 raw data files are required. The non-normalized file for GSE32707 is also available but raw data is sufficient for RMA normalization. Phenotype data for GSE66890 is provided in GSE66890_Phenotype_data_Samples.xlsx, which may be needed for sample grouping.",
+    "leakage_files": [
+      {
+        "name": "GSE32707_non_normalized.txt.gz",
+        "reason": "Contains normalized expression values that could be used to directly compute DEGs, potentially revealing the target count."
+      },
+      {
+        "name": "GSE66890_Phenotype_data_Samples.xlsx",
+        "reason": "Contains sample phenotype information that could be used to group samples and compute DEGs, potentially revealing the target count."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Exact match of the reported DEG counts (242 and 102) to the counts obtained by re-running the limma analysis with the specified thresholds.",
+    "numerical_agreement_criterion": "Counts must match exactly.",
+    "specification_gaps": "The paper does not specify the exact version of the R packages (limma, RMA) used, nor the exact code for preprocessing steps such as missing value removal and normalization. The sample grouping for GSE32707 is not explicitly provided in the deposit listing, though it may be inferred from the original publication.",
+    "alternatives_considered": [
+      {
+        "target": "AUC values of the logistic regression and SVM models",
+        "reason": "These are performance metrics but are not the primary numerical endpoint; the paper emphasizes DEG counts first in the abstract and results."
+      },
+      {
+        "target": "Number of overlapped GO terms and KEGG pathways",
+        "reason": "These are secondary results and not the principal quantitative result; the DEG counts are more central to the study's aim."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

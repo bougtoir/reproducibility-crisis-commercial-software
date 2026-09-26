@@ -1,0 +1,186 @@
+{
+  "paper_id": "PMID:34297924",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "148582c91b1c45183cf2cfff429500907bbd4f8d040d6aba940463886798c1b1",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "sra_study",
+      "accession": "ERP117375",
+      "files": [
+        {
+          "name": "ERR3528397",
+          "bytes": 1110980519
+        },
+        {
+          "name": "ERR3528398",
+          "bytes": 277234296
+        },
+        {
+          "name": "ERR3528399",
+          "bytes": 539700678
+        },
+        {
+          "name": "ERR3528400",
+          "bytes": 49087737
+        },
+        {
+          "name": "ERR3528401",
+          "bytes": 59774820
+        },
+        {
+          "name": "ERR3528402",
+          "bytes": 53946956
+        },
+        {
+          "name": "ERR3528403",
+          "bytes": 34601368
+        },
+        {
+          "name": "ERR3528404",
+          "bytes": 759872755
+        },
+        {
+          "name": "ERR3528405",
+          "bytes": 179935767
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-26T02:48:48.375285+00:00",
+  "api": {
+    "response_id": "18b058b8-4dcd-4d6e-9c4e-4b2039e4b886",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 27826,
+    "completion_tokens": 2030
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0147",
+            "quote": "We then mapped the RNA-seq reads corresponding to 30 min pi (ERR3528397), 1 h pi (ERR3528398), 2 h pi (ERR3528399), 4 h pi (ERR3528400), 5 h pi (ERR3528401), 6 h pi (ERR3528402), 8 h pi (ERR3528403), 10 h pi (ERR3528404) and 12 h pi (ERR3528405) to the host and viral"
+          },
+          {
+            "segment_id": "S0148",
+            "quote": "transcripts using Bowtie ( Langmead and Salzberg, 2012 ) (version 2.3.4.1). Transcript quantification was done using RSEM ( Li and Dewey, 2011 ) (version 1.3.0) and data normalization using the edgeR R package ( Robinson et al., 2010 )."
+          }
+        ],
+        "rationale": "The transcriptome analysis is a computation on deposited RNA-seq reads that a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0048",
+            "quote": "Analysis of published transcriptomic data obtained for a member of the Marseilleviridae during its infectious cycle in A. castellanii ( Rodrigues et al., 2020 ) sheds light on the possible contribution of the host to viral nucleosome assembly ( Figure 2 A)."
+          },
+          {
+            "segment_id": "S0049",
+            "quote": "The cellular histone chaperones are either never expressed (FUN_000176, FUN_002445, FUN_006481, FUN_014954, FUN_006327 lanes in gray at the bottom of the figure) or have their expression decreased after 2 h PI."
+          }
+        ],
+        "rationale": "The principal quantitative result is the expression profile of viral and host histone/chaperone genes during infection, shown in Figure 2A."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0147",
+            "quote": "We then mapped the RNA-seq reads corresponding to 30 min pi (ERR3528397), 1 h pi (ERR3528398), 2 h pi (ERR3528399), 4 h pi (ERR3528400), 5 h pi (ERR3528401), 6 h pi (ERR3528402), 8 h pi (ERR3528403), 10 h pi (ERR3528404) and 12 h pi (ERR3528405) to the host and viral"
+          }
+        ],
+        "rationale": "The listed SRA runs are the raw RNA-seq reads used as input for the transcriptome analysis."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0147",
+            "quote": "We first annotated the Marseillevirus genome (accession GU071086 ) as described ( Blanca et al., 2020 ), as well as the A. castellanii Neff host genome (assembly GCA_000193105.1) using the Funannotate pipeline (version 1.7; https://github.com/nextgenusfs/funannotate )."
+          },
+          {
+            "segment_id": "S0148",
+            "quote": "Transcript quantification was done using RSEM ( Li and Dewey, 2011 ) (version 1.3.0) and data normalization using the edgeR R package ( Robinson et al., 2010 ). Host and viral mapped reads were normalized separately with the “TMMwsp” method and then combined to a single matrix."
+          }
+        ],
+        "rationale": "The method for read mapping, quantification, and normalization is described with software versions and parameters."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0148",
+            "quote": "transcripts using Bowtie ( Langmead and Salzberg, 2012 ) (version 2.3.4.1). Transcript quantification was done using RSEM ( Li and Dewey, 2011 ) (version 1.3.0) and data normalization using the edgeR R package ( Robinson et al., 2010 )."
+          }
+        ],
+        "rationale": "Bowtie, RSEM, and edgeR are free open-source software; no proprietary software is required."
+      }
+    },
+    "exact_target": "Expression levels of viral histone genes (MV-H2B-H2A, MV-H4-H3, MV-miniH2B-H2A) and host histone chaperone genes during the Melbournevirus infectious cycle, reported as log-transformed counts per million (CPM) and scaled Z-scores in a heatmap (Figure 2A).",
+    "target_values": [],
+    "target_values_located_verbatim": true,
+    "blind_target": "The temporal expression profile of viral histone genes and host histone chaperone genes during the Melbournevirus infectious cycle in Acanthamoeba castellanii.",
+    "target_type": "table_cells",
+    "target_location": "Figure 2A",
+    "location_quotes": [
+      {
+        "segment_id": "S0048",
+        "quote": "Analysis of published transcriptomic data obtained for a member of the Marseilleviridae during its infectious cycle in A. castellanii ( Rodrigues et al., 2020 ) sheds light on the possible contribution of the host to viral nucleosome assembly ( Figure 2 A)."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0147",
+        "quote": "We first annotated the Marseillevirus genome (accession GU071086 ) as described ( Blanca et al., 2020 ), as well as the A. castellanii Neff host genome (assembly GCA_000193105.1) using the Funannotate pipeline (version 1.7; https://github.com/nextgenusfs/funannotate )."
+      },
+      {
+        "segment_id": "S0147",
+        "quote": "We then mapped the RNA-seq reads corresponding to 30 min pi (ERR3528397), 1 h pi (ERR3528398), 2 h pi (ERR3528399), 4 h pi (ERR3528400), 5 h pi (ERR3528401), 6 h pi (ERR3528402), 8 h pi (ERR3528403), 10 h pi (ERR3528404) and 12 h pi (ERR3528405) to the host and viral"
+      },
+      {
+        "segment_id": "S0148",
+        "quote": "transcripts using Bowtie ( Langmead and Salzberg, 2012 ) (version 2.3.4.1). Transcript quantification was done using RSEM ( Li and Dewey, 2011 ) (version 1.3.0) and data normalization using the edgeR R package ( Robinson et al., 2010 ). Host and viral mapped reads were normalized separately with the “TMMwsp” method and then combined to a single matrix."
+      },
+      {
+        "segment_id": "S0149",
+        "quote": "Expression values were then expressed in log transformed counts per million of mapped reads (CPM). Finally, we scaled each transcript expression values to a Z-score and produced a heatmap for the genes of interest."
+      }
+    ],
+    "required_files": [
+      "ERR3528397",
+      "ERR3528398",
+      "ERR3528399",
+      "ERR3528400",
+      "ERR3528401",
+      "ERR3528402",
+      "ERR3528403",
+      "ERR3528404",
+      "ERR3528405"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "RNA-seq reads from SRA study ERP117375; run accessions as listed. Host genome assembly GCA_000193105.1 and viral genome GU071086 are required but not in the deposit.",
+    "leakage_files": [],
+    "required_public_references": [
+      {
+        "name": "Marseillevirus genome",
+        "version": "GU071086"
+      },
+      {
+        "name": "Acanthamoeba castellanii Neff genome",
+        "version": "GCA_000193105.1"
+      }
+    ],
+    "comparison_metric": "Comparison of expression values (log CPM or Z-scores) for viral histone genes and host chaperone genes across time points.",
+    "numerical_agreement_criterion": "For expression values, agreement within the displayed rounding bin (e.g., Z-scores to one decimal place); for presence/absence of expression, exact match.",
+    "specification_gaps": "The exact set of genes included in the heatmap, the precise normalization parameters (e.g., TMMwsp settings), and the clustering method are not fully specified.",
+    "alternatives_considered": "The mass spectrometry proteomics table (Table 1) was considered but rejected because the target is the transcriptome analysis, which is the principal quantitative result for gene expression."
+  },
+  "eligibility": "target_value_not_located_verbatim"
+}

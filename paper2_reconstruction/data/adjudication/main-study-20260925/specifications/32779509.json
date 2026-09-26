@@ -1,0 +1,173 @@
+{
+  "paper_id": "PMID:32779509",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "1ac924a065d3eece7efb145053040bb2202d21cd777f93684c2e2fbfe28596be",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE129123",
+      "files": [
+        {
+          "name": "GSE129123_ALL.MATS.JC.stat.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE129123_gene_expression.txt.gz",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-26T02:49:57.580940+00:00",
+  "api": {
+    "response_id": "e8d6041c-3c2f-4fbf-ae01-eeebfcb232c2",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 12142,
+    "completion_tokens": 1973
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0031",
+            "quote": "All sequencing data are available at the Gene Expression Omnibus ( GSE129123 )."
+          },
+          {
+            "segment_id": "S0033",
+            "quote": "we determined differentially expressed genes (DEGs) using Cuffdiff in Cufflink, with |log2-fold change| ≥ 1 and a Q-value <0.05."
+          }
+        ],
+        "rationale": "The principal result (DEG counts) is produced by a computational differential expression analysis on RNA-seq data deposited at GEO, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0042",
+            "quote": "Altogether, 2107 genes were considered to be differentially expressed genes (DEGs) (|log2-fold change| ≥1 and FDR value <0.05) between the MD and MN groups."
+          }
+        ],
+        "rationale": "The paper's stated priority is the differential expression analysis; the first principal quantitative result is the total number of DEGs (2107)."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0031",
+            "quote": "All sequencing data are available at the Gene Expression Omnibus ( GSE129123 )."
+          }
+        ],
+        "rationale": "The deposit listing contains only two files: a MATS output (GSE129123_ALL.MATS.JC.stat.txt.gz) and a gene expression matrix (GSE129123_gene_expression.txt.gz). The MATS file is an output of alternative splicing analysis, not a raw input for DEG calling. The gene expression file may be a processed matrix, not raw reads. It is unclear whether raw sequencing reads are deposited."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0031",
+            "quote": "After adaptor-moving and quality-control filtration of raw reads with NGSQC [ 22 ], the remaining clean reads for each sample were mapped to the annotated human genome (hg19.ucsc.fa) with HISAT under default settings [ 23 ]."
+          },
+          {
+            "segment_id": "S0032",
+            "quote": "Afterward, fragment counts normalized per kilobase of exon per million mapped fragments (FPKM) were estimated using Cuffquant and Cuffnorm in Cufflinks (v2.0.2) [ 24 ]."
+          },
+          {
+            "segment_id": "S0033",
+            "quote": "we determined differentially expressed genes (DEGs) using Cuffdiff in Cufflink, with |log2-fold change| ≥ 1 and a Q-value <0.05."
+          }
+        ],
+        "rationale": "The method for DEG calling is described with sufficient detail: tools (NGSQC, HISAT, Cufflinks), genome version (hg19), and thresholds (|log2FC| ≥ 1, Q < 0.05)."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0031",
+            "quote": "After adaptor-moving and quality-control filtration of raw reads with NGSQC [ 22 ], the remaining clean reads for each sample were mapped to the annotated human genome (hg19.ucsc.fa) with HISAT under default settings [ 23 ]."
+          },
+          {
+            "segment_id": "S0032",
+            "quote": "Afterward, fragment counts normalized per kilobase of exon per million mapped fragments (FPKM) were estimated using Cuffquant and Cuffnorm in Cufflinks (v2.0.2) [ 24 ]."
+          }
+        ],
+        "rationale": "All software mentioned (NGSQC, HISAT, Cufflinks) is free and open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "Total number of differentially expressed genes (DEGs) between MD and MN oocytes: 2107",
+    "target_values": [
+      "2107"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The total number of genes identified as differentially expressed between maturation-deficient (MD) and normally mature (MN) human oocytes.",
+    "target_type": "count",
+    "target_location": "Results section, paragraph describing DEGs (text); also Figure 1(d-e) and Supplementary Tables S1 & S2",
+    "location_quotes": [
+      {
+        "segment_id": "S0042",
+        "quote": "Altogether, 2107 genes were considered to be differentially expressed genes (DEGs) (|log2-fold change| ≥1 and FDR value <0.05) between the MD and MN groups."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0031",
+        "quote": "After adaptor-moving and quality-control filtration of raw reads with NGSQC [ 22 ], the remaining clean reads for each sample were mapped to the annotated human genome (hg19.ucsc.fa) with HISAT under default settings [ 23 ]."
+      },
+      {
+        "segment_id": "S0032",
+        "quote": "Afterward, fragment counts normalized per kilobase of exon per million mapped fragments (FPKM) were estimated using Cuffquant and Cuffnorm in Cufflinks (v2.0.2) [ 24 ]."
+      },
+      {
+        "segment_id": "S0033",
+        "quote": "we determined differentially expressed genes (DEGs) using Cuffdiff in Cufflink, with |log2-fold change| ≥ 1 and a Q-value <0.05."
+      }
+    ],
+    "required_files": [
+      "GSE129123_gene_expression.txt.gz"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The gene expression file (GSE129123_gene_expression.txt.gz) is likely a processed expression matrix (FPKM or counts) that can be used as input for differential expression analysis. However, the paper describes a pipeline starting from raw reads (NGSQC, HISAT, Cufflinks), and raw sequencing reads (FASTQ) are not listed in the deposit. The MATS file is an output of alternative splicing analysis and is not needed for the DEG count target. The exact format and content of the gene expression file are unknown; it may contain FPKM values for all genes across the 6 samples.",
+    "leakage_files": [
+      {
+        "name": "GSE129123_ALL.MATS.JC.stat.txt.gz",
+        "reason": "This file contains rMATS output statistics for alternative splicing events, which are derived results from the same RNA-seq data and may include gene-level information that could reveal DEG status or splicing changes, potentially leaking the target or related results."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "human genome",
+        "version": "hg19.ucsc.fa"
+      }
+    ],
+    "comparison_metric": "The observed count of DEGs (number of genes with |log2 fold change| ≥ 1 and FDR < 0.05) is compared to the reported value of 2107.",
+    "numerical_agreement_criterion": "Counts must match exactly: the observed number of DEGs must equal 2107.",
+    "specification_gaps": [
+      "The exact version of Cufflinks is given as v2.0.2, but the version of HISAT is not specified (only 'default settings').",
+      "The FDR threshold is stated as Q-value < 0.05 in the methods, but the results mention FDR value < 0.05; it is unclear if Q-value and FDR are used interchangeably.",
+      "The gene expression file format and whether it contains raw counts or normalized values is not described.",
+      "The mapping parameters for HISAT are not fully specified beyond 'default settings'.",
+      "The exact command-line options for Cuffdiff are not provided.",
+      "The treatment of multi-mapping reads or isoforms is not detailed."
+    ],
+    "alternatives_considered": [
+      {
+        "target": "Number of upregulated and downregulated DEGs (1611 and 496)",
+        "reason": "These are sub-counts of the total DEGs; the total DEG count is the primary summary and appears first in the results."
+      },
+      {
+        "target": "Number of genes with differential alternative splicing (DAS) events (2329)",
+        "reason": "This is a result from a different analysis (rMATS) and is not the principal differential expression result; the paper's stated priority is gene expression profiling."
+      },
+      {
+        "target": "Number of spliceosomal genes differentially expressed (49)",
+        "reason": "This is a specific subset of DEGs and not the overall principal quantitative result."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

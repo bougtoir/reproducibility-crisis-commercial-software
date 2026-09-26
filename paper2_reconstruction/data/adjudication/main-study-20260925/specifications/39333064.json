@@ -1,0 +1,147 @@
+{
+  "paper_id": "PMID:39333064",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "a221935c4629a75fab1f1b0b9752435ff9127663037453020b293b9715a1cca4",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE271034",
+      "files": [
+        {
+          "name": "GSE271034_gene_fpkm.txt.gz",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-26T02:50:05.459033+00:00",
+  "api": {
+    "response_id": "48c1e0fd-acef-495e-9a5b-f34c617985ac",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 28758,
+    "completion_tokens": 1464
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0035",
+            "quote": "Following stringent quality filtering, we identified a total of 4157 amplicon sequence variants (ASVs) from 24 samples, using a 100% sequence similarity threshold."
+          },
+          {
+            "segment_id": "S0140",
+            "quote": "Microbiome bioinformatics was performed with QIIME 2 2019.4 with slight modifications according to the official tutorials ( https://docs.qiime2.org/2019.4/tutorials/ )."
+          }
+        ],
+        "rationale": "The principal result includes a computational count of ASVs from 16S sequencing data, re-runnable by a third party using deposited data and QIIME 2."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0035",
+            "quote": "Following stringent quality filtering, we identified a total of 4157 amplicon sequence variants (ASVs) from 24 samples, using a 100% sequence similarity threshold."
+          }
+        ],
+        "rationale": "A primary numerical endpoint (total ASVs) is explicitly stated in the Results, making it identifiable."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0184",
+            "quote": "Microbiomics data sets were deposited at Mendeley Data under the DOI 10.17632/v8tx42gchw.1 ( https://data.mendeley.com/datasets/v8tx42gchw/1 )."
+          },
+          {
+            "segment_id": "S0185",
+            "quote": "RNA-Seq data sets were deposited into the NCBI GEO under the accession number GSE271034 ."
+          }
+        ],
+        "rationale": "The deposit listing shows only GSE271034 (RNA-Seq), but the target ASV count comes from microbiomics data deposited at Mendeley Data, which is not in the listing; thus the listed files are not the inputs for this target."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0140",
+            "quote": "Microbiome bioinformatics was performed with QIIME 2 2019.4 with slight modifications according to the official tutorials ( https://docs.qiime2.org/2019.4/tutorials/ )."
+          },
+          {
+            "segment_id": "S0141",
+            "quote": "Sequences were then quality filtered, denoised, merged and chimera removed using the DADA2 plugin. Non-singleton ASVs were aligned with mafft and used to construct a phylogeny with fasttree2."
+          }
+        ],
+        "rationale": "The method for ASV calling is described with software versions and steps, sufficient to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0140",
+            "quote": "Microbiome bioinformatics was performed with QIIME 2 2019.4 with slight modifications according to the official tutorials ( https://docs.qiime2.org/2019.4/tutorials/ )."
+          }
+        ],
+        "rationale": "QIIME 2 is free and open-source; no proprietary software is required for the ASV counting method."
+      }
+    },
+    "exact_target": "Total number of amplicon sequence variants (ASVs) identified from 24 samples: 4157",
+    "target_values": [
+      "4157"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "Total number of amplicon sequence variants (ASVs) identified from cecal content samples after quality filtering.",
+    "target_type": "count",
+    "target_location": "Results section, subsection 'GV-971 remodels gut microbiota during SAP'",
+    "location_quotes": [
+      {
+        "segment_id": "S0035",
+        "quote": "Following stringent quality filtering, we identified a total of 4157 amplicon sequence variants (ASVs) from 24 samples, using a 100% sequence similarity threshold."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0140",
+        "quote": "Microbiome bioinformatics was performed with QIIME 2 2019.4 with slight modifications according to the official tutorials ( https://docs.qiime2.org/2019.4/tutorials/ )."
+      },
+      {
+        "segment_id": "S0141",
+        "quote": "Sequences were then quality filtered, denoised, merged and chimera removed using the DADA2 plugin. Non-singleton ASVs were aligned with mafft and used to construct a phylogeny with fasttree2."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The target ASV count is derived from 16S rRNA sequencing data, which the paper states were deposited at Mendeley Data (DOI 10.17632/v8tx42gchw.1), not in the listed GEO deposit GSE271034. The GEO deposit contains RNA-Seq data, which are not the inputs for this target. No files from the listing are needed.",
+    "leakage_files": [
+      {
+        "name": "GSE271034_gene_fpkm.txt.gz",
+        "reason": "This file contains RNA-Seq gene expression data, which are not the inputs for the ASV count target and could contain derived results from a different analysis."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Exact match of the reported integer count.",
+    "numerical_agreement_criterion": "Counts must match exactly.",
+    "specification_gaps": "The paper does not specify the exact QIIME 2 parameters or the 'slight modifications' used, which could affect the exact ASV count.",
+    "alternatives_considered": [
+      {
+        "target": "Number of ASVs in control group (2419)",
+        "reason": "This is a sub-count, not the principal total ASV count reported."
+      },
+      {
+        "target": "Number of ASVs in SAP group (1353)",
+        "reason": "This is a sub-count, not the principal total ASV count reported."
+      },
+      {
+        "target": "Number of ASVs in high dose + SAP group (1455)",
+        "reason": "This is a sub-count, not the principal total ASV count reported."
+      }
+    ]
+  },
+  "eligibility": "required_inputs_not_in_public_listing"
+}

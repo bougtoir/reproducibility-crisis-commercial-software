@@ -1,6 +1,8 @@
 # Target selection
 
-**DRAFT — NOT FROZEN**
+**FROZEN 2026-09-25 by AMEND-2026-09-25-05 (hash
+`fc879735acc5698093d1476db7e4d87ac4174807f5cbea0eb2068e91162a99da`); stale
+draft header corrected by AMEND-2026-09-25-06 without any rule change.**
 
 Use, in order: primary numerical endpoint; principal effect; principal performance
 metric; central quantitative table; central quantitative figure; principal

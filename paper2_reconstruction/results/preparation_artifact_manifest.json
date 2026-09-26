@@ -4,8 +4,8 @@
     "sha256": "4212f30a8b59853ea27eaf667ec250ab5e39f9e0a36d5e1e21ee573b107e974c"
   },
   "manuscript/Supplement_protocols_DRAFT_EN.docx": {
-    "bytes": 60510,
-    "sha256": "ffec2712a349e15f59eb3093dd549331da9f50e2111b2f5f62968dc19ea833a8"
+    "bytes": 63044,
+    "sha256": "fb6278da09d6b21379f7be55c08d1dd6661ee47560cdacb17566632d1772cd6f"
   },
   "manuscript/Editable_tables_EN.docx": {
     "bytes": 38108,
@@ -43,6 +43,10 @@
     "bytes": 6201,
     "sha256": "bea06616d5fdb3d6f3dbfdc1a07fefee0527d0809861b307a85c070fbb1899fe"
   },
+  "protocols/AMENDMENT_AMEND-2026-09-25-06_main_study_execution.md": {
+    "bytes": 6242,
+    "sha256": "2301ea15d9279be6b8dd58f47e2daeb1a6b821e809744550b528cede248fbdc0"
+  },
   "protocols/COMMERCIAL_SOFTWARE_POLICY.md": {
     "bytes": 1048,
     "sha256": "680c77967ceffd5239a2390da13ebbabbfa967437c176c82b60fc5f850ead541"
@@ -76,8 +80,8 @@
     "sha256": "c18121fc9081c2073617584fd5cb1f48287d9bb66673331903085ae762e1f0a3"
   },
   "protocols/TARGET_SELECTION_RULES.md": {
-    "bytes": 1404,
-    "sha256": "fc879735acc5698093d1476db7e4d87ac4174807f5cbea0eb2068e91162a99da"
+    "bytes": 1576,
+    "sha256": "f6113914c7d3c55e8fd4d1aee7edc8a719ffbff4abd9458235f1636ed2cbfabf"
   },
   "protocols/TOLERANCE_RULES.md": {
     "bytes": 2761,
@@ -220,8 +224,8 @@
     "sha256": "03065c4484142533ead2d0e1bacb5aa8d6140159a395b16d84e372b74aaf0e23"
   },
   "src/paper2/firewall.py": {
-    "bytes": 21124,
-    "sha256": "3583eb0a50fb4aaea7d8e2a6f85e452ff48348e14c99bbb80636d89d5ca974ed"
+    "bytes": 21349,
+    "sha256": "5c99f62680b54e9732bed6eae02d9128c27e5462f3c8e86dd9d09fbc67e57d00"
   },
   "src/paper2/frame.py": {
     "bytes": 1920,
@@ -238,6 +242,10 @@
   "src/paper2/main_selection.py": {
     "bytes": 8914,
     "sha256": "b51aa52537d4ce4257b28f54fb0bf4b681ea81ef2fa7d808c3cfbe7068fdfa6f"
+  },
+  "src/paper2/main_study.py": {
+    "bytes": 41639,
+    "sha256": "fad41604225a742d7b6754168e38a55e4d656919f6084c54098a7a185fd06239"
   },
   "src/paper2/model_api.py": {
     "bytes": 8249,
@@ -260,8 +268,8 @@
     "sha256": "e5aa787d0cf7c2d573e2891e8101d10b73bbf183e13986e73e49a41ccb41526e"
   },
   "src/paper2/pilot_run.py": {
-    "bytes": 15345,
-    "sha256": "213e89ed9796ddcd5b63b1dfe3fca80021b99f1ab628866bab71c60d19f2d9ca"
+    "bytes": 15555,
+    "sha256": "7ad7876a4aa8dadeecb3e73adb364df16b17923108b47022ae553cf3e81848a3"
   },
   "src/paper2/primary_adjudication.py": {
     "bytes": 9430,

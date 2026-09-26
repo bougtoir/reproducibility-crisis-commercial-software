@@ -1,0 +1,50 @@
+{
+  "PMID:32779509": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:33110091": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:34297924": {
+    "eligibility": "target_value_not_located_verbatim",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:34393665": {
+    "acquisition": "all_inputs_leak_target",
+    "eligibility": "specifiable",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:34927191": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:39333064": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41091855": {
+    "acquisition": "inputs_retained",
+    "eligibility": "specifiable",
+    "freeze_sha256": "c9eed5588ca31d13327e626f8adbca029502b46b3eef9e8ebfca62a2df557067",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "slots_completed",
+    "stop_reasons": [
+      "tool_limit",
+      "tool_limit",
+      "malformed_action_limit"
+    ]
+  },
+  "PMID:41118575": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  }
+}

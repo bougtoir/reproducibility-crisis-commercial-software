@@ -1,0 +1,191 @@
+{
+  "paper_id": "PMID:41118575",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "a9bb131180830ae4d01c474be81d955938c3f947e6845513f2dad0eab18c063c",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "zenodo",
+      "accession": "16573651",
+      "files": [
+        {
+          "name": "PipelineOlympics-main.zip",
+          "bytes": 20834958
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-26T03:00:41.030970+00:00",
+  "api": {
+    "response_id": "841e80e1-e4a5-4147-a94f-5bad9d76b2a4",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 25264,
+    "completion_tokens": 2213
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0022",
+            "quote": "In this study, we systematically compared complete computational workflows for processing DNA methylation sequencing data using a dedicated benchmarking dataset generated with five"
+          },
+          {
+            "segment_id": "S0093",
+            "quote": "We implemented all selected workflows in CWL ( https://commonwl.org [ 78 ]) and ran them on a dedicated VM in a fully controlled computational environment. The resulting methylation calls were aggregated and summarized using methrix [ 74 ] and evaluated using a range of criteria to establish a consistent"
+          }
+        ],
+        "rationale": "The principal result is a computational benchmark of workflows on sequencing data, re-runnable by a third party given the data."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0157",
+            "quote": "The workflows were ordered by the rank average of all measurements and numbers mark the first three workflows by comparison."
+          },
+          {
+            "segment_id": "S0158",
+            "quote": "According to our results, BSBolt ranked first among all five sequencing protocols."
+          }
+        ],
+        "rationale": "The paper's stated priority is the final overall performance ranking (Fig. 8A), a central quantitative table/figure."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0202",
+            "quote": "We have uploaded the raw sequencing data to European Genome–Phenome Archive under the accession number EGAS50000000541. The CWL versions of all evaluated workflows with containerization details, as well as all analysis R scripts, are publicly available at"
+          },
+          {
+            "segment_id": "S0203",
+            "quote": "https://github.com/CompEpigen/PipelineOlympics and deposited via Zenodo under http://doi.org/10.5281/zenodo.16573651 ."
+          }
+        ],
+        "rationale": "The only listed deposit file is PipelineOlympics-main.zip, which contains CWL workflows and analysis R scripts (the original implementation), not the raw sequencing inputs; raw data are in EGA (EGAS50000000541), not in the listing."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0053",
+            "quote": "All computational workflows consisted of the following steps: read preprocessing, alignment, post-processing, and methylation calling. A detailed description of the workflows, version numbers, and individual steps, and the protocol-specific parameter settings adapted for each protocol are described in the following sections, with"
+          },
+          {
+            "segment_id": "S0079",
+            "quote": "The rank average of all the measurements was used to summarize the results of the benchmarking study. For each metric, the rank scale"
+          }
+        ],
+        "rationale": "Workflow steps, protocol-specific parameters, metrics and ranking procedure are described in the Methods."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0086",
+            "quote": "methylation calls and excluded those that were not open source or not regularly maintained (see the “Materials and methods” section for details). Altogether, we included 10 workflows into our study: BAT [ 65 ], Biscuit [ 66 ], Bismark [ 45 ], BSBolt [ 67 ], bwa - meth [ 56 ], FAME [ 54 ], gemBS [ 58 ], GSNAP [ 68 ], methylCtools [ 57 ], and methylpy [ 69 ] (Fig. 1A ). With this selection, we cover"
+          },
+          {
+            "segment_id": "S0041",
+            "quote": "and bwa-meth workflows (with the exception of the read trimmer) are equivalent to the two variants of the Nextflow nf-core workflow methylseq [ 70 ]. Containerization and the Common Workflow Language (CWL) were used to enhance stability and reusability of all workflows. Each component of the workflow was implemented as a Docker container, and the pipeline was implemented in a CWL wrapper. The CWL"
+          }
+        ],
+        "rationale": "All evaluated workflows are open-source and containerized; no proprietary software is required."
+      }
+    },
+    "exact_target": "Final overall performance ranking of the 10 evaluated workflows, reported as the rank average across all protocols and six metrics (Fig. 8A), with BSBolt ranked first among all five sequencing protocols.",
+    "target_values": [
+      "1",
+      "2",
+      "3",
+      "10"
+    ],
+    "target_values_located_verbatim": false,
+    "blind_target": "The overall ordering of the evaluated DNA methylation sequencing data processing workflows, obtained by averaging their ranks across all protocols and all benchmarking metrics.",
+    "target_type": "performance",
+    "target_location": "Results, 'Final performance ranking and recommendations', Figure 8A and Supplementary Table S5",
+    "location_quotes": [
+      {
+        "segment_id": "S0154",
+        "quote": "To offer guidance in selecting a bisulfite sequencing workflow, we combined all evaluation results to create an overall performance ranking. We first ranked the workflows based on each evaluation criterion. This ranking reflects the performance of each workflow in this specific category (see the"
+      },
+      {
+        "segment_id": "S0155",
+        "quote": "“Materials and methods” section for details). The final ranks were then calculated by averaging the individual ranks ( Supplementary Table S5 ). Ranking was derived across all protocols considering six metrics (Fig. 8A ) as well as individually for each protocol (Fig. 8B ). Figure 8. Final performance ranking. ( A ) Summarized results of the benchmarking study. Color scale reflects the rank of the"
+      },
+      {
+        "segment_id": "S0158",
+        "quote": "ranked first among all five sequencing protocols. Following this, methylCtools achieved second place in three protocols and third place in one protocol. The subsequent rankings were held by bwa-meth , BAT , Bismark , and Biscuit , each of which secured the top three positions in at least one of the five protocols. The final summarized ranking considers all metrics with equal weights. This is"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0079",
+        "quote": "The rank average of all the measurements was used to summarize the results of the benchmarking study. For each metric, the rank scale"
+      },
+      {
+        "segment_id": "S0080",
+        "quote": "ranged from 1 to 10, with 1 indicating the best. Each workflow has a rank score calculated by averaging all measurements across the five protocols. The rank average is calculated as follows, where the is the rank of workflow i in protocol j , and metric k . If multiple workflows have the same rank average, then the average z -score for each metric is used as the secondary ranking basis. Shiny app"
+      },
+      {
+        "segment_id": "S0156",
+        "quote": "workflow for each metric (1 to 10, 1 is the best; dark green to light). Six metrics were incorporated as follows. (i) “Coverage”: area under the curve of the “%CpGs covered over coverage threshold” plot (Fig. 3C ). (ii) “WG deviation” represents the deviation across the whole genome (Fig. 4C ), while (iii) “GS Deviation”: the deviation observed at the 46 gold-standard loci (Fig. 5C ). (iv) “DM"
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The only file in the listed deposit is PipelineOlympics-main.zip (Zenodo 16573651), which contains the CWL workflow implementations and analysis R scripts, i.e. the original implementation, not the analysis inputs. The raw sequencing data are deposited in the European Genome-Phenome Archive under accession EGAS50000000541 (S0202), which is not part of the listed deposit. The gold-standard consensus corridors derive from the BLUEPRINT Consortium study (ref 23) and the Illumina HumanMethylation450 array data (S0073-S0074), also not in the listing. No data files are therefore available among the listed files.",
+    "leakage_files": [
+      {
+        "name": "PipelineOlympics-main.zip",
+        "reason": "Contains the CWL versions of all evaluated workflows with containerization details and all analysis R scripts (S0202-S0203), i.e. the original implementation that computes the target ranking; serving it would leak the method and derived results."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "GRCh38 human genome assembly (including Phi X174 and Lambda phage sequences)",
+        "version": "GRCh38"
+      },
+      {
+        "name": "BSgenome.Hsapiens.UCSC.hg38",
+        "version": "UCSC hg38"
+      },
+      {
+        "name": "Illumina HumanMethylation450 array data (BLUEPRINT Consortium)",
+        "version": "450k"
+      },
+      {
+        "name": "BLUEPRINT Consortium consensus corridors (46 preselected loci)",
+        "version": "as published in ref 23"
+      }
+    ],
+    "comparison_metric": "Rank average of the 10 workflows across all five protocols and six metrics (coverage AUC, genome-wide deviation, gold-standard locus deviation, DM calling, run time, max memory), compared to the reported ordering in Fig. 8A/Supplementary Table S5.",
+    "numerical_agreement_criterion": "Performance metrics on the identical split: the workflow ordering and rank averages must match the reported ranking; counts exact; scalars within displayed rounding bin.",
+    "specification_gaps": "The exact rank-average values are not printed in the main text (only in Supplementary Table S5, not available); the tie-breaking z-score procedure is described but its numeric inputs are not given; the exact per-metric rank values are only in figures/supplement.",
+    "alternatives_considered": [
+      {
+        "target": "Genome-wide mean absolute deviation from the consensus corridor (Fig. 4D)",
+        "reason": "Rejected because the paper's stated priority is the final combined ranking (S0154-S0155), not an individual metric."
+      },
+      {
+        "target": "Deviation from gold-standard consensus corridors at 46 loci (Fig. 5C)",
+        "reason": "Rejected as it is one of six metrics feeding the final ranking, not the principal result."
+      },
+      {
+        "target": "Weighted AUC and delta-beta correlation for differential methylation (Fig. 6D)",
+        "reason": "Rejected as a component metric, not the overall principal result."
+      },
+      {
+        "target": "Runtime and peak memory usage (Fig. 7A,B)",
+        "reason": "Rejected as computational performance sub-metrics, not the principal benchmark conclusion."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

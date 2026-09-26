@@ -198,6 +198,11 @@ def pilot_articles(record: Path, articles: Path) -> list[tuple[str, bytes]]:
         for a in assessments
         if mapping(a)["pilot_decision"] == "provisional_pilot_case"
     )
+    return verified_articles(selected, articles)
+
+
+def verified_articles(selected: list[str], articles: Path) -> list[tuple[str, bytes]]:
+    """Return identity-verified retained article bodies for the listed papers only."""
     index = {row["paper_id"]: row for row in read_csv(articles / "article_index.csv")}
     bodies = []
     for paper_id in selected:

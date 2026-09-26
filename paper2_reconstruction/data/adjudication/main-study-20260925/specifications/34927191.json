@@ -1,0 +1,287 @@
+{
+  "paper_id": "PMID:34927191",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "0ff9cfd56c06e22bd23939c009c951c208fac60c0f381653585f4a68ccf4692d",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "13853756",
+      "files": [
+        {
+          "name": "UpSetR_uniprot_supported.R",
+          "bytes": 7080
+        },
+        {
+          "name": "all_counts_hisat_stringtie_threshold_ends.txt",
+          "bytes": 41863149
+        },
+        {
+          "name": "exons_per_transcripts.txt",
+          "bytes": 1145817
+        },
+        {
+          "name": "gene_report_supported_by_uniprot.csv",
+          "bytes": 747037
+        },
+        {
+          "name": "genes_found_cpc.txt",
+          "bytes": 113971
+        },
+        {
+          "name": "genes_found_uniprot.txt",
+          "bytes": 121660
+        },
+        {
+          "name": "ncRNA_distributions.R",
+          "bytes": 1598
+        },
+        {
+          "name": "protein_coding_potential.R",
+          "bytes": 921
+        },
+        {
+          "name": "tama_merge_report_parser.pl",
+          "bytes": 4208
+        },
+        {
+          "name": "tblout2gff3.pl",
+          "bytes": 2953
+        },
+        {
+          "name": "transcript_lengths.txt",
+          "bytes": 1331543
+        },
+        {
+          "name": "transcript_model_histograms.R",
+          "bytes": 2885
+        }
+      ]
+    },
+    {
+      "kind": "figshare",
+      "accession": "13850360",
+      "files": [
+        {
+          "name": "TruSeq3-PE_rk.fa",
+          "bytes": 86
+        },
+        {
+          "name": "hisat_stringtie_brain_ncbi.bed",
+          "bytes": 7635116
+        },
+        {
+          "name": "hisat_stringtie_ileum_ncbi.bed",
+          "bytes": 7036165
+        },
+        {
+          "name": "hisat_stringtie_lung_ncbi.bed",
+          "bytes": 7421347
+        },
+        {
+          "name": "hisat_stringtie_ovary_ncbi.bed",
+          "bytes": 11699379
+        },
+        {
+          "name": "hisat_stringtie_spleen_ncbi.bed",
+          "bytes": 7000891
+        },
+        {
+          "name": "hisat_stringtie_testes_ncbi.bed",
+          "bytes": 9258344
+        }
+      ]
+    },
+    {
+      "kind": "figshare",
+      "accession": "13850840",
+      "files": [
+        {
+          "name": "Teloprime.fasta",
+          "bytes": 81
+        },
+        {
+          "name": "td_brain_c95.bed",
+          "bytes": 3979129
+        },
+        {
+          "name": "td_ileum_c95.bed",
+          "bytes": 4518384
+        },
+        {
+          "name": "td_lung_c95.bed",
+          "bytes": 5594323
+        },
+        {
+          "name": "td_ovary_c95.bed",
+          "bytes": 2494157
+        },
+        {
+          "name": "td_spleen_c95.bed",
+          "bytes": 1642833
+        },
+        {
+          "name": "td_testes_c95.bed",
+          "bytes": 3536703
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-26T02:50:11.348885+00:00",
+  "api": {
+    "response_id": "f45e1fb8-a671-496f-a8b1-1342df27b315",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 26631,
+    "completion_tokens": 1988
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0056",
+            "quote": "Conservative filtering of the annotation (ignoring features flagged as nonsense-mediated decay and only keeping full-length hits in UniRef50 that matched with ≥90%) resulted in 111,934 transcripts and 14,099 protein-coding genes."
+          },
+          {
+            "segment_id": "S0126",
+            "quote": "The protein-coding potential was predicted with CPC2 v0.1 (Coding Potential Calculator, RRID:SCR_002764 ) [ 93 ] based on the transcripts’ sequence features."
+          }
+        ],
+        "rationale": "The principal result (protein-coding gene count) is produced by a computational pipeline (TAMA merge, CPC2, Blastp against UniRef50) on deposited transcript models and annotation files, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0014",
+            "quote": "Functional annotation revealed 14,099 protein-coding genes that generate 111,934 transcripts, which implies a mean of 7.9 isoforms per gene."
+          },
+          {
+            "segment_id": "S0056",
+            "quote": "Conservative filtering of the annotation (ignoring features flagged as nonsense-mediated decay and only keeping full-length hits in UniRef50 that matched with ≥90%) resulted in 111,934 transcripts and 14,099 protein-coding genes."
+          }
+        ],
+        "rationale": "The abstract and results state the number of protein-coding genes (14,099) as a primary quantitative endpoint of the functional annotation."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0136",
+            "quote": "Supporting data have been deposited on Figshare: Illumina RNA-Seq transcript models [ 117 ], PacBio Iso-Seq transcript models [ 118 ], functional annotation [ 119 ], expression atlas [ 120 ], Illumina small RNA-Seq annotation [ 121 ], additional scripts [ 89 ]."
+          },
+          {
+            "segment_id": "S0056",
+            "quote": "Conservative filtering of the annotation (ignoring features flagged as nonsense-mediated decay and only keeping full-length hits in UniRef50 that matched with ≥90%) resulted in 111,934 transcripts and 14,099 protein-coding genes."
+          }
+        ],
+        "rationale": "The deposited Figshare files include the merged transcript models and functional annotation (gene_report_supported_by_uniprot.csv, all_counts_hisat_stringtie_threshold_ends.txt, etc.) that are the inputs to the filtering step producing the target count."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0124",
+            "quote": "Transcript models from all 6 tissues inferred by the short-read and long-read pipelines were merged on the basis of similarity using tama_merge.py (options -a 100 -z 100 -d merge_dup) with different priorities for splice junctions and transcript end sites."
+          },
+          {
+            "segment_id": "S0126",
+            "quote": "The protein-coding potential was predicted with CPC2 v0.1 (Coding Potential Calculator, RRID:SCR_002764 ) [ 93 ] based on the transcripts’ sequence features."
+          },
+          {
+            "segment_id": "S0127",
+            "quote": "Putative protein-coding sequences were identified in the UniProt/UniRef50 database v2019_10 (UniRef, RRID:SCR_010646 ) [ 94 ] using Blastp v2.9.0 (BLASTP, RRID:SCR_001010 ) [ 95 ]."
+          }
+        ],
+        "rationale": "The methods describe the merging, CPC2 prediction, and Blastp filtering steps with tool versions and parameters, sufficient to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0126",
+            "quote": "The protein-coding potential was predicted with CPC2 v0.1 (Coding Potential Calculator, RRID:SCR_002764 ) [ 93 ] based on the transcripts’ sequence features."
+          },
+          {
+            "segment_id": "S0127",
+            "quote": "Putative protein-coding sequences were identified in the UniProt/UniRef50 database v2019_10 (UniRef, RRID:SCR_010646 ) [ 94 ] using Blastp v2.9.0 (BLASTP, RRID:SCR_001010 ) [ 95 ]."
+          }
+        ],
+        "rationale": "CPC2 and Blastp are free, open-source software; no proprietary tools are required for the target computation."
+      }
+    },
+    "exact_target": "Number of protein-coding genes after conservative filtering: 14,099",
+    "target_values": [
+      "14,099"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of protein-coding genes in the tufted duck annotation after conservative filtering of the merged transcript models.",
+    "target_type": "count",
+    "target_location": "Results, subsection 'Functional annotation of merged transcripts', Table 4",
+    "location_quotes": [
+      {
+        "segment_id": "S0056",
+        "quote": "Conservative filtering of the annotation (ignoring features flagged as nonsense-mediated decay and only keeping full-length hits in UniRef50 that matched with ≥90%) resulted in 111,934 transcripts and 14,099 protein-coding genes."
+      },
+      {
+        "segment_id": "S0057",
+        "quote": "≥90% 14,099 111,934 7.9"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0124",
+        "quote": "Transcript models from all 6 tissues inferred by the short-read and long-read pipelines were merged on the basis of similarity using tama_merge.py (options -a 100 -z 100 -d merge_dup) with different priorities for splice junctions and transcript end sites."
+      },
+      {
+        "segment_id": "S0126",
+        "quote": "The protein-coding potential was predicted with CPC2 v0.1 (Coding Potential Calculator, RRID:SCR_002764 ) [ 93 ] based on the transcripts’ sequence features."
+      },
+      {
+        "segment_id": "S0127",
+        "quote": "Putative protein-coding sequences were identified in the UniProt/UniRef50 database v2019_10 (UniRef, RRID:SCR_010646 ) [ 94 ] using Blastp v2.9.0 (BLASTP, RRID:SCR_001010 ) [ 95 ]."
+      }
+    ],
+    "required_files": [
+      "all_counts_hisat_stringtie_threshold_ends.txt",
+      "gene_report_supported_by_uniprot.csv"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposited files are from Figshare accession 13853756 (version v1). The gene_report_supported_by_uniprot.csv contains the merged gene report with UniProt support; all_counts_hisat_stringtie_threshold_ends.txt contains transcript counts. The exact filtering script is not deposited, but the method is described.",
+    "leakage_files": [
+      {
+        "name": "gene_report_supported_by_uniprot.csv",
+        "reason": "This file contains the gene report with UniProt support and likely includes the final filtered gene list, thus containing the target value (14,099) or derived result tables."
+      },
+      {
+        "name": "all_counts_hisat_stringtie_threshold_ends.txt",
+        "reason": "This file contains counts that may include the final number of protein-coding genes after filtering, thus containing the target value or derived result tables."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "UniRef50",
+        "version": "v2019_10"
+      }
+    ],
+    "comparison_metric": "Exact count comparison of the number of protein-coding genes after conservative filtering.",
+    "numerical_agreement_criterion": "Counts must match exactly: 14,099.",
+    "specification_gaps": "The exact filtering criteria for 'conservative filtering' (e.g., how nonsense-mediated decay flags are applied, how full-length hits are defined) are not fully specified in the paper; the exact version of the gene report file used is not stated.",
+    "alternatives_considered": [
+      {
+        "target": "Number of transcripts after conservative filtering (111,934)",
+        "reason": "This is a secondary count reported alongside the gene count, but the gene count is the primary endpoint emphasized in the abstract and results."
+      },
+      {
+        "target": "Number of protein-coding genes predicted by CPC2 (16,758)",
+        "reason": "This is an intermediate result before conservative filtering and is not the final reported principal result."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

@@ -102,6 +102,7 @@ def serve_slot(
     paper: dict[str, object],
     actor: str,
     frozen_sha256: str,
+    labels: dict[str, str] | None = None,
 ) -> tuple[dict[str, str], Journal, str]:
     paper_id = str(paper["paper_id"])
     journal = Journal(destination / "access-events")
@@ -111,8 +112,7 @@ def serve_slot(
         "policy",
         {
             "policy_version": POLICY_VERSION,
-            "deviation": DEVIATION,
-            "amendment": AMENDMENT,
+            **(labels if labels is not None else {"deviation": DEVIATION, "amendment": AMENDMENT}),
             "freeze_sha256": frozen_sha256,
             "actor": actor,
             "paper_id": paper_id,
@@ -169,14 +169,19 @@ def slot_run(
     paper: dict[str, object],
     slot: int,
     frozen_sha256: str,
+    *,
+    template: str = INSTRUCTION,
+    limits: Limits = TIER,
+    scope: str = "prospective_pilot_blind_reconstruction_slot",
+    labels: dict[str, str] | None = None,
 ) -> dict[str, object]:
     paper_id = str(paper["paper_id"])
     destination = base / paper_id.replace(":", "_") / f"slot-{slot}"
     destination.mkdir(parents=True, exist_ok=False)
     served, journal, article = serve_slot(
-        custodian, destination, paper, f"solver_slot_{slot}", frozen_sha256
+        custodian, destination, paper, f"solver_slot_{slot}", frozen_sha256, labels
     )
-    instruction = INSTRUCTION.format(
+    instruction = template.format(
         slot=slot,
         target=paper["blind_target"],
         served="\n".join(f"- /input/{name}" for name in sorted(served)),
@@ -188,9 +193,9 @@ def slot_run(
         served,
         instruction,
         destination / "controller",
-        TIER,
+        limits,
         IMAGE,
-        scope="prospective_pilot_blind_reconstruction_slot",
+        scope=scope,
     )
     return {
         "paper_id": paper_id,

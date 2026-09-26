@@ -1,0 +1,37 @@
+{
+  "deviation_id": "DEV-2026-09-26-01",
+  "amendment": "AMEND-2026-09-25-06",
+  "study": "MAIN-STUDY-2026-09-25",
+  "detected_at_utc": "2026-09-26T03:05:00+00:00",
+  "paper_id": "PMID:41091855",
+  "defect": "acquire_inputs served deposited R scripts (run_analysis.R, QTrait.r) named as required_files by the delegated specifier; deposited code is an original implementation artifact and must be withheld under INFORMATION_FIREWALL.md",
+  "detected_by": "investigator inspection of the first main-study freeze record after slot 2 had started",
+  "slots_affected": [
+    1,
+    2
+  ],
+  "slots_started_before_stop": 2,
+  "slot_stop_reasons": [
+    "tool_limit",
+    "tool_limit"
+  ],
+  "action": [
+    "execution halted",
+    "slots 1-2 moved to voided/ and excluded from every denominator (void, not failure)",
+    "freeze, RFC3161 stamp, acquisition ledger and frozen manifest superseded and retained",
+    "is_implementation_artifact() added to acquire_inputs; specifier prompt forbids code in required_files; manifest now raises on code drift",
+    "paper re-specified from the existing specification, re-acquired without code files, re-frozen and run with three fresh slots"
+  ],
+  "raw_bytes_retained": true,
+  "observed_values_inspected": false,
+  "success_or_failure_rate_computed": false,
+  "superseded_artifacts": {
+    "freeze": "data/adjudication/main-study-20260925/freezes/superseded/41091855.DEV-2026-09-26-01.json",
+    "freeze_sha256": "66c64ccdada32f69754deee9ffe995a4bceff29389beee679bd32b6876c5de4b",
+    "manifest": "/home/ubuntu/paper2_evidence/main-run-20260925/voided/frozen_manifest.DEV-2026-09-26-01.json",
+    "manifest_sha256": "d455683b1d616ff06373963a53babd2e41c47ef97745c36f4e8da7c36778719d",
+    "runs": "/home/ubuntu/paper2_evidence/main-run-20260925/voided/PMID_41091855.DEV-2026-09-26-01"
+  },
+  "investigator_verification": "pending",
+  "human_adjudication": "pending"
+}

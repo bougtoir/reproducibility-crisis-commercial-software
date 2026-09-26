@@ -271,5 +271,27 @@ drew the SAP cohort (N=100; N_h/n_h Biomedical 131/29, Computational 112/24,
 Environmental 83/18, Clinical 51/11, Chemistry 35/8, Social 29/6, Physics 20/4;
 within-field order SHA-256(`paper2-main-v1|paper_id`); π_h and weights saved) with
 no outcome read (`main_cohort_20260925.json`, SHA-256 `c9370893…86b4f`,
-timestamped). No main-study paper has been G1–G5 assessed, target-frozen,
-input-acquired or reconstructed; that is the next stage.
+timestamped).
+
+## Main-study execution, first tranche (2026-09-26, stopped by the investigator)
+
+`paper2.main_study` (AMEND-2026-09-25-06) processes the cohort in frozen order:
+retained article text → delegated G1–G5 and ten-field specification with
+verbatim-quote verification → lawful public input acquisition with receipts and
+leakage exclusion → per-paper RFC 3161 freeze → three sequential isolated slots
+under the final ceiling. Frozen manifest
+`/home/ubuntu/paper2_evidence/main-run-20260925/frozen_manifest.json`
+(timestamped; the harness refuses to run if code hashes drift). Nine cohort
+papers were reached before the investigator's stop instruction: 1 paper
+(PMID:41091855) completed all three slots (stop reasons tool_limit,
+tool_limit, malformed_action_limit; observed values unread, blind); 7 papers
+recorded as not run with machine-readable states (external reference resource
+required 3, gate failed 1, target value not located verbatim 1, required input
+not in listing 1, all inputs leak target 1); 1 specification (PMID:35798840)
+was interrupted mid-request and is retained as `interrupted-user-stop`. The
+remaining 91 papers are unreached, not excluded. DEV-2026-09-26-01: deposited R
+scripts were served to two slots of the first specifiable paper; those slots
+are void (retained under `voided/`), the harness now withholds deposited code
+by name, and the paper was re-frozen and run afresh. Inputs:
+`/home/ubuntu/paper2_evidence/main-inputs-20260925` (273 MB, receipts). No
+adjudication, reveal or rate computation has occurred.
