@@ -1,0 +1,27 @@
+{
+  "deviation_id": "DEV-2026-09-27-01",
+  "amendment": "AMEND-2026-09-25-06",
+  "study": "MAIN-STUDY-2026-09-25",
+  "detected_at_utc": "2026-09-27T05:10:00+00:00",
+  "paper_id": "PMID:41573549",
+  "defect": "listing_files() resolved OSF routes from the GUID record (a node object) instead of the retained per-provider file listings that the screening layer had already stored (route keys provider_<name>); the harness raised 'listing data: expected a JSON list' before the specifier was called and execution halted",
+  "detected_by": "harness exception in the execution log after the 40th cohort paper",
+  "papers_affected": ["PMID:41573549", "PMID:41460829"],
+  "slots_affected": [],
+  "action": [
+    "OSF entries are resolved from the retained provider listings already referenced by the frozen route record (sha256-verified, no new listing request); folders are skipped; files are named <provider>:<name> in the model-visible summary and served under their bare file name",
+    "frozen manifest and its RFC3161 stamp superseded and retained under superseded/; a new manifest is written before the next solver call",
+    "completed slots of the five papers run under the superseded manifest are unaffected: the change touches only OSF listing resolution, no slot, instruction, ceiling or rule",
+    "execution resumed from PMID:41573549 in cohort order; no paper status was rewritten"
+  ],
+  "raw_bytes_retained": true,
+  "observed_values_inspected": false,
+  "success_or_failure_rate_computed": false,
+  "superseded_artifacts": {
+    "manifest": "/home/ubuntu/paper2_evidence/main-run-20260925/superseded/frozen_manifest.DEV-2026-09-27-01.json",
+    "manifest_sha256": "9ac830a20bf3fb0aef80a430e153e7da470105dba54fbd4200df2eaf9a120cad",
+    "manifest_timestamp": "/home/ubuntu/paper2_evidence/main-run-20260925/superseded/manifest-timestamp.DEV-2026-09-27-01"
+  },
+  "investigator_verification": "pending",
+  "human_adjudication": "pending"
+}

@@ -106,3 +106,15 @@ not to list them, and a paper whose every required input is code is recorded
 void (retained under `voided/`, in no denominator); the paper is re-frozen and
 run with three fresh slots. Details: `data/adjudication/main-study-20260925/
 deviations/DEV-2026-09-26-01.json`.
+
+## 8. OSF listings are resolved from the retained provider listings (DEV-2026-09-27-01)
+
+On the 41st cohort paper the harness read an OSF route from its GUID record,
+which is a node object rather than a file list, and stopped with an exception
+before the specifier was called. The screening layer had already retained the
+per-provider file listings for every OSF route; the resolver now reads those
+sha256-verified bodies, skips folders, shows files as `<provider>:<name>` and
+serves them under the bare file name. No new listing request is made, no slot,
+instruction, ceiling or rule changes, and the manifest is superseded and
+retained. Details: `data/adjudication/main-study-20260925/deviations/
+DEV-2026-09-27-01.json`.

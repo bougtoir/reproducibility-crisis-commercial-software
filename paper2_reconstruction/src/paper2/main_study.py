@@ -339,17 +339,26 @@ def listing_files(route: dict[str, object]) -> list[dict[str, object]]:
                     }
                 )
     elif kind == "osf":
-        for f in listed(mapping(json.loads(body))["data"], "listing data"):
-            item = mapping(f)
-            attributes = mapping(item["attributes"])
-            entries.append(
-                {
-                    "name": str(attributes["name"]),
-                    "bytes": attributes.get("size"),
-                    "url": str(mapping(item["links"])["download"]),
-                    "md5": str(mapping(mapping(attributes["extra"])["hashes"]).get("md5", "")),
-                }
-            )
+        # The GUID record is a node; files live in the retained per-provider listings.
+        for key in sorted(k for k in route if k.startswith("provider_")):
+            provider = mapping(route[key])
+            provider_body = Path(str(provider["path"])).read_bytes()
+            if sha256(provider_body) != provider["sha256"]:
+                raise ValueError("retained provider listing differs from its receipt")
+            for f in listed(mapping(json.loads(provider_body))["data"], "listing data"):
+                item = mapping(f)
+                attributes = mapping(item["attributes"])
+                if attributes.get("kind") != "file":
+                    continue
+                hashes = mapping(mapping(attributes.get("extra", {})).get("hashes", {}))
+                entries.append(
+                    {
+                        "name": f"{key.removeprefix('provider_')}:{attributes['name']}",
+                        "bytes": attributes.get("size"),
+                        "url": str(mapping(item["links"])["download"]),
+                        "md5": str(hashes.get("md5", "") or ""),
+                    }
+                )
     elif kind == "dataverse":
         for f in listed(mapping(json.loads(body))["data"], "listing data"):
             item = mapping(mapping(f)["dataFile"])
@@ -625,7 +634,12 @@ def acquire_inputs(
                 continue
             found, suspicious = scan_text_for_values(path, values)
             members = scan_archive_members(path)
-            filename = Path(str(entry["url"])).name if route["kind"] in ENA else name
+            if route["kind"] in ENA:
+                filename = Path(str(entry["url"])).name
+            elif route["kind"] == "osf":
+                filename = name.split(":", 1)[1]
+            else:
+                filename = name
             served_as = f"deposit/{route['accession']}/{filename}"
             row = {
                 "name": name,
