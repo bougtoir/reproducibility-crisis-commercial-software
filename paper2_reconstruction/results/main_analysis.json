@@ -1,0 +1,141 @@
+{
+  "study": "MAIN-STUDY-2026-09-25",
+  "sap": "protocols/SAP.md (frozen by AMEND-2026-09-25-05)",
+  "status": "delegated_mechanical_adjudication; human_adjudication_pending; investigator_verification_pending",
+  "inputs": {
+    "cohort_selection": "MAIN-COHORT-2026-09-25",
+    "blind_outcome_sha256": "350a0e7dcedbb74ccad2472c642318c87cc7d272f1b6c88186a1419dc858ea5a",
+    "primary_adjudication_sha256": "6fd42b8964e055606cbd24ebddb44f42fa09147fa80bfa2d5bcaa161766c5b28"
+  },
+  "denominators": {
+    "route_eligible_population_E": 461,
+    "sampled_main_cohort": 100,
+    "attempted_papers_complete_triples": 10,
+    "not_attempted_papers": 90,
+    "runs": 30,
+    "prospective_pilot_papers_excluded": 7,
+    "accessibility_gate_failed_papers_excluded": 7
+  },
+  "paper_dispositions": {
+    "attempted_failure": 10,
+    "not_attempted_all_inputs_leak_target": 10,
+    "not_attempted_external_reference_resource_required_not_served": 28,
+    "not_attempted_gate_failed_delegated": 24,
+    "not_attempted_no_input_retained": 1,
+    "not_attempted_required_inputs_not_in_public_listing": 16,
+    "not_attempted_specification_not_obtained": 7,
+    "not_attempted_target_value_not_located_verbatim": 4
+  },
+  "primary_endpoint_majority_among_attempted": {
+    "failure": 10
+  },
+  "sensitivity_thresholds_among_attempted": {
+    "strict": {
+      "failure": 10
+    },
+    "majority": {
+      "failure": 10
+    },
+    "permissive": {
+      "failure": 9,
+      "success": 1
+    }
+  },
+  "conditional_rate_among_attempted": {
+    "successes": 0,
+    "attempted": 10,
+    "wilson_95_lower": 0.0,
+    "wilson_95_upper": 0.2775327998628892,
+    "label": "secondary; model-based unweighted binomial reference, not the headline"
+  },
+  "policy_estimate_delegated_states_as_recorded": {
+    "analysis": "primary_policy",
+    "eligible_population": 461,
+    "attemptable_population": 461,
+    "unknown_gates": 0,
+    "verified_barriers": 0,
+    "lower_success_total": 0.0,
+    "upper_success_total": 0.0,
+    "lower_sampling_total": 0,
+    "upper_sampling_total": 121,
+    "lower_policy_rate": 0.0,
+    "upper_policy_rate": 0.0,
+    "lower_sampling_policy_rate": 0.0,
+    "upper_sampling_policy_rate": 0.26247288503253796,
+    "interval_label": "simultaneous_hypergeometric_sampling_interval"
+  },
+  "policy_estimate_non_attempted_as_unresolved": {
+    "analysis": "verification_pending_envelope",
+    "eligible_population": 461,
+    "attemptable_population": 461,
+    "unknown_gates": 0,
+    "verified_barriers": 0,
+    "lower_success_total": 0.0,
+    "upper_success_total": 414.58045977011494,
+    "lower_sampling_total": 0,
+    "upper_sampling_total": 449,
+    "lower_policy_rate": 0.0,
+    "upper_policy_rate": 0.8993068541651084,
+    "lower_sampling_policy_rate": 0.0,
+    "upper_sampling_policy_rate": 0.9739696312364425,
+    "interval_label": "sampling_and_identification_envelope"
+  },
+  "run_level": {
+    "levels": {
+      "L1_specification_extracted": {
+        "no": 20,
+        "yes": 10
+      },
+      "L2_implementation_created": {
+        "yes": 29,
+        "not_reached": 1
+      },
+      "L3_execution_successful": {
+        "not_established": 26,
+        "not_reached": 1,
+        "yes": 3
+      },
+      "L4_numerical_target_reproduced": {
+        "not_established": 27,
+        "no": 2,
+        "yes": 1
+      },
+      "L5_conclusion_preserved": {
+        "not_assessable": 29,
+        "pending_human_adjudication": 1
+      }
+    },
+    "stop_reasons": {
+      "wall_limit": 1,
+      "tool_limit": 16,
+      "final_report": 10,
+      "token_reserve_limit": 2,
+      "malformed_action_limit": 1
+    },
+    "slot_states": {
+      "executed": 29,
+      "no_execution_report": 1
+    },
+    "failure_codes_runs": {
+      "F01": 5,
+      "F03": 2,
+      "F13": 19,
+      "F15": 3,
+      "F20": 2
+    },
+    "failure_codes_papers": {
+      "F01": 2,
+      "F03": 1,
+      "F13": 9,
+      "F15": 3,
+      "F20": 2
+    }
+  },
+  "not_performed_by_design": [
+    "multiverse",
+    "alternative_reasonable_implementations",
+    "robustness_perturbation",
+    "original_code_rerun",
+    "random_intercept_model (fewer than 20 papers with successes)"
+  ]
+}

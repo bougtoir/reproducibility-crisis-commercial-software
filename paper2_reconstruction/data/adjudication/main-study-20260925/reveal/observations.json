@@ -1,0 +1,265 @@
+{
+  "scope": "descriptive_original_code_reveal_after_blind_seal",
+  "study": "MAIN-STUDY-2026-09-25",
+  "amendment": "AMEND-2026-09-25-07",
+  "reveal_reviewer": "delegated_descriptive_pass (research team; not original authors)",
+  "code_availability_source": "Stage A public-route statement mining of the retained article text (deposit-screen-records-20260925/stage_a_statements_full.json, kind=github route=code) plus deposit listings retained at Stage B",
+  "evidence_root": "/home/ubuntu/paper2_evidence/main-reveal-20260925",
+  "completeness_scale": ["explicit", "partial", "ambiguous", "not_reported", "not_available"],
+  "dimensions": [
+    "normalization",
+    "filtering",
+    "missing_data_handling",
+    "initialization",
+    "random_seeds",
+    "stopping_criteria",
+    "defaults",
+    "preprocessing_order",
+    "exclusions",
+    "constants_and_thresholds",
+    "boundaries",
+    "software_versions",
+    "manual_transformations"
+  ],
+  "papers": [
+    {
+      "paper_id": "PMID:33072212",
+      "original_code_status": "no_code_route_named_in_publication",
+      "reveal_assessment": "missing",
+      "sources": [],
+      "snippets": [],
+      "dimensions": {}
+    },
+    {
+      "paper_id": "PMID:34495251",
+      "original_code_status": "no_code_route_named_in_publication",
+      "reveal_assessment": "missing",
+      "sources": [],
+      "snippets": [],
+      "dimensions": {}
+    },
+    {
+      "paper_id": "PMID:34731224",
+      "original_code_status": "no_code_route_named_in_publication",
+      "reveal_assessment": "missing",
+      "sources": [],
+      "snippets": [],
+      "dimensions": {}
+    },
+    {
+      "paper_id": "PMID:39830509",
+      "original_code_status": "no_code_route_named_in_publication",
+      "reveal_assessment": "missing",
+      "sources": [],
+      "snippets": [],
+      "dimensions": {}
+    },
+    {
+      "paper_id": "PMID:39895948",
+      "original_code_status": "no_code_route_named_in_publication",
+      "reveal_assessment": "missing",
+      "sources": [],
+      "snippets": [],
+      "dimensions": {}
+    },
+    {
+      "paper_id": "PMID:40956867",
+      "original_code_status": "public_repositories_named_in_publication_and_retained",
+      "reveal_assessment": "described",
+      "sources": [
+        {
+          "kind": "github_tarball",
+          "identifier": "github:VivaswatS/feems@7ff9cc8",
+          "receipt": "code/3e77e28325b79ee11da23edc511d13c303a973f75f208a0f8ba8d75d74f31c22/receipt.json",
+          "sha256": "ec56b3639680dfc312bb6b938d68431fff342bfac4c32dad6dfad6279d8790ad"
+        },
+        {
+          "kind": "github_tarball",
+          "identifier": "github:NovembreLab/feems@main",
+          "receipt": "code/07e50e94f9fc849fbb3c3a639bd0752b48bc377bbdd1585582657d528e2a6897/receipt.json",
+          "sha256": "e0949cabac3a3993f440b9499d09b171765dfd22f6b752a0bf8045307123d178"
+        },
+        {
+          "kind": "api_listing",
+          "identifier": "github:VivaswatS/feems@admixture_edge",
+          "receipt": "listings/93f8d1bd7c2e9fa261cdd116f23d6f44ae07414a79657a81a00020404d79ac22/receipt.json",
+          "sha256": "9fa351160cd19f17768bd5bc29fa582b6462b90540b32de2706b109f92755f7e"
+        }
+      ],
+      "snippets": [
+        {
+          "source": "github:VivaswatS/feems@7ff9cc8",
+          "member": "feems/sim.py",
+          "quote": "graph, chrom_length=1, mu=1e-3, n_e=1, target_n_snps=1000, n_print=50, long_range_nodes=[(0,0)], admixture_props=[0], time_of_adm=[1], replic=0, dump=False"
+        },
+        {
+          "source": "github:VivaswatS/feems@7ff9cc8",
+          "member": "feems/sim.py",
+          "quote": "demographic_events=[msprime.MassMigration(time_of_adm[i], source=long_range_nodes[i][1], dest=long_range_nodes[i][0], proportion=admixture_props[i]) for i in range(len(admixture_props))],"
+        },
+        {
+          "source": "github:VivaswatS/feems@7ff9cc8",
+          "member": "feems/sim.py",
+          "quote": "    barrier_w=0.1,\n    corridor_w=0.5,"
+        },
+        {
+          "source": "github:VivaswatS/feems@7ff9cc8",
+          "member": "feems/sim.py",
+          "quote": "graph.nodes[i][\"sample_size\"] = 2 * np.random.binomial("
+        },
+        {
+          "source": "github:VivaswatS/feems@7ff9cc8",
+          "member": "requirements.txt",
+          "quote": "msprime==1.0.0"
+        }
+      ],
+      "dimensions": {
+        "normalization": {"value": "not located in retained repository", "completeness": "not_reported"},
+        "filtering": {"value": "not located in retained repository", "completeness": "not_reported"},
+        "missing_data_handling": {"value": "not located in retained repository", "completeness": "not_reported"},
+        "initialization": {"value": "simulation initialises each deme with msprime PopulationConfiguration(initial_size=n_e); n_e defaults to 1", "completeness": "partial"},
+        "random_seeds": {"value": "sample sizes drawn with np.random.binomial without a seed argument in the retained sim.py; no fixed seed located", "completeness": "not_reported"},
+        "stopping_criteria": {"value": "not located for the simulation study; optimizer stopping lives in the estimation code and was not traced to the scenario", "completeness": "not_reported"},
+        "defaults": {"value": "simulate_genotypes_w_admixture defaults: chrom_length=1, mu=1e-3, n_e=1, target_n_snps=1000, n_print=50, admixture_props=[0], time_of_adm=[1], replic=0, dump=False", "completeness": "explicit"},
+        "preprocessing_order": {"value": "not located in retained repository", "completeness": "not_reported"},
+        "exclusions": {"value": "not located in retained repository", "completeness": "not_reported"},
+        "constants_and_thresholds": {"value": "setup_graph defaults barrier_w=0.1, corridor_w=0.5; admixture proportion enters as MassMigration proportion=admixture_props[i]", "completeness": "partial"},
+        "boundaries": {"value": "setup_graph grid defaults n_rows=8, n_columns=12; scenario grids for the published simulation not located", "completeness": "partial"},
+        "software_versions": {"value": "requirements.txt pins msprime==1.0.0, numpy==1.18.5, scipy==1.5.0, scikit-learn==0.23.1, networkx==2.4.0", "completeness": "explicit"},
+        "manual_transformations": {"value": "scenario-driving scripts for the dense-sampling / c=0.5 scenario were not located in either retained archive", "completeness": "not_available"}
+      }
+    },
+    {
+      "paper_id": "PMID:41091855",
+      "original_code_status": "paper_specific_scripts_in_data_deposit_withheld_from_solver_then_revealed",
+      "reveal_assessment": "described",
+      "sources": [
+        {
+          "kind": "withheld_deposit_file",
+          "identifier": "zenodo:17186083:run_analysis.R",
+          "receipt": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41091855/zenodo/9395cc69a4f378bcaa0f34acc1b8108e72c9b19f13f56e0c7b74b9d2056a1a01/receipt.json",
+          "sha256": "9f2dc8403054061d17e359edcab7f4b77263a3240605483c2c54efe6f0effdf1"
+        },
+        {
+          "kind": "withheld_deposit_file",
+          "identifier": "zenodo:17186083:QTrait.r",
+          "receipt": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41091855/zenodo/bead6cf05f7060047a9c5e39d75260c5127d57ea8f5981743a132caa6200e9c2/receipt.json",
+          "sha256": "75b637d614ece46f44d79c4d5127baeabb2a4c72077a4289e355e8fc4b272cc9"
+        }
+      ],
+      "snippets": [
+        {
+          "source": "zenodo:17186083:run_analysis.R",
+          "member": "",
+          "quote": "indicators <- colnames(LDSCoutput$S)[1:3]"
+        },
+        {
+          "source": "zenodo:17186083:run_analysis.R",
+          "member": "",
+          "quote": "  mresid           = 0.25,\n  mresidthreshold  = 0.10,\n  lsrmr            = 0.25,\n  lsrmrthreshold   = 0.10,"
+        },
+        {
+          "source": "zenodo:17186083:QTrait.r",
+          "member": "",
+          "quote": "CFM_fit <- usermodel(covstruc = LDSCoutput, estimation = \"DWLS\", model = CF_model_syntax,"
+        },
+        {
+          "source": "zenodo:17186083:QTrait.r",
+          "member": "",
+          "quote": "CFIcalc = F, std.lv = T, imp_cov = F)"
+        },
+        {
+          "source": "zenodo:17186083:QTrait.r",
+          "member": "",
+          "quote": "lSRMR_above_threshold <- ifelse(lsrmr_cpm > lsrmrthreshold & lsrmr_cpm > lsrmr*sqrt(mean(rGs$S_Stand^2)), \"Yes\", \"No\")"
+        }
+      ],
+      "dimensions": {
+        "normalization": {"value": "loads pre-computed LDSC output (LDSC_ADGWAX_QTRAIT.RData); no normalisation step in the deposited scripts", "completeness": "explicit"},
+        "filtering": {"value": "none in the deposited scripts", "completeness": "explicit"},
+        "missing_data_handling": {"value": "not addressed in the deposited scripts", "completeness": "not_reported"},
+        "initialization": {"value": "GenomicSEM usermodel defaults; no explicit start values", "completeness": "partial"},
+        "random_seeds": {"value": "no set.seed in either script", "completeness": "not_reported"},
+        "stopping_criteria": {"value": "GenomicSEM/lavaan optimizer defaults; not set in scripts", "completeness": "not_reported"},
+        "defaults": {"value": "QTrait(mresid=0.25, mresidthreshold=0.10, lsrmr=0.25, lsrmrthreshold=0.10, save.plots=TRUE, stdout=FALSE)", "completeness": "explicit"},
+        "preprocessing_order": {"value": "indicators = first 3 columns of S; traits = remaining columns; common-factor model then common-pathway and independent-pathway models", "completeness": "explicit"},
+        "exclusions": {"value": "none in scripts", "completeness": "explicit"},
+        "constants_and_thresholds": {"value": "estimation=\"DWLS\"; CFM std.lv=T, imp_cov=F; CPM/IPM std.lv=F, imp_cov as coded; residual thresholds as in defaults", "completeness": "explicit"},
+        "boundaries": {"value": "not applicable in scripts", "completeness": "not_reported"},
+        "software_versions": {"value": "header states R (>= 4.0); GenomicSEM version not pinned", "completeness": "partial"},
+        "manual_transformations": {"value": "results written to CSV; no manual step described", "completeness": "explicit"}
+      }
+    },
+    {
+      "paper_id": "PMID:41472739",
+      "original_code_status": "no_code_route_named_in_publication",
+      "reveal_assessment": "missing",
+      "sources": [],
+      "snippets": [],
+      "dimensions": {}
+    },
+    {
+      "paper_id": "PMID:41563087",
+      "original_code_status": "no_code_route_named_in_publication",
+      "reveal_assessment": "missing",
+      "sources": [],
+      "snippets": [],
+      "dimensions": {}
+    },
+    {
+      "paper_id": "PMID:41677189",
+      "original_code_status": "public_repository_named_in_publication_and_retained",
+      "reveal_assessment": "described",
+      "sources": [
+        {
+          "kind": "github_tarball",
+          "identifier": "github:SuzukiLabTAMU/ERSAtool@aff34c6",
+          "receipt": "code/f88ad4fe53a1f42adcaaf969afb76f71e58bbe93b8b763c1280973e15fb7dc8f/receipt.json",
+          "sha256": "888af964662b3dfbc8efb8620933e93b0e2a80e3342352f6ac9d1845e9dd0937"
+        }
+      ],
+      "snippets": [
+        {
+          "source": "github:SuzukiLabTAMU/ERSAtool@aff34c6",
+          "member": "server/code/normal_code.R",
+          "quote": "num_samples <- ncol(counts(dds))\ndds <- dds[rowSums(counts(dds)) > num_samples, ]"
+        },
+        {
+          "source": "github:SuzukiLabTAMU/ERSAtool@aff34c6",
+          "member": "server/code/vol_code.R",
+          "quote": "significant <- res %>% dplyr::filter(padj < input$adjp_cutoff, abs(log2FoldChange) > input$logfc_cutoff)"
+        },
+        {
+          "source": "github:SuzukiLabTAMU/ERSAtool@aff34c6",
+          "member": "ui/vol_deg_ui.R",
+          "quote": "sliderInput(\"logfc_cutoff\", \"Log2 Fold Change Cutoff:\", min = 0, max = 3, value = 1, step = 0.1),"
+        },
+        {
+          "source": "github:SuzukiLabTAMU/ERSAtool@aff34c6",
+          "member": "ui/vol_deg_ui.R",
+          "quote": "sliderInput(\"adjp_cutoff\", \"Adjusted P-Value Cutoff:\", min = 0, max = 0.2, value = 0.05, step = 0.01),"
+        },
+        {
+          "source": "github:SuzukiLabTAMU/ERSAtool@aff34c6",
+          "member": "server/code/vol_code.R",
+          "quote": "res <- as.data.frame(res) %>% na.omit()"
+        }
+      ],
+      "dimensions": {
+        "normalization": {"value": "DESeq2 DESeq() default size-factor normalisation", "completeness": "explicit"},
+        "filtering": {"value": "genes with rowSums(counts) > number of samples retained in the interactive path; report scripts use rowSums(counts) > 10", "completeness": "explicit"},
+        "missing_data_handling": {"value": "results rows with NA removed by na.omit() before thresholding", "completeness": "explicit"},
+        "initialization": {"value": "DESeq2 defaults", "completeness": "partial"},
+        "random_seeds": {"value": "none set", "completeness": "not_reported"},
+        "stopping_criteria": {"value": "DESeq2 defaults", "completeness": "partial"},
+        "defaults": {"value": "UI defaults adjusted p < 0.05 and |log2FC| > 1; design columns, contrast column and levels are user-selected at run time and are not recorded in the repository", "completeness": "partial"},
+        "preprocessing_order": {"value": "DESeqDataSetFromMatrix -> low-count filter -> DESeq -> results(contrast) -> na.omit -> threshold", "completeness": "explicit"},
+        "exclusions": {"value": "low-count genes only", "completeness": "explicit"},
+        "constants_and_thresholds": {"value": "padj cutoff and log2FC cutoff are interactive inputs; defaults 0.05 and 1", "completeness": "partial"},
+        "boundaries": {"value": "slider ranges 0-0.2 (padj) and 0-3 (log2FC)", "completeness": "explicit"},
+        "software_versions": {"value": "no lockfile or sessionInfo in the retained archive", "completeness": "not_reported"},
+        "manual_transformations": {"value": "count matrix and metadata uploaded interactively; the exact uploaded files and selections used for the published counts are not recorded", "completeness": "ambiguous"}
+      }
+    }
+  ]
+}

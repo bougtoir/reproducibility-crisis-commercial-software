@@ -1,0 +1,3 @@
+analysis,eligible_population,attemptable_population,unknown_gates,verified_barriers,lower_success_total,upper_success_total,lower_sampling_total,upper_sampling_total,lower_policy_rate,upper_policy_rate,lower_sampling_policy_rate,upper_sampling_policy_rate,interval_label
+primary_policy,461,461,0,0,0.0,0.0,0,121,0.0,0.0,0.0,0.26247288503253796,simultaneous_hypergeometric_sampling_interval
+verification_pending_envelope,461,461,0,0,0.0,414.58045977011494,0,449,0.0,0.8993068541651084,0.0,0.9739696312364425,sampling_and_identification_envelope

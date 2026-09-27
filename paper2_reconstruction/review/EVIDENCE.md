@@ -319,4 +319,44 @@ filesystem glob and was stopped as `wall_limit`. Blind outcomes are sealed
 350a0e7dcedbb74ccad2472c642318c87cc7d272f1b6c88186a1419dc858ea5a, RFC 3161
 verified). Inputs `/home/ubuntu/paper2_evidence/main-inputs-20260925`
 (4.5 GB, receipts); runs `/home/ubuntu/paper2_evidence/main-run-20260925`
-(1.0 GB). No adjudication, reveal or rate computation has occurred.
+(1.0 GB). Adjudication, reveal and analysis follow in the next section.
+
+## Delegated primary adjudication, descriptive reveal and prespecified analysis (2026-09-27)
+
+AMEND-2026-09-25-07 records how the frozen rules are applied to the sealed
+outcomes; no rule text changed and human adjudication / investigator
+verification remain pending. `paper2.main_adjudication` scored the 30 sealed
+slots mechanically from frozen specifications, served inputs, journaled code and
+journaled execution outputs, without opening any original implementation. The
+first record (SHA-256 8fab19e0be4d…) assigned codes to no-execution slots,
+accepted approximate provenance matches and conflated L3 with L4; it was moved
+to `superseded/` with its receipt and replaced by the corrected record
+(`primary_adjudication.json`, SHA-256 6fd42b8964e055606cbd24ebddb44f42fa09147fa80bfa2d5bcaa161766c5b28,
+2026-09-27T08:04:56.644307+00:00). Delegated result: 1/30 runs observed the
+target numerically from served inputs; 0/10 papers met the majority endpoint
+(strict 0, permissive 1); slot states executed 29 / no_execution_report 1;
+codes F13 19, F01 5, F15 3, F03 2, F20 2 (runs).
+
+Descriptive reveal was recorded at 2026-09-27T08:14:43.852326+00:00, after the seal
+(2026-09-27T06:36:30.393636+00:00). Public code archives named in the retained
+article text (NovembreLab/feems, VivaswatS/feems@7ff9cc8,
+SuzukiLabTAMU/ERSAtool@aff34c6, Zenodo 15007585 scripts withheld from the
+solver) were acquired with receipts to
+`/home/ubuntu/paper2_evidence/main-reveal-20260925` (756 MB); every quoted
+snippet is verified verbatim against the retained bytes by
+`paper2.reveal_ledger`. 3 attempted papers are described across 13 dimensions,
+7 have a missing reveal assessment. Ledger
+`data/adjudication/main-study-20260925/reveal/reveal_ledger.json`, SHA-256
+358a46e055368f9ecbb5efe4bc75ee486871968d462747c11f50e9dbb443489f, RFC 3161
+receipt under `main-run-20260925/reveal-timestamp`. No original code was
+executed; no blind score was revisited.
+
+`paper2.main_analysis` applies SAP.md: |E| = 461, cohort 100, attempted 10,
+not run 90 by recorded state; conditional majority rate 0/10 (secondary);
+simultaneous hypergeometric upper bound on the policy rate 0.262 with delegated
+states taken as recorded, and 0.974 in the verification-pending envelope that
+treats every non-attempted paper as unresolved. Outputs
+`results/main_analysis.json`, `main_paper_dispositions.csv`,
+`main_run_levels.csv`, `main_failure_codes.csv`, `main_policy_estimates.csv`,
+`reveal_ledger.csv`; the manuscript draft, supplement and editable tables carry
+these as delegated, pending-validation results and remain NOT SUBMISSION READY.

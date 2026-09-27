@@ -45,8 +45,9 @@ def test_no_fabricated_observations_or_submission_readiness() -> None:
     for filename in EMPTY_TABLES:
         assert read_csv(ROOT / "data/derived" / filename) == []
     status = json.loads((ROOT / "results/readiness.json").read_text())
-    assert status["primary_success_rate"] == "not_assessable"
-    assert status["study_status"] == "PREPARATION_ONLY_NOT_SUBMISSION_READY"
+    assert status["primary_success_rate"].startswith("delegated_mechanical_only_pending_human")
+    assert status["study_status"].endswith("NOT_SUBMISSION_READY")
+    assert status["human_validation"].startswith("NOT_COMPLETED")
     queue = read_csv(ROOT / "data/derived/funnel_NOT_ASSESSED.csv")
     assert {row["assessment_status"] for row in queue} == {"NOT_STARTED"}
     assert {row["G1_reason"] for row in queue} == {"not_assessed"}

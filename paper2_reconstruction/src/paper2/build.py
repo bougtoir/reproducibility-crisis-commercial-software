@@ -8,6 +8,7 @@ from pathlib import Path
 
 from paper2.core import FIELDS, Row, paper_registry, read_csv, sha256, snapshot, wilson, write_csv
 from paper2.frame import confirm_frame
+from paper2.main_analysis import analyse, write_tables
 
 ROOT = Path(__file__).resolve().parents[2]
 REPO = ROOT.parent
@@ -345,8 +346,14 @@ def build() -> dict[str, object]:
         for key, value in metrics.items()
     ]
     write_csv(results / "manuscript_values.csv", values, list(values[0]))
+    analysis = analyse()
+    (results / "main_analysis.json").write_text(json.dumps(analysis, indent=2) + "\n")
+    write_tables(analysis)
+    denominators = analysis["denominators"]
+    if not isinstance(denominators, dict):
+        raise ValueError("main analysis denominators missing")
     status: dict[str, object] = {
-        "study_status": "PREPARATION_ONLY_NOT_SUBMISSION_READY",
+        "study_status": "MAIN_STUDY_SEALED_DELEGATED_ADJUDICATION_NOT_SUBMISSION_READY",
         "corpus_identity": "VOR-linked deposited corpus located and commit pinned",
         "distinct_10000_paper_precondition": "not_met",
         "paper_frame_decision": frame_manifest["status"],
@@ -355,31 +362,45 @@ def build() -> dict[str, object]:
         "historical_extraction_validation": "not_verified_no_annotations_recovered",
         "historical_raw_API_snapshots": "not_recovered",
         "pilot": (
-            "PROVISIONAL_RUNS_SEALED_UNADJUDICATED; "
-            "results/provisional_pilot_summary.json; DEV-2026-09-24-02; "
-            "no deposited study input was serveable, so no slot executed the target "
-            "computation and no L1-L5 outcome is adjudicated"
+            "PROVISIONAL_PILOT DEV-2026-09-24-02 retained as ACCESSIBILITY_GATE_FAILED layer; "
+            "PROSPECTIVE_PILOT PILOT-FREEZE-2026-09-25 executed, sealed and reviewed; "
+            "neither enters the main denominator"
         ),
-        "protocol_freeze": "NOT_COMPLETED",
-        "funnel_assessment": "NOT_STARTED",
+        "protocol_freeze": "PROTOCOL-FREEZE-2026-09-25 (AMEND-2026-09-25-05), RFC3161 timestamped",
+        "funnel_assessment": (
+            "exhaustive Stage A/B route screening of the unique-PMID frame; "
+            "eligible reconstruction population 461 (data/adjudication/main_cohort_20260925.json)"
+        ),
         "primary_gate_adjudication": (
-            "devin_primary_pending_investigator_verification; "
-            "data/adjudication/devin_primary_G1_G5_20260923.json; DEV-2026-09-23-01"
+            "delegated G1-G5 for cohort papers; investigator verification pending; "
+            "data/adjudication/main-study-20260925/"
         ),
-        "pilot_selection": "PROVISIONAL_NOT_FROZEN",
-        "intensive_sample": "NOT_SELECTED",
-        "reconstruction_experiments": "NOT_COMPLETED",
+        "pilot_selection": "FROZEN PILOT-FREEZE-2026-09-25",
+        "intensive_sample": "MAIN-COHORT-2026-09-25, n=100 stratified from 461",
+        "reconstruction_experiments": (
+            f"{denominators['attempted_papers_complete_triples']} papers x 3 slots completed; "
+            f"{denominators['not_attempted_papers']} cohort papers not run "
+            "(machine-readable states)"
+        ),
         "blind_freeze": (
-            "PROVISIONAL_PILOT_OUTCOMES_SEALED_AND_TIMESTAMPED; main sample NOT_COMPLETED"
+            "MAIN blind_outcome.json sealed and RFC3161 timestamped; "
+            "delegated mechanical primary adjudication AMEND-2026-09-25-07"
         ),
-        "descriptive_reveal": "NOT_COMPLETED",
-        "human_validation": "NOT_COMPLETED",
+        "descriptive_reveal": (
+            "recorded after seal: data/adjudication/main-study-20260925/reveal/reveal_ledger.json "
+            "(3 described, 7 missing); no original code executed"
+        ),
+        "human_validation": (
+            "NOT_COMPLETED (human adjudication and investigator verification pending)"
+        ),
         "firewall_harness": (
             "custodian_broker_telemetry_dependency_freeze_controls_pass; "
             "results/firewall_qualification.json; model_side_tool_restriction_"
             "three_slot_scheduling_and_human_adjudicator_governance_unqualified"
         ),
-        "primary_success_rate": "not_assessable",
+        "primary_success_rate": (
+            "delegated_mechanical_only_pending_human_validation; results/main_analysis.json"
+        ),
         "sources_verified": len(ledger),
     }
     (results / "readiness.json").write_text(json.dumps(status, indent=2) + "\n")

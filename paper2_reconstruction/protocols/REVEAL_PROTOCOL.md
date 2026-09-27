@@ -1,6 +1,10 @@
 # Blind freeze and descriptive reveal
 
-**DRAFT — NOT FROZEN; original corpus-paper implementations have not been revealed.**
+**FROZEN 2026-09-25 by AMEND-2026-09-25-05 (hash `161062fa…9c12` in
+`data/adjudication/protocol_freeze_20260925.json`). The stale `DRAFT — NOT FROZEN`
+header was replaced by AMEND-2026-09-25-07 after the main blind seal; no rule text
+changed. Applied to the main study in
+`data/adjudication/main-study-20260925/reveal/reveal_ledger.json`.**
 
 Close all main blind slots, adjudicate and freeze outcomes/codes/comparisons,
 then hash code, inputs, outputs, public action logs, access events and manifests.

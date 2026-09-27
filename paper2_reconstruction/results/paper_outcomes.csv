@@ -1,0 +1,11 @@
+paper_id,clean_successes,missing_or_invalid_slots,strict,majority,permissive,complete_triple,evidence_id
+PMID:33072212,0,0,failure,failure,failure,true,main-study-20260925/primary_adjudication.json
+PMID:34495251,0,0,failure,failure,failure,true,main-study-20260925/primary_adjudication.json
+PMID:34731224,0,0,failure,failure,failure,true,main-study-20260925/primary_adjudication.json
+PMID:39830509,0,0,failure,failure,failure,true,main-study-20260925/primary_adjudication.json
+PMID:39895948,0,0,failure,failure,failure,true,main-study-20260925/primary_adjudication.json
+PMID:40956867,0,0,failure,failure,failure,true,main-study-20260925/primary_adjudication.json
+PMID:41091855,0,0,failure,failure,failure,true,main-study-20260925/primary_adjudication.json
+PMID:41472739,0,0,failure,failure,failure,true,main-study-20260925/primary_adjudication.json
+PMID:41563087,1,0,failure,failure,success,true,main-study-20260925/primary_adjudication.json
+PMID:41677189,0,0,failure,failure,failure,true,main-study-20260925/primary_adjudication.json

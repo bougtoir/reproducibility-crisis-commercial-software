@@ -368,6 +368,104 @@ def normalize_office_archive(path: Path) -> None:
     path.write_bytes(output.getvalue())
 
 
+def main_study_paragraphs(analysis: dict[str, object]) -> list[str]:
+    denominators = analysis["denominators"]
+    conditional = analysis["conditional_rate_among_attempted"]
+    primary = analysis["policy_estimate_delegated_states_as_recorded"]
+    pending = analysis["policy_estimate_non_attempted_as_unresolved"]
+    levels = analysis["run_level"]
+    if not (
+        isinstance(denominators, dict)
+        and isinstance(conditional, dict)
+        and isinstance(primary, dict)
+        and isinstance(pending, dict)
+        and isinstance(levels, dict)
+    ):
+        raise ValueError("main_analysis.json has an unexpected shape")
+    code_runs = levels["failure_codes_runs"]
+    stop = levels["stop_reasons"]
+    sensitivity = analysis["sensitivity_thresholds_among_attempted"]
+    if not (
+        isinstance(code_runs, dict) and isinstance(stop, dict) and isinstance(sensitivity, dict)
+    ):
+        raise ValueError("main_analysis.json run_level has an unexpected shape")
+    thresholds = "; ".join(
+        f"{name}: " + ", ".join(f"{k} {v}" for k, v in sorted(counts.items()))
+        for name, counts in sensitivity.items()
+    )
+    ledger = json.loads(
+        (ROOT / "data/adjudication/main-study-20260925/reveal/reveal_ledger.json").read_text()
+    )
+    reveal_counts = ledger["counts"]
+    return [
+        "Status: every number in this section is a delegated mechanical adjudication of "
+        "sealed blind outcomes under frozen rules (AMEND-2026-09-25-07). Human adjudication "
+        "and investigator verification are pending, and the seven prospective pilot papers "
+        "and seven ACCESSIBILITY_GATE_FAILED papers are outside every denominator below.",
+        f"Exhaustive route screening of the unique-PMID frame left "
+        f"{denominators['route_eligible_population_E']} route-eligible papers, from which "
+        f"{denominators['sampled_main_cohort']} were sampled in seven frozen strata. "
+        f"{denominators['attempted_papers_complete_triples']} sampled papers completed three "
+        f"blind slots ({denominators['runs']} runs); {denominators['not_attempted_papers']} "
+        "were not run and retain machine-readable states (Table 2): external public reference "
+        "resource required, delegated G1–G5 negative, required inputs absent from the public "
+        "listing, specification rejected by the quote/leakage validator, target value not "
+        "located verbatim, every candidate input leaking the target, or no input retained.",
+        f"Among attempted papers the majority endpoint was met by {conditional['successes']} of "
+        f"{conditional['attempted']} (secondary conditional rate; Wilson reference "
+        f"{conditional['wilson_95_lower']:.2f}–{conditional['wilson_95_upper']:.2f}). "
+        f"Prespecified thresholds — {thresholds}. "
+        "Run-level L1–L5 frequencies are in Table 3. Stop reasons: "
+        + ", ".join(f"{k} {v}" for k, v in stop.items())
+        + ". Failure codes by run (Table 4): "
+        + ", ".join(f"{k} {v}" for k, v in code_runs.items())
+        + ". F13 denotes the frozen resource ceiling, not demonstrated publication inadequacy.",
+        "Under the frozen SAP the headline policy estimand retains non-attempted papers as "
+        "policy non-success. Taking the delegated states as recorded, the simultaneous "
+        f"hypergeometric upper bound on the eligible-population success rate is "
+        f"{primary['upper_sampling_policy_rate']:.3f} (weighted point estimate "
+        f"{primary['upper_policy_rate']:.3f}). Because gate verification is "
+        "pending, an identification envelope that treats every non-attempted paper as "
+        f"unresolved reaches {pending['upper_sampling_policy_rate']:.3f}; it is a bound, not an "
+        "estimate. No random-intercept model, perturbation, multiverse or alternative-"
+        "implementation analysis was performed.",
+        "Descriptive original-code reveal (Table 5) was recorded only after the seal: "
+        f"{reveal_counts['described']} attempted papers named public code routes or shipped "
+        "scripts inside the data deposit (withheld from the solver) and are described; "
+        f"{reveal_counts['missing']} named none and receive a missing reveal assessment. "
+        "Nothing was executed and no blind score was revisited.",
+    ]
+
+
+def main_study_tables(
+    document: WordDocument,
+    dispositions: list[Row],
+    run_levels: list[Row],
+    failure_codes: list[Row],
+    reveal: list[Row],
+) -> None:
+    caption(
+        document, "Table 2. Main-cohort paper dispositions (delegated; human adjudication pending)."
+    )
+    table(document, dispositions, [("disposition", "Disposition"), ("papers", "Papers")])
+    caption(document, "Table 3. Run-level L1–L5 states across 30 sealed slots.")
+    table(document, run_levels, [("level", "Level"), ("state", "State"), ("runs", "Runs")])
+    caption(document, "Table 4. Failure taxonomy codes by run and by paper.")
+    table(document, failure_codes, [("code", "Code"), ("runs", "Runs"), ("papers", "Papers")])
+    caption(document, "Table 5. Descriptive original-code reveal ledger (post-seal, not executed).")
+    table(
+        document,
+        reveal,
+        [
+            ("paper_id", "Paper"),
+            ("reveal_assessment", "Assessment"),
+            ("dimension", "Dimension"),
+            ("completeness", "Completeness"),
+            ("description", "Description"),
+        ],
+    )
+
+
 def build_documents() -> None:
     output = ROOT / "manuscript"
     output.mkdir(parents=True, exist_ok=True)
@@ -377,6 +475,11 @@ def build_documents() -> None:
     characteristics = read_csv(ROOT / "results/corpus_characteristics.csv")
     precision = read_csv(ROOT / "results/precision_planning.csv")
     references = read_csv(ROOT / "data/verified_references.csv")
+    analysis = json.loads((ROOT / "results/main_analysis.json").read_text())
+    dispositions = read_csv(ROOT / "results/main_paper_dispositions.csv")
+    run_levels = read_csv(ROOT / "results/main_run_levels.csv")
+    failure_codes = read_csv(ROOT / "results/main_failure_codes.csv")
+    reveal = read_csv(ROOT / "results/reveal_ledger.csv")
     framework(output)
     slides(output, characteristics)
     document = Document()
@@ -550,10 +653,13 @@ def build_documents() -> None:
         "random-offset expression is always zero. Historical candidate/API snapshots and "
         "validation annotations were not recovered. Consequently original population-wide "
         "selection probabilities and extraction accuracy are not established by this "
-        "audit. Current availability, eligibility and reconstruction outcomes remain "
-        "unassessed. No reconstruction rate can be calculated.",
+        "audit. Main-study outcomes below are delegated mechanical adjudications that await "
+        "human adjudication; no human-validated reconstruction rate exists.",
     )
-    heading(document, "4 Discussion boundary and submission hold")
+    heading(document, "4 Main-study execution and delegated mechanical results")
+    for text in main_study_paragraphs(analysis):
+        paragraph(document, text)
+    heading(document, "5 Discussion boundary and submission hold")
     paragraph(
         document,
         "The source audit supports identity and denominator statements only. It cannot "
@@ -620,6 +726,7 @@ def build_documents() -> None:
             ("half_width", "Half-width"),
         ],
     )
+    main_study_tables(supplement, dispositions, run_levels, failure_codes, reveal)
     for path in sorted((ROOT / "protocols").glob("*.md")):
         supplement.add_page_break()
         markdown(supplement, path.read_text())
@@ -639,6 +746,7 @@ def build_documents() -> None:
             ("unique_pmids_within_field", "Unique PMIDs within field"),
         ],
     )
+    main_study_tables(tables, dispositions, run_levels, failure_codes, reveal)
     caption(tables, "Table S1. Analytic Wilson precision planning.")
     table(
         tables,

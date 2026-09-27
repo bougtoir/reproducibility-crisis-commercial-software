@@ -1,0 +1,47 @@
+paper_id,original_code_status,reveal_assessment,dimension,completeness,description
+PMID:33072212,no_code_route_named_in_publication,missing,,not_available,
+PMID:34495251,no_code_route_named_in_publication,missing,,not_available,
+PMID:34731224,no_code_route_named_in_publication,missing,,not_available,
+PMID:39830509,no_code_route_named_in_publication,missing,,not_available,
+PMID:39895948,no_code_route_named_in_publication,missing,,not_available,
+PMID:40956867,public_repositories_named_in_publication_and_retained,described,normalization,not_reported,not located in retained repository
+PMID:40956867,public_repositories_named_in_publication_and_retained,described,filtering,not_reported,not located in retained repository
+PMID:40956867,public_repositories_named_in_publication_and_retained,described,missing_data_handling,not_reported,not located in retained repository
+PMID:40956867,public_repositories_named_in_publication_and_retained,described,initialization,partial,simulation initialises each deme with msprime PopulationConfiguration(initial_size=n_e); n_e defaults to 1
+PMID:40956867,public_repositories_named_in_publication_and_retained,described,random_seeds,not_reported,sample sizes drawn with np.random.binomial without a seed argument in the retained sim.py; no fixed seed located
+PMID:40956867,public_repositories_named_in_publication_and_retained,described,stopping_criteria,not_reported,not located for the simulation study; optimizer stopping lives in the estimation code and was not traced to the scenario
+PMID:40956867,public_repositories_named_in_publication_and_retained,described,defaults,explicit,"simulate_genotypes_w_admixture defaults: chrom_length=1, mu=1e-3, n_e=1, target_n_snps=1000, n_print=50, admixture_props=[0], time_of_adm=[1], replic=0, dump=False"
+PMID:40956867,public_repositories_named_in_publication_and_retained,described,preprocessing_order,not_reported,not located in retained repository
+PMID:40956867,public_repositories_named_in_publication_and_retained,described,exclusions,not_reported,not located in retained repository
+PMID:40956867,public_repositories_named_in_publication_and_retained,described,constants_and_thresholds,partial,"setup_graph defaults barrier_w=0.1, corridor_w=0.5; admixture proportion enters as MassMigration proportion=admixture_props[i]"
+PMID:40956867,public_repositories_named_in_publication_and_retained,described,boundaries,partial,"setup_graph grid defaults n_rows=8, n_columns=12; scenario grids for the published simulation not located"
+PMID:40956867,public_repositories_named_in_publication_and_retained,described,software_versions,explicit,"requirements.txt pins msprime==1.0.0, numpy==1.18.5, scipy==1.5.0, scikit-learn==0.23.1, networkx==2.4.0"
+PMID:40956867,public_repositories_named_in_publication_and_retained,described,manual_transformations,not_available,scenario-driving scripts for the dense-sampling / c=0.5 scenario were not located in either retained archive
+PMID:41091855,paper_specific_scripts_in_data_deposit_withheld_from_solver_then_revealed,described,normalization,explicit,loads pre-computed LDSC output (LDSC_ADGWAX_QTRAIT.RData); no normalisation step in the deposited scripts
+PMID:41091855,paper_specific_scripts_in_data_deposit_withheld_from_solver_then_revealed,described,filtering,explicit,none in the deposited scripts
+PMID:41091855,paper_specific_scripts_in_data_deposit_withheld_from_solver_then_revealed,described,missing_data_handling,not_reported,not addressed in the deposited scripts
+PMID:41091855,paper_specific_scripts_in_data_deposit_withheld_from_solver_then_revealed,described,initialization,partial,GenomicSEM usermodel defaults; no explicit start values
+PMID:41091855,paper_specific_scripts_in_data_deposit_withheld_from_solver_then_revealed,described,random_seeds,not_reported,no set.seed in either script
+PMID:41091855,paper_specific_scripts_in_data_deposit_withheld_from_solver_then_revealed,described,stopping_criteria,not_reported,GenomicSEM/lavaan optimizer defaults; not set in scripts
+PMID:41091855,paper_specific_scripts_in_data_deposit_withheld_from_solver_then_revealed,described,defaults,explicit,"QTrait(mresid=0.25, mresidthreshold=0.10, lsrmr=0.25, lsrmrthreshold=0.10, save.plots=TRUE, stdout=FALSE)"
+PMID:41091855,paper_specific_scripts_in_data_deposit_withheld_from_solver_then_revealed,described,preprocessing_order,explicit,indicators = first 3 columns of S; traits = remaining columns; common-factor model then common-pathway and independent-pathway models
+PMID:41091855,paper_specific_scripts_in_data_deposit_withheld_from_solver_then_revealed,described,exclusions,explicit,none in scripts
+PMID:41091855,paper_specific_scripts_in_data_deposit_withheld_from_solver_then_revealed,described,constants_and_thresholds,explicit,"estimation=""DWLS""; CFM std.lv=T, imp_cov=F; CPM/IPM std.lv=F, imp_cov as coded; residual thresholds as in defaults"
+PMID:41091855,paper_specific_scripts_in_data_deposit_withheld_from_solver_then_revealed,described,boundaries,not_reported,not applicable in scripts
+PMID:41091855,paper_specific_scripts_in_data_deposit_withheld_from_solver_then_revealed,described,software_versions,partial,header states R (>= 4.0); GenomicSEM version not pinned
+PMID:41091855,paper_specific_scripts_in_data_deposit_withheld_from_solver_then_revealed,described,manual_transformations,explicit,results written to CSV; no manual step described
+PMID:41472739,no_code_route_named_in_publication,missing,,not_available,
+PMID:41563087,no_code_route_named_in_publication,missing,,not_available,
+PMID:41677189,public_repository_named_in_publication_and_retained,described,normalization,explicit,DESeq2 DESeq() default size-factor normalisation
+PMID:41677189,public_repository_named_in_publication_and_retained,described,filtering,explicit,genes with rowSums(counts) > number of samples retained in the interactive path; report scripts use rowSums(counts) > 10
+PMID:41677189,public_repository_named_in_publication_and_retained,described,missing_data_handling,explicit,results rows with NA removed by na.omit() before thresholding
+PMID:41677189,public_repository_named_in_publication_and_retained,described,initialization,partial,DESeq2 defaults
+PMID:41677189,public_repository_named_in_publication_and_retained,described,random_seeds,not_reported,none set
+PMID:41677189,public_repository_named_in_publication_and_retained,described,stopping_criteria,partial,DESeq2 defaults
+PMID:41677189,public_repository_named_in_publication_and_retained,described,defaults,partial,"UI defaults adjusted p < 0.05 and |log2FC| > 1; design columns, contrast column and levels are user-selected at run time and are not recorded in the repository"
+PMID:41677189,public_repository_named_in_publication_and_retained,described,preprocessing_order,explicit,DESeqDataSetFromMatrix -> low-count filter -> DESeq -> results(contrast) -> na.omit -> threshold
+PMID:41677189,public_repository_named_in_publication_and_retained,described,exclusions,explicit,low-count genes only
+PMID:41677189,public_repository_named_in_publication_and_retained,described,constants_and_thresholds,partial,padj cutoff and log2FC cutoff are interactive inputs; defaults 0.05 and 1
+PMID:41677189,public_repository_named_in_publication_and_retained,described,boundaries,explicit,slider ranges 0-0.2 (padj) and 0-3 (log2FC)
+PMID:41677189,public_repository_named_in_publication_and_retained,described,software_versions,not_reported,no lockfile or sessionInfo in the retained archive
+PMID:41677189,public_repository_named_in_publication_and_retained,described,manual_transformations,ambiguous,count matrix and metadata uploaded interactively; the exact uploaded files and selections used for the published counts are not recorded

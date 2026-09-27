@@ -1,0 +1,1665 @@
+{
+  "adjudicated_at_utc": "2026-09-27T08:04:56.644307+00:00",
+  "adjudicator": "delegated_primary_mechanical (frozen rules applied by code)",
+  "amendment": "AMEND-2026-09-25-07",
+  "blind_outcome_sha256": "350a0e7dcedbb74ccad2472c642318c87cc7d272f1b6c88186a1419dc858ea5a",
+  "counts": {
+    "papers_with_completed_triples": 10,
+    "primary_endpoint_majority": {
+      "failure": 10,
+      "success": 0,
+      "unknown": 0
+    },
+    "run_success": {
+      "no": 29,
+      "not_assessable": 0,
+      "unknown": 0,
+      "yes": 1
+    },
+    "runs": 30
+  },
+  "execution_amendment": "AMEND-2026-09-25-06",
+  "human_adjudication": "pending",
+  "investigator_verification": "pending",
+  "original_implementation_consulted": false,
+  "papers": [
+    {
+      "clean_successes": 0,
+      "complete_triple": true,
+      "majority": "failure",
+      "missing_or_invalid_slots": 0,
+      "paper_id": "PMID:33072212",
+      "permissive": "failure",
+      "primary_endpoint_majority": "failure",
+      "slot_states": [
+        "no",
+        "no",
+        "no"
+      ],
+      "strict": "failure"
+    },
+    {
+      "clean_successes": 0,
+      "complete_triple": true,
+      "majority": "failure",
+      "missing_or_invalid_slots": 0,
+      "paper_id": "PMID:34495251",
+      "permissive": "failure",
+      "primary_endpoint_majority": "failure",
+      "slot_states": [
+        "no",
+        "no",
+        "no"
+      ],
+      "strict": "failure"
+    },
+    {
+      "clean_successes": 0,
+      "complete_triple": true,
+      "majority": "failure",
+      "missing_or_invalid_slots": 0,
+      "paper_id": "PMID:34731224",
+      "permissive": "failure",
+      "primary_endpoint_majority": "failure",
+      "slot_states": [
+        "no",
+        "no",
+        "no"
+      ],
+      "strict": "failure"
+    },
+    {
+      "clean_successes": 0,
+      "complete_triple": true,
+      "majority": "failure",
+      "missing_or_invalid_slots": 0,
+      "paper_id": "PMID:39830509",
+      "permissive": "failure",
+      "primary_endpoint_majority": "failure",
+      "slot_states": [
+        "no",
+        "no",
+        "no"
+      ],
+      "strict": "failure"
+    },
+    {
+      "clean_successes": 0,
+      "complete_triple": true,
+      "majority": "failure",
+      "missing_or_invalid_slots": 0,
+      "paper_id": "PMID:39895948",
+      "permissive": "failure",
+      "primary_endpoint_majority": "failure",
+      "slot_states": [
+        "no",
+        "no",
+        "no"
+      ],
+      "strict": "failure"
+    },
+    {
+      "clean_successes": 0,
+      "complete_triple": true,
+      "majority": "failure",
+      "missing_or_invalid_slots": 0,
+      "paper_id": "PMID:40956867",
+      "permissive": "failure",
+      "primary_endpoint_majority": "failure",
+      "slot_states": [
+        "no",
+        "no",
+        "no"
+      ],
+      "strict": "failure"
+    },
+    {
+      "clean_successes": 0,
+      "complete_triple": true,
+      "majority": "failure",
+      "missing_or_invalid_slots": 0,
+      "paper_id": "PMID:41091855",
+      "permissive": "failure",
+      "primary_endpoint_majority": "failure",
+      "slot_states": [
+        "no",
+        "no",
+        "no"
+      ],
+      "strict": "failure"
+    },
+    {
+      "clean_successes": 0,
+      "complete_triple": true,
+      "majority": "failure",
+      "missing_or_invalid_slots": 0,
+      "paper_id": "PMID:41472739",
+      "permissive": "failure",
+      "primary_endpoint_majority": "failure",
+      "slot_states": [
+        "no",
+        "no",
+        "no"
+      ],
+      "strict": "failure"
+    },
+    {
+      "clean_successes": 1,
+      "complete_triple": true,
+      "majority": "failure",
+      "missing_or_invalid_slots": 0,
+      "paper_id": "PMID:41563087",
+      "permissive": "success",
+      "primary_endpoint_majority": "failure",
+      "slot_states": [
+        "no",
+        "no",
+        "yes"
+      ],
+      "strict": "failure"
+    },
+    {
+      "clean_successes": 0,
+      "complete_triple": true,
+      "majority": "failure",
+      "missing_or_invalid_slots": 0,
+      "paper_id": "PMID:41677189",
+      "permissive": "failure",
+      "primary_endpoint_majority": "failure",
+      "slot_states": [
+        "no",
+        "no",
+        "no"
+      ],
+      "strict": "failure"
+    }
+  ],
+  "protocol_amendment": "AMEND-2026-09-25-05",
+  "provenance_rule": "L3/L4 observed values count only when located, to reported precision, in a journaled execution output of code that reads served inputs (PD-04).",
+  "runs": [
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Performance metrics on the identical split: accuracy must match the reported value within the displayed rounding bin (0.9667 and 0.6333, or 96.67% and 63.33%).",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "0.9667",
+        "96.67",
+        "0.6333",
+        "63.33"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 27,
+      "observed_components": [],
+      "paper_id": "PMID:33072212",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 12,
+      "slot": 1,
+      "slot_state": "executed",
+      "stop_reason": "wall_limit",
+      "target_component_matches": {
+        "0.6333": null,
+        "0.9667": null,
+        "63.33": null,
+        "96.67": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Performance metrics on the identical split: accuracy must match the reported value within the displayed rounding bin (0.9667 and 0.6333, or 96.67% and 63.33%).",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "0.9667",
+        "96.67",
+        "0.6333",
+        "63.33"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:33072212",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 14,
+      "slot": 2,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "0.6333": null,
+        "0.9667": null,
+        "63.33": null,
+        "96.67": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Performance metrics on the identical split: accuracy must match the reported value within the displayed rounding bin (0.9667 and 0.6333, or 96.67% and 63.33%).",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "0.9667",
+        "96.67",
+        "0.6333",
+        "63.33"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:33072212",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 3,
+      "slot": 3,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "0.6333": null,
+        "0.9667": null,
+        "63.33": null,
+        "96.67": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "yes",
+      "L2_implementation_created": "not_reached",
+      "L3_execution_successful": "not_reached",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Scalars within displayed rounding bin: r values rounded to two decimal places (0.90 and 0.84).",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [],
+      "frozen_target_values": [
+        "0.90",
+        "0.84",
+        "P<0.05"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 0,
+      "observed_components": [],
+      "paper_id": "PMID:34495251",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [
+        "MISSING_METHOD_DETAILS_IN_PUBLICATION",
+        "MISSING_PROCESSED_INPUTS",
+        "TARGET_NOT_COMPUTABLE_FROM_SERVED_INPUTS"
+      ],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "no",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 0,
+      "slot": 1,
+      "slot_state": "no_execution_report",
+      "stop_reason": "final_report",
+      "target_component_matches": {
+        "0.84": null,
+        "0.90": null,
+        "P<0.05": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Scalars within displayed rounding bin: r values rounded to two decimal places (0.90 and 0.84).",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "0.90",
+        "0.84",
+        "P<0.05"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:34495251",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 4,
+      "slot": 2,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "0.84": null,
+        "0.90": null,
+        "P<0.05": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Scalars within displayed rounding bin: r values rounded to two decimal places (0.90 and 0.84).",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "0.90",
+        "0.84",
+        "P<0.05"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 36,
+      "observed_components": [],
+      "paper_id": "PMID:34495251",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 4,
+      "slot": 3,
+      "slot_state": "executed",
+      "stop_reason": "token_reserve_limit",
+      "target_component_matches": {
+        "0.84": null,
+        "0.90": null,
+        "P<0.05": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "yes",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Counts must match exactly: total DEGs = 12,059; up-regulated = 6,737; down-regulated = 5,322.",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F01",
+        "F03"
+      ],
+      "frozen_target_values": [
+        "12 059",
+        "6737",
+        "5322"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 19,
+      "observed_components": [],
+      "paper_id": "PMID:34731224",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [
+        "MISSING_REQUIRED_INPUT: no RNA-seq reads (FASTQ/SRA) for the six libraries",
+        "MISSING_REQUIRED_INPUT: no per-sample expression/count matrix or Salmon quantification output",
+        "MISSING_REQUIRED_INPUT: no sample metadata linking libraries to NT/LT groups",
+        "NO_NETWORK: cannot retrieve GSE168396 supplementary raw data",
+        "TOOL_UNAVAILABLE: salmon not installed (edgeR available in R, but no input counts)"
+      ],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 5,
+      "slot": 1,
+      "slot_state": "executed",
+      "stop_reason": "final_report",
+      "target_component_matches": {
+        "12 059": null,
+        "5322": null,
+        "6737": null
+      },
+      "verbatim_mapped_codes": [
+        "F01",
+        "F01",
+        "F01",
+        "F03"
+      ]
+    },
+    {
+      "L1_specification_extracted": "yes",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Counts must match exactly: total DEGs = 12,059; up-regulated = 6,737; down-regulated = 5,322.",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F01",
+        "F03"
+      ],
+      "frozen_target_values": [
+        "12 059",
+        "6737",
+        "5322"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 16,
+      "observed_components": [],
+      "paper_id": "PMID:34731224",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [
+        "MISSING_REQUIRED_INPUT: per-sample RNA-seq reads or expression/count matrix not served (only the Trinity gene assembly is present).",
+        "MISSING_REQUIRED_RESOURCE: salmon and Trinity are not installed; no network access to fetch reads from GEO/SRA.",
+        "TARGET_NOT_COMPUTABLE: DEG calling (Salmon TPM + edgeR) cannot be executed without expression data."
+      ],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 5,
+      "slot": 2,
+      "slot_state": "executed",
+      "stop_reason": "final_report",
+      "target_component_matches": {
+        "12 059": null,
+        "5322": null,
+        "6737": null
+      },
+      "verbatim_mapped_codes": [
+        "F01",
+        "F03"
+      ]
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Counts must match exactly: total DEGs = 12,059; up-regulated = 6,737; down-regulated = 5,322.",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "12 059",
+        "6737",
+        "5322"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:34731224",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 3,
+      "slot": 3,
+      "slot_state": "executed",
+      "stop_reason": "token_reserve_limit",
+      "target_component_matches": {
+        "12 059": null,
+        "5322": null,
+        "6737": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Counts must match exactly.",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "3,544"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:39830509",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 2,
+      "slot": 1,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "3,544": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "yes",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Counts must match exactly.",
+      "claimed_observed_value": 8930,
+      "clean": true,
+      "component_provenance": {
+        "8930": null
+      },
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F15"
+      ],
+      "frozen_target_values": [
+        "3,544"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 22,
+      "observed_components": [
+        "8930"
+      ],
+      "paper_id": "PMID:39830509",
+      "report_only_components": [
+        "8930"
+      ],
+      "reported_failure_codes_verbatim": [
+        "published_value_not_reproduced"
+      ],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 3,
+      "slot": 2,
+      "slot_state": "executed",
+      "stop_reason": "final_report",
+      "target_component_matches": {
+        "3,544": null
+      },
+      "verbatim_mapped_codes": [
+        "F20"
+      ]
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Counts must match exactly.",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "3,544"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:39830509",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 2,
+      "slot": 3,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "3,544": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Performance metrics must match on the identical split; percentages compared within the displayed rounding bin (one decimal place).",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "28.0",
+        "38.6",
+        "22.8",
+        "77.2",
+        "78.9",
+        "96.5",
+        "55.2",
+        "64.7",
+        "86.7",
+        "51.8",
+        "56.3",
+        "55.6"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:39895948",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 34,
+      "slot": 1,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "22.8": null,
+        "28.0": null,
+        "38.6": null,
+        "51.8": null,
+        "55.2": null,
+        "55.6": null,
+        "56.3": null,
+        "64.7": null,
+        "77.2": null,
+        "78.9": null,
+        "86.7": null,
+        "96.5": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Performance metrics must match on the identical split; percentages compared within the displayed rounding bin (one decimal place).",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "28.0",
+        "38.6",
+        "22.8",
+        "77.2",
+        "78.9",
+        "96.5",
+        "55.2",
+        "64.7",
+        "86.7",
+        "51.8",
+        "56.3",
+        "55.6"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:39895948",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 35,
+      "slot": 2,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "22.8": null,
+        "28.0": null,
+        "38.6": null,
+        "51.8": null,
+        "55.2": null,
+        "55.6": null,
+        "56.3": null,
+        "64.7": null,
+        "77.2": null,
+        "78.9": null,
+        "86.7": null,
+        "96.5": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "yes",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "yes",
+      "L4_numerical_target_reproduced": "no",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Performance metrics must match on the identical split; percentages compared within the displayed rounding bin (one decimal place).",
+      "claimed_observed_value": {
+        "MLR": {
+          "npv_pct": 55.6,
+          "ppv_pct": 63.6,
+          "sensitivity_pct": 36.8,
+          "specificity_pct": 78.9
+        },
+        "NLR": {
+          "npv_pct": 51.8,
+          "ppv_pct": 55.2,
+          "sensitivity_pct": 28.1,
+          "specificity_pct": 77.2
+        },
+        "combined_NLR_and_MLR": {
+          "npv_pct": 54.2,
+          "ppv_pct": 72.2,
+          "sensitivity_pct": 22.8,
+          "specificity_pct": 91.2
+        }
+      },
+      "clean": true,
+      "component_provenance": {
+        "22.8": "da72eb5c7a40011f332018d7ee2abf34e51f984bbb93759282bb4091314a8929",
+        "28.1": "da72eb5c7a40011f332018d7ee2abf34e51f984bbb93759282bb4091314a8929",
+        "36.8": "da72eb5c7a40011f332018d7ee2abf34e51f984bbb93759282bb4091314a8929",
+        "51.8": "832e4afa4d24beea87e80102a20742f7f0d1b44835ea15defcaa5a35dd903d6b",
+        "54.2": "4c1150df3a11ff37b02f13f55eeea40e8627bff24b72ceffddee42d5a0c1a5cf",
+        "55.2": null,
+        "55.6": null,
+        "63.6": null,
+        "72.2": "4c1150df3a11ff37b02f13f55eeea40e8627bff24b72ceffddee42d5a0c1a5cf",
+        "77.2": "da72eb5c7a40011f332018d7ee2abf34e51f984bbb93759282bb4091314a8929",
+        "78.9": "da72eb5c7a40011f332018d7ee2abf34e51f984bbb93759282bb4091314a8929",
+        "91.2": "da72eb5c7a40011f332018d7ee2abf34e51f984bbb93759282bb4091314a8929"
+      },
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F20"
+      ],
+      "frozen_target_values": [
+        "28.0",
+        "38.6",
+        "22.8",
+        "77.2",
+        "78.9",
+        "96.5",
+        "55.2",
+        "64.7",
+        "86.7",
+        "51.8",
+        "56.3",
+        "55.6"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": true,
+      "journaled_executions": 19,
+      "observed_components": [
+        "55.6",
+        "63.6",
+        "36.8",
+        "78.9",
+        "51.8",
+        "55.2",
+        "28.1",
+        "77.2",
+        "54.2",
+        "72.2",
+        "22.8",
+        "91.2"
+      ],
+      "paper_id": "PMID:39895948",
+      "report_only_components": [
+        "55.6",
+        "63.6",
+        "55.2"
+      ],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "yes",
+        "L4": "no",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 15,
+      "slot": 3,
+      "slot_state": "executed",
+      "stop_reason": "final_report",
+      "target_component_matches": {
+        "22.8": "22.8",
+        "28.0": null,
+        "38.6": null,
+        "51.8": "51.8",
+        "55.2": null,
+        "55.6": null,
+        "56.3": null,
+        "64.7": null,
+        "77.2": "77.2",
+        "78.9": "78.9",
+        "86.7": null,
+        "96.5": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Proportions compared by numerator/denominator; the reported 100% corresponds to 50/50 replicates, and the interval must match the Clopper-Pearson interval at the reported precision.",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "100 %",
+        "93 %",
+        "100 %"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:40956867",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 21,
+      "slot": 1,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "100 %": null,
+        "93 %": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Proportions compared by numerator/denominator; the reported 100% corresponds to 50/50 replicates, and the interval must match the Clopper-Pearson interval at the reported precision.",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "100 %",
+        "93 %",
+        "100 %"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:40956867",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 1,
+      "slot": 2,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "100 %": null,
+        "93 %": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Proportions compared by numerator/denominator; the reported 100% corresponds to 50/50 replicates, and the interval must match the Clopper-Pearson interval at the reported precision.",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "100 %",
+        "93 %",
+        "100 %"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:40956867",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 8,
+      "slot": 3,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "100 %": null,
+        "93 %": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Scalars within displayed rounding bin: the reported value is 36.75, so the solver's computed value should round to 36.75 at two decimal places.",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "36.75"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:41091855",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 9,
+      "slot": 1,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "36.75": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Scalars within displayed rounding bin: the reported value is 36.75, so the solver's computed value should round to 36.75 at two decimal places.",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "36.75"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:41091855",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 28,
+      "slot": 2,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "36.75": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Scalars within displayed rounding bin: the reported value is 36.75, so the solver's computed value should round to 36.75 at two decimal places.",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F15"
+      ],
+      "frozen_target_values": [
+        "36.75"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 29,
+      "observed_components": [],
+      "paper_id": "PMID:41091855",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 15,
+      "slot": 3,
+      "slot_state": "executed",
+      "stop_reason": "malformed_action_limit",
+      "target_component_matches": {
+        "36.75": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "yes",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Counts must match exactly (101 down-regulated, 125 up-regulated).",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F01"
+      ],
+      "frozen_target_values": [
+        "101",
+        "125"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 16,
+      "observed_components": [],
+      "paper_id": "PMID:41472739",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [
+        "missing_required_input: no LC-MS metabolomics raw or processed data served; only 16S rRNA amplicon FASTQ files are available",
+        "target_not_computable_from_served_inputs: volcano plot analysis of LC-MS untargeted metabolomics cannot be performed without metabolomics data"
+      ],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 5,
+      "slot": 1,
+      "slot_state": "executed",
+      "stop_reason": "final_report",
+      "target_component_matches": {
+        "101": null,
+        "125": null
+      },
+      "verbatim_mapped_codes": [
+        "F01"
+      ]
+    },
+    {
+      "L1_specification_extracted": "yes",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Counts must match exactly (101 down-regulated, 125 up-regulated).",
+      "claimed_observed_value": 226,
+      "clean": true,
+      "component_provenance": {
+        "226": null
+      },
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F15",
+        "F01"
+      ],
+      "frozen_target_values": [
+        "101",
+        "125"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 21,
+      "observed_components": [
+        "226"
+      ],
+      "paper_id": "PMID:41472739",
+      "report_only_components": [
+        "226"
+      ],
+      "reported_failure_codes_verbatim": [
+        "metabolomics_input_absent: served deposit contains only 16S rRNA FASTQ files; no LC-MS metabolomics data or feature tables available to recompute the volcano-plot counts"
+      ],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 4,
+      "slot": 2,
+      "slot_state": "executed",
+      "stop_reason": "final_report",
+      "target_component_matches": {
+        "101": null,
+        "125": null
+      },
+      "verbatim_mapped_codes": [
+        "F01"
+      ]
+    },
+    {
+      "L1_specification_extracted": "yes",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Counts must match exactly (101 down-regulated, 125 up-regulated).",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F01"
+      ],
+      "frozen_target_values": [
+        "101",
+        "125"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 27,
+      "observed_components": [],
+      "paper_id": "PMID:41472739",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [
+        "MISSING_INPUT: no LC-MS untargeted metabolomics data served (only 16S amplicon FASTQ and publication XML)",
+        "TARGET_NOT_COMPUTABLE: published method requires metabolomics feature/abundance data absent from served inputs"
+      ],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 6,
+      "slot": 3,
+      "slot_state": "executed",
+      "stop_reason": "final_report",
+      "target_component_matches": {
+        "101": null,
+        "125": null
+      },
+      "verbatim_mapped_codes": [
+        "F01"
+      ]
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Proportion: the recomputed numerator and denominator must yield a percentage that rounds to 89% at the reported precision.",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "89%"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:41563087",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 40,
+      "slot": 1,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "89%": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "yes",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "yes",
+      "L4_numerical_target_reproduced": "no",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Proportion: the recomputed numerator and denominator must yield a percentage that rounds to 89% at the reported precision.",
+      "claimed_observed_value": "89% (139/158 = 87.97%; 139/157 = 88.54%)",
+      "clean": true,
+      "component_provenance": {
+        "139": "e32aef8cc49d3a3d867ebe9362238b3d0fc387ad2358554d041a14d29c2d1d80",
+        "157": "53b5a3d0b5be992d00390337c88b09557536f60d120666b3193e2b475e885fa1",
+        "158": "12a54edf50a0a5637980983f6aee02e219074e082bca6e0e843665ddab09dc69",
+        "87.97": null,
+        "88.54": null,
+        "89": null
+      },
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F20"
+      ],
+      "frozen_target_values": [
+        "89%"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": true,
+      "journaled_executions": 25,
+      "observed_components": [
+        "89",
+        "139",
+        "158",
+        "87.97",
+        "139",
+        "157",
+        "88.54"
+      ],
+      "paper_id": "PMID:41563087",
+      "report_only_components": [
+        "89",
+        "87.97",
+        "88.54"
+      ],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "yes",
+        "L4": "no",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 22,
+      "slot": 2,
+      "slot_state": "executed",
+      "stop_reason": "final_report",
+      "target_component_matches": {
+        "89%": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "yes",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "yes",
+      "L4_numerical_target_reproduced": "yes",
+      "L5_conclusion_preserved": "pending_human_adjudication",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Proportion: the recomputed numerator and denominator must yield a percentage that rounds to 89% at the reported precision.",
+      "claimed_observed_value": 88.5,
+      "clean": true,
+      "component_provenance": {
+        "88.5": "1bd470373e1acfbb917350fa27c24f1d22f2d08dd126528006ac13e8a49e16df"
+      },
+      "contamination_events": "none_recorded",
+      "failure_codes": [],
+      "frozen_target_values": [
+        "89%"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 19,
+      "observed_components": [
+        "88.5"
+      ],
+      "paper_id": "PMID:41563087",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "yes",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "yes",
+        "L4": "yes",
+        "L5": "unknown"
+      },
+      "served_input_executions": 18,
+      "slot": 3,
+      "slot_state": "executed",
+      "stop_reason": "final_report",
+      "target_component_matches": {
+        "89%": "88.5"
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Counts must match exactly: 1374 upregulated and 1291 downregulated genes.",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "1374",
+        "1291"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:41677189",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 3,
+      "slot": 1,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "1291": null,
+        "1374": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Counts must match exactly: 1374 upregulated and 1291 downregulated genes.",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "1374",
+        "1291"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:41677189",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 31,
+      "slot": 2,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "1291": null,
+        "1374": null
+      },
+      "verbatim_mapped_codes": []
+    },
+    {
+      "L1_specification_extracted": "no",
+      "L2_implementation_created": "yes",
+      "L3_execution_successful": "not_established",
+      "L4_numerical_target_reproduced": "not_established",
+      "L5_conclusion_preserved": "not_assessable",
+      "adjudication": "delegated_primary_mechanical",
+      "agreement_criterion": "Counts must match exactly: 1374 upregulated and 1291 downregulated genes.",
+      "claimed_observed_value": null,
+      "clean": true,
+      "component_provenance": {},
+      "contamination_events": "none_recorded",
+      "failure_codes": [
+        "F13"
+      ],
+      "frozen_target_values": [
+        "1374",
+        "1291"
+      ],
+      "human_adjudication": "pending",
+      "human_review_flag": false,
+      "journaled_executions": 40,
+      "observed_components": [],
+      "paper_id": "PMID:41677189",
+      "report_only_components": [],
+      "reported_failure_codes_verbatim": [],
+      "run_success": "no",
+      "scored_levels": {
+        "L2": "yes",
+        "L3": "no",
+        "L4": "not_assessable",
+        "L5": "not_assessable"
+      },
+      "served_input_executions": 29,
+      "slot": 3,
+      "slot_state": "executed",
+      "stop_reason": "tool_limit",
+      "target_component_matches": {
+        "1291": null,
+        "1374": null
+      },
+      "verbatim_mapped_codes": []
+    }
+  ],
+  "scope": "main_study_primary_adjudication_of_sealed_blind_outcomes",
+  "study": "MAIN-STUDY-2026-09-25"
+}

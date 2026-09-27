@@ -1,0 +1,13 @@
+level,state,runs
+L1_specification_extracted,no,20
+L1_specification_extracted,yes,10
+L2_implementation_created,not_reached,1
+L2_implementation_created,yes,29
+L3_execution_successful,not_established,26
+L3_execution_successful,not_reached,1
+L3_execution_successful,yes,3
+L4_numerical_target_reproduced,no,2
+L4_numerical_target_reproduced,not_established,27
+L4_numerical_target_reproduced,yes,1
+L5_conclusion_preserved,not_assessable,29
+L5_conclusion_preserved,pending_human_adjudication,1
