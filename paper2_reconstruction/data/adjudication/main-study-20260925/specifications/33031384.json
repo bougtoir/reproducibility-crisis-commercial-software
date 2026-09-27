@@ -1,0 +1,282 @@
+{
+  "paper_id": "PMID:33031384",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "e556bf557999dd51c530ac526cde8719315bd00bbff0cb6fbd2ca17d5c5ed212",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "dataverse",
+      "accession": "J8EDZN",
+      "files": [
+        {
+          "name": "ISA_30_buffer300.tif",
+          "bytes": 24985727
+        },
+        {
+          "name": "LST_spr.tif",
+          "bytes": 42982657
+        },
+        {
+          "name": "LST_sum.tif",
+          "bytes": 42680805
+        },
+        {
+          "name": "SUHI_spr.tif",
+          "bytes": 43427908
+        },
+        {
+          "name": "SUHI_sum.tif",
+          "bytes": 43130146
+        },
+        {
+          "name": "dT_spring_day.tif",
+          "bytes": 38778879
+        },
+        {
+          "name": "dT_spring_night.tif",
+          "bytes": 38836467
+        },
+        {
+          "name": "dT_summer_day.tif",
+          "bytes": 38840893
+        },
+        {
+          "name": "dT_summer_night.tif",
+          "bytes": 38818351
+        },
+        {
+          "name": "dV_spring_day.tif",
+          "bytes": 38540344
+        },
+        {
+          "name": "dV_spring_night.tif",
+          "bytes": 38749197
+        },
+        {
+          "name": "dV_summer_day.tif",
+          "bytes": 38752647
+        },
+        {
+          "name": "dV_summer_night.tif",
+          "bytes": 38777301
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:12:49.825013+00:00",
+  "api": {
+    "response_id": "62853d9a-077b-4410-bd1f-d41551cd70ac",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 12042,
+    "completion_tokens": 2564
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0025",
+            "quote": "We used SAS 9.4 [ 25 ] to perform rotated Principal Components Analysis (PCA) to assign weighting factors to each variable, retaining components that met the eigenvalue and interpretability criteria."
+          },
+          {
+            "segment_id": "S0026",
+            "quote": "We then multiplied each variable by PCA weight and standardized the weighted variables to have a mean of 0 and a standard deviation of 1, and further categorized them (scores 1–6) based on standard deviation for a neighborhood from the observed mean"
+          }
+        ],
+        "rationale": "The HVI is computed from ACS and NLCD data via PCA and scoring, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0073",
+            "quote": "S3 Table Heat Vulnerability Index, summer land surface temperature, and potential tree canopy for all Boston census tracts."
+          },
+          {
+            "segment_id": "S0041",
+            "quote": "Results for each census tract are reported in S3 Table ."
+          }
+        ],
+        "rationale": "The central quantitative table S3 reports HVI, LST, and potential canopy per census tract; no single primary numerical endpoint is stated, so the central table is the target."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0076",
+            "quote": "Demographic data is available from the 2010 American Communities Survey at https://www.census.gov/programs-surveys/acs/data.html . Land surface temperature data is available from Wang et al. (2017) DOI: 10.7910/DVN/J8EDZN ."
+          },
+          {
+            "segment_id": "S0077",
+            "quote": "Tree species data is available from i-Tree at iTreeTools.org ."
+          }
+        ],
+        "rationale": "The deposit contains only LST rasters (outputs of Wang et al. 2017), not the ACS demographic data or NLCD land cover inputs needed for HVI calculation."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0023",
+            "quote": "The Boston HVI was calculated based on methods used by Nayak et al. [ 19 ] briefly summarized as follows: the 13 variables identified by Nayak et al. [ 19 ] to be related to heat vulnerability were extracted from the American Communities Survey (ACS) 2009–2013 5-year"
+          },
+          {
+            "segment_id": "S0025",
+            "quote": "We used SAS 9.4 [ 25 ] to perform rotated Principal Components Analysis (PCA) to assign weighting factors to each variable, retaining components that met the eigenvalue and interpretability criteria."
+          },
+          {
+            "segment_id": "S0026",
+            "quote": "We then multiplied each variable by PCA weight and standardized the weighted variables to have a mean of 0 and a standard deviation of 1, and further categorized them (scores 1–6) based on standard deviation for a neighborhood from the observed mean"
+          }
+        ],
+        "rationale": "The HVI method is described in sufficient detail (variables, PCA, weighting, scoring) to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0025",
+            "quote": "We used SAS 9.4 [ 25 ] to perform rotated Principal Components Analysis (PCA) to assign weighting factors to each variable, retaining components that met the eigenvalue and interpretability criteria."
+          }
+        ],
+        "rationale": "PCA and standardization can be performed in free software (e.g., R, Python); no proprietary software is required."
+      }
+    },
+    "exact_target": "Heat Vulnerability Index (HVI), summer land surface temperature (LST), and potential tree canopy for all Boston census tracts, as reported in S3 Table.",
+    "target_values": [],
+    "target_values_located_verbatim": true,
+    "blind_target": "The Heat Vulnerability Index, summer land surface temperature, and potential tree canopy for each Boston census tract.",
+    "target_type": "table_cells",
+    "target_location": "S3 Table (Supporting Information)",
+    "location_quotes": [
+      {
+        "segment_id": "S0073",
+        "quote": "S3 Table Heat Vulnerability Index, summer land surface temperature, and potential tree canopy for all Boston census tracts."
+      },
+      {
+        "segment_id": "S0041",
+        "quote": "Results for each census tract are reported in S3 Table ."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0023",
+        "quote": "The Boston HVI was calculated based on methods used by Nayak et al. [ 19 ] briefly summarized as follows: the 13 variables identified by Nayak et al. [ 19 ] to be related to heat vulnerability were extracted from the American Communities Survey (ACS) 2009–2013 5-year"
+      },
+      {
+        "segment_id": "S0024",
+        "quote": "Variables included sociodemographics at a census tract level (i.e. percentage of the population that is Hispanic, black, foreign born, speak English less than “very well,” with income below poverty level, over 65 years of age, over 65 years of age and living alone, age 18–64 years with a disability, age 18–64 years and"
+      },
+      {
+        "segment_id": "S0025",
+        "quote": "We used SAS 9.4 [ 25 ] to perform rotated Principal Components Analysis (PCA) to assign weighting factors to each variable, retaining components that met the eigenvalue and interpretability criteria."
+      },
+      {
+        "segment_id": "S0026",
+        "quote": "We then multiplied each variable by PCA weight and standardized the weighted variables to have a mean of 0 and a standard deviation of 1, and further categorized them (scores 1–6) based on standard deviation for a neighborhood from the observed mean"
+      },
+      {
+        "segment_id": "S0027",
+        "quote": "These factor scores were then summed to an overall HVI score, where a high score indicated high heat vulnerability across one or more dimensions."
+      },
+      {
+        "segment_id": "S0031",
+        "quote": "Census tracts for intervention were prioritized using our HVI metric as well as a proxy for heat exposure, mean of summertime mid-morning land surface temperatures (LST) derived from 2000–2013 Landsat remote-sensing imagery [ 27 ]."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit (J8EDZN) contains only LST rasters (e.g., LST_spr.tif, LST_sum.tif) and derived dT/dV/SUHI/ISA rasters, which are outputs of Wang et al. (2017), not the raw inputs for HVI calculation. The HVI requires ACS 2009–2013 demographic data and 2011 NLCD land cover data, which are not in the deposit. The 2014 Boston Land Cover dataset from UVM SAL is also not in the deposit.",
+    "leakage_files": [
+      {
+        "name": "LST_spr.tif",
+        "reason": "Contains land surface temperature values that are part of the target table (S3 Table)."
+      },
+      {
+        "name": "LST_sum.tif",
+        "reason": "Contains land surface temperature values that are part of the target table (S3 Table)."
+      },
+      {
+        "name": "SUHI_spr.tif",
+        "reason": "Derived from LST, may contain target-related values."
+      },
+      {
+        "name": "SUHI_sum.tif",
+        "reason": "Derived from LST, may contain target-related values."
+      },
+      {
+        "name": "dT_spring_day.tif",
+        "reason": "Derived temperature difference, may contain target-related values."
+      },
+      {
+        "name": "dT_spring_night.tif",
+        "reason": "Derived temperature difference, may contain target-related values."
+      },
+      {
+        "name": "dT_summer_day.tif",
+        "reason": "Derived temperature difference, may contain target-related values."
+      },
+      {
+        "name": "dT_summer_night.tif",
+        "reason": "Derived temperature difference, may contain target-related values."
+      },
+      {
+        "name": "dV_spring_day.tif",
+        "reason": "Derived vegetation difference, may contain target-related values."
+      },
+      {
+        "name": "dV_spring_night.tif",
+        "reason": "Derived vegetation difference, may contain target-related values."
+      },
+      {
+        "name": "dV_summer_day.tif",
+        "reason": "Derived vegetation difference, may contain target-related values."
+      },
+      {
+        "name": "dV_summer_night.tif",
+        "reason": "Derived vegetation difference, may contain target-related values."
+      },
+      {
+        "name": "ISA_30_buffer300.tif",
+        "reason": "Impervious surface area, may be used in HVI or feasibility calculations."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "American Communities Survey (ACS) 2009–2013 5-year estimate",
+        "version": "2009–2013"
+      },
+      {
+        "name": "National Land Cover Database (NLCD)",
+        "version": "2011"
+      },
+      {
+        "name": "Boston Land Cover dataset from University of Vermont Spatial Analysis Lab",
+        "version": "2014"
+      }
+    ],
+    "comparison_metric": "For each census tract, compare the computed HVI score, LST value, and potential canopy area to the values reported in S3 Table.",
+    "numerical_agreement_criterion": "HVI scores are integers 1–6; exact match. LST values are continuous; match within the rounding precision displayed in S3 Table (likely 0.1°C). Potential canopy area in square feet or percentage; match within rounding precision.",
+    "specification_gaps": "The exact list of 13 variables and their ACS table numbers are not fully specified in the main text; the PCA rotation method (varimax?) and eigenvalue threshold are not stated; the exact LST data processing (e.g., temporal aggregation) is not detailed; the definition of 'potential canopy' as vegetation class is given but the aggregation method from block group to census tract is not fully described.",
+    "alternatives_considered": [
+      {
+        "target": "The correlation between HVI and LST (mentioned in S0040: 'we found that the regions of Boston that are most vulnerable to heat-related mortality and morbidity are not the same regions that experience the most intense summer heat')",
+        "reason": "This is a qualitative statement without a reported numerical value; no specific correlation coefficient is provided."
+      },
+      {
+        "target": "The number of tree species approved for urban planting (34, mentioned in S0033)",
+        "reason": "This is a count but not the principal quantitative result; it is descriptive and not the main output of the analysis."
+      },
+      {
+        "target": "The heat-related mortality rate projections (10.5 and 19.3 per 100,000, mentioned in S0010)",
+        "reason": "These are cited from another source [3], not a result of this study."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

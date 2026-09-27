@@ -1,0 +1,203 @@
+{
+  "paper_id": "PMID:34944547",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "accd3c89fec0557d80fa8b808f8d44163175a4f2747090b806ae7f36d54e9c9d",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "17080787",
+      "files": [
+        {
+          "name": "nn0.txt",
+          "bytes": 71492302
+        },
+        {
+          "name": "nn1.txt",
+          "bytes": 71492302
+        },
+        {
+          "name": "nn2.txt",
+          "bytes": 71492302
+        },
+        {
+          "name": "nn3.txt",
+          "bytes": 71492302
+        },
+        {
+          "name": "nn4.txt",
+          "bytes": 71492302
+        },
+        {
+          "name": "sources.zip",
+          "bytes": 25335
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T03:48:21.559344+00:00",
+  "api": {
+    "response_id": "2f252cdd-aae6-4715-8bb1-62953a3c0573",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 12077,
+    "completion_tokens": 2411
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0022",
+            "quote": "The data set containing 718,917 CCS values was downloaded from the following link: https://github.com/theislab/DeepCollisionalCrossSection/blob/master/data/cobined_sm.csv.tar.gz (accessed on 16 November 2021)."
+          },
+          {
+            "segment_id": "S0038",
+            "quote": "The training was conducted using Java programming language and Deeplearning4j (1.0.0-M1) framework. Pre-trained model parameters and source code are available online: doi.org/10.6084/m9.figshare.17080787 (accessed on 18 December 2021)."
+          }
+        ],
+        "rationale": "The principal result is the accuracy of a deep neural network trained on a public dataset; a third party can re-run the computation using the deposited data and described method."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0069",
+            "quote": "The achieved median percentage error was 1.28%, and the root mean square error was 14.6 Å 2 ."
+          },
+          {
+            "segment_id": "S0095",
+            "quote": "ProteomeTools test set 14,160 Full 14.9 9.4 1.84 1.28 4.02 0.983 0.991 26,000 Full 14.6 9.3 1.82 1.28 3.95 0.983 0.992 76,110 Full 15.3 9.5 1.86 1.27 4.06 0.982 0.991 30,000 Reduced 15.4 9.7 1.90 1.32 4.17 0.982 0.991"
+          }
+        ],
+        "rationale": "The paper's stated principal result is the median percentage error (MdPE) of 1.28% for the ProteomeTools test set, reported in the abstract and Table 2."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0073",
+            "quote": "The data used for model training and testing are available via corresponding references. Source code and pre-trained model parameters are provided in the online repository: doi.org/10.6084/m9.figshare.17080787."
+          },
+          {
+            "segment_id": "S0022",
+            "quote": "The data set containing 718,917 CCS values was downloaded from the following link: https://github.com/theislab/DeepCollisionalCrossSection/blob/master/data/cobined_sm.csv.tar.gz (accessed on 16 November 2021)."
+          }
+        ],
+        "rationale": "The deposit listing contains only model parameter files (nn0.txt–nn4.txt) and source code (sources.zip); the analysis input data are not deposited there but are available from an external GitHub link."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0035",
+            "quote": "The first subnetwork consists of six convolutional layers. The last of them has 50 output channels (filters), and all other convolutional layers have an output of 150 channels. Between the third and fourth convolutional layers, a subsampling layer (kernel size and stride are 2) is connected. Kernel size and stride for all convolutional layers are 6 and 1,"
+          },
+          {
+            "segment_id": "S0036",
+            "quote": "The second subnetwork consists of two dense (fully connected) layers with 250 output nodes each. Outputs of both subnetworks are merged, and the merge layer is followed by two dense layers with 600 and 1 output nodes, respectively. All layers use the ReLU activation"
+          },
+          {
+            "segment_id": "S0037",
+            "quote": "The Adam optimizer was used with a learning rate of 0.0003 and batch size 256; the ReLU weight initialization algorithm was used. Mean absolute error (MAE) was used as a loss function. CCS values"
+          }
+        ],
+        "rationale": "The neural network architecture, training procedure, and input feature generation are described in sufficient detail to implement the method without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0038",
+            "quote": "The training was conducted using Java programming language and Deeplearning4j (1.0.0-M1) framework."
+          }
+        ],
+        "rationale": "The method uses Java and Deeplearning4j, both of which are free and open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "Median percentage error (MdPE) for the ProteomeTools test set using the neural network with the full feature set after 26,000 training iterations: 1.28%.",
+    "target_values": [
+      "1.28"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The median percentage error of the deep convolutional neural network for predicting peptide collision cross sections on the ProteomeTools test set.",
+    "target_type": "performance",
+    "target_location": "Table 2 and abstract/conclusions",
+    "location_quotes": [
+      {
+        "segment_id": "S0095",
+        "quote": "ProteomeTools test set 14,160 Full 14.9 9.4 1.84 1.28 4.02 0.983 0.991 26,000 Full 14.6 9.3 1.82 1.28 3.95 0.983 0.992 76,110 Full 15.3 9.5 1.86 1.27 4.06 0.982 0.991 30,000 Reduced 15.4 9.7 1.90 1.32 4.17 0.982 0.991"
+      },
+      {
+        "segment_id": "S0069",
+        "quote": "The achieved median percentage error was 1.28%, and the root mean square error was 14.6 Å 2 ."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0035",
+        "quote": "The first subnetwork consists of six convolutional layers. The last of them has 50 output channels (filters), and all other convolutional layers have an output of 150 channels. Between the third and fourth convolutional layers, a subsampling layer (kernel size and stride are 2) is connected. Kernel size and stride for all convolutional layers are 6 and 1,"
+      },
+      {
+        "segment_id": "S0036",
+        "quote": "The second subnetwork consists of two dense (fully connected) layers with 250 output nodes each. Outputs of both subnetworks are merged, and the merge layer is followed by two dense layers with 600 and 1 output nodes, respectively. All layers use the ReLU activation"
+      },
+      {
+        "segment_id": "S0037",
+        "quote": "The Adam optimizer was used with a learning rate of 0.0003 and batch size 256; the ReLU weight initialization algorithm was used. Mean absolute error (MAE) was used as a loss function. CCS values"
+      },
+      {
+        "segment_id": "S0023",
+        "quote": "We shuffled the main data set and randomly split it into a training set (85%), validation set (5%), and test set (10%). Finally, we obtained the ProteomeTools test set (185,248 CCS values), test set (53,330 CCS values), validation set (74,666 CCS values), and training set (453,313 CCS"
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The analysis inputs are not among the listed deposit files. The training and test data are available from an external GitHub repository (https://github.com/theislab/DeepCollisionalCrossSection/blob/master/data/cobined_sm.csv.tar.gz) and from reference [13] for the external test set. The deposit contains only model parameters (nn0.txt–nn4.txt) and source code (sources.zip).",
+    "leakage_files": [
+      {
+        "name": "nn0.txt",
+        "reason": "Contains pre-trained model parameters that encode the trained model; using them would bypass training and directly yield predictions."
+      },
+      {
+        "name": "nn1.txt",
+        "reason": "Contains pre-trained model parameters that encode the trained model; using them would bypass training and directly yield predictions."
+      },
+      {
+        "name": "nn2.txt",
+        "reason": "Contains pre-trained model parameters that encode the trained model; using them would bypass training and directly yield predictions."
+      },
+      {
+        "name": "nn3.txt",
+        "reason": "Contains pre-trained model parameters that encode the trained model; using them would bypass training and directly yield predictions."
+      },
+      {
+        "name": "nn4.txt",
+        "reason": "Contains pre-trained model parameters that encode the trained model; using them would bypass training and directly yield predictions."
+      },
+      {
+        "name": "sources.zip",
+        "reason": "Contains the original source code, which is the original implementation and may include scripts that compute the target value."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "DeepCollisionalCrossSection dataset",
+        "version": "cobined_sm.csv.tar.gz (accessed on 16 November 2021)"
+      },
+      {
+        "name": "Reference [13] external test set",
+        "version": "as described in Shah et al. 2010"
+      }
+    ],
+    "comparison_metric": "The reported MdPE value (1.28%) is compared to the MdPE computed by the solver on the ProteomeTools test set using the same model architecture and training procedure.",
+    "numerical_agreement_criterion": "Performance metrics on the identical split: the computed MdPE should match the reported value within the displayed rounding bin (i.e., 1.28% when rounded to two decimal places).",
+    "specification_gaps": "The exact random seed for data splitting and weight initialization is not specified; the precise composition of the ProteomeTools test set after removal of overlapping peptides is not detailed; the exact version of the external test set from reference [13] is not provided.",
+    "alternatives_considered": "The root mean square error (RMSE) of 14.6 Å² was considered but rejected because the paper emphasizes MdPE as the most relevant accuracy measure for scoring systems. The MdPE for the external test set (2.73%) was also considered but rejected because it is not the principal result; the ProteomeTools test set is the primary benchmark."
+  },
+  "eligibility": "gate_failed_delegated"
+}

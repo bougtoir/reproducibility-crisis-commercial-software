@@ -1,0 +1,165 @@
+{
+  "paper_id": "PMID:37540596",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "683a7389969f2b1cc3a8cb09f49c87b659e6a07a6c01bf949563f9e19cff614c",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "22744733",
+      "files": [
+        {
+          "name": "Mutographs.tar.gz",
+          "bytes": 379494814
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:00:03.414033+00:00",
+  "api": {
+    "response_id": "9a96a360-aeed-4863-96c5-3dde417a4801",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 28058,
+    "completion_tokens": 1647
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0006",
+            "quote": "Here, we integrate mutations from 5,120 whole-genome-sequenced tumors from 40 cancer types with 516 topographical features from ENCODE to evaluate the effect of nucleosome occupancy, histone"
+          },
+          {
+            "segment_id": "S0095",
+            "quote": "This paper analyses existing publicly available datasets. Accession numbers for the datasets are listed in the key resources table . Any additional information required to reanalyse the data reported in this paper is available from the lead contact upon request."
+          }
+        ],
+        "rationale": "The principal result is a computational integration of public mutation data with ENCODE features, re-runnable by a third party."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0009",
+            "quote": "Comprehensive topography analysis of mutational signatures encompassing 82,890,857 somatic mutations in 5,120 whole-genome-sequenced tumors across 40 cancer types."
+          },
+          {
+            "segment_id": "S0103",
+            "quote": "We analyzed a total of 82,890,857 somatic mutations (79,269,539 single base"
+          }
+        ],
+        "rationale": "The primary numerical endpoint is the total number of analyzed somatic mutations, 82,890,857."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0247",
+            "quote": "MUTOGRAPHS project Moody et al. 7 https://doi.org/10.6084/m9.figshare.22744733"
+          },
+          {
+            "segment_id": "S0246",
+            "quote": "PCAWG project (core WGS dataset) Somatic Mutations and Mutational Catalogs from PCAWG Project Alexandrov et al. 4 https://www.synapse.org/#!Synapse:syn11804058 https://www.synapse.org/#!Synapse:syn11804040"
+          }
+        ],
+        "rationale": "The listed deposit is only the MUTOGRAPHS project; the PCAWG mutation inputs are not in the deposit listing."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0096",
+            "quote": "SigProfilerSimulator. 66 Briefly, the tool randomly generated single base substitutions (SBSs), doublet base substitutions (DBSs), and small insertions and deletions (IDs) while maintaining the patterns of the original somatic mutations in each sample at a preselected resolution."
+          },
+          {
+            "segment_id": "S0099",
+            "quote": "Assigning signature probabilities to somatic mutations The performed topography analyses are based on the assignment of signature probabilities to each individual somatic mutation. For this purpose, SigProfilerExtractor was utilized for de novo extraction of mutational signatures and decomposition of de novo extracted signatures to the set of"
+          }
+        ],
+        "rationale": "The STAR Methods describe simulation, signature assignment, and topography analyses in enough detail to implement."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0147",
+            "quote": "All statistical analysis were performed in Python using NumPy, SciPy, statsmodels, and other standard statistical modules."
+          },
+          {
+            "segment_id": "S0248",
+            "quote": "SigProfilerMatrixGenerator (v1.1.31) Bergstrom et al. 65 https://github.com/AlexandrovLab/SigProfilerMatrixGenerator SigProfilerSimulator (v1.1.2) Bergstrom et al. 66 https://github.com/AlexandrovLab/SigProfilerSimulator SigProfilerExtractor (v1.1.0) Islam et al. 5 https://github.com/AlexandrovLab/SigProfilerExtractor SigProfilerClusters (v1.0.11) Bergstrom et al. 63"
+          }
+        ],
+        "rationale": "All software used is free and open-source."
+      }
+    },
+    "exact_target": "Total number of somatic mutations analyzed: 82,890,857",
+    "target_values": [
+      "82,890,857"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The total number of somatic mutations analyzed across all cancer types.",
+    "target_type": "count",
+    "target_location": "Abstract and STAR Methods",
+    "location_quotes": [
+      {
+        "segment_id": "S0009",
+        "quote": "Comprehensive topography analysis of mutational signatures encompassing 82,890,857 somatic mutations in 5,120 whole-genome-sequenced tumors across 40 cancer types."
+      },
+      {
+        "segment_id": "S0103",
+        "quote": "We analyzed a total of 82,890,857 somatic mutations (79,269,539 single base"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0096",
+        "quote": "SigProfilerSimulator. 66 Briefly, the tool randomly generated single base substitutions (SBSs), doublet base substitutions (DBSs), and small insertions and deletions (IDs) while maintaining the patterns of the original somatic mutations in each sample at a preselected resolution."
+      },
+      {
+        "segment_id": "S0099",
+        "quote": "Assigning signature probabilities to somatic mutations The performed topography analyses are based on the assignment of signature probabilities to each individual somatic mutation. For this purpose, SigProfilerExtractor was utilized for de novo extraction of mutational signatures and decomposition of de novo extracted signatures to the set of"
+      },
+      {
+        "segment_id": "S0103",
+        "quote": "We analyzed a total of 82,890,857 somatic mutations (79,269,539 single base"
+      }
+    ],
+    "required_files": [
+      "Mutographs.tar.gz"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit contains only the MUTOGRAPHS project data (figshare 22744733). PCAWG mutation data are not in the deposit listing and must be obtained from Synapse (syn11804058, syn11804040, syn11801872, syn11801496).",
+    "leakage_files": [],
+    "required_public_references": [
+      {
+        "name": "PCAWG somatic mutation data",
+        "version": "syn11804058, syn11804040, syn11801872, syn11801496"
+      },
+      {
+        "name": "ENCODE topographical feature datasets",
+        "version": "as listed in Table S1"
+      }
+    ],
+    "comparison_metric": "Exact count comparison.",
+    "numerical_agreement_criterion": "Counts exact.",
+    "specification_gaps": "The exact composition of the 82,890,857 mutations (e.g., which samples from PCAWG and MUTOGRAPHS) is not fully specified in the text; the deposit does not include PCAWG data.",
+    "alternatives_considered": [
+      {
+        "target": "Number of tumors (5,120)",
+        "reason": "This is a sample size, not the principal quantitative result of the computational analysis."
+      },
+      {
+        "target": "Number of topographical features (516)",
+        "reason": "This is an input parameter, not the principal result."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

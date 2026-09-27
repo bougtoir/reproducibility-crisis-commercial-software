@@ -1,0 +1,182 @@
+{
+  "paper_id": "PMID:36380453",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "c598214d9bf6b34eabd5ba8ad1a85c39bdfa0d85115bd3c7542ca53b5d3f3514",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "20263905",
+      "files": [
+        {
+          "name": "ReindeerStochasticWinterConditions.dat.txt",
+          "bytes": 3149
+        },
+        {
+          "name": "ReindeerStochasticWinterConditions.mod.txt",
+          "bytes": 10404
+        },
+        {
+          "name": "ReindeerStochasticWinterConditions.run.txt",
+          "bytes": 918
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:11:31.073873+00:00",
+  "api": {
+    "response_id": "ad17383e-ba33-424b-bcc0-fecd636a1924",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 20704,
+    "completion_tokens": 2097
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0081",
+            "quote": "We used Knitro optimization software (versions 7.0 and 10.3) and AMPL programming language (Byrd et al., 2006 ) for all computations and optimizations."
+          },
+          {
+            "segment_id": "S0082",
+            "quote": "To study stochastic winter conditions, we assumed that 10% of the winters were difficult, 10% were easy, and 80% were average. We repeated the computations 50 times with different scenarios of stochastic winter"
+          }
+        ],
+        "rationale": "The principal results are produced by numerical optimization computations on model inputs that a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0121",
+            "quote": "Table 5 gives the present values of net revenues in constant and stochastic winter conditions for a 100 year time horizon at 0%, 1%, 3%, and 5% interest rates."
+          },
+          {
+            "segment_id": "S0122",
+            "quote": "winter conditions reduced average net revenues over a long time horizon. However, the losses from varying winter conditions averaged less than 1% of the present value of net revenues when a reindeer herding district optimally adjusted its slaughtering decisions after untypical winters."
+          }
+        ],
+        "rationale": "The paper's stated main aim is to examine how varying winter conditions affect economically optimal management; Table 5 is the central quantitative table reporting the principal result."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0172",
+            "quote": "AMPL‐code (Pekkarinen, Tahvonen, & Kumpula, 2022 ) is available on Figshare at https://doi.org/10.6084/m9.figshare.20263905 ."
+          },
+          {
+            "segment_id": "S0039",
+            "quote": "The mathematical description of the model is presented in Appendix S1 , and the model code is available for download (Pekkarinen, Tahvonen, & Kumpula, 2022 )."
+          }
+        ],
+        "rationale": "The deposit contains the model data file (.dat) and run file (.run) that are the analysis inputs for the optimization; the .mod file is the implementation and is withheld."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0039",
+            "quote": "The mathematical description of the model is presented in Appendix S1 , and the model code is available for download (Pekkarinen, Tahvonen, & Kumpula, 2022 )."
+          },
+          {
+            "segment_id": "S0081",
+            "quote": "We used Knitro optimization software (versions 7.0 and 10.3) and AMPL programming language (Byrd et al., 2006 ) for all computations and optimizations."
+          }
+        ],
+        "rationale": "The model is described in Appendix S1 and the optimization procedure is specified, sufficient to implement without the original code."
+      },
+      "G5": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0081",
+            "quote": "We used Knitro optimization software (versions 7.0 and 10.3) and AMPL programming language (Byrd et al., 2006 ) for all computations and optimizations."
+          }
+        ],
+        "rationale": "Knitro is proprietary optimization software, so the method requires proprietary software."
+      }
+    },
+    "exact_target": "Present value of net revenues (€ per 1000 ha) for stochastic winter conditions at 3% interest rate over 100 years: 979,000",
+    "target_values": [
+      "979,000"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The present value of net revenues over a 100-year horizon under stochastic winter conditions at a 3% interest rate, computed with the bioeconomic reindeer husbandry model.",
+    "target_type": "scalar",
+    "target_location": "Table 5",
+    "location_quotes": [
+      {
+        "segment_id": "S0124",
+        "quote": "TABLE 5 Present values of net revenues (euros per 1000"
+      },
+      {
+        "segment_id": "S0125",
+        "quote": "ha of winter lichen pasture) computed with the reindeer husbandry model for 100 years. Annual interest rate (%) Present value of net revenues (€ per 1000 ha) Constant winter conditions Stochastic winter conditions Loss due to stochastic winter conditions €/100 years €/100 years €/100 years (%) 0 3,221,800 3,197,000 2100 (0.1%) 1 2,026,600 2,019,900 6800 (0.3%) 3 987,200 979,000 8200 (0.8%) 5"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0081",
+        "quote": "We used Knitro optimization software (versions 7.0 and 10.3) and AMPL programming language (Byrd et al., 2006 ) for all computations and optimizations."
+      },
+      {
+        "segment_id": "S0082",
+        "quote": "To study stochastic winter conditions, we assumed that 10% of the winters were difficult, 10% were easy, and 80% were average. We repeated the computations 50 times with different scenarios of stochastic winter"
+      },
+      {
+        "segment_id": "S0083",
+        "quote": "conditions to compute the average present value of net revenues between computations. We recognized that 50 repeats were not enough to fully examine the possible outcomes of these stochastic events. However, because optimization computation requires a lot of time, we felt that 50 repeats was a reasonable trade‐off and provided enough insight on system properties. We computed the dynamic solutions"
+      },
+      {
+        "segment_id": "S0084",
+        "quote": "with a time horizon of 100–150 years, which was sufficient to produce a good approximation of the steady‐state long‐term sustainable solution. In dynamic optimization with varying winter conditions, we computed optimal deterministic feedback solutions. In deterministic feedback solutions, optimization is repeated at the beginning of each time period (model year begins in autumn after slaughtering)"
+      },
+      {
+        "segment_id": "S0085",
+        "quote": "and the system state is updated the following year based on these optimizations. Thus, the herding district observes and reacts to the emerging information on reindeer population and pasture conditions by reoptimizing the slaughtering and feeding strategies at the beginning of each herding year. This optimization has an infinitely long time horizon, but the degree of difficulty of future winters"
+      },
+      {
+        "segment_id": "S0086",
+        "quote": "is based on expected conditions. This is an example of applying the certainty equivalence principle instead of, for example, stochastic dynamic programming. Applying stochastic optimization would be beyond our computational capabilities because of the “curse of dimensionality,” that is, stochastic dynamic programming is normally possible only for models with a low number of state variables (<5)."
+      }
+    ],
+    "required_files": [
+      "ReindeerStochasticWinterConditions.dat.txt",
+      "ReindeerStochasticWinterConditions.run.txt"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The .dat file contains model parameters and initial states; the .run file contains the AMPL run script for stochastic winter conditions. The .mod file is the model implementation and is withheld. The paper's Appendix S1 (mathematical description) is not in the deposit listing.",
+    "leakage_files": [
+      {
+        "name": "ReindeerStochasticWinterConditions.mod.txt",
+        "reason": "Contains the AMPL model implementation that encodes the optimization problem and would reveal the exact computational procedure and potentially the target values."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "The reported value is compared to the solver's computed present value of net revenues under stochastic winter conditions at 3% interest rate.",
+    "numerical_agreement_criterion": "Scalars within displayed rounding bin: the reported value 979,000 is rounded to the nearest thousand; agreement if the solver's value rounds to 979,000.",
+    "specification_gaps": "The exact random seed or realization sequence for the 50 stochastic scenarios is not specified; the exact parameter values in the .dat file are not described in the paper; the precise optimization settings (tolerances, starting points) are not given.",
+    "alternatives_considered": [
+      {
+        "target": "Loss due to stochastic winter conditions at 3% interest rate (8200 €/100 years, 0.8%)",
+        "reason": "This is a derived quantity from the same table, but the principal result is the present value of net revenues itself."
+      },
+      {
+        "target": "First-year net revenue decrease of 19% during a single difficult winter at 3% interest rate",
+        "reason": "This is a result for a single difficult winter, not the main stochastic variability result."
+      },
+      {
+        "target": "Average 33.5% of winters considered somewhat difficult by herders",
+        "reason": "This is from the qualitative analysis of annual reports, not the principal computational result."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

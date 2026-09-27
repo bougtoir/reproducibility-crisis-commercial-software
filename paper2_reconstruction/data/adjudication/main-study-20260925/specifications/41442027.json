@@ -1,0 +1,178 @@
+{
+  "paper_id": "PMID:41442027",
+  "sampling_stratum": "Clinical_Medicine",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "7928bb0a8ad00e8fb2233752f28f49b98222240a2b4925b8c93726563a219d08",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "30646913",
+      "files": [
+        {
+          "name": "R2_ADTH_PaCE CKD_FB_Digital feature_21.11.2025.pdf",
+          "bytes": 1145136
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:05:58.371774+00:00",
+  "api": {
+    "response_id": "f9fe90ed-12e2-41ca-af8f-321731eaaffb",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 20737,
+    "completion_tokens": 1764
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0037",
+            "quote": "Data were summarised descriptively, with mean and standard deviation (SD) reported for continuous variables (unless the median was specified), and the frequency and percentage for categorical variables."
+          },
+          {
+            "segment_id": "S0038",
+            "quote": "Linear regression analysis was undertaken to determine the influence of CKD (vs. general population), dialysis status or key demographic variables including, age, gender, employment status or area of residence."
+          }
+        ],
+        "rationale": "The principal results are descriptive statistics and linear regression computed on survey data; a third party could re-run these computations if the survey data were available."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0080",
+            "quote": "Table 3 Summary of financial health surveys Outcome AUS DEU EGY GBR ITA TWN USA Patients with CKD CFPB Patients, n 150 201 222 212 129 190 199 Mean"
+          },
+          {
+            "segment_id": "S0081",
+            "quote": "(SD) 50.8 (13.0) 53.8 (12.8) 51.5 (9.2) 51.9 (14.3) 48.2 (13.7) 55.7 (6.0) 52.0 (16.9)"
+          }
+        ],
+        "rationale": "Table 3 is the central quantitative table and reports the primary endpoint (mean CFPB Financial Well-Being scores by country) as the first outcome listed."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0123",
+            "quote": "Data Availability All data generated or analysed during this study are included in this published article/as supplementary information files."
+          },
+          {
+            "segment_id": "S0154",
+            "quote": "Data Availability Statement All data generated or analysed during this study are included in this published article/as supplementary information files."
+          }
+        ],
+        "rationale": "The only deposited file is a PDF digital feature (graphical abstract); the underlying survey data are not deposited, so the analysis inputs are not among the listed files."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0031",
+            "quote": "Financial well-being, a person’s ability to have financial freedom of choice, and financial security in the present and the future, was measured in all participants by the validated Consumer Financial"
+          },
+          {
+            "segment_id": "S0032",
+            "quote": "Protection Bureau (CFPB) Financial Well-Being Scale [ 19 ]. The scale is self-reported with responses converted to a score between 0 and 100, formed from responses to ten questions to quantify the person’s financial situation and capability."
+          },
+          {
+            "segment_id": "S0037",
+            "quote": "Data were summarised descriptively, with mean and standard deviation (SD) reported for continuous variables (unless the median was specified), and the frequency and percentage for categorical variables."
+          }
+        ],
+        "rationale": "The instrument, scoring range and descriptive summary method are described sufficiently to implement the computation."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0038",
+            "quote": "Descriptive analysis of data and the linear regression models were performed using R software."
+          }
+        ],
+        "rationale": "The analysis used R, which is free software; no proprietary software is required."
+      }
+    },
+    "exact_target": "Mean (SD) CFPB Financial Well-Being Scale score for patients with CKD, overall and by country: AUS 50.8 (13.0); DEU 53.8 (12.8); EGY 51.5 (9.2); GBR 51.9 (14.3); ITA 48.2 (13.7); TWN 55.7 (6.0); USA 52.0 (16.9)",
+    "target_values": [
+      "50.8 (13.0)",
+      "53.8 (12.8)",
+      "51.5 (9.2)",
+      "51.9 (14.3)",
+      "48.2 (13.7)",
+      "55.7 (6.0)",
+      "52.0 (16.9)"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "Mean CFPB Financial Well-Being Scale score reported by patients with CKD, computed separately for each participating country cohort.",
+    "target_type": "scalar",
+    "target_location": "Results, Financial Well-being; Table 3 (Summary of financial health surveys), Patients with CKD, CFPB, Mean (SD) row",
+    "location_quotes": [
+      {
+        "segment_id": "S0080",
+        "quote": "Table 3 Summary of financial health surveys Outcome AUS DEU EGY GBR ITA TWN USA Patients with CKD CFPB Patients, n 150 201 222 212 129 190 199 Mean"
+      },
+      {
+        "segment_id": "S0081",
+        "quote": "(SD) 50.8 (13.0) 53.8 (12.8) 51.5 (9.2) 51.9 (14.3) 48.2 (13.7) 55.7 (6.0) 52.0 (16.9)"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0031",
+        "quote": "Financial well-being, a person’s ability to have financial freedom of choice, and financial security in the present and the future, was measured in all participants by the validated Consumer Financial"
+      },
+      {
+        "segment_id": "S0032",
+        "quote": "Protection Bureau (CFPB) Financial Well-Being Scale [ 19 ]. The scale is self-reported with responses converted to a score between 0 and 100, formed from responses to ten questions to quantify the person’s financial situation and capability."
+      },
+      {
+        "segment_id": "S0037",
+        "quote": "Data were summarised descriptively, with mean and standard deviation (SD) reported for continuous variables (unless the median was specified), and the frequency and percentage for categorical variables."
+      },
+      {
+        "segment_id": "S0038",
+        "quote": "Descriptive analysis of data and the linear regression models were performed using R software."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The only listed deposit is a figshare PDF digital feature (graphical abstract), accession 30646913, which is not an analysis input. The survey response data underlying Table 3 are not deposited; the paper states all data are included in the article/supplementary information files, which are not part of the deposit listing.",
+    "leakage_files": [
+      {
+        "name": "R2_ADTH_PaCE CKD_FB_Digital feature_21.11.2025.pdf",
+        "reason": "Digital feature (graphical abstract) for the article; it presents the study's reported results and would reveal the target values."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "Consumer Financial Protection Bureau (CFPB) Financial Well-Being Scale",
+        "version": "2023"
+      }
+    ],
+    "comparison_metric": "Country-specific mean (SD) CFPB Financial Well-Being score for patients with CKD, compared with the reported mean and SD per country.",
+    "numerical_agreement_criterion": "Scalars within the displayed rounding bin (one decimal place for means and SDs).",
+    "specification_gaps": "The survey instrument items and scoring algorithm are not reproduced; the exact survey administration, data cleaning rules, and handling of missing responses are not fully specified; the analysis dataset and code are not deposited.",
+    "alternatives_considered": [
+      {
+        "target": "WPAI presenteeism difference between patients and general population",
+        "reason": "Reported as ranges rather than a single principal endpoint, and the primary stated aim emphasizes financial burden and work productivity; Table 3 is the central quantitative table."
+      },
+      {
+        "target": "FACIT-COST mean scores by dialysis status",
+        "reason": "Secondary outcome reported in Table 3 after CFPB; not the first-listed principal result."
+      },
+      {
+        "target": "CFPB Financial Well-Being scores for caregivers",
+        "reason": "Reported later in Table 3 and described as variable/inconsistent; not the principal patient result."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

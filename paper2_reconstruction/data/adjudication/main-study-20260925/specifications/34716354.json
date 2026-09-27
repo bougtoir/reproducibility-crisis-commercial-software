@@ -1,0 +1,187 @@
+{
+  "paper_id": "PMID:34716354",
+  "sampling_stratum": "Chemistry_Materials",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "3a94ad0a0b401005e42b32a6229bd4b9c7a4dcdb122dff57aeb0b3047488d785",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "15634230",
+      "files": [
+        {
+          "name": "B3DB-main.zip",
+          "bytes": 82055157
+        }
+      ]
+    },
+    {
+      "kind": "figshare",
+      "accession": "16632412",
+      "files": [
+        {
+          "name": "data.json",
+          "bytes": 1609
+        },
+        {
+          "name": "metadata summary.csv",
+          "bytes": 141
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:28:26.101482+00:00",
+  "api": {
+    "response_id": "e177bb83-b480-4510-a07d-b689714ecfaf",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 13506,
+    "completion_tokens": 1866
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0042",
+            "quote": "To curate the 8841 numerical BBB data values, log BB values for each molecule were merged into a list."
+          },
+          {
+            "segment_id": "S0046",
+            "quote": "The final dataset therefore contains 1058 molecules; for most of these molecules (815 molecules) multiple, mutually consistent, values of log BB are reported in the literature."
+          }
+        ],
+        "rationale": "The principal result is a count produced by a curation computation on collected data that a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0046",
+            "quote": "The final dataset therefore contains 1058 molecules; for most of these molecules (815 molecules) multiple, mutually consistent, values of log BB are reported in the literature."
+          },
+          {
+            "segment_id": "S0050",
+            "quote": "There are two datasets provided in this study, one with numeric log BB values (1058 molecules) and the other with categorical labels (7807 molecules with 4956 BBB+ and 2851 BBB−)."
+          }
+        ],
+        "rationale": "The primary numerical endpoint is the number of curated molecules with numeric log BB values, reported as 1058."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0007",
+            "quote": "10.6084/m9.figshare.15634230.v3 (version 3)."
+          },
+          {
+            "segment_id": "S0052",
+            "quote": "GitHub ( https://github.com/theochem/B3DB ) as well as figshare platform 33 ."
+          }
+        ],
+        "rationale": "The deposit listing shows only B3DB-main.zip and metadata files; it is unclear whether the zip contains the raw collected inputs or only the curated outputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0042",
+            "quote": "To curate the 8841 numerical BBB data values, log BB values for each molecule were merged into a list. The 20 instances with log BB <= −9 were regarded as outliers because, based on the distribution of log BB values, they seemed suspicious."
+          },
+          {
+            "segment_id": "S0044",
+            "quote": "Group A (243 molecules). Molecules with only one unique log BB value. Group B (663 molecules). Molecules with more than one log BB value, but all the the reported values differ by less than 5% from the mean value."
+          }
+        ],
+        "rationale": "The curation rules for numerical data are described in enough detail to implement."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0021",
+            "quote": "all the data processing were performed in a Python 3.7.9 virtual environment created with Conda in CentOS Linux release 7.9.2009 which include pandas 1.2.1, tabula-py 2.2.0, RDKit 2020.09.1, pubchempy 1.0.4, OEChem Toolkit 17 provided by openeye-toolkit 2020.2.0, ChEMBL_Structure_Pipeline 1.0.0, SciPy 1.5.2, Numpy 1.19.2, mordred 1.1.1, PyTDC 0.1.5."
+          }
+        ],
+        "rationale": "The method can be implemented with free software (Python, RDKit, pandas, etc.); OEChem is proprietary but not essential for the count."
+      }
+    },
+    "exact_target": "The final number of molecules in the curated numerical log BB dataset: 1058 molecules.",
+    "target_values": [
+      "1058"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of molecules in the final curated dataset that have numerical log BB values.",
+    "target_type": "count",
+    "target_location": "Results, Data Records section; also stated in Abstract and Methods.",
+    "location_quotes": [
+      {
+        "segment_id": "S0046",
+        "quote": "The final dataset therefore contains 1058 molecules; for most of these molecules (815 molecules) multiple, mutually consistent, values of log BB are reported in the literature."
+      },
+      {
+        "segment_id": "S0050",
+        "quote": "There are two datasets provided in this study, one with numeric log BB values (1058 molecules) and the other with categorical labels (7807 molecules with 4956 BBB+ and 2851 BBB−)."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0042",
+        "quote": "To curate the 8841 numerical BBB data values, log BB values for each molecule were merged into a list. The 20 instances with log BB <= −9 were regarded as outliers because, based on the distribution of log BB values, they seemed suspicious."
+      },
+      {
+        "segment_id": "S0043",
+        "quote": "Specifically, we eliminated 16 molecules where max (log BB ) − min(log BB ) > 1. The values that remain after curation are merged into 1065 molecular records."
+      },
+      {
+        "segment_id": "S0044",
+        "quote": "Group A (243 molecules). Molecules with only one unique log BB value. Group B (663 molecules). Molecules with more than one log BB value, but all the the reported values differ by less than 5% from the mean value."
+      },
+      {
+        "segment_id": "S0045",
+        "quote": "Group C (3 molecules). Other molecules with two distinct log BB values. The (weighted) mean value is used as the curated value for group C (just as for group B). Group D (149 molecules). Other molecules with more than two distinct values; whichever value occurs with greatest frequency is used."
+      },
+      {
+        "segment_id": "S0046",
+        "quote": "The 7 molecules which failed to be categorized as group A, B, C or D, they are discarded. The final dataset therefore contains 1058 molecules; for most of these molecules (815 molecules) multiple, mutually consistent, values of log BB are reported in the literature."
+      }
+    ],
+    "required_files": [
+      "B3DB-main.zip"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The figshare deposit 15634230 contains B3DB-main.zip (82 MB), which likely includes the curated datasets and possibly raw data. The paper states data are available at GitHub and figshare. The raw collected data from 50 sources are not individually listed in the deposit; the zip may contain them. Version: figshare 15634230.v3.",
+    "leakage_files": [
+      {
+        "name": "B3DB-main.zip",
+        "reason": "Likely contains the final curated dataset with the target count (1058) and derived tables, which would leak the answer."
+      },
+      {
+        "name": "data.json",
+        "reason": "Metadata file that may contain summary statistics or the target value."
+      },
+      {
+        "name": "metadata summary.csv",
+        "reason": "Metadata summary that may contain the target count or derived results."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Exact count comparison.",
+    "numerical_agreement_criterion": "Counts exact: the solver must obtain exactly 1058 molecules.",
+    "specification_gaps": "The exact raw input files and their processing steps are not fully specified in the paper; the deposit listing does not clearly separate raw inputs from outputs. The curation rules for handling multiple values (e.g., weighted mean for group C) are described but not fully algorithmic.",
+    "alternatives_considered": [
+      {
+        "target": "Number of categorical molecules (7807)",
+        "reason": "Rejected because the paper's primary numerical endpoint is the numeric log BB dataset, and the abstract emphasizes 1058 numeric values first."
+      },
+      {
+        "target": "Number of raw data records (33825)",
+        "reason": "Rejected because it is an intermediate count, not the final curated dataset size."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

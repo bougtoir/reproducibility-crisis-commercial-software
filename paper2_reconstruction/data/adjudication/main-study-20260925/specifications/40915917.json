@@ -1,0 +1,156 @@
+{
+  "paper_id": "PMID:40915917",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "5f8bcce0731daa8246af4161675265f12c8414a18417fe631a8095e6c9a90cb3",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "bioproject",
+      "accession": "PRJNA1112978",
+      "files": [
+        {
+          "name": "SRR29074840",
+          "bytes": 1425660
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:04:41.138024+00:00",
+  "api": {
+    "response_id": "b961dd9e-7aec-4f55-88a5-4748270e3054",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 22718,
+    "completion_tokens": 2116
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0039",
+            "quote": "The community ana­lysis of soil bacteria in the four different treatments was performed using a paired–end method with MiSeq (Illumina), targeting the V3 and V4 regions of bacterial 16S genes."
+          },
+          {
+            "segment_id": "S0041",
+            "quote": "The Quantitative Insights into Microbial Ecology (QIIME 2) pipeline ( Caporaso et al. , 2010 ) was used to remove low–quality and chimeric sequences."
+          }
+        ],
+        "rationale": "The principal result (relative abundance of bacterial taxa/ASVs) is produced by computational analysis of 16S amplicon sequencing data, which a third party can re-run from the deposited sequencing reads."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0081",
+            "quote": "After one week of incubation, Streptomycetaceae increased from 2.0% in 0–time soil to 3.2, 7.7, and 18.9% in KH–, SF–, and RB–treated soils, respectively."
+          },
+          {
+            "segment_id": "S0091",
+            "quote": "its relative abundance on average, which was 0.4% in 0–time soil, increased to 1.0, 2.9, and 7.7% in KH–, SF–, and RB–treated soils, respectively, after one week of cultivation."
+          }
+        ],
+        "rationale": "The paper's stated priority is the response of the soil bacterial community to organic materials; the principal quantitative result is the relative abundance of dominant taxa/ASVs, first reported for Streptomycetaceae at the family level."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0042",
+            "quote": "All bacterial 16S rRNA gene sequences obtained from the meta 16S amplicon ana­lysis were registered in Genebank under accession number PRJNA1112978."
+          }
+        ],
+        "rationale": "The deposit contains raw sequencing reads (SRR29074840) under BioProject PRJNA1112978, which are the primary inputs for the amplicon analysis; the target values are derived outputs, not inputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0036",
+            "quote": "Amplification of the bacterial 16S rRNA gene was performed on extracted DNA using the primers 341f ( E. coli positions 341–357; 5′–CCTACGGGNGGCWGCAG–3′) and 805r ( E. coli positions 805–785; 5′–GACTACHVGGGTATCTAATCC–3′) ( Klindworth et al. , 2012 ), which are commonly"
+          },
+          {
+            "segment_id": "S0041",
+            "quote": "The Quantitative Insights into Microbial Ecology (QIIME 2) pipeline ( Caporaso et al. , 2010 ) was used to remove low–quality and chimeric sequences. The sequences that passed preprocessing were obtained as amplicon sequence variants (ASVs) at 97% similarity, together with the representative sequences."
+          }
+        ],
+        "rationale": "The method describes DNA extraction, PCR primers, sequencing platform, and bioinformatics pipeline (QIIME 2, ASV calling at 97% similarity) sufficiently to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0041",
+            "quote": "The Quantitative Insights into Microbial Ecology (QIIME 2) pipeline ( Caporaso et al. , 2010 ) was used to remove low–quality and chimeric sequences."
+          }
+        ],
+        "rationale": "QIIME 2 is free, open-source software; no proprietary software is required for the amplicon analysis."
+      }
+    },
+    "exact_target": "Relative abundance of Streptomycetaceae in 0-time soil and in KH-, SF-, and RB-treated soils after one week of incubation, as reported in the text: 2.0% in 0-time soil, 3.2% in KH, 7.7% in SF, and 18.9% in RB.",
+    "target_values": [
+      "2.0%",
+      "3.2",
+      "7.7",
+      "18.9%"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The relative abundance of the bacterial family Streptomycetaceae in soil before treatment and after one week of incubation following application of different organic materials (Kuroihitomi, Soil-fine, rice bran) compared to untreated soil.",
+    "target_type": "proportion",
+    "target_location": "Results and Discussion, subsection 'Changes in the relative abundance of bacterial communities with the application of organic materials', text describing Fig. 4.",
+    "location_quotes": [
+      {
+        "segment_id": "S0081",
+        "quote": "After one week of incubation, Streptomycetaceae increased from 2.0% in 0–time soil to 3.2, 7.7, and 18.9% in KH–, SF–, and RB–treated soils, respectively."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0036",
+        "quote": "Amplification of the bacterial 16S rRNA gene was performed on extracted DNA using the primers 341f ( E. coli positions 341–357; 5′–CCTACGGGNGGCWGCAG–3′) and 805r ( E. coli positions 805–785; 5′–GACTACHVGGGTATCTAATCC–3′) ( Klindworth et al. , 2012 ), which are commonly"
+      },
+      {
+        "segment_id": "S0039",
+        "quote": "The community ana­lysis of soil bacteria in the four different treatments was performed using a paired–end method with MiSeq (Illumina), targeting the V3 and V4 regions of bacterial 16S genes."
+      },
+      {
+        "segment_id": "S0041",
+        "quote": "The Quantitative Insights into Microbial Ecology (QIIME 2) pipeline ( Caporaso et al. , 2010 ) was used to remove low–quality and chimeric sequences. The sequences that passed preprocessing were obtained as amplicon sequence variants (ASVs) at 97% similarity, together with the representative sequences."
+      }
+    ],
+    "required_files": [
+      "SRR29074840"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The BioProject PRJNA1112978 contains one run accession SRR29074840 (1,425,660 bytes). This is the raw sequencing data for the 16S amplicon analysis. No other data files are listed in the deposit. The paper does not provide sample metadata (treatment, time point) in the deposit listing; such metadata would be needed to reproduce the exact grouping.",
+    "leakage_files": [],
+    "required_public_references": [
+      {
+        "name": "EzBioCloud 16S database",
+        "version": "not specified"
+      }
+    ],
+    "comparison_metric": "The observed relative abundance of Streptomycetaceae in each treatment at one week post-incubation is compared to the reported percentages (2.0%, 3.2%, 7.7%, 18.9%).",
+    "numerical_agreement_criterion": "Proportions are compared by numerator/denominator: the reported percentages must match the computed relative abundance within the displayed rounding bin (one decimal place).",
+    "specification_gaps": "The paper does not specify: (1) the exact number of reads per sample or rarefaction depth; (2) the taxonomic classifier or database version used for assigning families (only EzBioCloud is mentioned for ASV identification); (3) whether relative abundances were calculated after rarefaction or as proportions of total reads; (4) the exact sample-to-run mapping (which run corresponds to which treatment/time point); (5) the handling of negative controls or contaminant sequences.",
+    "alternatives_considered": [
+      {
+        "target": "Relative abundance of ASV002 in RB-treated soil after one week (7.7%)",
+        "reason_rejected": "This is a more specific sub-target; the family-level result is the first principal quantitative result reported in the text and is more directly comparable across treatments."
+      },
+      {
+        "target": "Bacterial colony counts (CFU g-1 dry soil) from Fig. 1",
+        "reason_rejected": "This is a culture-dependent count, not derived from the deposited sequencing data; the deposit contains only amplicon sequences."
+      },
+      {
+        "target": "DNA yield (103 ng μL-1 at 20 mg casein sodium)",
+        "reason_rejected": "This is a methodological optimization result, not the principal result of the study."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

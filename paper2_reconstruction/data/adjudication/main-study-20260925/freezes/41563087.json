@@ -1,0 +1,142 @@
+{
+  "paper_id": "PMID:41563087",
+  "sampling_stratum": "Social_Behavioral",
+  "amendment": "AMEND-2026-09-25-06",
+  "study": "MAIN-STUDY-2026-09-25",
+  "frozen_at_utc": "2026-09-27T04:39:59.589483+00:00",
+  "investigator_verification": "pending",
+  "exact_target": "Percentage of students using one or more of WhatsApp, Snapchat and Instagram at least weekly: 89%.",
+  "target_location": "Results, paragraph beginning 'To determine which social media platforms students are using...'",
+  "location_evidence": [
+    {
+      "segment_id": "S0017",
+      "quote": "To determine which social media platforms students are using, and the frequency of use, they were asked, “In general how often do you use the following social media networks to interact with other students in your subject area” . The most used platforms were"
+    },
+    {
+      "segment_id": "S0018",
+      "quote": "WhatsApp, Snapchat and Instagram. A total of 89% of students were using one or more of these top three at least weekly."
+    }
+  ],
+  "blind_target": "The proportion of questionnaire respondents who reported using at least one of the three most frequently used social media platforms at a weekly or greater frequency.",
+  "target_type": "proportion",
+  "required_inputs": [
+    {
+      "name": "Open data_digital learning spaces.xlsx",
+      "served_as": "deposit/30161449/Open data_digital learning spaces.xlsx",
+      "identifier": "figshare:30161449:Open data_digital learning spaces.xlsx",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41563087/figshare/616abaeea87cbf0e2cad7126c32770b49ec0f1e7795e009bd390a47ddacbff0e/body",
+      "bytes": 50381,
+      "sha256": "c4e4bf949e2479d9310ffe1fb47a2b98a8e52db1d7e18f8cdb6e67ed93d8f794",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    }
+  ],
+  "excluded_inputs": [],
+  "allowed_resources": [
+    "worker image paper2-science:pilot-2026-09-25: Python scientific stack, R packages and PATH tools",
+    "served publication text and served deposited inputs only"
+  ],
+  "blocked_original_artifacts": [
+    "original implementation, repositories, notebooks, scripts",
+    "processed results, supplementary result tables, figures of the study",
+    "any author communication"
+  ],
+  "comparison_metric": "Recompute the percentage of respondents using at least one of WhatsApp, Snapchat or Instagram at least weekly from the questionnaire data and compare to the reported 89%.",
+  "numerical_agreement_criterion": "Proportion: the recomputed numerator and denominator must yield a percentage that rounds to 89% at the reported precision.",
+  "conclusion_criterion": "Conclusion agreement is scored only when the numerical criterion is met or when the publication states a directional claim that the observed value can be compared with; otherwise the conclusion component is not_assessable.",
+  "resource_ceiling": {
+    "slots_per_paper": 3,
+    "wall_seconds_per_slot": 14400,
+    "step_seconds": 3600,
+    "provider_tokens_per_slot": 1500000,
+    "tool_calls_per_slot": 40,
+    "max_completion_tokens": 8192,
+    "worker_cpus": 1,
+    "worker_memory": "3g",
+    "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+    "network": "none",
+    "image": "paper2-science:pilot-2026-09-25"
+  },
+  "stopping_rule": [
+    "final report submitted by the slot",
+    "wall, step, token, tool-call or output ceiling reached (recorded as the stop reason)",
+    "required input absent from the served package: report null observation with F01/F18",
+    "specification gap that cannot be closed from the served text: report null with F04-F08",
+    "controller or worker error: recorded as harness stop, never as an outcome",
+    "no rerun, no extension and no rule change after the slot starts"
+  ],
+  "specification_gaps": [
+    "The exact denominator for the 89% is not specified (all 158 respondents vs. those who answered the platform frequency question).",
+    "The mapping of response options to 'at least weekly' is not detailed.",
+    "The handling of missing responses is not described."
+  ],
+  "gate_reviews": {
+    "G1": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0014",
+          "quote": "Online questionnaire data were transferred to Excel, and quantitative analysis was undertaken."
+        },
+        {
+          "segment_id": "S0016",
+          "quote": "The questionnaire was completed by 158 participants (from 733 invited, 22% uptake) across the School of Biosciences and Chemistry: 7% of students were in their foundation year, 54% in their first year, 23% in their second year and 16% in their final year of"
+        }
+      ],
+      "rationale": "The principal quantitative results are percentages computed from questionnaire data, which a third party can re-run from the deposited Excel file."
+    },
+    "G2": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0018",
+          "quote": "WhatsApp, Snapchat and Instagram. A total of 89% of students were using one or more of these top three at least weekly."
+        },
+        {
+          "segment_id": "S0017",
+          "quote": "To determine which social media platforms students are using, and the frequency of use, they were asked, “In general how often do you use the following social media networks to interact with other students in your subject area” . The most used platforms were"
+        }
+      ],
+      "rationale": "The first reported principal quantitative result is the 89% weekly use of the top three platforms, a named proportion from the questionnaire."
+    },
+    "G3": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0014",
+          "quote": "Online questionnaire data were transferred to Excel, and quantitative analysis was undertaken."
+        },
+        {
+          "segment_id": "S0067",
+          "quote": "Data Availability 10.6084/m9.figshare.30161449"
+        }
+      ],
+      "rationale": "The deposit contains the questionnaire Excel file, which is the raw input for the quantitative analysis."
+    },
+    "G4": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0017",
+          "quote": "To determine which social media platforms students are using, and the frequency of use, they were asked, “In general how often do you use the following social media networks to interact with other students in your subject area” . The most used platforms were"
+        },
+        {
+          "segment_id": "S0018",
+          "quote": "WhatsApp, Snapchat and Instagram. A total of 89% of students were using one or more of these top three at least weekly."
+        }
+      ],
+      "rationale": "The question wording and the definition of the 89% statistic (one or more of the top three at least weekly) are described sufficiently to implement the calculation."
+    },
+    "G5": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0014",
+          "quote": "Online questionnaire data were transferred to Excel, and quantitative analysis was undertaken."
+        }
+      ],
+      "rationale": "The analysis uses Excel, which is proprietary, but the same computation can be performed in free software such as LibreOffice or Python."
+    }
+  }
+}

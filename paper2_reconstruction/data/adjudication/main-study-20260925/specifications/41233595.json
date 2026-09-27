@@ -1,0 +1,152 @@
+{
+  "paper_id": "PMID:41233595",
+  "sampling_stratum": "Chemistry_Materials",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "4f0a27dfe72e3462145151447529d10ec37c2bdd63ab1bfc8c85871807b165c7",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "zenodo",
+      "accession": "8414787",
+      "files": [
+        {
+          "name": "CosciaLab/Qupath_to_LMD-v.1.0.0.zip",
+          "bytes": 3073544
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:28:32.732598+00:00",
+  "api": {
+    "response_id": "018e46bb-e1c5-4eec-bfbf-50040de78abf",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 34656,
+    "completion_tokens": 1838
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0037",
+            "quote": "Raw files were analyzed in DIA-NN (Demichev et al, 2020 ) using a predicted spectral library, resulting in 10,223 unique protein groups from 192 mass spectrometric injections."
+          },
+          {
+            "segment_id": "S0255",
+            "quote": "The mass spectrometry proteomics data have been deposited to the ProteomeXchange Consortium ( http://proteomecentral.proteomexchange.org ) via the PRIDE partner (Perez-Riverol et al, 2019 ) with the dataset identifier PXD069630 ."
+          }
+        ],
+        "rationale": "The principal results are produced by computational analysis (DIA-NN, Perseus, R) of mass spectrometry data deposited to ProteomeXchange (PXD069630), which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0037",
+            "quote": "Raw files were analyzed in DIA-NN (Demichev et al, 2020 ) using a predicted spectral library, resulting in 10,223 unique protein groups from 192 mass spectrometric injections."
+          }
+        ],
+        "rationale": "A principal quantitative result is the number of unique protein groups identified (10,223), a primary numerical endpoint stated in the Results."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0255",
+            "quote": "The mass spectrometry proteomics data have been deposited to the ProteomeXchange Consortium ( http://proteomecentral.proteomexchange.org ) via the PRIDE partner (Perez-Riverol et al, 2019 ) with the dataset identifier PXD069630 ."
+          }
+        ],
+        "rationale": "The deposit listing provided (Zenodo 8414787) contains only a code zip (Qupath_to_LMD), not the raw mass spectrometry data. The raw data are in ProteomeXchange PXD069630, which is not in the listed deposit files, so it is uncertain whether the listed deposit files are the analysis inputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0233",
+            "quote": "For the analysis of dia-PASEF raw files and generation of spectral libraries, we employed DIA-NN (Demichev et al, 2020 ) (version 1.8.1). The human FASTA file was obtained from the UniProt database (2022 release, UP000005640_9606, downloaded on April 8th 2022)."
+          },
+          {
+            "segment_id": "S0234",
+            "quote": "We enabled deep learning-based predictions for spectra, RTs, and IMs within the 300-1200 m/z mass range. Fixed modifications included N-terminal M excision and cysteine carbamidomethylation. We allowed up to two missed cleavages and set the precursor charge to 2–4."
+          }
+        ],
+        "rationale": "The Methods describe the DIA-NN parameters, FASTA database, modifications, and other settings in sufficient detail to implement the analysis without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0233",
+            "quote": "For the analysis of dia-PASEF raw files and generation of spectral libraries, we employed DIA-NN (Demichev et al, 2020 ) (version 1.8.1)."
+          },
+          {
+            "segment_id": "S0236",
+            "quote": "Proteomic data analysis was performed within the R environment ( https://r-project.org/version 4.3.2) with the following packages: tidyverse (version 2.0.0), Rstatix (version 0.7.2), UpSetR package (version 1.4.0), FactoMineR (version 2.11), factoextra (version 1.0.7), ggpubr (version 0.6.0), corrplot (version 0.92), ComplexHeatmap (version 2.18.0),"
+          }
+        ],
+        "rationale": "The method uses DIA-NN and R, both free and open-source software, with no proprietary software required."
+      }
+    },
+    "exact_target": "Number of unique protein groups identified: 10,223",
+    "target_values": [
+      "10,223"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The total number of unique protein groups identified from the mass spectrometric injections.",
+    "target_type": "count",
+    "target_location": "Results, section 'Spatially resolved proteomes reflect disease-specific alterations at the bulk level depth'",
+    "location_quotes": [
+      {
+        "segment_id": "S0037",
+        "quote": "Raw files were analyzed in DIA-NN (Demichev et al, 2020 ) using a predicted spectral library, resulting in 10,223 unique protein groups from 192 mass spectrometric injections."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0233",
+        "quote": "For the analysis of dia-PASEF raw files and generation of spectral libraries, we employed DIA-NN (Demichev et al, 2020 ) (version 1.8.1). The human FASTA file was obtained from the UniProt database (2022 release, UP000005640_9606, downloaded on April 8th 2022)."
+      },
+      {
+        "segment_id": "S0234",
+        "quote": "We enabled deep learning-based predictions for spectra, RTs, and IMs within the 300-1200 m/z mass range. Fixed modifications included N-terminal M excision and cysteine carbamidomethylation. We allowed up to two missed cleavages and set the precursor charge to 2–4."
+      },
+      {
+        "segment_id": "S0235",
+        "quote": "We configured MS1 and MS2 accuracies to 15.0, set scan windows to 0 (for DIA-NN assignment), enabled isotopologues, activated match-between-runs, applied heuristic protein inference, and disallowed shared spectra. Protein inference was based on genes."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The raw mass spectrometry data are deposited in ProteomeXchange with identifier PXD069630, but this is not among the listed deposit files (Zenodo 8414787 contains only a code zip). The required input files are not in the provided deposit listing.",
+    "leakage_files": [
+      {
+        "name": "CosciaLab/Qupath_to_LMD-v.1.0.0.zip",
+        "reason": "This is a code repository (Qupath_to_LMD function) and does not contain the target value or derived result tables; it is not a leakage file for the target value."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "UniProt database",
+        "version": "2022 release, UP000005640_9606"
+      }
+    ],
+    "comparison_metric": "Exact match of the reported count of unique protein groups.",
+    "numerical_agreement_criterion": "Counts exact: the reported value 10,223 must be reproduced exactly.",
+    "specification_gaps": "The paper does not specify the exact DIA-NN version parameters beyond those listed, nor the precise filtering thresholds for protein group identification (e.g., q-value cutoffs) that might affect the final count.",
+    "alternatives_considered": [
+      {
+        "target": "Number of proteins identified in STIC stroma (37.16% of total protein mass)",
+        "reason": "This is a percentage, not a primary count, and is less central than the total protein group count."
+      },
+      {
+        "target": "Median proteome coverage for epithelial samples (>7500 protein groups)",
+        "reason": "This is a median value, not a single count, and is less precise than the total unique protein groups."
+      }
+    ]
+  },
+  "eligibility": "required_inputs_not_in_public_listing"
+}

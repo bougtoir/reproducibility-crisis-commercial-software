@@ -295,3 +295,28 @@ are void (retained under `voided/`), the harness now withholds deposited code
 by name, and the paper was re-frozen and run afresh. Inputs:
 `/home/ubuntu/paper2_evidence/main-inputs-20260925` (273 MB, receipts). No
 adjudication, reveal or rate computation has occurred.
+
+## Main-study execution, completion and blind seal (2026-09-27)
+
+Execution resumed from the recorded state on the investigator's instruction
+and reached all 100 cohort papers; the provider quota was not exhausted. The
+interrupted specification (PMID:35798840) was re-requested and recorded
+(specifiable; all inputs leak the target; not run). Final states: 10 papers
+completed all three slots (Biomedical_Basic 5, Social_Behavioral 3,
+Computational_Science 2; 30 slots; stop reasons final_report, tool_limit,
+wall_limit, token_reserve_limit, malformed_action_limit); 90 papers not run:
+external public reference resource required 28, gate failed (delegated) 24,
+required inputs not in the public listing 16, specification rejected by the
+quote/leakage validator 7, target value not located verbatim 4, and among the
+21 specifiable papers 10 had every candidate input leaking the target and 1
+retained no input. DEV-2026-09-27-01: the OSF resolver read the GUID node
+record instead of the retained provider file listings and halted before any
+specifier call on the 41st paper; corrected without any new listing request,
+manifest superseded and retained (`superseded/`), no slot affected. One slot
+(PMID:33072212, slot 1) hit the frozen 3600 s step ceiling on a recursive
+filesystem glob and was stopped as `wall_limit`. Blind outcomes are sealed
+(`data/adjudication/main-study-20260925/blind_outcome.json`, SHA-256
+350a0e7dcedbb74ccad2472c642318c87cc7d272f1b6c88186a1419dc858ea5a, RFC 3161
+verified). Inputs `/home/ubuntu/paper2_evidence/main-inputs-20260925`
+(4.5 GB, receipts); runs `/home/ubuntu/paper2_evidence/main-run-20260925`
+(1.0 GB). No adjudication, reveal or rate computation has occurred.

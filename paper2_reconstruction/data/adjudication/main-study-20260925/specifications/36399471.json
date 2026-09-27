@@ -1,0 +1,150 @@
+{
+  "paper_id": "PMID:36399471",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "1c7d8acf67f9e5fcdedba0416ef0a42c4775fa8ac94b569c83ac39e3237016c1",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE133768",
+      "files": [
+        {
+          "name": "GSE133768_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T05:07:02.952908+00:00",
+  "api": {
+    "response_id": "52575cf1-1a60-446c-b6bb-0d64cc16ae5a",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 14957,
+    "completion_tokens": 1411
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0005",
+            "quote": "Differentially expressed circular RNAs (circRNAs) were obtained using GEO2R, and the expression of hsa_circ_0004099 was verified using RT-PCR."
+          },
+          {
+            "segment_id": "S0023",
+            "quote": "The human plasma circRNA gene assay was selected from the GEO database ( https://www . ncbi. nlm. nih. gov/), and platform files as well as a series of matrix files were downloaded."
+          }
+        ],
+        "rationale": "The principal result (differential expression of hsa_circ_0004099) is produced by a computational analysis (GEO2R) of public microarray data (GSE133768), which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0014",
+            "quote": "found that the expression of hsa_circ_0004099 was downregulated, while its log2FC absolute value (3.52) was the largest among the downregulated circRNAs."
+          }
+        ],
+        "rationale": "The paper explicitly states the log2FC absolute value (3.52) as the largest among downregulated circRNAs, making it a principal quantitative result."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0023",
+            "quote": "The human plasma circRNA gene assay was selected from the GEO database ( https://www . ncbi. nlm. nih. gov/), and platform files as well as a series of matrix files were downloaded."
+          }
+        ],
+        "rationale": "The deposit GSE133768 contains raw data (GSE133768_RAW.tar) that are the analysis inputs for the differential expression computation."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0024",
+            "quote": "circRNA definition conditions were as follows: |log2FC|≥2, p <0.05."
+          },
+          {
+            "segment_id": "S0005",
+            "quote": "Differentially expressed circular RNAs (circRNAs) were obtained using GEO2R"
+          }
+        ],
+        "rationale": "The method specifies the use of GEO2R and the threshold criteria (|log2FC|≥2, p<0.05), which is sufficient to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0005",
+            "quote": "Differentially expressed circular RNAs (circRNAs) were obtained using GEO2R"
+          }
+        ],
+        "rationale": "GEO2R is a free web-based tool, and no proprietary software is required for the differential expression analysis."
+      }
+    },
+    "exact_target": "The absolute log2 fold change (log2FC) of hsa_circ_0004099 expression in AIS plasma compared to healthy controls, reported as 3.52.",
+    "target_values": [
+      "3.52"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The absolute log2 fold change of hsa_circ_0004099 expression in AIS plasma compared to healthy controls, identified as the largest among downregulated circRNAs.",
+    "target_type": "scalar",
+    "target_location": "Introduction, paragraph describing the use of GEO2R to obtain differentially expressed circRNAs.",
+    "location_quotes": [
+      {
+        "segment_id": "S0014",
+        "quote": "found that the expression of hsa_circ_0004099 was downregulated, while its log2FC absolute value (3.52) was the largest among the downregulated circRNAs."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0005",
+        "quote": "Differentially expressed circular RNAs (circRNAs) were obtained using GEO2R"
+      },
+      {
+        "segment_id": "S0024",
+        "quote": "circRNA definition conditions were as follows: |log2FC|≥2, p <0.05."
+      }
+    ],
+    "required_files": [
+      "GSE133768_RAW.tar"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit GSE133768 contains raw data files in GSE133768_RAW.tar. The platform GPL21825 is referenced but not listed as a file; it may be needed for annotation. The paper does not specify which samples were used for the differential expression analysis.",
+    "leakage_files": [
+      {
+        "name": "filelist.txt",
+        "reason": "May contain a list of files or metadata that could reveal the target value or derived results."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "GEO platform GPL21825",
+        "version": "GPL21825"
+      }
+    ],
+    "comparison_metric": "The observed log2FC absolute value for hsa_circ_0004099 computed from the raw data using GEO2R is compared to the reported value of 3.52.",
+    "numerical_agreement_criterion": "The computed log2FC absolute value must match the reported value within the displayed rounding bin (two decimal places).",
+    "specification_gaps": "The paper does not specify which samples from GSE133768 were used for the differential expression analysis, nor does it provide the exact GEO2R parameters or the platform annotation file.",
+    "alternatives_considered": [
+      {
+        "target": "AUC of 0.923 for hsa_circ_0004099 in diagnosing AIS",
+        "reason": "This is a principal result but is based on RT-PCR data from the study's own cohort, which is not deposited in the public repository; thus it is not computationally testable from the listed files."
+      },
+      {
+        "target": "Correlation coefficients (r = -0.7053, r = -0.5130) between hsa_circ_0004099 and NIHSS/infarct time",
+        "reason": "These are clinical correlation results from the study's cohort, not derived from the public microarray data, and the required clinical data are not deposited."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

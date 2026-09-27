@@ -1,0 +1,300 @@
+{
+  "paper_id": "PMID:36307440",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "3fa3603dcb1d549d83720d46e47e78a4057a33bbb53502fda1ff6853a99e9e1a",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "dataverse",
+      "accession": "GCNO77",
+      "files": [
+        {
+          "name": "01 multilateralism experiment.do",
+          "bytes": 18460
+        },
+        {
+          "name": "02 conjoint experiment.do",
+          "bytes": 33070
+        },
+        {
+          "name": "03 summary table.do",
+          "bytes": 2134
+        },
+        {
+          "name": "04 average marginal interaction effects.R",
+          "bytes": 3068
+        },
+        {
+          "name": "05 amie support functions.R",
+          "bytes": 152515
+        },
+        {
+          "name": "Fig1.pdf",
+          "bytes": 63822
+        },
+        {
+          "name": "Fig2.pdf",
+          "bytes": 63094
+        },
+        {
+          "name": "Fig3.pdf",
+          "bytes": 64591
+        },
+        {
+          "name": "Fig4.pdf",
+          "bytes": 66087
+        },
+        {
+          "name": "Fig5.png",
+          "bytes": 125031
+        },
+        {
+          "name": "SuppFig1.pdf",
+          "bytes": 63373
+        },
+        {
+          "name": "SuppFig2.pdf",
+          "bytes": 66724
+        },
+        {
+          "name": "SuppFig3.pdf",
+          "bytes": 63086
+        },
+        {
+          "name": "SuppFig4.pdf",
+          "bytes": 63955
+        },
+        {
+          "name": "SuppFig6.pdf",
+          "bytes": 64616
+        },
+        {
+          "name": "SuppFig7.pdf",
+          "bytes": 78597
+        },
+        {
+          "name": "SuppFig8.pdf",
+          "bytes": 66210
+        },
+        {
+          "name": "SuppFig9.pdf",
+          "bytes": 79561
+        },
+        {
+          "name": "pooled_scenlevel_touse.dta",
+          "bytes": 768274400
+        },
+        {
+          "name": "pooled_touse.tab",
+          "bytes": 43695491
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:26:34.739705+00:00",
+  "api": {
+    "response_id": "2bb34bd2-f74d-43b8-960c-0e3f105fff92",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 11147,
+    "completion_tokens": 1972
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0031",
+            "quote": "We analyze the proportion of individuals approving the introduction of a carbon tax (levels of support that exceed 5, the midpoint of the scale)."
+          },
+          {
+            "segment_id": "S0036",
+            "quote": "estimated using a linear probability model with robust standard errors. Regressions control for gender, age, income, education, and employment status. Country fixed effects included."
+          }
+        ],
+        "rationale": "The principal result is a computed proportion/effect from survey data using a linear probability model; a third party can re-run the computation on the deposited data."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0033",
+            "quote": "However, when other countries are merely mentioned to also introduce a carbon tax, support is 59%, which is equivalent to a 6 percentage points increase over the unilateralism condition."
+          },
+          {
+            "segment_id": "S0032",
+            "quote": "In the control condition that did not receive any effectiveness information, we find that about 53% of all respondents support the introduction of a carbon tax if this policy is pursued unilaterally."
+          }
+        ],
+        "rationale": "The paper's stated principal result is the effect of multilateralism on carbon tax support; the first reported numerical endpoint is the 6 percentage point increase (53% to 59%)."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0094",
+            "quote": "The data used in this study are available at the Harvard Dataverse as Bechtel, Michael; Scheve, Kenneth; van Lieshout, Elisabeth, 2022, “Replication Data for: Improving Public Support for Climate Action Through Multilateralism”, 10.7910/DVN/GCNO77, Harvard Dataverse, V1."
+          }
+        ],
+        "rationale": "The deposit contains pooled_scenlevel_touse.dta and pooled_touse.tab, which are the analysis input data files; the .do/.R files are code, not inputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0031",
+            "quote": "We analyze the proportion of individuals approving the introduction of a carbon tax (levels of support that exceed 5, the midpoint of the scale)."
+          },
+          {
+            "segment_id": "S0036",
+            "quote": "estimated using a linear probability model with robust standard errors. Regressions control for gender, age, income, education, and employment status. Country fixed effects included."
+          }
+        ],
+        "rationale": "The outcome definition, model type, controls, fixed effects, and weighting are described sufficiently to implement without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0095",
+            "quote": "The following software has been used to process the data: Excel (MacOS 16.65), Stata 16, and R."
+          }
+        ],
+        "rationale": "The method can be implemented in R or other free software; no proprietary software is required for the statistical computation."
+      }
+    },
+    "exact_target": "The effect of multilateralism on carbon tax support in the control condition: support is 53% under unilateralism and 59% under multilateralism, a 6 percentage point increase.",
+    "target_values": [
+      "53%",
+      "59%",
+      "6 percentage points"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The difference in the proportion of respondents approving a domestic carbon tax between a multilateral and a unilateral policy framing, in the condition without additional effectiveness information.",
+    "target_type": "proportion",
+    "target_location": "Results, Figure 1a and main text",
+    "location_quotes": [
+      {
+        "segment_id": "S0032",
+        "quote": "In the control condition that did not receive any effectiveness information, we find that about 53% of all respondents support the introduction of a carbon tax if this policy is pursued unilaterally."
+      },
+      {
+        "segment_id": "S0033",
+        "quote": "However, when other countries are merely mentioned to also introduce a carbon tax, support is 59%, which is equivalent to a 6 percentage points increase over the unilateralism condition."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0031",
+        "quote": "We analyze the proportion of individuals approving the introduction of a carbon tax (levels of support that exceed 5, the midpoint of the scale)."
+      },
+      {
+        "segment_id": "S0036",
+        "quote": "estimated using a linear probability model with robust standard errors. Regressions control for gender, age, income, education, and employment status. Country fixed effects included."
+      },
+      {
+        "segment_id": "S0025",
+        "quote": "All our results employ survey weights, but the findings are very similar when analyzing the unweighted data."
+      }
+    ],
+    "required_files": [
+      "pooled_scenlevel_touse.dta",
+      "pooled_touse.tab"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit is Harvard Dataverse GCNO77 V1. The .dta and .tab files are the pooled analysis datasets; the .do and .R files are original code and are withheld. No external data are needed.",
+    "leakage_files": [
+      {
+        "name": "01 multilateralism experiment.do",
+        "reason": "Original Stata code that computes the target estimates."
+      },
+      {
+        "name": "02 conjoint experiment.do",
+        "reason": "Original Stata code for the conjoint analyses."
+      },
+      {
+        "name": "03 summary table.do",
+        "reason": "Original Stata code that may produce summary tables containing the target values."
+      },
+      {
+        "name": "04 average marginal interaction effects.R",
+        "reason": "Original R code for AMIE analyses."
+      },
+      {
+        "name": "05 amie support functions.R",
+        "reason": "Original R support functions for AMIE analyses."
+      },
+      {
+        "name": "Fig1.pdf",
+        "reason": "Figure containing the target values (53%, 59%, 6 pp)."
+      },
+      {
+        "name": "Fig2.pdf",
+        "reason": "Figure containing derived results."
+      },
+      {
+        "name": "Fig3.pdf",
+        "reason": "Figure containing derived results."
+      },
+      {
+        "name": "Fig4.pdf",
+        "reason": "Figure containing derived results."
+      },
+      {
+        "name": "Fig5.png",
+        "reason": "Figure containing derived results."
+      },
+      {
+        "name": "SuppFig1.pdf",
+        "reason": "Supplementary figure containing derived results."
+      },
+      {
+        "name": "SuppFig2.pdf",
+        "reason": "Supplementary figure containing derived results."
+      },
+      {
+        "name": "SuppFig3.pdf",
+        "reason": "Supplementary figure containing derived results."
+      },
+      {
+        "name": "SuppFig4.pdf",
+        "reason": "Supplementary figure containing derived results."
+      },
+      {
+        "name": "SuppFig6.pdf",
+        "reason": "Supplementary figure containing derived results."
+      },
+      {
+        "name": "SuppFig7.pdf",
+        "reason": "Supplementary figure containing derived results."
+      },
+      {
+        "name": "SuppFig8.pdf",
+        "reason": "Supplementary figure containing derived results."
+      },
+      {
+        "name": "SuppFig9.pdf",
+        "reason": "Supplementary figure containing derived results."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Compare the reported proportions (53% and 59%) and their difference (6 percentage points) to the solver's computed weighted proportions and difference from the deposited data.",
+    "numerical_agreement_criterion": "Proportions by numerator/denominator within the displayed rounding bin (whole percentage points); the difference must equal the reported 6 percentage points within rounding.",
+    "specification_gaps": "The exact survey weight variable, the precise coding of the 1–10 approval scale into a binary indicator, and the exact model specification for the control-condition proportion are not fully specified in the text.",
+    "alternatives_considered": [
+      {
+        "target": "The 6 percentage point increase in the high effectiveness condition (57% to 62%)",
+        "reason": "This is a secondary mechanism result, not the principal first-reported effect."
+      },
+      {
+        "target": "The conjoint cost effects (e.g., 6 and 17 percentage point drops)",
+        "reason": "These are from the second study and are not the paper's principal first-reported result."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

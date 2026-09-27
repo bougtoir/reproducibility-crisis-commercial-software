@@ -1,0 +1,156 @@
+{
+  "paper_id": "PMID:33954783",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "024f67b2e811ee5e774dabed2c59957af07d75aefa61a9d684debc96d3b8937d",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "13573604",
+      "files": [
+        {
+          "name": "Bacha, Appendices.docx",
+          "bytes": 107420
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:11:46.594573+00:00",
+  "api": {
+    "response_id": "3b4a0c08-4a95-476f-a47c-63da8e5fd17a",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 14978,
+    "completion_tokens": 1448
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0006",
+            "quote": "This post hoc analysis of data collected from a 12-month, double-blind, randomized control trial included 221 ambulatory"
+          },
+          {
+            "segment_id": "S0031",
+            "quote": "Serum 25(OH)D levels were compared between groups using the independent t test and within the same group using paired t test. Categorical variables (proportions) were compared using Pearson"
+          }
+        ],
+        "rationale": "The principal results are computed from trial data using standard statistical tests, which a third party could re-run if the data were available."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0007",
+            "quote": "Results Mean 25(OH)D level at 12 months was 26.0"
+          },
+          {
+            "segment_id": "S0008",
+            "quote": "ng/mL with low dose and 36.0 ng/mL with high dose vitamin D 3 . The proportion of participants reaching a value ≥ 20 ng/mL was 86% in the low dose, and 99% in the high dose arms, with no gender differences."
+          }
+        ],
+        "rationale": "The abstract reports the primary numerical endpoint: mean 25(OH)D at 12 months by dose arm."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0099",
+            "quote": "Data Availability Some or all data generated or analyzed during this study are included in this published article or in the data"
+          },
+          {
+            "segment_id": "S0100",
+            "quote": "repositories listed in References."
+          }
+        ],
+        "rationale": "The only listed deposit file is an appendix document, not the analysis input data."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0031",
+            "quote": "Serum 25(OH)D levels were compared between groups using the independent t test and within the same group using paired t test. Categorical variables (proportions) were compared using Pearson"
+          },
+          {
+            "segment_id": "S0032",
+            "quote": "chi-squared test or Fisher’s exact test, as applicable. Analysis of variance (ANOVA) was used for comparison between different seasons."
+          }
+        ],
+        "rationale": "The statistical methods for the primary endpoint are described sufficiently to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0035",
+            "quote": "Data analyses were performed using IBM SPSS version 26.0 (IBM Corporation, Armonk, NY)."
+          }
+        ],
+        "rationale": "The described methods (t tests, chi-squared tests, ANOVA) can be performed with free software; SPSS is not required."
+      }
+    },
+    "exact_target": "Mean serum 25(OH)D level at 12 months in the low dose (600 IU/day) and high dose (3750 IU/day) vitamin D3 arms: 26.0 ng/mL and 36.0 ng/mL, respectively.",
+    "target_values": [
+      "26.0",
+      "36.0"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "Mean serum 25(OH)D level at 12 months in the low dose and high dose vitamin D3 arms.",
+    "target_type": "scalar",
+    "target_location": "Abstract Results; also reported in Results section 'Response to Vitamin D3 Supplementation'.",
+    "location_quotes": [
+      {
+        "segment_id": "S0007",
+        "quote": "Results Mean 25(OH)D level at 12 months was 26.0"
+      },
+      {
+        "segment_id": "S0008",
+        "quote": "ng/mL with low dose and 36.0 ng/mL with high dose vitamin D 3 ."
+      },
+      {
+        "segment_id": "S0042",
+        "quote": "The mean 25(OH)D levels reached after 12 months were 26.0 ± 6.9 ng/mL in the low dose arm and 36.0 ± 9.7 ng/mL in the high dose arm ( P < 0.001), both of which did not differ significantly between genders (Supplement 1) ( 21 )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0031",
+        "quote": "Serum 25(OH)D levels were compared between groups using the independent t test and within the same group using paired t test."
+      },
+      {
+        "segment_id": "S0027",
+        "quote": "Serum 25(OH)D was run using liquid chromatography mass spectroscopy (LCMS) at the Mayo Clinic Clinical Laboratories, (Mayo Clinic, Rochester, Minnesota)."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The only listed deposit file is 'Bacha, Appendices.docx' (figshare 13573604), which is an appendix document, not the analysis input data. The raw trial data are not deposited.",
+    "leakage_files": [
+      {
+        "name": "Bacha, Appendices.docx",
+        "reason": "This appendix document likely contains supplementary tables and figures that report the target values or derived results."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Compare the reported mean 25(OH)D levels at 12 months for each dose arm to values computed from the trial data.",
+    "numerical_agreement_criterion": "Scalars within displayed rounding bin (e.g., 26.0 and 36.0 ng/mL to one decimal place).",
+    "specification_gaps": "The exact analysis population (e.g., handling of missing data) and the precise method for calculating the mean (e.g., unadjusted vs adjusted) are not fully specified.",
+    "alternatives_considered": [
+      {
+        "target": "Proportion of participants reaching 25(OH)D ≥ 20 ng/mL at 12 months (86% low dose, 99% high dose)",
+        "reason": "This is a secondary result; the primary numerical endpoint is the mean 25(OH)D level."
+      },
+      {
+        "target": "Projected RDA of 1100 IU/day",
+        "reason": "This is a derived projection, not a directly measured result."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

@@ -1,0 +1,159 @@
+{
+  "paper_id": "PMID:39816064",
+  "sampling_stratum": "Social_Behavioral",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "7c36d26962f751df52058d66c8f2be78b77a1e77de38bfb8a902fbdfe5a8c1f9",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "26339029",
+      "files": [
+        {
+          "name": "Underlying data .pdf",
+          "bytes": 113422
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:39:33.206105+00:00",
+  "api": {
+    "response_id": "da6856b8-d553-4a04-8ada-a2f836190443",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 11534,
+    "completion_tokens": 1534
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0029",
+            "quote": "The Mann-Whitney test was used to compare the mean DLQI scores between skin moisture and serum urea levels. Spearman's correlation coefficient was employed to determine the correlation between skin moisture and serum urea level with DLQI."
+          },
+          {
+            "segment_id": "S0031",
+            "quote": "All statistical analyses were performed using IBM SPSS Statistics version 22"
+          }
+        ],
+        "rationale": "The principal results are statistical computations (Mann-Whitney, Spearman, partial correlation) on patient data that a third party could re-run if the data were available."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0007",
+            "quote": "Spearman's correlation analysis revealed no correlation between serum urea levels and average skin moisture with DLQI ( p="
+          },
+          {
+            "segment_id": "S0008",
+            "quote": "0.600 and p =0.353, respectively), indicating that multiple factors contribute to the dermatological quality of life in patients with CKD."
+          }
+        ],
+        "rationale": "The principal quantitative result is the Spearman correlation p-values for the two primary associations, stated in the abstract and results."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0071",
+            "quote": "Underlying data"
+          },
+          {
+            "segment_id": "S0072",
+            "quote": "Calculation of sample size is available at: https://doi.org/10.6084/m9.figshare.26339029 ."
+          }
+        ],
+        "rationale": "The only deposited file is a PDF about sample size calculation, not the patient-level analysis data (serum urea, skin moisture, DLQI scores)."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0029",
+            "quote": "The Mann-Whitney test was used to compare the mean DLQI scores between skin moisture and serum urea levels. Spearman's correlation coefficient was employed to determine the correlation between skin moisture and serum urea level with DLQI."
+          },
+          {
+            "segment_id": "S0030",
+            "quote": "Partial correlation analysis was also performed to determine the direct correlation between the two variables of interest after controlling for the linear influence of third, fourth, or additional confounding variables by keeping the correlation values of confounding variables constant"
+          }
+        ],
+        "rationale": "The statistical methods are described in sufficient detail to implement them without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0031",
+            "quote": "All statistical analyses were performed using IBM SPSS Statistics version 22"
+          }
+        ],
+        "rationale": "The methods (Mann-Whitney, Spearman, partial correlation) can be implemented in free software like R or Python; SPSS is not required."
+      }
+    },
+    "exact_target": "Spearman's correlation p-value between serum urea levels and DLQI score: p=0.600",
+    "target_values": [
+      "0.600"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The Spearman's rank correlation p-value for the association between serum urea levels and Dermatology Life Quality Index (DLQI) score in patients with chronic kidney disease on hemodialysis.",
+    "target_type": "p_value",
+    "target_location": "Abstract and Results, Table 3",
+    "location_quotes": [
+      {
+        "segment_id": "S0007",
+        "quote": "Spearman's correlation analysis revealed no correlation between serum urea levels and average skin moisture with DLQI ( p="
+      },
+      {
+        "segment_id": "S0008",
+        "quote": "0.600 and p =0.353, respectively), indicating that multiple factors contribute to the dermatological quality of life in patients with CKD."
+      },
+      {
+        "segment_id": "S0041",
+        "quote": "Serum urea level 1 - ˗0.047 0.703 ˗0.065 0.600 Average skin moisture ˗0.047 0.703 1 - ˗0.115 0.353 DLQI ˗0.065 0.600 ˗0.115 0.353 1 -"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0029",
+        "quote": "The Mann-Whitney test was used to compare the mean DLQI scores between skin moisture and serum urea levels. Spearman's correlation coefficient was employed to determine the correlation between skin moisture and serum urea level with DLQI."
+      },
+      {
+        "segment_id": "S0030",
+        "quote": "Partial correlation analysis was also performed to determine the direct correlation between the two variables of interest after controlling for the linear influence of third, fourth, or additional confounding variables by keeping the correlation values of confounding variables constant"
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit (figshare 26339029) contains only a PDF about sample size calculation, not the patient-level data needed to compute the Spearman correlation. The analysis inputs (serum urea levels, skin moisture, DLQI scores) are not deposited.",
+    "leakage_files": [
+      {
+        "name": "Underlying data .pdf",
+        "reason": "This file is the only deposited item and may contain the sample size calculation but not the raw data; however, it is not an analysis input and could potentially contain derived results or target values."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "The reported p-value (0.600) is compared to the p-value computed from the raw data using Spearman's correlation.",
+    "numerical_agreement_criterion": "p-values at reported precision (three decimal places).",
+    "specification_gaps": "The exact handling of missing data, the specific variables included in the partial correlation, and the precise version of the DLQI questionnaire are not fully specified.",
+    "alternatives_considered": [
+      {
+        "target": "Spearman's correlation p-value between average skin moisture and DLQI (p=0.353)",
+        "reason": "This is a secondary correlation; the primary focus is on serum urea as stated in the aim."
+      },
+      {
+        "target": "Mean DLQI score (4.67±3.98)",
+        "reason": "This is a descriptive statistic, not the principal inferential result."
+      },
+      {
+        "target": "Mann-Whitney p-value for DLQI between normal and high serum urea (p=0.156)",
+        "reason": "This is a secondary comparison; the primary analysis is the correlation."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

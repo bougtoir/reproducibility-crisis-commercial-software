@@ -1,0 +1,190 @@
+{
+  "paper_id": "PMID:38095636",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "6ed950a7ace468d7fb05674b7bd104f3819d66f45e5c53deb4c98deb68814ab0",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE165298",
+      "files": [
+        {
+          "name": "GSE165298_circRNA.count.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE165298_lincRNA.FPKM.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE165298_mRNA.FPKM.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE165298_miRNA.TPM.txt.gz",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE89039",
+      "files": [
+        {
+          "name": "GSE89039_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:11:18.406892+00:00",
+  "api": {
+    "response_id": "07969cc1-e31d-4403-8df0-120844a3a7f8",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 16673,
+    "completion_tokens": 1551
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0026",
+            "quote": "DESeq2 (v1.26.0) [ 14 ] was applied for the detection of differentially expressed genes (DEGs) and other non-coding RNAs between tumor and non-tumor samples with a P -value of ≤0.05 and fold change (FC) of ≥2."
+          },
+          {
+            "segment_id": "S0033",
+            "quote": "RNAseq (mRNA, lncRNA, circRNA, and miRNA) data are available at GEO under accession number GSE165298 ."
+          }
+        ],
+        "rationale": "The principal differential expression results are produced by DESeq2 on RNA-seq data deposited at GEO, so a third party can re-run the computation."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0046",
+            "quote": "A total of 1,962 genes were differentially expressed between LAUD and non-tumor samples, 809 of which were upregulated and 1,153 were downregulated ( Figure 2B )."
+          }
+        ],
+        "rationale": "The first principal quantitative result reported is the number of differentially expressed genes, with exact counts."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0033",
+            "quote": "RNAseq (mRNA, lncRNA, circRNA, and miRNA) data are available at GEO under accession number GSE165298 ."
+          },
+          {
+            "segment_id": "S0021",
+            "quote": "After removing adapters, clean reads were aligned to the human reference genome (hg38) to quantify coding genes, lncRNAs, and circRNAs."
+          }
+        ],
+        "rationale": "The GEO deposit contains raw count and FPKM files for mRNA, lncRNA, circRNA, and miRNA, which are the analysis inputs for differential expression."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0026",
+            "quote": "DESeq2 (v1.26.0) [ 14 ] was applied for the detection of differentially expressed genes (DEGs) and other non-coding RNAs between tumor and non-tumor samples with a P -value of ≤0.05 and fold change (FC) of ≥2."
+          }
+        ],
+        "rationale": "The method specifies the software, version, thresholds, and comparison groups, sufficient to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0026",
+            "quote": "All statistical analysis (including the following) was performed in the R program (v3.6.1) if there was no special software mentioned."
+          }
+        ],
+        "rationale": "The analysis uses R and DESeq2, which are free and open-source, with no proprietary software required."
+      }
+    },
+    "exact_target": "Number of differentially expressed genes between LUAD and non-tumor samples: 1,962 total, with 809 upregulated and 1,153 downregulated.",
+    "target_values": [
+      "1,962",
+      "809",
+      "1,153"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The count of genes showing differential expression between LUAD and non-tumor samples, split by direction of change.",
+    "target_type": "count",
+    "target_location": "Results section, text describing Figure 2B.",
+    "location_quotes": [
+      {
+        "segment_id": "S0046",
+        "quote": "A total of 1,962 genes were differentially expressed between LAUD and non-tumor samples, 809 of which were upregulated and 1,153 were downregulated ( Figure 2B )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0026",
+        "quote": "DESeq2 (v1.26.0) [ 14 ] was applied for the detection of differentially expressed genes (DEGs) and other non-coding RNAs between tumor and non-tumor samples with a P -value of ≤0.05 and fold change (FC) of ≥2."
+      }
+    ],
+    "required_files": [
+      "GSE165298_mRNA.FPKM.txt.gz"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The file GSE165298_mRNA.FPKM.txt.gz contains mRNA expression data for six samples (three tumor, three non-tumor). The paper used FPKM values for transcriptome analysis. No additional files are needed for this target.",
+    "leakage_files": [
+      {
+        "name": "GSE165298_circRNA.count.txt.gz",
+        "reason": "Contains circRNA counts, not mRNA; not an input for this target and may contain derived results."
+      },
+      {
+        "name": "GSE165298_lincRNA.FPKM.txt.gz",
+        "reason": "Contains lncRNA FPKM values, not mRNA; not an input for this target and may contain derived results."
+      },
+      {
+        "name": "GSE165298_miRNA.TPM.txt.gz",
+        "reason": "Contains miRNA TPM values, not mRNA; not an input for this target and may contain derived results."
+      },
+      {
+        "name": "GSE89039_RAW.tar",
+        "reason": "Contains raw data from a different study (GSE89039), not used for this target."
+      },
+      {
+        "name": "filelist.txt",
+        "reason": "Metadata file for GSE89039, not used for this target."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "human reference genome",
+        "version": "hg38"
+      }
+    ],
+    "comparison_metric": "The observed counts of differentially expressed genes (total, upregulated, downregulated) are compared to the reported counts.",
+    "numerical_agreement_criterion": "Counts must match exactly: total 1,962, upregulated 809, downregulated 1,153.",
+    "specification_gaps": "The paper does not specify whether the FPKM values were rounded or filtered before DESeq2 analysis, nor does it state the exact sample pairing for the differential expression test.",
+    "alternatives_considered": [
+      {
+        "target": "Number of identified genes with FPKM > 1 (12,774)",
+        "reason": "This is a descriptive count, not the principal differential expression result."
+      },
+      {
+        "target": "Number of differentially expressed proteins (197 upregulated, 148 downregulated)",
+        "reason": "This is a proteomic result, not the first principal transcriptomic result."
+      },
+      {
+        "target": "Number of phosphosites (4,748)",
+        "reason": "This is a descriptive count from phosphoproteomics, not the principal differential expression result."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

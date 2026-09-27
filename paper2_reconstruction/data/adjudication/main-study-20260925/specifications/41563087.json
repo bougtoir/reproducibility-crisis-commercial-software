@@ -1,0 +1,156 @@
+{
+  "paper_id": "PMID:41563087",
+  "sampling_stratum": "Social_Behavioral",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "ec4cd5ac44a701bbb27149a75a335eb68a21f77e72c31efcc43dff6bcf077cd2",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "30161449",
+      "files": [
+        {
+          "name": "Open data_digital learning spaces.xlsx",
+          "bytes": 50381
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:39:53.129095+00:00",
+  "api": {
+    "response_id": "493b8cbb-dcdb-4f5d-9f7e-bf761f1059e3",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 7914,
+    "completion_tokens": 1448
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0014",
+            "quote": "Online questionnaire data were transferred to Excel, and quantitative analysis was undertaken."
+          },
+          {
+            "segment_id": "S0016",
+            "quote": "The questionnaire was completed by 158 participants (from 733 invited, 22% uptake) across the School of Biosciences and Chemistry: 7% of students were in their foundation year, 54% in their first year, 23% in their second year and 16% in their final year of"
+          }
+        ],
+        "rationale": "The principal quantitative results are percentages computed from questionnaire data, which a third party can re-run from the deposited Excel file."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0018",
+            "quote": "WhatsApp, Snapchat and Instagram. A total of 89% of students were using one or more of these top three at least weekly."
+          },
+          {
+            "segment_id": "S0017",
+            "quote": "To determine which social media platforms students are using, and the frequency of use, they were asked, “In general how often do you use the following social media networks to interact with other students in your subject area” . The most used platforms were"
+          }
+        ],
+        "rationale": "The first reported principal quantitative result is the 89% weekly use of the top three platforms, a named proportion from the questionnaire."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0014",
+            "quote": "Online questionnaire data were transferred to Excel, and quantitative analysis was undertaken."
+          },
+          {
+            "segment_id": "S0067",
+            "quote": "Data Availability 10.6084/m9.figshare.30161449"
+          }
+        ],
+        "rationale": "The deposit contains the questionnaire Excel file, which is the raw input for the quantitative analysis."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0017",
+            "quote": "To determine which social media platforms students are using, and the frequency of use, they were asked, “In general how often do you use the following social media networks to interact with other students in your subject area” . The most used platforms were"
+          },
+          {
+            "segment_id": "S0018",
+            "quote": "WhatsApp, Snapchat and Instagram. A total of 89% of students were using one or more of these top three at least weekly."
+          }
+        ],
+        "rationale": "The question wording and the definition of the 89% statistic (one or more of the top three at least weekly) are described sufficiently to implement the calculation."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0014",
+            "quote": "Online questionnaire data were transferred to Excel, and quantitative analysis was undertaken."
+          }
+        ],
+        "rationale": "The analysis uses Excel, which is proprietary, but the same computation can be performed in free software such as LibreOffice or Python."
+      }
+    },
+    "exact_target": "Percentage of students using one or more of WhatsApp, Snapchat and Instagram at least weekly: 89%.",
+    "target_values": [
+      "89%"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The proportion of questionnaire respondents who reported using at least one of the three most frequently used social media platforms at a weekly or greater frequency.",
+    "target_type": "proportion",
+    "target_location": "Results, paragraph beginning 'To determine which social media platforms students are using...'",
+    "location_quotes": [
+      {
+        "segment_id": "S0017",
+        "quote": "To determine which social media platforms students are using, and the frequency of use, they were asked, “In general how often do you use the following social media networks to interact with other students in your subject area” . The most used platforms were"
+      },
+      {
+        "segment_id": "S0018",
+        "quote": "WhatsApp, Snapchat and Instagram. A total of 89% of students were using one or more of these top three at least weekly."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0014",
+        "quote": "Online questionnaire data were transferred to Excel, and quantitative analysis was undertaken."
+      },
+      {
+        "segment_id": "S0017",
+        "quote": "To determine which social media platforms students are using, and the frequency of use, they were asked, “In general how often do you use the following social media networks to interact with other students in your subject area” . The most used platforms were"
+      }
+    ],
+    "required_files": [
+      "Open data_digital learning spaces.xlsx"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The Excel file is the raw questionnaire data. The denominator for the 89% is not explicitly stated; it may be all 158 respondents or a subset who answered the platform frequency question.",
+    "leakage_files": [],
+    "required_public_references": [],
+    "comparison_metric": "Recompute the percentage of respondents using at least one of WhatsApp, Snapchat or Instagram at least weekly from the questionnaire data and compare to the reported 89%.",
+    "numerical_agreement_criterion": "Proportion: the recomputed numerator and denominator must yield a percentage that rounds to 89% at the reported precision.",
+    "specification_gaps": [
+      "The exact denominator for the 89% is not specified (all 158 respondents vs. those who answered the platform frequency question).",
+      "The mapping of response options to 'at least weekly' is not detailed.",
+      "The handling of missing responses is not described."
+    ],
+    "alternatives_considered": [
+      {
+        "target": "61% and 64% discussing a specific topic or module weekly or daily (Figure 1)",
+        "reason_rejected": "This is a secondary result appearing after the 89% platform use statistic."
+      },
+      {
+        "target": "99% interacting about coursework at least once a semester (Figure 2)",
+        "reason_rejected": "This is a later result and not the first principal quantitative finding."
+      },
+      {
+        "target": "84% agreeing that interacting with peers enhances university experience",
+        "reason_rejected": "This is a later result and not the first principal quantitative finding."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

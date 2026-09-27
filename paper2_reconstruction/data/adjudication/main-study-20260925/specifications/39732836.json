@@ -1,0 +1,195 @@
+{
+  "paper_id": "PMID:39732836",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "2c77b5b0dde3e8bafa1b051939c0b2f4fc937b462faaa24f55f99e9c45a2c52d",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE117518",
+      "files": [
+        {
+          "name": "GSE117518_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE73680",
+      "files": [
+        {
+          "name": "GSE73680_Normalized_signals.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE73680_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:11:01.599537+00:00",
+  "api": {
+    "response_id": "530f6921-a171-4cee-bbe4-2779b4365099",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 14843,
+    "completion_tokens": 1939
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0080",
+            "quote": "The renal tissue expression profile datasets of patients with pre-stone plaques (Randall’s plaques, RP) were downloaded from the GEO"
+          },
+          {
+            "segment_id": "S0081",
+            "quote": "database (Gene Expression Omnibus, https://www.ncbi.nlm.nih.gov/geo/ ): GSE117518 , with the sequencing platform GPL21827 Agilent-079487 Arraystar Human LncRNA microarray V4 (Probe Name version); and GSE73680 , with the sequencing platform GPL17077 Agilent-039494 SurePrint G3 Human GE v2 8 × 60 K Microarray 039381 (Probe Name version)."
+          },
+          {
+            "segment_id": "S0086",
+            "quote": "we conducted differential analysis using the R package limma (version 3.50.0) 39 , which resulted in the identification of differentially expressed genes (DEGs) between plaque samples and control samples."
+          }
+        ],
+        "rationale": "The principal result (DEG counts and hub genes) is produced by computational analysis of public GEO microarray data that a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0023",
+            "quote": "A comparison of the integrated data from plaque samples and control samples identified 911"
+          },
+          {
+            "segment_id": "S0024",
+            "quote": "differentially expressed genes (DEGs), with statistically significant differences between the two groups( p < 0.05, |Log2 fold change| > 0.5). In the plaque samples, 489 genes were upregulated, and 422 genes were downregulated (see Table S3 )."
+          }
+        ],
+        "rationale": "The first quantitative result reported is the number of DEGs (911 total, 489 up, 422 down), which is a primary numerical endpoint."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0081",
+            "quote": "GSE117518 , with the sequencing platform GPL21827 Agilent-079487 Arraystar Human LncRNA microarray V4 (Probe Name version); and GSE73680 , with the sequencing platform GPL17077 Agilent-039494 SurePrint G3 Human GE v2 8 × 60 K Microarray 039381 (Probe Name version)."
+          },
+          {
+            "segment_id": "S0082",
+            "quote": "For GSE73680 , 29 plaque samples from diseased tissues and 6 non-diseased control tissue samples were included in this study, while 27 normal tissue samples from stone patients were excluded. In GSE117518 , 3 plaque samples from diseased tissues and 3 non-diseased control tissue samples were included."
+          }
+        ],
+        "rationale": "The deposit files are raw microarray data (GSE117518_RAW.tar, GSE73680_RAW.tar) and normalized signals (GSE73680_Normalized_signals.txt.gz), which are the analysis inputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0086",
+            "quote": "we conducted differential analysis using the R package limma (version 3.50.0) 39 , which resulted in the identification of differentially expressed genes (DEGs) between plaque samples and control samples. The genes selected based on |logFC|> 0.5 and P value < 0.05 criteria were used as differentially expressed genes for further investigation."
+          },
+          {
+            "segment_id": "S0082",
+            "quote": "We combined the human GEO dataset samples and used the R package sva (version 3.42.0) 5 to remove batch effects for subsequent analysis."
+          }
+        ],
+        "rationale": "The method for DEG identification is described with software, version, and thresholds, sufficient to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0086",
+            "quote": "we conducted differential analysis using the R package limma (version 3.50.0) 39"
+          },
+          {
+            "segment_id": "S0082",
+            "quote": "We combined the human GEO dataset samples and used the R package sva (version 3.42.0) 5 to remove batch effects for subsequent analysis."
+          }
+        ],
+        "rationale": "The method uses R packages (limma, sva) which are free and open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "Number of differentially expressed genes (DEGs) between plaque and control samples: 911 total, with 489 upregulated and 422 downregulated.",
+    "target_values": [
+      "911",
+      "489",
+      "422"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The count of genes showing differential expression between plaque samples and control samples, including the number of upregulated and downregulated genes.",
+    "target_type": "count",
+    "target_location": "Results section, text preceding Fig. 3A and Table S3.",
+    "location_quotes": [
+      {
+        "segment_id": "S0023",
+        "quote": "A comparison of the integrated data from plaque samples and control samples identified 911"
+      },
+      {
+        "segment_id": "S0024",
+        "quote": "differentially expressed genes (DEGs), with statistically significant differences between the two groups( p < 0.05, |Log2 fold change| > 0.5). In the plaque samples, 489 genes were upregulated, and 422 genes were downregulated (see Table S3 )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0082",
+        "quote": "We combined the human GEO dataset samples and used the R package sva (version 3.42.0) 5 to remove batch effects for subsequent analysis."
+      },
+      {
+        "segment_id": "S0086",
+        "quote": "we conducted differential analysis using the R package limma (version 3.50.0) 39 , which resulted in the identification of differentially expressed genes (DEGs) between plaque samples and control samples. The genes selected based on |logFC|> 0.5 and P value < 0.05 criteria were used as differentially expressed genes for further investigation."
+      }
+    ],
+    "required_files": [
+      "GSE117518_RAW.tar",
+      "GSE73680_RAW.tar"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "GSE117518: 3 plaque and 3 control samples; GSE73680: 29 plaque and 6 control samples (27 normal samples excluded). Platforms: GPL21827 and GPL17077. Batch correction with sva. Raw data files are provided; normalized signals for GSE73680 are also available but raw data are sufficient.",
+    "leakage_files": [
+      {
+        "name": "GSE73680_Normalized_signals.txt.gz",
+        "reason": "Contains normalized expression values that may include derived results or be used to compute the target, potentially leaking the answer."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "MsigDB oxidative stress-related gene set",
+        "version": "not specified (Table S1)"
+      }
+    ],
+    "comparison_metric": "Exact match of reported counts (911, 489, 422) to those computed from the data using the described method.",
+    "numerical_agreement_criterion": "Counts must match exactly.",
+    "specification_gaps": "The exact oxidative stress gene set from MsigDB is not specified in the main text (only in Table S1). The batch correction method details (e.g., ComBat parameters) are not fully described. The handling of multiple probes per gene is not specified.",
+    "alternatives_considered": [
+      {
+        "target": "Number of oxidative stress-related DEGs (3 hub genes)",
+        "reason": "This is a downstream result and not the first principal quantitative endpoint; the total DEG count is more primary."
+      },
+      {
+        "target": "AUC of diagnostic model",
+        "reason": "Reported as >0.7 without exact value, and is a performance metric not the primary numerical endpoint."
+      },
+      {
+        "target": "Correlation of greenyellow module with oxidative stress (r=0.6352)",
+        "reason": "This is an intermediate result, not the principal endpoint."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

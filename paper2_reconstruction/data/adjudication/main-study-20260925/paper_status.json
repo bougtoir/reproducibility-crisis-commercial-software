@@ -1,10 +1,93 @@
 {
+  "PMID:32238776": {
+    "acquisition": "all_inputs_leak_target",
+    "eligibility": "specifiable",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:32724106": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
   "PMID:32779509": {
     "eligibility": "external_reference_resource_required_not_served",
     "sampling_stratum": "Biomedical_Basic",
     "stage": "not_run_gate_or_input"
   },
+  "PMID:32925947": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:33031384": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:33072212": {
+    "acquisition": "inputs_retained",
+    "eligibility": "specifiable",
+    "freeze_sha256": "76e7b02b9690c1fce76c17b4348cce0f3d8e9b643de4bcf3b772e72a43c79607",
+    "sampling_stratum": "Computational_Science",
+    "stage": "slots_completed",
+    "stop_reasons": [
+      "wall_limit",
+      "tool_limit",
+      "tool_limit"
+    ]
+  },
+  "PMID:33073517": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
   "PMID:33110091": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:33217980": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:33268805": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:33329590": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:33368254": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:33449384": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:33954783": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:33973299": {
+    "eligibility": "target_value_not_located_verbatim",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:34176322": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:34253236": {
     "eligibility": "external_reference_resource_required_not_served",
     "sampling_stratum": "Biomedical_Basic",
     "stage": "not_run_gate_or_input"
@@ -20,15 +103,337 @@
     "sampling_stratum": "Biomedical_Basic",
     "stage": "not_run_gate_or_input"
   },
+  "PMID:34495251": {
+    "acquisition": "inputs_retained",
+    "eligibility": "specifiable",
+    "freeze_sha256": "cebe1f99e7207ba65f4a2bf5d5d0888452157d60ccf93210e3005e46ea25f17f",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "slots_completed",
+    "stop_reasons": [
+      "final_report",
+      "tool_limit",
+      "token_reserve_limit"
+    ]
+  },
+  "PMID:34584066": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:34624208": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:34716354": {
+    "acquisition": "all_inputs_leak_target",
+    "eligibility": "specifiable",
+    "sampling_stratum": "Chemistry_Materials",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:34731224": {
+    "acquisition": "inputs_retained",
+    "eligibility": "specifiable",
+    "freeze_sha256": "0c8bbccee9d3648e246690cf18c236cce2c2f870a10ed6976dad0cf22aefe2cf",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "slots_completed",
+    "stop_reasons": [
+      "final_report",
+      "final_report",
+      "token_reserve_limit"
+    ]
+  },
+  "PMID:34772950": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:34783304": {
+    "acquisition": "all_inputs_leak_target",
+    "eligibility": "specifiable",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:34823491": {
+    "acquisition": "all_inputs_leak_target",
+    "eligibility": "specifiable",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
   "PMID:34927191": {
     "eligibility": "external_reference_resource_required_not_served",
     "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:34944547": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:35074869": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:35637459": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:35746789": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:35762018": {
+    "acquisition": "all_inputs_leak_target",
+    "eligibility": "specifiable",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:35798840": {
+    "acquisition": "all_inputs_leak_target",
+    "eligibility": "specifiable",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36111561": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36153311": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36156134": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36198779": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36266291": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36305581": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36307440": {
+    "acquisition": "no_input_retained",
+    "eligibility": "specifiable",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36310873": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36323312": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36373930": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36380453": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36399471": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36422202": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36469001": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36590690": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Physics_Engineering",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:36605200": {
+    "eligibility": "specification_not_obtained",
+    "sampling_stratum": "Clinical_Medicine",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:37540596": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:37796927": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:37879938": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:37935364": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:38095636": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:38164328": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Clinical_Medicine",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:38203551": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Chemistry_Materials",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:38813350": {
+    "acquisition": "all_inputs_leak_target",
+    "eligibility": "specifiable",
+    "sampling_stratum": "Clinical_Medicine",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:39018359": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Physics_Engineering",
     "stage": "not_run_gate_or_input"
   },
   "PMID:39333064": {
     "eligibility": "required_inputs_not_in_public_listing",
     "sampling_stratum": "Biomedical_Basic",
     "stage": "not_run_gate_or_input"
+  },
+  "PMID:39375688": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:39540287": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:39613774": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Chemistry_Materials",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:39720891": {
+    "eligibility": "specification_not_obtained",
+    "sampling_stratum": "Clinical_Medicine",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:39732661": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Social_Behavioral",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:39732836": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:39816064": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Social_Behavioral",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:39830509": {
+    "acquisition": "inputs_retained",
+    "eligibility": "specifiable",
+    "freeze_sha256": "35a035302a52dfd99cb0c648f04f36f72bfb9a4cb42f941286c2b8dd4b2c3b63",
+    "sampling_stratum": "Social_Behavioral",
+    "stage": "slots_completed",
+    "stop_reasons": [
+      "tool_limit",
+      "final_report",
+      "tool_limit"
+    ]
+  },
+  "PMID:39895948": {
+    "acquisition": "inputs_retained",
+    "eligibility": "specifiable",
+    "freeze_sha256": "29ac18258d49d0f9d9709f695158e93da08c1d9907f59e0509ecddf424bab75f",
+    "sampling_stratum": "Social_Behavioral",
+    "stage": "slots_completed",
+    "stop_reasons": [
+      "tool_limit",
+      "tool_limit",
+      "final_report"
+    ]
+  },
+  "PMID:39902187": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Clinical_Medicine",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:40037544": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Clinical_Medicine",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:40304046": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:40373015": {
+    "eligibility": "specification_not_obtained",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:40604274": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Physics_Engineering",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:40685907": {
+    "eligibility": "specification_not_obtained",
+    "sampling_stratum": "Environmental_Earth",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:40915917": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:40956867": {
+    "acquisition": "inputs_retained",
+    "eligibility": "specifiable",
+    "freeze_sha256": "c0b7e1830dbed470ba63fe8322d6b966a47f928b38ba3418adfee3df5ab77541",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "slots_completed",
+    "stop_reasons": [
+      "tool_limit",
+      "tool_limit",
+      "tool_limit"
+    ]
   },
   "PMID:41091855": {
     "acquisition": "inputs_retained",
@@ -42,9 +447,137 @@
       "malformed_action_limit"
     ]
   },
+  "PMID:41104632": {
+    "eligibility": "specification_not_obtained",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "not_run_gate_or_input"
+  },
   "PMID:41118575": {
     "eligibility": "gate_failed_delegated",
     "sampling_stratum": "Biomedical_Basic",
     "stage": "not_run_gate_or_input"
+  },
+  "PMID:41180196": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Chemistry_Materials",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41193996": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41219412": {
+    "eligibility": "specification_not_obtained",
+    "sampling_stratum": "Physics_Engineering",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41233595": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Chemistry_Materials",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41257959": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41299027": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41306588": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Chemistry_Materials",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41345772": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41413899": {
+    "eligibility": "external_reference_resource_required_not_served",
+    "sampling_stratum": "Chemistry_Materials",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41442027": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Clinical_Medicine",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41450535": {
+    "acquisition": "all_inputs_leak_target",
+    "eligibility": "specifiable",
+    "sampling_stratum": "Clinical_Medicine",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41454187": {
+    "eligibility": "target_value_not_located_verbatim",
+    "sampling_stratum": "Clinical_Medicine",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41460829": {
+    "eligibility": "target_value_not_located_verbatim",
+    "sampling_stratum": "Social_Behavioral",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41469386": {
+    "acquisition": "all_inputs_leak_target",
+    "eligibility": "specifiable",
+    "sampling_stratum": "Computational_Science",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41472734": {
+    "eligibility": "required_inputs_not_in_public_listing",
+    "sampling_stratum": "Clinical_Medicine",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41472739": {
+    "acquisition": "inputs_retained",
+    "eligibility": "specifiable",
+    "freeze_sha256": "ea9fcfcb1a4e6850d4e8f8a17bcdbcb9a5d0fac00c3b285f06e19ea8368502c6",
+    "sampling_stratum": "Biomedical_Basic",
+    "stage": "slots_completed",
+    "stop_reasons": [
+      "final_report",
+      "final_report",
+      "final_report"
+    ]
+  },
+  "PMID:41502527": {
+    "eligibility": "specification_not_obtained",
+    "sampling_stratum": "Clinical_Medicine",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41563087": {
+    "acquisition": "inputs_retained",
+    "eligibility": "specifiable",
+    "freeze_sha256": "381212d93c7bfe7528944f6aa8e6e833a36f4b669594dfc89f80ad7cc189345e",
+    "sampling_stratum": "Social_Behavioral",
+    "stage": "slots_completed",
+    "stop_reasons": [
+      "tool_limit",
+      "final_report",
+      "final_report"
+    ]
+  },
+  "PMID:41573549": {
+    "eligibility": "gate_failed_delegated",
+    "sampling_stratum": "Chemistry_Materials",
+    "stage": "not_run_gate_or_input"
+  },
+  "PMID:41677189": {
+    "acquisition": "inputs_retained",
+    "eligibility": "specifiable",
+    "freeze_sha256": "c20786e9e88698393f040455cf61bf63b7a24442ca3b0a323bfacb9cde11b05a",
+    "sampling_stratum": "Computational_Science",
+    "stage": "slots_completed",
+    "stop_reasons": [
+      "tool_limit",
+      "tool_limit",
+      "tool_limit"
+    ]
   }
 }

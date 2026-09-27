@@ -1,0 +1,155 @@
+{
+  "paper_id": "PMID:35762018",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "4bb70532afd9bc11e1ce79f7d05d1772a8461854491ab3579b9c382591057f1b",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "bioproject",
+      "accession": "PRJNA774916",
+      "files": [
+        {
+          "name": "SRR16588097",
+          "bytes": 68553970
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T03:45:48.808699+00:00",
+  "api": {
+    "response_id": "6433f3a0-fafc-43d3-89ab-c315c0e04829",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 15039,
+    "completion_tokens": 1932
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0037",
+            "quote": "The whole set of transcript data can be found in the National Center for Biotechnology Information (NCBI) database (BioProject ID: PRJNA774916 )."
+          },
+          {
+            "segment_id": "S0050",
+            "quote": "The differentially expressed genes were analyzed with DESeq2 ( Love, Wolfgang & Simon, 2014 ). A total of 4,820 genes were differentially expressed in the flowers of safflower during colour transition, among which 2,018 genes were downregulated and 2,802 genes were upregulated ( Fig. 4 )."
+          }
+        ],
+        "rationale": "The principal result (differential expression counts) is produced by a computational analysis (DESeq2) on RNA-seq data deposited at NCBI under PRJNA774916, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0050",
+            "quote": "The differentially expressed genes were analyzed with DESeq2 ( Love, Wolfgang & Simon, 2014 ). A total of 4,820 genes were differentially expressed in the flowers of safflower during colour transition, among which 2,018 genes were downregulated and 2,802 genes were upregulated ( Fig. 4 )."
+          }
+        ],
+        "rationale": "One principal quantitative result is clearly named: the number of differentially expressed genes (4,820 total; 2,018 down; 2,802 up), reported as a primary numerical endpoint in the Results."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0037",
+            "quote": "The whole set of transcript data can be found in the National Center for Biotechnology Information (NCBI) database (BioProject ID: PRJNA774916 )."
+          },
+          {
+            "segment_id": "S0035",
+            "quote": "The library preparations were sequenced on an Illumina HiSeq platform with three biological replicates in each group."
+          }
+        ],
+        "rationale": "The deposit contains raw sequencing reads (SRR16588097) which are the analysis inputs for the differential expression target, not its outputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0038",
+            "quote": "The gene expression levels were calculated through RSEM (RNAseq by Expectation-Maximization) v1.2.12 ( Li & Colin, 2011 ). DESeq2 ( Love, Wolfgang & Simon, 2014 ) was used for differential expression analysis. Read counts of genes are the expected count outputs calculated using RSEM."
+          },
+          {
+            "segment_id": "S0039",
+            "quote": "After discrepancy analysis, multiple hypothesis tests are needed to correct the hypothesis test probability ( P value) with the Benjamini-Hochberg procedure to obtain the false discovery rate (FDR) when |log2fold change| ≥ 1 and FDR < 0.05."
+          }
+        ],
+        "rationale": "The method for the target (differential expression analysis) is described with specific tools (RSEM v1.2.12, DESeq2), thresholds (|log2FC| ≥ 1, FDR < 0.05), and correction procedure (Benjamini-Hochberg), sufficient to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0038",
+            "quote": "The gene expression levels were calculated through RSEM (RNAseq by Expectation-Maximization) v1.2.12 ( Li & Colin, 2011 ). DESeq2 ( Love, Wolfgang & Simon, 2014 ) was used for differential expression analysis."
+          }
+        ],
+        "rationale": "The method uses RSEM and DESeq2, which are open-source and freely available; no proprietary software is required."
+      }
+    },
+    "exact_target": "Number of differentially expressed genes in flowers of safflower during colour transition: 4,820 total, with 2,018 downregulated and 2,802 upregulated.",
+    "target_values": [
+      "4,820",
+      "2,018",
+      "2,802"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The count of genes that are differentially expressed in flowers of safflower during colour transition, including the breakdown into downregulated and upregulated genes.",
+    "target_type": "count",
+    "target_location": "Results section, paragraph on transcriptome sequencing and differential transcript analysis; also Figure 4.",
+    "location_quotes": [
+      {
+        "segment_id": "S0050",
+        "quote": "The differentially expressed genes were analyzed with DESeq2 ( Love, Wolfgang & Simon, 2014 ). A total of 4,820 genes were differentially expressed in the flowers of safflower during colour transition, among which 2,018 genes were downregulated and 2,802 genes were upregulated ( Fig. 4 )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0038",
+        "quote": "The gene expression levels were calculated through RSEM (RNAseq by Expectation-Maximization) v1.2.12 ( Li & Colin, 2011 ). DESeq2 ( Love, Wolfgang & Simon, 2014 ) was used for differential expression analysis. Read counts of genes are the expected count outputs calculated using RSEM."
+      },
+      {
+        "segment_id": "S0039",
+        "quote": "After discrepancy analysis, multiple hypothesis tests are needed to correct the hypothesis test probability ( P value) with the Benjamini-Hochberg procedure to obtain the false discovery rate (FDR) when |log2fold change| ≥ 1 and FDR < 0.05."
+      },
+      {
+        "segment_id": "S0035",
+        "quote": "In this project, Trinity v2.0.6 ( Grabherr et al., 2011 ) was used to splice the filtered high-quality sequencing data to obtain the transcriptome, which was used as the reference sequence for subsequent differential expression analysis."
+      }
+    ],
+    "required_files": [
+      "SRR16588097"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit lists one run accession SRR16588097 under BioProject PRJNA774916. This is raw RNA-seq data. The paper states three biological replicates per group (Day 2 and Day 4), but only one run is listed; additional runs may be missing or not listed. The transcriptome assembly (Trinity) is used as reference, but the assembly itself is not deposited; it must be regenerated from raw reads.",
+    "leakage_files": [
+      {
+        "name": "SRR16588097",
+        "reason": "This is the raw input data, not a leakage file; it does not contain the target value. No listed files contain the target value or derived result tables."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Exact match of the reported counts: total differentially expressed genes, number downregulated, and number upregulated.",
+    "numerical_agreement_criterion": "Counts must match exactly: 4,820 total, 2,018 downregulated, 2,802 upregulated.",
+    "specification_gaps": "The paper does not specify: (1) the exact version of the safflower reference transcriptome used for read mapping; (2) whether the counts are based on genes or transcripts; (3) the exact parameters for RSEM and DESeq2 beyond the thresholds; (4) how multiple testing correction was applied across all genes; (5) the handling of multi-mapping reads; (6) the exact definition of 'differentially expressed' in terms of FDR and log2FC cutoffs (stated as |log2FC| ≥ 1 and FDR < 0.05, but not whether these were applied simultaneously).",
+    "alternatives_considered": [
+      {
+        "target": "Number of flavonoid metabolites detected (212)",
+        "reason": "This is a metabolite profiling result, not the principal computational result from transcriptome data; it is based on metabolomics, not the deposited RNA-seq data."
+      },
+      {
+        "target": "Number of candidate genes screened (10)",
+        "reason": "This is a qualitative screening result, not a primary quantitative endpoint with a clear computational test."
+      },
+      {
+        "target": "Pearson correlation coefficient of CtUGT9 with flavonoids (PPC above 90%)",
+        "reason": "This is a correlation result, but the exact value is not numerically reported in the text; it is described qualitatively."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

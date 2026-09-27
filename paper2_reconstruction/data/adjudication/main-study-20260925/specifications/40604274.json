@@ -1,0 +1,159 @@
+{
+  "paper_id": "PMID:40604274",
+  "sampling_stratum": "Physics_Engineering",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "fc6d3fe232a298ee5b7fbede6695aff2b2474394dc17e0f8d94f0b6e96f30d32",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "dryad",
+      "accession": "t1g1jwsxw",
+      "files": []
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:29:11.319067+00:00",
+  "api": {
+    "response_id": "6291dc7b-cc48-49cc-9fe8-eb43bab9d697",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 28153,
+    "completion_tokens": 1870
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0031",
+            "quote": "The original data were processed into an isotropic 1-μm resolution in three sectional directions, and then mapped to the CCF (v.3, the same after) to achieve global morphological correction 13 . The corrected dataset, referred to as the MOST-Nissl dataset, has dimensions of"
+          },
+          {
+            "segment_id": "S0159",
+            "quote": "We evaluated the registration result using the Dice score, achieving a value above 0.8 for the brain outline, which is generally considered satisfactory, as shown in the ‘outline’ row and the ‘Global registration for normalization’ column of Supplementary Table 6 ."
+          }
+        ],
+        "rationale": "The principal quantitative results (Dice scores for registration accuracy) are produced by computational image registration on the MOST-Nissl dataset, which a third party could re-run if the data were available."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0159",
+            "quote": "We evaluated the registration result using the Dice score, achieving a value above 0.8 for the brain outline, which is generally considered satisfactory, as shown in the ‘outline’ row and the ‘Global registration for normalization’ column of Supplementary Table 6 ."
+          },
+          {
+            "segment_id": "S0162",
+            "quote": "In most registration cases, the average Dice score for evaluation was above 0.8, indicating acceptable alignment. Below are the details for auxiliary image registration. Specific gene-type neuron"
+          }
+        ],
+        "rationale": "The paper's stated priority is the atlas construction; the principal quantitative result is the Dice score for registration accuracy, reported as >0.8 in Supplementary Table 6 and elsewhere."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0233",
+            "quote": "The brain-region labels of MBSC used in our coronal plane visualization service are available at Dryad ( https://doi.org/10.5061/dryad.t1g1jwsxw ) 37 ."
+          },
+          {
+            "segment_id": "S0232",
+            "quote": "used to construct STAM, the labelling images and vectorized boundaries of brain structures, are available through https://atlas.brainsmatics.cn/STAM/ . Readers can browse this link and find the desired way to navigate or download our data, or query Supplementary Table 3 to visit the specific gene-type neuron distribution datasets used for validating STAM, the comparison of the MOST-Nissl dataset"
+          }
+        ],
+        "rationale": "The Dryad deposit contains only MBSC brain-region labels, which are not the analysis inputs for the Dice score target; the MOST-Nissl dataset and other inputs are hosted on a separate web portal, not in the listed deposit."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0158",
+            "quote": "differences from using one single brain sample, and to correct the overall shape and spatial distribution of various brain structures, we nonlinearly registered the MOST-Nissl dataset to the average brain template in the CCF at a 1-μm resolution using the BrainsMapi registration tool. Only the brain outline was selected as the anatomical landmark for this registration, to ensure symmetry along the"
+          },
+          {
+            "segment_id": "S0159",
+            "quote": "We evaluated the registration result using the Dice score, achieving a value above 0.8 for the brain outline, which is generally considered satisfactory, as shown in the ‘outline’ row and the ‘Global registration for normalization’ column of Supplementary Table 6 ."
+          }
+        ],
+        "rationale": "The method for the target (nonlinear registration to CCF and Dice score evaluation) is described in sufficient detail to implement, though the BrainsMapi tool is available upon request."
+      },
+      "G5": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0238",
+            "quote": "https://www.blender.org/download/ . The Three.js (v.0.157.0) is available at https://github.com/mrdoob/three.js . The Zoomify tool (Enterprise Developer 4) we purchased is no longer maintained by the producer at https://zoomify.com/ . The neuroglancer framework (v.2.29) is available at https://github.com/google/neuroglancer . MATLAB software (v.2023b) is a commercial production, and can be"
+          },
+          {
+            "segment_id": "S0239",
+            "quote": "purchased at https://www.mathworks.com/products/matlab.html . Amira Software (v.6.1.1) is commercial software and can be purchased through https://www.thermofisher.com/ . The SVRnet package (no version number available) is available at https://github.com/farrell236/SVRnet . Competing interests The authors declare no competing interests. Footnotes Publisher’s note Springer Nature remains neutral"
+          }
+        ],
+        "rationale": "The method requires MATLAB and Amira, which are commercial software, so it is not feasible with free software alone."
+      }
+    },
+    "exact_target": "Dice score for global registration of the MOST-Nissl dataset to the CCF brain outline, reported as above 0.8",
+    "target_values": [
+      "above 0.8"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The Dice score evaluating the accuracy of the nonlinear registration of the MOST-Nissl dataset to the CCF brain outline for global normalization",
+    "target_type": "performance",
+    "target_location": "Supplementary Table 6, 'outline' row and 'Global registration for normalization' column",
+    "location_quotes": [
+      {
+        "segment_id": "S0159",
+        "quote": "We evaluated the registration result using the Dice score, achieving a value above 0.8 for the brain outline, which is generally considered satisfactory, as shown in the ‘outline’ row and the ‘Global registration for normalization’ column of Supplementary Table 6 ."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0158",
+        "quote": "differences from using one single brain sample, and to correct the overall shape and spatial distribution of various brain structures, we nonlinearly registered the MOST-Nissl dataset to the average brain template in the CCF at a 1-μm resolution using the BrainsMapi registration tool. Only the brain outline was selected as the anatomical landmark for this registration, to ensure symmetry along the"
+      },
+      {
+        "segment_id": "S0159",
+        "quote": "We evaluated the registration result using the Dice score, achieving a value above 0.8 for the brain outline, which is generally considered satisfactory, as shown in the ‘outline’ row and the ‘Global registration for normalization’ column of Supplementary Table 6 ."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The MOST-Nissl dataset and CCF template are not in the listed Dryad deposit; they are available via https://atlas.brainsmatics.cn/STAM/ and https://atlas.brain-map.org respectively. The Dryad deposit contains only MBSC labels, which are not inputs for this target.",
+    "leakage_files": [
+      {
+        "name": "t1g1jwsxw",
+        "reason": "Contains MBSC brain-region labels, which are derived from the atlas construction and may include registration results or target values."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "CCF (Allen Mouse Brain Common Coordinate Framework)",
+        "version": "v.3"
+      },
+      {
+        "name": "MOST-Nissl dataset",
+        "version": "1-μm resolution"
+      }
+    ],
+    "comparison_metric": "Dice similarity coefficient between registered brain outline and CCF template",
+    "numerical_agreement_criterion": "Performance metric: reported as 'above 0.8'; solver's computed Dice score must be >0.8 to agree.",
+    "specification_gaps": "Exact Dice score value not printed; only threshold 'above 0.8' given. The specific CCF template version and registration parameters are not fully specified. The BrainsMapi tool is available upon request, not freely.",
+    "alternatives_considered": [
+      {
+        "target": "Number of brain structures delineated (916)",
+        "reason": "This is a count, but it is a descriptive result, not the principal quantitative endpoint; the paper's priority is the atlas construction and its validation via registration accuracy."
+      },
+      {
+        "target": "Number of newly annotated brain regions (236)",
+        "reason": "This is a secondary count, not the principal result."
+      },
+      {
+        "target": "Dice scores for auxiliary registrations (e.g., >0.8 for multiple cases)",
+        "reason": "These are multiple results; the principal target is the global normalization Dice score, which is the first reported and central to the atlas construction."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

@@ -1,0 +1,170 @@
+{
+  "paper_id": "PMID:34731224",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "380d977d231415b881dd42fe29bb9f2b798fc33af9292f983c62cdb9b71c96ea",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE168396",
+      "files": [
+        {
+          "name": "GSE168396_Trinity.gene.fasta.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE168396_gene_expression.txt.gz",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T03:45:56.836619+00:00",
+  "api": {
+    "response_id": "5d5046d0-2fd7-4672-8e8c-79ee1b511aad",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 15840,
+    "completion_tokens": 1878
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0030",
+            "quote": "Salmon [ 15 ] quantified the expression level of Unigenes by calculating TPM [ 16 ]. The differentially expressed Unigene was selected by the R package edge R [ 17 ], and the screening criteria were log2 > 1 or log2 < −1 ( P < 0.05)."
+          },
+          {
+            "segment_id": "S0046",
+            "quote": "A total of 12 059 DEGs were obtained, of which 6737 genes were up-regulated and 5322 genes were down-regulated. The results are shown in Table 2 ."
+          }
+        ],
+        "rationale": "The principal result (DEG counts) is produced by computational analysis (Salmon quantification, edgeR differential expression) of RNA-seq data deposited in GEO, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0046",
+            "quote": "A total of 12 059 DEGs were obtained, of which 6737 genes were up-regulated and 5322 genes were down-regulated. The results are shown in Table 2 ."
+          },
+          {
+            "segment_id": "S0047",
+            "quote": "All DEGs 12059 Up DEGs 6737 Down DEGs 5322"
+          }
+        ],
+        "rationale": "The primary numerical endpoint is the number of differentially expressed genes (DEGs) and their up/down split, reported in the abstract, results, and Table 2."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0105",
+            "quote": "The sequencing data has been submitted to NCBI Gene Expression Omnibus(GEO) database: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE168396 ."
+          }
+        ],
+        "rationale": "The deposit listing shows only a Trinity gene fasta and a gene expression table; it is unclear whether raw sequencing reads (the actual analysis inputs) are included, as the listing may be incomplete."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0030",
+            "quote": "Salmon [ 15 ] quantified the expression level of Unigenes by calculating TPM [ 16 ]. The differentially expressed Unigene was selected by the R package edge R [ 17 ], and the screening criteria were log2 > 1 or log2 < −1 ( P < 0.05)."
+          },
+          {
+            "segment_id": "S0029",
+            "quote": "The transcriptome was then reassembled using Trinity 2.4.0 to obtain Unigene."
+          }
+        ],
+        "rationale": "The method for obtaining DEGs is described with specific tools (Salmon, edgeR) and thresholds, sufficient to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0030",
+            "quote": "Salmon [ 15 ] quantified the expression level of Unigenes by calculating TPM [ 16 ]. The differentially expressed Unigene was selected by the R package edge R [ 17 ], and the screening criteria were log2 > 1 or log2 < −1 ( P < 0.05)."
+          }
+        ],
+        "rationale": "Salmon and edgeR are free, open-source software; no proprietary software is required for the DEG analysis."
+      }
+    },
+    "exact_target": "Number of differentially expressed genes (DEGs) between low-temperature (LT) and normal-temperature (NT) groups: total 12,059 DEGs, with 6,737 up-regulated and 5,322 down-regulated.",
+    "target_values": [
+      "12 059",
+      "6737",
+      "5322"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of genes that show differential expression between plants subjected to low-temperature stress and control plants, including the breakdown into up-regulated and down-regulated genes.",
+    "target_type": "count",
+    "target_location": "Abstract, Results (Transcriptome analysis), and Table 2",
+    "location_quotes": [
+      {
+        "segment_id": "S0005",
+        "quote": "A total of 12 059 differentially expressed genes and 131 differentially expressed metabolites were obtained, which were mainly concentrated in the signal transduction and phenylpropanoid metabolic pathways."
+      },
+      {
+        "segment_id": "S0046",
+        "quote": "A total of 12 059 DEGs were obtained, of which 6737 genes were up-regulated and 5322 genes were down-regulated. The results are shown in Table 2 ."
+      },
+      {
+        "segment_id": "S0047",
+        "quote": "All DEGs 12059 Up DEGs 6737 Down DEGs 5322"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0030",
+        "quote": "Salmon [ 15 ] quantified the expression level of Unigenes by calculating TPM [ 16 ]. The differentially expressed Unigene was selected by the R package edge R [ 17 ], and the screening criteria were log2 > 1 or log2 < −1 ( P < 0.05)."
+      },
+      {
+        "segment_id": "S0029",
+        "quote": "The transcriptome was then reassembled using Trinity 2.4.0 to obtain Unigene."
+      }
+    ],
+    "required_files": [
+      "GSE168396_Trinity.gene.fasta.gz",
+      "GSE168396_gene_expression.txt.gz"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The GEO accession GSE168396 is listed with two files: a Trinity gene fasta and a gene expression table. The gene expression table likely contains TPM values per gene per sample, which can be used with edgeR to reproduce DEG counts. However, raw sequencing reads (FASTQ) are not listed; if the expression table is not the raw input, the analysis may require re-quantification from raw reads, which are not available in the listing.",
+    "leakage_files": [
+      {
+        "name": "GSE168396_gene_expression.txt.gz",
+        "reason": "This file contains the gene expression values (e.g., TPM) that are the direct input to the differential expression analysis; it may also contain derived results such as fold changes or p-values if it includes processed output, which would leak the target DEG counts."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Exact match of the reported DEG counts (total, up-regulated, down-regulated) to those computed from the deposited data using the described method.",
+    "numerical_agreement_criterion": "Counts must match exactly: total DEGs = 12,059; up-regulated = 6,737; down-regulated = 5,322.",
+    "specification_gaps": [
+      "The exact version of the reference genome or transcriptome used for quantification is not specified.",
+      "The specific parameters for Salmon quantification (e.g., library type, bias correction) are not given.",
+      "The exact edgeR normalization method and statistical test (e.g., exact test, GLM) are not specified.",
+      "The mapping of samples to groups (LT vs NT) and the number of replicates per group are not detailed in the deposit listing.",
+      "Whether the gene expression table contains raw counts or normalized values (TPM) is unclear."
+    ],
+    "alternatives_considered": [
+      {
+        "target": "Number of differentially expressed metabolites (131)",
+        "reason": "This is a principal result but relies on metabolomics data, which are not deposited in the listed GEO files; thus, it is not computationally testable from the deposit."
+      },
+      {
+        "target": "Number of assembled genes (64,848)",
+        "reason": "This is a descriptive statistic of the assembly, not the principal result of the differential expression analysis; it is also dependent on the assembly method and may not be the primary endpoint."
+      },
+      {
+        "target": "Number of KEGG pathways enriched (28)",
+        "reason": "This is a downstream result of the DEG analysis and is not the primary numerical endpoint; it also depends on additional annotation steps not fully specified."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

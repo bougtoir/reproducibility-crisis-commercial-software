@@ -1,0 +1,53 @@
+{
+  "paper_id": "PMID:41502527",
+  "sampling_stratum": "Clinical_Medicine",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "9e267a1fbf95bb1ad3557d57788ef54245d98531a7e8895c7a1238273aff5a92",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE36076",
+      "files": [
+        {
+          "name": "GSE36076_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE95698",
+      "files": [
+        {
+          "name": "GSE95698_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:06:35.415979+00:00",
+  "api": {
+    "response_id": "ca270dd3-7b7a-4296-a255-06f008742595",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 19125,
+    "completion_tokens": 1580
+  },
+  "specification": null,
+  "eligibility": "specification_not_obtained",
+  "error": {
+    "type": "ValueError",
+    "detail": "PMID:41502527: blind_target contains a reported value"
+  }
+}

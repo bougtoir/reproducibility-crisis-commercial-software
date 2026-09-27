@@ -1,0 +1,172 @@
+{
+  "paper_id": "PMID:33072212",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "319b98a12c09c03f0fa725f24c19f628864a7d5ca6ea75827bb9cb52f5641329",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE9476",
+      "files": [
+        {
+          "name": "GSE9476_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T05:07:08.339770+00:00",
+  "api": {
+    "response_id": "5bafc222-ec2c-4d51-9927-49d4d1ac21cb",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 7778,
+    "completion_tokens": 1675
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0005",
+            "quote": "In this study, the leukemia microarray gene data, contenting 22283 genes, was extracted from the Gene Expression Omnibus repository."
+          },
+          {
+            "segment_id": "S0032",
+            "quote": "Data from 36 cases containing 22283 gene expression of AML microarray experiments were retrieved from the GSE9476 dataset, including 10 healthy and 26 AML cases."
+          },
+          {
+            "segment_id": "S0038",
+            "quote": "A simple neural network with a middle layer has an accuracy of 0.6333, and a deep learning network with three hidden layers has an accuracy of 0.9667"
+          }
+        ],
+        "rationale": "The principal result (classification accuracy) is produced by training neural networks on the public GSE9476 microarray dataset, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0006",
+            "quote": "The results accuracy for single-layer neural network and DNNs deep learning network with three hidden layers are 63.33 and 96.67,"
+          },
+          {
+            "segment_id": "S0038",
+            "quote": "A simple neural network with a middle layer has an accuracy of 0.6333, and a deep learning network with three hidden layers has an accuracy of 0.9667"
+          }
+        ],
+        "rationale": "The paper's stated principal quantitative result is the classification accuracy of the deep learning network (and the comparison simple network), reported as 0.9667 (96.67%) and 0.6333 (63.33%)."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0032",
+            "quote": "Data from 36 cases containing 22283 gene expression of AML microarray experiments were retrieved from the GSE9476 dataset, including 10 healthy and 26 AML cases."
+          },
+          {
+            "segment_id": "S0033",
+            "quote": "The dataset was registered in 2007 and updated in 2017."
+          }
+        ],
+        "rationale": "The deposit listing shows only GSE9476_RAW.tar and filelist.txt; it is not possible to confirm from the listing alone that these files are the raw/minimally processed analysis inputs rather than processed outputs."
+      },
+      "G4": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0034",
+            "quote": "Normalized data modeled by TensorFlow, Pandas, Numpy, Sklearn packages, and activity functions include Softmax, Adamax, and RELU."
+          },
+          {
+            "segment_id": "S0035",
+            "quote": "Also, 70% of data was used as training data, and the number of epochs was considered 1000."
+          }
+        ],
+        "rationale": "The paper describes the architecture (three hidden layers), optimizer (Adamax), loss (sparse categorical), activation (ReLU/Softmax), 70% training split and 1000 epochs, but omits layer sizes, learning rate, batch size, dropout rate, random seeds and exact preprocessing steps, so full reimplementation is not guaranteed."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0035",
+            "quote": "TensorFlow is an open-source library for large-scale numerical computing and machine learning techniques, making it easier and faster to apply machine learning and deep learning techniques."
+          },
+          {
+            "segment_id": "S0036",
+            "quote": "Pandas provides fast, flexible and illustrative data structures in Python."
+          }
+        ],
+        "rationale": "The method uses only open-source Python packages (TensorFlow, Pandas, Numpy, Sklearn); no proprietary software is required."
+      }
+    },
+    "exact_target": "Classification accuracy of the deep learning network with three hidden layers on the AML microarray dataset, reported as 0.9667 (96.67%), compared with a simple neural network accuracy of 0.6333 (63.33%).",
+    "target_values": [
+      "0.9667",
+      "96.67",
+      "0.6333",
+      "63.33"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "Classification accuracy of a deep learning neural network with three hidden layers applied to the AML microarray dataset, compared with a simple neural network.",
+    "target_type": "performance",
+    "target_location": "Results section, text reporting the simple neural network and deep learning network implementation (also stated in the Abstract).",
+    "location_quotes": [
+      {
+        "segment_id": "S0038",
+        "quote": "A simple neural network with a middle layer has an accuracy of 0.6333, and a deep learning network with three hidden layers has an accuracy of 0.9667"
+      },
+      {
+        "segment_id": "S0006",
+        "quote": "The results accuracy for single-layer neural network and DNNs deep learning network with three hidden layers are 63.33 and 96.67,"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0034",
+        "quote": "Normalized data modeled by TensorFlow, Pandas, Numpy, Sklearn packages, and activity functions include Softmax, Adamax, and RELU."
+      },
+      {
+        "segment_id": "S0035",
+        "quote": "Also, 70% of data was used as training data, and the number of epochs was considered 1000."
+      },
+      {
+        "segment_id": "S0033",
+        "quote": "Comparability of samples was examined by Python 3.7 and data normality was confirmed [ 34 ]."
+      }
+    ],
+    "required_files": [
+      "GSE9476_RAW.tar"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "GSE9476 dataset registered 2007, updated 2017; 36 samples (10 healthy, 26 AML) with 22283 gene expression features. The deposit listing provides GSE9476_RAW.tar and filelist.txt; filelist.txt is a manifest and not an analysis input.",
+    "leakage_files": [
+      {
+        "name": "filelist.txt",
+        "reason": "Manifest of the deposit contents; may reveal file names and structure but does not contain the target accuracy value."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Reported classification accuracy (proportion of correctly classified samples) on the AML dataset.",
+    "numerical_agreement_criterion": "Performance metrics on the identical split: accuracy must match the reported value within the displayed rounding bin (0.9667 and 0.6333, or 96.67% and 63.33%).",
+    "specification_gaps": "Number of neurons per hidden layer, learning rate, batch size, dropout rate, random seeds, exact normalization method, exact train/test split indices, and whether accuracy is on training or held-out data are not specified.",
+    "alternatives_considered": [
+      {
+        "target": "PCA separation of cancerous and healthy cells (Figure 4)",
+        "reason": "Qualitative figure without a reported numeric endpoint."
+      },
+      {
+        "target": "Normalization test significance (P>0.05)",
+        "reason": "A preprocessing check, not the principal result."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

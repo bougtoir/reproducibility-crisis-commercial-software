@@ -1,0 +1,155 @@
+{
+  "paper_id": "PMID:36469001",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "ccacc6fb3137cbf52c036b01d6be6d982234a9b7aa4e4f49ea9248c144d633ec",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "zenodo",
+      "accession": "7115955",
+      "files": [
+        {
+          "name": "zarr-developers/zarr-python-v.2.13.2.zip",
+          "bytes": 5295158
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T05:06:27.736726+00:00",
+  "api": {
+    "response_id": "4f73e05d-df08-40a0-be9b-f26634e003d2",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 33086,
+    "completion_tokens": 2198
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0225",
+            "quote": "The performance of the models obtained by the 3D U-net neural networks was determined by comparing the predicted binary segmentation with respect to ground-truth using the following three metrics: (1) precision (percentage of voxels predicted as intracellular structure that is the substructure), (2) recall (percentage of substructure voxels correctly predicted as substructure), and (3) F1"
+          },
+          {
+            "segment_id": "S0226",
+            "quote": "index score (harmonic mean of precision and recall, see Fig. S3 E ). These metrics were also used by other state-of-the-art supervised learning methods, such as COSEM, allowing for a quantitative comparison. Using the true positives TP, false positives FP, and false negatives FN, we define precision, recall and F1 as: p r e c i s i o n = T P T P + F P r e c a l l = T P T P + F N F 1 = 2 × p r e c"
+          }
+        ],
+        "rationale": "The principal results are F1/precision/recall scores computed by comparing model predictions to ground-truth annotations, which a third party can re-run given the deposited data."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0069",
+            "quote": "Validation losses rapidly converged within 20,000–40,000 training iterations, resulting in a relatively high F1 score (0.91) for Cell 1 and"
+          },
+          {
+            "segment_id": "S0070",
+            "quote": "lower values for the data from naïve Cells 2, 3, and 6 (0.47, 0.66, 0.81, cf. Table S6 ). Similar results were obtained when training with ground truth annotations from Cell 2 instead of Cell 1 ( Table S6 ); the validation losses also converged within 20,000–40,000 training iterations with good F1 scores for Cell 2 (0.87) and naïve Cells 1 and 3 (0.89, 0.74), and a slightly lower score for Cell 6"
+          }
+        ],
+        "rationale": "The principal quantitative result is the F1 score of the mitochondria model, first reported in the Results text (0.91 for Cell 1)."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0200",
+            "quote": "following steps before they were ready for training: (1) Conversion from TIFF format to the block-wise storage format ZARR. The size of a FIB-SEM dataset corresponding to a stack of registered TIFF files (∼2,000 planes) was about 20 GB. These TIFF stacks were converted into a ZARR 3-D compressed array ( https://zenodo.org/record/7115955 ) to increase the efficiency for further preprocessing steps"
+          },
+          {
+            "segment_id": "S0272",
+            "quote": "Data availability The datasets of raw and normalized FIBSEM cells images, ground truth annotations, probability maps predicted by the models, and corresponding segmentation masks are publicly available at the AWS ASEM bucket ("
+          }
+        ],
+        "rationale": "The deposit listing contains only a zarr-python software zip, not the image data; the actual raw/normalized images and ground truth are hosted on an external AWS bucket, so the listed deposit files are not the analysis inputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0210",
+            "quote": "al., 2016 ) based on the architecture used in Funke et al. (2019) was defined, with three downsampling layers with a factor of two, and two convolutional layers on each downsampling level. Refer to Fig. S3 A for details. In total, the network had ∼six million parameters. It was implemented in PyTorch ( Paszke et al., 2019 ). Training: Overview of pipeline The pipeline to feed blocks to the neural"
+          },
+          {
+            "segment_id": "S0219",
+            "quote": "contribution of foreground and background voxels inversely proportional to their occurrence, clipped at a value of 1:100. The training loss was backpropagated, and the network parameters were updated using the Adam optimizer ( Kingma and Ba, 2014 ) with 0.00003 learning rate and 0.00003 weight decay. The network parameters were saved at the end of every 1,000 training iterations. Training:"
+          }
+        ],
+        "rationale": "The Materials and methods describe the 3D U-Net architecture, training pipeline, loss, optimizer, and hyperparameters in sufficient detail to implement."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0210",
+            "quote": "al., 2016 ) based on the architecture used in Funke et al. (2019) was defined, with three downsampling layers with a factor of two, and two convolutional layers on each downsampling level. Refer to Fig. S3 A for details. In total, the network had ∼six million parameters. It was implemented in PyTorch ( Paszke et al., 2019 ). Training: Overview of pipeline The pipeline to feed blocks to the neural"
+          },
+          {
+            "segment_id": "S0201",
+            "quote": "and, most importantly, for neural network training. (2) Cropping of the dataset to exclude empty regions outside the cell and to speed up all further preprocessing steps. (3) Block-wise adjustment of brightness and contrast with 3D contrast-limited adaptive histogram equalization (CLAHE, [ Zuiderveld, 1994 ]) using scikit-image.exposure.equalize_adapthist with kernel size 128 and clip limit 0.02"
+          }
+        ],
+        "rationale": "The method uses only free/open-source software (PyTorch, scikit-image, scipy, GUNPOWDER), with no proprietary software required."
+      }
+    },
+    "exact_target": "F1 score of the mitochondria model trained on Cell 1, evaluated on Cell 1 validation block: 0.91",
+    "target_values": [
+      "0.91"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The F1 score of the mitochondria segmentation model trained on ground truth annotations from Cell 1, evaluated on the validation block from Cell 1.",
+    "target_type": "performance",
+    "target_location": "Results, Automated segmentation of organelles (text); Table S6",
+    "location_quotes": [
+      {
+        "segment_id": "S0069",
+        "quote": "Validation losses rapidly converged within 20,000–40,000 training iterations, resulting in a relatively high F1 score (0.91) for Cell 1 and"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0225",
+        "quote": "The performance of the models obtained by the 3D U-net neural networks was determined by comparing the predicted binary segmentation with respect to ground-truth using the following three metrics: (1) precision (percentage of voxels predicted as intracellular structure that is the substructure), (2) recall (percentage of substructure voxels correctly predicted as substructure), and (3) F1"
+      },
+      {
+        "segment_id": "S0226",
+        "quote": "index score (harmonic mean of precision and recall, see Fig. S3 E ). These metrics were also used by other state-of-the-art supervised learning methods, such as COSEM, allowing for a quantitative comparison. Using the true positives TP, false positives FP, and false negatives FN, we define precision, recall and F1 as: p r e c i s i o n = T P T P + F P r e c a l l = T P T P + F N F 1 = 2 × p r e c"
+      },
+      {
+        "segment_id": "S0210",
+        "quote": "al., 2016 ) based on the architecture used in Funke et al. (2019) was defined, with three downsampling layers with a factor of two, and two convolutional layers on each downsampling level. Refer to Fig. S3 A for details. In total, the network had ∼six million parameters. It was implemented in PyTorch ( Paszke et al., 2019 ). Training: Overview of pipeline The pipeline to feed blocks to the neural"
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit listing (Zenodo 7115955) contains only zarr-python-v.2.13.2.zip, a software library, not the FIB-SEM image data or ground truth annotations. The actual raw/normalized images and ground truth are hosted on an external AWS ASEM bucket (https://open.quiltdata.com/b/asem-project), which is not in the listed deposit files. No data files are available among the listed deposit files.",
+    "leakage_files": [
+      {
+        "name": "zarr-developers/zarr-python-v.2.13.2.zip",
+        "reason": "This is a software library (zarr-python), not a data file; it does not contain the target value but is also not an analysis input."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "F1 score computed as harmonic mean of precision and recall, comparing predicted binary segmentation to ground-truth annotations.",
+    "numerical_agreement_criterion": "Performance metrics on the identical split: F1 score must match the reported value 0.91 within the displayed rounding bin (two decimal places).",
+    "specification_gaps": "The exact train/validation split, the specific validation block used, the random seed, and the exact data augmentation parameters are not fully specified in the text; the ground truth annotation details are in Table S4 which is not in the deposit listing.",
+    "alternatives_considered": [
+      {
+        "target": "Nuclear pore membrane diameter (median 92 nm, n=934)",
+        "reason": "This is a biological measurement result, not the principal computational performance result; the paper's stated priority is the segmentation pipeline performance."
+      },
+      {
+        "target": "F1 scores for ER model (0.95, 0.90, 0.92, 0.77)",
+        "reason": "These are secondary results appearing later; the mitochondria F1 score (0.91) appears first in the Results as the primary performance demonstration."
+      }
+    ]
+  },
+  "eligibility": "required_inputs_not_in_public_listing"
+}

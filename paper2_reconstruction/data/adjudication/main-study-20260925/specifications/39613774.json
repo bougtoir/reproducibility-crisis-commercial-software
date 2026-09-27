@@ -1,0 +1,147 @@
+{
+  "paper_id": "PMID:39613774",
+  "sampling_stratum": "Chemistry_Materials",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "c3188078cc80e1fde24fc34fdd86093f0286dcaadce2c05f30a370428cedb31f",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE278201",
+      "files": [
+        {
+          "name": "GSE278201_1_genes_fpkm_expression.xlsx",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:28:19.303799+00:00",
+  "api": {
+    "response_id": "ed42482a-43cb-4abd-a369-b21b64a2bb37",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 37210,
+    "completion_tokens": 1382
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0309",
+            "quote": "The RNAseq data used in this study are available in the Gene Expression Omnibus (GEO) database with accession number GSE278201 . The remaining data that support the findings of this study are available within the Article, Supplementary information, or Source Data file."
+          }
+        ],
+        "rationale": "The paper's principal results are experimental in vitro/in vivo measurements (tumor volumes, imaging intensities, flow cytometry) whose raw data are not deposited; only RNAseq data are deposited, and the transcriptomic analysis is a supplementary descriptive result, not the principal quantitative endpoint."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0161",
+            "quote": "Excitingly, the BC@Z-M + L treatment significantly curtailed tumor growth (average tumor volume = 123 mm 3 ), with one out of five mice exhibiting complete regression of cancer (Fig. 7d )."
+          }
+        ],
+        "rationale": "A principal numerical endpoint (average tumor volume on day 16) is explicitly reported."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0309",
+            "quote": "The RNAseq data used in this study are available in the Gene Expression Omnibus (GEO) database with accession number GSE278201 . The remaining data that support the findings of this study are available within the Article, Supplementary information, or Source Data file."
+          }
+        ],
+        "rationale": "The only deposited files are RNAseq expression data, which are not the inputs to the tumor-volume endpoint; the tumor measurement data are not deposited."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0286",
+            "quote": "Tumor volume was calculated using the formula: Volume = (Length × Width × Width)/2."
+          },
+          {
+            "segment_id": "S0282",
+            "quote": "To establish the 4T1 tumor model, 100 μL of cold PBS containing 1 × 10 6 of 4T1 murine breast cancer cells was injected into the right flank of female BALB/c mice (aged 7 weeks) on day −7."
+          }
+        ],
+        "rationale": "The tumor model, treatment schedule, and tumor volume formula are described in Methods."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0304",
+            "quote": "All statistical analyses were conducted using GraphPad Prism 8.0.2. Flow cytometry data were analyzed using FlowJo v10.8.1 software."
+          }
+        ],
+        "rationale": "The described analysis (tumor volume measurement and statistics) requires no proprietary software."
+      }
+    },
+    "exact_target": "Average tumor volume of the BC@Z-M + L treatment group on day 16 in 4T1 tumor-bearing mice, reported as 123 mm3.",
+    "target_values": [
+      "123 mm 3"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The mean tumor volume at the end of the treatment period in 4T1 tumor-bearing mice receiving the membrane-camouflaged nanoformulation plus light irradiation.",
+    "target_type": "scalar",
+    "target_location": "Results, 'In vivo anticancer study', Fig. 7c",
+    "location_quotes": [
+      {
+        "segment_id": "S0161",
+        "quote": "Excitingly, the BC@Z-M + L treatment significantly curtailed tumor growth (average tumor volume = 123 mm 3 ), with one out of five mice exhibiting complete regression of cancer (Fig. 7d )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0282",
+        "quote": "To establish the 4T1 tumor model, 100 μL of cold PBS containing 1 × 10 6 of 4T1 murine breast cancer cells was injected into the right flank of female BALB/c mice (aged 7 weeks) on day −7."
+      },
+      {
+        "segment_id": "S0283",
+        "quote": "approximately 100 mm 3 , at which point the tumor-bearing mice were randomly allocated into six groups: PBS, PBS + L, C@Z, BC@Z, BC@Z + L, and BC@Z-M + L."
+      },
+      {
+        "segment_id": "S0284",
+        "quote": "laser (1.0 W cm −2 ) for 6 min. To monitor the real-time temperature increase induced by PTT effect at the tumor site, in vivo photothermal imaging was conducted using a thermal infrared camera (FLK-Ti200) during 730 nm laser irradiation."
+      },
+      {
+        "segment_id": "S0286",
+        "quote": "Tumor volume was calculated using the formula: Volume = (Length × Width × Width)/2."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The tumor-volume measurements are not among the deposited files; the GEO deposit GSE278201 contains only RNAseq FPKM expression data (GSE278201_1_genes_fpkm_expression.xlsx), which are unrelated to this endpoint. No version/identifier for the tumor data is provided.",
+    "leakage_files": [
+      {
+        "name": "GSE278201_1_genes_fpkm_expression.xlsx",
+        "reason": "Contains RNAseq expression data from the transcriptomic analysis of tumor tissue; not an input to the tumor-volume endpoint and could reveal treatment-group expression results."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Compare the solver's computed mean tumor volume for the BC@Z-M + L group on day 16 against the reported value.",
+    "numerical_agreement_criterion": "Scalars within the displayed rounding bin (nearest 1 mm3).",
+    "specification_gaps": "Randomization method, exact day-16 measurement time, whether mean is of all five mice, handling of the mouse with complete regression, and the exact tumor measurement schedule are not fully specified.",
+    "alternatives_considered": [
+      {
+        "target": "Tumor weight fold-reduction (16.8-fold vs PBS)",
+        "reason": "Reported as a ratio without absolute values, less directly a primary endpoint."
+      },
+      {
+        "target": "Ratiometric NIR-II fluorescence fold-change in cells (14.8-fold)",
+        "reason": "In vitro imaging metric, not the principal in vivo therapeutic endpoint."
+      },
+      {
+        "target": "Distant tumor inhibition rate (85%)",
+        "reason": "From the bilateral model, a secondary experiment."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

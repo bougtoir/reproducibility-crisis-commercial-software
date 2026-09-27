@@ -1,0 +1,200 @@
+{
+  "paper_id": "PMID:36198779",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "fb1ba7e918fb97cc2a434ffd3b4f47a300ff0170f65d5492bab1bd4af1fc636f",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "zenodo",
+      "accession": "3539275",
+      "files": [
+        {
+          "name": "cdo-1.9.5.pdf",
+          "bytes": 2725003
+        },
+        {
+          "name": "cdo-1.9.6.pdf",
+          "bytes": 2646815
+        },
+        {
+          "name": "cdo-1.9.8.pdf",
+          "bytes": 2664144
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:26:13.204853+00:00",
+  "api": {
+    "response_id": "3d628f79-4332-42fd-a1b8-417f1a0a80f1",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 19765,
+    "completion_tokens": 2071
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0087",
+            "quote": "we used a suite of 9 ESMs that participated in CMIP5 and 18 ESMs that participated in CMIP6"
+          },
+          {
+            "segment_id": "S0092",
+            "quote": "The driving mechanisms were assessed with (1) Taylor-series expansions to quantify contributions from each of the four main input variables ( C T , A T , T and S )"
+          }
+        ],
+        "rationale": "The principal result is produced by computations on CMIP5/CMIP6 model output, which is publicly available and can be re-run by a third party."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0052",
+            "quote": "Fig. 5 Changes in driver anomalies enhance extreme summer p CO 2 ′ by 29 ± 9%."
+          },
+          {
+            "segment_id": "S0007",
+            "quote": "Warming and changes in other drivers enhance this century’s increase in extreme summer p CO 2 by 29 ± 9 per cent compared with no change in driver seasonalities."
+          }
+        ],
+        "rationale": "The paper explicitly highlights the 29 ± 9% enhancement as a principal quantitative result, stated in the abstract and figure caption."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0132",
+            "quote": "Output from the CMIP5 and CMIP6 Earth system models used in this study is available for download from the Earth System Grid Federation"
+          }
+        ],
+        "rationale": "The deposit listing contains only CDO software manuals, not the CMIP model output or observational data used as inputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0103",
+            "quote": "As p CO 2 ′ = f ( T , S , A T , C T ) , a Taylor-series expansion yields equation ( 1 )"
+          },
+          {
+            "segment_id": "S0105",
+            "quote": "Mathematically, that separation takes the following form 3 Δ p CO 2 ′ = ∑ i = 1 4 Δ γ i × X i , 0 ′ + ∑ i = 1 4 γ i , 0 × Δ X i ′ + ∑ i = 1 4 Δ γ i × Δ X i ′"
+          }
+        ],
+        "rationale": "The methods section provides the equations and describes the climate–CO2 Taylor separation sufficiently to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0134",
+            "quote": "For analysis, we used open-source Python, versions 2.7 and 3, namely the numpy, scipy, pandas and matplotlib modules."
+          },
+          {
+            "segment_id": "S0135",
+            "quote": "To compute ocean CO 2 system variables and their sensitivities to driving variables, we used mocsy 53 , 67 , available from https://github.com/jamesorr/mocsy"
+          }
+        ],
+        "rationale": "All software used is open-source and freely available; no proprietary software is required."
+      }
+    },
+    "exact_target": "Changes in driver anomalies enhance extreme summer pCO2′ by 29 ± 9%.",
+    "target_values": [
+      "29 ± 9%"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The percentage enhancement of the extreme summer pCO2′ increase due to changes in driver anomalies compared to no change in driver seasonalities.",
+    "target_type": "scalar",
+    "target_location": "Abstract and Fig. 5 caption",
+    "location_quotes": [
+      {
+        "segment_id": "S0007",
+        "quote": "Warming and changes in other drivers enhance this century’s increase in extreme summer p CO 2 by 29 ± 9 per cent compared with no change in driver seasonalities."
+      },
+      {
+        "segment_id": "S0052",
+        "quote": "Fig. 5 Changes in driver anomalies enhance extreme summer p CO 2 ′ by 29 ± 9%."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0103",
+        "quote": "As p CO 2 ′ = f ( T , S , A T , C T ) , a Taylor-series expansion yields equation ( 1 )"
+      },
+      {
+        "segment_id": "S0105",
+        "quote": "Mathematically, that separation takes the following form 3 Δ p CO 2 ′ = ∑ i = 1 4 Δ γ i × X i , 0 ′ + ∑ i = 1 4 γ i , 0 × Δ X i ′ + ∑ i = 1 4 Δ γ i × Δ X i ′"
+      },
+      {
+        "segment_id": "S0108",
+        "quote": "To isolate the effect of the changes in the sensitivities (without physical climate change), the sum of the four terms in equation ( 1 ) is computed using the future sensitivities with the modern driver anomalies and then the modern reference state is subtracted"
+      },
+      {
+        "segment_id": "S0109",
+        "quote": "Likewise, the effect of the changes in driver anomalies is computed using the modern sensitivities with the future driver anomalies and then subtracting the modern state (ΔAnomalies, second term in equation ( 3 ))."
+      },
+      {
+        "segment_id": "S0110",
+        "quote": "Thus that synergy is accounted for along with the change in driver anomalies (ΔAnomalies*, second and third terms in equation ( 3 )) by subtracting the state computed with only increased sensitivities (first term) from the future state (all three terms)."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit listing contains only CDO software manuals (cdo-1.9.5.pdf, cdo-1.9.6.pdf, cdo-1.9.8.pdf), which are not analysis inputs. The actual inputs are CMIP5/CMIP6 model output and observational data products available from external sources (ESGF, NCEI, NSIDC).",
+    "leakage_files": [
+      {
+        "name": "cdo-1.9.5.pdf",
+        "reason": "CDO software manual; not an input but also not a leakage file for the target value."
+      },
+      {
+        "name": "cdo-1.9.6.pdf",
+        "reason": "CDO software manual; not an input but also not a leakage file for the target value."
+      },
+      {
+        "name": "cdo-1.9.8.pdf",
+        "reason": "CDO software manual; not an input but also not a leakage file for the target value."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "CMIP5 model output",
+        "version": "historical, rcp26, rcp45, rcp85"
+      },
+      {
+        "name": "CMIP6 model output",
+        "version": "historical, ssp126, ssp245, ssp370, ssp585"
+      },
+      {
+        "name": "World Ocean Atlas 2018 temperature",
+        "version": "2018"
+      },
+      {
+        "name": "NSIDC Gridded Monthly Sea Ice Extent and Concentration",
+        "version": "Version 2"
+      },
+      {
+        "name": "Landschützer et al. pCO2 climatology",
+        "version": "NCEI Accession 0209633"
+      }
+    ],
+    "comparison_metric": "The reported value is a percentage enhancement (29 ± 9%) of the extreme summer pCO2′ increase due to changes in driver anomalies. The observed value would be computed from the same CMIP5 model output using the climate–CO2 Taylor separation method.",
+    "numerical_agreement_criterion": "The computed percentage enhancement should be within the reported uncertainty range (29 ± 9%) or match the reported value to the displayed precision (integer percent).",
+    "specification_gaps": "The exact definition of 'extreme summer pCO2′' (e.g., which month or percentile) is not fully specified. The method for computing the percentage enhancement from the Taylor separation terms is described but not in step-by-step detail. The exact model output variables and processing steps (e.g., regridding, detrending) are described but may require additional choices.",
+    "alternatives_considered": [
+      {
+        "target": "Crossover CO2 level for CMIP5 (827 ppm) and CMIP6 (571 ppm)",
+        "reason": "These are specific numerical results but are not highlighted as the principal result in the abstract; the 29 ± 9% enhancement is more central."
+      },
+      {
+        "target": "Summer maximum surface temperature increase in shelf seas (3.0 °C to 8.5 ± 1.2 °C in CMIP5, 10.8 ± 2.7 °C in CMIP6)",
+        "reason": "This is a key result but is presented as a supporting finding for biological impacts, not the main quantitative conclusion."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

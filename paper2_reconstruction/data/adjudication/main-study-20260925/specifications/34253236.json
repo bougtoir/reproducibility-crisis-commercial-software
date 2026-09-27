@@ -1,0 +1,204 @@
+{
+  "paper_id": "PMID:34253236",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "b0dba26dcfcd93561bfc1a844b8247246c54cc676ae1acd19751f907c9e1e080",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE14407",
+      "files": [
+        {
+          "name": "GSE14407_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE29450",
+      "files": [
+        {
+          "name": "GSE29450_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE54388",
+      "files": [
+        {
+          "name": "GSE54388_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:05:05.886994+00:00",
+  "api": {
+    "response_id": "91b2b219-4e51-43d3-af3a-8c81ce9ef957",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 9927,
+    "completion_tokens": 1652
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0006",
+            "quote": "The data from three mRNA expression profiling microarrays ( GSE14407 , GSE29450 , and GSE54388 ) were obtained from the Gene Expression Omnibus (GEO) database. Differentially expressed genes between"
+          },
+          {
+            "segment_id": "S0020",
+            "quote": "Expression data were normalized using median normalization [ 6 ]. DEGs between ovarian carcinoma tissues and normal tissues were obtained by using R statistical software and the limma Bioconductor package [ 7 ]."
+          }
+        ],
+        "rationale": "The principal result (DEG counts and overlapping genes) is produced by computational analysis of public microarray data using R/limma, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0008",
+            "quote": "In total, 708"
+          },
+          {
+            "segment_id": "S0009",
+            "quote": "overlapping genes were identified through analyses of the three microarray datasets ( GSE14407 , GSE29450 , and GSE54388 )."
+          }
+        ],
+        "rationale": "The paper's stated principal result is the number of overlapping genes (708) identified from the three datasets, a primary numerical endpoint."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0019",
+            "quote": "Three gene expression profiles ( GSE54388 , GSE14407 , and GSE29450 ) were downloaded from the GEO database."
+          }
+        ],
+        "rationale": "The listed GEO deposits (GSE14407, GSE29450, GSE54388) are the raw microarray inputs used to compute DEGs and overlapping genes; they are not outputs of the target."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0020",
+            "quote": "Expression data were normalized using median normalization [ 6 ]. DEGs between ovarian carcinoma tissues and normal tissues were obtained by using R statistical software and the limma Bioconductor package [ 7 ]."
+          },
+          {
+            "segment_id": "S0021",
+            "quote": "The criteria for DEG screening were FDR adjusted P < 0.05 and |logFC|≥ 1."
+          }
+        ],
+        "rationale": "The method (median normalization, limma, FDR<0.05 and |logFC|≥1) is described sufficiently to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0020",
+            "quote": "DEGs between ovarian carcinoma tissues and normal tissues were obtained by using R statistical software and the limma Bioconductor package [ 7 ]."
+          }
+        ],
+        "rationale": "R and limma are free open-source software; no proprietary software is required for the target computation."
+      }
+    },
+    "exact_target": "Number of overlapping genes among the three GEO datasets (GSE14407, GSE29450, GSE54388): 708",
+    "target_values": [
+      "708"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of genes that are differentially expressed in the same direction in all three ovarian cancer mRNA expression microarray datasets.",
+    "target_type": "count",
+    "target_location": "Results section, paragraph 'Identification of DEGs in ovarian cancers' and Abstract",
+    "location_quotes": [
+      {
+        "segment_id": "S0008",
+        "quote": "In total, 708"
+      },
+      {
+        "segment_id": "S0009",
+        "quote": "overlapping genes were identified through analyses of the three microarray datasets ( GSE14407 , GSE29450 , and GSE54388 )."
+      },
+      {
+        "segment_id": "S0027",
+        "quote": "Then, 708 overlapping genes were"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0020",
+        "quote": "Expression data were normalized using median normalization [ 6 ]. DEGs between ovarian carcinoma tissues and normal tissues were obtained by using R statistical software and the limma Bioconductor package [ 7 ]."
+      },
+      {
+        "segment_id": "S0021",
+        "quote": "The criteria for DEG screening were FDR adjusted P < 0.05 and |logFC|≥ 1."
+      },
+      {
+        "segment_id": "S0021",
+        "quote": "We used the online software Venn diagram ( http://www.bioinformatics.com.cn/static/others/jvenn/example.html ) to identify the overlapping genes in the 3 GEO"
+      }
+    ],
+    "required_files": [
+      "GSE14407_RAW.tar",
+      "GSE29450_RAW.tar",
+      "GSE54388_RAW.tar"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The three GEO series (GSE14407, GSE29450, GSE54388) are the raw microarray data. The paper states all three used the Affymetrix Human Genome U133 Plus 2.0 Array platform. No processed expression matrices are listed; the RAW.tar files contain the raw CEL files. The deposit listing does not include sample annotation files, which are needed to assign cancer vs normal groups.",
+    "leakage_files": [
+      {
+        "name": "filelist.txt",
+        "reason": "May contain file names or metadata that could reveal sample grouping or processed data structure, but not the target value itself; however, it is not an analysis input and should not be served."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "Affymetrix Human Genome U133 Plus 2.0 Array annotation",
+        "version": "not specified"
+      }
+    ],
+    "comparison_metric": "Exact count of overlapping genes (integer) compared to the reported 708.",
+    "numerical_agreement_criterion": "Counts exact: the computed number of overlapping genes must equal 708.",
+    "specification_gaps": "The paper does not specify: (1) how samples were assigned to cancer vs normal groups from the GEO series; (2) whether all samples in each series were used; (3) the exact version of the limma package; (4) how median normalization was implemented; (5) the direction of overlap (upregulated vs downregulated) for the 708 genes; (6) whether the Venn diagram tool used any additional filtering.",
+    "alternatives_considered": [
+      {
+        "target": "Number of DEGs in GSE14407 (3486)",
+        "reason": "This is a dataset-specific intermediate result, not the principal overlapping-gene result emphasized in the abstract and conclusion."
+      },
+      {
+        "target": "Number of DEGs in GSE29450 (4780)",
+        "reason": "Same as above; dataset-specific intermediate."
+      },
+      {
+        "target": "Number of DEGs in GSE54388 (1368)",
+        "reason": "Same as above; dataset-specific intermediate."
+      },
+      {
+        "target": "Top ten hub genes list",
+        "reason": "This is a qualitative list, not a single quantitative endpoint; the paper's stated principal result is the 708 overlapping genes."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

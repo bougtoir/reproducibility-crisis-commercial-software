@@ -1,0 +1,228 @@
+{
+  "paper_id": "PMID:35746789",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "8db1b8707016347a68918365bf94a8f9b3b8849d6e5fe9b7c02b62ad435e6189",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "dataverse",
+      "accession": "AYT2UA",
+      "files": [
+        {
+          "name": "AncestralChanges.py",
+          "bytes": 1464
+        },
+        {
+          "name": "Figure1_2.zip",
+          "bytes": 16546
+        },
+        {
+          "name": "Figure3-1.zip",
+          "bytes": 105403
+        },
+        {
+          "name": "Figure4-2.zip",
+          "bytes": 246604
+        },
+        {
+          "name": "JMwita_Covid19_Genomics_Seychelles_Readme.txt",
+          "bytes": 6402
+        },
+        {
+          "name": "Jmwita_Covid19_Genomics_Seychelles_Codebook.pdf",
+          "bytes": 238723
+        },
+        {
+          "name": "SupplementaryFigure1.zip",
+          "bytes": 15409
+        },
+        {
+          "name": "SupplementaryFigure3.zip",
+          "bytes": 5988
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:05:12.713696+00:00",
+  "api": {
+    "response_id": "2934ecac-5682-4f43-8595-622041125a85",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 16025,
+    "completion_tokens": 2112
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0014",
+            "quote": "Using the ancestral state reconstruction approach, we estimated that at least 78 independent SARS-CoV-2 introduction events occurred in Seychelles during the study period."
+          },
+          {
+            "segment_id": "S0064",
+            "quote": "we inferred at least 78 importations into Seychelles with 28 (35%) of the introductions coming from Europe, 21 separate introductions from Africa, 15 separate introductions from Asia, six introductions from North America, five separate introductions from Oceania and three introductions from South America."
+          }
+        ],
+        "rationale": "The principal result (number of introductions) is produced by a computational ancestral state reconstruction on sequence data that a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0014",
+            "quote": "Using the ancestral state reconstruction approach, we estimated that at least 78 independent SARS-CoV-2 introduction events occurred in Seychelles during the study period."
+          },
+          {
+            "segment_id": "S0064",
+            "quote": "we inferred at least 78 importations into Seychelles with 28 (35%) of the introductions coming from Europe, 21 separate introductions from Africa, 15 separate introductions from Asia, six introductions from North America, five separate introductions from Oceania and three introductions from South America."
+          }
+        ],
+        "rationale": "The paper states the principal quantitative result as the number of independent introductions (78), a primary numerical endpoint."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0091",
+            "quote": "All data generated and analysis script for this manuscript are available from the Virus Epidemiology and Control, Kenya Medical Research Institute (KEMRI)–Wellcome Trust Research Programme data server, https://doi.org/10.7910/DVN/AYT2UA (accessed on 29 March 2022)."
+          },
+          {
+            "segment_id": "S0092",
+            "quote": "Whole genome sequences are available from GISAID database accession number EPI_ISL_4880527-EPI_ISL_4880796, EPI_ISL_5942854-EPI_ISL_6705093, EPI_ISL_8424404-EPI_ISL_8424612 and EPI_ISL_11060102-EPI_ISL_11060407."
+          }
+        ],
+        "rationale": "The deposit listing contains only code and figure archives; the analysis inputs (Seychelles consensus sequences and global GISAID sequences) are not among the listed files, so it is uncertain whether the listed files are the analysis inputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0047",
+            "quote": "TreeTime v0.8.1 [ 10 ] was used to transform the ML tree topology into a time calibrated phylogenetic tree."
+          },
+          {
+            "segment_id": "S0048",
+            "quote": "TreeTime was used to transform the ML tree topology into a dated phylogenetic tree, mapping the location of sampled sequences to the external tips of the trees."
+          },
+          {
+            "segment_id": "S0049",
+            "quote": "We then count3d the number of state changes from the root to the external tips. The state changes are counted when an internal node transitions from one country to a different country in the resulting child-node or tip(s)."
+          }
+        ],
+        "rationale": "The method for estimating introductions is described in enough detail (TreeTime ancestral state reconstruction, counting state changes) to implement without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0046",
+            "quote": "A maximum likelihood (ML) phylogeny was inferred using IQTREE version 2.1.3 ( http://www.iqtree.org/ ) (accessed on 29 March 2022)."
+          },
+          {
+            "segment_id": "S0047",
+            "quote": "TreeTime v0.8.1 [ 10 ] was used to transform the ML tree topology into a time calibrated phylogenetic tree."
+          }
+        ],
+        "rationale": "The method uses IQ-TREE and TreeTime, which are free and open-source software; no proprietary software is required."
+      }
+    },
+    "exact_target": "Number of independent SARS-CoV-2 introduction events into Seychelles: at least 78",
+    "target_values": [
+      "78"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of independent SARS-CoV-2 introduction events into Seychelles during the study period, inferred using ancestral state reconstruction.",
+    "target_type": "count",
+    "target_location": "Results, section 3.5, and Figure 4B",
+    "location_quotes": [
+      {
+        "segment_id": "S0064",
+        "quote": "we inferred at least 78 importations into Seychelles with 28 (35%) of the introductions coming from Europe, 21 separate introductions from Africa, 15 separate introductions from Asia, six introductions from North America, five separate introductions from Oceania and three introductions from South America."
+      },
+      {
+        "segment_id": "S0115",
+        "quote": "( B ) The number of viral imports and exports into and out of Seychelles."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0047",
+        "quote": "TreeTime v0.8.1 [ 10 ] was used to transform the ML tree topology into a time calibrated phylogenetic tree."
+      },
+      {
+        "segment_id": "S0048",
+        "quote": "TreeTime was used to transform the ML tree topology into a dated phylogenetic tree, mapping the location of sampled sequences to the external tips of the trees."
+      },
+      {
+        "segment_id": "S0049",
+        "quote": "We then count3d the number of state changes from the root to the external tips. The state changes are counted when an internal node transitions from one country to a different country in the resulting child-node or tip(s)."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The analysis inputs (Seychelles consensus sequences and global GISAID sequences) are not among the listed deposit files. The deposit contains only code and figure archives. The sequences are available from GISAID under accessions EPI_ISL_4880527-EPI_ISL_4880796, EPI_ISL_5942854-EPI_ISL_6705093, EPI_ISL_8424404-EPI_ISL_8424612, and EPI_ISL_11060102-EPI_ISL_11060407.",
+    "leakage_files": [
+      {
+        "name": "Figure4-2.zip",
+        "reason": "Contains Figure 4, which reports the number of viral imports and exports, including the target value."
+      },
+      {
+        "name": "Figure3-1.zip",
+        "reason": "Contains Figure 3, which shows phylogenetic trees and may contain derived results related to introductions."
+      },
+      {
+        "name": "Figure1_2.zip",
+        "reason": "Contains Figure 1, which shows epidemic curves and lineage distributions, potentially containing derived results."
+      },
+      {
+        "name": "SupplementaryFigure1.zip",
+        "reason": "Contains Supplementary Figure 1, which may contain derived results."
+      },
+      {
+        "name": "SupplementaryFigure3.zip",
+        "reason": "Contains Supplementary Figure 3, which may contain derived results."
+      },
+      {
+        "name": "AncestralChanges.py",
+        "reason": "Code file that may contain the implementation for ancestral state reconstruction and could reveal the target value."
+      },
+      {
+        "name": "Jmwita_Covid19_Genomics_Seychelles_Codebook.pdf",
+        "reason": "Codebook may describe the data and analysis, potentially containing the target value."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "SARS-CoV-2 reference genome",
+        "version": "NC_045512.2"
+      },
+      {
+        "name": "GISAID database",
+        "version": "sequences collected before 31 December 2021"
+      }
+    ],
+    "comparison_metric": "The observed number of importations inferred by the solver is compared to the reported number of 78.",
+    "numerical_agreement_criterion": "Counts exact: the solver's inferred number of importations must equal 78.",
+    "specification_gaps": "The exact global sequence dataset used (GISAID sub-sample) is not fully specified; the random seed for sub-sampling is not given; the precise TreeTime parameters and model settings are not fully described.",
+    "alternatives_considered": [
+      {
+        "target": "Number of export events (32)",
+        "reason": "Rejected because the paper's principal result is the number of introductions, not exports."
+      },
+      {
+        "target": "Number of genomes sequenced (1056)",
+        "reason": "Rejected because it is a descriptive count, not the principal computational result."
+      },
+      {
+        "target": "Number of Pango lineages (32)",
+        "reason": "Rejected because it is a descriptive count, not the principal computational result."
+      }
+    ]
+  },
+  "eligibility": "required_inputs_not_in_public_listing"
+}

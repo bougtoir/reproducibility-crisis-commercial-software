@@ -1,0 +1,171 @@
+{
+  "paper_id": "PMID:40956867",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "study": "MAIN-STUDY-2026-09-25",
+  "frozen_at_utc": "2026-09-27T04:01:18.003250+00:00",
+  "investigator_verification": "pending",
+  "exact_target": "Rate of correctly identifying the true destination deme in the dense sampling, high gene flow (c = 0.5) simulation scenario, reported as 100 % , C 95 = [ 93 % , 100 % ].",
+  "target_location": "Verification and comparison, Evaluation across multiple replicate simulations (text; summarized in Fig 2).",
+  "location_evidence": [
+    {
+      "segment_id": "S0115",
+      "quote": "Across both simulated scenarios, the method identified the true destination deme in 100 % , C 95 = [ 93 % , 100 % ] of the replicates with dense sampling and"
+    },
+    {
+      "segment_id": "S0116",
+      "quote": "high gene flow, and in 92 % , C 95 = [ 81 % , 98 % ] of replicates with sparse sampling and high gene flow ( c = 0.5)."
+    }
+  ],
+  "blind_target": "The proportion of simulation replicates in which FEEMSmix identifies the true destination deme of the long-range gene flow event, under the dense sampling scenario with high gene flow.",
+  "target_type": "proportion",
+  "required_inputs": [
+    {
+      "name": "c1global1nfd_public.bed",
+      "served_as": "deposit/15007585/c1global1nfd_public.bed",
+      "identifier": "zenodo:15007585:c1global1nfd_public.bed",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/40956867/zenodo/05579f3e5920abce4992055d094c85c106f53f852fec2a1ea6e37515934bb366/body",
+      "bytes": 20313175,
+      "sha256": "5f263c00076fa4e77f3a10c7411c720f42287a0feaf02869669517c5c4445881",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    },
+    {
+      "name": "c1global1nfd_public.fam",
+      "served_as": "deposit/15007585/c1global1nfd_public.fam",
+      "identifier": "zenodo:15007585:c1global1nfd_public.fam",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/40956867/zenodo/9598f6e2b618092a7898186e2914401e896f69aca28ce1b61e9fdb3d050e2b6d/body",
+      "bytes": 144711,
+      "sha256": "9416843d652837b695ed1a0f8fdb40283aeb6a2aa0c296e89877cdcab0c938dd",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    },
+    {
+      "name": "c1global1nfd_public.indiv_meta",
+      "served_as": "deposit/15007585/c1global1nfd_public.indiv_meta",
+      "identifier": "zenodo:15007585:c1global1nfd_public.indiv_meta",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/40956867/zenodo/521875a341006bd6504687fe0c5d30f09ead434500868d5af9fc89ad52b144ae/body",
+      "bytes": 290926,
+      "sha256": "2b42474a5b4a2df2ff3f597e07e975a67eb5598633a10c651575fa38a8e4ccec",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    },
+    {
+      "name": "c1global1nfd_public.bim",
+      "served_as": "deposit/15007585/c1global1nfd_public.bim",
+      "identifier": "zenodo:15007585:c1global1nfd_public.bim",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/40956867/zenodo/2b9500745df4956cc87cf8e5e6370690ffaff19ef42c1b2a114a65a6dc9175d7/body",
+      "bytes": 585206,
+      "sha256": "dff0000349bbc4dd52e2419c7a7f4b330cee5619f5546c105c3dad5b3f3f4038",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    }
+  ],
+  "excluded_inputs": [],
+  "allowed_resources": [
+    "worker image paper2-science:pilot-2026-09-25: Python scientific stack, R packages and PATH tools",
+    "served publication text and served deposited inputs only"
+  ],
+  "blocked_original_artifacts": [
+    "original implementation, repositories, notebooks, scripts",
+    "processed results, supplementary result tables, figures of the study",
+    "any author communication"
+  ],
+  "comparison_metric": "Compare the reported proportion (100%) and its Clopper-Pearson 95% confidence interval [93%, 100%] against the solver's recomputed proportion and interval from the same simulation replicates.",
+  "numerical_agreement_criterion": "Proportions compared by numerator/denominator; the reported 100% corresponds to 50/50 replicates, and the interval must match the Clopper-Pearson interval at the reported precision.",
+  "conclusion_criterion": "Conclusion agreement is scored only when the numerical criterion is met or when the publication states a directional claim that the observed value can be compared with; otherwise the conclusion component is not_assessable.",
+  "resource_ceiling": {
+    "slots_per_paper": 3,
+    "wall_seconds_per_slot": 14400,
+    "step_seconds": 3600,
+    "provider_tokens_per_slot": 1500000,
+    "tool_calls_per_slot": 40,
+    "max_completion_tokens": 8192,
+    "worker_cpus": 1,
+    "worker_memory": "3g",
+    "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+    "network": "none",
+    "image": "paper2-science:pilot-2026-09-25"
+  },
+  "stopping_rule": [
+    "final report submitted by the slot",
+    "wall, step, token, tool-call or output ceiling reached (recorded as the stop reason)",
+    "required input absent from the served package: report null observation with F01/F18",
+    "specification gap that cannot be closed from the served text: report null with F04-F08",
+    "controller or worker error: recorded as harness stop, never as an outcome",
+    "no rerun, no extension and no rule change after the slot starts"
+  ],
+  "specification_gaps": "The exact random seeds and replicate ordering for the 50 simulation replicates are not specified; the precise grid registration and deme assignment details are only partially described; the exact SNP subsetting to 1,000 independent SNPs is not fully specified.",
+  "gate_reviews": {
+    "G1": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0010",
+          "quote": "Here, we present a computationally tractable method that identifies long-range genetic similarities in a background of spatially"
+        },
+        {
+          "segment_id": "S0110",
+          "quote": "We apply the method to fifty replicates of the simulated scenario in Fig 1 and evaluate performance in terms of: 1) the rate of finding the correct destination deme, 2) the average distance from the MLE to the true source deme, and 3) the error in the estimated source fraction ( c ^ )."
+        }
+      ],
+      "rationale": "The principal results are produced by running the FEEMSmix computation on simulated and empirical genotype data, which a third party can re-run given the deposited data."
+    },
+    "G2": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0115",
+          "quote": "Across both simulated scenarios, the method identified the true destination deme in 100 % , C 95 = [ 93 % , 100 % ] of the replicates with dense sampling and"
+        },
+        {
+          "segment_id": "S0116",
+          "quote": "high gene flow, and in 92 % , C 95 = [ 81 % , 98 % ] of replicates with sparse sampling and high gene flow ( c = 0.5)."
+        }
+      ],
+      "rationale": "A principal quantitative result is the rate of correctly identifying the true destination deme, reported as a proportion with a Clopper-Pearson confidence interval."
+    },
+    "G3": {
+      "value": "uncertain",
+      "quotes": [
+        {
+          "segment_id": "S0021",
+          "quote": "The corrected wolves data set and the human data set used in this study can be found at https://doi.org/10.5061/dryad.p8cz8wb18 and https://zenodo.org/records/15007585 ."
+        }
+      ],
+      "rationale": "The Zenodo deposit lists PLINK-format genotype files (bed/bim/fam) plus metadata, which are analysis inputs, but the Dryad deposits (c9b25, p8cz8wb18) list no files, so it cannot be confirmed that all inputs for the target are deposited."
+    },
+    "G4": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0047",
+          "quote": "Step 1. Apply FEEMS . We fit the FEEMS method to the data using the deme-specific variance mode outlined in [ 10 ], with cross-validation to choose the appropriate tuning parameters λ and λ q ."
+        },
+        {
+          "segment_id": "S0106",
+          "quote": "Verification and comparison Simulation settings All simulations were conducted in msprime [ 30 ]. As a set of test cases, we simulate a 8 × 12 nearest neighbor graph/grid of demes with a barrier at the center of the grid to capture a spatially"
+        }
+      ],
+      "rationale": "The workflow steps, simulation settings, and likelihood are described in enough detail to reimplement the method."
+    },
+    "G5": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0103",
+          "quote": "Optimization in FEEMSmix is done using the Nelder-Mead and L-BFGS-B algorithms implemented in scipy [ 26 – 28 ], with the mixture model fit using scikit-learn [ 29 ]."
+        },
+        {
+          "segment_id": "S0021",
+          "quote": "Finally, FEEMSmix is readily available as a complete python package from https://github.com/NovembreLab/feems ."
+        }
+      ],
+      "rationale": "The method relies on open-source Python packages (scipy, scikit-learn, msprime) and no proprietary software."
+    }
+  }
+}

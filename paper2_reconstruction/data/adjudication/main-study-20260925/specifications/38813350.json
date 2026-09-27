@@ -1,0 +1,183 @@
+{
+  "paper_id": "PMID:38813350",
+  "sampling_stratum": "Clinical_Medicine",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "1449ad455a4a44f58229286807be7d7e36a0d11216890e37dfea6f6c2f4b67b6",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "22153379",
+      "files": [
+        {
+          "name": "EP registre 2023 MONASTIR _ KAIROUAN final - SAFE HARBOR.sav",
+          "bytes": 61860
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:06:11.498364+00:00",
+  "api": {
+    "response_id": "1f36e607-5d4a-4789-9eff-0cada6ec5989",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 11829,
+    "completion_tokens": 2490
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0033",
+            "quote": "Data analysis was performed using IBM SPSS Statistics (RRID:SCR_016479) version 26.0."
+          },
+          {
+            "segment_id": "S0036",
+            "quote": "A total of 255 patients were included in the analysis."
+          }
+        ],
+        "rationale": "The principal results are statistical computations (univariate comparisons, logistic regression, Kaplan-Meier) on a deposited dataset of 255 patients, re-runnable by a third party."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0049",
+            "quote": "Multivariate logistic regression analysis demonstrated five independent predictors of MACE: SIQIII and/or RBBB (OR=2.4; 95% CI: 1.04, 5.9; p=0.039),"
+          },
+          {
+            "segment_id": "S0052",
+            "quote": "Variables Multivariate OR 95% CI p-value SIQIII and/or RBBB 2.4 1.04, 5.9 0.039 Renal failure 2.5 1.08, 5.8 0.031 Positive troponin 5.4 2.34, 12.6 <0.001 RVD 7.9 2.16, 28.8 0.002 Right heart failure 2.5 1.1, 5.8 0.025"
+          }
+        ],
+        "rationale": "The paper's stated aim is the prognostic impact of RBBB/SIQIII; the principal quantitative result is the multivariate model for MACE, with the SIQIII and/or RBBB adjusted OR as the first-listed independent predictor."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0063",
+            "quote": "Underlying data Figshare: EP registre 2023 MONASTIR _ KAIROUAN final - SAFE HARBOR.sav. https://doi.org/10.6084/m9.figshare.22153379 ."
+          },
+          {
+            "segment_id": "S0024",
+            "quote": "The data were gathered by reviewing patients’ hospital records from each hospitalization, supplemented with comprehensive in-hospital assessments and follow-up"
+          }
+        ],
+        "rationale": "The single deposited .sav file is the underlying patient-level registry from which the analysis inputs (ECG group, MACE, covariates) are derived; it is raw/minimally processed input, not an output table."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0035",
+            "quote": "First, covariates with a p-value less than or equal to 0.20 were retained in the"
+          },
+          {
+            "segment_id": "S0036",
+            "quote": "multivariable model. Then, a binary logistic regression was performed for assessing the independent risk factors for MACEs. Associations were reported as adjusted Odds Ratios (aOR) with 95% Confidence Interval (95% CI)."
+          },
+          {
+            "segment_id": "S0029",
+            "quote": "Major Adverse Cardiovascular Events (MACE) were defined as"
+          },
+          {
+            "segment_id": "S0030",
+            "quote": "the presence of at least one of the following: death during hospitalization, cardiogenic shock in initial presentation or the presence of a thrombus in the right heart."
+          }
+        ],
+        "rationale": "Outcome definition, covariate screening threshold, model type and reporting are described sufficiently to implement the logistic regression without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0033",
+            "quote": "Data analysis was performed using IBM SPSS Statistics (RRID:SCR_016479) version 26.0."
+          }
+        ],
+        "rationale": "Although SPSS was used, the described method (chi-square/Fisher, t-test, binary logistic regression, Kaplan-Meier/log-rank) is implementable in free software (R/Python); no proprietary-only method is required."
+      }
+    },
+    "exact_target": "Adjusted odds ratio for MACE associated with SIQIII and/or RBBB in the multivariate binary logistic regression model: OR=2.4; 95% CI: 1.04, 5.9; p=0.039.",
+    "target_values": [
+      "2.4",
+      "1.04, 5.9",
+      "0.039"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The adjusted association between the combined ECG pattern (SIQIII and/or RBBB) and the occurrence of major adverse cardiovascular events during hospitalization, estimated in a multivariable binary logistic regression model adjusting for the other independent predictors.",
+    "target_type": "scalar",
+    "target_location": "Results, multivariate logistic regression for MACE; Table 2 (Independent predictors of MACEs), first row.",
+    "location_quotes": [
+      {
+        "segment_id": "S0049",
+        "quote": "Multivariate logistic regression analysis demonstrated five independent predictors of MACE: SIQIII and/or RBBB (OR=2.4; 95% CI: 1.04, 5.9; p=0.039),"
+      },
+      {
+        "segment_id": "S0052",
+        "quote": "Variables Multivariate OR 95% CI p-value SIQIII and/or RBBB 2.4 1.04, 5.9 0.039 Renal failure 2.5 1.08, 5.8 0.031 Positive troponin 5.4 2.34, 12.6 <0.001 RVD 7.9 2.16, 28.8 0.002 Right heart failure 2.5 1.1, 5.8 0.025"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0035",
+        "quote": "A Kaplan–Meier survival analysis was performed to assess the association between the RBBB and/or SIQIII and overall mortality using the log-rank test. In order to identify the independent factors associated with the occurrence of MACEs, univariate and multivariate analyses were performed. First, covariates with a p-value less than or equal to 0.20 were retained in the"
+      },
+      {
+        "segment_id": "S0036",
+        "quote": "multivariable model. Then, a binary logistic regression was performed for assessing the independent risk factors for MACEs. Associations were reported as adjusted Odds Ratios (aOR) with 95% Confidence Interval (95% CI). A p-value≤0.05 was considered as statistically significant."
+      },
+      {
+        "segment_id": "S0029",
+        "quote": "Major Adverse Cardiovascular Events (MACE) were defined as"
+      },
+      {
+        "segment_id": "S0030",
+        "quote": "the presence of at least one of the following: death during hospitalization, cardiogenic shock in initial presentation or the presence of a thrombus in the right heart. Renal failure was defined as an eGFR < 60 ml/min per 1.73 m 2 ."
+      },
+      {
+        "segment_id": "S0027",
+        "quote": "Complete RBBB was identified according to the Minnesota Code criteria (7-2-1) as a QRS duration must be ≥120 ms in addition to R′ wave>R wave in lead V1 and/or V2 in most beats of leads I, II, III,"
+      },
+      {
+        "segment_id": "S0029",
+        "quote": "SIQIII-type ECG patterns were defined as a qualitative presence of S wave in lead I and Q wave in lead III. Right ventricular dysfunction (RVD) was defined as a decreased systolic function of the RV (TAPSE <17 mm) and/or the presence of a paradoxical interventricular septal movement and/or a systolic pulmonary artery pressure ≥40 mmHg."
+      }
+    ],
+    "required_files": [
+      "EP registre 2023 MONASTIR _ KAIROUAN final - SAFE HARBOR.sav"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "Single Figshare deposit (accession 22153379), file 'EP registre 2023 MONASTIR _ KAIROUAN final - SAFE HARBOR.sav' (61,860 bytes), SPSS .sav format. It is the underlying patient-level registry; the analysis variables (group membership, RBBB, SIQIII, MACE components, renal failure, troponin, RVD, right heart failure symptoms) must be derived from it. No codebook or variable dictionary is deposited.",
+    "leakage_files": [
+      {
+        "name": "EP registre 2023 MONASTIR _ KAIROUAN final - SAFE HARBOR.sav",
+        "reason": "This is the analysis input, not a leakage file; however, if it contains precomputed derived variables (e.g., MACE, group, RVD flags) those columns would leak the target and must be withheld or recomputed from raw fields."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Re-estimate the multivariable binary logistic regression for MACE with the same covariates and compare the adjusted odds ratio, 95% confidence interval and p-value for SIQIII and/or RBBB to the reported values.",
+    "numerical_agreement_criterion": "Scalars within the displayed rounding bin: OR to one decimal (2.4), 95% CI bounds to the displayed precision (1.04, 5.9), p-value at reported precision (0.039).",
+    "specification_gaps": "Exact list of covariates entered into the univariate screen and the final model is not fully enumerated; handling of missing data is unspecified; exact coding of 'SIQIII and/or RBBB' as a single binary variable is not detailed; whether the model used complete cases or imputation is unstated; the SPSS variable names and value labels in the .sav are not documented.",
+    "alternatives_considered": [
+      {
+        "target": "Univariate in-hospital mortality comparison between groups (22.6 vs. 6.1%, p=0.002)",
+        "reason": "Rejected because the paper's stated principal aim and first-listed multivariate result concern MACE predictors, and the multivariate model is the central quantitative table."
+      },
+      {
+        "target": "Kaplan-Meier overall mortality p<0.001 for SIQIII and/or RBBB",
+        "reason": "Rejected because it is a figure-level significance statement without a single numeric endpoint and is secondary to the multivariate MACE model."
+      },
+      {
+        "target": "Adjusted OR for SIQIII with in-hospital mortality (OR=4.8; 95% CI: 1.9, 12.2; p=0.001)",
+        "reason": "Rejected because it is the mortality model (Table 3), whereas the paper's primary emphasis and first multivariate result is the MACE model (Table 2)."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

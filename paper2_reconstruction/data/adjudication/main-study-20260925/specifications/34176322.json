@@ -1,0 +1,135 @@
+{
+  "paper_id": "PMID:34176322",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "15fbb8cef6496fabd8d5857614545f899ffb66653a1bb435f25c1e69407a0d84",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "dryad",
+      "accession": "mcvdnck0f",
+      "files": []
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:12:12.209875+00:00",
+  "api": {
+    "response_id": "6a7663d0-582e-46f9-89bb-1230f0b91605",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 17108,
+    "completion_tokens": 1581
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0041",
+            "quote": "All statistical analyses were conducted in R v. 4.0.0 [ 54 ]. First, we modelled heart rate over the whole year ( n = 393 708 recordings in"
+          },
+          {
+            "segment_id": "S0049",
+            "quote": "Predicted heart rates from the generalized additive mixed-effects model peaked in mid-July at 103 bpm, declined to 40 bpm in December and then remained relatively stable until April, when the loggers were removed ( figure 1 ). Day of the year and individual variation explained 75% of the variation in heart rate."
+          }
+        ],
+        "rationale": "The principal result is produced by statistical computation (GAMM/lme models in R) on biologging data that a third party can re-run if the data are available."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0049",
+            "quote": "Predicted heart rates from the generalized additive mixed-effects model peaked in mid-July at 103 bpm, declined to 40 bpm in December and then remained relatively stable until April, when the loggers were removed ( figure 1 ). Day of the year and individual variation explained 75% of the variation in heart rate."
+          }
+        ],
+        "rationale": "The paper states a primary numerical endpoint: predicted peak heart rate in mid-July (103 bpm) and December (40 bpm), plus the 75% variance explained."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0097",
+            "quote": "Data accessibility Data are available from the Dryad Digital Repository: https://doi.org/10.5061/dryad.mcvdnck0f [ 82 ]."
+          }
+        ],
+        "rationale": "The deposit listing for Dryad mcvdnck0f is empty, so it cannot be confirmed whether the listed files are the raw analysis inputs or outputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0042",
+            "quote": "We fitted heart rate as the response variable and time (days) as a thin plate regression spline with smoothing parameter k = 20 and a penalization value ( λ ) of 1.4 [ 55 ]. k was selected and assessed using the ‘ gam.check’ function from the ‘mgcv’ package."
+          },
+          {
+            "segment_id": "S0043",
+            "quote": "We used an autoregressive structure (AR1) to account for intraindividual temporal autocorrelation. Since the filtering of recordings left missing values in the dataset, we added a weighting parameter that gave missing values a weight of 0 and non-missing values a weight of 1."
+          }
+        ],
+        "rationale": "The method for the annual GAMM is described in sufficient detail (spline type, k, lambda, AR1, weighting) to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0041",
+            "quote": "All statistical analyses were conducted in R v. 4.0.0 [ 54 ]."
+          }
+        ],
+        "rationale": "All analyses use R, which is free software; no proprietary software is required."
+      }
+    },
+    "exact_target": "Predicted heart rate from the generalized additive mixed-effects model peaked in mid-July at 103 bpm, declined to 40 bpm in December; day of the year and individual variation explained 75% of the variation in heart rate.",
+    "target_values": [
+      "103 bpm",
+      "40 bpm",
+      "75%"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The seasonal peak and trough of predicted heart rate from a generalized additive mixed-effects model fitted to year-round heart rate recordings, and the proportion of variation in heart rate explained by day of the year and individual variation.",
+    "target_type": "scalar",
+    "target_location": "Results, first paragraph; Figure 1",
+    "location_quotes": [
+      {
+        "segment_id": "S0049",
+        "quote": "Predicted heart rates from the generalized additive mixed-effects model peaked in mid-July at 103 bpm, declined to 40 bpm in December and then remained relatively stable until April, when the loggers were removed ( figure 1 ). Day of the year and individual variation explained 75% of the variation in heart rate."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0041",
+        "quote": "All statistical analyses were conducted in R v. 4.0.0 [ 54 ]. First, we modelled heart rate over the whole year ( n = 393 708 recordings in"
+      },
+      {
+        "segment_id": "S0042",
+        "quote": "We fitted heart rate as the response variable and time (days) as a thin plate regression spline with smoothing parameter k = 20 and a penalization value ( λ ) of 1.4 [ 55 ]. k was selected and assessed using the ‘ gam.check’ function from the ‘mgcv’ package."
+      },
+      {
+        "segment_id": "S0043",
+        "quote": "We used an autoregressive structure (AR1) to account for intraindividual temporal autocorrelation. Since the filtering of recordings left missing values in the dataset, we added a weighting parameter that gave missing values a weight of 0 and non-missing values a weight of 1."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The Dryad deposit mcvdnck0f is listed but contains no files in the provided listing, so the raw biologging data (heart rate, subcutaneous temperature, activity, environmental temperature) are not available among the listed files.",
+    "leakage_files": [],
+    "required_public_references": [],
+    "comparison_metric": "Compare the reported predicted peak and trough heart rates and the reported proportion of variance explained to values recomputed from the raw biologging data using the described GAMM.",
+    "numerical_agreement_criterion": "Scalars within displayed rounding bin: heart rates to the nearest 1 bpm; proportion to the nearest 1%.",
+    "specification_gaps": "The exact filtering thresholds and quality-index handling are only briefly described; the precise definition of 'day of the year' spline basis and the handling of missing values in the weighting scheme are not fully specified.",
+    "alternatives_considered": [
+      {
+        "target": "Table 1 fixed-effect parameter estimates",
+        "reason": "Table 1 is a central quantitative table, but the paper's stated priority is the seasonal pattern in heart rate, which is presented first in the Results."
+      },
+      {
+        "target": "Variance explained by lme models (2–6% winter, 16–24% summer)",
+        "reason": "These are secondary results about drivers within seasons, not the principal seasonal endpoint."
+      }
+    ]
+  },
+  "eligibility": "required_inputs_not_in_public_listing"
+}

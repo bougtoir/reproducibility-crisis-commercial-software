@@ -1,0 +1,164 @@
+{
+  "paper_id": "PMID:36153311",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "8a9146882c996fc82140fc2877c71ae34df1aceab189d90a2a5a5d833afb3c22",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE182323",
+      "files": [
+        {
+          "name": "GSE182323_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:49:40.592540+00:00",
+  "api": {
+    "response_id": "64d2305f-e36e-4e4d-8bdb-34741bdb0f35",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 19279,
+    "completion_tokens": 1550
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0042",
+            "quote": "In 12 samples from 11 patients, 3 different fusion callers consistently detected only the DLG1-BRAF fusion, which confirmed the OncoPanel data (Fig. 4b ; Supplementary Fig. 3a ; and Supplementary Table 2 )."
+          },
+          {
+            "segment_id": "S0135",
+            "quote": "Candidate somatic fusions were called by three fusion callers, STAR Fusion (v1.2.0), FusionCatcher (v1.00) and ChimPipe (v0.9.6) with default parameters."
+          }
+        ],
+        "rationale": "The principal result (which putative fusions are expressed/validated by RNA-seq) is produced by computational fusion calling on RNA-seq data, which a third party can re-run given the deposited fastq files."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0042",
+            "quote": "In 12 samples from 11 patients, 3 different fusion callers consistently detected only the DLG1-BRAF fusion, which confirmed the OncoPanel data (Fig. 4b ; Supplementary Fig. 3a ; and Supplementary Table 2 )."
+          }
+        ],
+        "rationale": "The principal quantitative result is the number of validated fusions (only DLG1-BRAF) among the RNA-seq samples, a count that can be named."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0143",
+            "quote": "Raw fastq files of RNA-seq data from clinical samples generated in this study have been deposited in the NCBI GEO database under accession code GSE182323 ."
+          }
+        ],
+        "rationale": "The deposit contains raw fastq files (GSE182323_RAW.tar) which are the analysis inputs for the RNA-seq fusion calling target."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0135",
+            "quote": "Candidate somatic fusions were called by three fusion callers, STAR Fusion (v1.2.0), FusionCatcher (v1.00) and ChimPipe (v0.9.6) with default parameters."
+          },
+          {
+            "segment_id": "S0136",
+            "quote": "The candidate fusion calls indicated by each caller were normalized and consensus fusions were identified for each sample."
+          }
+        ],
+        "rationale": "The method for calling and consensus-filtering fusions is described with tool names, versions, and parameters, sufficient to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0135",
+            "quote": "Candidate somatic fusions were called by three fusion callers, STAR Fusion (v1.2.0), FusionCatcher (v1.00) and ChimPipe (v0.9.6) with default parameters."
+          }
+        ],
+        "rationale": "All listed tools (STAR Fusion, FusionCatcher, ChimPipe) are free/open-source; no proprietary software is required for the target computation."
+      }
+    },
+    "exact_target": "Number of putative fusions validated by RNA-seq: only the DLG1-BRAF fusion was consistently detected by three fusion callers among 12 samples from 11 patients.",
+    "target_values": [
+      "only the DLG1-BRAF fusion",
+      "12 samples from 11 patients",
+      "3 different fusion callers"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "Among RNA-seq samples from patients with putative fusions detected by DNA-based NGS, determine which fusions are consistently detected by multiple fusion callers.",
+    "target_type": "count",
+    "target_location": "Results, section 'Comparison of putative fusions by RNA-seq and DNA-seq', reported in text and Fig. 4b.",
+    "location_quotes": [
+      {
+        "segment_id": "S0042",
+        "quote": "In 12 samples from 11 patients, 3 different fusion callers consistently detected only the DLG1-BRAF fusion, which confirmed the OncoPanel data (Fig. 4b ; Supplementary Fig. 3a ; and Supplementary Table 2 )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0135",
+        "quote": "Candidate somatic fusions were called by three fusion callers, STAR Fusion (v1.2.0), FusionCatcher (v1.00) and ChimPipe (v0.9.6) with default parameters."
+      },
+      {
+        "segment_id": "S0136",
+        "quote": "The candidate fusion calls indicated by each caller were normalized and consensus fusions were identified for each sample."
+      }
+    ],
+    "required_files": [
+      "GSE182323_RAW.tar"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "GEO accession GSE182323 contains raw fastq files for RNA-seq of clinical samples. The paper states 12 samples from 11 patients were analyzed. The deposit may include all samples; the exact mapping of samples to patients is not specified in the listing.",
+    "leakage_files": [
+      {
+        "name": "filelist.txt",
+        "reason": "May contain metadata or sample annotations that could reveal which samples were analyzed or the results."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "STAR Fusion CTAT genome library",
+        "version": "vNov012017"
+      },
+      {
+        "name": "FusionCatcher human database",
+        "version": "v90"
+      },
+      {
+        "name": "GENCODE annotation library",
+        "version": "v19"
+      },
+      {
+        "name": "human reference genome",
+        "version": "hg19"
+      }
+    ],
+    "comparison_metric": "The number of fusions consistently detected by all three callers (consensus) is compared to the reported count (only DLG1-BRAF).",
+    "numerical_agreement_criterion": "Counts exact: the solver must find that only the DLG1-BRAF fusion is detected by all three callers among the 12 samples.",
+    "specification_gaps": "The paper does not specify the exact sample-to-patient mapping, the threshold for 'consistently detected' (e.g., minimum number of callers), or how discordant reads were filtered.",
+    "alternatives_considered": [
+      {
+        "target": "Number of patients with fusions (504)",
+        "reason": "This is a descriptive count from DNA-based NGS, not the principal computational result of the RNA-seq validation."
+      },
+      {
+        "target": "Percentage of resistance cases with fusions (12%)",
+        "reason": "This is a proportion from clinical annotation, not the main RNA-seq validation result."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

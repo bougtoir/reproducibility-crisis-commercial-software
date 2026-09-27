@@ -1,0 +1,140 @@
+{
+  "paper_id": "PMID:41306588",
+  "sampling_stratum": "Chemistry_Materials",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "74c5f550164430d8eda8e0abae1836fa86a1cd9ba1728bd0c50278b1c6606df6",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE249027",
+      "files": [
+        {
+          "name": "GSE249027_Rawcounts.xlsx",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:28:40.062460+00:00",
+  "api": {
+    "response_id": "ab1b43c4-737e-4733-87bf-7f3f7ff32e1c",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 22377,
+    "completion_tokens": 1555
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0053",
+            "quote": "Publicly available RNA-seq datasets from patients with NSTIs (PRJNA479582) and healthy controls ( GSE249027 ) were retrieved for comparative transcriptomic analysis."
+          },
+          {
+            "segment_id": "S0054",
+            "quote": "Sequencing reads were aligned to the Homo sapiens reference genome (GRCh37.p13) using STAR aligner (version STAR 2.7.10b). Transcript abundance was quantified using featureCounts (v2.0.6)."
+          }
+        ],
+        "rationale": "The principal result includes a computational differential expression analysis on public RNA-seq data (GSE249027 controls vs PRJNA479582 NSTI) that a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0123",
+            "quote": "Differential expression analysis identified 29,138 genes with significantly altered profiles ( p < 0.05, |log 2 FC| ≥ 2)."
+          },
+          {
+            "segment_id": "S0124",
+            "quote": "Among the upregulated genes, TBC1D9 was significantly elevated in NSTI tissue ( Supplementary Figure S7A )."
+          }
+        ],
+        "rationale": "The paper reports a primary numerical endpoint from the transcriptomic analysis: 29,138 significantly altered genes, and identifies TBC1D9 as significantly upregulated."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0053",
+            "quote": "Publicly available RNA-seq datasets from patients with NSTIs (PRJNA479582) and healthy controls ( GSE249027 ) were retrieved for comparative transcriptomic analysis."
+          }
+        ],
+        "rationale": "The deposit listing contains GSE249027_Rawcounts.xlsx, which is the raw count input for the control dataset used in the differential expression analysis."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0054",
+            "quote": "Sequencing reads were aligned to the Homo sapiens reference genome (GRCh37.p13) using STAR aligner (version STAR 2.7.10b). Transcript abundance was quantified using featureCounts (v2.0.6)."
+          },
+          {
+            "segment_id": "S0054",
+            "quote": "Differential gene expression analysis was performed using the DESeq2 package (version1.46.0) in R (version 4.4.2). Genes with p< 0.05 and |log 2 FC|≥2 were considered differentially expressed genes (DEGs)."
+          }
+        ],
+        "rationale": "The method for the transcriptomic target is described with software versions and thresholds, sufficient to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0054",
+            "quote": "Differential gene expression analysis was performed using the DESeq2 package (version1.46.0) in R (version 4.4.2)."
+          }
+        ],
+        "rationale": "The method uses free and open-source software (STAR, featureCounts, DESeq2, R), no proprietary software required."
+      }
+    },
+    "exact_target": "Number of genes with significantly altered profiles in NSTI vs healthy controls: 29,138 genes (p < 0.05, |log2FC| ≥ 2).",
+    "target_values": [
+      "29,138"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of genes identified as significantly differentially expressed between NSTI patient samples and healthy controls.",
+    "target_type": "count",
+    "target_location": "Results section 3.7, text.",
+    "location_quotes": [
+      {
+        "segment_id": "S0123",
+        "quote": "Differential expression analysis identified 29,138 genes with significantly altered profiles ( p < 0.05, |log 2 FC| ≥ 2)."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0053",
+        "quote": "Publicly available RNA-seq datasets from patients with NSTIs (PRJNA479582) and healthy controls ( GSE249027 ) were retrieved for comparative transcriptomic analysis."
+      },
+      {
+        "segment_id": "S0054",
+        "quote": "Sequencing reads were aligned to the Homo sapiens reference genome (GRCh37.p13) using STAR aligner (version STAR 2.7.10b). Transcript abundance was quantified using featureCounts (v2.0.6)."
+      },
+      {
+        "segment_id": "S0054",
+        "quote": "Differential gene expression analysis was performed using the DESeq2 package (version1.46.0) in R (version 4.4.2). Genes with p< 0.05 and |log 2 FC|≥2 were considered differentially expressed genes (DEGs)."
+      }
+    ],
+    "required_files": [
+      "GSE249027_Rawcounts.xlsx"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "GSE249027_Rawcounts.xlsx contains raw counts for healthy controls. NSTI data (PRJNA479582) are not in the deposit listing and must be obtained from the referenced public repository. The paper does not specify whether raw counts or aligned reads were used for NSTI samples.",
+    "leakage_files": [],
+    "required_public_references": [
+      {
+        "name": "Homo sapiens reference genome",
+        "version": "GRCh37.p13"
+      }
+    ],
+    "comparison_metric": "Exact count of significantly differentially expressed genes.",
+    "numerical_agreement_criterion": "Counts exact: the reported number of significant genes must match exactly.",
+    "specification_gaps": "The paper does not specify: (1) whether the NSTI dataset (PRJNA479582) was processed identically to GSE249027; (2) the exact version of the annotation used with GRCh37.p13; (3) whether any additional filtering (e.g., low-count genes) was applied before DESeq2; (4) the exact DESeq2 design formula and whether any covariates were included.",
+    "alternatives_considered": "Other candidate targets included: (1) fold-change values for IL-6 mRNA in TBC1D9-KO cells (e.g., 1.77-fold reduction), but these are from cell-based experiments not directly re-runnable from the deposit; (2) TBC1D9 upregulation in NSTI (no exact value given); (3) GSEA enrichment scores (not numerically reported). The count of 29,138 genes was chosen as the principal quantitative result from the computational analysis of the deposited data."
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

@@ -1,0 +1,169 @@
+{
+  "paper_id": "PMID:38203551",
+  "sampling_stratum": "Chemistry_Materials",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "73e2618d29eb81cc6bdfcc68d8eaf56134313f577fe762e60fa70ff4a3b26d47",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE246164",
+      "files": [
+        {
+          "name": "GSE246164_raw_counts.txt.gz",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:28:46.437530+00:00",
+  "api": {
+    "response_id": "7f7e909e-53f5-4af4-9e53-e962d31d8cbf",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 28263,
+    "completion_tokens": 1915
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0133",
+            "quote": "Counts normalized with the median-of-ratios method were used for estimating differential expression (DE) with DESeq2 v1.38.3 [ 97 ]."
+          },
+          {
+            "segment_id": "S0134",
+            "quote": "The downstream analysis consisted of genes passing significance filters with adjusted p -value (padj) < 0.05 and absolute log 2 fold-change (abs(LFC)) > 1."
+          }
+        ],
+        "rationale": "The principal transcriptomic result is produced by a re-runnable computation (DESeq2 on a count matrix) on deposited raw counts."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0027",
+            "quote": "Compared to the mock transduced cells, HIV-1 managed to significantly alter the expression of 158 genes eight hours post-transduction."
+          },
+          {
+            "segment_id": "S0067",
+            "quote": "number of DEGs, changing from 158 at 8 h to 114 at 12 h and, finally, to 380 at 26 h post-transduction."
+          }
+        ],
+        "rationale": "The paper's stated priority is the number of significantly altered genes; the first reported endpoint is the HIV-1 8 h DEG count of 158."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0133",
+            "quote": "Aligned reads were counted using FeatureCounts v2.0.1 [ 95 ]. The obtained count matrix was used for analysis with R v4.2.3 [ 96 ]."
+          },
+          {
+            "segment_id": "S0155",
+            "quote": "Transcriptomic data presented in this study are openly available in GEO at https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE246164"
+          }
+        ],
+        "rationale": "The deposited GSE246164 raw counts file is the count matrix input to the DE analysis, not an output of the target computation."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0132",
+            "quote": "RNA-seq raw fastq data were cut from adaptors and quality trimmed (phred score 30) using Trimmomatic v0.36 [ 92 ]."
+          },
+          {
+            "segment_id": "S0133",
+            "quote": "The reads were mapped to the GRCh38 Human Genome Assembly reference genome using Hisat2 v2.1.0 [ 94 ]."
+          },
+          {
+            "segment_id": "S0134",
+            "quote": "The downstream analysis consisted of genes passing significance filters with adjusted p -value (padj) < 0.05 and absolute log 2 fold-change (abs(LFC)) > 1."
+          }
+        ],
+        "rationale": "The method (trimming, mapping, counting, DESeq2 with adaptive shrinkage, padj<0.05 and |LFC|>1) is described sufficiently to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0132",
+            "quote": "using Trimmomatic v0.36 [ 92 ]"
+          },
+          {
+            "segment_id": "S0133",
+            "quote": "using Hisat2 v2.1.0 [ 94 ]"
+          },
+          {
+            "segment_id": "S0133",
+            "quote": "with DESeq2 v1.38.3 [ 97 ]"
+          }
+        ],
+        "rationale": "All named tools (Trimmomatic, FastQC, Hisat2, FeatureCounts, R/DESeq2) are free/open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "Number of genes significantly altered by HIV-1 at 8 h post-transduction compared to mock-transduced cells: 158 genes.",
+    "target_values": [
+      "158"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of genes whose expression is significantly altered by HIV-1 pseudovirion transduction at the 8-hour time-point relative to mock-transduced HEK-293T cells.",
+    "target_type": "count",
+    "target_location": "Results, Section 2.1.1 'Analysis of Transcriptomic Changes at Different Time-Points Following HIV-1 and -2 Transduction'",
+    "location_quotes": [
+      {
+        "segment_id": "S0027",
+        "quote": "Compared to the mock transduced cells, HIV-1 managed to significantly alter the expression of 158 genes eight hours post-transduction."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0132",
+        "quote": "RNA-seq raw fastq data were cut from adaptors and quality trimmed (phred score 30) using Trimmomatic v0.36 [ 92 ]. The minimal trimmed read length was set to 36 bp. Quality check was carried out with FastQC v0.11.9 [ 93 ]."
+      },
+      {
+        "segment_id": "S0133",
+        "quote": "The reads were mapped to the GRCh38 Human Genome Assembly reference genome using Hisat2 v2.1.0 [ 94 ]. Aligned reads were counted using FeatureCounts v2.0.1 [ 95 ]. The obtained count matrix was used for analysis with R v4.2.3 [ 96 ]. Counts normalized with the median-of-ratios method were used for estimating differential expression (DE) with DESeq2 v1.38.3 [ 97 ]."
+      },
+      {
+        "segment_id": "S0134",
+        "quote": "To improve the accuracy of fold change estimates, we applied the “Adaptive Shrinkage” package version 2.2-63 [ 98 ]. The downstream analysis consisted of genes passing significance filters with adjusted p -value (padj) < 0.05 and absolute log 2 fold-change (abs(LFC)) > 1."
+      }
+    ],
+    "required_files": [
+      "GSE246164_raw_counts.txt.gz"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "GEO accession GSE246164; the raw counts file is the count matrix input to DESeq2. The paper also used raw fastq data (not listed in the deposit) for mapping; the deposited counts are sufficient for the DE computation. No sample metadata file is listed, so sample-to-condition mapping must be inferred from the paper or GEO metadata.",
+    "leakage_files": [],
+    "required_public_references": [
+      {
+        "name": "GRCh38 Human Genome Assembly",
+        "version": "GRCh38"
+      }
+    ],
+    "comparison_metric": "Exact match of the reported DEG count (158) to the number of genes passing padj < 0.05 and |log2FC| > 1 in the HIV-1 8 h vs mock comparison.",
+    "numerical_agreement_criterion": "Counts exact: the computed number of significant genes must equal 158.",
+    "specification_gaps": "The paper does not specify: (1) the exact sample-to-condition mapping for the deposited count matrix; (2) whether the mock control is a single sample or multiple replicates; (3) the exact DESeq2 design formula; (4) whether adaptive shrinkage was applied before or after filtering; (5) the exact version of the adaptive shrinkage package (stated as 2.2-63); (6) whether the count matrix includes all genes or only protein-coding genes; (7) the handling of multi-mapping reads in FeatureCounts.",
+    "alternatives_considered": [
+      {
+        "target": "Number of genes significantly altered by HIV-2 at 8 h (283 genes)",
+        "reason_rejected": "The paper's stated priority and order of appearance place the HIV-1 8 h result first; the HIV-2 result is a secondary comparison."
+      },
+      {
+        "target": "Number of genes significantly altered by HIV-1 at 26 h (380 genes)",
+        "reason_rejected": "This is a later time-point and not the first reported principal endpoint."
+      },
+      {
+        "target": "Number of differentially regulated proteins at 26 h (117 proteins)",
+        "reason_rejected": "Proteomic data are deposited in MassIVE (PXD044317), not in the listed GEO deposit, and the transcriptomic result is the primary focus."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

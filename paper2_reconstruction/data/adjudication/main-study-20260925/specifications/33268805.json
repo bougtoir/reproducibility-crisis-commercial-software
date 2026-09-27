@@ -1,0 +1,165 @@
+{
+  "paper_id": "PMID:33268805",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "961d99fe9540645fb47a75c05fde4c4606a69a3f33f2d46a84a90e1055940429",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "zenodo",
+      "accession": "56159",
+      "files": [
+        {
+          "name": "MixSIAR-3.1.5.zip",
+          "bytes": 23020107
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:12:19.070802+00:00",
+  "api": {
+    "response_id": "4f85e11b-68f5-4cf9-951b-bc616f5485c8",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 19777,
+    "completion_tokens": 1973
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0047",
+            "quote": "The R package tRophicPosition 42 was run for isotopic trophic position calculations."
+          },
+          {
+            "segment_id": "S0054",
+            "quote": "The bayesian mixing model, MixSIAR 43 , provide the most accurate estimations of source or prey contributions when tissue and species-specific discrimination factors are used 44 . Using the R package “ SIBER ” 45 , we applied mixing models to"
+          }
+        ],
+        "rationale": "The paper's principal results include trophic position and mixing model contributions computed from stable isotope data using R packages, which a third party can re-run if data are available."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0072",
+            "quote": "Mean δ 15 N values (< 15 cm = 9.3 ± 0.6‰; > 15 cm = 11.1 ± 0.7‰) and trophic levels (TPsia: < 15 cm = 3.9 ± 0.1; > 15 cm = 4.3 ± 0.1; grouped = 4.1 ± 0.11) were significantly different among ontogenetic phases."
+          }
+        ],
+        "rationale": "A principal quantitative result is the trophic position (TPsia) values, which are central to the paper's trophic ecology conclusions."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0054",
+            "quote": "The bayesian mixing model, MixSIAR 43 , provide the most accurate estimations of source or prey contributions when tissue and species-specific discrimination factors are used 44 . Using the R package “ SIBER ” 45 , we applied mixing models to"
+          }
+        ],
+        "rationale": "The deposit listing contains only MixSIAR software (MixSIAR-3.1.5.zip), not the stable isotope data or other analysis inputs required to reproduce the target."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0044",
+            "quote": "To investigate the relationship between viperfish and potential prey and predators, isotopic values of carbon and nitrogen were analysed through a bi-dimensional plot. Further, viperfish trophic position (TP) was determined using the following formulae 39 : TP = δ 15 N"
+          },
+          {
+            "segment_id": "S0045",
+            "quote": "consumer - δ 15 N baseline / TDF + TP baseline where δ 15 N consumer and δ 15 N baseline are the δ 15 N values of the target consumer and the baseline respectively; TDF is the trophic discrimination factor and TP baseline is the trophic position of the baseline."
+          },
+          {
+            "segment_id": "S0046",
+            "quote": "To account for uncertainty associated with the index, a Bayesian model was incorporated in the"
+          },
+          {
+            "segment_id": "S0047",
+            "quote": "calculation of TP using predict δ 15 N values of the viperfish and a TDF of 3.15‰ ± 1.28‰ 41 . The R package tRophicPosition 42 was run for isotopic trophic position calculations."
+          }
+        ],
+        "rationale": "The method for calculating trophic position is described with the formula, baseline, TDF, and software, sufficient for implementation."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0047",
+            "quote": "The R package tRophicPosition 42 was run for isotopic trophic position calculations."
+          },
+          {
+            "segment_id": "S0054",
+            "quote": "The bayesian mixing model, MixSIAR 43 , provide the most accurate estimations of source or prey contributions when tissue and species-specific discrimination factors are used 44 . Using the R package “ SIBER ” 45 , we applied mixing models to"
+          }
+        ],
+        "rationale": "The method uses R packages (tRophicPosition, MixSIAR, SIBER), which are free and open-source, requiring no proprietary software."
+      }
+    },
+    "exact_target": "Trophic position (TPsia) of Chauliodus sloani for size classes: < 15 cm = 3.9 ± 0.1; > 15 cm = 4.3 ± 0.1; grouped = 4.1 ± 0.11",
+    "target_values": [
+      "3.9 ± 0.1",
+      "4.3 ± 0.1",
+      "4.1 ± 0.11"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "Trophic position of Chauliodus sloani estimated using stable isotope analysis and a Bayesian model, reported for different size classes.",
+    "target_type": "scalar",
+    "target_location": "Results, Trophic ecology section, text (also Table 2 and Suppl. Material 2)",
+    "location_quotes": [
+      {
+        "segment_id": "S0072",
+        "quote": "Mean δ 15 N values (< 15 cm = 9.3 ± 0.6‰; > 15 cm = 11.1 ± 0.7‰) and trophic levels (TPsia: < 15 cm = 3.9 ± 0.1; > 15 cm = 4.3 ± 0.1; grouped = 4.1 ± 0.11) were significantly different among ontogenetic phases."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0044",
+        "quote": "To investigate the relationship between viperfish and potential prey and predators, isotopic values of carbon and nitrogen were analysed through a bi-dimensional plot. Further, viperfish trophic position (TP) was determined using the following formulae 39 : TP = δ 15 N"
+      },
+      {
+        "segment_id": "S0045",
+        "quote": "consumer - δ 15 N baseline / TDF + TP baseline where δ 15 N consumer and δ 15 N baseline are the δ 15 N values of the target consumer and the baseline respectively; TDF is the trophic discrimination factor and TP baseline is the trophic position of the baseline."
+      },
+      {
+        "segment_id": "S0046",
+        "quote": "To account for uncertainty associated with the index, a Bayesian model was incorporated in the"
+      },
+      {
+        "segment_id": "S0047",
+        "quote": "calculation of TP using predict δ 15 N values of the viperfish and a TDF of 3.15‰ ± 1.28‰ 41 . The R package tRophicPosition 42 was run for isotopic trophic position calculations."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit listing contains only MixSIAR software (MixSIAR-3.1.5.zip), not the stable isotope data or other analysis inputs. The required input data (δ13C, δ15N values for viperfish and baseline) are not deposited in the listed files.",
+    "leakage_files": [
+      {
+        "name": "MixSIAR-3.1.5.zip",
+        "reason": "This is the MixSIAR software package, which is the original implementation tool; it does not contain the target value but is a code/software file that should be withheld to prevent providing the original implementation."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "The observed trophic position values (mean ± SD) are compared to the reported values exactly as printed.",
+    "numerical_agreement_criterion": "Scalars within displayed rounding bin: values must match to the reported precision (e.g., 3.9 ± 0.1, 4.3 ± 0.1, 4.1 ± 0.11).",
+    "specification_gaps": "The paper does not specify the exact prior distributions for the Bayesian model, the number of iterations, or the exact code used. The baseline zooplankton size fraction is specified as 200–500 µm, but the exact data points are not provided.",
+    "alternatives_considered": [
+      {
+        "target": "Mean δ15N values of viperfish",
+        "reason": "These are reported but are intermediate data used to calculate trophic position; the trophic position is a more integrative principal result."
+      },
+      {
+        "target": "Vacuity index",
+        "reason": "This is a dietary index but not the principal quantitative result emphasized in the abstract and conclusions."
+      },
+      {
+        "target": "Relative abundance (CPUE)",
+        "reason": "This is a key result but the paper's principal focus includes trophic ecology, and trophic position is a central quantitative outcome."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

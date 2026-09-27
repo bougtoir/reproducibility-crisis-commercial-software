@@ -1,0 +1,196 @@
+{
+  "paper_id": "PMID:41469386",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "88c46d2281d8f9a432e59caadc4e2f9393e3059bc29f7a3925235083511e66f1",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE83139",
+      "files": [
+        {
+          "name": "GSE83139_tbx-v-f-norm-ntv-cpms.csv.gz",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE67835",
+      "files": [
+        {
+          "name": "GSE67835_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE59739",
+      "files": [
+        {
+          "name": "GSE59739_DataTable.txt.gz",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T05:06:54.670074+00:00",
+  "api": {
+    "response_id": "0e4db188-7a46-46f1-973d-c015ec8c46ad",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 41663,
+    "completion_tokens": 2083
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0054",
+            "quote": "CellScope achieves the best cell clustering performance across all datasets regarding accuracy, robustness, and computational efficiency. To quantify clustering performance, we used multiple clustering evaluation metrics: adjusted rand index (ARI) 39 , the clustering accuracy (ACC) 40 , the normalized mutual information (NMI) 41 , and"
+          },
+          {
+            "segment_id": "S0056",
+            "quote": "As shown in Fig. 2 a, CellScope achieved the highest overall average ARI of 0.88 with the lowest standard deviation, ranking first on 32 out of the 36 datasets and second on 3 others, significantly outperforming all other methods (Fig. 2 b)."
+          }
+        ],
+        "rationale": "The principal result is an average ARI computed by re-running clustering methods on 36 public scRNA-seq datasets, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0056",
+            "quote": "As shown in Fig. 2 a, CellScope achieved the highest overall average ARI of 0.88 with the lowest standard deviation, ranking first on 32 out of the 36 datasets and second on 3 others, significantly outperforming all other methods (Fig. 2 b)."
+          },
+          {
+            "segment_id": "S0060",
+            "quote": "Index (ARI). The left 36 panels display ARI values for individual datasets, while the top-right panel summarizes the mean ARI with standard errors indicated by vertical bars (CellScope = 0.88 ± 0.014, Scanpy = 0.68 ± 0.038, Seurat = 0.65 ± 0.038, scLEGA = 0.54 ± 0.060, scDCCA = 0.74 ± 0.041, CellBRF = 0.49 ± 0.042)."
+          }
+        ],
+        "rationale": "The paper's stated priority is clustering performance; the first quantitative result is the mean ARI across 36 benchmark datasets."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0294",
+            "quote": "We deposit the gene expression matrices and their corresponding labels of the benchmark datasets in the Zenodo database, accessible via 10.5281/zenodo.17636503 79 ."
+          },
+          {
+            "segment_id": "S0292",
+            "quote": "Publicly available datasets used in this study can be accessed from the National Center for Biotechnology Information Gene Expression Omnibus ( GSE36552 , GSE83139 , GSE67835 , GSE59739 , GSE81608 , GSE85241 , GSE65525 , GSE60361 , GSE132042 , GSE108097 , GSE103322 , GSE84133 , GSE178101 , GSE228590 , GSE160189 , and"
+          }
+        ],
+        "rationale": "The paper states gene expression matrices and labels for the benchmark datasets are deposited on Zenodo, but the provided deposit listing only contains three GEO accessions (GSE83139, GSE67835, GSE59739) and not the Zenodo deposit; it is unclear whether the listed GEO files are the exact analysis inputs for all 36 datasets."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0183",
+            "quote": "We applied consistent preprocessing to all single-cell RNA sequencing datasets. First, log normalization (base"
+          },
+          {
+            "segment_id": "S0223",
+            "quote": "For each gene, the corresponding p -value was computed based on its expression across different cell clusters. We then selected the top D 1 genes with the lowest p -values (default: D 1 = 500), denoted as"
+          }
+        ],
+        "rationale": "Methods A-E describe preprocessing, manifold fitting, clustering, and evaluation in enough detail (with defaults) to implement without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0286",
+            "quote": "CellScope was executed in a Python environment, with its Python version and required library dependencies detailed in Supplementary Table 26 . All comparative algorithms utilized the latest publicly available versions, with Scanpy version 1.10.3 and Seurat version 5.2.0."
+          }
+        ],
+        "rationale": "The method is implemented in Python and uses publicly available libraries; no proprietary software is required."
+      }
+    },
+    "exact_target": "Mean adjusted rand index (ARI) of CellScope clustering across 36 benchmark datasets, reported as 0.88 ± 0.014.",
+    "target_values": [
+      "0.88",
+      "0.014"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The average clustering performance of CellScope across the 36 benchmark datasets, measured by the adjusted rand index.",
+    "target_type": "performance",
+    "target_location": "Results, Fig. 2a and its caption",
+    "location_quotes": [
+      {
+        "segment_id": "S0056",
+        "quote": "As shown in Fig. 2 a, CellScope achieved the highest overall average ARI of 0.88 with the lowest standard deviation, ranking first on 32 out of the 36 datasets and second on 3 others, significantly outperforming all other methods (Fig. 2 b)."
+      },
+      {
+        "segment_id": "S0060",
+        "quote": "Index (ARI). The left 36 panels display ARI values for individual datasets, while the top-right panel summarizes the mean ARI with standard errors indicated by vertical bars (CellScope = 0.88 ± 0.014, Scanpy = 0.68 ± 0.038, Seurat = 0.65 ± 0.038, scLEGA = 0.54 ± 0.060, scDCCA = 0.74 ± 0.041, CellBRF = 0.49 ± 0.042)."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0183",
+        "quote": "We applied consistent preprocessing to all single-cell RNA sequencing datasets. First, log normalization (base"
+      },
+      {
+        "segment_id": "S0223",
+        "quote": "For each gene, the corresponding p -value was computed based on its expression across different cell clusters. We then selected the top D 1 genes with the lowest p -values (default: D 1 = 500), denoted as"
+      },
+      {
+        "segment_id": "S0248",
+        "quote": "Finally, using the average linkage method based on pairwise similarities, we systematically merge data points starting with each cell as a separate cluster, and denote the clustering results after K steps as T K . T K +1 merges the two clusters with the highest"
+      }
+    ],
+    "required_files": [
+      "GSE59739_DataTable.txt.gz",
+      "GSE67835_RAW.tar",
+      "GSE83139_tbx-v-f-norm-ntv-cpms.csv.gz"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The paper states that gene expression matrices and labels for the benchmark datasets are deposited on Zenodo (10.5281/zenodo.17636503), but the provided deposit listing only includes three GEO accessions (GSE83139, GSE67835, GSE59739). The full set of 36 benchmark datasets and their labels are not all present in the listing; the Zenodo deposit is missing from the listing. The listed GEO files are raw/minimally processed expression matrices for three of the datasets.",
+    "leakage_files": [
+      {
+        "name": "GSE83139_tbx-v-f-norm-ntv-cpms.csv.gz",
+        "reason": "This is a processed expression matrix (normalized CPMS) from one of the benchmark datasets; it may contain the input data but not the target ARI value. However, if the target is the mean ARI across all 36 datasets, this file alone does not leak the result. It is an input, not an output."
+      },
+      {
+        "name": "GSE67835_RAW.tar",
+        "reason": "Raw data archive for one benchmark dataset; contains input expression data, not the target result."
+      },
+      {
+        "name": "GSE59739_DataTable.txt.gz",
+        "reason": "Processed expression table for one benchmark dataset; input data, not the target result."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "The observed mean ARI computed by re-running CellScope on the 36 benchmark datasets is compared to the reported mean ARI of 0.88.",
+    "numerical_agreement_criterion": "Performance metrics on the identical split: the mean ARI should match to the displayed rounding bin (two decimal places, i.e., 0.88).",
+    "specification_gaps": "The paper does not specify the exact random seeds, the precise train/test splits (if any), or the exact preprocessing steps for each of the 36 datasets in the main text; these are in Supplementary Tables and Notes. The Zenodo deposit containing the gene expression matrices and labels is not in the provided listing, so the exact input files for all 36 datasets are not fully identified.",
+    "alternatives_considered": [
+      {
+        "target": "Average ARI of Seurat (0.65) or Scanpy (0.68)",
+        "reason": "These are comparison baselines, not the principal result of the paper."
+      },
+      {
+        "target": "p-value from Wilcoxon signed-rank test (all p-values < 10^-5)",
+        "reason": "This is a supporting statistical test, not the primary quantitative endpoint."
+      },
+      {
+        "target": "Number of datasets where CellScope ranked first (32 out of 36)",
+        "reason": "This is a count derived from the same analysis, but the paper's stated priority is the average ARI as the principal performance metric."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

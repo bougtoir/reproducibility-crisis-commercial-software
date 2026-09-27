@@ -1,0 +1,272 @@
+{
+  "paper_id": "PMID:41472739",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "f470e81bf4f38a542cd1f270cb48eee8002385ca3b874032acc716524e7c2f4b",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "bioproject",
+      "accession": "PRJNA1336462",
+      "files": [
+        {
+          "name": "SRR35674606",
+          "bytes": 15274657
+        },
+        {
+          "name": "SRR35674607",
+          "bytes": 14015111
+        },
+        {
+          "name": "SRR35674608",
+          "bytes": 18935206
+        },
+        {
+          "name": "SRR35674609",
+          "bytes": 15993067
+        },
+        {
+          "name": "SRR35674610",
+          "bytes": 20678335
+        },
+        {
+          "name": "SRR35674611",
+          "bytes": 12052415
+        },
+        {
+          "name": "SRR35674612",
+          "bytes": 11944071
+        },
+        {
+          "name": "SRR35674613",
+          "bytes": 12952741
+        },
+        {
+          "name": "SRR35674614",
+          "bytes": 13622495
+        },
+        {
+          "name": "SRR35674615",
+          "bytes": 9437246
+        },
+        {
+          "name": "SRR35674616",
+          "bytes": 11351405
+        },
+        {
+          "name": "SRR35674617",
+          "bytes": 13065993
+        },
+        {
+          "name": "SRR35674618",
+          "bytes": 16884329
+        },
+        {
+          "name": "SRR35674619",
+          "bytes": 11980191
+        },
+        {
+          "name": "SRR35674620",
+          "bytes": 10434498
+        },
+        {
+          "name": "SRR35674621",
+          "bytes": 13993138
+        },
+        {
+          "name": "SRR35674622",
+          "bytes": 17170250
+        },
+        {
+          "name": "SRR35674623",
+          "bytes": 17811001
+        },
+        {
+          "name": "SRR35674624",
+          "bytes": 10264256
+        },
+        {
+          "name": "SRR35674625",
+          "bytes": 14713420
+        },
+        {
+          "name": "SRR35674626",
+          "bytes": 8819737
+        },
+        {
+          "name": "SRR35674627",
+          "bytes": 14090439
+        },
+        {
+          "name": "SRR35674628",
+          "bytes": 12808346
+        },
+        {
+          "name": "SRR35674629",
+          "bytes": 11150410
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T03:51:32.145602+00:00",
+  "api": {
+    "response_id": "2f59d100-2f30-4d63-83b7-34ce60b6e01f",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 22130,
+    "completion_tokens": 1870
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0043",
+            "quote": "Alpha diversity was assessed using Shannon, ACE, and Chao1 indices, and beta diversity was analyzed through principal coordinate analysis (PCoA)."
+          },
+          {
+            "segment_id": "S0044",
+            "quote": "The sequencing accession number of this study can be found at NCBI https://www.ncbi.nlm.nih.gov/bioproject under the BioProject number PRJNA1336462."
+          }
+        ],
+        "rationale": "The principal results are produced by computational analysis (16S rRNA sequencing and LC-MS metabolomics) of data deposited under PRJNA1336462, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0108",
+            "quote": "In volcanic map analysis, the results showed that in positive ion mode, 101 metabolite levels were down-regulated and 125 metabolites were up-regulated in the DSS group compared to the CON group ( Figure 10A )."
+          },
+          {
+            "segment_id": "S0115",
+            "quote": "To identify specific differential metabolites, this study was conducted with | Log2FC|>0.5, P<0.05 , and VIP>1 was used as the filter conditions, and 21 differential metabolites were screened out, and a differential metabolite heat map was constructed ( Figure 10H )."
+          }
+        ],
+        "rationale": "The paper reports multiple quantitative results; the first principal numerical endpoint in the Results is the count of differential metabolites (101 down-regulated, 125 up-regulated) in the DSS vs CON comparison."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0044",
+            "quote": "The sequencing accession number of this study can be found at NCBI https://www.ncbi.nlm.nih.gov/bioproject under the BioProject number PRJNA1336462."
+          },
+          {
+            "segment_id": "S0047",
+            "quote": "the raw data has been stored in the National Biotechnology Information Center PRJNA1336462 the BioProject project number."
+          }
+        ],
+        "rationale": "The deposit contains raw sequencing reads (SRR accessions) which are the analysis inputs for the 16S rRNA and metabolomics analyses, not the outputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0043",
+            "quote": "Raw sequencing data were processed using the fastp software to obtain high-quality clean tags. Alpha diversity was assessed using Shannon, ACE, and Chao1 indices, and beta diversity was analyzed through principal coordinate analysis (PCoA)."
+          },
+          {
+            "segment_id": "S0044",
+            "quote": "Fecal specimens were subjected to LC-MS-based untargeted metabolomics. In the sample preparation stage, precisely 50 mg of feces was combined with 1 mL of a methanolic/acetonitrile/water (2:2:1, v/v/v) extraction solution that included a 20 mg/L internal standard."
+          }
+        ],
+        "rationale": "The methods for sequencing processing, diversity analysis, and metabolomics sample preparation are described sufficiently to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0043",
+            "quote": "Raw sequencing data were processed using the fastp software to obtain high-quality clean tags."
+          },
+          {
+            "segment_id": "S0046",
+            "quote": "One-way ANOVA was applied to assess differences among more than two groups, while comparisons between two specific groups were carried out with a t-test in GraphPad Prism 9."
+          }
+        ],
+        "rationale": "The methods rely on free software (fastp, R/Python for diversity, GraphPad Prism 9 is proprietary but not essential for re-analysis; free alternatives exist). No proprietary software is strictly required for the computational re-run."
+      }
+    },
+    "exact_target": "Number of down-regulated and up-regulated metabolites in positive ion mode for DSS vs CON comparison: 101 down-regulated and 125 up-regulated.",
+    "target_values": [
+      "101",
+      "125"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The count of metabolites that change in abundance in the DSS group compared to the CON group, as determined by volcano plot analysis in positive ion mode.",
+    "target_type": "count",
+    "target_location": "Results section 3.7, Figure 10A",
+    "location_quotes": [
+      {
+        "segment_id": "S0108",
+        "quote": "In volcanic map analysis, the results showed that in positive ion mode, 101 metabolite levels were down-regulated and 125 metabolites were up-regulated in the DSS group compared to the CON group ( Figure 10A )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0044",
+        "quote": "Fecal specimens were subjected to LC-MS-based untargeted metabolomics. In the sample preparation stage, precisely 50 mg of feces was combined with 1 mL of a methanolic/acetonitrile/water (2:2:1, v/v/v) extraction solution that included a 20 mg/L internal standard."
+      },
+      {
+        "segment_id": "S0045",
+        "quote": "A pooled quality control (QC) sample was generated by combining aliquots of all individual extracts, and this QC pool was then injected into the LC-MS system for analysis."
+      },
+      {
+        "segment_id": "S0046",
+        "quote": "One-way ANOVA was applied to assess differences among more than two groups, while comparisons between two specific groups were carried out with a t-test in GraphPad Prism 9."
+      }
+    ],
+    "required_files": [
+      "SRR35674606",
+      "SRR35674607",
+      "SRR35674608",
+      "SRR35674609",
+      "SRR35674610",
+      "SRR35674611",
+      "SRR35674612",
+      "SRR35674613",
+      "SRR35674614",
+      "SRR35674615",
+      "SRR35674616",
+      "SRR35674617",
+      "SRR35674618",
+      "SRR35674619",
+      "SRR35674620",
+      "SRR35674621",
+      "SRR35674622",
+      "SRR35674623",
+      "SRR35674624",
+      "SRR35674625",
+      "SRR35674626",
+      "SRR35674627",
+      "SRR35674628",
+      "SRR35674629"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit contains 24 raw sequencing runs (SRR35674606–SRR35674629) under BioProject PRJNA1336462. These are the raw inputs for 16S rRNA gene sequencing and possibly metabolomics, but the paper does not specify which runs correspond to which sample or group. No processed data or metadata files are listed.",
+    "leakage_files": [],
+    "required_public_references": [],
+    "comparison_metric": "The observed counts of down-regulated and up-regulated metabolites from re-analysis of the deposited raw data will be compared to the reported counts (101 and 125).",
+    "numerical_agreement_criterion": "Counts must match exactly (101 down-regulated, 125 up-regulated).",
+    "specification_gaps": "The paper does not specify the exact software, parameters, or database used for metabolite identification and quantification; the mapping of SRR runs to experimental groups is not provided; the exact statistical thresholds for volcano plot analysis are not fully detailed.",
+    "alternatives_considered": [
+      {
+        "target": "Number of differential metabolites after filtering (21)",
+        "reason": "This is a secondary result after applying additional filters (|Log2FC|>0.5, P<0.05, VIP>1) and is not the first principal numerical endpoint."
+      },
+      {
+        "target": "Firmicutes/Bacteroidota ratio",
+        "reason": "This is a qualitative finding without a specific reported numerical value in the text."
+      },
+      {
+        "target": "Alpha diversity indices (e.g., ACE, Chao1)",
+        "reason": "These are reported as trends without exact numerical values in the text."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

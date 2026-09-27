@@ -1,0 +1,200 @@
+{
+  "paper_id": "PMID:41454187",
+  "sampling_stratum": "Clinical_Medicine",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "b6b50d2ab4b63f47410195f4ee78e9af333a9791acb924ed842ecdde1afc26ce",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE179730",
+      "files": [
+        {
+          "name": "GSE179730_RNAseq-combinedCPM.txt.gz",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:06:49.722410+00:00",
+  "api": {
+    "response_id": "1e4e7e1b-2431-42c1-a43e-7991ecd5d7eb",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 18752,
+    "completion_tokens": 1961
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0041",
+            "quote": "Clean reads were aligned to the mouse genome GRCm38.83 using STAR. The expression of the"
+          },
+          {
+            "segment_id": "S0042",
+            "quote": "transcript was calculated by FPKM (Fragments Per Kilobase of exon model per million mapped reads). The thresholds for determining differentially expressed genes (DEGs) were P < 0.05, and an absolute fold change ≥ 2."
+          },
+          {
+            "segment_id": "S0043",
+            "quote": "For paired analysis, human head and neck cancer data were obtained from GSE179730 ."
+          }
+        ],
+        "rationale": "The principal results include computational analyses (DEGs, pathway enrichment, hypoxia/angiogenesis scores) on RNA-seq data that a third party can re-run from deposited expression data."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0055",
+            "quote": "In head and neck cancer ( GSE179730 ), anti-PD-1 (nivolumab) therapy decreased the hypoxia score, whereas the Tian angiogenesis score and Tip-like cell score were upregulated by anti-PD-1 (Fig. 2d, e )."
+          },
+          {
+            "segment_id": "S0053",
+            "quote": "d , e Hypoxia score, Tian angiogenesis score and Tip-like cells score before and after immunotherapy ( n = 11 in head and neck cancer)."
+          }
+        ],
+        "rationale": "A principal quantitative result is the hypoxia/angiogenesis/Tip-like score change in the GSE179730 paired head-and-neck cancer dataset (Fig. 2d,e), which is the human computational target tied to the deposit."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0043",
+            "quote": "For paired analysis, human head and neck cancer data were obtained from GSE179730 ."
+          },
+          {
+            "segment_id": "S0055",
+            "quote": "In head and neck cancer ( GSE179730 ), anti-PD-1 (nivolumab) therapy decreased the hypoxia score, whereas the Tian angiogenesis score and Tip-like cell score were upregulated by anti-PD-1 (Fig. 2d, e )."
+          }
+        ],
+        "rationale": "The deposit file GSE179730_RNAseq-combinedCPM.txt.gz is the expression input (CPM matrix) used to compute the hypoxia/angiogenesis scores, not an output of the target analysis."
+      },
+      "G4": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0054",
+            "quote": "Hypoxia scores were calculated using mRNA-based signatures as previously described [ 30 ]. We analysed hypoxia and angiogenesis using Seigneuric, Buffa, Winter, West,"
+          },
+          {
+            "segment_id": "S0055",
+            "quote": "and Ragnum hypoxia signatures, Tian angiogenesis signatures, and Tip-like cell signatures [ 29 , 31 – 35 ]. In head and neck cancer ( GSE179730 ), anti-PD-1 (nivolumab) therapy decreased the hypoxia score, whereas the Tian angiogenesis score and Tip-like cell score were upregulated by anti-PD-1 (Fig. 2d, e )."
+          }
+        ],
+        "rationale": "The paper cites published signatures and prior methods but does not give the exact gene lists, scoring formula, normalization, or paired-test details, so implementation is only partly specified."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0043",
+            "quote": "ClusterProfiler73 R package (v. 4.2.2). Significantly enriched pathways were determined at P < 0.05."
+          },
+          {
+            "segment_id": "S0044",
+            "quote": "(version 3.6.3), and presented as the mean values ± standard deviation(M ± SD). Differences between the two groups were analysed using a two-tailed Student’s t -test."
+          }
+        ],
+        "rationale": "The computational target uses R/Bioconductor and standard statistics; no proprietary software is required for the score computation."
+      }
+    },
+    "exact_target": "Hypoxia score, Tian angiogenesis score and Tip-like cell score before and after anti-PD-1 (nivolumab) immunotherapy in head and neck cancer (GSE179730), reported in Fig. 2d,e; the paper states anti-PD-1 therapy decreased the hypoxia score and upregulated the Tian angiogenesis score and Tip-like cell score.",
+    "target_values": [],
+    "target_values_located_verbatim": true,
+    "blind_target": "In paired human head and neck cancer samples from GSE179730, compare the mRNA-signature-based hypoxia score, Tian angiogenesis score, and Tip-like cell score between pre- and post-anti-PD-1 (nivolumab) immunotherapy samples.",
+    "target_type": "performance",
+    "target_location": "Results, Fig. 2d,e (section 'Anti-PD-1 therapy increased radiosensitivity through improving hypoxia')",
+    "location_quotes": [
+      {
+        "segment_id": "S0053",
+        "quote": "d , e Hypoxia score, Tian angiogenesis score and Tip-like cells score before and after immunotherapy ( n = 11 in head and neck cancer)."
+      },
+      {
+        "segment_id": "S0055",
+        "quote": "In head and neck cancer ( GSE179730 ), anti-PD-1 (nivolumab) therapy decreased the hypoxia score, whereas the Tian angiogenesis score and Tip-like cell score were upregulated by anti-PD-1 (Fig. 2d, e )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0054",
+        "quote": "Hypoxia scores were calculated using mRNA-based signatures as previously described [ 30 ]. We analysed hypoxia and angiogenesis using Seigneuric, Buffa, Winter, West,"
+      },
+      {
+        "segment_id": "S0055",
+        "quote": "and Ragnum hypoxia signatures, Tian angiogenesis signatures, and Tip-like cell signatures [ 29 , 31 – 35 ]. In head and neck cancer ( GSE179730 ), anti-PD-1 (nivolumab) therapy decreased the hypoxia score, whereas the Tian angiogenesis score and Tip-like cell score were upregulated by anti-PD-1 (Fig. 2d, e )."
+      },
+      {
+        "segment_id": "S0044",
+        "quote": "(version 3.6.3), and presented as the mean values ± standard deviation(M ± SD). Differences between the two groups were analysed using a two-tailed Student’s t -test."
+      }
+    ],
+    "required_files": [
+      "GSE179730_RNAseq-combinedCPM.txt.gz"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "GEO accession GSE179730; the deposit lists a single file GSE179730_RNAseq-combinedCPM.txt.gz (combined CPM expression matrix). The paper does not state the exact GEO sample subset or the pre/post nivolumab pairing labels; these must be taken from the GEO series metadata.",
+    "leakage_files": [
+      {
+        "name": "GSE179730_RNAseq-combinedCPM.txt.gz",
+        "reason": "This is the analysis input (expression matrix), not a leakage file; however, if the deposit also contained per-sample score tables or processed result tables they would be leakage. The listing contains only this file, which is required input, so no listed file is a leakage file."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "Mouse genome GRCm38.83",
+        "version": "GRCm38.83"
+      },
+      {
+        "name": "Seigneuric hypoxia signature",
+        "version": "as published (Seigneuric et al. 2007)"
+      },
+      {
+        "name": "Buffa hypoxia signature",
+        "version": "as published (Buffa et al. 2010)"
+      },
+      {
+        "name": "Winter hypoxia signature",
+        "version": "as published (Winter et al. 2007)"
+      },
+      {
+        "name": "West hypoxia signature",
+        "version": "as published"
+      },
+      {
+        "name": "Ragnum hypoxia signature",
+        "version": "as published (Ragnum et al. 2015)"
+      },
+      {
+        "name": "Tian angiogenesis signature",
+        "version": "as published (Tian et al. 2017)"
+      },
+      {
+        "name": "Tip-like cell signature",
+        "version": "as published (Pan et al. 2024)"
+      }
+    ],
+    "comparison_metric": "Recompute the hypoxia, Tian angiogenesis, and Tip-like cell scores for the GSE179730 paired pre/post anti-PD-1 samples and compare the direction and magnitude of change to the reported Fig. 2d,e result.",
+    "numerical_agreement_criterion": "Performance metrics on the identical split; scores compared within the displayed rounding bin of the figure, and paired comparisons by the same two-tailed Student's t-test at reported precision.",
+    "specification_gaps": "Exact gene lists and weights for each signature; score normalization/centering method; which GSE179730 samples constitute the paired pre/post nivolumab set; handling of missing genes; whether scores are z-scored per signature; exact statistical test and multiple-testing correction for Fig. 2d,e.",
+    "alternatives_considered": [
+      {
+        "candidate": "Tumor growth curves / tumor weight in LLC and 4T1 models (Fig. 1d,e,g,i)",
+        "reason_rejected": "These are in vivo experimental measurements, not computations on the deposited GSE179730 data; the deposit does not contain the mouse tumor measurements."
+      },
+      {
+        "candidate": "DEGs and pathway enrichment in mouse tumors (Fig. 4b-d)",
+        "reason_rejected": "The mouse RNA-seq raw data are not in the listed deposit (only GSE179730 human data are listed), so inputs are not deposited."
+      },
+      {
+        "candidate": "Spatial CD4/CD31 distance analysis (Fig. 5e)",
+        "reason_rejected": "Requires imaging data not present in the deposit and proprietary HALO software."
+      }
+    ]
+  },
+  "eligibility": "target_value_not_located_verbatim"
+}

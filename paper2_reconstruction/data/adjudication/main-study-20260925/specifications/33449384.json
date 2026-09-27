@@ -1,0 +1,151 @@
+{
+  "paper_id": "PMID:33449384",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "649d726477ae2c0b0c48f959fe3fc36da9a29e82c5873309ed92ef074c0ba770",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "zenodo",
+      "accession": "4431676",
+      "files": [
+        {
+          "name": "BCI_Traits_TLP_LMA_WD.xlsx",
+          "bytes": 16366
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:12:43.025850+00:00",
+  "api": {
+    "response_id": "47d1e9e0-a487-4968-8086-a88dd32cc30e",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 18346,
+    "completion_tokens": 1565
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0065",
+            "quote": "All statistical analyses were conducted using the R software (R Core Team 2019 ). Data are archived in Zenodo ( https://doi.org/10.5281/zenodo.4431676 )."
+          }
+        ],
+        "rationale": "The principal results are regression/chi-square statistics computed from trait and census data, and the data are archived in Zenodo, so a third party can re-run the computation."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0080",
+            "quote": "there was a significant negative relationship between the proportion of individuals in high plateau and species mean π tlp for evergreen species (Fig. 4 left panel; R 2 = 0.28, P = 0.004), contrasting with no relationship for deciduous species (Fig. 4 right panel; R 2 < 0.001, P = 0.914)."
+          },
+          {
+            "segment_id": "S0085",
+            "quote": "On the regional scale, π tlp was positively correlated with MAI ( R 2 = 0.32, P = 0.003) among evergreen species (Fig. 5 ), indicating that low‐π tlp species are associated with drier habitats."
+          }
+        ],
+        "rationale": "The paper states two principal quantitative results: local-scale R2 = 0.28 and regional-scale R2 = 0.32 for the evergreen π tlp relationship; the regional result is the paper's stated priority ('π tlp explaining 28% and 32% of habitat association on local and regional scales')."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0065",
+            "quote": "Data are archived in Zenodo ( https://doi.org/10.5281/zenodo.4431676 )."
+          }
+        ],
+        "rationale": "The deposit listing contains only BCI_Traits_TLP_LMA_WD.xlsx, which appears to be the trait input table, but the regional MAI analysis also requires census and climate data from the ForestGEO data portal, which are not in the deposit."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0062",
+            "quote": "To test for moisture association on the regional scale, we adopted a moisture association index (MAI) from Condit et al . ( 2013 ), which uses a hierarchical Gaussian logistic regression to model tree distributions across the 72 sample sites included in our regional analysis."
+          },
+          {
+            "segment_id": "S0063",
+            "quote": "We used linear regression (function ‘lm’ from the R package stats ) to quantify the association between the different traits (WD, LMA and π tlp ) and MAI, analyzing evergreen and deciduous species separately."
+          }
+        ],
+        "rationale": "The method (MAI from Condit et al. 2013 plus linear regression of traits on MAI) is described sufficiently to implement without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0064",
+            "quote": "All statistical analyses were conducted using the R software (R Core Team 2019 )."
+          }
+        ],
+        "rationale": "All analyses use R, which is free software; no proprietary software is required."
+      }
+    },
+    "exact_target": "Regional-scale correlation between species' moisture association index (MAI) and π tlp for evergreen species: R 2 = 0.32, P = 0.003",
+    "target_values": [
+      "0.32",
+      "0.003"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The strength and statistical significance of the linear relationship between species mean leaf water potential at turgor loss point (π tlp) and the moisture association index (MAI) across the Isthmus of Panama, analyzed separately for evergreen and deciduous species.",
+    "target_type": "scalar",
+    "target_location": "Results, Regional scale; Fig. 5",
+    "location_quotes": [
+      {
+        "segment_id": "S0085",
+        "quote": "On the regional scale, π tlp was positively correlated with MAI ( R 2 = 0.32, P = 0.003) among evergreen species (Fig. 5 ), indicating that low‐π tlp species are associated with drier habitats."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0062",
+        "quote": "To test for moisture association on the regional scale, we adopted a moisture association index (MAI) from Condit et al . ( 2013 ), which uses a hierarchical Gaussian logistic regression to model tree distributions across the 72 sample sites included in our regional analysis."
+      },
+      {
+        "segment_id": "S0063",
+        "quote": "We used linear regression (function ‘lm’ from the R package stats ) to quantify the association between the different traits (WD, LMA and π tlp ) and MAI, analyzing evergreen and deciduous species separately."
+      },
+      {
+        "segment_id": "S0056",
+        "quote": "Bartlett et al., ( 2012a ): (Eqn 1) π tlp = 0.832 π osm ‐ 0.631"
+      }
+    ],
+    "required_files": [
+      "BCI_Traits_TLP_LMA_WD.xlsx"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The Zenodo deposit (4431676) contains only BCI_Traits_TLP_LMA_WD.xlsx, which provides species-level trait values (π tlp, LMA, WD) and leaf phenology. The MAI values themselves are derived from Condit et al. (2013) and the census/climate data are available from the ForestGEO data portal (http://ctfs.si.edu/Public/Datasets/PanamaTreePlots/PanamaPlotInfo.php), not in the deposit.",
+    "leakage_files": [
+      {
+        "name": "BCI_Traits_TLP_LMA_WD.xlsx",
+        "reason": "Contains the species-level trait values (π tlp, LMA, WD) that are the input to the regression; if it also contains derived MAI or regression outputs it would leak the target, but as listed it is the analysis input."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "Condit et al. 2013 MAI values / Panama tree plot census and climate data",
+        "version": "Condit et al. 2013 (PNAS 110:5064-5068)"
+      }
+    ],
+    "comparison_metric": "Compare the reported R2 and P values from the linear regression of species mean π tlp on MAI for evergreen species against values recomputed from the deposited trait data and the Condit et al. (2013) MAI values.",
+    "numerical_agreement_criterion": "Scalars within displayed rounding bin: R2 = 0.32 (two decimal places), P = 0.003 (three decimal places).",
+    "specification_gaps": "The deposit does not include the MAI values or the census/climate data used to compute them; the exact species included in the evergreen group and the precise MAI values are not fully specified in the paper.",
+    "alternatives_considered": [
+      {
+        "target": "Local-scale R2 = 0.28, P = 0.004 for evergreen π tlp vs proportion in high plateau (Fig. 4)",
+        "reason": "Rejected because the paper's stated priority is the regional-scale result (32%) and the regional analysis is the broader conclusion."
+      },
+      {
+        "target": "R2 = 0.32, P = 0.003 for evergreen π tlp vs MAI (Fig. 5)",
+        "reason": "Selected as the principal target because it is the paper's stated priority and the central quantitative result."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

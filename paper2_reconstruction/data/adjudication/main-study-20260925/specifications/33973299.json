@@ -1,0 +1,182 @@
+{
+  "paper_id": "PMID:33973299",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "5f61891653070944f0fd3e9d2d248969cfb3331eced63b02a2e95c8c425fedbe",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "dryad",
+      "accession": "2v6wwpzn6",
+      "files": []
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:27:02.258332+00:00",
+  "api": {
+    "response_id": "3c8cc295-d21e-46c8-98f6-02f2d532fc6d",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 26498,
+    "completion_tokens": 2337
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0072",
+            "quote": "We ran a series of linear mixed effects models (lme4 and lmerTest functions in R version 3.5.1) (Bates et al., 2015 ; Kuznetsova et al., 2014 ) to examine whether Relative telomere length and Relative TERT expression varied as a function of nutrient treatment and the different habitat"
+          },
+          {
+            "segment_id": "S0084",
+            "quote": "TABLE 2 Statistical summary of the final linear mixed model explaining variation in relative telomere length (log 10 )."
+          }
+        ],
+        "rationale": "The principal result is a linear mixed model fitted to individual-level telomere and habitat data, which a third party can re-run if the data are available."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0084",
+            "quote": "TABLE 2 Statistical summary of the final linear mixed model explaining variation in relative telomere length (log 10 )."
+          },
+          {
+            "segment_id": "S0085",
+            "quote": "N = 413 Fixed effects Estimate SE df t p Intercept −2.203 .271 3.751 −8.125 .002 Treatment 1.954 .358 5.191 5.463 .002 Sex 0.004 .009 393.894 0.453 .650 Body mass −0.008 .002 60.103 −4.514 <.001"
+          }
+        ],
+        "rationale": "The paper's stated principal analysis is the final linear mixed model for relative telomere length, reported in Table 2; this is the central quantitative table."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0137",
+            "quote": "DATA AVAILABILITY STATEMENT Data are available via the Dryad Digital Repository https://doi.org/10.5061/dryad.2v6wwpzn6 ."
+          }
+        ],
+        "rationale": "The deposit listing for Dryad accession 2v6wwpzn6 contains no files, so it cannot be verified whether the listed files are the analysis inputs rather than outputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0072",
+            "quote": "We ran a series of linear mixed effects models (lme4 and lmerTest functions in R version 3.5.1) (Bates et al., 2015 ; Kuznetsova et al., 2014 ) to examine whether Relative telomere length and Relative TERT expression varied as a function of nutrient treatment and the different habitat"
+          },
+          {
+            "segment_id": "S0081",
+            "quote": "For the analysis of Relative telomere length , we established a core model that included three predictor variables: Treatment (whether the stream was high nutrient or"
+          },
+          {
+            "segment_id": "S0082",
+            "quote": "We then ran a final model (Table 2 ) that included the three core predictor variables and any habitat variables and/or interactions that were statistically significant ( p < .05) in the preliminary models (which were the"
+          },
+          {
+            "segment_id": "S0083",
+            "quote": "interactions Treatment × Centered_Density and Treatment × Mean_Granulometric Index ). For this final model, we again calculated VIFs for each of the independent covariates (which were again less than 2 in all cases). The marginal R 2 value of this final model was calculated using the mumin package."
+          }
+        ],
+        "rationale": "The model structure, predictors, interaction selection, random effects, and software are described sufficiently to implement the final model without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0072",
+            "quote": "We ran a series of linear mixed effects models (lme4 and lmerTest functions in R version 3.5.1) (Bates et al., 2015 ; Kuznetsova et al., 2014 ) to examine whether Relative telomere length and Relative TERT expression varied as a function of nutrient treatment and the different habitat"
+          }
+        ],
+        "rationale": "The method uses R with lme4/lmerTest, which are free and open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "Final linear mixed model explaining variation in relative telomere length (log10): Treatment estimate 1.954, SE .358, df 5.191, t 5.463, p .002; Centered_Density estimate −0.135, SE .043, df 387.577, t 3.157, p .002; Mean_Granulometric Index estimate 0.568, SE .068, df 3.594, t 8.407, p .002; Treatment × Centered_Density estimate 0.119, SE .051, df 386.665, t 2.318, p .021; Treatment × Mean_Granulometric Index estimate −0.485, SE .090, df 5.021, t −5.382, p .003; N = 413.",
+    "target_values": [
+      "1.954",
+      ".358",
+      "5.191",
+      "5.463",
+      ".002",
+      "−0.135",
+      ".043",
+      "387.577",
+      "3.157",
+      ".002",
+      "0.568",
+      ".068",
+      "3.594",
+      "8.407",
+      ".002",
+      "0.119",
+      ".051",
+      "386.665",
+      "2.318",
+      ".021",
+      "−0.485",
+      ".090",
+      "5.021",
+      "−5.382",
+      ".003",
+      "413"
+    ],
+    "target_values_located_verbatim": false,
+    "blind_target": "The final linear mixed model for relative telomere length (log10) in juvenile Atlantic salmon, including fixed effects for nutrient treatment, sex, body mass, within-stream centered density, among-stream mean granulometric index, and the interactions between treatment and centered density and between treatment and mean granulometric index, with stream ID and family ID as random effects.",
+    "target_type": "table_cells",
+    "target_location": "Table 2",
+    "location_quotes": [
+      {
+        "segment_id": "S0084",
+        "quote": "TABLE 2 Statistical summary of the final linear mixed model explaining variation in relative telomere length (log 10 )."
+      },
+      {
+        "segment_id": "S0085",
+        "quote": "N = 413 Fixed effects Estimate SE df t p Intercept −2.203 .271 3.751 −8.125 .002 Treatment 1.954 .358 5.191 5.463 .002 Sex 0.004 .009 393.894 0.453 .650 Body mass −0.008 .002 60.103 −4.514 <.001"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0072",
+        "quote": "We ran a series of linear mixed effects models (lme4 and lmerTest functions in R version 3.5.1) (Bates et al., 2015 ; Kuznetsova et al., 2014 ) to examine whether Relative telomere length and Relative TERT expression varied as a function of nutrient treatment and the different habitat"
+      },
+      {
+        "segment_id": "S0081",
+        "quote": "For the analysis of Relative telomere length , we established a core model that included three predictor variables: Treatment (whether the stream was high nutrient or"
+      },
+      {
+        "segment_id": "S0082",
+        "quote": "We then ran a final model (Table 2 ) that included the three core predictor variables and any habitat variables and/or interactions that were statistically significant ( p < .05) in the preliminary models (which were the"
+      },
+      {
+        "segment_id": "S0083",
+        "quote": "interactions Treatment × Centered_Density and Treatment × Mean_Granulometric Index ). For this final model, we again calculated VIFs for each of the independent covariates (which were again less than 2 in all cases). The marginal R 2 value of this final model was calculated using the mumin package."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The Dryad deposit listing for accession 2v6wwpzn6 contains no files, so no input files can be named from the listing. The paper states data are available via Dryad but does not list file names in the provided segments.",
+    "leakage_files": [],
+    "required_public_references": [],
+    "comparison_metric": "Compare the reported fixed-effect estimates, standard errors, degrees of freedom, t values, and p values in Table 2 with those obtained by re-fitting the described final linear mixed model to the deposited data.",
+    "numerical_agreement_criterion": "Counts exact; scalars within displayed rounding bin; intervals by component; p values at reported precision; proportions by numerator/denominator; performance metrics on the identical split.",
+    "specification_gaps": "The exact model formula, coding of categorical predictors, centering/scaling details, random-effect structure, and the precise data-processing steps are not fully specified in the provided segments; the Dryad deposit listing contains no files, so the input data format and contents are unknown.",
+    "alternatives_considered": [
+      {
+        "target": "Table 3 statistical summary of the linear mixed model testing whether the relationship between relative telomere length and each of the final habitat variables significantly differed from 0, tested separately for each treatment.",
+        "reason_rejected": "Table 3 is a follow-up decomposition of the significant interactions from the final model in Table 2, not the principal model result."
+      },
+      {
+        "target": "Marginal R2 value for the final model (0.31).",
+        "reason_rejected": "This is a single summary statistic from the final model, not the principal quantitative result table."
+      },
+      {
+        "target": "Relative TERT expression results.",
+        "reason_rejected": "The paper reports that none of the preliminary models for TERT expression included significant terms and no final model was tested, so it is not the principal quantitative result."
+      }
+    ]
+  },
+  "eligibility": "target_value_not_located_verbatim"
+}

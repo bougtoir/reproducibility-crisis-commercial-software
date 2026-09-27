@@ -1,0 +1,229 @@
+{
+  "paper_id": "PMID:36266291",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "b0c432304c274262d0dde1dde2900bc54e564acd784aaeee82654f6beceeef4c",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE97590",
+      "files": [
+        {
+          "name": "GSE97590_counts.tsv.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE97590_countsNormalized.RData.gz",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE65834",
+      "files": [
+        {
+          "name": "GSE65834_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE22768",
+      "files": [
+        {
+          "name": "GSE22768_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE74817",
+      "files": [
+        {
+          "name": "GSE74817_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:49:10.040848+00:00",
+  "api": {
+    "response_id": "240e7e56-9f30-4030-8e43-62768b5c548f",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 21776,
+    "completion_tokens": 1870
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0017",
+            "quote": "This data resource is available through ImmuneSpace , along with code to reproduce the processing and batch normalization starting from the underlying study data in ImmPort and the Gene Expression Omnibus (GEO)."
+          },
+          {
+            "segment_id": "S0093",
+            "quote": "This yielded a final expression matrix of 4795 samples from 1405 participants representing 10,086 genes (Fig. 2 )."
+          }
+        ],
+        "rationale": "The principal result is a computational data resource: a processed expression matrix produced by a described pipeline from public study data, reproducible by third parties."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0093",
+            "quote": "This yielded a final expression matrix of 4795 samples from 1405 participants representing 10,086 genes (Fig. 2 )."
+          },
+          {
+            "segment_id": "S0038",
+            "quote": "The current release of the Immune Signatures Data Resource consists of 4795 transcriptomic samples from 1405 participants curated from 30 ImmPort studies (16 from HIPC-related studies, 14 non-HIPC"
+          }
+        ],
+        "rationale": "The central quantitative conclusion is the final resource size: 4795 samples, 1405 participants, 10086 genes."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0080",
+            "quote": "Data were read directly from ImmuneSpace using ImmuneSpaceR functions and subsequently preprocessed, quality controlled, and integrated using the following pipeline:"
+          },
+          {
+            "segment_id": "S0078",
+            "quote": "For studies that were not in ImmPort / ImmuneSpace , we located the underlying data by surveying public transcriptome databases (e.g., Gene Expression Omnibus (GEO)) or reaching out to study authors to request data access, allowing us to submit to"
+          }
+        ],
+        "rationale": "The listed GEO files are raw inputs for some studies, but the pipeline reads from ImmuneSpace/ImmPort and includes additional studies and immune response data not in the listing; the full input set is not deposited in the listing."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0086",
+            "quote": "using the RMA algorithm 41 while the function read.ilmn ( limma R package) was used to read and background correct Illumina raw probe intensities. To integrate RNA-seq and microarray data, raw counts for RNA-seq data were transformed using the variance stabilizing transformation (VST)."
+          },
+          {
+            "segment_id": "S0092",
+            "quote": "The target distribution was obtained from samples using Affymetrix platforms, resulting in a well-defined distribution, and each sample in our collection was quantile normalized to this target distribution."
+          }
+        ],
+        "rationale": "Methods describe QC, normalization, batch correction, gene summarization, and filtering in enough detail to reimplement."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0080",
+            "quote": "The ArrayQualityMetrics R package 40 was used for quality control and assurance of all microarray experiments"
+          },
+          {
+            "segment_id": "S0086",
+            "quote": "using the RMA algorithm 41 while the function read.ilmn ( limma R package) was used to read and background correct Illumina raw probe intensities."
+          }
+        ],
+        "rationale": "All named tools are R/Bioconductor or open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "Final Immune Signatures Data Resource expression matrix: 4795 samples from 1405 participants representing 10,086 genes.",
+    "target_values": [
+      "4795",
+      "1405",
+      "10,086"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The final cross-study normalized and batch-corrected gene expression matrix of the Immune Signatures Data Resource, reporting the number of samples, participants, and genes retained.",
+    "target_type": "count",
+    "target_location": "Results/Technical Validation, final resource summary; also Fig. 2 and Table 4.",
+    "location_quotes": [
+      {
+        "segment_id": "S0093",
+        "quote": "This yielded a final expression matrix of 4795 samples from 1405 participants representing 10,086 genes (Fig. 2 )."
+      },
+      {
+        "segment_id": "S0123",
+        "quote": "In summary, we report that the final Immune Signatures Data Resource contains 53 cohorts from 30 studies with 1405 participants and 4795 samples."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0086",
+        "quote": "using the RMA algorithm 41 while the function read.ilmn ( limma R package) was used to read and background correct Illumina raw probe intensities. To integrate RNA-seq and microarray data, raw counts for RNA-seq data were transformed using the variance stabilizing transformation (VST)."
+      },
+      {
+        "segment_id": "S0087",
+        "quote": "Expression data within each study were quantile normalized and log-transformed separately for each cohort/sample type."
+      },
+      {
+        "segment_id": "S0092",
+        "quote": "The target distribution was obtained from samples using Affymetrix platforms, resulting in a well-defined distribution, and each sample in our collection was quantile normalized to this target distribution."
+      },
+      {
+        "segment_id": "S0097",
+        "quote": "modeling gene expression at baseline (at which no vaccine or timepoint effect exists) with a linear model using the limma framework, including feature set vendor (Platform/Affy), study (batch factors), and sample type, Y-chromosome genes presence, as covariates."
+      },
+      {
+        "segment_id": "S0098",
+        "quote": "From here, the study, platform, and cell-type effects were eliminated from the entirety of the expression matrix."
+      }
+    ],
+    "required_files": [
+      "GSE22768_RAW.tar",
+      "GSE65834_RAW.tar",
+      "GSE74817_RAW.tar",
+      "GSE97590_counts.tsv.gz"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The listed GEO files cover only four studies (GSE97590, GSE65834, GSE22768, GSE74817). The full resource uses 30 studies and immune response data from ImmPort/ImmuneSpace; most inputs are not in the deposit listing. GSE97590_counts.tsv.gz is raw RNA-seq counts; the other three are raw microarray archives. GSE74817 appears for both SDY1119 and SDY56 in Table 2.",
+    "leakage_files": [
+      {
+        "name": "GSE97590_countsNormalized.RData.gz",
+        "reason": "Contains normalized expression values, a derived output of the processing pipeline."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "HUGO Gene Nomenclature Committee gene symbols",
+        "version": "accessed Dec 23, 2020"
+      }
+    ],
+    "comparison_metric": "Exact counts of samples, participants, and genes in the final matrix compared to reported values.",
+    "numerical_agreement_criterion": "Counts exact: 4795 samples, 1405 participants, 10086 genes.",
+    "specification_gaps": "Exact versions of R/Bioconductor packages; precise filtering thresholds for genes present in all studies; handling of studies with multiple cohorts; exact covariate coding for batch correction; how immune response data are linked.",
+    "alternatives_considered": [
+      {
+        "target": "Number of cohorts/studies (53 cohorts, 30 studies)",
+        "reason": "Reported but secondary to the final matrix dimensions."
+      },
+      {
+        "target": "Age imputation R2 values (0.367, 0.536)",
+        "reason": "Technical validation metrics, not the principal resource result."
+      },
+      {
+        "target": "ANOVA p < 10^-10 for NAB titer differences",
+        "reason": "A downstream analysis result, not the primary data resource target."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

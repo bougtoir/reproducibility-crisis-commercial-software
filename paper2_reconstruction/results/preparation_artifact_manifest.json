@@ -4,8 +4,8 @@
     "sha256": "4212f30a8b59853ea27eaf667ec250ab5e39f9e0a36d5e1e21ee573b107e974c"
   },
   "manuscript/Supplement_protocols_DRAFT_EN.docx": {
-    "bytes": 63044,
-    "sha256": "fb6278da09d6b21379f7be55c08d1dd6661ee47560cdacb17566632d1772cd6f"
+    "bytes": 63323,
+    "sha256": "6789da5a7e2b20279315ac9120283f98cca14586d2b69bf544531bdf6710a909"
   },
   "manuscript/Editable_tables_EN.docx": {
     "bytes": 38108,
@@ -44,8 +44,8 @@
     "sha256": "bea06616d5fdb3d6f3dbfdc1a07fefee0527d0809861b307a85c070fbb1899fe"
   },
   "protocols/AMENDMENT_AMEND-2026-09-25-06_main_study_execution.md": {
-    "bytes": 6242,
-    "sha256": "2301ea15d9279be6b8dd58f47e2daeb1a6b821e809744550b528cede248fbdc0"
+    "bytes": 6967,
+    "sha256": "a1bcb636de2b218c953ea5aca1c443449180d6aa1815558f219deb92714dc8da"
   },
   "protocols/COMMERCIAL_SOFTWARE_POLICY.md": {
     "bytes": 1048,
@@ -244,8 +244,8 @@
     "sha256": "b51aa52537d4ce4257b28f54fb0bf4b681ea81ef2fa7d808c3cfbe7068fdfa6f"
   },
   "src/paper2/main_study.py": {
-    "bytes": 41639,
-    "sha256": "fad41604225a742d7b6754168e38a55e4d656919f6084c54098a7a185fd06239"
+    "bytes": 42427,
+    "sha256": "855063058f465ba689ad903f0895d7a45ba71dac2ef88b980cef481a97db7f98"
   },
   "src/paper2/model_api.py": {
     "bytes": 8249,
@@ -416,8 +416,8 @@
     "sha256": "8b98b8d55a241e92ef3de34ccc936235ac1b31df75e41b9f5ac906c41d6a11d6"
   },
   "review/EVIDENCE.md": {
-    "bytes": 18922,
-    "sha256": "d71b42df1ae773955b1d3589de270120014153cf495ca6e5ee8ea5a75b1a6f5d"
+    "bytes": 22050,
+    "sha256": "37dddb2aa55dc12bc674a29fabec8bdd17f7aef59c6a10882d699274a001db4c"
   },
   "review/JOURNAL_REQUIREMENTS.md": {
     "bytes": 2673,

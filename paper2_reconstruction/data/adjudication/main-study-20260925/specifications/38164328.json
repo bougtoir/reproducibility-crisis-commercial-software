@@ -1,0 +1,148 @@
+{
+  "paper_id": "PMID:38164328",
+  "sampling_stratum": "Clinical_Medicine",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "6ce3db46d0c527f1c7eca092fd848838c1a85184a68a59296955dda54f0c839a",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "zenodo",
+      "accession": "10046222",
+      "files": [
+        {
+          "name": "xinyuuzhou/trends_in_covid19_vaccine_acceptance-supplementary_material_v1.1.zip",
+          "bytes": 3674910
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:06:20.575332+00:00",
+  "api": {
+    "response_id": "8b053165-4403-44e8-92c2-5024f486b6c4",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 17325,
+    "completion_tokens": 1575
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0008",
+            "quote": "Multilingual deep learning XLM-RoBERTa models annotated all posts using an annotation framework after being fine-tuned on 8125 manually annotated, English-language posts."
+          },
+          {
+            "segment_id": "S0066",
+            "quote": "All data analyses were performed using Python v. 3.7.2 (Python Software Foundation, Wilmington, USA) and R v.4.2.1 (The R Foundation, Vienna, Austria)."
+          }
+        ],
+        "rationale": "The principal results are produced by computational analysis (deep learning annotation and regression) on data (social media posts and country-level variables) that a third party could re-run if the data are available."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0087",
+            "quote": "Proportion of platform users expressing intent to accept COVID-19 vaccination 0.791 (0.245 to 1.337)"
+          },
+          {
+            "segment_id": "S0080",
+            "quote": "multivariate linear regression confirmed that users’ expression of vaccine acceptance was significantly associated with COVID-19 vaccination coverage at the country level ( Table 4 ; full details are available from the online"
+          }
+        ],
+        "rationale": "The paper explicitly highlights the association between vaccine acceptance and vaccination coverage as a key finding, and Table 4 reports the regression coefficient for this association, making it the principal quantitative result."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0045",
+            "quote": "Using these keywords, we collected 13 093 406 publicly available posts on COVID-19 vaccination made in various languages between 13 November 2020 and 5 March 2022; these were all such posts identified by the Meltwater media"
+          },
+          {
+            "segment_id": "S0063",
+            "quote": "Data on country variables were obtained from external sources (details are available from the online repository)."
+          }
+        ],
+        "rationale": "The deposit listing contains only a supplementary material zip file; it is unclear whether it includes the raw social media posts and country-level data needed to reproduce the target, or only code and documentation."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0062",
+            "quote": "We used univariate and multivariate linear regression to identify determinants of COVID-19 vaccine acceptance and coverage across 135 countries and territories."
+          },
+          {
+            "segment_id": "S0063",
+            "quote": "In the regression analysis, we considered vaccination-related opinions on the platform X and 20 country variables, such as governance, pandemic preparedness, level of public trust, cultural factors (e.g. individualism), level of social development and demographic characteristics."
+          }
+        ],
+        "rationale": "The method for the target (multivariate linear regression) is described sufficiently to implement, including the variables and model type, though some details are in the online repository."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0066",
+            "quote": "All data analyses were performed using Python v. 3.7.2 (Python Software Foundation, Wilmington, USA) and R v.4.2.1 (The R Foundation, Vienna, Austria)."
+          }
+        ],
+        "rationale": "The analysis uses Python and R, which are free and open-source software, so no proprietary software is required."
+      }
+    },
+    "exact_target": "Association between proportion of platform users expressing intent to accept COVID-19 vaccination and COVID-19 vaccination coverage, reported as regression coefficient 0.791 (95% CI 0.245 to 1.337) in Table 4.",
+    "target_values": [
+      "0.791",
+      "0.245 to 1.337"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The regression coefficient representing the association between the proportion of social media platform users expressing intent to accept COVID-19 vaccination and the country-level COVID-19 vaccination coverage, adjusted for other country-level characteristics.",
+    "target_type": "scalar",
+    "target_location": "Table 4",
+    "location_quotes": [
+      {
+        "segment_id": "S0087",
+        "quote": "Proportion of platform users expressing intent to accept COVID-19 vaccination 0.791 (0.245 to 1.337)"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0062",
+        "quote": "We used univariate and multivariate linear regression to identify determinants of COVID-19 vaccine acceptance and coverage across 135 countries and territories."
+      },
+      {
+        "segment_id": "S0063",
+        "quote": "In the regression analysis, we considered vaccination-related opinions on the platform X and 20 country variables, such as governance, pandemic preparedness, level of public trust, cultural factors (e.g. individualism), level of social development and demographic characteristics."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit listing contains only a supplementary material zip file (xinyuuzhou/trends_in_covid19_vaccine_acceptance-supplementary_material_v1.1.zip). It is unclear whether this zip includes the raw social media posts and country-level data needed to reproduce the target. The paper states that full details are available from the online repository, but the listing does not specify individual data files.",
+    "leakage_files": [
+      {
+        "name": "xinyuuzhou/trends_in_covid19_vaccine_acceptance-supplementary_material_v1.1.zip",
+        "reason": "This supplementary material likely contains the analysis code, processed data, and possibly the target result tables, which would leak the answer if served."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "The observed regression coefficient and its 95% confidence interval are compared to the reported values.",
+    "numerical_agreement_criterion": "The regression coefficient should match within the displayed rounding bin (three decimal places), and the confidence interval components should match within their displayed rounding bins.",
+    "specification_gaps": "The exact set of country-level variables included in the multivariate model, the method for handling missing data, and the precise definition of vaccination coverage are not fully specified in the main text and are referred to the online repository.",
+    "alternatives_considered": [
+      {
+        "target": "Proportion of platform users expressing vaccine acceptance in Bangladesh (78.1%)",
+        "reason": "This is a descriptive statistic, not the principal analytical result; the paper emphasizes the association with vaccination coverage as a key finding."
+      },
+      {
+        "target": "Regression coefficient for trust in government (0.149) in Table 2",
+        "reason": "This is a determinant of vaccine acceptance, but the paper's main conclusion highlights the association between vaccine acceptance and coverage, making Table 4 the principal target."
+      }
+    ]
+  },
+  "eligibility": "required_inputs_not_in_public_listing"
+}

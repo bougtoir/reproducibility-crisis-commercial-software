@@ -1,0 +1,461 @@
+{
+  "paper_id": "PMID:41472739",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "study": "MAIN-STUDY-2026-09-25",
+  "frozen_at_utc": "2026-09-27T03:58:03.146323+00:00",
+  "investigator_verification": "pending",
+  "exact_target": "Number of down-regulated and up-regulated metabolites in positive ion mode for DSS vs CON comparison: 101 down-regulated and 125 up-regulated.",
+  "target_location": "Results section 3.7, Figure 10A",
+  "location_evidence": [
+    {
+      "segment_id": "S0108",
+      "quote": "In volcanic map analysis, the results showed that in positive ion mode, 101 metabolite levels were down-regulated and 125 metabolites were up-regulated in the DSS group compared to the CON group ( Figure 10A )."
+    }
+  ],
+  "blind_target": "The count of metabolites that change in abundance in the DSS group compared to the CON group, as determined by volcano plot analysis in positive ion mode.",
+  "target_type": "count",
+  "required_inputs": [
+    {
+      "name": "SRR35674621",
+      "served_as": "deposit/PRJNA1336462/SRR35674621.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674621",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/523bbb12fada802978826237afee8517e66eacbf4fe876f04c6ed85958313f65/body",
+      "bytes": 13993138,
+      "sha256": "7ffbdc45f75433eb1d432ceca1890239118ad553457054dfb6c6f5e947fe9b25",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    },
+    {
+      "name": "SRR35674618",
+      "served_as": "deposit/PRJNA1336462/SRR35674618.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674618",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/eecdb2ca36f792b71456d19e92c8e17743c89029f7bf13b73d8eb41211e59399/body",
+      "bytes": 16884329,
+      "sha256": "3b941ad37df4d94672e4ad99301b6cc5bfac71a56c872fa00c0f93d36788a331",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    },
+    {
+      "name": "SRR35674609",
+      "served_as": "deposit/PRJNA1336462/SRR35674609.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674609",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/464dcc2961945746d1aa12d46846d39be8f091e20091620e6ef3c4acf0288747/body",
+      "bytes": 15993067,
+      "sha256": "61345f3c6b80a1bf5659f3b1af915e44cbd53548f5c80e94802bbc229a2399c2",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    },
+    {
+      "name": "SRR35674608",
+      "served_as": "deposit/PRJNA1336462/SRR35674608.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674608",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/4a67b0928672ac1456fae272b14e0f5fba5ab9d3553e7dea3811cc2ebcc60191/body",
+      "bytes": 18935206,
+      "sha256": "ae245e16a03e3e2a05ced41181f84dad3948b5c5bd7749808bd66e17a10e11cc",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    },
+    {
+      "name": "SRR35674611",
+      "served_as": "deposit/PRJNA1336462/SRR35674611.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674611",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/2666a771d1aad146f5890d5f033b69c93c6c052a694a92be6ac4dac204318051/body",
+      "bytes": 12052415,
+      "sha256": "b526559d10dabd795c28983f07d4cd670c22310a70f196a6e73508b202dca696",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    },
+    {
+      "name": "SRR35674619",
+      "served_as": "deposit/PRJNA1336462/SRR35674619.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674619",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/5899e982182f6f803a325c51c1a8fe2dafec179910e2717af94289b6fdce8091/body",
+      "bytes": 11980191,
+      "sha256": "aa561549059e48188bebe4e0aac65e20b1657ff7c96cdc01746be3e27eb58d74",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    },
+    {
+      "name": "SRR35674627",
+      "served_as": "deposit/PRJNA1336462/SRR35674627.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674627",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/d7f51f25725a56431909f8389092e810681bb0ab77d8f98a014b9d61d37e0315/body",
+      "bytes": 14090439,
+      "sha256": "de2be5e5b706d085d8083249c7a9b05dab3229388749dd2bb036eccb23ef3036",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    }
+  ],
+  "excluded_inputs": [
+    {
+      "name": "SRR35674610",
+      "served_as": "deposit/PRJNA1336462/SRR35674610.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674610",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/da305239a87f6ed6273a5546441c3947c28da60a128206f7683bc4b6c83546bf/body",
+      "bytes": 20678335,
+      "sha256": "0f6bc7f13f014ad3b2ba9946089a15f15e04490dbbfecdef4410246b28c82a50",
+      "target_value_tokens_found": [
+        "125"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674614",
+      "served_as": "deposit/PRJNA1336462/SRR35674614.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674614",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/0e9f4ea20dbd7d36eb02aa47675c756b82acac9c32a5c564c5cc930c12d4542d/body",
+      "bytes": 13622495,
+      "sha256": "cd3a7747f58825b3506945a742fe10255f3890bd4c22e2b67eb1865d64ac29c7",
+      "target_value_tokens_found": [
+        "101"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674622",
+      "served_as": "deposit/PRJNA1336462/SRR35674622.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674622",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/e987a7b9b8052035259b47da54b8286bfee7186d396f517bcfc03bd507662007/body",
+      "bytes": 17170250,
+      "sha256": "79f0079db79b8b366e2abe2cbd780e6f4176416216d0456f3a69c8159760845f",
+      "target_value_tokens_found": [
+        "101"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674607",
+      "served_as": "deposit/PRJNA1336462/SRR35674607.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674607",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/a1d20241f9baa34900cdf34b7e139705eff9069ad325292501e27ef101486fe5/body",
+      "bytes": 14015111,
+      "sha256": "8dd4e9d9280a6b8c750caab3d0a1ab29368ea5089b819c63e7b771d9ff19a192",
+      "target_value_tokens_found": [
+        "101"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674628",
+      "served_as": "deposit/PRJNA1336462/SRR35674628.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674628",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/6fa0d4fa3daeb0a8d7e5d34ba91379e349e746123c2ec67e95e0b4868ff07dd0/body",
+      "bytes": 12808346,
+      "sha256": "a23f84116106a59e2927e43dbb88f97eed2a43017b1921cd1cb0bda96c502691",
+      "target_value_tokens_found": [
+        "101"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674617",
+      "served_as": "deposit/PRJNA1336462/SRR35674617.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674617",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/e9da00948d2497ad38791238a930cf441d9fa4b785f3d94e35d94edf89146acf/body",
+      "bytes": 13065993,
+      "sha256": "c5e3ef43eb58108181d1421a02867b907d47a4ba8ffcdb5f4b1b0754a0f87ffc",
+      "target_value_tokens_found": [
+        "101"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674620",
+      "served_as": "deposit/PRJNA1336462/SRR35674620.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674620",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/0c8f6edab60e5e28606b69e1a44e0fa49bccde78332dd9fa7b3e71913d75d954/body",
+      "bytes": 10434498,
+      "sha256": "0c8dcf6a5cb54cb0d40aabd003f7a64073db79ad71c3c28419ff7641bfc2df57",
+      "target_value_tokens_found": [
+        "125"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674623",
+      "served_as": "deposit/PRJNA1336462/SRR35674623.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674623",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/ec1bb811481440d02efb6fb008b3a03450e597e90a39f49f1a8f86c33914abb0/body",
+      "bytes": 17811001,
+      "sha256": "c39d17fa93aa1caf1f3a502659f46f429ae678ec73eba0c33c5db6936077059c",
+      "target_value_tokens_found": [
+        "101"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674624",
+      "served_as": "deposit/PRJNA1336462/SRR35674624.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674624",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/559df06bd17cef56d6041224a2f01effead572e3fb1bc0a1939dc8550aa46c9d/body",
+      "bytes": 10264256,
+      "sha256": "c2cea9c9a3677fdbe640843edfe4d8e82eb9bd5f1944e51bef8a5c97357ebc30",
+      "target_value_tokens_found": [
+        "101"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674629",
+      "served_as": "deposit/PRJNA1336462/SRR35674629.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674629",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/c82fea72cb58e87619c04975e57b1173be569347bc63540133ff671fd30030e8/body",
+      "bytes": 11150410,
+      "sha256": "1dfd9a1f80fec870ee09673751394057c64fc85ce802ec17af6fc3f40eb83967",
+      "target_value_tokens_found": [
+        "125"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674606",
+      "served_as": "deposit/PRJNA1336462/SRR35674606.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674606",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/1257961c23fbb0e2cc022ac8b7e4410e61ca6c24408b15c3a19cd5a1dbba7653/body",
+      "bytes": 15274657,
+      "sha256": "4eef5f0c5f2fe0d4fc1450dfbf5c20bcde3e1dc3e60f8d23d05343e613c58185",
+      "target_value_tokens_found": [
+        "101",
+        "125"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674612",
+      "served_as": "deposit/PRJNA1336462/SRR35674612.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674612",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/d5e2aaf74c2a1ed77e1a6d32b40193571d78e14cad43e9289b5889272a096a9f/body",
+      "bytes": 11944071,
+      "sha256": "1e51ff22b3c0242fa402c8e0ee514ede77b2bb5c778985e45c43ce2b29899caa",
+      "target_value_tokens_found": [
+        "101"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674613",
+      "served_as": "deposit/PRJNA1336462/SRR35674613.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674613",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/7ec71c3e73c1d671229ee9783f61cdf7bed00eb4b6a65640ad55c06fe5d40982/body",
+      "bytes": 12952741,
+      "sha256": "604b3a5ac3e5e1ef61e85174c673abd13c57d34f4c7b0c54d830707194030978",
+      "target_value_tokens_found": [
+        "125"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674615",
+      "served_as": "deposit/PRJNA1336462/SRR35674615.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674615",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/2c161cb628a3466f5d859410a52056542c604242b11217ef9c784ab1ee7e0f32/body",
+      "bytes": 9437246,
+      "sha256": "6476b4d9585e475f470dba1752f86ff7d577e384dbd8f925a65cf987a30b8f85",
+      "target_value_tokens_found": [
+        "125"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674616",
+      "served_as": "deposit/PRJNA1336462/SRR35674616.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674616",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/12294ee94dedc6b4ad478454cd2c46083240eecbd8109cdcd83f35354b9a1cca/body",
+      "bytes": 11351405,
+      "sha256": "ba9f81f5f220818d425ebe13674e31343ebd4d1e59d969746996358bb6e4b2b4",
+      "target_value_tokens_found": [
+        "101"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674625",
+      "served_as": "deposit/PRJNA1336462/SRR35674625.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674625",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/f2c5e2a3f6902ed8aec67495c87b0fb73d240605b063359ec5269a0f05677ea5/body",
+      "bytes": 14713420,
+      "sha256": "ea249237643bbc53cfef62398550b21890bb378aaad59e7a5a33b8295e524017",
+      "target_value_tokens_found": [
+        "125"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    },
+    {
+      "name": "SRR35674626",
+      "served_as": "deposit/PRJNA1336462/SRR35674626.fastq.gz",
+      "identifier": "bioproject:PRJNA1336462:SRR35674626",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41472739/bioproject/cbe7219cbd4d5a8c49d8f72a2ecfae014489d36d113277eb8b3cc01566858899/body",
+      "bytes": 8819737,
+      "sha256": "574f7864eb93291f665e7f33f490162720244a63d22316b8208018d184989d28",
+      "target_value_tokens_found": [
+        "125"
+      ],
+      "result_like_header_columns": [],
+      "archive_members": [],
+      "reason": "target_or_data_leakage_value_present_in_file"
+    }
+  ],
+  "allowed_resources": [
+    "worker image paper2-science:pilot-2026-09-25: Python scientific stack, R packages and PATH tools",
+    "served publication text and served deposited inputs only"
+  ],
+  "blocked_original_artifacts": [
+    "original implementation, repositories, notebooks, scripts",
+    "processed results, supplementary result tables, figures of the study",
+    "any author communication"
+  ],
+  "comparison_metric": "The observed counts of down-regulated and up-regulated metabolites from re-analysis of the deposited raw data will be compared to the reported counts (101 and 125).",
+  "numerical_agreement_criterion": "Counts must match exactly (101 down-regulated, 125 up-regulated).",
+  "conclusion_criterion": "Conclusion agreement is scored only when the numerical criterion is met or when the publication states a directional claim that the observed value can be compared with; otherwise the conclusion component is not_assessable.",
+  "resource_ceiling": {
+    "slots_per_paper": 3,
+    "wall_seconds_per_slot": 14400,
+    "step_seconds": 3600,
+    "provider_tokens_per_slot": 1500000,
+    "tool_calls_per_slot": 40,
+    "max_completion_tokens": 8192,
+    "worker_cpus": 1,
+    "worker_memory": "3g",
+    "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+    "network": "none",
+    "image": "paper2-science:pilot-2026-09-25"
+  },
+  "stopping_rule": [
+    "final report submitted by the slot",
+    "wall, step, token, tool-call or output ceiling reached (recorded as the stop reason)",
+    "required input absent from the served package: report null observation with F01/F18",
+    "specification gap that cannot be closed from the served text: report null with F04-F08",
+    "controller or worker error: recorded as harness stop, never as an outcome",
+    "no rerun, no extension and no rule change after the slot starts"
+  ],
+  "specification_gaps": "The paper does not specify the exact software, parameters, or database used for metabolite identification and quantification; the mapping of SRR runs to experimental groups is not provided; the exact statistical thresholds for volcano plot analysis are not fully detailed.",
+  "gate_reviews": {
+    "G1": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0043",
+          "quote": "Alpha diversity was assessed using Shannon, ACE, and Chao1 indices, and beta diversity was analyzed through principal coordinate analysis (PCoA)."
+        },
+        {
+          "segment_id": "S0044",
+          "quote": "The sequencing accession number of this study can be found at NCBI https://www.ncbi.nlm.nih.gov/bioproject under the BioProject number PRJNA1336462."
+        }
+      ],
+      "rationale": "The principal results are produced by computational analysis (16S rRNA sequencing and LC-MS metabolomics) of data deposited under PRJNA1336462, which a third party can re-run."
+    },
+    "G2": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0108",
+          "quote": "In volcanic map analysis, the results showed that in positive ion mode, 101 metabolite levels were down-regulated and 125 metabolites were up-regulated in the DSS group compared to the CON group ( Figure 10A )."
+        },
+        {
+          "segment_id": "S0115",
+          "quote": "To identify specific differential metabolites, this study was conducted with | Log2FC|>0.5, P<0.05 , and VIP>1 was used as the filter conditions, and 21 differential metabolites were screened out, and a differential metabolite heat map was constructed ( Figure 10H )."
+        }
+      ],
+      "rationale": "The paper reports multiple quantitative results; the first principal numerical endpoint in the Results is the count of differential metabolites (101 down-regulated, 125 up-regulated) in the DSS vs CON comparison."
+    },
+    "G3": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0044",
+          "quote": "The sequencing accession number of this study can be found at NCBI https://www.ncbi.nlm.nih.gov/bioproject under the BioProject number PRJNA1336462."
+        },
+        {
+          "segment_id": "S0047",
+          "quote": "the raw data has been stored in the National Biotechnology Information Center PRJNA1336462 the BioProject project number."
+        }
+      ],
+      "rationale": "The deposit contains raw sequencing reads (SRR accessions) which are the analysis inputs for the 16S rRNA and metabolomics analyses, not the outputs."
+    },
+    "G4": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0043",
+          "quote": "Raw sequencing data were processed using the fastp software to obtain high-quality clean tags. Alpha diversity was assessed using Shannon, ACE, and Chao1 indices, and beta diversity was analyzed through principal coordinate analysis (PCoA)."
+        },
+        {
+          "segment_id": "S0044",
+          "quote": "Fecal specimens were subjected to LC-MS-based untargeted metabolomics. In the sample preparation stage, precisely 50 mg of feces was combined with 1 mL of a methanolic/acetonitrile/water (2:2:1, v/v/v) extraction solution that included a 20 mg/L internal standard."
+        }
+      ],
+      "rationale": "The methods for sequencing processing, diversity analysis, and metabolomics sample preparation are described sufficiently to implement without original code."
+    },
+    "G5": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0043",
+          "quote": "Raw sequencing data were processed using the fastp software to obtain high-quality clean tags."
+        },
+        {
+          "segment_id": "S0046",
+          "quote": "One-way ANOVA was applied to assess differences among more than two groups, while comparisons between two specific groups were carried out with a t-test in GraphPad Prism 9."
+        }
+      ],
+      "rationale": "The methods rely on free software (fastp, R/Python for diversity, GraphPad Prism 9 is proprietary but not essential for re-analysis; free alternatives exist). No proprietary software is strictly required for the computational re-run."
+    }
+  }
+}

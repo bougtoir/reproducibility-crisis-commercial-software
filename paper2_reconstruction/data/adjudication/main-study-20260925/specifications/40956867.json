@@ -1,0 +1,200 @@
+{
+  "paper_id": "PMID:40956867",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "98fec0444b59b194ecf928477a07ad8bf75a7fa42a2a62a0ca6338daffe99708",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "dryad",
+      "accession": "c9b25",
+      "files": []
+    },
+    {
+      "kind": "zenodo",
+      "accession": "15007585",
+      "files": [
+        {
+          "name": "c1global1nfd_public.bed",
+          "bytes": 20313175
+        },
+        {
+          "name": "c1global1nfd_public.bim",
+          "bytes": 585206
+        },
+        {
+          "name": "c1global1nfd_public.coord",
+          "bytes": 204142
+        },
+        {
+          "name": "c1global1nfd_public.fam",
+          "bytes": 144711
+        },
+        {
+          "name": "c1global1nfd_public.indiv_meta",
+          "bytes": 290926
+        },
+        {
+          "name": "c1global1nfd_public.outer",
+          "bytes": 65507
+        },
+        {
+          "name": "papers.txt",
+          "bytes": 5785
+        }
+      ]
+    },
+    {
+      "kind": "dryad",
+      "accession": "p8cz8wb18",
+      "files": []
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:00:30.386908+00:00",
+  "api": {
+    "response_id": "328caf05-e73b-4445-9bcb-dca8ab96722e",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 36763,
+    "completion_tokens": 1802
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0010",
+            "quote": "Here, we present a computationally tractable method that identifies long-range genetic similarities in a background of spatially"
+          },
+          {
+            "segment_id": "S0110",
+            "quote": "We apply the method to fifty replicates of the simulated scenario in Fig 1 and evaluate performance in terms of: 1) the rate of finding the correct destination deme, 2) the average distance from the MLE to the true source deme, and 3) the error in the estimated source fraction ( c ^ )."
+          }
+        ],
+        "rationale": "The principal results are produced by running the FEEMSmix computation on simulated and empirical genotype data, which a third party can re-run given the deposited data."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0115",
+            "quote": "Across both simulated scenarios, the method identified the true destination deme in 100 % , C 95 = [ 93 % , 100 % ] of the replicates with dense sampling and"
+          },
+          {
+            "segment_id": "S0116",
+            "quote": "high gene flow, and in 92 % , C 95 = [ 81 % , 98 % ] of replicates with sparse sampling and high gene flow ( c = 0.5)."
+          }
+        ],
+        "rationale": "A principal quantitative result is the rate of correctly identifying the true destination deme, reported as a proportion with a Clopper-Pearson confidence interval."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0021",
+            "quote": "The corrected wolves data set and the human data set used in this study can be found at https://doi.org/10.5061/dryad.p8cz8wb18 and https://zenodo.org/records/15007585 ."
+          }
+        ],
+        "rationale": "The Zenodo deposit lists PLINK-format genotype files (bed/bim/fam) plus metadata, which are analysis inputs, but the Dryad deposits (c9b25, p8cz8wb18) list no files, so it cannot be confirmed that all inputs for the target are deposited."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0047",
+            "quote": "Step 1. Apply FEEMS . We fit the FEEMS method to the data using the deme-specific variance mode outlined in [ 10 ], with cross-validation to choose the appropriate tuning parameters λ and λ q ."
+          },
+          {
+            "segment_id": "S0106",
+            "quote": "Verification and comparison Simulation settings All simulations were conducted in msprime [ 30 ]. As a set of test cases, we simulate a 8 × 12 nearest neighbor graph/grid of demes with a barrier at the center of the grid to capture a spatially"
+          }
+        ],
+        "rationale": "The workflow steps, simulation settings, and likelihood are described in enough detail to reimplement the method."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0103",
+            "quote": "Optimization in FEEMSmix is done using the Nelder-Mead and L-BFGS-B algorithms implemented in scipy [ 26 – 28 ], with the mixture model fit using scikit-learn [ 29 ]."
+          },
+          {
+            "segment_id": "S0021",
+            "quote": "Finally, FEEMSmix is readily available as a complete python package from https://github.com/NovembreLab/feems ."
+          }
+        ],
+        "rationale": "The method relies on open-source Python packages (scipy, scikit-learn, msprime) and no proprietary software."
+      }
+    },
+    "exact_target": "Rate of correctly identifying the true destination deme in the dense sampling, high gene flow (c = 0.5) simulation scenario, reported as 100 % , C 95 = [ 93 % , 100 % ].",
+    "target_values": [
+      "100 %",
+      "93 %",
+      "100 %"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The proportion of simulation replicates in which FEEMSmix identifies the true destination deme of the long-range gene flow event, under the dense sampling scenario with high gene flow.",
+    "target_type": "proportion",
+    "target_location": "Verification and comparison, Evaluation across multiple replicate simulations (text; summarized in Fig 2).",
+    "location_quotes": [
+      {
+        "segment_id": "S0115",
+        "quote": "Across both simulated scenarios, the method identified the true destination deme in 100 % , C 95 = [ 93 % , 100 % ] of the replicates with dense sampling and"
+      },
+      {
+        "segment_id": "S0116",
+        "quote": "high gene flow, and in 92 % , C 95 = [ 81 % , 98 % ] of replicates with sparse sampling and high gene flow ( c = 0.5)."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0106",
+        "quote": "Verification and comparison Simulation settings All simulations were conducted in msprime [ 30 ]. As a set of test cases, we simulate a 8 × 12 nearest neighbor graph/grid of demes with a barrier at the center of the grid to capture a spatially"
+      },
+      {
+        "segment_id": "S0107",
+        "quote": "heterogeneous migration landscape. The long-range gene flow event occurs as an instantaneous pulse ( MassMigration event) with varying source fraction c ∈ { 0.05 , 0.25 , 0.5 } across the barrier. We use 1,000 independent SNPs and show results for two sampling scenarios: Constant, dense sampling . A sampling of 50% of all demes in the grid with the true source deme being sampled with 10"
+      },
+      {
+        "segment_id": "S0110",
+        "quote": "We apply the method to fifty replicates of the simulated scenario in Fig 1 and evaluate performance in terms of: 1) the rate of finding the correct destination deme, 2) the average distance from the MLE to the true source deme, and 3) the error in the estimated source fraction ( c ^ )."
+      }
+    ],
+    "required_files": [
+      "c1global1nfd_public.bed",
+      "c1global1nfd_public.bim",
+      "c1global1nfd_public.fam",
+      "c1global1nfd_public.indiv_meta"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The Zenodo record 15007585 provides PLINK-format genotype files (c1global1nfd_public.bed/.bim/.fam) and individual metadata (c1global1nfd_public.indiv_meta) for the human data set. The wolf data set is referenced to Dryad c9b25 and p8cz8wb18, but those deposits list no files. The simulation inputs are generated by code (msprime) and are not deposited as data files.",
+    "leakage_files": [
+      {
+        "name": "papers.txt",
+        "reason": "Contains the manuscript text including the reported target value and all results."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Compare the reported proportion (100%) and its Clopper-Pearson 95% confidence interval [93%, 100%] against the solver's recomputed proportion and interval from the same simulation replicates.",
+    "numerical_agreement_criterion": "Proportions compared by numerator/denominator; the reported 100% corresponds to 50/50 replicates, and the interval must match the Clopper-Pearson interval at the reported precision.",
+    "specification_gaps": "The exact random seeds and replicate ordering for the 50 simulation replicates are not specified; the precise grid registration and deme assignment details are only partially described; the exact SNP subsetting to 1,000 independent SNPs is not fully specified.",
+    "alternatives_considered": [
+      {
+        "target": "Source fraction estimate c ^ = 0.52 compared to c = 0.5 simulated (S0062)",
+        "reason": "This is a single representative simulation example rather than the principal quantitative result across replicates."
+      },
+      {
+        "target": "False positive rate 4%, C95=[1%,8%] (S0111)",
+        "reason": "This is a secondary performance metric, not the primary endpoint of the simulation evaluation."
+      },
+      {
+        "target": "Model fit R2 ≈ 0.95 for wolves (S0126)",
+        "reason": "This is a descriptive fit statistic for an empirical application, not the principal quantitative result."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

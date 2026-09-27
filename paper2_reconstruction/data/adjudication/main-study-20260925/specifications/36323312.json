@@ -1,0 +1,177 @@
+{
+  "paper_id": "PMID:36323312",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "ea2ab8a0ff1104864c0e2b6b31fdaad90a8d020e08ed8d559303519430e303c9",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE159630",
+      "files": [
+        {
+          "name": "GSE159630_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:04:31.937849+00:00",
+  "api": {
+    "response_id": "3c2860ca-cdd1-456f-bdf1-5885fdf1e28d",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 34884,
+    "completion_tokens": 2220
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0037",
+            "quote": "IL-4 priming increased the number of NF-κB-p65 peaks from 25,428 to 48,507 ( Figure 2A ) and the occupancy of LPS-activated NF-κB-p65 at 26,440 genomic regions ( Figure 2B ; Table S1 )."
+          },
+          {
+            "segment_id": "S0174",
+            "quote": "The single-ended mRNA sequence reads were analyzed using the nf-core/rnaseq v3.0 pipeline ( Ewels et al., 2020 )."
+          }
+        ],
+        "rationale": "The principal result (NF-κB-p65 peak counts) is produced by computational analysis of ChIP-seq data, which a third party can re-run from deposited raw sequencing data."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0037",
+            "quote": "IL-4 priming increased the number of NF-κB-p65 peaks from 25,428 to 48,507 ( Figure 2A ) and the occupancy of LPS-activated NF-κB-p65 at 26,440 genomic regions ( Figure 2B ; Table S1 )."
+          }
+        ],
+        "rationale": "A primary numerical endpoint is explicitly stated: the number of NF-κB-p65 peaks in IL-4-primed vs non-polarized LPS-activated BMDMs."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0137",
+            "quote": "Sequencing data sets performed in this study are available at the NCBI GEO under accession numbers: GSE181223 . Publicly available, published ChIP-seq data sets can be accessed on the following GEO accession numbers: GSE159630 and GSE151015 ."
+          }
+        ],
+        "rationale": "The deposit listing shows only GSE159630 (a public dataset from Hoeksema et al., 2021), which is not the raw input for the target; the paper's own data are in GSE181223, which is not in the listing. Thus the listed files are not the analysis inputs for the target."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0177",
+            "quote": "ChIP-seq read alignment and filtering were carried out using our ChIP-seq command line pipeline ( Barta, 2011 ). Reads were mapped to the mouse reference genome ( mm10 ) using the default parameters of BWA MEM aligner ( Li and Durbin, 2009 )."
+          },
+          {
+            "segment_id": "S0178",
+            "quote": "MACS2 ( Zhang et al., 2008 ) was used to call peaks at 5% false discovery rate (FDR)."
+          },
+          {
+            "segment_id": "S0180",
+            "quote": "To determine differentially bound NFκB-p65 genomic regions, we first used DiffBind ( Ross-Innes et al., 2012 ) to generate a consensus peak set with minOverlap=2 for all samples."
+          }
+        ],
+        "rationale": "The ChIP-seq analysis method (alignment, peak calling, differential binding) is described with sufficient detail and references to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0294",
+            "quote": "STAR Dobin et al., 2013 https://github.com/alexdobin/STAR Salmon Patro et al., 2017 https://github.com/COMBINE-lab/salmon EdgeR v3.38.4 Robinson et al., 2010 https://bioconductor.org/packages/release/bioc/html/edgeR.html"
+          },
+          {
+            "segment_id": "S0295",
+            "quote": "BWA v0.7.17 Li et al., 2009 https://github.com/lh3/bwa BEDTools v2.30.0 Quinlan and Hall, 2010 https://bedtools.readthedocs.io/en/latest/ Samtools v1.16 Li et al., 2009 http://www.htslib.org/ MACS2 v2.2.7.1 Zhang et al., 2008 https://pypi.org/project/MACS2/"
+          }
+        ],
+        "rationale": "All listed software (STAR, Salmon, edgeR, BWA, BEDTools, Samtools, MACS2, DiffBind, DESeq2, HOMER) are free and open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "Number of NF-κB-p65 peaks in LPS-activated non-polarized vs IL-4-primed WT BMDMs: 25,428 vs 48,507.",
+    "target_values": [
+      "25,428",
+      "48,507"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of NF-κB-p65 binding sites (peaks) detected by ChIP-seq in LPS-activated wild-type bone marrow-derived macrophages, comparing cells that were non-polarized versus cells that were primed with IL-4.",
+    "target_type": "count",
+    "target_location": "Figure 2A and Results section 'Prior IL-4 exposure approximately doubles the LPS-activated NF-κB-p65 cistrome, resulting in an altered enhancer landscape'",
+    "location_quotes": [
+      {
+        "segment_id": "S0037",
+        "quote": "IL-4 priming increased the number of NF-κB-p65 peaks from 25,428 to 48,507 ( Figure 2A ) and the occupancy of LPS-activated NF-κB-p65 at 26,440 genomic regions ( Figure 2B ; Table S1 )."
+      },
+      {
+        "segment_id": "S0248",
+        "quote": "(A) Bar plot visualization of the overall number of binding sites for NF-κB-p65 from ChIP-seq experiments in IL-4-primed and non-polarized WT and Stat6 −/− BMDMs following LPS activation."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0177",
+        "quote": "ChIP-seq read alignment and filtering were carried out using our ChIP-seq command line pipeline ( Barta, 2011 ). Reads were mapped to the mouse reference genome ( mm10 ) using the default parameters of BWA MEM aligner ( Li and Durbin, 2009 )."
+      },
+      {
+        "segment_id": "S0178",
+        "quote": "MACS2 ( Zhang et al., 2008 ) was used to call peaks at 5% false discovery rate (FDR)."
+      },
+      {
+        "segment_id": "S0180",
+        "quote": "To determine differentially bound NFκB-p65 genomic regions, we first used DiffBind ( Ross-Innes et al., 2012 ) to generate a consensus peak set with minOverlap=2 for all samples."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The paper's own sequencing data are deposited under GEO accession GSE181223 (S0137), but this accession is not present in the provided deposit listing. The listing contains only GSE159630, which is a public dataset from Hoeksema et al., 2021 (S0137, S0291, S0292) and is not the raw input for the target NF-κB-p65 peak counts. Therefore, the required input files are not among the listed files.",
+    "leakage_files": [
+      {
+        "name": "GSE159630_RAW.tar",
+        "reason": "Contains public ChIP-seq data from Hoeksema et al., 2021 (GSE159630), which may include processed peak files or coverage tracks that could reveal the target peak counts or related results."
+      },
+      {
+        "name": "filelist.txt",
+        "reason": "May list file names or metadata that could indirectly reveal the contents or results of the deposit."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "mm10 (GRCm38) mouse genome assembly",
+        "version": "mm10"
+      },
+      {
+        "name": "ENCODE mouse blacklist regions",
+        "version": "Amemiya et al., 2019"
+      }
+    ],
+    "comparison_metric": "Exact match of reported peak counts (25,428 and 48,507) to counts obtained by re-running the described ChIP-seq peak calling and differential binding analysis on the raw sequencing data.",
+    "numerical_agreement_criterion": "Counts must match exactly as printed.",
+    "specification_gaps": "The exact parameters for peak calling (e.g., MACS2 effective genome size, model fold, q-value cutoff) are not fully specified; the method for counting 'overall number of binding sites' (e.g., whether from a consensus peak set or per-sample peaks) is not detailed; the exact version of the ChIP-seq command line pipeline (Barta, 2011) is not given; the number of biological replicates and how they were combined for peak calling is not fully described.",
+    "alternatives_considered": [
+      {
+        "target": "Number of synergistically activated genes (1,318) from RNA-seq",
+        "reason": "This is a principal result but the target hierarchy prioritizes the primary numerical endpoint; the NF-κB-p65 peak count is a more direct quantitative endpoint and appears earlier in the results."
+      },
+      {
+        "target": "Number of de novo (15,236) and enhanced (11,204) NF-κB-p65 peaks",
+        "reason": "These are subcategories of the total peak count and are reported later; the total peak count is the primary endpoint."
+      },
+      {
+        "target": "Number of genes with EGR2-dependent elevated LPS responsiveness (469)",
+        "reason": "This is a downstream result and not the principal quantitative endpoint."
+      }
+    ]
+  },
+  "eligibility": "required_inputs_not_in_public_listing"
+}

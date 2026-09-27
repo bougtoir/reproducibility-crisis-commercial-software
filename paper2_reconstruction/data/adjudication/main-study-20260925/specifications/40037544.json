@@ -1,0 +1,194 @@
+{
+  "paper_id": "PMID:40037544",
+  "sampling_stratum": "Clinical_Medicine",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "cb5e1fcb1f1a417f0a2cef0e147703fc73630f32eb0a583317a77ef23727839f",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE62087",
+      "files": [
+        {
+          "name": "GSE62087_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE33000",
+      "files": [
+        {
+          "name": "GSE33000_raw_data.txt.gz",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:05:34.923114+00:00",
+  "api": {
+    "response_id": "6231f89b-5563-47ab-97a4-ee8eea96ded9",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 14943,
+    "completion_tokens": 1908
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0070",
+            "quote": "Following the instruction of NP-TCMtarget, we first collect the transcriptional data from the microarray experiment deposited in GEO (GSE accession: GSE62087 ) ( Supplementary Table 1 )."
+          },
+          {
+            "segment_id": "S0071",
+            "quote": "The differential gene profiles induced by the diabetes model and XiaoKeAn treatment are calculated and submitted to the DETP module to predict effect targets."
+          }
+        ],
+        "rationale": "The principal result is produced by a computational pipeline (NP-TCMtarget) applied to public microarray data (GSE62087), which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0071",
+            "quote": "We find that the disease model and XiaoKeAn treatment are significantly associated with 1612 and 2157 effect targets among all 8233 targets, respectively ( Fig. 4A ; Supplementary Table 2 ; FDR ≤ 0.05)."
+          },
+          {
+            "segment_id": "S0073",
+            "quote": "By comparing the NETS values of the effect targets that are significantly associated with the diabetes model and XiaoKeAn treatment, we identify 734 targets that were significantly affected by the diabetes model but could be reversed by the XiaoKeAn treatment"
+          }
+        ],
+        "rationale": "The paper's stated priority is the XiaoKeAn use case; the first principal quantitative result is the count of effect targets (1612 and 2157), followed by the 734 reversible targets."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0070",
+            "quote": "Following the instruction of NP-TCMtarget, we first collect the transcriptional data from the microarray experiment deposited in GEO (GSE accession: GSE62087 ) ( Supplementary Table 1 )."
+          }
+        ],
+        "rationale": "The listed GEO deposit GSE62087 contains the raw microarray data that are the analysis inputs for the target prediction."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0040",
+            "quote": "To evaluate the associations between the query gene list and targets, the connections between the query gene list L and each target-specific gene signature were calculated by using a modified gene set enrichment approach [ 25 ]."
+          },
+          {
+            "segment_id": "S0042",
+            "quote": "We assess the significance of an actual ETS by comparing it with a set of random scores ETSNULL. We generated the random space of query gene lists by randomly permuting genes in L for 1000 times, creating a null distribution of ETS NULL for the signature."
+          },
+          {
+            "segment_id": "S0044",
+            "quote": "Firstly, we normalize the ETS for each target signature to account for the size of the signature, yielding a normalized effect target score (NETS):"
+          },
+          {
+            "segment_id": "S0046",
+            "quote": "We then control the proportion of false positives by calculating the false discovery rate (FDR) corresponding to each NETS."
+          }
+        ],
+        "rationale": "The method for effect target prediction (DETP) is described in sufficient detail (modified GSEA, permutation, normalization, FDR) to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0034",
+            "quote": "The website was built using the R shiny package and the analysis code was written in R."
+          }
+        ],
+        "rationale": "The method uses R and open-source packages (e.g., WebGestaltR), requiring no proprietary software."
+      }
+    },
+    "exact_target": "Number of effect targets significantly associated with the diabetes disease model and with XiaoKeAn treatment, among all 8233 targets (FDR ≤ 0.05).",
+    "target_values": [
+      "1612",
+      "2157",
+      "8233"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of gene targets whose expression signatures are significantly associated with the diabetes disease model and with XiaoKeAn treatment, as computed by the DETP module of NP-TCMtarget.",
+    "target_type": "count",
+    "target_location": "Results, subsection 'Use case', paragraph reporting DETP analysis of XiaoKeAn; also Figure 4A and Supplementary Table 2.",
+    "location_quotes": [
+      {
+        "segment_id": "S0071",
+        "quote": "We find that the disease model and XiaoKeAn treatment are significantly associated with 1612 and 2157 effect targets among all 8233 targets, respectively ( Fig. 4A ; Supplementary Table 2 ; FDR ≤ 0.05)."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0040",
+        "quote": "To evaluate the associations between the query gene list and targets, the connections between the query gene list L and each target-specific gene signature were calculated by using a modified gene set enrichment approach [ 25 ]."
+      },
+      {
+        "segment_id": "S0042",
+        "quote": "We assess the significance of an actual ETS by comparing it with a set of random scores ETSNULL. We generated the random space of query gene lists by randomly permuting genes in L for 1000 times, creating a null distribution of ETS NULL for the signature."
+      },
+      {
+        "segment_id": "S0044",
+        "quote": "Firstly, we normalize the ETS for each target signature to account for the size of the signature, yielding a normalized effect target score (NETS):"
+      },
+      {
+        "segment_id": "S0046",
+        "quote": "We then control the proportion of false positives by calculating the false discovery rate (FDR) corresponding to each NETS."
+      },
+      {
+        "segment_id": "S0061",
+        "quote": "Generally, those targets with FDR ≤ 0.05 are regarded as potential effect targets of the query drug or disease."
+      }
+    ],
+    "required_files": [
+      "GSE62087_RAW.tar"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "GSE62087 contains microarray data from three groups: normal control (C57BL/6J mice), disease model (KKAy mice), and XiaoKeAn treatment group. The raw data file GSE62087_RAW.tar is the primary input; filelist.txt is a manifest. The paper also uses CMap LINCS data and DrugBank, which are not in the deposit listing.",
+    "leakage_files": [
+      {
+        "name": "GSE33000_raw_data.txt.gz",
+        "reason": "Contains raw data for the Alzheimer's/Huntington's disease comparison, not the XiaoKeAn target; not an input for the principal target."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "CMap LINCS L1000",
+        "version": "Expanded CMap LINCS Resource 2020 (beta)"
+      },
+      {
+        "name": "DrugBank",
+        "version": "latest release (as of study)"
+      }
+    ],
+    "comparison_metric": "Exact match of the reported counts of effect targets (1612 and 2157) and the total number of targets (8233).",
+    "numerical_agreement_criterion": "Counts must match exactly as printed.",
+    "specification_gaps": "The exact preprocessing steps for GSE62087 (normalization, differential expression method, gene ranking metric) are not fully specified. The threshold for binding score (≥0.90) is given, but the exact parameters for the DETP module (e.g., number of permutations, FDR calculation details) are described but may require code for exact replication.",
+    "alternatives_considered": [
+      {
+        "target": "Number of reversible targets (734)",
+        "reason": "This is a downstream result, not the first principal quantitative result; the paper's stated priority is the effect target prediction."
+      },
+      {
+        "target": "Pearson correlation of NETS values (PCC = −0.50)",
+        "reason": "This is a secondary statistic, not the primary count endpoint."
+      },
+      {
+        "target": "Number of binding targets (5030)",
+        "reason": "This is from the DBTP module, not the DETP module that is the core of the use case."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

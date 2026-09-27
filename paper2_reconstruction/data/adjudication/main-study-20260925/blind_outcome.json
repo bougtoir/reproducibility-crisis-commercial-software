@@ -1,0 +1,2061 @@
+{
+  "adjudication": "not_performed",
+  "amendment": "AMEND-2026-09-25-06",
+  "cohort_sha256": "c93708937c2ccf7f67d2e9c79b30db549caf6112ef7e5f82dd93e2becb286b4f",
+  "frozen_manifest_sha256": "41204a55d87d7c9ca3ff9121860d01101b4cd0ee8e279af41c38e9ccd9a035c8",
+  "investigator_verification": "pending",
+  "papers": [
+    {
+      "acquisition": null,
+      "eligibility": "target_value_not_located_verbatim",
+      "freeze_sha256": null,
+      "paper_id": "PMID:34297924",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "all_inputs_leak_target",
+      "eligibility": "specifiable",
+      "freeze_sha256": null,
+      "paper_id": "PMID:34393665",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:32779509",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:39333064",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:34927191",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:33110091",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "inputs_retained",
+      "eligibility": "specifiable",
+      "freeze_sha256": "c9eed5588ca31d13327e626f8adbca029502b46b3eef9e8ebfca62a2df557067",
+      "paper_id": "PMID:41091855",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "slots_completed"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41118575",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "all_inputs_leak_target",
+      "eligibility": "specifiable",
+      "freeze_sha256": null,
+      "paper_id": "PMID:35798840",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "all_inputs_leak_target",
+      "eligibility": "specifiable",
+      "freeze_sha256": null,
+      "paper_id": "PMID:35762018",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "inputs_retained",
+      "eligibility": "specifiable",
+      "freeze_sha256": "0c8bbccee9d3648e246690cf18c236cce2c2f870a10ed6976dad0cf22aefe2cf",
+      "paper_id": "PMID:34731224",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "slots_completed"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:34944547",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:35637459",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "inputs_retained",
+      "eligibility": "specifiable",
+      "freeze_sha256": "cebe1f99e7207ba65f4a2bf5d5d0888452157d60ccf93210e3005e46ea25f17f",
+      "paper_id": "PMID:34495251",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "slots_completed"
+    },
+    {
+      "acquisition": "inputs_retained",
+      "eligibility": "specifiable",
+      "freeze_sha256": "ea9fcfcb1a4e6850d4e8f8a17bcdbcb9a5d0fac00c3b285f06e19ea8368502c6",
+      "paper_id": "PMID:41472739",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "slots_completed"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36310873",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:37540596",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36156134",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:33329590",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "specification_not_obtained",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41104632",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "inputs_retained",
+      "eligibility": "specifiable",
+      "freeze_sha256": "c0b7e1830dbed470ba63fe8322d6b966a47f928b38ba3418adfee3df5ab77541",
+      "paper_id": "PMID:40956867",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "slots_completed"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:34624208",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36323312",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:40915917",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:33073517",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "all_inputs_leak_target",
+      "eligibility": "specifiable",
+      "freeze_sha256": null,
+      "paper_id": "PMID:34783304",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:34253236",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:35746789",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:39375688",
+      "sampling_stratum": "Biomedical_Basic",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:40037544",
+      "sampling_stratum": "Clinical_Medicine",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "specification_not_obtained",
+      "freeze_sha256": null,
+      "paper_id": "PMID:39720891",
+      "sampling_stratum": "Clinical_Medicine",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "specification_not_obtained",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36605200",
+      "sampling_stratum": "Clinical_Medicine",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41442027",
+      "sampling_stratum": "Clinical_Medicine",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "all_inputs_leak_target",
+      "eligibility": "specifiable",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41450535",
+      "sampling_stratum": "Clinical_Medicine",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "all_inputs_leak_target",
+      "eligibility": "specifiable",
+      "freeze_sha256": null,
+      "paper_id": "PMID:38813350",
+      "sampling_stratum": "Clinical_Medicine",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:38164328",
+      "sampling_stratum": "Clinical_Medicine",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41472734",
+      "sampling_stratum": "Clinical_Medicine",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "specification_not_obtained",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41502527",
+      "sampling_stratum": "Clinical_Medicine",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:39902187",
+      "sampling_stratum": "Clinical_Medicine",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "target_value_not_located_verbatim",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41454187",
+      "sampling_stratum": "Clinical_Medicine",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41573549",
+      "sampling_stratum": "Chemistry_Materials",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41413899",
+      "sampling_stratum": "Chemistry_Materials",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:39613774",
+      "sampling_stratum": "Chemistry_Materials",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "all_inputs_leak_target",
+      "eligibility": "specifiable",
+      "freeze_sha256": null,
+      "paper_id": "PMID:34716354",
+      "sampling_stratum": "Chemistry_Materials",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41233595",
+      "sampling_stratum": "Chemistry_Materials",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41306588",
+      "sampling_stratum": "Chemistry_Materials",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:38203551",
+      "sampling_stratum": "Chemistry_Materials",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41180196",
+      "sampling_stratum": "Chemistry_Materials",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36590690",
+      "sampling_stratum": "Physics_Engineering",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:40604274",
+      "sampling_stratum": "Physics_Engineering",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "specification_not_obtained",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41219412",
+      "sampling_stratum": "Physics_Engineering",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:39018359",
+      "sampling_stratum": "Physics_Engineering",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "inputs_retained",
+      "eligibility": "specifiable",
+      "freeze_sha256": "29ac18258d49d0f9d9709f695158e93da08c1d9907f59e0509ecddf424bab75f",
+      "paper_id": "PMID:39895948",
+      "sampling_stratum": "Social_Behavioral",
+      "state": "slots_completed"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "target_value_not_located_verbatim",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41460829",
+      "sampling_stratum": "Social_Behavioral",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:39816064",
+      "sampling_stratum": "Social_Behavioral",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:39732661",
+      "sampling_stratum": "Social_Behavioral",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "inputs_retained",
+      "eligibility": "specifiable",
+      "freeze_sha256": "381212d93c7bfe7528944f6aa8e6e833a36f4b669594dfc89f80ad7cc189345e",
+      "paper_id": "PMID:41563087",
+      "sampling_stratum": "Social_Behavioral",
+      "state": "slots_completed"
+    },
+    {
+      "acquisition": "inputs_retained",
+      "eligibility": "specifiable",
+      "freeze_sha256": "35a035302a52dfd99cb0c648f04f36f72bfb9a4cb42f941286c2b8dd4b2c3b63",
+      "paper_id": "PMID:39830509",
+      "sampling_stratum": "Social_Behavioral",
+      "state": "slots_completed"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36305581",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41193996",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "all_inputs_leak_target",
+      "eligibility": "specifiable",
+      "freeze_sha256": null,
+      "paper_id": "PMID:34823491",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:37879938",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36266291",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36422202",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:39540287",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:33217980",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36153311",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:34584066",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "inputs_retained",
+      "eligibility": "specifiable",
+      "freeze_sha256": "c20786e9e88698393f040455cf61bf63b7a24442ca3b0a323bfacb9cde11b05a",
+      "paper_id": "PMID:41677189",
+      "sampling_stratum": "Computational_Science",
+      "state": "slots_completed"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36111561",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:34772950",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41257959",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36469001",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:37796927",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41345772",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "all_inputs_leak_target",
+      "eligibility": "specifiable",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41469386",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36399471",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "inputs_retained",
+      "eligibility": "specifiable",
+      "freeze_sha256": "76e7b02b9690c1fce76c17b4348cce0f3d8e9b643de4bcf3b772e72a43c79607",
+      "paper_id": "PMID:33072212",
+      "sampling_stratum": "Computational_Science",
+      "state": "slots_completed"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:39732836",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:41299027",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:38095636",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:32925947",
+      "sampling_stratum": "Computational_Science",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36380453",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:37935364",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:33954783",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:33368254",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:40304046",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:34176322",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:33268805",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:32724106",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "specification_not_obtained",
+      "freeze_sha256": null,
+      "paper_id": "PMID:40373015",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:33449384",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:33031384",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "specification_not_obtained",
+      "freeze_sha256": null,
+      "paper_id": "PMID:40685907",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "required_inputs_not_in_public_listing",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36373930",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "all_inputs_leak_target",
+      "eligibility": "specifiable",
+      "freeze_sha256": null,
+      "paper_id": "PMID:32238776",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "gate_failed_delegated",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36198779",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "external_reference_resource_required_not_served",
+      "freeze_sha256": null,
+      "paper_id": "PMID:35074869",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": "no_input_retained",
+      "eligibility": "specifiable",
+      "freeze_sha256": null,
+      "paper_id": "PMID:36307440",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    },
+    {
+      "acquisition": null,
+      "eligibility": "target_value_not_located_verbatim",
+      "freeze_sha256": null,
+      "paper_id": "PMID:33973299",
+      "sampling_stratum": "Environmental_Earth",
+      "state": "not_run_gate_or_input"
+    }
+  ],
+  "protocol_amendment": "AMEND-2026-09-25-05",
+  "reveal": "not_performed",
+  "runs": [
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "46ad4d0c2ee59dcf785a4f230bf3d447e7e180d6c2acd3888b6e7b54fe4a6043",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 3651.8093653250007,
+      "instruction_sha256": "01f993d218363f89f56762cf4c56af7dde7c7f58ec94066d79a0761ac4847cc7",
+      "paper_id": "PMID:33072212",
+      "provider_accounted_tokens": 339295,
+      "requests": 27,
+      "sampling_stratum": "Computational_Science",
+      "served_files": 5,
+      "served_manifest_sha256": "33f0cdfeb2fe80c0f2e908da53cbeb2bffb96e89ba30a782178bf232b4382b6c",
+      "slot": 1,
+      "stop_reason": "wall_limit",
+      "tool_calls": 27,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "688e11fb1bf545e4921a125ed654a891b94a3a13253372e468f6cfc006c9fc6f",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 83.13013485199917,
+      "instruction_sha256": "32d92c831265bee28b61d0dbeb8569237748220a3884b78eba766e02fd1c1315",
+      "paper_id": "PMID:33072212",
+      "provider_accounted_tokens": 637696,
+      "requests": 41,
+      "sampling_stratum": "Computational_Science",
+      "served_files": 5,
+      "served_manifest_sha256": "33f0cdfeb2fe80c0f2e908da53cbeb2bffb96e89ba30a782178bf232b4382b6c",
+      "slot": 2,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "c0bcbbd8ecc798796322327140fcfa024b4e013c1f5a96a11817f4a995c927ac",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 74.44383173999995,
+      "instruction_sha256": "01c2be8ce67835bd3d1a70da402af0f3ff7474965cced56b34899fc0d873a39f",
+      "paper_id": "PMID:33072212",
+      "provider_accounted_tokens": 899963,
+      "requests": 42,
+      "sampling_stratum": "Computational_Science",
+      "served_files": 5,
+      "served_manifest_sha256": "33f0cdfeb2fe80c0f2e908da53cbeb2bffb96e89ba30a782178bf232b4382b6c",
+      "slot": 3,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "c8d7eaed62adad32c9f0f88ecbfe72cf563cc2071a349257bb1e4a48e8d16134",
+      "adjudication": "not_performed",
+      "claimed_report": {
+        "ambiguities": [
+          "Which WGCNA module is 'most relevant' (trait, module-trait correlation threshold) is not specified in the served text.",
+          "Which immune-infiltration algorithm and which gene sets define 'T cells' and 'cytotoxic lymphocytes' are not specified.",
+          "Which dataset(s) contribute to the correlation and how samples are combined is not specified."
+        ],
+        "artifact_paths": [],
+        "assumptions": [
+          "Publication XML is the only methodological evidence available; no supplementary methods or code were served.",
+          "GEO RAW tar archives are the intended expression inputs but lack the processed/annotated form used by the original analysis.",
+          "Default WGCNA and immune-deconvolution options would have to be guessed, which the protocol forbids exploring."
+        ],
+        "conclusion": "The publication text (/input/34495251.xml) was inspected but the served inputs do not permit faithful reconstruction of the target correlation. The XML contains no extractable description of the WGCNA module selection, the immune-infiltration method (e.g. CIBERSORT/ssGSEA), or the specific correlation procedure, and the deposited GEO archives (GSE47472, GSE57691, GSE98278) are raw expression deposits that would require the original study's exact preprocessing, module assignment and deconvolution pipeline to reproduce the reported correlation. No original implementation, processed matrices or result tables are served, so the target value cannot be computed without fabricating steps.",
+        "failure_codes": [
+          "MISSING_METHOD_DETAILS_IN_PUBLICATION",
+          "MISSING_PROCESSED_INPUTS",
+          "TARGET_NOT_COMPUTABLE_FROM_SERVED_INPUTS"
+        ],
+        "observed_value": null
+      },
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 24.240268969,
+      "instruction_sha256": "d5ffe691024a644425e75b4c266fe393dc83b243e1a19028692e6c5f7f4f900d",
+      "paper_id": "PMID:34495251",
+      "provider_accounted_tokens": 18174,
+      "requests": 2,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 7,
+      "served_manifest_sha256": "1bfacf5caaaca09ec5b77efd51d69d3d4c45813c628ca0c1f1bb2b4c00e1cc20",
+      "slot": 1,
+      "stop_reason": "final_report",
+      "tool_calls": 0,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "a9915b88e542d7f786e6b70f782cff39185be637f0c1cc895da3158fc86a89d9",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 67.2644663970002,
+      "instruction_sha256": "d82d2d8e32b5f0138958742a2fcce0438bdfff14dc8d993bae015f2e4453b0e1",
+      "paper_id": "PMID:34495251",
+      "provider_accounted_tokens": 1306908,
+      "requests": 41,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 7,
+      "served_manifest_sha256": "1bfacf5caaaca09ec5b77efd51d69d3d4c45813c628ca0c1f1bb2b4c00e1cc20",
+      "slot": 2,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "f2e020a766eacd261385cee45cc4a9c1e7373eba492fdc1092b9724c4026d9d5",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 61.286254078000184,
+      "instruction_sha256": "9c0d4bc4659f9c9878ae1717a4cc6981262f85278b6d151d31b127525dc48068",
+      "paper_id": "PMID:34495251",
+      "provider_accounted_tokens": 1281458,
+      "requests": 36,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 7,
+      "served_manifest_sha256": "1bfacf5caaaca09ec5b77efd51d69d3d4c45813c628ca0c1f1bb2b4c00e1cc20",
+      "slot": 3,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 36,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "b7d7628c94e685e76581b69a019eaff7f2f5a0350e7fb9b7bde99cd3d2b6e1c0",
+      "adjudication": "not_performed",
+      "claimed_report": {
+        "ambiguities": [
+          "Publication states sequencing on 'NovaSeq 6000' in Methods but 'Illumina HiSeq6000' in Results; irrelevant here since no reads are served.",
+          "edgeR exact test vs GLM not specified; moot without count data.",
+          "Whether DEGs were counted at gene or transcript level is not fully explicit; moot without quantification."
+        ],
+        "artifact_paths": [],
+        "assumptions": [
+          "Published method: Salmon quantification of Trinity Unigenes (TPM) followed by edgeR; DEG criteria |log2FC|>1 and P<0.05; design 3 NT vs 3 LT root samples.",
+          "The served Trinity gene FASTA is the reference transcript set (64,848 genes), consistent with the publication's gene count.",
+          "No alternative analytical specification was explored, per instructions."
+        ],
+        "conclusion": "The target (number of DEGs between low-temperature-stressed and control Hosta ventricosa plants, with up/down breakdown) cannot be reconstructed from the served inputs. The publication's method requires per-sample RNA-seq read counts: six cDNA libraries (3 NT, 3 LT) quantified with Salmon (TPM) and tested with edgeR at |log2FC|>1, P<0.05. The only deposited study input served is the assembled Trinity gene FASTA (GSE168396_Trinity.gene.fasta.gz, 64,848 gene records). No raw reads (FASTQ/SRA), no per-sample quantification, no count/TPM matrix, and no sample metadata are present, and there is no network access to retrieve them from GEO/SRA. Therefore the differential-expression computation cannot be executed and no observed value can be produced. The publication itself reports 12,059 DEGs (6,737 up-regulated, 5,322 down-regulated), but that is a comparison criterion, not a computed result.",
+        "failure_codes": [
+          "MISSING_REQUIRED_INPUT: no RNA-seq reads (FASTQ/SRA) for the six libraries",
+          "MISSING_REQUIRED_INPUT: no per-sample expression/count matrix or Salmon quantification output",
+          "MISSING_REQUIRED_INPUT: no sample metadata linking libraries to NT/LT groups",
+          "NO_NETWORK: cannot retrieve GSE168396 supplementary raw data",
+          "TOOL_UNAVAILABLE: salmon not installed (edgeR available in R, but no input counts)"
+        ],
+        "observed_value": null
+      },
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 34.12041246199988,
+      "instruction_sha256": "98c331b0b9c45d755aacd1d712ad97bfe5670e2ae7f3fdee3cfb2ffca2d93862",
+      "paper_id": "PMID:34731224",
+      "provider_accounted_tokens": 203173,
+      "requests": 20,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 5,
+      "served_manifest_sha256": "6dd8630470271e3d40b6f0a9e861808a7fe8d5d9da5a85b9bab7de83fc2e08a8",
+      "slot": 1,
+      "stop_reason": "final_report",
+      "tool_calls": 19,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "b56f30efbc00807c7f480e52aa08888a89008836b43f1a2c114b6ee01f09ec80",
+      "adjudication": "not_performed",
+      "claimed_report": {
+        "ambiguities": [
+          "The paper reports 'log2 > 1 or log2 < -1' without specifying the base of the fold change or whether the test is on raw counts or TPM; edgeR normally operates on counts, while the text says Salmon TPM was used.",
+          "No GEO sample-level metadata (GSM/SRR accessions, read files) is served, so the exact per-sample inputs cannot be reconstructed."
+        ],
+        "artifact_paths": [],
+        "assumptions": [
+          "The published DEG criterion is |log2 fold change| > 1 with P < 0.05 from edgeR on Salmon TPM values, as stated in the Methods ('Screening of differentially expressed genes').",
+          "The comparison is LT (3 degrees C stress) vs NT (25 degrees C control), each with three biological replicates (six cDNA libraries total).",
+          "The served Trinity gene fasta is the reference assembly (64,848 genes) and contains no expression values in its headers."
+        ],
+        "conclusion": "The target (number of DEGs between low-temperature-stressed and control Hosta ventricosa, with up/down breakdown) could not be computed. The published method requires per-sample expression quantification (Salmon TPM on the six RNA-seq libraries) followed by edgeR testing (|log2FC|>1, P<0.05). The only served study input is the Trinity gene assembly (GSE168396_Trinity.gene.fasta.gz, 64,848 gene sequences, matching the paper's 64,848 assembled genes); no raw reads, count matrix, or TPM matrix are available, and no network access exists to retrieve them from GEO/SRA. Hence the DEG analysis is not executable from the served inputs.",
+        "failure_codes": [
+          "MISSING_REQUIRED_INPUT: per-sample RNA-seq reads or expression/count matrix not served (only the Trinity gene assembly is present).",
+          "MISSING_REQUIRED_RESOURCE: salmon and Trinity are not installed; no network access to fetch reads from GEO/SRA.",
+          "TARGET_NOT_COMPUTABLE: DEG calling (Salmon TPM + edgeR) cannot be executed without expression data."
+        ],
+        "observed_value": null
+      },
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 30.535075485000107,
+      "instruction_sha256": "c204909c96a6304252abaf037c89a8942b94c9628615870efd4ead146f1f06fc",
+      "paper_id": "PMID:34731224",
+      "provider_accounted_tokens": 154035,
+      "requests": 17,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 5,
+      "served_manifest_sha256": "6dd8630470271e3d40b6f0a9e861808a7fe8d5d9da5a85b9bab7de83fc2e08a8",
+      "slot": 2,
+      "stop_reason": "final_report",
+      "tool_calls": 16,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "b2809f9e1642338cf13e1be8eb7c62f1be2b00e9f1e29a62f6b46bde7e942f5b",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 69.48145546900014,
+      "instruction_sha256": "353d1875a0819ff5a03a329252320a40a8144b870c2d9ff504ea6c45dd44e4e2",
+      "paper_id": "PMID:34731224",
+      "provider_accounted_tokens": 1272540,
+      "requests": 40,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 5,
+      "served_manifest_sha256": "6dd8630470271e3d40b6f0a9e861808a7fe8d5d9da5a85b9bab7de83fc2e08a8",
+      "slot": 3,
+      "stop_reason": "token_reserve_limit",
+      "tool_calls": 40,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "eab7d7ee741ac2ff678f725ce525c8a0e4aefe719bc4c77cfb8aceef9fd102ad",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 145.54567300500003,
+      "instruction_sha256": "96bfd59bf7f9bb64a2b1b69c9ff575950ebda5ebd793e5bcb5e9ea135e13007c",
+      "paper_id": "PMID:39830509",
+      "provider_accounted_tokens": 775219,
+      "requests": 41,
+      "sampling_stratum": "Social_Behavioral",
+      "served_files": 5,
+      "served_manifest_sha256": "4dadc23c75e1ef9df1432e15f4b6e5a6a028e026059556bbd081cdb2caf98b05",
+      "slot": 1,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "41ac34f42f89461f74220309156de6e9948dadd25072b1c78412dd2d19e11798",
+      "adjudication": "not_performed",
+      "claimed_report": {
+        "ambiguities": [
+          "The publication reports 4564 cells after the first filter and 3544 after QC, but the served raw matrices yield 13349 cells passing >=200 genes and 8930 after full QC; the discrepancy may reflect a different Seurat version, sample subsetting, or additional undocumented filtering.",
+          "Whether the two reported counts correspond to sequential filters or to different subsets is not fully specified."
+        ],
+        "artifact_paths": [
+          "/work/scratch"
+        ],
+        "assumptions": [
+          "QC applied per the Methods: nFeature_RNA >=200 and <=4000; percent mitochondrial (MT- genes) <=10%.",
+          "All four samples (h1, h2, p1, p2) combined into one matrix before filtering.",
+          "Genes detected in fewer than 3 cells were not removed before cell filtering, as this does not change the retained cell count.",
+          "Mitochondrial genes identified by the 'MT-' prefix."
+        ],
+        "conclusion": "Applying the publication's stated QC criteria (cells with <200 or >4000 genes excluded; cells with >10% mitochondrial expression removed) to the four served GSE152042 filtered feature-barcode matrices yields 8930 retained cells. The publication reports 4564 cells after the initial gene/cell filter and 3544 cells after QC; the served raw matrices do not reproduce those exact counts under the stated thresholds, so the reconstructed value differs from the published figure.",
+        "failure_codes": [
+          "published_value_not_reproduced"
+        ],
+        "observed_value": 8930
+      },
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 80.50811417800014,
+      "instruction_sha256": "5dfcf5b7e27dd9ef179a060312092fd44d87f663635c2135e5efc71a27216637",
+      "paper_id": "PMID:39830509",
+      "provider_accounted_tokens": 228222,
+      "requests": 24,
+      "sampling_stratum": "Social_Behavioral",
+      "served_files": 5,
+      "served_manifest_sha256": "4dadc23c75e1ef9df1432e15f4b6e5a6a028e026059556bbd081cdb2caf98b05",
+      "slot": 2,
+      "stop_reason": "final_report",
+      "tool_calls": 22,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "3077c5ef1ae68eb7a3a30b226d764c5e69cb9a80b0f358af5b69c8777d38746d",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 129.02003678500023,
+      "instruction_sha256": "69d8f6be6b5781308872f7ab73eea2710378eca27b3645a44993109e32373a8d",
+      "paper_id": "PMID:39830509",
+      "provider_accounted_tokens": 587799,
+      "requests": 42,
+      "sampling_stratum": "Social_Behavioral",
+      "served_files": 5,
+      "served_manifest_sha256": "4dadc23c75e1ef9df1432e15f4b6e5a6a028e026059556bbd081cdb2caf98b05",
+      "slot": 3,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": [
+        {
+          "bytes": 4302101,
+          "path": "raw/GSM4600896_filtered_feature_bc_matrix_h1.h5",
+          "sha256": "042d7ae2ef262d7d39b71d040a6f34ac6657ba05d596beee3cfd94baa1ca4f09"
+        },
+        {
+          "bytes": 15093875,
+          "path": "raw/GSM4600897_filtered_feature_bc_matrix_h2.h5",
+          "sha256": "ba26c785b850fc38ce8a498de589bf03713b3df8fa6a87438732875f7594f192"
+        },
+        {
+          "bytes": 15877617,
+          "path": "raw/GSM4600898_filtered_feature_bc_matrix_p1.h5",
+          "sha256": "1d72355e282635d7f67c3f474705d7308da9f5a45182eabc90d1181ef49867b4"
+        },
+        {
+          "bytes": 9520553,
+          "path": "raw/GSM4600899_filtered_feature_bc_p2.h5",
+          "sha256": "38bdc082298a9db9ec1a3b3919757f74a0eed77c5aa240ccbc0aa2c349d0ff02"
+        }
+      ]
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "414967e62ec605a6c0118f8d138bdf4afdabd60ddd4512a03dc96953046219ca",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 110.11989087499933,
+      "instruction_sha256": "d9b8f2630e91a8547f19a0b7e9b7daac11467a5ea9dbf05b8bf73156a3f20bbc",
+      "paper_id": "PMID:39895948",
+      "provider_accounted_tokens": 1119278,
+      "requests": 41,
+      "sampling_stratum": "Social_Behavioral",
+      "served_files": 5,
+      "served_manifest_sha256": "f2d09a3ee652c7dff1070d477881143247a8032ae06fe7bacb35c9ec664c2b93",
+      "slot": 1,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "2468adda2450e6b49289e545f98a6c314e11021ba69614f8d7a3881b57a99d9a",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 410.6780847509999,
+      "instruction_sha256": "8512887085367804e93fe1665d0f34778958a855e21edddf1ecfece59221dec9",
+      "paper_id": "PMID:39895948",
+      "provider_accounted_tokens": 1209720,
+      "requests": 41,
+      "sampling_stratum": "Social_Behavioral",
+      "served_files": 5,
+      "served_manifest_sha256": "f2d09a3ee652c7dff1070d477881143247a8032ae06fe7bacb35c9ec664c2b93",
+      "slot": 2,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "231d416343b00bf5ac21386188876ccf06692220a8202f5e67438a5ffd54f053",
+      "adjudication": "not_performed",
+      "claimed_report": {
+        "ambiguities": [
+          "Publication does not state whether combined positivity uses AND or OR; AND was chosen because it yields the reported specificity increase.",
+          "Exact rounding/software (SPSS) conventions may differ slightly.",
+          "The published combined specificity (96.5%) and PPV (86.7%) could not be reproduced from the served data with the stated cut-offs."
+        ],
+        "artifact_paths": [],
+        "assumptions": [
+          "Cut-offs taken from publication: NLR>5, MLR>0.5.",
+          "Combined NLR & MLR defined as both ratios above their cut-offs (AND rule), consistent with the reported increase in specificity.",
+          "TB group = 'Cases' sheet (n=57), control group = 'Controls' sheet (n=57).",
+          "NLR and MLR used as recorded in the spreadsheet (columns E and F).",
+          "Metrics computed as percentages with standard 2x2 definitions."
+        ],
+        "conclusion": "Reconstructed performance metrics from the deposited data using published cut-offs (NLR>5, MLR>0.5; combined = both positive). NLR and MLR sensitivity/specificity/NPV closely reproduce the publication; combined specificity and PPV are lower than the published 96.5%/86.7% (observed 91.2%/72.2%), indicating the published combined metric is not exactly reproducible from the served data with the stated cut-offs.",
+        "failure_codes": [],
+        "observed_value": {
+          "MLR": {
+            "npv_pct": 55.6,
+            "ppv_pct": 63.6,
+            "sensitivity_pct": 36.8,
+            "specificity_pct": 78.9
+          },
+          "NLR": {
+            "npv_pct": 51.8,
+            "ppv_pct": 55.2,
+            "sensitivity_pct": 28.1,
+            "specificity_pct": 77.2
+          },
+          "combined_NLR_and_MLR": {
+            "npv_pct": 54.2,
+            "ppv_pct": 72.2,
+            "sensitivity_pct": 22.8,
+            "specificity_pct": 91.2
+          }
+        }
+      },
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 60.57301458999973,
+      "instruction_sha256": "0fd8d8ee4e71684f6dd44a4ddfe395b6df9c195dec843cbf53b77ae988ef3648",
+      "paper_id": "PMID:39895948",
+      "provider_accounted_tokens": 319826,
+      "requests": 21,
+      "sampling_stratum": "Social_Behavioral",
+      "served_files": 5,
+      "served_manifest_sha256": "f2d09a3ee652c7dff1070d477881143247a8032ae06fe7bacb35c9ec664c2b93",
+      "slot": 3,
+      "stop_reason": "final_report",
+      "tool_calls": 19,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "f40710074a39f23d29029e92975cfaf5f9a6ad52859fc80f3a80d6e93f626b4a",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 62.52180544799967,
+      "instruction_sha256": "a00907f763d8e0766f47a6ab3cfaeb9a77d905698ded19d1265e118b33dbc4b3",
+      "paper_id": "PMID:40956867",
+      "provider_accounted_tokens": 972588,
+      "requests": 43,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 8,
+      "served_manifest_sha256": "55358eb43e647263e2fce118cbbaad6ecefddc58aa922d39810c88b5419ec9a8",
+      "slot": 1,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": [
+        {
+          "bytes": 136206,
+          "path": "paper.txt",
+          "sha256": "69a563b2d95597a6ce4d74983928abc4690f031767fed7067f7c617ceb7b1ba3"
+        }
+      ]
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "ba344e9c141ac762f487b1f4bd67f835f52f04ac10d05a66d0819d3572ed99d4",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 62.14453811700014,
+      "instruction_sha256": "c3edbfd18313028d52bb7a9d624e165335a3a288a6aa5e4a5d1c8a95eeafb180",
+      "paper_id": "PMID:40956867",
+      "provider_accounted_tokens": 1158172,
+      "requests": 41,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 8,
+      "served_manifest_sha256": "55358eb43e647263e2fce118cbbaad6ecefddc58aa922d39810c88b5419ec9a8",
+      "slot": 2,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "04800b1b2d26d2a0db1d348abd2e60fa96940c6d0bda8257dead16b9f88fd511",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 63.590565792000234,
+      "instruction_sha256": "6dff81da471228d0eb254cffaa161c81a89799188c3be606ce3a10205ba865c9",
+      "paper_id": "PMID:40956867",
+      "provider_accounted_tokens": 1136810,
+      "requests": 41,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 8,
+      "served_manifest_sha256": "55358eb43e647263e2fce118cbbaad6ecefddc58aa922d39810c88b5419ec9a8",
+      "slot": 3,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "4e4089d520fa5c18b0700f65895cf07a3d52dff5adf014d8e54e886c9db7f4f8",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 98.84159984500002,
+      "instruction_sha256": "8559afb27cd08d06311f6f00b1a9464f8c04a4ba9a3b645567c0e66ab500c0ae",
+      "paper_id": "PMID:41091855",
+      "provider_accounted_tokens": 854202,
+      "requests": 41,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 5,
+      "served_manifest_sha256": "cadc700aea6e49015a61aab674ca5631151cf66d3600520b4a52a4e9cb71ad7c",
+      "slot": 1,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": [
+        {
+          "bytes": 5907,
+          "path": "S.csv",
+          "sha256": "26368d7d529c0a5a4159f83a0b533ccbcb2f1500533de6b3c3becb69458385e0"
+        },
+        {
+          "bytes": 369,
+          "path": "Ssub.csv",
+          "sha256": "6e016d62c2fa6526efdda61efbf560a55ab6e140124008b53f969e60aa7ec718"
+        },
+        {
+          "bytes": 501666,
+          "path": "V.csv",
+          "sha256": "f6b064d9063b70433a7e79d45ffa1916b069d7d150349608d289ee47df9b33f7"
+        },
+        {
+          "bytes": 2178,
+          "path": "Vsub.csv",
+          "sha256": "b02c20a709f3b02ea5cd47012445053bbb91cf56ed342f5c3b72fab5150ace9c"
+        },
+        {
+          "bytes": 47,
+          "path": "chk.R",
+          "sha256": "9897c392aa837938dc73e748b00fccd450d3e39c4cf19d79c0d2e834946ad739"
+        },
+        {
+          "bytes": 882,
+          "path": "extract.R",
+          "sha256": "09ae5974cecb7a8c7afcd37ae5f2bc9657936d0dcdbeca9f30b7fca2b558ce07"
+        },
+        {
+          "bytes": 2465,
+          "path": "fit.py",
+          "sha256": "21ec35e4270f35c296baeec0624c9dfeb260e097ee6e1e45504a11aa1cc7798f"
+        },
+        {
+          "bytes": 217,
+          "path": "inspect.R",
+          "sha256": "82c1771f738c109f1a415c7a3ac895614cabcdd065a08ec4bf76de988a4fe236"
+        },
+        {
+          "bytes": 335,
+          "path": "inspect2.R",
+          "sha256": "c20508a0b73e3dc9ded411fe8a1003f2cc60682b16d775ac35cd039f3516b1a6"
+        },
+        {
+          "bytes": 415,
+          "path": "inspect3.R",
+          "sha256": "42569c7a1a5925377bf00a61298312b7f2cfddd5753aeafba5249d33b745c104"
+        },
+        {
+          "bytes": 293,
+          "path": "inspect4.R",
+          "sha256": "fcd4f3988fdb51b45cdd585fc1e9e767d54cf351c7164ac7f436c8ea29e9c798"
+        },
+        {
+          "bytes": 151,
+          "path": "inspect5.R",
+          "sha256": "928649f781d5e9bb109687c33308d97c05fc5daafcdd86941ee16a94efa6e7ef"
+        },
+        {
+          "bytes": 97,
+          "path": "inspect6.R",
+          "sha256": "59b27d9858798a5062be00479900e092f1cfad719f1d7925578e50a3d85688f3"
+        },
+        {
+          "bytes": 220,
+          "path": "inspect7.R",
+          "sha256": "041c16741e677a4fdd08693d3320b7d63b04f25673a595e7758848b72329a2fc"
+        },
+        {
+          "bytes": 1737,
+          "path": "sem.py",
+          "sha256": "8bdddd7c803c1ee9ff439998549048f9922f787aa597a86454ea58a6c5b876a0"
+        },
+        {
+          "bytes": 62097,
+          "path": "text.txt",
+          "sha256": "05e5955001e060e32839677f50d97f625cb157e2da71910c727043d685ce64b2"
+        }
+      ]
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "03d955a627ab9ba7b7934fb7f755cb16d18193576a2f76ae5c443b15cf8dc3de",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 68.16530203699995,
+      "instruction_sha256": "23e9e29c9a00c7190d3dc48a6559fb86e1db7c6d5c45af7df904ed9b938bdaec",
+      "paper_id": "PMID:41091855",
+      "provider_accounted_tokens": 686795,
+      "requests": 41,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 5,
+      "served_manifest_sha256": "cadc700aea6e49015a61aab674ca5631151cf66d3600520b4a52a4e9cb71ad7c",
+      "slot": 2,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "16e51f1ffd7c4ff90d1c1c9b3a67593ed4d4d9997c57364e924e948155c978f2",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 128.97946777499988,
+      "instruction_sha256": "cec4739b96c1ae6573d001b15f906f813aca879544a3bb3717e198ed35c18d27",
+      "paper_id": "PMID:41091855",
+      "provider_accounted_tokens": 715768,
+      "requests": 33,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 5,
+      "served_manifest_sha256": "cadc700aea6e49015a61aab674ca5631151cf66d3600520b4a52a4e9cb71ad7c",
+      "slot": 3,
+      "stop_reason": "malformed_action_limit",
+      "tool_calls": 29,
+      "worker_artifacts": [
+        {
+          "bytes": 234,
+          "path": "i.R",
+          "sha256": "91b0b701845e8100f61e6268b9c80d37e45850bf144f42db103d6a49b5d3a44c"
+        },
+        {
+          "bytes": 288,
+          "path": "inspect.R",
+          "sha256": "257cdfb27b04a0be4bd02b7e00c106fee2c541c29e90df6e4ae38240c8714483"
+        },
+        {
+          "bytes": 254,
+          "path": "inspect10.R",
+          "sha256": "f5fe5c6cf586b4946be45192738b85ef5944b15f73643486d33fb1cff3ef009d"
+        },
+        {
+          "bytes": 249,
+          "path": "inspect2.R",
+          "sha256": "fe577ac0f94ad29ec30a710f35b8679eb4e53dc441b80d8185c26ab0dba7b10d"
+        },
+        {
+          "bytes": 425,
+          "path": "inspect3.R",
+          "sha256": "fab84950b90e20fafbb15c1f0364f5760d05e25a4970dd0289d7172dc2e03b13"
+        },
+        {
+          "bytes": 151,
+          "path": "inspect4.R",
+          "sha256": "84b0acb942cbec47f503ba1c4cae6cec4d2da0d8dd7e8d4e52918a4b9067b571"
+        },
+        {
+          "bytes": 318,
+          "path": "inspect5.R",
+          "sha256": "4671dcbf54cca0df4ce6f15795aa4ed3e3ae6752f5689da94a47a119ce1e4261"
+        },
+        {
+          "bytes": 179,
+          "path": "inspect6.R",
+          "sha256": "2b8478c66842e77a1964f8637f7dd39d2f3464fd1451800a7962b4403c0bb0c3"
+        },
+        {
+          "bytes": 391,
+          "path": "inspect7.R",
+          "sha256": "396cc3cb2d6b13eaaf5a975588659e22d97a5aadd92f9015f55c4e6883aff39b"
+        },
+        {
+          "bytes": 560,
+          "path": "inspect8.R",
+          "sha256": "6a839cfab538a49c7d17f853d2576366f1b855d17d294265d27104e779f41d73"
+        },
+        {
+          "bytes": 1013,
+          "path": "inspect9.R",
+          "sha256": "e6117f7c92c23bbed182897a24ba0b66cb39ae0eeabe58fe6c0a9870195ed248"
+        }
+      ]
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "c0a1f97e8ae50cf33b1f93a9ae2b6d96fdc5e7f5d46f3dba5af8c402752264ef",
+      "adjudication": "not_performed",
+      "claimed_report": {
+        "ambiguities": [
+          "The publication does not state the exact statistical threshold used for the DSS vs CON volcano plots (only the DSS vs DSSSQ comparisons are annotated with |log2FC|>1, P<0.05).",
+          "The publication does not specify the metabolomics data repository or provide a processed feature table, so the exact metabolite set cannot be reconstructed.",
+          "Whether 'change in abundance' means the total (up + down) or only one direction is not explicitly defined by the target wording; the publication reports both directions separately."
+        ],
+        "artifact_paths": [],
+        "assumptions": [
+          "The target refers to the DSS vs CON comparison in positive ion mode (Figure 10A), not the DSS vs DSSSQ comparison.",
+          "Volcano plot significance criteria as stated for the treatment comparison (|log2FC|>1, P<0.05) were assumed to apply to the DSS vs CON comparison as well, though the text only explicitly states these thresholds for the DSS vs DSSSQ comparisons.",
+          "The served deposit PRJNA1336462 corresponds to the 16S rRNA gene sequencing data of this study; the metabolomics data are not deposited in the served inputs."
+        ],
+        "conclusion": "The target is the number of metabolites changing in abundance in the DSS group vs the CON group in positive ion mode, determined by volcano plot analysis of LC-MS-based untargeted fecal metabolomics. The publication (Section 3.7) reports 101 down-regulated plus 125 up-regulated metabolites in positive ion mode for DSS vs CON (Figure 10A), i.e. 226. However, the served inputs contain only 16S rRNA amplicon FASTQ files (full-length ~1.5 kb reads) for BioProject PRJNA1336462; no LC-MS raw or processed metabolomics data (mzML/mzXML/feature tables) are present, and no original implementation or processed result is available. The published method (LC-MS untargeted metabolomics with volcano plot analysis, |log2FC|>1, P<0.05) therefore cannot be executed on the served inputs, so no observed value can be computed. The publication's own reported figure is 226, but that is a comparison criterion, not a computed observation.",
+        "failure_codes": [
+          "missing_required_input: no LC-MS metabolomics raw or processed data served; only 16S rRNA amplicon FASTQ files are available",
+          "target_not_computable_from_served_inputs: volcano plot analysis of LC-MS untargeted metabolomics cannot be performed without metabolomics data"
+        ],
+        "observed_value": null
+      },
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 30.37577086700003,
+      "instruction_sha256": "7131dbb3eee2d037525d46718366b63514ef04842a45d4d4cc36a5d6eaf66935",
+      "paper_id": "PMID:41472739",
+      "provider_accounted_tokens": 155539,
+      "requests": 17,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 11,
+      "served_manifest_sha256": "92af32b0399a64d1eac4c78da31fa86fb9011e5f9a421dc9e5b8facf07ebf5b7",
+      "slot": 1,
+      "stop_reason": "final_report",
+      "tool_calls": 16,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "cf2aa5e2c958c0ee9587c9720370faaf49215d2915493dd7f0425fd3d9d52ab5",
+      "adjudication": "not_performed",
+      "claimed_report": {
+        "ambiguities": [
+          "The publication does not state the exact significance thresholds used for the DSS-vs-CON volcano plots (Figure 10A); thresholds (|log2FC|>1, P<0.05) are explicitly given only for the DSS-vs-DSSSQ comparisons (Figure 10C/D), while the differential-metabolite heat map used |log2FC|>0.5, P<0.05, VIP>1.",
+          "The metabolomics data are not deposited in the served inputs; the data availability statement refers only generically to online repositories and the BioProject accession, which contains 16S sequencing reads."
+        ],
+        "artifact_paths": [],
+        "assumptions": [
+          "The target 'count of metabolites that change in abundance' is the sum of down-regulated and up-regulated metabolites reported for the DSS vs CON comparison in positive ion mode (Figure 10A).",
+          "The publication's stated numbers (101 down, 125 up) are treated as the reported result of the volcano-plot analysis, since the underlying metabolomics data are not served.",
+          "No alternative analytical specification was explored; the published positive-ion DSS-vs-CON comparison was used as specified."
+        ],
+        "conclusion": "The publication reports, in section 3.7, that volcano-plot analysis in positive ion mode identified 101 down-regulated and 125 up-regulated metabolite levels in the DSS group compared to the CON group (Figure 10A). The total count of metabolites changing in abundance in DSS vs CON in positive ion mode is therefore 101 + 125 = 226. This value is taken directly from the publication text because the served inputs contain only 16S rRNA amplicon FASTQ files (BioProject PRJNA1336462); no LC-MS metabolomics data, feature tables, or processed results are served, so the count cannot be independently recomputed from the provided inputs.",
+        "failure_codes": [
+          "metabolomics_input_absent: served deposit contains only 16S rRNA FASTQ files; no LC-MS metabolomics data or feature tables available to recompute the volcano-plot counts"
+        ],
+        "observed_value": 226
+      },
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 34.51646629800007,
+      "instruction_sha256": "a15517ee2ecf45482f289758a3689ba3aec54be48bd06ddac3821c8a1545dc4d",
+      "paper_id": "PMID:41472739",
+      "provider_accounted_tokens": 243267,
+      "requests": 22,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 11,
+      "served_manifest_sha256": "92af32b0399a64d1eac4c78da31fa86fb9011e5f9a421dc9e5b8facf07ebf5b7",
+      "slot": 2,
+      "stop_reason": "final_report",
+      "tool_calls": 21,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "266d83d5be6dbdf14d5cba424f3c3b9489760524c13fd7931aab8ae81fde8e29",
+      "adjudication": "not_performed",
+      "claimed_report": {
+        "ambiguities": [
+          "The publication does not specify the metabolomics data-processing software, normalization, or feature-detection parameters, nor deposit the LC-MS raw/processed data.",
+          "The publication does not state whether the reported 101/125 counts are the total changed metabolites or only those meeting a specific threshold; the text presents them as the volcano plot result."
+        ],
+        "artifact_paths": [],
+        "assumptions": [
+          "The target refers to the DSS vs CON comparison in positive ion mode (Figure 10A), as stated in section 3.7.",
+          "Volcano plot significance criteria as published: |log2FC|>1 and P<0.05 for the DSS vs CON comparison (the |log2FC|>0.5, P<0.05, VIP>1 criteria apply to the 21-metabolite differential set, not the volcano counts).",
+          "The deposited PRJNA1336462 FASTQ files are 16S amplicon (PacBio CCS) reads and are not metabolomics data."
+        ],
+        "conclusion": "The target is the number of metabolites changing in abundance in DSS vs CON in positive ion mode by volcano plot analysis. The publication reports 101 down-regulated plus 125 up-regulated (=226) for this comparison. However, the served inputs contain only PacBio CCS 16S rRNA amplicon FASTQ files (PRJNA1336462) and the publication XML; no LC-MS untargeted metabolomics data (raw spectra, feature tables, or processed metabolite matrices) are served, and the publication provides no processed metabolomics data or supplementary tables. The published method (LC-MS untargeted fecal metabolomics, volcano plot with |log2FC|>1 and P<0.05) therefore cannot be executed on the served inputs, so no observed value could be computed.",
+        "failure_codes": [
+          "MISSING_INPUT: no LC-MS untargeted metabolomics data served (only 16S amplicon FASTQ and publication XML)",
+          "TARGET_NOT_COMPUTABLE: published method requires metabolomics feature/abundance data absent from served inputs"
+        ],
+        "observed_value": null
+      },
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 43.92756255199993,
+      "instruction_sha256": "f2119497aa0295e18a4f353a1e63e117e579a9ede033915cc13a6e5f08bc18b7",
+      "paper_id": "PMID:41472739",
+      "provider_accounted_tokens": 346255,
+      "requests": 28,
+      "sampling_stratum": "Biomedical_Basic",
+      "served_files": 11,
+      "served_manifest_sha256": "92af32b0399a64d1eac4c78da31fa86fb9011e5f9a421dc9e5b8facf07ebf5b7",
+      "slot": 3,
+      "stop_reason": "final_report",
+      "tool_calls": 27,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "bbca6efed2af213c3ddac661ce13b4e5808de942ad68df425da7a7b02f659229",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 68.0338224320003,
+      "instruction_sha256": "dd79e485934ebe2dd8c8993f5fed57372b76f140ae2363f36d8da2a0dd9dd4b3",
+      "paper_id": "PMID:41563087",
+      "provider_accounted_tokens": 1130447,
+      "requests": 41,
+      "sampling_stratum": "Social_Behavioral",
+      "served_files": 5,
+      "served_manifest_sha256": "3ede6599496087291d30f6a475bc91a77ec26d027e0a7ce38ede251e789d144d",
+      "slot": 1,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "caf7f0f7683b1815e273fd092cca6610d6de8594494df74a91fe6adaef97ddf4",
+      "adjudication": "not_performed",
+      "claimed_report": {
+        "ambiguities": [
+          "The publication does not state the exact denominator used for the 89% figure; both 157 and 158 are defensible, giving 89% and 88% respectively.",
+          "The publication does not explicitly define which frequency categories count as 'at least weekly'; the ordinal scale implies Weekly, Daily, Hourly."
+        ],
+        "artifact_paths": [
+          "/work/scratch/reconstruction_notes.txt"
+        ],
+        "assumptions": [
+          "'Three most frequently used platforms' = WhatsApp, Snapchat, Instagram, as stated in the publication.",
+          "'Weekly or greater' = response categories Weekly, Daily, Hourly (the only categories above weekly in the questionnaire's ordinal scale: Hourly, Daily, Weekly, Monthly, Semesterly, Exams/CW Due, Never).",
+          "A respondent counts if at least one of the three platforms is at Weekly/Daily/Hourly.",
+          "Denominator: the publication's own n for Q1a-based analyses is 157 (respondents with any Q1a/Q1b response); using 157 gives 88.54% -> 89%, matching the published figure. The all-respondent denominator (158) gives 87.97%.",
+          "Blank cells treated as missing (not 'Never')."
+        ],
+        "conclusion": "Reconstructed from the deposited questionnaire data (Open data_digital learning spaces.xlsx, Sheet1, Q1a columns A=Snapchat, B=WhatsApp, E=Instagram). Counting respondents who reported using at least one of the three most frequently used platforms (WhatsApp, Snapchat, Instagram) at Weekly, Daily or Hourly frequency yields 139 respondents. Against all 158 questionnaire respondents this is 87.97% (rounds to 88%); against the 157 respondents with any Q1a/Q1b response it is 88.54% (rounds to 89%). The publication reports 89%, consistent with the 157-respondent denominator (the same n=157 used for the other Q1a-based figure in the paper).",
+        "failure_codes": [],
+        "observed_value": "89% (139/158 = 87.97%; 139/157 = 88.54%)"
+      },
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 51.913903452999875,
+      "instruction_sha256": "497965adb5af64703e16b8ad9783f7bae9a1fee2b4391d355c3016e06b071e48",
+      "paper_id": "PMID:41563087",
+      "provider_accounted_tokens": 486886,
+      "requests": 26,
+      "sampling_stratum": "Social_Behavioral",
+      "served_files": 5,
+      "served_manifest_sha256": "3ede6599496087291d30f6a475bc91a77ec26d027e0a7ce38ede251e789d144d",
+      "slot": 2,
+      "stop_reason": "final_report",
+      "tool_calls": 25,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "296351d57068c0d33f3aa3d2d3f3c0a7ae9b3eb55c35b992755b279eaf61645d",
+      "adjudication": "not_performed",
+      "claimed_report": {
+        "ambiguities": [
+          "The publication reports 158 questionnaire respondents while the deposited sheet contains 257 data rows, of which 157 have any Q1a response; the exact denominator used by the authors is not fully specified.",
+          "Whether 'Hourly' should be counted as 'weekly or greater' is not explicitly stated; it was included as a higher-frequency option.",
+          "The publication does not state whether non-responders to Q1a were excluded from the denominator."
+        ],
+        "artifact_paths": [],
+        "assumptions": [
+          "The three most frequently used platforms are WhatsApp, Snapchat and Instagram, as stated in the publication abstract and results.",
+          "'Weekly or greater' was operationalised as the response options Daily, Weekly or Hourly (Hourly is a higher-frequency option present in the data).",
+          "The denominator is questionnaire respondents who provided any response to the Q1a platform-frequency question (157), consistent with the publication's 158-student questionnaire sample and its statement that 89% of students used one or more of the top three at least weekly.",
+          "Blank cells in the Q1a platform columns indicate the platform was not selected/used.",
+          "Column mapping: A=Snapchat, B=WhatsApp, E=Instagram, per the shared-string headers."
+        ],
+        "conclusion": "Reconstructed from the deposited questionnaire data: among the 157 respondents who answered the Q1a social-media platform/frequency question, 139 (88.5%) reported using at least one of the three most frequently used platforms (WhatsApp, Snapchat, Instagram) at weekly or greater frequency. This matches the publication's stated 89%.",
+        "failure_codes": [],
+        "observed_value": 88.5
+      },
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 37.489782560000094,
+      "instruction_sha256": "eb11fb77d134d500953e42d2fff423bd129b03f9a7e11376c3d236a4b23ab474",
+      "paper_id": "PMID:41563087",
+      "provider_accounted_tokens": 282674,
+      "requests": 20,
+      "sampling_stratum": "Social_Behavioral",
+      "served_files": 5,
+      "served_manifest_sha256": "3ede6599496087291d30f6a475bc91a77ec26d027e0a7ce38ede251e789d144d",
+      "slot": 3,
+      "stop_reason": "final_report",
+      "tool_calls": 19,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "2bb013ada35da6a8270a12e7870f2d2795a254b11322fd027857a9ef5687f3af",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 59.82772782499978,
+      "instruction_sha256": "074ad5bb5a3e1ca698a7ebb94a5eecf86ad842d7fd077897318ff2b329141132",
+      "paper_id": "PMID:41677189",
+      "provider_accounted_tokens": 778533,
+      "requests": 41,
+      "sampling_stratum": "Computational_Science",
+      "served_files": 5,
+      "served_manifest_sha256": "9344b5ea4d7311754c9f55880f65ecc09480ab9f1c80ae94b9e30cabfcba1176",
+      "slot": 1,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": []
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "354238d3d898c291bd2e5eae270d7c96ffe5516da8d61de157bf3edbdb64e2fa",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 399.8885576499997,
+      "instruction_sha256": "ae2116867372927a2dc59cad0ba79e5efbd5dfa84a871f3a57114fdd6654ddfd",
+      "paper_id": "PMID:41677189",
+      "provider_accounted_tokens": 925959,
+      "requests": 43,
+      "sampling_stratum": "Computational_Science",
+      "served_files": 5,
+      "served_manifest_sha256": "9344b5ea4d7311754c9f55880f65ecc09480ab9f1c80ae94b9e30cabfcba1176",
+      "slot": 2,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": [
+        {
+          "bytes": 1053,
+          "path": "de.R",
+          "sha256": "c667b2a40997f66cbafee212f8e7582991590024e7b971a4d94286096f6626c7"
+        },
+        {
+          "bytes": 1790,
+          "path": "de10.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de11.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de12.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de13.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de14.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de15.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de16.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de17.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de18.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de19.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1710,
+          "path": "de2.R",
+          "sha256": "740d50771fa3cf69f75f9dddc4cc000e6c7697edf87c192c26fb4e21dba0a90a"
+        },
+        {
+          "bytes": 1790,
+          "path": "de20.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de21.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de22.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de23.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de24.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de25.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de26.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de27.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de28.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de29.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1113,
+          "path": "de3.R",
+          "sha256": "5f8023157c242ed1a3e9fda41009f321589c1e01daab8d0ea9dee4d2626e0e2a"
+        },
+        {
+          "bytes": 1215,
+          "path": "de4.R",
+          "sha256": "624eac68b83c609f26f458775436f19daa82d1b830a46d6ba3bbd0d2c6e54cf1"
+        },
+        {
+          "bytes": 1790,
+          "path": "de5.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de6.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de7.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de8.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 1790,
+          "path": "de9.R",
+          "sha256": "5000f5da9eca5d9bb23fbe8a769cf70dd0bb8871965f5f1ac72da58756f08037"
+        },
+        {
+          "bytes": 241,
+          "path": "explore.R",
+          "sha256": "15791a42c4160aef4f4293bd6fdcfb7ac41b820e56ba73e0f8de88afe9c826af"
+        }
+      ]
+    },
+    {
+      "L1_specification_extracted": "not_adjudicated",
+      "L2_implementation_created": "not_adjudicated",
+      "L3_execution_successful": "not_adjudicated",
+      "L4_numerical_target_reproduced": "not_adjudicated",
+      "L5_conclusion_preserved": "not_adjudicated",
+      "access_journal_head_sha256": "0eb74bb99aa6bc8f3f54f262eadbc54951ec092a08927c9b8d64bc13e079db5a",
+      "adjudication": "not_performed",
+      "claimed_report": null,
+      "contamination_events": "none_recorded",
+      "elapsed_seconds": 502.5377877809997,
+      "instruction_sha256": "4afa3107287c0f314efc324d972bd2035890e819c9bbf5544885e43e974e1fb4",
+      "paper_id": "PMID:41677189",
+      "provider_accounted_tokens": 883130,
+      "requests": 41,
+      "sampling_stratum": "Computational_Science",
+      "served_files": 5,
+      "served_manifest_sha256": "9344b5ea4d7311754c9f55880f65ecc09480ab9f1c80ae94b9e30cabfcba1176",
+      "slot": 3,
+      "stop_reason": "tool_limit",
+      "tool_calls": 40,
+      "worker_artifacts": [
+        {
+          "bytes": 1119,
+          "path": "de.R",
+          "sha256": "fa1f57289fde2c89f174330ba4c1f45cacfba20d5b2bb89e0d370367b9e6d5e4"
+        },
+        {
+          "bytes": 1667,
+          "path": "de2.R",
+          "sha256": "c2f1b7cd2fadfe49a82e48806e2e15e5f14fb2ea165e31b71f5ee7608f82fc3e"
+        },
+        {
+          "bytes": 1162,
+          "path": "de3.R",
+          "sha256": "139b0f84b4f338040833c47d6c88354cb32a8cd6c6d9093963ad7e061820671c"
+        },
+        {
+          "bytes": 845,
+          "path": "de4.R",
+          "sha256": "698989728a67b37b9d5e1a959de6d674e048661201163819a23d923e28dfa58a"
+        },
+        {
+          "bytes": 1668,
+          "path": "de5.R",
+          "sha256": "9083eac8a224600360731f27890cbb676154294278497db774eb58077c12843a"
+        },
+        {
+          "bytes": 1652,
+          "path": "de6.R",
+          "sha256": "a5e0058ffd168d58907b3e31a2ca06bd136e52f5e73dfd49d9467993b4c43293"
+        },
+        {
+          "bytes": 1965,
+          "path": "de7.R",
+          "sha256": "ca715494eca199523e1664c7f03063b31d8aaec7a0a27d02a04dcc0158951aa7"
+        },
+        {
+          "bytes": 32646,
+          "path": "plain.txt",
+          "sha256": "f59a96000eb4826f41913215157ef1047a136553a72bd84e619468f185c04ec8"
+        }
+      ]
+    }
+  ],
+  "scope": "main_study_blind_outcomes_sealed_before_adjudication_and_reveal",
+  "sealed_at_utc": "2026-09-27T06:36:30.393636+00:00",
+  "study": "MAIN-STUDY-2026-09-25"
+}

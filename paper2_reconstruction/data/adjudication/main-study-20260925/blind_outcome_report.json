@@ -1,0 +1,22 @@
+{
+  "status": "main_study_runs_sealed_unadjudicated",
+  "amendment": "AMEND-2026-09-25-06",
+  "protocol_amendment": "AMEND-2026-09-25-05",
+  "study": "MAIN-STUDY-2026-09-25",
+  "cohort_n": 100,
+  "paper_states": {
+    "not_run_gate_or_input": 90,
+    "slots_completed": 10
+  },
+  "runs": 30,
+  "blind_outcome_sha256": "350a0e7dcedbb74ccad2472c642318c87cc7d272f1b6c88186a1419dc858ea5a",
+  "blind_outcome_timestamp_status": "cryptographically_verified_against_pinned_freetsa_ca",
+  "stop_reasons": [
+    "final_report",
+    "malformed_action_limit",
+    "token_reserve_limit",
+    "tool_limit",
+    "wall_limit"
+  ],
+  "empirical_success_rate": "not_assessable_until_adjudication_and_human_validation"
+}

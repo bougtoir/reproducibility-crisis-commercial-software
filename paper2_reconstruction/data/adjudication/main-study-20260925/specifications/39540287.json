@@ -1,0 +1,186 @@
+{
+  "paper_id": "PMID:39540287",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "556ed551c284a346dee404c82ca4767aa9f3221a743191c6959d8beba0e03381",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "zenodo",
+      "accession": "4905618",
+      "files": [
+        {
+          "name": "exams.csv",
+          "bytes": 87713
+        },
+        {
+          "name": "exams.zip",
+          "bytes": 264538267
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:49:22.484690+00:00",
+  "api": {
+    "response_id": "32bf53f1-6a3b-47f9-9c70-5f55078af1ff",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 18648,
+    "completion_tokens": 2059
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0041",
+            "quote": "To derive phenogroups using the 5120 features extracted using the CODE-CNN model, K-means clustering was applied in the CODE data set using all 5120 features, without any further dimensionality reduction."
+          },
+          {
+            "segment_id": "S0043",
+            "quote": "Survival analysis for the 3 phenogroups was first performed for the CODE data set and then in the 5 external validation data sets (UKB, Whitehall II, ELSA-Brasil, SaMi-Trop, and BIDMC)."
+          }
+        ],
+        "rationale": "The principal result is produced by a computational pipeline (feature extraction, K-means clustering, survival analysis) that can be re-run on deposited ECG data."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0053",
+            "quote": "In these adjusted analyses, phenogroup B (highest mortality) had a 1.2-fold increase in long-term mortality compared with phenogroup A (HR, 1.20 [95% CI, 1.17–1.23]; P <0.0001; Table S3 )."
+          }
+        ],
+        "rationale": "The paper explicitly reports an adjusted hazard ratio as a principal quantitative result, with a clear endpoint (long-term mortality) and effect size."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0030",
+            "quote": "The São Paulo-Minas Gerais Tropical Medicine Research Center (SaMi-Trop) cohort was made openly available ( https://doi.org/10.5281/zenodo.4905618 )."
+          },
+          {
+            "segment_id": "S0031",
+            "quote": "The Clinical Outcomes in Digital Electrocardiography (CODE)-15% cohort was also made openly available ( https://doi.org/10.5281/zenodo.4916206 )."
+          }
+        ],
+        "rationale": "The deposit listing for Zenodo 4905618 contains exams.csv and exams.zip, which likely include raw ECG waveforms and metadata for the SaMi-Trop cohort, but the paper does not explicitly state that these files are the exact inputs for the adjusted HR target; the CODE cohort (derivation) is not listed in the deposit."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0035",
+            "quote": "Twelve-lead ECGs were preprocessed by removing the baseline drift and resampling to 400 Hz. Zero padding resulted in a signal with 4096 samples for each lead for a 10-second recording, which is used as input to the NN model."
+          },
+          {
+            "segment_id": "S0036",
+            "quote": "The CODE data set was previously used to train a CNN to detect 6 common ECG abnormalities (first-degree atrioventricular block, right bundle branch block, left bundle branch block, sinus bradycardia, atrial fibrillation, and sinus tachycardia), as previously described."
+          },
+          {
+            "segment_id": "S0041",
+            "quote": "To derive phenogroups using the 5120 features extracted using the CODE-CNN model, K-means clustering was applied in the CODE data set using all 5120 features, without any further dimensionality reduction."
+          },
+          {
+            "segment_id": "S0043",
+            "quote": "Cox proportional hazards regression modeling was used to estimate hazard ratios (HRs) for mortality while correcting for other known variables."
+          }
+        ],
+        "rationale": "The methods for preprocessing, feature extraction, clustering, and survival analysis are described in sufficient detail to implement, though some details (e.g., exact covariates) are in Supplemental Methods."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0037",
+            "quote": "The Keras framework with a TensorFlow backend was used for NN training and inference."
+          },
+          {
+            "segment_id": "S0153",
+            "quote": "Scikit-learn: machine learning in python."
+          }
+        ],
+        "rationale": "The methods rely on open-source software (Keras, TensorFlow, scikit-learn) and no proprietary software is required."
+      }
+    },
+    "exact_target": "Adjusted hazard ratio for long-term mortality comparing phenogroup B versus phenogroup A in the CODE derivation cohort: HR, 1.20 [95% CI, 1.17–1.23]; P <0.0001",
+    "target_values": [
+      "1.20",
+      "1.17",
+      "1.23",
+      "<0.0001"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The adjusted hazard ratio for long-term mortality comparing phenogroup B to phenogroup A in the CODE derivation cohort, after adjusting for known covariates.",
+    "target_type": "scalar",
+    "target_location": "Results, Survival Analysis section, and Table S3",
+    "location_quotes": [
+      {
+        "segment_id": "S0053",
+        "quote": "In these adjusted analyses, phenogroup B (highest mortality) had a 1.2-fold increase in long-term mortality compared with phenogroup A (HR, 1.20 [95% CI, 1.17–1.23]; P <0.0001; Table S3 )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0035",
+        "quote": "Twelve-lead ECGs were preprocessed by removing the baseline drift and resampling to 400 Hz. Zero padding resulted in a signal with 4096 samples for each lead for a 10-second recording, which is used as input to the NN model."
+      },
+      {
+        "segment_id": "S0036",
+        "quote": "The CODE data set was previously used to train a CNN to detect 6 common ECG abnormalities (first-degree atrioventricular block, right bundle branch block, left bundle branch block, sinus bradycardia, atrial fibrillation, and sinus tachycardia), as previously described."
+      },
+      {
+        "segment_id": "S0038",
+        "quote": "In a transfer learning–based approach, the final classification layer of the model was removed (Figure 1 ), and the output of 5120 NN-derived ECG features is used to cluster the subjects."
+      },
+      {
+        "segment_id": "S0041",
+        "quote": "To derive phenogroups using the 5120 features extracted using the CODE-CNN model, K-means clustering was applied in the CODE data set using all 5120 features, without any further dimensionality reduction."
+      },
+      {
+        "segment_id": "S0043",
+        "quote": "Cox proportional hazards regression modeling was used to estimate hazard ratios (HRs) for mortality while correcting for other known variables."
+      }
+    ],
+    "required_files": [
+      "exams.csv",
+      "exams.zip"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit (Zenodo 4905618) contains exams.csv and exams.zip, which likely include ECG waveforms and metadata for the SaMi-Trop cohort. However, the target adjusted HR is for the CODE derivation cohort, which is not in this deposit. The CODE cohort data are not openly available; only the CODE-15% subset is available (Zenodo 4916206). Thus, the required inputs for the exact target are not fully deposited.",
+    "leakage_files": [
+      {
+        "name": "exams.csv",
+        "reason": "May contain derived phenotype labels or mortality outcomes that could leak the target result."
+      },
+      {
+        "name": "exams.zip",
+        "reason": "May contain processed data or analysis outputs that include the target value or derived results."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "CODE-CNN model weights",
+        "version": "https://github.com/antonior92/automatic-ecg-diagnosis"
+      }
+    ],
+    "comparison_metric": "The observed hazard ratio and confidence interval from re-analysis will be compared to the reported values.",
+    "numerical_agreement_criterion": "Scalars within displayed rounding bin: HR within 0.01, CI bounds within 0.01, p-value at reported precision (<0.0001).",
+    "specification_gaps": "The exact set of covariates adjusted for in the Cox model is not fully specified in the main text; details are in Supplemental Methods. The CODE cohort data are not openly available, so the exact target cannot be reproduced without access.",
+    "alternatives_considered": [
+      {
+        "target": "Unadjusted HR for phenogroup B vs A in CODE (HR, 2.57 [95% CI, 2.51–2.63])",
+        "reason": "Rejected because the paper emphasizes adjusted analyses as the principal result, and the adjusted HR is reported in the abstract and results as a key finding."
+      },
+      {
+        "target": "PheWAS odds ratios (e.g., atrial fibrillation OR 2.89)",
+        "reason": "Rejected because these are secondary analyses and not the principal quantitative result."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

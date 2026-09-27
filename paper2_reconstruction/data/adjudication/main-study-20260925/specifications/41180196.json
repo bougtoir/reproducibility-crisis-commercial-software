@@ -1,0 +1,182 @@
+{
+  "paper_id": "PMID:41180196",
+  "sampling_stratum": "Chemistry_Materials",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "f812c7a3cc2ca9ec00e677d2162983006c9828f7b65f62cf1287959bbccd9b38",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "zenodo",
+      "accession": "17202121",
+      "files": [
+        {
+          "name": "Corrineclock/Codes-of-PWAS-v1,0.zip",
+          "bytes": 32424
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:28:54.200719+00:00",
+  "api": {
+    "response_id": "b897cad3-90b4-4b07-a0f4-e5c32489674c",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 16787,
+    "completion_tokens": 2351
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0033",
+            "quote": "To systematically evaluate the relationship between circulating proteins and MASLD, we applied PWAS, conducted via the FUSION framework ( http://gusevlab.org/projects/fusion ), as illustrated in Figure 1 ."
+          },
+          {
+            "segment_id": "S0035",
+            "quote": "These models were then used to integrate summary-level genetic associations from GWAS datasets of R11 MASLD and the broader MASLD cohort, combining Z-scores of SNP associations with protein prediction weights across"
+          }
+        ],
+        "rationale": "The principal result is a PWAS Z-score computed from pQTL and GWAS summary statistics using the FUSION framework, which a third party can re-run if the inputs are available."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0062",
+            "quote": "Specifically, higher genetically predicted plasma levels of NCAN were consistently associated with a lower risk of MASLD in both cohorts (Z-score = -8.424, p = 3.64 × 10– 17 in the discovery cohort; Z-score = -6.742, p = 1.56 × 10– 11 in the validation cohort), as summarized in Table 1 ."
+          },
+          {
+            "segment_id": "S0066",
+            "quote": "NCAN Z-score in PWAS -8.424 3.64×10 -17 4.82×10 -14 -6.742 1.56×10 -11 2.00×10 -8"
+          }
+        ],
+        "rationale": "The paper's stated priority is NCAN as the strongest and most consistent association; the primary numerical endpoint is the PWAS Z-score for NCAN in the discovery cohort, reported in Table 1 and the text."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0116",
+            "quote": "All analysis scripts (PWAS, MR, and colocalization) and derived summary tables are deposited at Zenodo under DOI: 10.5281/zenodo.17202121 . No"
+          },
+          {
+            "segment_id": "S0117",
+            "quote": "individual-level data are shared. Figure source data and README documentation are included in the Zenodo record."
+          }
+        ],
+        "rationale": "The deposit contains analysis scripts and derived summary tables, not the raw pQTL or GWAS summary statistics that are the inputs to the PWAS target."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0034",
+            "quote": "Initially, the SNP-based heritability for 2,004 SOMAmer protein measurements was calculated using the restricted maximum likelihood REML approach implemented in the GCTA software package ( 21 ). Among them, 1,345 proteins demonstrated significant cis -heritability ( P < 0.01), indicating a genetic basis for plasma abundance variation. Next, FUSION was utilized to model the influence of SNPs on"
+          },
+          {
+            "segment_id": "S0035",
+            "quote": "protein levels, employing both top1 and elastic net (enet) modeling strategies. The optimal model for each protein was selected based on its predictive accuracy for protein expression. These models were then used to integrate summary-level genetic associations from GWAS datasets of R11 MASLD and the broader MASLD cohort, combining Z-scores of SNP associations with protein prediction weights across"
+          },
+          {
+            "segment_id": "S0036",
+            "quote": "loci to conduct the PWAS ( 22 ). Multiple testing correction was performed using the Benjamini-Hochberg procedure, and associations were considered statistically significant if the adjusted p -value was less than 0.05."
+          }
+        ],
+        "rationale": "The method for the PWAS target is described in sufficient detail (FUSION, top1/enet, BH FDR) to implement without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0033",
+            "quote": "To systematically evaluate the relationship between circulating proteins and MASLD, we applied PWAS, conducted via the FUSION framework ( http://gusevlab.org/projects/fusion ), as illustrated in Figure 1 ."
+          },
+          {
+            "segment_id": "S0034",
+            "quote": "Initially, the SNP-based heritability for 2,004 SOMAmer protein measurements was calculated using the restricted maximum likelihood REML approach implemented in the GCTA software package ( 21 )."
+          }
+        ],
+        "rationale": "FUSION and GCTA are freely available open-source software; no proprietary software is required for the PWAS target."
+      }
+    },
+    "exact_target": "PWAS Z-score for NCAN in the discovery cohort (R11 MASLD), reported as Z-score = -8.424 with p = 3.64 × 10–17 and FDR = 4.82 × 10–14.",
+    "target_values": [
+      "-8.424",
+      "3.64 × 10–17",
+      "4.82 × 10–14"
+    ],
+    "target_values_located_verbatim": false,
+    "blind_target": "The proteome-wide association study Z-score for the plasma protein NCAN in the discovery cohort, quantifying the genetic association between cis-regulated NCAN plasma levels and MASLD risk.",
+    "target_type": "scalar",
+    "target_location": "Results section 3.1 and Table 1",
+    "location_quotes": [
+      {
+        "segment_id": "S0062",
+        "quote": "Specifically, higher genetically predicted plasma levels of NCAN were consistently associated with a lower risk of MASLD in both cohorts (Z-score = -8.424, p = 3.64 × 10– 17 in the discovery cohort; Z-score = -6.742, p = 1.56 × 10– 11 in the validation cohort), as summarized in Table 1 ."
+      },
+      {
+        "segment_id": "S0066",
+        "quote": "NCAN Z-score in PWAS -8.424 3.64×10 -17 4.82×10 -14 -6.742 1.56×10 -11 2.00×10 -8"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0034",
+        "quote": "Initially, the SNP-based heritability for 2,004 SOMAmer protein measurements was calculated using the restricted maximum likelihood REML approach implemented in the GCTA software package ( 21 ). Among them, 1,345 proteins demonstrated significant cis -heritability ( P < 0.01), indicating a genetic basis for plasma abundance variation. Next, FUSION was utilized to model the influence of SNPs on"
+      },
+      {
+        "segment_id": "S0035",
+        "quote": "protein levels, employing both top1 and elastic net (enet) modeling strategies. The optimal model for each protein was selected based on its predictive accuracy for protein expression. These models were then used to integrate summary-level genetic associations from GWAS datasets of R11 MASLD and the broader MASLD cohort, combining Z-scores of SNP associations with protein prediction weights across"
+      },
+      {
+        "segment_id": "S0036",
+        "quote": "loci to conduct the PWAS ( 22 ). Multiple testing correction was performed using the Benjamini-Hochberg procedure, and associations were considered statistically significant if the adjusted p -value was less than 0.05."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The Zenodo deposit (DOI: 10.5281/zenodo.17202121) contains only analysis scripts and derived summary tables, not the raw pQTL or GWAS summary statistics. The pQTL data are from the ARIC cohort (Zhang et al., Nat Genet 2022) and the GWAS data are from FinnGen R11 (https://r11.finngen.fi/pheno/NAFLD) and Ghodsian et al. (Cell Rep Med 2021). These inputs are not included in the deposit listing.",
+    "leakage_files": [
+      {
+        "name": "Corrineclock/Codes-of-PWAS-v1,0.zip",
+        "reason": "Contains analysis scripts and derived summary tables that include the target value and other results."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "ARIC pQTL data (Zhang et al., Nat Genet 2022)",
+        "version": "2022"
+      },
+      {
+        "name": "FinnGen R11 MASLD GWAS summary statistics",
+        "version": "R11"
+      },
+      {
+        "name": "Ghodsian et al. MASLD GWAS meta-analysis",
+        "version": "2021"
+      }
+    ],
+    "comparison_metric": "The observed PWAS Z-score for NCAN in the discovery cohort is compared to the reported value of -8.424.",
+    "numerical_agreement_criterion": "Scalars within displayed rounding bin: Z-score within ±0.001 of -8.424; p-value at reported precision (3.64 × 10–17); FDR at reported precision (4.82 × 10–14).",
+    "specification_gaps": "The exact versions of the ARIC pQTL data and FinnGen R11 GWAS summary statistics are not specified; the FUSION model parameters (e.g., window size, SNP selection) are not fully detailed; the exact set of covariates and quality control steps for the pQTL data are not provided.",
+    "alternatives_considered": [
+      {
+        "target": "MR odds ratio for NCAN in the discovery cohort (OR = 0.441, 95% CI 0.328-0.593)",
+        "reason": "This is a downstream causal inference result, not the principal PWAS association; the paper's primary focus is the PWAS discovery of NCAN."
+      },
+      {
+        "target": "Colocalization PP4 for EPHA2 in the discovery cohort (PP4 = 0.971)",
+        "reason": "This is a secondary analysis for a different protein; the paper emphasizes NCAN as the most consistent signal."
+      },
+      {
+        "target": "PWAS Z-score for NCAN in the validation cohort (Z-score = -6.742)",
+        "reason": "This is a replication result; the discovery cohort result is the primary endpoint."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

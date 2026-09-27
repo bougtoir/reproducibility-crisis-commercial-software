@@ -1,0 +1,63 @@
+{
+  "paper_id": "PMID:36605200",
+  "sampling_stratum": "Clinical_Medicine",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "21d3ce0dd661338e764e2fd6e2a7ac06177ceac8c025447c1b809d98fad20804",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE49710",
+      "files": [
+        {
+          "name": "GSE49710_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE78220",
+      "files": [
+        {
+          "name": "GSE78220_PatientFPKM.xlsx",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE155000",
+      "files": [
+        {
+          "name": "GSE155000_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:05:50.758458+00:00",
+  "api": {
+    "response_id": "2da6492e-c3e1-440e-bd52-67035befe6d4",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 24013,
+    "completion_tokens": 1960
+  },
+  "specification": null,
+  "eligibility": "specification_not_obtained",
+  "error": {
+    "type": "ValueError",
+    "detail": "PMID:36605200 G3: quote not found verbatim in S0026"
+  }
+}

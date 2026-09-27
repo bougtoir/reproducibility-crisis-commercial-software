@@ -1,0 +1,187 @@
+{
+  "paper_id": "PMID:41450535",
+  "sampling_stratum": "Clinical_Medicine",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "848dc71aca1a4722e93d478a5385656f7932d9608e14245e9c4c475836de3eff",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE180347",
+      "files": [
+        {
+          "name": "GSE180347_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE140797",
+      "files": [
+        {
+          "name": "GSE140797_Matrix.xlsx",
+          "bytes": 0
+        },
+        {
+          "name": "GSE140797_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE193258",
+      "files": [
+        {
+          "name": "GSE193258_RNAseq_estimated_counts.tsv.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE193258_RNAseq_log2TPM_abundance.tsv.gz",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:06:05.243330+00:00",
+  "api": {
+    "response_id": "8ae818e5-c4a4-48cb-b0ee-6f074802ccf3",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 20548,
+    "completion_tokens": 1532
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0027",
+            "quote": "The gene expression matrix of microarray data and DEGs were analyzed using R software. The DEGs were selected based on the criteria: |log 2 FC| >"
+          },
+          {
+            "segment_id": "S0058",
+            "quote": "The DEGs (|log 2 FC| > 1, P -value < 0.05) were analyzed using R packages, revealing 1089 downregulated and 1229 upregulated genes between LUAD tumor and paracancerous tissues."
+          }
+        ],
+        "rationale": "The principal result (DEG counts) is produced by a computation (R analysis of GEO microarray data) that a third party can re-run using the deposited GEO datasets."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0058",
+            "quote": "The DEGs (|log 2 FC| > 1, P -value < 0.05) were analyzed using R packages, revealing 1089 downregulated and 1229 upregulated genes between LUAD tumor and paracancerous tissues."
+          }
+        ],
+        "rationale": "The first quantitative result reported in the Results section is the number of DEGs (1089 downregulated, 1229 upregulated) from GSE140797, which is a primary numerical endpoint."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0026",
+            "quote": "GSE140797 , from the GPL13497 platform, included seven LUAD tumor"
+          },
+          {
+            "segment_id": "S0057",
+            "quote": "The mRNA expression levels were analyzed using the microarray expression profiling dataset GSE140797 to examine the correlation between DEGs and tumor tissue in LUAD. Seven"
+          }
+        ],
+        "rationale": "The listed deposit files for GSE140797 (GSE140797_Matrix.xlsx and GSE140797_RAW.tar) are the raw/minimally processed inputs for the DEG analysis, not its outputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0027",
+            "quote": "The gene expression matrix of microarray data and DEGs were analyzed using R software. The DEGs were selected based on the criteria: |log 2 FC| >"
+          },
+          {
+            "segment_id": "S0028",
+            "quote": "1 and P -value < 0.05. Heatmaps and volcano plots were generated for the selected DEGs."
+          }
+        ],
+        "rationale": "The method for DEG analysis is described with specific criteria (|log2FC| > 1, P < 0.05) and software (R), sufficient to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0056",
+            "quote": "Statistical and power analysis to justify sample sizes were performed using the Statistical Package for the Social Sciences (version 26.0; SPSS Inc., Chicago, IL, USA), GraphPad Prism (version 9.0; Inc., La Jolla, CA, USA), or R"
+          }
+        ],
+        "rationale": "The method uses R software, which is free and open-source; no proprietary software is required for the DEG computation."
+      }
+    },
+    "exact_target": "Number of downregulated and upregulated genes between LUAD tumor and paracancerous tissues from GSE140797: 1089 downregulated and 1229 upregulated.",
+    "target_values": [
+      "1089",
+      "1229"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of genes differentially expressed between LUAD tumor and paracancerous tissues in the GSE140797 dataset, using the criteria |log2FC| > 1 and P-value < 0.05.",
+    "target_type": "count",
+    "target_location": "Results section, first paragraph under 'Differentially Expressed Gene Datasets and Microarray Data Information in LUAD'",
+    "location_quotes": [
+      {
+        "segment_id": "S0058",
+        "quote": "The DEGs (|log 2 FC| > 1, P -value < 0.05) were analyzed using R packages, revealing 1089 downregulated and 1229 upregulated genes between LUAD tumor and paracancerous tissues."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0027",
+        "quote": "The gene expression matrix of microarray data and DEGs were analyzed using R software. The DEGs were selected based on the criteria: |log 2 FC| >"
+      },
+      {
+        "segment_id": "S0028",
+        "quote": "1 and P -value < 0.05. Heatmaps and volcano plots were generated for the selected DEGs."
+      }
+    ],
+    "required_files": [
+      "GSE140797_Matrix.xlsx",
+      "GSE140797_RAW.tar"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "GSE140797 includes seven LUAD tumor tissues and seven paracancerous tissues. The matrix file likely contains processed expression values; the RAW.tar contains raw data. Both are listed in the deposit.",
+    "leakage_files": [
+      {
+        "name": "GSE140797_Matrix.xlsx",
+        "reason": "This file may contain the processed expression matrix from which DEGs were derived, potentially including the target counts or enabling their direct computation without re-analysis."
+      },
+      {
+        "name": "GSE140797_RAW.tar",
+        "reason": "This file contains raw data that could be used to reproduce the DEG analysis, but if it includes processed results or metadata, it might leak the target values."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Exact match of the reported counts of downregulated and upregulated genes.",
+    "numerical_agreement_criterion": "Counts must match exactly: 1089 downregulated and 1229 upregulated genes.",
+    "specification_gaps": "The paper does not specify the exact R packages or versions used for DEG analysis, nor the normalization method for the microarray data.",
+    "alternatives_considered": [
+      {
+        "target": "Number of overlapping genes between GSE140797 and GSE180347 (44 genes)",
+        "reason": "This is a secondary result and not the first quantitative endpoint reported."
+      },
+      {
+        "target": "Hazard ratio for MNX1 in multivariable COX analysis (1.616, 95% CI 1.035–2.523, P=0.035)",
+        "reason": "This is a later result and not the principal computational conclusion from the primary dataset."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

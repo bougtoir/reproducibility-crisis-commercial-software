@@ -1,0 +1,169 @@
+{
+  "paper_id": "PMID:41193996",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "57f13a0ee7705ee4722afd897de74d9b78a66923b3f4570fe300ae63aac1f3e8",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "28239119",
+      "files": [
+        {
+          "name": "Tetracladium_maxilliforme_TMAX.annotations.xlsx",
+          "bytes": 13956238
+        }
+      ]
+    },
+    {
+      "kind": "figshare",
+      "accession": "28239131",
+      "files": [
+        {
+          "name": "Tetracladium_marchallianum_TMARCH.annotations.xlsx",
+          "bytes": 17974898
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:48:47.033705+00:00",
+  "api": {
+    "response_id": "ec010bb8-d5c4-428d-abc3-58d8fedf8097",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 29488,
+    "completion_tokens": 1793
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0042",
+            "quote": "Secondary metabolite genome mining was performed using antiSMASH (v7.1.0, fungal version) [ 65 ] with KnownClusterBlast, ClusterBlast and MIBiG cluster comparison features enabled using the “relaxed” detection strictness."
+          },
+          {
+            "segment_id": "S0035",
+            "quote": "To identify CAZymes, fungal proteomes were queried against an HMM (Hidden Markov Model) profile database constructed from CAZy sequences sourced from the dbCAN2"
+          }
+        ],
+        "rationale": "The principal results are counts of genes/proteins and BGCs produced by computational annotation pipelines (funannotate, dbCAN2/HMMER, antiSMASH) on the two newly sequenced genomes, which a third party can re-run given the deposited annotations."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0082",
+            "quote": "We found that the genomes of T. maxilliforme and T. marchalianum contained 51 and 22 secondary metabolite biosynthetic gene clusters (BGCs),"
+          },
+          {
+            "segment_id": "S0087",
+            "quote": "Total BGCs 51 22 Discussion This"
+          }
+        ],
+        "rationale": "A single principal quantitative result can be named: the total number of secondary metabolite biosynthetic gene clusters (BGCs) per genome, reported as 51 and 22 in Table 3 and the text."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0137",
+            "quote": "Functional annotations of the genomes are available in FigShare under: T. maxilliforme : 10.6084/m9.figshare.28239119.v2 and T. marchalianum : 10.6084/m9.figshare.28239131.v1."
+          },
+          {
+            "segment_id": "S0136",
+            "quote": "Tetracladium maxilliforme and"
+          }
+        ],
+        "rationale": "The deposit lists only annotation spreadsheets (TMAX/TMARCH annotations.xlsx). These are the annotation inputs from which BGC counts could be derived, but the listing does not include the genome assemblies (BioProject PRJNA1063930) nor the antiSMASH output, so it is uncertain whether the deposited files are sufficient raw inputs for the target."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0042",
+            "quote": "Secondary metabolite genome mining was performed using antiSMASH (v7.1.0, fungal version) [ 65 ] with KnownClusterBlast, ClusterBlast and MIBiG cluster comparison features enabled using the “relaxed” detection strictness."
+          }
+        ],
+        "rationale": "The method for the target (antiSMASH v7.1.0 fungal version, relaxed strictness, with KnownClusterBlast/ClusterBlast/MIBiG comparison) is described well enough to implement."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0042",
+            "quote": "Secondary metabolite genome mining was performed using antiSMASH (v7.1.0, fungal version) [ 65 ] with KnownClusterBlast, ClusterBlast and MIBiG cluster comparison features enabled using the “relaxed” detection strictness."
+          }
+        ],
+        "rationale": "antiSMASH is free/open-source software; no proprietary software is required for the target."
+      }
+    },
+    "exact_target": "Total number of secondary metabolite biosynthetic gene clusters (BGCs) predicted by antiSMASH in each Tetracladium genome: 51 for T. maxilliforme and 22 for T. marchalianum (Table 3).",
+    "target_values": [
+      "51",
+      "22"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The total number of secondary metabolite biosynthetic gene clusters predicted by antiSMASH in the T. maxilliforme genome and in the T. marchalianum genome.",
+    "target_type": "count",
+    "target_location": "Results, section 'Identification of secondary metabolite biosynthetic gene clusters in the genomes'; Table 3 (Total BGCs row).",
+    "location_quotes": [
+      {
+        "segment_id": "S0082",
+        "quote": "We found that the genomes of T. maxilliforme and T. marchalianum contained 51 and 22 secondary metabolite biosynthetic gene clusters (BGCs),"
+      },
+      {
+        "segment_id": "S0087",
+        "quote": "Total BGCs 51 22 Discussion This"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0042",
+        "quote": "Secondary metabolite genome mining was performed using antiSMASH (v7.1.0, fungal version) [ 65 ] with KnownClusterBlast, ClusterBlast and MIBiG cluster comparison features enabled using the “relaxed” detection strictness."
+      },
+      {
+        "segment_id": "S0034",
+        "quote": "Putative proteins were predicted and annotated using the funannotate prediction and annotation pipeline (v1.8.16) [ 50 ] following the standard instructions based on the protein databases of Pfam, gene2product, InterPro,"
+      }
+    ],
+    "required_files": [
+      "Tetracladium_marchallianum_TMARCH.annotations.xlsx",
+      "Tetracladium_maxilliforme_TMAX.annotations.xlsx"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "FigShare deposits: T. maxilliforme 10.6084/m9.figshare.28239119.v2 (Tetracladium_maxilliforme_TMAX.annotations.xlsx) and T. marchalianum 10.6084/m9.figshare.28239131.v1 (Tetracladium_marchallianum_TMARCH.annotations.xlsx). Genome assemblies are under BioProject PRJNA1063930 but are not in the listed deposit; antiSMASH requires genome sequence (FASTA) plus annotation, so the assemblies may be a missing input. antiSMASH version v7.1.0 (fungal), relaxed strictness.",
+    "leakage_files": [
+      {
+        "name": "Tetracladium_maxilliforme_TMAX.annotations.xlsx",
+        "reason": "Contains the funannotate functional annotation of the T. maxilliforme genome from which the BGC count (51) is derived; serving it would leak the target result."
+      },
+      {
+        "name": "Tetracladium_marchallianum_TMARCH.annotations.xlsx",
+        "reason": "Contains the funannotate functional annotation of the T. marchalianum genome from which the BGC count (22) is derived; serving it would leak the target result."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "antiSMASH",
+        "version": "v7.1.0 (fungal version)"
+      },
+      {
+        "name": "MIBiG",
+        "version": "as bundled with antiSMASH v7.1.0"
+      },
+      {
+        "name": "NCBI BioProject PRJNA1063930 (Tetracladium genome assemblies)",
+        "version": "as deposited"
+      }
+    ],
+    "comparison_metric": "Exact integer match of the total BGC count per genome between the solver's antiSMASH run and the reported values (51 and 22).",
+    "numerical_agreement_criterion": "Counts exact: solver must obtain 51 BGCs for T. maxilliforme and 22 for T. marchalianum.",
+    "specification_gaps": "The paper does not state the exact input file format used for antiSMASH (genome FASTA vs. annotation GFF), the precise antiSMASH command line, or how BGCs were counted (e.g., whether overlapping/partial clusters were merged). The genome assemblies are not in the listed deposit. The version of the MIBiG database bundled with antiSMASH is not specified.",
+    "alternatives_considered": "Genome size (35.5/33.3 Mbp) and predicted gene counts (9657/15230) were considered but are assembly/annotation statistics rather than the paper's principal comparative result. CAZyme counts (384/324) and lignocellulolytic enzyme counts (60/64) were considered but are secondary to the BGC result, which is the paper's stated novel finding and is reported as a single total in Table 3."
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

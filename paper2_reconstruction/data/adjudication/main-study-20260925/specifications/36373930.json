@@ -1,0 +1,154 @@
+{
+  "paper_id": "PMID:36373930",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "41e83512b683118238608f9d5ae83a4171a4b7054bd5f9f6153af5dc9c6355bc",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "dryad",
+      "accession": "234",
+      "files": []
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:13:06.712126+00:00",
+  "api": {
+    "response_id": "beb48110-5755-4229-98e3-81d3798f6ca4",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 30020,
+    "completion_tokens": 1770
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0103",
+            "quote": "At 1 year after planting, average tree mortality was 18.0% (95% CI = 14.5–22.2%; figure 2 and table 1 )."
+          },
+          {
+            "segment_id": "S0084",
+            "quote": "we modelled mortality (number of dead and alive trees for a given site-species-treatment) via generalized linear mixed effects models with a binomial error distribution and a complementary log-log (cloglog) link function using the glmmTMB package [ 72 ]."
+          }
+        ],
+        "rationale": "The principal result is a model-estimated mortality proportion computed from compiled data; a third party can re-run the GLMM if the data are available."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0103",
+            "quote": "At 1 year after planting, average tree mortality was 18.0% (95% CI = 14.5–22.2%; figure 2 and table 1 )."
+          },
+          {
+            "segment_id": "S0054",
+            "quote": "What are the observed rates of mortality for planted trees in ecosystem restoration of tropical and sub-tropical Asian"
+          }
+        ],
+        "rationale": "The first stated research question and first reported result is average planted-tree mortality at 1 year, a single quantitative endpoint."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0187",
+            "quote": "Data and code for the statistical models are made available through the UKCEH Environmental Information Data Centre (EIDC)."
+          }
+        ],
+        "rationale": "The paper states data are deposited at EIDC, but the provided deposit listing is empty, so it cannot be verified that the listed files are the analysis inputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0083",
+            "quote": "we assessed mortality with separate models for each standardized time point (1, 2, 3, 4 years [±6 months], 5–10 years [54–114 months] and greater than 10 years [114–240 months] after planting)."
+          },
+          {
+            "segment_id": "S0084",
+            "quote": "we modelled mortality (number of dead and alive trees for a given site-species-treatment) via generalized linear mixed effects models with a binomial error distribution and a complementary log-log (cloglog) link function using the glmmTMB package [ 72 ]."
+          },
+          {
+            "segment_id": "S0085",
+            "quote": "To ascertain average mortality at each time point we fitted a model with an intercept term and random effects that accounted for variability associated with site, species and"
+          }
+        ],
+        "rationale": "The model family, link, time-point stratification, response variable and random-effects structure are described sufficiently to implement the intercept-only mortality model."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0103",
+            "quote": "All data analyses were undertaken in R v. 4.0.4 and 4.1.0 [ 86 ]."
+          }
+        ],
+        "rationale": "The analysis uses R and open-source R packages; no proprietary software is required."
+      }
+    },
+    "exact_target": "Average proportional mortality of planted trees at 1 year after planting, reported as 18.0% (95% CI = 14.5–22.2%).",
+    "target_values": [
+      "18.0%",
+      "14.5–22.2%"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The average proportional mortality of planted trees at the first standardized post-planting census interval, estimated from an intercept-only generalized linear mixed model.",
+    "target_type": "proportion",
+    "target_location": "Results section (a) Planted tree mortality; also Table 1 and Figure 2.",
+    "location_quotes": [
+      {
+        "segment_id": "S0103",
+        "quote": "At 1 year after planting, average tree mortality was 18.0% (95% CI = 14.5–22.2%; figure 2 and table 1 )."
+      },
+      {
+        "segment_id": "S0110",
+        "quote": "mean proportional mortality 0.18 0.258 0.333 0.285 0.44 0.483 (95% confidence intervals) (0.145–0.222) (0.201–0.327)"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0083",
+        "quote": "we assessed mortality with separate models for each standardized time point (1, 2, 3, 4 years [±6 months], 5–10 years [54–114 months] and greater than 10 years [114–240 months] after planting)."
+      },
+      {
+        "segment_id": "S0084",
+        "quote": "we modelled mortality (number of dead and alive trees for a given site-species-treatment) via generalized linear mixed effects models with a binomial error distribution and a complementary log-log (cloglog) link function using the glmmTMB package [ 72 ]."
+      },
+      {
+        "segment_id": "S0085",
+        "quote": "To ascertain average mortality at each time point we fitted a model with an intercept term and random effects that accounted for variability associated with site, species and"
+      },
+      {
+        "segment_id": "S0085",
+        "quote": "species-within-site (given that species may perform differently at different sites), and an observation-level random effect for overdispersion."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit listing provided is empty. The paper states data and code are available through the UKCEH Environmental Information Data Centre (EIDC), but no file names or accession identifiers are listed in the supplied deposit metadata. The analysis inputs are therefore not identifiable from the listing.",
+    "leakage_files": [],
+    "required_public_references": [],
+    "comparison_metric": "The reported mean proportional mortality and its 95% confidence interval are compared with the solver's model-estimated mean mortality and 95% CI at the 1-year time point.",
+    "numerical_agreement_criterion": "Proportions compared by numerator/denominator; the point estimate must match 0.18 (18.0%) and the 95% CI must match 0.145–0.222 (14.5–22.2%) at the reported precision.",
+    "specification_gaps": "The deposit listing is empty, so the exact input files, their versions and the data-processing steps from raw compiled records to the model-ready site-species-treatment mortality counts are unspecified. The paper does not state the exact random-effect covariance structure or the precise definition of the 1-year window beyond ±6 months.",
+    "alternatives_considered": [
+      {
+        "target": "Mortality at 5–10 years after planting (44.0%, 95% CI 39.5–48.7%)",
+        "reason_rejected": "Not the first reported principal result; the 1-year mortality is the first stated research question and first numerical endpoint."
+      },
+      {
+        "target": "Community-level basal area accumulation rate (0.715 m2 yr−1 vs 0.336 m2 yr−1)",
+        "reason_rejected": "A later community-level result, not the first principal quantitative endpoint."
+      },
+      {
+        "target": "Size-standardized growth rate at 100 cm (63.8 cm yr−1 in open conditions)",
+        "reason_rejected": "A secondary growth result, not the first stated research question."
+      }
+    ]
+  },
+  "eligibility": "required_inputs_not_in_public_listing"
+}

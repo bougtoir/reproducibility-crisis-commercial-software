@@ -1,0 +1,184 @@
+{
+  "paper_id": "PMID:41472734",
+  "sampling_stratum": "Clinical_Medicine",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "cd156bbd3ebda5e9c1aa998940ee849e92851e83f42d5f3b97d54b8ac589d807",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE167363",
+      "files": [
+        {
+          "name": "GSE167363_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE65682",
+      "files": [
+        {
+          "name": "GSE65682_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:06:27.049039+00:00",
+  "api": {
+    "response_id": "90d662d1-a2e4-408f-824d-ce181165ba4d",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 16471,
+    "completion_tokens": 2022
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0041",
+            "quote": "This study used the GSE134347 dataset to train and evaluate seven widely used machine-learning classifiers. We assessed the predictive performance of identified core biomarkers and plotted receiver operating characteristic (ROC) curves to quantify model discrimination."
+          },
+          {
+            "segment_id": "S0078",
+            "quote": "In this study, we applied seven widely used machine learning methods to classify and train samples, evaluating the predictive performance of CD27, KLRB1, RETN, and CD163 using ROC curve analysis."
+          }
+        ],
+        "rationale": "The principal result (AUC values of machine-learning classifiers) is produced by a computation on the public GSE134347 dataset, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0078",
+            "quote": "The results showed that the AUC values for these biomarkers exceeded 0.9 across all models ( Figures 5A–D ), indicating their strong potential as sepsis biomarkers."
+          },
+          {
+            "segment_id": "S0081",
+            "quote": "Chart A shows ROC for CD27 with various models; the logistic regression has the highest AUC of 0.9862. Chart B displays CD163, again with logistic regression leading at 0.9534 AUC. Chart C is for KLRB1, with ridge regression showing the highest AUC of 0.9733. Chart D illustrates RETN, where logistic regression achieves the highest AUC of 0.9828."
+          }
+        ],
+        "rationale": "The paper's stated principal result is the diagnostic performance of the four core biomarkers, reported as AUC values in Figure 5; the highest AUC per biomarker is a single principal performance metric."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0041",
+            "quote": "This study used the GSE134347 dataset to train and evaluate seven widely used machine-learning classifiers."
+          },
+          {
+            "segment_id": "S0029",
+            "quote": "To identify differentially expressed mRNAs in sepsis, we accessed three datasets— GSE134347 ( 21 ), GSE167363 ( 22 ), and GSE220189 ( 23 )—from the GEO database."
+          }
+        ],
+        "rationale": "The target uses GSE134347, but the deposit listing provided contains only GSE167363 and GSE65682; GSE134347 is not among the listed files, so the analysis inputs of the target are not confirmed to be deposited."
+      },
+      "G4": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0041",
+            "quote": "This study used the GSE134347 dataset to train and evaluate seven widely used machine-learning classifiers. We assessed the predictive performance of identified core biomarkers and plotted receiver operating characteristic (ROC) curves to quantify model discrimination."
+          },
+          {
+            "segment_id": "S0043",
+            "quote": "The seven classifiers applied were K-Nearest Neighbors, Random Forest, Support Vector Machine, Gaussian Naive Bayes, Logistic Regression, Decision Tree, and eXtreme Gradient Boosting (XGBoost) ( 30 )."
+          }
+        ],
+        "rationale": "The classifiers are named, but the paper does not specify feature selection, hyperparameters, cross-validation scheme, or train/test split, so the method is not fully implementable without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0126",
+            "quote": "The analysis results were generated using the R software packages \"rpart\", \"glm\", \"naivebayes\", \"kknn\", \"ranger\", \"kernlab\" and \"xgboost\" through the CNSknowall."
+          }
+        ],
+        "rationale": "The classifiers are implemented in free R packages and an online tool; no proprietary software is required."
+      }
+    },
+    "exact_target": "Highest AUC value per core biomarker from ROC curve analysis of seven machine-learning classifiers on GSE134347: CD27 logistic regression AUC = 0.9862; CD163 logistic regression AUC = 0.9534; KLRB1 ridge regression AUC = 0.9733; RETN logistic regression AUC = 0.9828.",
+    "target_values": [
+      "0.9862",
+      "0.9534",
+      "0.9733",
+      "0.9828"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The highest area under the receiver operating characteristic curve achieved by any of seven machine-learning classifiers for each of the four core sepsis biomarkers (CD27, KLRB1, RETN, CD163) when trained and evaluated on the GSE134347 dataset.",
+    "target_type": "performance",
+    "target_location": "Figure 5 (ROC curves of core genes), panels A–D; values described in the figure caption.",
+    "location_quotes": [
+      {
+        "segment_id": "S0080",
+        "quote": "Figure 5 ROC curves of core genes. (A–D) ROC curves based on GSE134347 from the GEO database. Specificity is represented on the horizontal axis, whereas sensitivity is represented on the vertical axis. The results show that CD27, KLRB1, RETN, and CD163 exhibit high levels of sensitivity and specificity, with all AUC values greater than 0.9."
+      },
+      {
+        "segment_id": "S0081",
+        "quote": "Chart A shows ROC for CD27 with various models; the logistic regression has the highest AUC of 0.9862. Chart B displays CD163, again with logistic regression leading at 0.9534 AUC. Chart C is for KLRB1, with ridge regression showing the highest AUC of 0.9733. Chart D illustrates RETN, where logistic regression achieves the highest AUC of 0.9828."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0041",
+        "quote": "This study used the GSE134347 dataset to train and evaluate seven widely used machine-learning classifiers. We assessed the predictive performance of identified core biomarkers and plotted receiver operating characteristic (ROC) curves to quantify model discrimination."
+      },
+      {
+        "segment_id": "S0043",
+        "quote": "The seven classifiers applied were K-Nearest Neighbors, Random Forest, Support Vector Machine, Gaussian Naive Bayes, Logistic Regression, Decision Tree, and eXtreme Gradient Boosting (XGBoost) ( 30 )."
+      },
+      {
+        "segment_id": "S0126",
+        "quote": "The analysis results were generated using the R software packages \"rpart\", \"glm\", \"naivebayes\", \"kknn\", \"ranger\", \"kernlab\" and \"xgboost\" through the CNSknowall."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The target uses GSE134347 (transcriptome sequencing of 156 sepsis patients and 83 healthy individuals; the paper randomly selected 50 sepsis and 50 healthy samples). GSE134347 is not present in the provided deposit listing, which contains only GSE167363 and GSE65682. No version or processed-file identifier is given for GSE134347.",
+    "leakage_files": [
+      {
+        "name": "GSE65682_RAW.tar",
+        "reason": "Contains the GSE65682 expression and clinical data used for the survival analysis (Figure 6), a derived result of the same study; must not be served for the ROC/AUC target."
+      },
+      {
+        "name": "GSE167363_RAW.tar",
+        "reason": "Contains single-cell data used for differential expression and immune-cell localization analyses (Figures 2D, 4, 7), derived results of the same study; must not be served for the ROC/AUC target."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Reported AUC values (highest per biomarker across the seven classifiers) compared with AUC values recomputed from GSE134347 using the same classifiers and evaluation procedure.",
+    "numerical_agreement_criterion": "Performance metrics on the identical split: AUC values must match the reported values within the displayed rounding bin (four decimal places, e.g., 0.9862).",
+    "specification_gaps": "The paper does not specify: which 50 sepsis and 50 healthy samples were randomly selected from GSE134347; the random seed; normalization and quality-control parameters; feature selection or gene set used as model input; hyperparameter values for each classifier; cross-validation or train/test split scheme; how ROC/AUC were computed (e.g., package defaults); and which classifier produced the highest AUC for each biomarker beyond the figure caption.",
+    "alternatives_considered": [
+      {
+        "candidate": "Differential expression counts (221 DE mRNAs: 124 up, 97 down in GSE134347; 244 DE mRNAs: 151 up, 93 down in single-cell datasets)",
+        "reason_rejected": "These are intermediate screening results, not the paper's stated principal result; the abstract prioritizes the AUC/diagnostic performance of the four core biomarkers."
+      },
+      {
+        "candidate": "Odds ratios and hazard ratios for core proteins (Tables 2 and 3)",
+        "reason_rejected": "These derive from the external Atlas of the Plasma Proteome database, not from the deposited GEO datasets, and are not the paper's stated principal result."
+      },
+      {
+        "candidate": "Survival analysis log-rank p-values for KLRB1, RETN, CD163 (Figure 6)",
+        "reason_rejected": "Secondary to the ROC/AUC result; the abstract states AUC values exceeding 0.9 as the principal diagnostic finding."
+      }
+    ]
+  },
+  "eligibility": "required_inputs_not_in_public_listing"
+}

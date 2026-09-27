@@ -1,0 +1,133 @@
+{
+  "paper_id": "PMID:32724106",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "e72fafc07bc56f5f94f0c9bb7155d2ce1cedb907a1622938dbf98ed41cb4b198",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "dryad",
+      "accession": "cvdncjt24",
+      "files": []
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:12:27.266961+00:00",
+  "api": {
+    "response_id": "2c22ef8f-7f8a-4f78-a9e1-00802ee1abe1",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 7371,
+    "completion_tokens": 1290
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0021",
+            "quote": "We used mixed model repeated measures analysis to identify factors affecting body temperatures of cane toads during the 40-min heating trials."
+          },
+          {
+            "segment_id": "S0022",
+            "quote": "Our measure of climate characteristics at each site (0, 3, 5, or 6 hot dry months per year) was analysed as a continuous variable."
+          }
+        ],
+        "rationale": "The principal result is produced by a mixed model repeated measures analysis on body temperature data, which a third party can re-run if the data are available."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0032",
+            "quote": "Climate × water 1, 26 6.55 0.0166 Climate × time 1, 60 6.44 0.0138"
+          },
+          {
+            "segment_id": "S0028",
+            "quote": "climate × time interaction P < 0.015, Fig. 3"
+          }
+        ],
+        "rationale": "The principal quantitative results are the interaction effects in the mixed model, specifically the climate × water and climate × time interactions, reported in Table 1 with F and P values."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0049",
+            "quote": "Data are available at 10.5061/dryad.cvdncjt24."
+          }
+        ],
+        "rationale": "The deposit listing shows no files, so it is uncertain whether the analysis inputs are deposited."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0021",
+            "quote": "Sex and body mass were used as covariates in the analysis with climate at each collection site (# consecutive months per year with average maximum temperature > 30 °C and with < 25 mm rainfall (see above)) and wet/dry treatment as factors and time (0, 20, 40 min) as the repeated measure."
+          },
+          {
+            "segment_id": "S0022",
+            "quote": "Individual ID nested within population was used as a random effect."
+          }
+        ],
+        "rationale": "The method is described in sufficient detail to implement the mixed model repeated measures analysis without the original code."
+      },
+      "G5": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0023",
+            "quote": "and analyses were run using JMP Pro 14.0 (SAS Institute, Cary, NC)."
+          }
+        ],
+        "rationale": "The analysis used JMP Pro 14.0, which is proprietary software, so the method is not feasible with free software alone."
+      }
+    },
+    "exact_target": "The interactive effect of climate and water treatment on body temperatures of cane toads, reported as F(1,26) = 6.55, P = 0.0166 in Table 1.",
+    "target_values": [
+      "6.55",
+      "0.0166"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The interactive effect of climate at collection sites and presence of water during trials on body temperatures of cane toads.",
+    "target_type": "p_value",
+    "target_location": "Table 1",
+    "location_quotes": [
+      {
+        "segment_id": "S0032",
+        "quote": "Climate × water 1, 26 6.55 0.0166"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0021",
+        "quote": "We used mixed model repeated measures analysis to identify factors affecting body temperatures of cane toads during the 40-min heating trials."
+      },
+      {
+        "segment_id": "S0021",
+        "quote": "Sex and body mass were used as covariates in the analysis with climate at each collection site (# consecutive months per year with average maximum temperature > 30 °C and with < 25 mm rainfall (see above)) and wet/dry treatment as factors and time (0, 20, 40 min) as the repeated measure."
+      },
+      {
+        "segment_id": "S0022",
+        "quote": "Individual ID nested within population was used as a random effect."
+      },
+      {
+        "segment_id": "S0022",
+        "quote": "Our measure of climate characteristics at each site (0, 3, 5, or 6 hot dry months per year) was analysed as a continuous variable."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit listing for Dryad accession cvdncjt24 shows no files. The data availability statement indicates data are available at 10.5061/dryad.cvdncjt24, but the specific files are not listed.",
+    "leakage_files": [],
+    "required_public_references": [],
+    "comparison_metric": "The observed F statistic and P value for the climate × water interaction are compared to the reported values.",
+    "numerical_agreement_criterion": "F statistic within rounding of 6.55 and P value at reported precision (0.0166).",
+    "specification_gaps": "The exact model specification (e.g., covariance structure, degrees of freedom approximation) is not fully described. The handling of missing data or outliers is not specified.",
+    "alternatives_considered": "The climate × time interaction (F = 6.44, P = 0.0138) was considered, but the climate × water interaction was chosen as it is the first significant interaction listed in Table 1 and directly addresses the hypothesis about water availability."
+  },
+  "eligibility": "gate_failed_delegated"
+}

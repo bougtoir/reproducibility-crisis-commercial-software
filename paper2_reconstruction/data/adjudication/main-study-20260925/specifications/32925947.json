@@ -1,0 +1,159 @@
+{
+  "paper_id": "PMID:32925947",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "eb1571d1d70db9a130f1dc940dcb66dd1539fdad21508fa1e8fa979d675f9ae3",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE143145",
+      "files": [
+        {
+          "name": "GSE143145_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:11:24.407754+00:00",
+  "api": {
+    "response_id": "a6d98f5f-840d-47c7-ba2e-d596179ef4e6",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 26486,
+    "completion_tokens": 1620
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0036",
+            "quote": "We developed TENET 2.0 to identify key transcriptional regulators whose expression levels are associated with changes in DNA methylation levels at enhancers in normal vs . tumor tissue samples ( Fig 1 and S1 Fig )."
+          },
+          {
+            "segment_id": "S0051",
+            "quote": "Using this classification scheme, we identified 4,344 unmethylated, 6,830 methylated, 9,056 hypermethylated, and 23,583 hypomethylated enhancer probes."
+          }
+        ],
+        "rationale": "The principal result (enhancer probe classification counts) is produced by a computational method (TENET 2.0) applied to public DNA methylation data, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0051",
+            "quote": "Using this classification scheme, we identified 4,344 unmethylated, 6,830 methylated, 9,056 hypermethylated, and 23,583 hypomethylated enhancer probes."
+          }
+        ],
+        "rationale": "The paper explicitly reports these counts as a key result of the enhancer classification, and they are the first quantitative results presented in the Results section."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0024",
+            "quote": "All datasets are deposited in the public GEO database (GSE143145)."
+          }
+        ],
+        "rationale": "The deposit GSE143145 contains only a RAW.tar and filelist.txt, which are likely raw sequencing data (e.g., ChIP-seq, ATAC-seq) generated in this study, not the TCGA DNA methylation and expression data used for the principal target. The required inputs are not among the listed files."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0048",
+            "quote": "By comparing the DNA methylation level (as a reflection of enhancer activity) of each probe in the normal vs . tumor samples, we classified the enhancer probes into 4 groups: methylated (“constitutively inactive”), i.e. highly methylated in both normal and tumor samples; unmethylated (“constitutively active”), i.e. lowly methylated in"
+          },
+          {
+            "segment_id": "S0049",
+            "quote": "both normal and tumor samples; hypermethylated (“normal-specific”; inactivated in LUAD), i.e. showing low methylation in normal samples but higher methylation in tumor samples; and hypomethylated (“cancer-specific”; activated in LUAD), i.e. showing high methylation in normal samples, but lower methylation in tumor samples."
+          }
+        ],
+        "rationale": "The classification criteria are described qualitatively, but the exact thresholds for 'high' and 'low' methylation are not specified, making it difficult to implement without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0137",
+            "quote": "RNA-seq data along with DNA methylation data were downloaded for BRCA and LUAD samples from the TCGA [ 7 , 71 ] using the TCGAbiolinks package [ 72 ] (see S1 Methods"
+          }
+        ],
+        "rationale": "The method uses standard open-source tools (TCGAbiolinks, R) and does not require proprietary software."
+      }
+    },
+    "exact_target": "Number of enhancer probes in each of four categories: unmethylated, methylated, hypermethylated, hypomethylated.",
+    "target_values": [
+      "4,344",
+      "6,830",
+      "9,056",
+      "23,583"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of enhancer probes classified into each of four activity groups based on DNA methylation levels in normal lung versus lung adenocarcinoma samples.",
+    "target_type": "count",
+    "target_location": "Results, subsection 'Identification of differentially activated enhancers in normal lung versus lung adenocarcinoma', text and Fig 2B.",
+    "location_quotes": [
+      {
+        "segment_id": "S0051",
+        "quote": "Using this classification scheme, we identified 4,344 unmethylated, 6,830 methylated, 9,056 hypermethylated, and 23,583 hypomethylated enhancer probes."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0048",
+        "quote": "By comparing the DNA methylation level (as a reflection of enhancer activity) of each probe in the normal vs . tumor samples, we classified the enhancer probes into 4 groups: methylated (“constitutively inactive”), i.e. highly methylated in both normal and tumor samples; unmethylated (“constitutively active”), i.e. lowly methylated in"
+      },
+      {
+        "segment_id": "S0049",
+        "quote": "both normal and tumor samples; hypermethylated (“normal-specific”; inactivated in LUAD), i.e. showing low methylation in normal samples but higher methylation in tumor samples; and hypomethylated (“cancer-specific”; activated in LUAD), i.e. showing high methylation in normal samples, but lower methylation in tumor samples."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The required inputs are TCGA LUAD DNA methylation data (HM450) and normal lung methylation data, which are not included in the deposit GSE143145. GSE143145 contains raw sequencing data (ChIP-seq, ATAC-seq) generated in this study, which are not the direct inputs for the enhancer probe classification.",
+    "leakage_files": [
+      {
+        "name": "GSE143145_RAW.tar",
+        "reason": "Contains raw sequencing data that may include processed files with the target counts or derived results."
+      },
+      {
+        "name": "filelist.txt",
+        "reason": "May list files that include the target values or derived result tables."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "TCGA LUAD DNA methylation data",
+        "version": "HM450"
+      },
+      {
+        "name": "TCGA LUAD normal lung DNA methylation data",
+        "version": "HM450"
+      }
+    ],
+    "comparison_metric": "Exact match of the reported counts.",
+    "numerical_agreement_criterion": "Counts must match exactly as printed.",
+    "specification_gaps": "The exact thresholds for classifying probes as methylated, unmethylated, hypermethylated, or hypomethylated are not specified. The method for handling missing data or batch effects is not described.",
+    "alternatives_considered": [
+      {
+        "target": "Number of differentially activated enhancers (over 32,000)",
+        "reason": "This is a summary statement without exact breakdown, and the exact counts per category are more specific and directly reported."
+      },
+      {
+        "target": "Number of enhancer probes linked to CENPA, FOXM1, MYBL2",
+        "reason": "These are downstream results and not the principal quantitative result of the enhancer classification step."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

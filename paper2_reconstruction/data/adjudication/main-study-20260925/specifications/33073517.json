@@ -1,0 +1,461 @@
+{
+  "paper_id": "PMID:33073517",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "fe83bb1f3c7c99bf335a8db3d70482b0af5980b7fb8c512dbe59aebc45e84207",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "8061398",
+      "files": [
+        {
+          "name": "Achiles_raw_readcounts.csv",
+          "bytes": 578879569
+        },
+        {
+          "name": "Achilles_README",
+          "bytes": 4445
+        },
+        {
+          "name": "Achilles_common_essentials.csv",
+          "bytes": 31747
+        },
+        {
+          "name": "Achilles_dropped_guides.csv",
+          "bytes": 10237
+        },
+        {
+          "name": "Achilles_gene_dependency.csv",
+          "bytes": 159948997
+        },
+        {
+          "name": "Achilles_gene_effect.csv",
+          "bytes": 157734539
+        },
+        {
+          "name": "Achilles_gene_effect_unscaled.csv",
+          "bytes": 152399894
+        },
+        {
+          "name": "Achilles_guide_efficacy.csv",
+          "bytes": 4136043
+        },
+        {
+          "name": "Achilles_guide_map.csv",
+          "bytes": 3914839
+        },
+        {
+          "name": "Achilles_logfold_change.csv",
+          "bytes": 1421320214
+        },
+        {
+          "name": "Achilles_replicate_map.csv",
+          "bytes": 55708
+        },
+        {
+          "name": "CCLE_README",
+          "bytes": 5539
+        },
+        {
+          "name": "CCLE_RNAseq_reads.csv",
+          "bytes": 328582594
+        },
+        {
+          "name": "CCLE_RNAseq_transcripts.csv",
+          "bytes": 1069975172
+        },
+        {
+          "name": "CCLE_expression.csv",
+          "bytes": 271252441
+        },
+        {
+          "name": "CCLE_expression_full.csv",
+          "bytes": 588752652
+        },
+        {
+          "name": "CCLE_fusions.csv",
+          "bytes": 4428520
+        },
+        {
+          "name": "CCLE_fusions_unfiltered.csv",
+          "bytes": 98419068
+        },
+        {
+          "name": "CCLE_gene_cn.csv",
+          "bytes": 543684997
+        },
+        {
+          "name": "CCLE_mutations.csv",
+          "bytes": 304704980
+        },
+        {
+          "name": "CCLE_segmented_cn.csv",
+          "bytes": 54446954
+        },
+        {
+          "name": "common_essentials.csv",
+          "bytes": 3062
+        },
+        {
+          "name": "nonessentials.csv",
+          "bytes": 12290
+        },
+        {
+          "name": "sample_info.csv",
+          "bytes": 189059
+        }
+      ]
+    },
+    {
+      "kind": "figshare",
+      "accession": "9201770",
+      "files": [
+        {
+          "name": "Achilles_common_essentials.csv",
+          "bytes": 32161
+        },
+        {
+          "name": "Achilles_dropped_guides.csv",
+          "bytes": 187094
+        },
+        {
+          "name": "Achilles_gene_dependency.csv",
+          "bytes": 184603656
+        },
+        {
+          "name": "Achilles_gene_effect.csv",
+          "bytes": 181532150
+        },
+        {
+          "name": "Achilles_gene_effect_unscaled.csv",
+          "bytes": 176062366
+        },
+        {
+          "name": "Achilles_guide_efficacy.csv",
+          "bytes": 3861329
+        },
+        {
+          "name": "Achilles_guide_map.csv",
+          "bytes": 4090580
+        },
+        {
+          "name": "Achilles_high_variance_genes.csv",
+          "bytes": 7776
+        },
+        {
+          "name": "Achilles_logfold_change.csv",
+          "bytes": 1576721805
+        },
+        {
+          "name": "Achilles_raw_readcounts.csv",
+          "bytes": 629268686
+        },
+        {
+          "name": "Achilles_replicate_map.csv",
+          "bytes": 60986
+        },
+        {
+          "name": "CCLE_RNAseq_reads.csv",
+          "bytes": 341286073
+        },
+        {
+          "name": "CCLE_RNAseq_transcripts.csv",
+          "bytes": 1130679671
+        },
+        {
+          "name": "CCLE_expression.csv",
+          "bytes": 291359710
+        },
+        {
+          "name": "CCLE_expression_full.csv",
+          "bytes": 627195647
+        },
+        {
+          "name": "CCLE_fusions.csv",
+          "bytes": 7258579
+        },
+        {
+          "name": "CCLE_fusions_unfiltered.csv",
+          "bytes": 79623514
+        },
+        {
+          "name": "CCLE_gene_cn.csv",
+          "bytes": 658894442
+        },
+        {
+          "name": "CCLE_mutations.csv",
+          "bytes": 289625468
+        },
+        {
+          "name": "CCLE_segmented_cn.csv",
+          "bytes": 57563408
+        },
+        {
+          "name": "README",
+          "bytes": 14119
+        },
+        {
+          "name": "common_essentials.csv",
+          "bytes": 18240
+        },
+        {
+          "name": "nonessentials.csv",
+          "bytes": 11907
+        },
+        {
+          "name": "sample_info.csv",
+          "bytes": 344703
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:04:50.002762+00:00",
+  "api": {
+    "response_id": "dd3b09ef-d292-4ec7-910b-7183518fee4f",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 27613,
+    "completion_tokens": 2618
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0023",
+            "quote": "we developed a logistic regression‐based approach combined with clustering to categorise genes according to their essentiality probability profiles"
+          },
+          {
+            "segment_id": "S0127",
+            "quote": "To identify core genes that are essential for all cell types, we used the corrected log‐fold‐change (logFC) matrix calculated using the MAGeCK (Li et al"
+          }
+        ],
+        "rationale": "The principal result (core essential gene counts) is produced by a computational pipeline (logistic regression + k-means clustering) applied to public CRISPR screen data, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0024",
+            "quote": "identified 650 genes from the SANGER data set and 942 genes from the BROAD data set, assigned into the core essential gene cluster, with 519 overlapping genes between the two projects"
+          }
+        ],
+        "rationale": "The paper's first quantitative result is the number of core essential genes identified in each dataset and their overlap, which is a primary numerical endpoint."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0106",
+            "quote": "For BROAD, DepMap Achilles 19Q2 was used*For INTEGRATED, DepMap Achilles 19Q3 was used"
+          },
+          {
+            "segment_id": "S0127",
+            "quote": "we used the corrected log‐fold‐change (logFC) matrix calculated using the MAGeCK (Li et al"
+          }
+        ],
+        "rationale": "The analysis inputs are the logFC matrices from DepMap Achilles 19Q2 and 19Q3, which are deposited as Achilles_logfold_change.csv in the figshare deposits."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0129",
+            "quote": "Training a logistic regression function that can separate genes as essential and non‐essential inside each cell line. We separately trained logistic regression models with gold‐standard reference BAGEL essential and non‐essential gene lists"
+          },
+          {
+            "segment_id": "S0131",
+            "quote": "we first sorted the essentiality probabilities in an increasing order and converted the continuous probability distribution into 20 bins of discrete frequency of probabilities"
+          },
+          {
+            "segment_id": "S0132",
+            "quote": "We used these matrices as input for unsupervised k ‐means clustering. Using the silhouette method, we identified the optimum number of clusters to be 4."
+          }
+        ],
+        "rationale": "The method for identifying core essential genes is described in sufficient detail (logistic regression training, probability binning, k-means clustering) to implement without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0119",
+            "quote": "Python (version 3.6.9) Python language CEN‐tools data curation and analysis"
+          },
+          {
+            "segment_id": "S0120",
+            "quote": "scikit‐learn Python package for predictive data analysis CEN‐tools data curation and analysis"
+          }
+        ],
+        "rationale": "The method uses Python and open-source packages (scikit-learn, SciPy, pandas), with no proprietary software required."
+      }
+    },
+    "exact_target": "Number of core essential genes identified by CEN-tools in the SANGER dataset, the BROAD dataset, and their overlap.",
+    "target_values": [
+      "650",
+      "942",
+      "519"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of genes assigned to the core essential gene cluster in each of the two datasets and the number of genes common to both clusters.",
+    "target_type": "count",
+    "target_location": "Results, first paragraph of 'CEN-tools identifies a robust set of core essential genes'",
+    "location_quotes": [
+      {
+        "segment_id": "S0024",
+        "quote": "identified 650 genes from the SANGER data set and 942 genes from the BROAD data set, assigned into the core essential gene cluster, with 519 overlapping genes between the two projects"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0127",
+        "quote": "To identify core genes that are essential for all cell types, we used the corrected log‐fold‐change (logFC) matrix calculated using the MAGeCK (Li et al"
+      },
+      {
+        "segment_id": "S0128",
+        "quote": "we opted to convert the logFC values into essentiality probabilities and compare the probability of each gene being essential from the two independent data sets to identify core essential genes"
+      },
+      {
+        "segment_id": "S0129",
+        "quote": "Training a logistic regression function that can separate genes as essential and non‐essential inside each cell line. We separately trained logistic regression models with gold‐standard reference BAGEL essential and non‐essential gene lists"
+      },
+      {
+        "segment_id": "S0131",
+        "quote": "we first sorted the essentiality probabilities in an increasing order and converted the continuous probability distribution into 20 bins of discrete frequency of probabilities"
+      },
+      {
+        "segment_id": "S0132",
+        "quote": "We used these matrices as input for unsupervised k ‐means clustering. Using the silhouette method, we identified the optimum number of clusters to be 4."
+      },
+      {
+        "segment_id": "S0133",
+        "quote": "We identified Cluster 1 as the cluster that best represented core"
+      }
+    ],
+    "required_files": [
+      "Achilles_common_essentials.csv",
+      "Achilles_logfold_change.csv",
+      "common_essentials.csv",
+      "nonessentials.csv"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The analysis uses DepMap Achilles 19Q2 (figshare 8061398) and 19Q3 (figshare 9201770). The log fold change matrices are in Achilles_logfold_change.csv. The BAGEL essential and non-essential gene lists are in common_essentials.csv and nonessentials.csv. The paper also mentions using the corrected logFC matrix from Project Score, but the deposit listing only includes DepMap data; Project Score data may need to be obtained separately.",
+    "leakage_files": [
+      {
+        "name": "Achilles_gene_dependency.csv",
+        "reason": "Contains derived dependency scores that are outputs of the analysis pipeline."
+      },
+      {
+        "name": "Achilles_gene_effect.csv",
+        "reason": "Contains gene effect scores derived from the log fold change data."
+      },
+      {
+        "name": "Achilles_gene_effect_unscaled.csv",
+        "reason": "Contains unscaled gene effect scores derived from the log fold change data."
+      },
+      {
+        "name": "Achilles_guide_efficacy.csv",
+        "reason": "Contains guide-level efficacy metrics derived from the analysis."
+      },
+      {
+        "name": "Achilles_guide_map.csv",
+        "reason": "Contains mapping of guides to genes, which is intermediate data."
+      },
+      {
+        "name": "Achilles_replicate_map.csv",
+        "reason": "Contains replicate mapping, which is intermediate data."
+      },
+      {
+        "name": "Achilles_dropped_guides.csv",
+        "reason": "Contains list of dropped guides, which is an output of quality control."
+      },
+      {
+        "name": "Achilles_high_variance_genes.csv",
+        "reason": "Contains list of high variance genes, which is a derived result."
+      },
+      {
+        "name": "Achilles_common_essentials.csv",
+        "reason": "Contains common essential genes, which is a derived result similar to the target."
+      },
+      {
+        "name": "common_essentials.csv",
+        "reason": "Contains common essential genes, which is a derived result similar to the target."
+      },
+      {
+        "name": "nonessentials.csv",
+        "reason": "Contains non-essential genes, which is a derived result."
+      },
+      {
+        "name": "sample_info.csv",
+        "reason": "Contains cell line annotations, which are inputs but not the target; however, it may contain derived annotations."
+      },
+      {
+        "name": "CCLE_expression.csv",
+        "reason": "Contains expression data, which is an input for other analyses but not for the core essential gene identification."
+      },
+      {
+        "name": "CCLE_expression_full.csv",
+        "reason": "Contains full expression data, which is an input for other analyses."
+      },
+      {
+        "name": "CCLE_gene_cn.csv",
+        "reason": "Contains copy number data, which is an input for other analyses."
+      },
+      {
+        "name": "CCLE_mutations.csv",
+        "reason": "Contains mutation data, which is an input for other analyses."
+      },
+      {
+        "name": "CCLE_segmented_cn.csv",
+        "reason": "Contains segmented copy number data, which is an input for other analyses."
+      },
+      {
+        "name": "CCLE_fusions.csv",
+        "reason": "Contains fusion data, which is an input for other analyses."
+      },
+      {
+        "name": "CCLE_fusions_unfiltered.csv",
+        "reason": "Contains unfiltered fusion data, which is an input for other analyses."
+      },
+      {
+        "name": "CCLE_RNAseq_reads.csv",
+        "reason": "Contains RNA-seq read counts, which is an input for other analyses."
+      },
+      {
+        "name": "CCLE_RNAseq_transcripts.csv",
+        "reason": "Contains RNA-seq transcript data, which is an input for other analyses."
+      },
+      {
+        "name": "Achilles_raw_readcounts.csv",
+        "reason": "Contains raw read counts, which are inputs but not the target; however, they are not the minimal sufficient set."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "BAGEL essential and non-essential gene lists",
+        "version": "Hart & Moffat, 2016"
+      }
+    ],
+    "comparison_metric": "The observed counts of core essential genes from the re-analysis will be compared to the reported counts (650 for SANGER, 942 for BROAD, 519 overlap).",
+    "numerical_agreement_criterion": "Counts must match exactly.",
+    "specification_gaps": "The exact version of the BAGEL gene lists used for training is not specified. The paper mentions using the corrected logFC matrix from Project Score, but the deposit listing only includes DepMap data; it is unclear if the Project Score data is included in the deposit or must be obtained separately. The exact parameters for the logistic regression and k-means clustering (e.g., random seed) are not fully specified.",
+    "alternatives_considered": [
+      {
+        "target": "Number of novel core essential genes (190)",
+        "reason": "This is a downstream result that depends on additional filtering steps and annotations, making it less directly reproducible from the primary data."
+      },
+      {
+        "target": "Number of genes in the high-confidence set (519)",
+        "reason": "This is the same as the overlap count, but the paper's primary result includes the counts from each dataset separately."
+      },
+      {
+        "target": "P-values for associations (e.g., IGF1R essentiality in NRAS-mutant melanoma)",
+        "reason": "These are results from context-specific analyses that require additional data and are not the principal result of the paper."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

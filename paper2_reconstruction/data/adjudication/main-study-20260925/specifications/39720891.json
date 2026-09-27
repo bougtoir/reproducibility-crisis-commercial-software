@@ -1,0 +1,53 @@
+{
+  "paper_id": "PMID:39720891",
+  "sampling_stratum": "Clinical_Medicine",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "821137cab9e44e87f5902ab72896714c5d203f68aace79ee290e8ab62bc6c32f",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE116256",
+      "files": [
+        {
+          "name": "GSE116256_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE240618",
+      "files": [
+        {
+          "name": "GSE240618_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:05:42.328716+00:00",
+  "api": {
+    "response_id": "d9a082b3-7f84-4680-9572-a4ef952eb83d",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 14822,
+    "completion_tokens": 2172
+  },
+  "specification": null,
+  "eligibility": "specification_not_obtained",
+  "error": {
+    "type": "ValueError",
+    "detail": "PMID:39720891 G1: quote not found verbatim in S0008"
+  }
+}

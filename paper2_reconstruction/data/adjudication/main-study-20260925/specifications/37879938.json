@@ -1,0 +1,186 @@
+{
+  "paper_id": "PMID:37879938",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "44ac63bb5045d5b7081478dc2b0f54aac5df27d1df0d5aa89f561d3dcd13af9d",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "21968813",
+      "files": [
+        {
+          "name": "GRN_plots_v5.1.zip",
+          "bytes": 107047858
+        },
+        {
+          "name": "Network_prediction_tables.zip",
+          "bytes": 820570048
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:49:01.842167+00:00",
+  "api": {
+    "response_id": "3d305514-8e64-4817-bb35-0980e41182ed",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 28047,
+    "completion_tokens": 2186
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0037",
+            "quote": "We generated synthetic gene expression data with known ground-truth GRN structure for a variety of sample sizes (see the Materials and Methods section) to determine the characteristics of the transcriptomic data on which GRN inference methods perform best"
+          },
+          {
+            "segment_id": "S0045",
+            "quote": "Comparison of different GRN inference methods (L0L2, GENIE3, Spearman correlation, and MI) to recover the ground-truth GRN structure from simulated gene expression data as"
+          }
+        ],
+        "rationale": "The principal result is a computational comparison of GRN inference methods on simulated and human embryo data, which a third party can re-run given the deposited data and described methods."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0046",
+            "quote": "measured with the average area under the receiver operating characteristic curve (AUROC) from 100 simulations. The average AUROC is shown as a function of different sample sizes ( n = 10–1,000) and the number of potential regulators of each gene in the simulated datasets is also varied from 10 to 100."
+          },
+          {
+            "segment_id": "S0050",
+            "quote": "the performance of all methods increases from the sample size of n = 10–1,000, as assessed statistically by the area under the receiver operating characteristic curve ( Fig 1B )."
+          }
+        ],
+        "rationale": "The paper's stated priority is the comparison of GRN inference methods; the first quantitative result is the average AUROC from simulations, reported in Fig 1B."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0187",
+            "quote": "scRNA-seq and ATAC-seq data were obtained from the European Nucleotide Archive (accession numbers: PRJNA153427 , PRJNA277181 , PRJEB11202 , and PRJNA494280 )."
+          },
+          {
+            "segment_id": "S0094",
+            "quote": "All MICA GRN predictions can be found on FigShare: doi.org/10.6084/m9.figshare.21968813 ."
+          }
+        ],
+        "rationale": "The FigShare deposit contains GRN plots and prediction tables, which are outputs of the analysis, not the raw input data. The raw scRNA-seq and ATAC-seq data are in ENA, not in the listed deposit."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0168",
+            "quote": "For our simulation study, we used the dagitty package in R to generate synthetic gene expression data based on pre-defined GRNs with pre-determined network structure."
+          },
+          {
+            "segment_id": "S0169",
+            "quote": "These GRNs were generated with network edge density of ρ = 0.07, i.e., 7% of all possible edges (or gene regulations), are present in the network (this value was estimated from the available ATAC-seq+TF motif data)."
+          },
+          {
+            "segment_id": "S0170",
+            "quote": "For each combination of n and p , we generated 100 GRNs; then corresponding observed gene expression datasets were generated for each of the GRNs by specifying that the expression level of a downstream gene should depend on a linear combination of the expression levels of its upstream regulators:"
+          },
+          {
+            "segment_id": "S0171",
+            "quote": "The different network inference methods (GENIE3, L0L2 sparse regression, MI, Spearman correlation) were then applied to these generated data, and the results were compared with the known pre-determined network structure. This comparison was assessed by the AUC statistic, the “area under the ROC (receiver-operator characteristic) curve.”"
+          }
+        ],
+        "rationale": "The simulation study method is described in sufficient detail to implement without the original code, including the data generation model, parameters, and evaluation metric."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0168",
+            "quote": "we used the dagitty package in R to generate synthetic gene expression data"
+          },
+          {
+            "segment_id": "S0151",
+            "quote": "GENIE3 ( Huynh-Thu et al, 2010 ), with a non-linear alternative based on MI ( Faith et al, 2007 ), the Spearman’s rank correlation coefficient, and the L0L2 sparse regression method"
+          }
+        ],
+        "rationale": "All methods and software mentioned (R, dagitty, GENIE3, MI, Spearman correlation, L0L2) are freely available; no proprietary software is required."
+      }
+    },
+    "exact_target": "Average area under the receiver operating characteristic curve (AUROC) from 100 simulations for different GRN inference methods as a function of sample size (n = 10–1,000) and number of potential regulators (P = 10–100), as shown in Fig 1B.",
+    "target_values": [
+      "n = 10–1,000",
+      "10 to 100",
+      "n = 100",
+      "P = 20, 50, and 100"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The average area under the receiver operating characteristic curve (AUROC) from simulations comparing different GRN inference methods across varying sample sizes and numbers of potential regulators.",
+    "target_type": "performance",
+    "target_location": "Figure 1B and 1C",
+    "location_quotes": [
+      {
+        "segment_id": "S0046",
+        "quote": "The average AUROC is shown as a function of different sample sizes ( n = 10–1,000) and the number of potential regulators of each gene in the simulated datasets is also varied from 10 to 100."
+      },
+      {
+        "segment_id": "S0047",
+        "quote": "Box and whisker plots show comparison of AUROC values for all simulations for each method with number of samples n = 100 and number of regulators P = 20, 50, and 100."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0168",
+        "quote": "For our simulation study, we used the dagitty package in R to generate synthetic gene expression data based on pre-defined GRNs with pre-determined network structure."
+      },
+      {
+        "segment_id": "S0169",
+        "quote": "These GRNs were generated with network edge density of ρ = 0.07, i.e., 7% of all possible edges (or gene regulations), are present in the network (this value was estimated from the available ATAC-seq+TF motif data)."
+      },
+      {
+        "segment_id": "S0170",
+        "quote": "For each combination of n and p , we generated 100 GRNs; then corresponding observed gene expression datasets were generated for each of the GRNs by specifying that the expression level of a downstream gene should depend on a linear combination of the expression levels of its upstream regulators:"
+      },
+      {
+        "segment_id": "S0171",
+        "quote": "The different network inference methods (GENIE3, L0L2 sparse regression, MI, Spearman correlation) were then applied to these generated data, and the results were compared with the known pre-determined network structure. This comparison was assessed by the AUC statistic, the “area under the ROC (receiver-operator characteristic) curve.”"
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The simulation study uses synthetic data generated in silico; no input files are required from the deposit. The deposit contains only output files (GRN plots and prediction tables).",
+    "leakage_files": [
+      {
+        "name": "GRN_plots_v5.1.zip",
+        "reason": "Contains plots of GRN predictions, which are derived results and may include the target AUROC values or related performance metrics."
+      },
+      {
+        "name": "Network_prediction_tables.zip",
+        "reason": "Contains tables of network predictions, which are derived results and may include the target AUROC values or related performance metrics."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "The observed AUROC values from re-running the simulation study are compared to the reported AUROC values in Fig 1B and 1C.",
+    "numerical_agreement_criterion": "Performance metrics on the identical split: AUROC values should match within the displayed rounding bin (e.g., as shown in Fig 1B and 1C).",
+    "specification_gaps": "The exact random seed for generating synthetic data is not specified; the exact implementation details of the dagitty package usage (e.g., parameter settings) are not fully described; the exact number of simulations for each combination of n and p is stated as 100, but the aggregation method (e.g., mean) is not explicitly stated.",
+    "alternatives_considered": [
+      {
+        "target": "ΔR reproducibility score (Fig 2A)",
+        "reason": "This is a principal result for human blastocyst data, but the paper's stated priority is the comparison of methods on simulated data first, and the simulation study is the first quantitative result."
+      },
+      {
+        "target": "ΔAUPRC (Fig 2B)",
+        "reason": "Similar to ΔR, this is a later result and not the first principal quantitative result."
+      },
+      {
+        "target": "Pearson correlation between TFAP2C and JUND protein intensity (Fig 5D)",
+        "reason": "This is a validation experiment, not the principal computational result."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

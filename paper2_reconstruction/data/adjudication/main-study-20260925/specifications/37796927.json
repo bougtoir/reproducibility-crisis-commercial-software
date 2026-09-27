@@ -1,0 +1,237 @@
+{
+  "paper_id": "PMID:37796927",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "3a86bd6079d37446f9f31efeb928dad811c44c4eccfe1fd12714f447c9dcb817",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "zenodo",
+      "accession": "6547761",
+      "files": [
+        {
+          "name": "MAG_journals.7z",
+          "bytes": 409749741
+        }
+      ]
+    },
+    {
+      "kind": "zenodo",
+      "accession": "6547767",
+      "files": [
+        {
+          "name": "barabasi.pickle",
+          "bytes": 1044745
+        },
+        {
+          "name": "gnp.pickle",
+          "bytes": 1593201
+        },
+        {
+          "name": "gnx.pickle",
+          "bytes": 1077595
+        },
+        {
+          "name": "regular.pickle",
+          "bytes": 562728
+        }
+      ]
+    },
+    {
+      "kind": "zenodo",
+      "accession": "8122402",
+      "files": [
+        {
+          "name": "Common Knowledge Processing Patterns in Networks of Different Systems Minimal Data Set.7z",
+          "bytes": 6347761
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T05:06:36.422911+00:00",
+  "api": {
+    "response_id": "79570966-97d3-4094-9830-f884fae57b94",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 21917,
+    "completion_tokens": 2696
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0050",
+            "quote": "The mechanism of knowledge processing is studied using the four network measures shown below. The four measures evaluate the characteristics between nodes: topics, animal neural networks, artificial neural networks, and their relations represented by their connections or edges."
+          },
+          {
+            "segment_id": "S0093",
+            "quote": "Table 2 Worm and fruit fly versus generated graph. #neurons #synapses avg_degree avg_pagerank avg_clustering avg_triangles Worm"
+          }
+        ],
+        "rationale": "The principal results are computed graph measures (degree, PageRank, clustering, triangles) on deposited network data, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0093",
+            "quote": "Table 2 Worm and fruit fly versus generated graph. #neurons #synapses avg_degree avg_pagerank avg_clustering avg_triangles Worm"
+          },
+          {
+            "segment_id": "S0094",
+            "quote": "281 2,405 17.1174 0.0036 0.3460 47.5943 Fruitfly 21,733 2,872,500 264.3445 4.60E-05 0.3137 12605.9781 Generated_worm 281 2,350 16.7260 0.0036 0.0611 8.5836 Generated_fruitfly 21,733 2,873,553 264.4414 4.60E-05 0.0122 425.5065"
+          }
+        ],
+        "rationale": "Table 2 is a central quantitative table reporting the four graph measures for worm, fruit fly, and generated graphs; it is the first such table and directly supports the comparison."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0014",
+            "quote": "Similar patterns in randomly generated graphs were reviewed from fixed graphs generated for the experiment. The generated graphs were recorded online for public access. • Four random graph generation algorithms with example graph binary files ( https://zenodo.org/record/6547767 )."
+          },
+          {
+            "segment_id": "S0016",
+            "quote": "Lastly, the minimal data set is uploaded to an online data repository for public access. • Common Knowledge Processing Patterns in Networks of Different Systems Minimal Data Set ( https://zenodo.org/record/8122402 )."
+          }
+        ],
+        "rationale": "The deposit includes example graph binary files and a minimal data set, which are the analysis inputs (graphs) for computing the measures, not the output tables."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0050",
+            "quote": "The graph evaluation methods included: Average Degree = 2 *| E |/| V |."
+          },
+          {
+            "segment_id": "S0051",
+            "quote": "Average PageRank = 1 | V | ∙ ∑ v i ∈ V ∑ v j ∈ N − ( v i ) P R ( v j ) deg + ( v j ) ."
+          },
+          {
+            "segment_id": "S0052",
+            "quote": "Average Clustering = 1 | V | ∙ ∑ v i ∈ V 2 ∙ T r i a n g l e ( v i ) deg ( v i ) ∙ ( deg ( v i ) − 1 ) ○ The average clustering coefficient measures the degree of node clusterability based on the number of triangles each node v i is a member of. Average Triangles = 1 | V | ∙ T r i a n g l e ( V )"
+          }
+        ],
+        "rationale": "The four graph measures are defined with formulas, and the data format is described, enabling implementation without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0050",
+            "quote": "The mechanism of knowledge processing is studied using the four network measures shown below."
+          }
+        ],
+        "rationale": "The methods use standard graph algorithms (degree, PageRank, clustering, triangles) that can be implemented with free software; no proprietary tools are mentioned."
+      }
+    },
+    "exact_target": "Table 2: Worm and fruit fly versus generated graph. Reported values: Worm: #neurons 281, #synapses 2,405, avg_degree 17.1174, avg_pagerank 0.0036, avg_clustering 0.3460, avg_triangles 47.5943; Fruitfly: #neurons 21,733, #synapses 2,872,500, avg_degree 264.3445, avg_pagerank 4.60E-05, avg_clustering 0.3137, avg_triangles 12605.9781; Generated_worm: #neurons 281, #synapses 2,350, avg_degree 16.7260, avg_pagerank 0.0036, avg_clustering 0.0611, avg_triangles 8.5836; Generated_fruitfly: #neurons 21,733, #synapses 2,873,553, avg_degree 264.4414, avg_pagerank 4.60E-05, avg_clustering 0.0122, avg_triangles 425.5065.",
+    "target_values": [
+      "281",
+      "2,405",
+      "17.1174",
+      "0.0036",
+      "0.3460",
+      "47.5943",
+      "21,733",
+      "2,872,500",
+      "264.3445",
+      "4.60E-05",
+      "0.3137",
+      "12605.9781",
+      "281",
+      "2,350",
+      "16.7260",
+      "0.0036",
+      "0.0611",
+      "8.5836",
+      "21,733",
+      "2,873,553",
+      "264.4414",
+      "4.60E-05",
+      "0.0122",
+      "425.5065"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The values in Table 2 comparing the worm and fruit fly connectomes to Erdős-Rényi generated graphs with matching node and edge counts, reporting number of neurons, number of synapses, average degree, average PageRank, average clustering, and average triangles for each network.",
+    "target_type": "table_cells",
+    "target_location": "Table 2",
+    "location_quotes": [
+      {
+        "segment_id": "S0093",
+        "quote": "Table 2 Worm and fruit fly versus generated graph. #neurons #synapses avg_degree avg_pagerank avg_clustering avg_triangles Worm"
+      },
+      {
+        "segment_id": "S0094",
+        "quote": "281 2,405 17.1174 0.0036 0.3460 47.5943 Fruitfly 21,733 2,872,500 264.3445 4.60E-05 0.3137 12605.9781 Generated_worm 281 2,350 16.7260 0.0036 0.0611 8.5836 Generated_fruitfly 21,733 2,873,553 264.4414 4.60E-05 0.0122 425.5065"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0050",
+        "quote": "The graph evaluation methods included: Average Degree = 2 *| E |/| V |."
+      },
+      {
+        "segment_id": "S0051",
+        "quote": "Average PageRank = 1 | V | ∙ ∑ v i ∈ V ∑ v j ∈ N − ( v i ) P R ( v j ) deg + ( v j ) ."
+      },
+      {
+        "segment_id": "S0052",
+        "quote": "Average Clustering = 1 | V | ∙ ∑ v i ∈ V 2 ∙ T r i a n g l e ( v i ) deg ( v i ) ∙ ( deg ( v i ) − 1 ) ○ The average clustering coefficient measures the degree of node clusterability based on the number of triangles each node v i is a member of. Average Triangles = 1 | V | ∙ T r i a n g l e ( V )"
+      },
+      {
+        "segment_id": "S0087",
+        "quote": "G n , p of the Erdős-Rényi model is used where the edge probability p is calculated as p = 2 ∙ | E | / ( | V | * ( | V | − 1 ) ) , resulting in p = 0.0611 for the roundworm and p = 0.0122 for the fruit fly."
+      }
+    ],
+    "required_files": [
+      "Common Knowledge Processing Patterns in Networks of Different Systems Minimal Data Set.7z",
+      "barabasi.pickle",
+      "gnp.pickle",
+      "gnx.pickle",
+      "regular.pickle"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The pickle files are example graph binary files for random graph generation algorithms (Zenodo 6547767). The minimal data set (Zenodo 8122402) likely contains the worm and fruit fly connectome data and generated graphs. The MAG_journals.7z (Zenodo 6547761) is for topic networks, not needed for Table 2. The worm connectome is from Wormatlas (outdated) and fruit fly from hemibrain; these may be included in the minimal data set.",
+    "leakage_files": [
+      {
+        "name": "Common Knowledge Processing Patterns in Networks of Different Systems Minimal Data Set.7z",
+        "reason": "May contain derived result tables or the target values (e.g., computed graph measures) as part of the minimal data set."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "Wormatlas connectome",
+        "version": "Outdated, from Paper 'Wiring optimization can relate neuronal structure and function'"
+      },
+      {
+        "name": "Hemibrain connectome",
+        "version": "From Paper 'A connectome of the adult drosophila central brain'"
+      }
+    ],
+    "comparison_metric": "Compare the reported graph measures (avg_degree, avg_pagerank, avg_clustering, avg_triangles) for worm, fruit fly, and generated graphs to values recomputed from the deposited graph data.",
+    "numerical_agreement_criterion": "Counts exact; scalars within displayed rounding bin (e.g., 4 decimal places for avg_degree, 4 decimal places for avg_pagerank, 4 decimal places for avg_clustering, 4 decimal places for avg_triangles).",
+    "specification_gaps": "The exact random seed or generation procedure for the Erdős-Rényi graphs is not specified; the handling of duplicate synapses and directionality in connectome data is described but not fully detailed; the exact version of the connectome data used is not specified.",
+    "alternatives_considered": [
+      {
+        "target": "Table 3 Knowledge networks comparison summary",
+        "reason": "It is a qualitative summary of trends (up/down) without numeric values, so not a quantitative target."
+      },
+      {
+        "target": "Correlation coefficients in Fig 1 (e.g., 0.4322, -0.0566, 0.2533, 0.9963)",
+        "reason": "These are results from artificial neural network experiments, but the principal target is the comparison across systems in Table 2, which is more central and appears earlier."
+      },
+      {
+        "target": "ANOVA p-values (e.g., p=0, p=1)",
+        "reason": "These are statistical test results, not the principal quantitative endpoint; Table 2 provides the main comparative measures."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

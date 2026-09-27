@@ -1,0 +1,211 @@
+{
+  "paper_id": "PMID:34823491",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "3866812a5d417cae76c248c42a7d6a9e508c28b74a53d30d3ace3e8bdd09370f",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE64306",
+      "files": [
+        {
+          "name": "GSE64306_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE93798",
+      "files": [
+        {
+          "name": "GSE93798_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE37460",
+      "files": [
+        {
+          "name": "GSE37460.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE37460.xlsx.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE37460_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:48:54.608406+00:00",
+  "api": {
+    "response_id": "714d508c-c064-4f8b-81f1-3bcdd31354b2",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 15385,
+    "completion_tokens": 1758
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0025",
+            "quote": "Microarray data were processed and analyzed in R. By comparing with the IgAN patients and normal individuals, we calculated the differentially expressed mRNA (DE-mRNA) from GSE93798 dataset and different expressed miRNA (DE-miRNAs) from GSE64306 dataset by “limma” package in R."
+          },
+          {
+            "segment_id": "S0031",
+            "quote": "We adopted CIBERSORT method to determine the proportions of the 22 types of infiltrating immune cells in IgAN patients and normal controls [ 12 ]."
+          }
+        ],
+        "rationale": "The principal results are produced by re-runnable computations (limma differential expression, CIBERSORT deconvolution) on public GEO microarray data."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0038",
+            "quote": "There were 20 DE-miRNAs between IgAN patients and the normal controls. Of these, four DE-miRNAs were downregulated, whereas 16 DE-miRNAs were upregulated."
+          },
+          {
+            "segment_id": "S0043",
+            "quote": "The results showed 957 downregulated and 834 upregulated genes between the IgAN patients and the normal controls."
+          }
+        ],
+        "rationale": "A single principal quantitative result can be named: the count of DE-miRNAs (20 total; 4 down, 16 up) from GSE64306, the first reported numerical endpoint."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0023",
+            "quote": "The miRNA expression profile under accession number GSE64306 was contributed by Wang et al. [ 17 ]. The dataset was downloaded from the GEO database according to the platform of the GPL19117 [miRNA-4] Affymetrix Multispecies miRNA-4 Array."
+          },
+          {
+            "segment_id": "S0024",
+            "quote": "Raw data from the GSE93798 and GSE64306 datasets were read using the “affy” package in R (version 3.5.3, R Core Team, Vienna, Austria). The RMA algorithm was used for background correction and data normalization."
+          }
+        ],
+        "rationale": "The deposit lists raw data archives (GSE64306_RAW.tar, GSE93798_RAW.tar) that are the analysis inputs, not outputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0025",
+            "quote": "we calculated the differentially expressed mRNA (DE-mRNA) from GSE93798 dataset and different expressed miRNA (DE-miRNAs) from GSE64306 dataset by “limma” package in R."
+          },
+          {
+            "segment_id": "S0026",
+            "quote": "the p values were adjusted using the Benjamin and Hochberg method, the thresholds were adj. p < 0.05 and logFC > 1 (upregulated) or logFC < − 1 (downregulated)."
+          }
+        ],
+        "rationale": "The method (limma on RMA-normalized data, BH-adjusted p<0.05, |logFC|>1) is described sufficiently to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0024",
+            "quote": "Raw data from the GSE93798 and GSE64306 datasets were read using the “affy” package in R (version 3.5.3, R Core Team, Vienna, Austria). The RMA algorithm was used for background correction and data normalization."
+          },
+          {
+            "segment_id": "S0025",
+            "quote": "we calculated the differentially expressed mRNA (DE-mRNA) from GSE93798 dataset and different expressed miRNA (DE-miRNAs) from GSE64306 dataset by “limma” package in R."
+          }
+        ],
+        "rationale": "All steps use free R/Bioconductor packages (affy, limma); no proprietary software is required."
+      }
+    },
+    "exact_target": "Number of differentially expressed miRNAs (DE-miRNAs) between IgAN patients and normal controls in the GSE64306 urine sediment dataset: 20 total, of which 4 were downregulated and 16 were upregulated.",
+    "target_values": [
+      "20",
+      "four",
+      "16"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The count of differentially expressed miRNAs identified by comparing IgAN patients with normal controls in the GSE64306 urine sediment miRNA expression dataset, split by direction of change.",
+    "target_type": "count",
+    "target_location": "Results, subsection 'DE-miRNA screening in IgAN patients and normal individuals' (Fig. 1a-c)",
+    "location_quotes": [
+      {
+        "segment_id": "S0037",
+        "quote": "We first identified DE-miRNAs between IgAN patients and normal individuals in the GSE64306 dataset. There were 20 DE-miRNAs between IgAN patients and the"
+      },
+      {
+        "segment_id": "S0038",
+        "quote": "normal controls. Of these, four DE-miRNAs were downregulated, whereas 16 DE-miRNAs were upregulated. The distribution of specific DE-miRNAs is illustrated with a volcano plot (Fig. 1 a)."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0023",
+        "quote": "The miRNA expression profile under accession number GSE64306 was contributed by Wang et al. [ 17 ]. The dataset was downloaded from the GEO database according to the platform of the GPL19117 [miRNA-4] Affymetrix Multispecies miRNA-4 Array. MiRNA expression was analyzed in the urine sediments of 18 IgAN"
+      },
+      {
+        "segment_id": "S0024",
+        "quote": "Raw data from the GSE93798 and GSE64306 datasets were read using the “affy” package in R (version 3.5.3, R Core Team, Vienna, Austria). The RMA algorithm was used for background correction and data normalization."
+      },
+      {
+        "segment_id": "S0025",
+        "quote": "Microarray data were processed and analyzed in R. By comparing with the IgAN patients and normal individuals, we calculated the differentially expressed mRNA (DE-mRNA) from GSE93798 dataset and different expressed miRNA (DE-miRNAs) from GSE64306 dataset by “limma” package in R."
+      },
+      {
+        "segment_id": "S0026",
+        "quote": "discovery rate, the p values were adjusted using the Benjamin and Hochberg method, the thresholds were adj. p < 0.05 and logFC > 1 (upregulated) or logFC < − 1 (downregulated)."
+      }
+    ],
+    "required_files": [
+      "GSE64306_RAW.tar"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "GSE64306 (GPL19117, Affymetrix Multispecies miRNA-4 Array) raw data; 18 IgAN patients and 6 healthy individuals. GSE64306_RAW.tar is the raw archive; filelist.txt is only an index. GSE93798 is not needed for this miRNA target.",
+    "leakage_files": [
+      {
+        "name": "GSE64306_RAW.tar",
+        "reason": "Contains the raw CEL files that are the inputs; however, if any processed/derived DE-miRNA result tables were included they would leak the target. The archive itself is the input, not a leak, but any processed supplementary tables derived from it must not be served."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Exact match of the reported counts (total DE-miRNAs, downregulated, upregulated) to the solver's recomputed counts.",
+    "numerical_agreement_criterion": "Counts exact: total = 20, downregulated = 4, upregulated = 16.",
+    "specification_gaps": "The paper does not specify the exact limma contrast coding, whether logFC is on log2 scale, the exact multiple-testing correction implementation details, or how ties at the threshold are handled. The number of probes vs. unique miRNAs is not stated.",
+    "alternatives_considered": [
+      {
+        "target": "Number of DE-mRNAs in GSE93798 (957 down, 834 up)",
+        "reason": "Rejected because the paper's stated priority is the miRNA-mRNA network and the DE-miRNA count is reported first in Results; also the DE-mRNA count is a secondary endpoint."
+      },
+      {
+        "target": "Hub gene degrees (CDKN1A degree=7, etc.)",
+        "reason": "Rejected because these are derived from PPI network analysis and are not the primary numerical endpoint; they are secondary network statistics."
+      },
+      {
+        "target": "Immune cell correlation coefficients (e.g., r=0.93)",
+        "reason": "Rejected because these are downstream correlation results, not the principal quantitative result of the study."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

@@ -1,0 +1,154 @@
+{
+  "paper_id": "PMID:35798840",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "db49d8f75ae714e9cf8835dc09d5478513c52cf6bca33f09913ad8d2ba157eaa",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "15134328",
+      "files": [
+        {
+          "name": "database_33P_2204.xlsx",
+          "bytes": 571743
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T03:45:41.805638+00:00",
+  "api": {
+    "response_id": "58a19acb-f611-4a81-b42e-06a87a9be173",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 20938,
+    "completion_tokens": 1657
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0107",
+            "quote": "Recovery rate ( % ) = r ( Bq ) * 100 R ( Bq ) Where r is the decay-corrected activity of 33 P in each sample (Bq g -1 shoots) multiplied by the total shoot weight per pot (g), and R refers to the total injected radioactivity (Bq)."
+          },
+          {
+            "segment_id": "S0114",
+            "quote": "Statistical analyses were performed using the software R , version 3.6.0 98 ."
+          }
+        ],
+        "rationale": "The principal result is a computed recovery rate from measured radioactivity and shoot biomass, and the analysis is described as performed in R, so a third party can re-run the computation on deposited data."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0009",
+            "quote": "AMF communities in grassland soils were much more efficient in acquiring 33 P and transferred 64% more 33 P to plants compared to AMF in cropland soils."
+          },
+          {
+            "segment_id": "S0023",
+            "quote": "The recovery of 33 P was 64% higher in pots filled with soils from grassland sites compared to the soils from croplands (p<0.001; Fig. 2 )."
+          }
+        ],
+        "rationale": "The abstract and first results sentence state a principal numerical endpoint: 64% higher 33P recovery in grassland vs cropland soils."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0130",
+            "quote": "The data that support the findings of this study are available here: 10.6084/m9.figshare.15134328 ."
+          },
+          {
+            "segment_id": "S0125",
+            "quote": "Extended Data Extended Data Figure 1 Extended Data Figure 2 Extended Data Figure 3 Extended Data Figure 4 Extended Data Figure 5 Supplementary Material database Supplemenatry Tables 6 and 7 Supplementary Information"
+          }
+        ],
+        "rationale": "The deposit listing contains only database_33P_2204.xlsx, which is named like a database and may contain raw or minimally processed analysis inputs, but the listing does not show whether it contains the raw 33P recovery and predictor data needed for the target."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0107",
+            "quote": "Recovery rate ( % ) = r ( Bq ) * 100 R ( Bq ) Where r is the decay-corrected activity of 33 P in each sample (Bq g -1 shoots) multiplied by the total shoot weight per pot (g), and R refers to the total injected radioactivity (Bq)."
+          },
+          {
+            "segment_id": "S0124",
+            "quote": "For pair-wise comparisons between grassland and cropland soils, Wilcoxon rank test was used."
+          }
+        ],
+        "rationale": "The recovery-rate equation and the statistical comparison method are described sufficiently to implement the target without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0114",
+            "quote": "Statistical analyses were performed using the software R , version 3.6.0 98 ."
+          }
+        ],
+        "rationale": "The described analysis uses R, which is free software, and no proprietary software is required for the target computation."
+      }
+    },
+    "exact_target": "The recovery of 33P was 64% higher in pots filled with soils from grassland sites compared to the soils from croplands (p<0.001; Fig. 2).",
+    "target_values": [
+      "64%",
+      "p<0.001"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The difference in hyphal 33P transfer, measured as 33P recovery in Plantago lanceolata shoots, between pots filled with grassland soils and pots filled with cropland soils.",
+    "target_type": "scalar",
+    "target_location": "Results, first paragraph; Fig. 2",
+    "location_quotes": [
+      {
+        "segment_id": "S0023",
+        "quote": "The recovery of 33 P was 64% higher in pots filled with soils from grassland sites compared to the soils from croplands (p<0.001; Fig. 2 )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0107",
+        "quote": "Recovery rate ( % ) = r ( Bq ) * 100 R ( Bq ) Where r is the decay-corrected activity of 33 P in each sample (Bq g -1 shoots) multiplied by the total shoot weight per pot (g), and R refers to the total injected radioactivity (Bq)."
+      },
+      {
+        "segment_id": "S0124",
+        "quote": "For pair-wise comparisons between grassland and cropland soils, Wilcoxon rank test was used."
+      }
+    ],
+    "required_files": [
+      "database_33P_2204.xlsx"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit listing contains only database_33P_2204.xlsx. The paper states data are available at 10.6084/m9.figshare.15134328. It is not clear from the listing whether this file contains the raw 33P recovery values, shoot weights, injected radioactivity, and land-use labels needed to compute the 64% difference.",
+    "leakage_files": [
+      {
+        "name": "database_33P_2204.xlsx",
+        "reason": "If this file contains the computed 33P recovery rates or summary tables, it would leak the target value or derived result tables."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Compare the reported 64% higher 33P recovery in grassland vs cropland soils and the reported p<0.001 from a Wilcoxon rank test with the same quantities computed from the deposited data.",
+    "numerical_agreement_criterion": "The 64% difference should match within the displayed rounding bin; the p-value should be <0.001 at the reported precision.",
+    "specification_gaps": "The paper does not specify in the main text whether the 64% is based on mean, median, or model-derived recovery rates, nor whether it is a ratio of means or a back-transformed log-scale estimate. The exact handling of missing values and the exact subset used for the Wilcoxon test are not fully specified in the main text.",
+    "alternatives_considered": [
+      {
+        "target": "The 43% reduction in 33P uptake due to fungicides and AMF richness decline.",
+        "reason": "This is a secondary result about fungicide effects, not the first principal land-use comparison."
+      },
+      {
+        "target": "The R2adj=0.45 for grassland multi-model inference.",
+        "reason": "This is a model-fit statistic, not the principal quantitative endpoint."
+      },
+      {
+        "target": "The 2.3 times higher 33P transfer without fungicide application.",
+        "reason": "This is a cropland-specific secondary result, not the principal land-use comparison."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

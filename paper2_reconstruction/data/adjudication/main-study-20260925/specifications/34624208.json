@@ -1,0 +1,195 @@
+{
+  "paper_id": "PMID:34624208",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "b4b69e43f8c14fca347f13ef931f73f7f939fe1e68fc075df2a6360698636cec",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "bioproject",
+      "accession": "PRJNA605907",
+      "files": [
+        {
+          "name": "SRR11059940",
+          "bytes": 2283563
+        },
+        {
+          "name": "SRR11059941",
+          "bytes": 717185
+        },
+        {
+          "name": "SRR11059942",
+          "bytes": 51868220
+        },
+        {
+          "name": "SRR11059943",
+          "bytes": 5418780
+        },
+        {
+          "name": "SRR11059944",
+          "bytes": 47715471
+        },
+        {
+          "name": "SRR11059945",
+          "bytes": 9030619
+        },
+        {
+          "name": "SRR11059946",
+          "bytes": 238935734
+        },
+        {
+          "name": "SRR11059947",
+          "bytes": 892752531
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE147507",
+      "files": [
+        {
+          "name": "GSE147507_RawReadCounts_Ferret.tsv.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE147507_RawReadCounts_Human.tsv.gz",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:04:26.559792+00:00",
+  "api": {
+    "response_id": "9a40fba5-d1b4-49d8-855a-b0cd57eba3fa",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 36507,
+    "completion_tokens": 1234
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0029",
+            "quote": "Differential gene expression was assessed using a 1.2-fold change for p values less than 0.01, revealing 42 increased and 347 decreased genes compared with controls."
+          },
+          {
+            "segment_id": "S0178",
+            "quote": "Fastq files were downloaded from SRA (NCBI BioProject PRJNA605907 ( Shen et al., 2020 ) and NCBI BioProject: PRJNA390194 ( Ren et al.,"
+          }
+        ],
+        "rationale": "The principal result (differential gene expression counts from BALF RNA-seq) is produced by a computational pipeline on public SRA data (PRJNA605907) that a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0029",
+            "quote": "Differential gene expression was assessed using a 1.2-fold change for p values less than 0.01, revealing 42 increased and 347 decreased genes compared with controls."
+          }
+        ],
+        "rationale": "A primary numerical endpoint is stated: 42 increased and 347 decreased genes from BALF RNA-seq differential expression."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0178",
+            "quote": "Fastq files were downloaded from SRA (NCBI BioProject PRJNA605907 ( Shen et al., 2020 ) and NCBI BioProject: PRJNA390194 ( Ren et al.,"
+          }
+        ],
+        "rationale": "The listed SRA run files under PRJNA605907 are the raw sequencing inputs for the BALF differential expression analysis."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0192",
+            "quote": "Bam files were imported into Partek Genome Studio v7.0,"
+          },
+          {
+            "segment_id": "S0193",
+            "quote": "and gene expression values quantified versus the Grch38 reference annotation guide (Ensembl v99). Samples with fewer than 2 million aligned reads were excluded from further analysis. Genes with fewer than 10 reads in 25% of samples were excluded, and differential gene expression determined using ANOVA with infection status as contrast."
+          }
+        ],
+        "rationale": "The method for the target (alignment, quantification, filtering, ANOVA differential expression) is described sufficiently to implement."
+      },
+      "G5": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0192",
+            "quote": "Bam files were imported into Partek Genome Studio v7.0,"
+          }
+        ],
+        "rationale": "The described analysis uses Partek Genome Studio, a proprietary commercial software, so the method is not feasible with free software alone."
+      }
+    },
+    "exact_target": "Number of increased and decreased genes from BALF RNA-seq differential expression: 42 increased and 347 decreased genes compared with controls.",
+    "target_values": [
+      "42",
+      "347"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of genes with increased and decreased expression in bronchial alveolar lavage fluid RNA-seq data from COVID-19 patients compared with controls, using a 1.2-fold change and p < 0.01 threshold.",
+    "target_type": "count",
+    "target_location": "Results, 'Identification of key miRNAs associated with COVID-19 infection'",
+    "location_quotes": [
+      {
+        "segment_id": "S0029",
+        "quote": "Differential gene expression was assessed using a 1.2-fold change for p values less than 0.01, revealing 42 increased and 347 decreased genes compared with controls."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0178",
+        "quote": "Fastq files were downloaded from SRA (NCBI BioProject PRJNA605907 ( Shen et al., 2020 ) and NCBI BioProject: PRJNA390194 ( Ren et al.,"
+      },
+      {
+        "segment_id": "S0192",
+        "quote": "Bam files were imported into Partek Genome Studio v7.0,"
+      },
+      {
+        "segment_id": "S0193",
+        "quote": "and gene expression values quantified versus the Grch38 reference annotation guide (Ensembl v99). Samples with fewer than 2 million aligned reads were excluded from further analysis. Genes with fewer than 10 reads in 25% of samples were excluded, and differential gene expression determined using ANOVA with infection status as contrast."
+      }
+    ],
+    "required_files": [
+      "SRR11059940",
+      "SRR11059941",
+      "SRR11059942",
+      "SRR11059943",
+      "SRR11059944",
+      "SRR11059945",
+      "SRR11059946",
+      "SRR11059947"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "SRA BioProject PRJNA605907; 8 runs listed. Human reference genome GRCh38 v99 (Ensembl) required. The second BioProject PRJNA390194 is not in the deposit listing.",
+    "leakage_files": [],
+    "required_public_references": [
+      {
+        "name": "GRCh38",
+        "version": "Ensembl v99"
+      }
+    ],
+    "comparison_metric": "Exact match of reported gene counts (42 increased, 347 decreased) to recomputed counts.",
+    "numerical_agreement_criterion": "Counts exact.",
+    "specification_gaps": "Exact statistical test details (ANOVA implementation), multiple testing correction, and precise filtering thresholds beyond those stated are not fully specified.",
+    "alternatives_considered": [
+      {
+        "target": "miR-2392 upregulation in BALF",
+        "reason": "Qualitative, not a numerical endpoint."
+      },
+      {
+        "target": "IC50 = 1.15 ± 0.33 μM",
+        "reason": "In vitro assay, not the principal computational result."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

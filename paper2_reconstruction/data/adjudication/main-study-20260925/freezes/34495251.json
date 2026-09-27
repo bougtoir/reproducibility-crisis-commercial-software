@@ -1,0 +1,152 @@
+{
+  "paper_id": "PMID:34495251",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "study": "MAIN-STUDY-2026-09-25",
+  "frozen_at_utc": "2026-09-27T03:48:58.750261+00:00",
+  "investigator_verification": "pending",
+  "exact_target": "Correlation of the red WGCNA module with infiltrating levels of T cells and cytotoxic lymphocytes in AAA, reported as r=0.90 and 0.84 respectively (all P<0.05).",
+  "target_location": "Results, subsection 'AAA-related gene co-expression network construction', Figure 2C",
+  "location_evidence": [
+    {
+      "segment_id": "S0033",
+      "quote": "the red module had a strong positive correlation with the infiltrating levels of T cells and cytotoxic lymphocytes (r=0.90 and 0.84 respectively, all P<0.05) ( Figure 2C )"
+    }
+  ],
+  "blind_target": "The correlation between the most relevant WGCNA module and the infiltrating levels of T cells and cytotoxic lymphocytes in AAA tissues.",
+  "target_type": "scalar",
+  "required_inputs": [
+    {
+      "name": "GSE47472_RAW.tar",
+      "served_as": "deposit/GSE47472/GSE47472_RAW.tar",
+      "identifier": "geo:GSE47472:GSE47472_RAW.tar",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/34495251/geo/f27946919f7e56011b6f6bc5d8644d5bcc2d081e30b32f0177b10c04a68a566f/body",
+      "bytes": 27443200,
+      "sha256": "19dbc61b4da9ac807799a96081f4eae405079dad108b82a9d2bdb74678cdb948",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    },
+    {
+      "name": "GSE57691_RAW.tar",
+      "served_as": "deposit/GSE57691/GSE57691_RAW.tar",
+      "identifier": "geo:GSE57691:GSE57691_RAW.tar",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/34495251/geo/d9596f7744536bd9ce1ec35d7aaa7947551d41b98d3d568f70bb9a064a400d90/body",
+      "bytes": 27443200,
+      "sha256": "19dbc61b4da9ac807799a96081f4eae405079dad108b82a9d2bdb74678cdb948",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    },
+    {
+      "name": "GSE98278_RAW.tar",
+      "served_as": "deposit/GSE98278/GSE98278_RAW.tar",
+      "identifier": "geo:GSE98278:GSE98278_RAW.tar",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/34495251/geo/491a14aec6e1f23fe41421bd9e0420fa7d988f8feb85800a77d3eb9c10dcc7e9/body",
+      "bytes": 132608000,
+      "sha256": "50b7d07cc4a31a4c969720a3c66142e5128df7b9fb7c062386e5469dd822c54d",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    }
+  ],
+  "excluded_inputs": [],
+  "allowed_resources": [
+    "worker image paper2-science:pilot-2026-09-25: Python scientific stack, R packages and PATH tools",
+    "served publication text and served deposited inputs only"
+  ],
+  "blocked_original_artifacts": [
+    "original implementation, repositories, notebooks, scripts",
+    "processed results, supplementary result tables, figures of the study",
+    "any author communication"
+  ],
+  "comparison_metric": "The reported correlation coefficients (r) are compared to the solver's computed correlation coefficients between the red module eigengene and MCP-counter scores for T cells and cytotoxic lymphocytes.",
+  "numerical_agreement_criterion": "Scalars within displayed rounding bin: r values rounded to two decimal places (0.90 and 0.84).",
+  "conclusion_criterion": "Conclusion agreement is scored only when the numerical criterion is met or when the publication states a directional claim that the observed value can be compared with; otherwise the conclusion component is not_assessable.",
+  "resource_ceiling": {
+    "slots_per_paper": 3,
+    "wall_seconds_per_slot": 14400,
+    "step_seconds": 3600,
+    "provider_tokens_per_slot": 1500000,
+    "tool_calls_per_slot": 40,
+    "max_completion_tokens": 8192,
+    "worker_cpus": 1,
+    "worker_memory": "3g",
+    "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+    "network": "none",
+    "image": "paper2-science:pilot-2026-09-25"
+  },
+  "stopping_rule": [
+    "final report submitted by the slot",
+    "wall, step, token, tool-call or output ceiling reached (recorded as the stop reason)",
+    "required input absent from the served package: report null observation with F01/F18",
+    "specification gap that cannot be closed from the served text: report null with F04-F08",
+    "controller or worker error: recorded as harness stop, never as an outcome",
+    "no rerun, no extension and no rule change after the slot starts"
+  ],
+  "specification_gaps": "The exact method for selecting the red module (e.g., module-trait correlation threshold) is not fully specified; the MCP-counter version and parameters are not given; the WGCNA soft threshold selection details are incomplete; the handling of batch effects across datasets is not fully described.",
+  "gate_reviews": {
+    "G1": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0004",
+          "quote": "We evaluated the composition of immune infiltrates through microenvironment cell populations (MCP)-counter."
+        },
+        {
+          "segment_id": "S0019",
+          "quote": "The MCP-counter package in R ( https://github.com ) was applied to evaluate the immune infiltration of each tissue sample from transcriptomic data."
+        }
+      ],
+      "rationale": "The principal result is produced by MCP-counter computation on public microarray data, which a third party can re-run."
+    },
+    "G2": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0033",
+          "quote": "the red module had a strong positive correlation with the infiltrating levels of T cells and cytotoxic lymphocytes (r=0.90 and 0.84 respectively, all P<0.05)"
+        }
+      ],
+      "rationale": "One principal quantitative result can be named: the correlation coefficients of the red module with T cells and cytotoxic lymphocytes."
+    },
+    "G3": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0018",
+          "quote": "Three chips ( GSE47472 , GSE57691 , and GSE98278 ) related to AAA were annotated with Illumina HumanHT-12 v4.0 expression bead chip"
+        }
+      ],
+      "rationale": "The listed GEO deposit files are the raw/non-normalized microarray inputs used for the analysis."
+    },
+    "G4": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0019",
+          "quote": "the original datasets underwent background correction and quantile normalization by “Limma” package"
+        },
+        {
+          "segment_id": "S0021",
+          "quote": "Gene co-expression network was constructed by the weighted gene correlation network analysis (WGCNA) R software package"
+        },
+        {
+          "segment_id": "S0022",
+          "quote": "The criterion of co-expression weight >2.5 was used to select the candidate network."
+        }
+      ],
+      "rationale": "The published method describes normalization, WGCNA construction, and module selection sufficiently to implement without original code."
+    },
+    "G5": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0025",
+          "quote": "All analyses were conducted with R version 3.5 ( https://www.r-project.org/ ) and its several open packages."
+        }
+      ],
+      "rationale": "The method uses R and open-source packages; no proprietary software is required."
+    }
+  }
+}

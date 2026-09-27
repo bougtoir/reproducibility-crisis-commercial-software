@@ -1,0 +1,35 @@
+{
+  "paper_id": "PMID:41104632",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "68730335dddfb3897a4ec6aa1ac83d95da4f640082f74b03408610385f09bf19",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "bioproject",
+      "accession": "PRJNA166085",
+      "files": [
+        {
+          "name": "SRR496839",
+          "bytes": 169804100
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:00:24.225109+00:00",
+  "api": {
+    "response_id": "1189621e-a20b-484d-b553-568b2464cffb",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 21166,
+    "completion_tokens": 1770
+  },
+  "specification": null,
+  "eligibility": "specification_not_obtained",
+  "error": {
+    "type": "ValueError",
+    "detail": "PMID:41104632 G1: quote not found verbatim in S0044"
+  }
+}

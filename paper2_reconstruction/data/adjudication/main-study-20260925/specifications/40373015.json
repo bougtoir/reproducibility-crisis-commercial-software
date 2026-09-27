@@ -1,0 +1,35 @@
+{
+  "paper_id": "PMID:40373015",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "84623845c553c18ac59c4251c33554f9a724bd35104d8a33d142d301a6756624",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "28562342",
+      "files": [
+        {
+          "name": "2010-2020 - Beavers in the Czech Republic (numbers and admission to rehabilitation centres).xlsx",
+          "bytes": 97822
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:12:33.286082+00:00",
+  "api": {
+    "response_id": "5c7a58e2-5ac9-4cdf-8fa6-8bf9036354ad",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 14265,
+    "completion_tokens": 2666
+  },
+  "specification": null,
+  "eligibility": "specification_not_obtained",
+  "error": {
+    "type": "ValueError",
+    "detail": "PMID:40373015: blind_target contains a reported value"
+  }
+}

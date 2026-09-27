@@ -1,0 +1,35 @@
+{
+  "paper_id": "PMID:41219412",
+  "sampling_stratum": "Physics_Engineering",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "727fb7d32365636eb35de3e84a6646a56876bc8f941b52e32c290621410b9615",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "zenodo",
+      "accession": "15692302",
+      "files": [
+        {
+          "name": "example_data.tar.gz",
+          "bytes": 1845484640
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:29:19.088564+00:00",
+  "api": {
+    "response_id": "30ee1371-20a6-45a4-8546-ccf0427a921e",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 87341,
+    "completion_tokens": 2106
+  },
+  "specification": null,
+  "eligibility": "specification_not_obtained",
+  "error": {
+    "type": "ValueError",
+    "detail": "PMID:41219412 G5: unknown segment S036"
+  }
+}

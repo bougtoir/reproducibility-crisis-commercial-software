@@ -1,0 +1,134 @@
+{
+  "paper_id": "PMID:39895948",
+  "sampling_stratum": "Social_Behavioral",
+  "amendment": "AMEND-2026-09-25-06",
+  "study": "MAIN-STUDY-2026-09-25",
+  "frozen_at_utc": "2026-09-27T04:29:45.154330+00:00",
+  "investigator_verification": "pending",
+  "exact_target": "Performance metrics of NLR, MLR, and combined NLR & MLR for predicting tuberculosis: Sensitivity % 28.0, 38.6, 22.8; Specificity % 77.2, 78.9, 96.5; Positive Predictive Value % 55.2, 64.7, 86.7; Negative Predictive Value % 51.8, 56.3, 55.6.",
+  "target_location": "Table 1",
+  "location_evidence": [
+    {
+      "segment_id": "S0032",
+      "quote": "Table 1. Performance metrics of NLR, MLR, and combined NLR & MLR for predicting tuberculosis. Metrics NLR MLR NLR & MLR Sensitivity % 28.0 38.6 22.8 Specificity % 77.2 78.9 96.5 Positive"
+    },
+    {
+      "segment_id": "S0033",
+      "quote": "Predictive Value % 55.2 64.7 86.7 Negative Predictive Value % 51.8 56.3 55.6 Discussion Tuberculosis remains a significant cause of morbidity worldwide, especially in low-income countries, emphasizing the critical need for accessible and cost-effective diagnostic methods. Despite the availability of rapid tests like the NAAT assay, challenges persist, particularly for diagnosing extra-pulmonary,"
+    }
+  ],
+  "blind_target": "Performance metrics (sensitivity, specificity, positive predictive value, negative predictive value) of NLR, MLR, and combined NLR & MLR for predicting tuberculosis.",
+  "target_type": "performance",
+  "required_inputs": [
+    {
+      "name": "Data analysis Excel sheet TB.xlsx",
+      "served_as": "deposit/23684778/Data analysis Excel sheet TB.xlsx",
+      "identifier": "figshare:23684778:Data analysis Excel sheet TB.xlsx",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/39895948/figshare/c041a1b2a6c41056b2a0a2a90011514a941a72c5e701e468e801ba61c24ced6d/body",
+      "bytes": 19807,
+      "sha256": "db880ae5a4239c6b12fa59973421773a76b20a1b85d9f5df9d8d6f5540c8a165",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    }
+  ],
+  "excluded_inputs": [],
+  "allowed_resources": [
+    "worker image paper2-science:pilot-2026-09-25: Python scientific stack, R packages and PATH tools",
+    "served publication text and served deposited inputs only"
+  ],
+  "blocked_original_artifacts": [
+    "original implementation, repositories, notebooks, scripts",
+    "processed results, supplementary result tables, figures of the study",
+    "any author communication"
+  ],
+  "comparison_metric": "Recompute sensitivity, specificity, positive predictive value, and negative predictive value for NLR, MLR, and combined NLR & MLR using the deposited data and compare to the reported percentages.",
+  "numerical_agreement_criterion": "Performance metrics must match on the identical split; percentages compared within the displayed rounding bin (one decimal place).",
+  "conclusion_criterion": "Conclusion agreement is scored only when the numerical criterion is met or when the publication states a directional claim that the observed value can be compared with; otherwise the conclusion component is not_assessable.",
+  "resource_ceiling": {
+    "slots_per_paper": 3,
+    "wall_seconds_per_slot": 14400,
+    "step_seconds": 3600,
+    "provider_tokens_per_slot": 1500000,
+    "tool_calls_per_slot": 40,
+    "max_completion_tokens": 8192,
+    "worker_cpus": 1,
+    "worker_memory": "3g",
+    "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+    "network": "none",
+    "image": "paper2-science:pilot-2026-09-25"
+  },
+  "stopping_rule": [
+    "final report submitted by the slot",
+    "wall, step, token, tool-call or output ceiling reached (recorded as the stop reason)",
+    "required input absent from the served package: report null observation with F01/F18",
+    "specification gap that cannot be closed from the served text: report null with F04-F08",
+    "controller or worker error: recorded as harness stop, never as an outcome",
+    "no rerun, no extension and no rule change after the slot starts"
+  ],
+  "specification_gaps": "The exact ROC cut-off selection method (e.g., Youden index) is not specified; the combination rule for NLR & MLR is not described; handling of missing data is not stated; the exact software procedure for ROC analysis is not given.",
+  "gate_reviews": {
+    "G1": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0026",
+          "quote": "The NLR was calculated by dividing the differential neutrophil count by the differential lymphocyte count, and the MLR by dividing the differential monocyte count by the differential lymphocyte count."
+        },
+        {
+          "segment_id": "S0031",
+          "quote": "To distinguish between TB patients and controls, the cut-off values were established using Receiver Operating Characteristic (ROC) curve analysis."
+        }
+      ],
+      "rationale": "The principal results are computed from deposited haematological data using described formulas and ROC analysis, so a third party can re-run the computation."
+    },
+    "G2": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0032",
+          "quote": "Table 1. Performance metrics of NLR, MLR, and combined NLR & MLR for predicting tuberculosis. Metrics NLR MLR NLR & MLR Sensitivity % 28.0 38.6 22.8 Specificity % 77.2 78.9 96.5 Positive"
+        }
+      ],
+      "rationale": "The central quantitative table reports performance metrics for NLR, MLR and combined NLR & MLR, giving a nameable principal target."
+    },
+    "G3": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0043",
+          "quote": "Data availability statement This project contains the following underlying data: 1. Data Excel sheet for Deciphering the significance of neutrophil to lymphocyte and monocyte to"
+        },
+        {
+          "segment_id": "S0044",
+          "quote": "lymphocyte ratios in tuberculosis: A case-control study from southern India, Figshare: https://doi.org/10.6084/m9.figshare.23684778.v5 18 2. Statistical analysis of Deciphering the significance of neutrophil to lymphocyte and monocyte to lymphocyte ratios in tuberculosis: A case-control study from southern India, Figshare: https://doi.org/10.6084/m9.figshare.23684859.v5 19 Data are available under"
+        }
+      ],
+      "rationale": "The deposit lists the underlying data Excel sheet and statistical analysis; the Excel sheet is the analysis input, while the statistical analysis document is an output/derived result."
+    },
+    "G4": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0026",
+          "quote": "The NLR was calculated by dividing the differential neutrophil count by the differential lymphocyte count, and the MLR by dividing the differential monocyte count by the differential lymphocyte count."
+        },
+        {
+          "segment_id": "S0031",
+          "quote": "To distinguish between TB patients and controls, the cut-off values were established using Receiver Operating Characteristic (ROC) curve analysis."
+        }
+      ],
+      "rationale": "The formulas for NLR and MLR and the ROC-based cut-off method are described sufficiently to implement without original code."
+    },
+    "G5": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0027",
+          "quote": "Statistical Package for the Social Sciences, version 29 software was used for statistical analysis. The T-test was used for continuous variables, and the chi-square test for categorical variables. A p-value of <0.05 was considered statistically significant."
+        }
+      ],
+      "rationale": "The described computations (ratios, ROC, t-test, chi-square) can be performed with free software; no proprietary software is required."
+    }
+  }
+}

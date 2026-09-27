@@ -1,0 +1,201 @@
+{
+  "paper_id": "PMID:39375688",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "67bf5b9cdb5da53549974c76a90e18ad15cc0825f2ac5ee2d56149cf1cbfca8f",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE247197",
+      "files": [
+        {
+          "name": "GSE247197_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "GSE247197_matrix_processed.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE148663",
+      "files": [
+        {
+          "name": "GSE148663_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "GSE148663_intensities.csv.gz",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:05:25.587601+00:00",
+  "api": {
+    "response_id": "9d24162b-50a1-4eaf-beb6-6a96dc32cdc3",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 18467,
+    "completion_tokens": 2502
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0059",
+            "quote": "This general model obtained a low prediction error (mean squared error (MSE) = 3.14 years) and a high correlation between the predicted and chronological ages ( r = 0.982) in the test set (Fig. 3 B)."
+          },
+          {
+            "segment_id": "S0061",
+            "quote": "This combined model reduced the age prediction error significantly ( p < 0.05, one-sided Wilcoxon rank-sum test) with respect to the general model (Fig. 3 B, D ), lowering the MSE to 3.06 years in the test set and increasing the correlation between the predicted and chronological"
+          }
+        ],
+        "rationale": "The principal result is a computed performance metric (MSE, r) from a model trained on public methylation data, which a third party can re-run if the data are available."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0059",
+            "quote": "This general model obtained a low prediction error (mean squared error (MSE) = 3.14 years) and a high correlation between the predicted and chronological ages ( r = 0.982) in the test set (Fig. 3 B)."
+          },
+          {
+            "segment_id": "S0061",
+            "quote": "This combined model reduced the age prediction error significantly ( p < 0.05, one-sided Wilcoxon rank-sum test) with respect to the general model (Fig. 3 B, D ), lowering the MSE to 3.06 years in the test set and increasing the correlation between the predicted and chronological"
+          }
+        ],
+        "rationale": "The paper's stated priority is the new model's performance; the principal quantitative result is the MSE of the combined model on the test set (3.06 years), with the general model MSE (3.14 years) as the primary comparator."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0030",
+            "quote": "This process left a total of 10,835 samples on the main dataset, which were split into training and test sets with 7259 and 3576 subjects, respectively. On the main dataset, we computed the average beta value of each probe across the whole dataset (Additional file 2: Table S2) and used this average to impute missing values."
+          },
+          {
+            "segment_id": "S0120",
+            "quote": "The datasets analyzed during the current study are available in the GEO repository: • Main set: GSE55763 [ 68 ], GSE157131 [ 69 ], GSE147740 [ 70 ], GSE132203 [ 71 ], GSE40279 [ 14 ], GSE56105 [ 72 ], GSE152026 [ 72 ],"
+          }
+        ],
+        "rationale": "The deposit listing includes only GSE247197 and GSE148663, which are not the main dataset used to train and test the new model. The main dataset comprises 24 GEO series not listed in the deposit. Thus, the listed files are not the analysis inputs for the principal target."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0035",
+            "quote": "We trained a general epigenetic age prediction model using the beta values of 10,000 probes and the squared beta values of 300 probes to perform a regularized linear regression of chronological age using elastic net [ 43 ]."
+          },
+          {
+            "segment_id": "S0038",
+            "quote": "Based on its performance in previous studies, we set the L1_ratio to 0.5 [ 15 , 45 ]. The value of the parameter alpha (i.e., 1/C), which multiplies both the L1 and L2 penalties, was optimized to 0.001 through fivefold cross-validation."
+          }
+        ],
+        "rationale": "The method for training the new model is described in sufficient detail (feature selection, elastic net, hyperparameters, cross-validation) to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0037",
+            "quote": "Elastic net combines L1 and L2 regularizations, which in the scikit-learn implementation [ 44 ] are mixed in proportions given by the parameter L1_ratio, which takes values between 0"
+          },
+          {
+            "segment_id": "S0034",
+            "quote": "], and cAge [ 28 ] epiclocks to the methylation data in the main dataset by using the methods and parameters reported by the authors for each case and validated using the implementations in the pyaging Python library [ 42 ]."
+          }
+        ],
+        "rationale": "The method uses scikit-learn and pyaging, both open-source Python libraries; no proprietary software is required."
+      }
+    },
+    "exact_target": "Mean squared error (MSE) of the combined model on the test set: 3.06 years",
+    "target_values": [
+      "3.06"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The mean squared error of the combined age prediction model on the test set.",
+    "target_type": "performance",
+    "target_location": "Results, subsection 'A new epigenetic clock compatible with the EPICv2 array', text and Fig. 3B",
+    "location_quotes": [
+      {
+        "segment_id": "S0061",
+        "quote": "This combined model reduced the age prediction error significantly ( p < 0.05, one-sided Wilcoxon rank-sum test) with respect to the general model (Fig. 3 B, D ), lowering the MSE to 3.06 years in the test set and increasing the correlation between the predicted and chronological"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0035",
+        "quote": "We trained a general epigenetic age prediction model using the beta values of 10,000 probes and the squared beta values of 300 probes to perform a regularized linear regression of chronological age using elastic net [ 43 ]."
+      },
+      {
+        "segment_id": "S0036",
+        "quote": "The linear and quadratic features were chosen based on an EWAS study [ 28 ]: we chose the 10,000 probes with a significant linear association with age with the lowest association p-value and the 300 probes with a significant quadratic association with age with the lowest association p-value."
+      },
+      {
+        "segment_id": "S0037",
+        "quote": "To train our general epigenetic age prediction model, we separated the main dataset into training and test sets using a 70/30 split stratified by age (i.e., all ages present in the dataset were sampled in both the training and test sets)."
+      },
+      {
+        "segment_id": "S0038",
+        "quote": "Based on its performance in previous studies, we set the L1_ratio to 0.5 [ 15 , 45 ]. The value of the parameter alpha (i.e., 1/C), which multiplies both the L1 and L2 penalties, was optimized to 0.001 through fivefold cross-validation."
+      },
+      {
+        "segment_id": "S0039",
+        "quote": "Age-specific models were trained using the same approach on 3 different batches of data with subjects of specific ages: age ≤ 46 (young), 26 < age < 69 (middle-aged), and age ≥ 59 (old). The alpha value was set to 0.001 in all cases."
+      },
+      {
+        "segment_id": "S0060",
+        "quote": "We produced a combined model in which the general model assigned a sample to one of the three age groups, and then the corresponding age-stratified model generated the age prediction (Fig. 3 C)."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The main dataset used to train and test the model is not present in the deposit listing. The deposit listing contains only GSE247197 and GSE148663, which are used for technical noise and breast cancer analyses, not for the principal target. The main dataset comprises 24 GEO series (GSE55763, GSE157131, GSE147740, GSE132203, GSE40279, GSE56105, GSE152026, GSE121633, GSE72680, GSE84727, GSE73103, GSE42861, GSE72773, GSE80417, GSE167202, GSE111629, GSE125105, GSE128235, GSE152027, GSE106648, GSE179325, GSE213478, GSE72777, GSE89093) and is not included in the deposit listing. Therefore, the required input files are not among the listed files.",
+    "leakage_files": [
+      {
+        "name": "GSE247197_matrix_processed.txt.gz",
+        "reason": "Contains processed methylation data from GSE247197, which is used for technical noise analysis, not for the principal target, but could contain derived results if processed."
+      },
+      {
+        "name": "GSE148663_intensities.csv.gz",
+        "reason": "Contains processed methylation intensities from GSE148663, used for breast cancer analysis, not for the principal target, but could contain derived results if processed."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "The observed MSE from re-running the method on the main dataset test set is compared to the reported MSE of 3.06 years.",
+    "numerical_agreement_criterion": "Scalars within displayed rounding bin: the reported MSE is given to two decimal places (3.06 years), so the re-computed MSE should round to 3.06 years.",
+    "specification_gaps": "The exact composition of the main dataset (which samples from which GEO series) is not fully specified in the text; the paper refers to Additional file 1: Table S1 for details. The exact random seed for the 70/30 split is not given. The exact implementation of the elastic net (e.g., scikit-learn version) is not specified. The exact procedure for handling missing values (imputation with average beta) is described but the average beta values are provided in Additional file 2: Table S2, which is not in the deposit listing.",
+    "alternatives_considered": [
+      {
+        "target": "MSE of the general model on the test set (3.14 years)",
+        "reason": "The combined model is presented as the improved final model, and its MSE is the principal performance metric highlighted in the abstract and results."
+      },
+      {
+        "target": "Correlation (r) of the combined model on the test set (0.983)",
+        "reason": "MSE is a more direct measure of prediction error and is the primary metric discussed for model comparison."
+      },
+      {
+        "target": "Average difference in epigenetic age predictions due to EPICv2 truncation (e.g., 25.45 years for Hannum)",
+        "reason": "This is a key finding but not the principal result of the new model; the paper's main contribution is the new model's performance."
+      }
+    ]
+  },
+  "eligibility": "required_inputs_not_in_public_listing"
+}

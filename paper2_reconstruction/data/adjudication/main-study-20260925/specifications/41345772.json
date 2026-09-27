@@ -1,0 +1,176 @@
+{
+  "paper_id": "PMID:41345772",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "3a071828c7094937469f5e77a3fa5bff871004f8fafd6ed305da98cf573c4723",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "zenodo",
+      "accession": "13901167",
+      "files": [
+        {
+          "name": "C-COMPASS_MarkerList.txt",
+          "bytes": 49476
+        },
+        {
+          "name": "C-COMPASS_ProteomeInput.tsv",
+          "bytes": 16523658
+        },
+        {
+          "name": "C-COMPASS_session.npy",
+          "bytes": 1612141626
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T05:06:46.664474+00:00",
+  "api": {
+    "response_id": "54046419-8037-43d0-bf68-531c23802576",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 31421,
+    "completion_tokens": 1935
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0040",
+            "quote": "To evaluate the C-COMPASS steps comprising marker upsampling, multiorganelle localization predictions and output filtering, we applied the pipeline to a published dataset of human"
+          },
+          {
+            "segment_id": "S0041",
+            "quote": "white adipocytes containing 5,530 proteins separated via PCP across 24 fractions 22 (complete data in Supplementary Table 1 ). Predictions were compared to SVM outputs from the original study using the same 12-compartment marker set (Fig. 2a,b )."
+          }
+        ],
+        "rationale": "The principal result (F1 scores of C-COMPASS vs SVM) is produced by re-running the C-COMPASS neural network pipeline on the published adipocyte PCP dataset, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0056",
+            "quote": "The overall F 1 score of C-COMPASS (0.84) slightly exceeded that of SVMs (0.80) (Extended Data Fig. 2c )."
+          }
+        ],
+        "rationale": "One principal quantitative result is named: the overall F1 score of C-COMPASS (0.84) versus SVMs (0.80), the paper's stated performance metric for its main application."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0262",
+            "quote": "Proteomics data generated in this study are available in the PRIDE repository (ProteomeXchange) under the accession number PXD056457 . Proteomics data and C-COMPASS outputs are provided as Extended Data Table 1 . An example dataset based on"
+          },
+          {
+            "segment_id": "S0264",
+            "quote": "An example session for C-COMPASS, along with example data, is available on Zenodo ( https://zenodo.org/records/13901167 ) 63 . These data can be used to load an already processed session or to import and process the data, allowing users"
+          }
+        ],
+        "rationale": "The Zenodo deposit (13901167) contains a marker list, a proteome input table and a processed session; the session is an output, and it is unclear whether the proteome input table is the raw adipocyte PCP input for the target or a processed/example dataset."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0204",
+            "quote": "The normalized profiles p ® ( s , r ) are processed independently. The network input has the dimension F , matching the number of fractions in that replicate. We then use two dense (fully connected) layers,"
+          },
+          {
+            "segment_id": "S0205",
+            "quote": "Input layer: size F . First hidden layer: dense layer with C + 0.4 × ( F − C ) to C + 0.6 × ( F − C ) neurons and a rectified linear unit activation function. The number of neurons is a hyperparameter. Second hidden layer: dense layer with C neurons and a linear activation function. Third"
+          },
+          {
+            "segment_id": "S0208",
+            "quote": "We employ Keras Hyperband to select the best-performing optimizer (stochastic gradient descent, root mean square propagation or adaptive moment estimation), the learning rate (logarithmically distributed within [10 −4 , 10 −1 ]) and the size of the first hidden layer."
+          }
+        ],
+        "rationale": "The Methods describe the network architecture, training, hyperparameter tuning, filtering and quality metrics in enough detail to implement without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0248",
+            "quote": "C-COMPASS was developed under Python v.3.8.8. The graphical user interface of C-COMPASS was developed using PySimpleGUI (v.4.55.1) in combination with Tkinter (v.8.6). Quality metrics were calculated using scikit-learn (v.0.24.1), while neural network predictions were executed using Keras (v.2.10.0) alongside TensorFlow"
+          },
+          {
+            "segment_id": "S0249",
+            "quote": "(v.2.10.0) and KerasTuner (v.1.4.5) for hyperparameter tuning. Additionally, C-COMPASS uses several libraries including NumPy (v.1.20.1), SciPy (v.1.6.2) and pandas (v.1.2.4). Image generation All figures were created using Adobe Illustrator v.24.3."
+          }
+        ],
+        "rationale": "The method is implemented in Python with open-source libraries (Keras, TensorFlow, scikit-learn, NumPy, SciPy, pandas); no proprietary software is required for the computation."
+      }
+    },
+    "exact_target": "Overall F1 score of C-COMPASS (0.84) versus SVMs (0.80) on the human white adipocyte PCP dataset (5,530 proteins, 24 fractions, 12-compartment marker set).",
+    "target_values": [
+      "0.84",
+      "0.80"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The overall F1 score of C-COMPASS compared with SVM predictions on the human white adipocyte PCP dataset.",
+    "target_type": "performance",
+    "target_location": "Results, 'Demonstrating the application of the C-COMPASS pipeline'; Extended Data Fig. 2c",
+    "location_quotes": [
+      {
+        "segment_id": "S0056",
+        "quote": "The overall F 1 score of C-COMPASS (0.84) slightly exceeded that of SVMs (0.80) (Extended Data Fig. 2c )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0240",
+        "quote": "To evaluate the performance of compartment predictions, we calculated standard classification quality metrics, including precision, recall and F 1 score, using the scikit-learn Python package. Main protein annotations served as the ground truth, and predicted compartments were determined by selecting the compartment with the highest predicted CC c ( s ) value for each species s ."
+      },
+      {
+        "segment_id": "S0243",
+        "quote": "performance across all compartments, F 1 scores were weighted by the number of marker proteins evaluated in each compartment: F 1 weighted = ∑ c = 1 C n c F 1 1 c ∑ c = 1 C n c , where n c is the number of marker proteins used for evaluation in compartment c ."
+      }
+    ],
+    "required_files": [
+      "C-COMPASS_MarkerList.txt",
+      "C-COMPASS_ProteomeInput.tsv"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The Zenodo deposit 13901167 provides C-COMPASS_ProteomeInput.tsv (16.5 MB) and C-COMPASS_MarkerList.txt (49 KB) as the analysis inputs; C-COMPASS_session.npy is a processed session (output). The raw adipocyte PCP data are from Klingelhuber et al. (ref 22) and are not in this deposit; the deposit is described as an example dataset.",
+    "leakage_files": [
+      {
+        "name": "C-COMPASS_session.npy",
+        "reason": "Processed C-COMPASS session containing derived results (CC values, predictions) that would leak the target F1 score."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "UniProt human proteome",
+        "version": "UP000005640_9606"
+      },
+      {
+        "name": "UniProt mouse proteome",
+        "version": "UP000000589_10090"
+      }
+    ],
+    "comparison_metric": "Compare the reported overall F1 score of C-COMPASS (0.84) and SVM (0.80) with the F1 score computed by re-running the C-COMPASS pipeline on the same adipocyte PCP dataset and marker set.",
+    "numerical_agreement_criterion": "Performance metrics on the identical split: F1 scores must match to the displayed two decimal places (0.84 and 0.80).",
+    "specification_gaps": "The exact train/validation split, random seeds, and the precise marker list version used for the adipocyte dataset are not fully specified; the deposit's proteome input may be a processed example rather than the raw adipocyte PCP data.",
+    "alternatives_considered": [
+      {
+        "target": "F1 scores for HyperLOPIT dataset (0.87–1.00 control, 0.66–1.00 LPS)",
+        "reason": "Rejected because the adipocyte PCP application is the first principal result and the paper's stated priority."
+      },
+      {
+        "target": "Prediction error metrics in simulated datasets (Fig. 4)",
+        "reason": "Rejected because it is a secondary validation, not the principal result."
+      },
+      {
+        "target": "Number of proteins with RLS > 1 in humanized liver",
+        "reason": "Rejected because it is a downstream biological application, not the principal computational result."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

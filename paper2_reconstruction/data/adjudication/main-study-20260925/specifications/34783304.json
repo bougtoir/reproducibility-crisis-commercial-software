@@ -1,0 +1,146 @@
+{
+  "paper_id": "PMID:34783304",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "30338f05adefe219b5f200601d1e0f26121a5af1155f8bc0253acbfa565e0c00",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE103236",
+      "files": [
+        {
+          "name": "GSE103236_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "GSE103236_gastric_19samples_quantile_calcule.xls.gz",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:04:59.924649+00:00",
+  "api": {
+    "response_id": "18654b6e-fd59-4dbd-ac36-586efbebd2c5",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 11073,
+    "completion_tokens": 1404
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0034",
+            "quote": "RNA-seq data from the GEO database ( GSE103236 ) and TCGA database. As shown in Table 1 , NFE2L3 expression in GC was considerably increased compared with that in paracancerous tissues (adjusted P value = 0.01)."
+          }
+        ],
+        "rationale": "The principal result is a differential expression computation on public RNA-seq data (GSE103236) that a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0034",
+            "quote": "As shown in Table 1 , NFE2L3 expression in GC was considerably increased compared with that in paracancerous tissues (adjusted P value = 0.01)."
+          },
+          {
+            "segment_id": "S0036",
+            "quote": "Table 1. GSE103236 Gene.title Gene.symbol P.Value adj.P.Val a logFC b nuclear factor, erythroid 2 like 3 NFE2L3 5.08E-05 0.0140779 1.35179291"
+          }
+        ],
+        "rationale": "The first reported quantitative result is the NFE2L3 differential expression statistic in Table 1, with adjusted P value and logFC."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0034",
+            "quote": "RNA-seq data from the GEO database ( GSE103236 ) and TCGA database."
+          }
+        ],
+        "rationale": "The deposit lists a quantile-calibrated expression matrix, which may be processed rather than raw counts; it is unclear whether it is the exact input used for the Table 1 analysis."
+      },
+      "G4": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0034",
+            "quote": "we downloaded and analyzed RNA-seq data from the GEO database ( GSE103236 ) and TCGA database."
+          },
+          {
+            "segment_id": "S0032",
+            "quote": "SPSS 25.0 (SPSS Inc., USA) software was used to compare the differences between the treatment group and the control group by non-parametric test."
+          }
+        ],
+        "rationale": "The paper does not specify the differential expression method, normalization, or multiple-testing correction used for Table 1."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0034",
+            "quote": "we downloaded and analyzed RNA-seq data from the GEO database ( GSE103236 ) and TCGA database."
+          }
+        ],
+        "rationale": "Differential expression analysis of public RNA-seq data can be performed with free software such as R/Bioconductor."
+      }
+    },
+    "exact_target": "NFE2L3 differential expression in gastric cancer versus paracancerous tissues in GSE103236: P.Value = 5.08E-05, adj.P.Val = 0.0140779, logFC = 1.35179291",
+    "target_values": [
+      "5.08E-05",
+      "0.0140779",
+      "1.35179291"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The differential expression statistic for NFE2L3 between gastric cancer and paracancerous tissues in the GSE103236 dataset.",
+    "target_type": "table_cells",
+    "target_location": "Table 1",
+    "location_quotes": [
+      {
+        "segment_id": "S0034",
+        "quote": "As shown in Table 1 , NFE2L3 expression in GC was considerably increased compared with that in paracancerous tissues (adjusted P value = 0.01)."
+      },
+      {
+        "segment_id": "S0036",
+        "quote": "Table 1. GSE103236 Gene.title Gene.symbol P.Value adj.P.Val a logFC b nuclear factor, erythroid 2 like 3 NFE2L3 5.08E-05 0.0140779 1.35179291"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0034",
+        "quote": "we downloaded and analyzed RNA-seq data from the GEO database ( GSE103236 ) and TCGA database."
+      },
+      {
+        "segment_id": "S0032",
+        "quote": "SPSS 25.0 (SPSS Inc., USA) software was used to compare the differences between the treatment group and the control group by non-parametric test."
+      }
+    ],
+    "required_files": [
+      "GSE103236_gastric_19samples_quantile_calcule.xls.gz"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "GSE103236 is the GEO accession. The deposit contains a quantile-calibrated expression matrix for 19 gastric samples; it is unclear whether this is raw or processed data and whether it is the exact input for Table 1.",
+    "leakage_files": [
+      {
+        "name": "GSE103236_gastric_19samples_quantile_calcule.xls.gz",
+        "reason": "This expression matrix is the input for the differential expression analysis; if it contains precomputed statistics it could leak the target values."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Exact match of the reported numeric strings for P.Value, adj.P.Val, and logFC for NFE2L3.",
+    "numerical_agreement_criterion": "Counts exact; scalars within displayed rounding bin; p values at reported precision; proportions by numerator/denominator; performance metrics on the identical split.",
+    "specification_gaps": "The differential expression method, normalization, multiple-testing correction, and whether the deposited matrix is the exact input are not specified.",
+    "alternatives_considered": "The TCGA analysis (Figure 1a-b) was considered but rejected because the TCGA data are not in the deposit listing; the GSE103236 Table 1 result is the first reported quantitative result and uses the deposited data."
+  },
+  "eligibility": "specifiable"
+}

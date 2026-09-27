@@ -1,0 +1,158 @@
+{
+  "paper_id": "PMID:36111561",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "0ee6a4e2c64f340f1281062fd259235a5a38300b789eba9e8cfb818e24dd8172",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE129219",
+      "files": [
+        {
+          "name": "GSE129219_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T05:06:04.639621+00:00",
+  "api": {
+    "response_id": "f600a714-d719-4781-9928-d5238f515ce6",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 16400,
+    "completion_tokens": 1998
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0043",
+            "quote": "Exome analyses revealed a significantly higher number of single nucleotide variants (SNVs) in HP‐exposed DGCs than in HP‐naïve DGCs (HP‐exposed DGCs; 1.97 [0.48 minimum–7.19 maximum] and HP‐naïve DGCs; 1.09 [0.38–3.68] per megabase, p = 0.0003)."
+          },
+          {
+            "segment_id": "S0107",
+            "quote": "The data generated in this study have been submitted to the National Bioscience Database Center (NBDC; https://biosciencedbc.jp/en/ ) and NCBI Gene Expression Omnibus (GEO; https://www.ncbi.nlm.nih.gov/geo/ ) under accession numbers hum0338 (exome BAM files [raw data] are available through controlled‐access of NBDC) and GSE129219 (RNA‐seq TPM file; the raw data will not be available through controlled‐access resources such as dbGaP or EGA)."
+          }
+        ],
+        "rationale": "The principal result is a statistical comparison of SNV burden computed from exome sequencing data; the deposit lists RNA-seq TPM file GSE129219, but exome raw data are controlled-access, so a third party cannot fully re-run the exome computation from the listed files alone."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0043",
+            "quote": "Exome analyses revealed a significantly higher number of single nucleotide variants (SNVs) in HP‐exposed DGCs than in HP‐naïve DGCs (HP‐exposed DGCs; 1.97 [0.48 minimum–7.19 maximum] and HP‐naïve DGCs; 1.09 [0.38–3.68] per megabase, p = 0.0003)."
+          }
+        ],
+        "rationale": "The first quantitative result in the Results section is the SNV burden comparison, with a named primary numerical endpoint (SNVs per megabase) and p-value."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0107",
+            "quote": "The data generated in this study have been submitted to the National Bioscience Database Center (NBDC; https://biosciencedbc.jp/en/ ) and NCBI Gene Expression Omnibus (GEO; https://www.ncbi.nlm.nih.gov/geo/ ) under accession numbers hum0338 (exome BAM files [raw data] are available through controlled‐access of NBDC) and GSE129219 (RNA‐seq TPM file; the raw data will not be available through controlled‐access resources such as dbGaP or EGA)."
+          }
+        ],
+        "rationale": "The listed deposit GSE129219 contains RNA-seq TPM data, which are not the inputs for the exome-based SNV burden target; the exome BAM files are under controlled access at NBDC and not in the listing."
+      },
+      "G4": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0034",
+            "quote": "The following sections are described in Supplementary materials and methods: Laboratory tests to determine HP infection status; DNA/RNA preparation for genomic analysis; Exome sequencing analysis; RNA sequencing analysis; Alignment, local realignment, somatic variant call, and the other informatics analyses for exome sequencing; Bioinformatics analyses for RNA‐seq"
+          }
+        ],
+        "rationale": "The main text defers detailed exome variant-calling and SNV burden computation methods to supplementary materials, which are not included in the provided segments, so implementability without original code is uncertain."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0126",
+            "quote": "41. Li H, Durbin R. Fast and accurate short read alignment with Burrows‐Wheeler transform. Bioinformatics 2009; 25: 1754–1760."
+          },
+          {
+            "segment_id": "S0127",
+            "quote": "43. Koboldt DC, Zhang Q, Larson DE, et al . VarScan 2: somatic mutation and copy number alteration discovery in cancer by exome sequencing. Genome Res 2012; 22: 568–576."
+          }
+        ],
+        "rationale": "The cited tools (BWA, VarScan2, etc.) are open-source and no proprietary software is required for the SNV burden computation."
+      }
+    },
+    "exact_target": "SNV burden (single nucleotide variants per megabase) in HP-exposed versus HP-naïve DGCs: HP-exposed DGCs; 1.97 [0.48 minimum–7.19 maximum] and HP-naïve DGCs; 1.09 [0.38–3.68] per megabase, p = 0.0003",
+    "target_values": [
+      "1.97",
+      "0.48",
+      "7.19",
+      "1.09",
+      "0.38",
+      "3.68",
+      "p = 0.0003"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "Comparison of single nucleotide variant burden per megabase between HP-exposed and HP-naïve diffuse-type gastric cancers.",
+    "target_type": "scalar",
+    "target_location": "Results, 'Genomic landscape of HP-naïve DGCs' section; also Figure 2B",
+    "location_quotes": [
+      {
+        "segment_id": "S0043",
+        "quote": "Exome analyses revealed a significantly higher number of single nucleotide variants (SNVs) in HP‐exposed DGCs than in HP‐naïve DGCs (HP‐exposed DGCs; 1.97 [0.48 minimum–7.19 maximum] and HP‐naïve DGCs; 1.09 [0.38–3.68] per megabase, p = 0.0003)."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0034",
+        "quote": "The following sections are described in Supplementary materials and methods: Laboratory tests to determine HP infection status; DNA/RNA preparation for genomic analysis; Exome sequencing analysis; RNA sequencing analysis; Alignment, local realignment, somatic variant call, and the other informatics analyses for exome sequencing; Bioinformatics analyses for RNA‐seq"
+      },
+      {
+        "segment_id": "S0033",
+        "quote": "Exome sequencing data were generated with a median depth of coverage of 283 (154 [minimum]–406 [maximum]) per tumor from FF samples ( n = 50; 33 HP‐exposed and 17 HP‐naïve samples), 272 (130–331) per tumor from FFPE samples ( n = 13), and 173 (124–228) per"
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The exome BAM files (raw data) are available through controlled-access of NBDC under accession hum0338, not in the listed GEO deposit GSE129219. GSE129219 contains RNA-seq TPM file, which is not the input for the SNV burden target. No exome input files are listed in the deposit.",
+    "leakage_files": [
+      {
+        "name": "GSE129219_RAW.tar",
+        "reason": "Contains RNA-seq TPM data; not the target input, but may contain derived expression results that could leak transcriptomic findings."
+      },
+      {
+        "name": "filelist.txt",
+        "reason": "May list files and metadata that could reveal sample groupings or processed results."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "human reference genome",
+        "version": "not specified in provided segments"
+      }
+    ],
+    "comparison_metric": "Compare reported median SNV burden per megabase and p-value between HP-exposed and HP-naïve groups.",
+    "numerical_agreement_criterion": "Scalars within displayed rounding bin (e.g., 1.97, 1.09); p-value at reported precision (p = 0.0003).",
+    "specification_gaps": "Exact variant calling pipeline parameters, filtering thresholds, and normalization method for SNV burden are not specified in the main text; details are in supplementary materials not provided.",
+    "alternatives_considered": [
+      {
+        "target": "Chromosome arm-level aneuploidies (CAAs) prevalence",
+        "reason": "Reported later in Results and less central than the first quantitative result."
+      },
+      {
+        "target": "RHOA–ARHGAP pathway misregulation p = 0.0167",
+        "reason": "A secondary finding, not the primary numerical endpoint."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

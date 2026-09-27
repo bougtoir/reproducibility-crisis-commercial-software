@@ -1,0 +1,153 @@
+{
+  "paper_id": "PMID:41460829",
+  "sampling_stratum": "Social_Behavioral",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "69319031e4d882b68c764122db08718cf683650f2f1f994702425e5bb238fd0b",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "osf",
+      "accession": "vzmd2",
+      "files": [
+        {
+          "name": "osfstorage:README_main.txt",
+          "bytes": 1309
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:39:26.767511+00:00",
+  "api": {
+    "response_id": "fb66a0de-d6ba-4e12-a04e-e8bbfcc1241c",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 26220,
+    "completion_tokens": 1518
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0010",
+            "quote": "To answer these questions, we built an agent-based model that simulates the judgment of decision-makers receiving guidance from a (more or less) biased algorithm or a (more or less) biased and noisy human advisor."
+          },
+          {
+            "segment_id": "S0057",
+            "quote": "We did 50 simulation runs of each of the 27 parameter combinations to obtain enough variation in the simulated population-level behavior of decision-makers."
+          }
+        ],
+        "rationale": "The principal results are produced by running an agent-based simulation model, which a third party can re-run given the model code and parameters."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0053",
+            "quote": "The simplest behavioral outcome is the median number of subjects who faced intervention from decision-makers (put in retention) after 6,000 time steps."
+          },
+          {
+            "segment_id": "S0057",
+            "quote": "Results are presented in Fig 3 ."
+          }
+        ],
+        "rationale": "The paper explicitly names the median number of subjects put in retention as the simplest behavioral outcome, and Fig 3 reports these counts across parameter combinations."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0014",
+            "quote": "All simulation outputs, scripts used to reproduce the figures, and the full agent-based model code for this study are publicly available from the Open Science Framework (OSF) repository ( https://osf.io/vzmd2 )."
+          }
+        ],
+        "rationale": "The deposit listing contains only a README file; it is unclear whether the raw simulation outputs needed to reproduce the target are included among the listed files."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0159",
+            "quote": "We use the NetLogo agent-based modeling software [ 69 , 70 ]. Model files and parameter settings will be made available to facilitate replication."
+          },
+          {
+            "segment_id": "S0168",
+            "quote": "We varied advice bias β A across the ABM simulations between 0 and 2 in intervals of 0.25 – with 0 reflecting an extreme interventionist bias and 2 reflecting a severe non-interventionist bias."
+          }
+        ],
+        "rationale": "The Methods section describes the model equations, parameters, and simulation procedure in sufficient detail to implement the model without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0159",
+            "quote": "We use the NetLogo agent-based modeling software [ 69 , 70 ]."
+          }
+        ],
+        "rationale": "NetLogo is free, open-source software, so no proprietary software is required."
+      }
+    },
+    "exact_target": "Median number of subjects put in retention (true positives + false positives) after 6,000 time steps, reported in Fig 3 for each combination of advice bias β_A (0 to 2 in 0.25 intervals) and advice noise c (0, 0.25, 0.5).",
+    "target_values": [],
+    "target_values_located_verbatim": true,
+    "blind_target": "The median count of subjects who faced intervention (put in retention) by decision-makers after 6,000 time steps, as a function of advice bias and advice noise, in an agent-based model of human-algorithm decision-making.",
+    "target_type": "count",
+    "target_location": "Fig 3 (and Fig 4, Fig 5 for other prior distributions)",
+    "location_quotes": [
+      {
+        "segment_id": "S0057",
+        "quote": "Results are presented in Fig 3 ."
+      },
+      {
+        "segment_id": "S0058",
+        "quote": "the median (line) and the interquartile range (IQR) of 50 simulation runs, holding constant the parameter combinations ( β A , c )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0159",
+        "quote": "We use the NetLogo agent-based modeling software [ 69 , 70 ]. Model files and parameter settings will be made available to facilitate replication."
+      },
+      {
+        "segment_id": "S0168",
+        "quote": "We varied advice bias β A across the ABM simulations between 0 and 2 in intervals of 0.25 – with 0 reflecting an extreme interventionist bias and 2 reflecting a severe non-interventionist bias."
+      },
+      {
+        "segment_id": "S0169",
+        "quote": "We repeated each run 50 times to obtain enough variation in outcomes to inform us about heterogeneity in decision-makers’ aggregate behavior under similar conditions."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit listing contains only 'osfstorage:README_main.txt'. The simulation outputs and model code are mentioned in the Data Availability statement but are not listed as individual files in the provided deposit listing. The required inputs (simulation outputs) may be present in the OSF repository but are not enumerated here.",
+    "leakage_files": [
+      {
+        "name": "osfstorage:README_main.txt",
+        "reason": "May contain descriptions or pointers to the target values or derived result tables."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Compare the median number of subjects put in retention (true positives + false positives) from re-running the agent-based model with the reported medians in Fig 3 for each parameter combination.",
+    "numerical_agreement_criterion": "Counts must match exactly (medians as reported in Fig 3).",
+    "specification_gaps": "The exact random seed, NetLogo version, and any additional parameter settings (e.g., spatial environment size, subject retention duration) are not fully specified in the text; the paper refers to S1 File for additional details.",
+    "alternatives_considered": [
+      {
+        "target": "True positives count (Fig 3A)",
+        "reason": "The paper states the simplest outcome is the median number of subjects put in retention, which includes both true and false positives; true positives alone is a component, not the principal target."
+      },
+      {
+        "target": "False positives count (Fig 3B)",
+        "reason": "Similarly, false positives is a component of the retention count and not the primary outcome named by the authors."
+      },
+      {
+        "target": "IQR of retention counts",
+        "reason": "The IQR is a measure of variability, not the principal quantitative result; the paper focuses on median counts as the main behavioral outcome."
+      }
+    ]
+  },
+  "eligibility": "target_value_not_located_verbatim"
+}

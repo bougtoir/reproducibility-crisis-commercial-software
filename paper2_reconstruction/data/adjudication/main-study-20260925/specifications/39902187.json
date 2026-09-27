@@ -1,0 +1,173 @@
+{
+  "paper_id": "PMID:39902187",
+  "sampling_stratum": "Clinical_Medicine",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "b8873e206e156b657d21bc1463dc49efef70e84dc12c2692b424714e9a8318d6",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "bioproject",
+      "accession": "PRJNA704514",
+      "files": [
+        {
+          "name": "SRR13775208",
+          "bytes": 1618281
+        },
+        {
+          "name": "SRR13775209",
+          "bytes": 1619911
+        },
+        {
+          "name": "SRR13775210",
+          "bytes": 1619095
+        },
+        {
+          "name": "SRR13775211",
+          "bytes": 1613096
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:06:41.940195+00:00",
+  "api": {
+    "response_id": "9aa4ce1c-7502-47c3-a0da-d81ca7273c1b",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 18270,
+    "completion_tokens": 2034
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0032",
+            "quote": "Following a quality check of the WGS data with the FastQC tool ( FastQC, A, 2015 ), the genomes were assembled using Shovill ver. 1.0.4 ( https://github.com/tseemann/shovill ), and a species check was performed using Kraken2 ( https://ccb.jhu.edu/software/kraken/ )."
+          },
+          {
+            "segment_id": "S0034",
+            "quote": "AMR genes were identified via the Resistance Gene Identifier (RGI) ( https://card.mcmaster.ca/analyze/rgi ), while virulence genes were identified via the use of virulence factors of pathogenic bacteria (VFDB) ( http://www.mgc.ac.cn/VFs/ ) from the genome."
+          }
+        ],
+        "rationale": "The principal results (serotype, ST, AMR genes) are produced by computational analysis of WGS data that a third party can re-run from the deposited raw reads."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0011",
+            "quote": "One of the CIFT-K6 isolates had the uncommon serotype of K. pneumoniae O3b with the high-risk clone “ST37.”"
+          },
+          {
+            "segment_id": "S0067",
+            "quote": "Multiple locus sequence typing (MLST) using the WGS data revealed that two of the four genomes belonged to ST515, that of the CTFT-K6 isolate was typed as ST37, and that of the fourth isolate, CIFT-K10, was of the ST192 type."
+          }
+        ],
+        "rationale": "The paper's stated priority is the identification of serotype O3b and high-risk clone ST37; the principal quantitative result is the sequence type assignment (ST37) for isolate CIFT-K6."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0038",
+            "quote": "The whole genome project has been submitted as a project with the accession ID PRJNA704514. The whole-genome shotgun project has been deposited in DDBJ/ENA/GenBank under the accession numbers JAGIZC000000000 (CIFT-K6), JAGIZD000000000 (CIFT-K7), JAGIZE000000000 (CIFT-K8), and JAGIZF000000000 (CIFT-K10)."
+          }
+        ],
+        "rationale": "The deposit listing contains raw sequencing reads (SRR accessions) under PRJNA704514, which are the analysis inputs for the computational target."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0035",
+            "quote": "Additional virulence plasmid-associated K loci (capsule synthesis) and O antigen (lipopolysaccharide) serotype prediction, allele diversity, and multiple locus sequence type (MLST) of K. pneumoniae were screened using KleBorate ( https://github.com/katholt/Kleborate )."
+          },
+          {
+            "segment_id": "S0032",
+            "quote": "Following a quality check of the WGS data with the FastQC tool ( FastQC, A, 2015 ), the genomes were assembled using Shovill ver. 1.0.4 ( https://github.com/tseemann/shovill ), and a species check was performed using Kraken2 ( https://ccb.jhu.edu/software/kraken/ )."
+          }
+        ],
+        "rationale": "The method for MLST and serotype prediction is described with specific software (Kleborate) and version, sufficient to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0032",
+            "quote": "Following a quality check of the WGS data with the FastQC tool ( FastQC, A, 2015 ), the genomes were assembled using Shovill ver. 1.0.4 ( https://github.com/tseemann/shovill ), and a species check was performed using Kraken2 ( https://ccb.jhu.edu/software/kraken/ )."
+          }
+        ],
+        "rationale": "All software mentioned (FastQC, Shovill, Kraken2, Prokka, Kleborate) are free and open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "Sequence type (ST) of Klebsiella pneumoniae isolate CIFT-K6 from fish, reported as ST37.",
+    "target_values": [
+      "ST37"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The sequence type assigned to the Klebsiella pneumoniae isolate CIFT-K6 based on whole-genome sequencing data.",
+    "target_type": "count",
+    "target_location": "Section 3.5, Table 4",
+    "location_quotes": [
+      {
+        "segment_id": "S0067",
+        "quote": "Multiple locus sequence typing (MLST) using the WGS data revealed that two of the four genomes belonged to ST515, that of the CTFT-K6 isolate was typed as ST37, and that of the fourth isolate, CIFT-K10, was of the ST192 type."
+      },
+      {
+        "segment_id": "S0070",
+        "quote": "CIFTK6 ST37 2 9 2 1 13 1 16"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0035",
+        "quote": "Additional virulence plasmid-associated K loci (capsule synthesis) and O antigen (lipopolysaccharide) serotype prediction, allele diversity, and multiple locus sequence type (MLST) of K. pneumoniae were screened using KleBorate ( https://github.com/katholt/Kleborate )."
+      },
+      {
+        "segment_id": "S0032",
+        "quote": "Following a quality check of the WGS data with the FastQC tool ( FastQC, A, 2015 ), the genomes were assembled using Shovill ver. 1.0.4 ( https://github.com/tseemann/shovill ), and a species check was performed using Kraken2 ( https://ccb.jhu.edu/software/kraken/ )."
+      }
+    ],
+    "required_files": [
+      "SRR13775208",
+      "SRR13775209",
+      "SRR13775210",
+      "SRR13775211"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The four SRR accessions correspond to the four isolates CIFT-K6, CIFT-K7, CIFT-K8, and CIFT-K10, but the mapping is not specified in the listing. The paper states that the whole-genome shotgun project has been deposited under accession numbers JAGIZC000000000 (CIFT-K6), JAGIZD000000000 (CIFT-K7), JAGIZE000000000 (CIFT-K8), and JAGIZF000000000 (CIFT-K10), but these are not in the deposit listing. The SRR accessions are raw reads; assembly is required.",
+    "leakage_files": [
+      {
+        "name": "SRR13775208",
+        "reason": "This is raw sequencing data for one of the isolates; it does not contain the target value directly, but it is the input for the computation. However, if the target value is derived from it, it is not a leakage file. The leakage files are those that contain the target value or derived result tables. In this deposit listing, there are no such files; all are raw data. Therefore, leakage_files is empty."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "Kleborate",
+        "version": "not specified"
+      },
+      {
+        "name": "Klebsiella pneumoniae MLST database",
+        "version": "not specified"
+      }
+    ],
+    "comparison_metric": "The observed sequence type (ST) from re-running the analysis on the deposited raw reads is compared to the reported ST37 for isolate CIFT-K6.",
+    "numerical_agreement_criterion": "Exact match of the sequence type string (ST37).",
+    "specification_gaps": "The mapping of SRR accessions to isolate names (CIFT-K6, etc.) is not provided. The version of Kleborate and the MLST database used are not specified. The exact parameters for assembly and annotation are not fully detailed.",
+    "alternatives_considered": [
+      {
+        "target": "Serotype O3b for CIFT-K6",
+        "reason": "The paper's title highlights both serotype O3b and ST37, but ST37 is the high-risk clone and is more central to the conclusion. Serotype O3b is also reported, but the sequence type is the principal quantitative result for the high-risk clone identification."
+      },
+      {
+        "target": "Number of AMR genes (30)",
+        "reason": "This is a count, but it is a secondary result and not the principal target emphasized in the abstract and conclusion."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

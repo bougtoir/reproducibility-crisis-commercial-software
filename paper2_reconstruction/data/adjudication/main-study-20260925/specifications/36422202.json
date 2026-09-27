@@ -1,0 +1,162 @@
+{
+  "paper_id": "PMID:36422202",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "acaa14b4209c60e4c964a6298615d92544bc798167bb1eaa99f8dd9d7dccaded",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE62452",
+      "files": [
+        {
+          "name": "GSE62452_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "GSE62452_paired_sample_information.xlsx",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:49:17.442397+00:00",
+  "api": {
+    "response_id": "eb2eb4d8-4ed6-4531-bddf-d608dc19fa7a",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 9285,
+    "completion_tokens": 1459
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0023",
+            "quote": "The expression profile was estimated using a unique PDAC microarray dataset ( GSE62452 ), including a total of 130 samples (PDAC: 69 PDAC; adjacent non-tumor tissue control: 61 samples)."
+          },
+          {
+            "segment_id": "S0029",
+            "quote": "we compared the gene expression levels by using a two-tailed unpaired t-test for parametric data or a Mann–Whitney U-test for non-parametric data."
+          }
+        ],
+        "rationale": "The principal result is a differential expression computation on public microarray data (GSE62452) that a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0009",
+            "quote": "In addition, the expression level of BCL-xL was higher in PDAC compared to control samples ( p < 0.001)."
+          },
+          {
+            "segment_id": "S0033",
+            "quote": "According to our outcomes, BCL-xL is upregulated in PDAC ( p < 0.001), as highlighted in Figure 4 ."
+          }
+        ],
+        "rationale": "The primary numerical endpoint is the differential expression p-value for BCL-xL in PDAC versus control."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0023",
+            "quote": "The datasheet was obtained by the [HuEx-1_0-st] Affymetrix Human Exon 1.0 ST Array platform and the gene expression data were log-transformed"
+          },
+          {
+            "segment_id": "S0051",
+            "quote": "The data supporting the present study is available in the PubMed GEO ( https://www.ncbi.nlm.nih.gov/gds ), reference number GSE62452 (Accessed on 10 April 2022)."
+          }
+        ],
+        "rationale": "The deposit contains raw microarray data (GSE62452_RAW.tar) and sample information, which are the inputs for the differential expression analysis."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0023",
+            "quote": "The datasheet was obtained by the [HuEx-1_0-st] Affymetrix Human Exon 1.0 ST Array platform and the gene expression data were log-transformed; moreover, we examined the null hypothesis, which suggested that the gene expression levels between the cancer and healthy tissue samples were comparable."
+          },
+          {
+            "segment_id": "S0029",
+            "quote": "we compared the gene expression levels by using a two-tailed unpaired t-test for parametric data or a Mann–Whitney U-test for non-parametric data."
+          }
+        ],
+        "rationale": "The method for the differential expression target is described sufficiently to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0029",
+            "quote": "we compared the gene expression levels by using a two-tailed unpaired t-test for parametric data or a Mann–Whitney U-test for non-parametric data."
+          }
+        ],
+        "rationale": "The described statistical method requires no proprietary software; free alternatives exist."
+      }
+    },
+    "exact_target": "Differential expression of BCL-xL between PDAC and control samples, reported as p < 0.001.",
+    "target_values": [
+      "p < 0.001"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "Differential expression of BCL-xL between PDAC and control samples.",
+    "target_type": "p_value",
+    "target_location": "Results section 3.2 and Figure 4",
+    "location_quotes": [
+      {
+        "segment_id": "S0033",
+        "quote": "According to our outcomes, BCL-xL is upregulated in PDAC ( p < 0.001), as highlighted in Figure 4 ."
+      },
+      {
+        "segment_id": "S0065",
+        "quote": "Figure 4 Violin plot demonstrating the differential gene expression of BCL-xL in normal and PDAC tissue samples. ****: p < 0.001."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0023",
+        "quote": "The datasheet was obtained by the [HuEx-1_0-st] Affymetrix Human Exon 1.0 ST Array platform and the gene expression data were log-transformed; moreover, we examined the null hypothesis, which suggested that the gene expression levels between the cancer and healthy tissue samples were comparable."
+      },
+      {
+        "segment_id": "S0029",
+        "quote": "we compared the gene expression levels by using a two-tailed unpaired t-test for parametric data or a Mann–Whitney U-test for non-parametric data."
+      }
+    ],
+    "required_files": [
+      "GSE62452_RAW.tar",
+      "GSE62452_paired_sample_information.xlsx"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "GSE62452 raw data and sample information; platform [HuEx-1_0-st] Affymetrix Human Exon 1.0 ST Array; accessed 10 April 2022.",
+    "leakage_files": [],
+    "required_public_references": [
+      {
+        "name": "GSE62452",
+        "version": "as accessed on 10 April 2022"
+      }
+    ],
+    "comparison_metric": "Compare the computed p-value for differential expression of BCL-xL between PDAC and control samples to the reported p < 0.001.",
+    "numerical_agreement_criterion": "p values at reported precision: computed p-value must be < 0.001.",
+    "specification_gaps": "The paper does not specify the exact probe set used for BCL-xL, the normalization method beyond log-transformation, or how multiple comparisons were handled for this specific test.",
+    "alternatives_considered": [
+      {
+        "target": "AUC of 0.83 for BCL-xL discrimination",
+        "reason": "This is a secondary result; the primary endpoint is the differential expression p-value."
+      },
+      {
+        "target": "R squared of 0.31 for calibration",
+        "reason": "This is a secondary result; the primary endpoint is the differential expression p-value."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

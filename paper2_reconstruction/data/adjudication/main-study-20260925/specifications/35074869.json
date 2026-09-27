@@ -1,0 +1,358 @@
+{
+  "paper_id": "PMID:35074869",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "58341dab327742db8f85d28d067c05a56b8438da6be6f9598c97e56b03de8cbe",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "dataverse",
+      "accession": "0EUW82",
+      "files": [
+        {
+          "name": "conceclip_pop.RData",
+          "bytes": 166376724
+        },
+        {
+          "name": "parametric_panel_revised.RData",
+          "bytes": 128439505
+        },
+        {
+          "name": "table-s1-s4-2012-2015.R",
+          "bytes": 8964
+        },
+        {
+          "name": "table-s1-s4-2016-2018.R",
+          "bytes": 6751
+        },
+        {
+          "name": "table-s13-2017.R",
+          "bytes": 3496
+        },
+        {
+          "name": "table-s14-2017.R",
+          "bytes": 4297
+        },
+        {
+          "name": "table-s15-s16-2012-2015-0001.R",
+          "bytes": 7188
+        },
+        {
+          "name": "table-s15-s16-2016-2018-0001.R",
+          "bytes": 6497
+        },
+        {
+          "name": "table-s17.R",
+          "bytes": 6230
+        },
+        {
+          "name": "table-s18.R",
+          "bytes": 6227
+        },
+        {
+          "name": "table-s19-s22-2012-2015.R",
+          "bytes": 9391
+        },
+        {
+          "name": "table-s19-s22-2016-2018.R",
+          "bytes": 6866
+        },
+        {
+          "name": "table-s35-a.R",
+          "bytes": 2251
+        },
+        {
+          "name": "table-s35-b.R",
+          "bytes": 4499
+        },
+        {
+          "name": "table-s36-s37-s38-s39.R",
+          "bytes": 13698
+        },
+        {
+          "name": "table-s40.R",
+          "bytes": 2257
+        },
+        {
+          "name": "table-s41-s42.R",
+          "bytes": 9507
+        },
+        {
+          "name": "table-s9-s12.R",
+          "bytes": 10872
+        },
+        {
+          "name": "virginclip_pop.RData",
+          "bytes": 390161627
+        },
+        {
+          "name": "virginclip_pop_noelev.RData",
+          "bytes": 430969503
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:26:21.695568+00:00",
+  "api": {
+    "response_id": "e375576d-c53b-4747-a214-fcf72c87fe28",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 23117,
+    "completion_tokens": 3532
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0008",
+            "quote": "We evaluate the effectiveness of the moratorium between 2011 and 2018 by applying a matched triple difference strategy to a unique panel dataset."
+          },
+          {
+            "segment_id": "S0031",
+            "quote": "a matched triple difference strategy ( 37 ) applied to Global Forest Change data ( 38 ) at the 1.2-km by 1.2-km scale between 2004 and 2018 ( Materials and Methods )."
+          }
+        ],
+        "rationale": "The principal result is produced by a matched triple-difference computation on a panel dataset that a third party can re-run from the deposited data."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0009",
+            "quote": "Cumulative avoided dryland deforestation from 2011 until 2018 translates into 67.8 million to 86.9 million tons of emissions reductions, implying an effective carbon price below Norway’s US$5 per ton price."
+          },
+          {
+            "segment_id": "S0049",
+            "quote": "and 67.8 MtCO 2 -eq to 86.9 MtCO 2 -eq in 2011–2018 ( SI Appendix , Tables"
+          }
+        ],
+        "rationale": "The paper states the cumulative avoided emissions range as its headline quantitative result, and it is also reported in the central results figure/table."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0159",
+            "quote": "All replication materials, including processed datasets, regression routines, and R scripts used to generate our results, have been deposited in Harvard Dataverse ("
+          },
+          {
+            "segment_id": "S0202",
+            "quote": "Dataverse ( https://doi.org/10.7910/DVN/0EUW82 ). Previously published data were used for this work ( 38 , 64 , 65 , 69 – 72 , 93 )."
+          }
+        ],
+        "rationale": "The deposit contains processed panel datasets (conceclip_pop.RData, virginclip_pop.RData, virginclip_pop_noelev.RData, parametric_panel_revised.RData) that are the analysis inputs for the target; the .R files are code and are withheld."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0128",
+            "quote": "The matched DD estimator takes the following form and estimates A T T D D , T for time horizon T using forest cover data Y i t M from the moratorium grid cell i matched with data Y i t j , N M in cell j from the nonmoratorium grid cells: [5] ATT ^ D D , T = 1 N M ∑"
+          },
+          {
+            "segment_id": "S0132",
+            "quote": "in the third step, we use a matched DDD estimator inspired by refs. 37 and 40 , which applies a correction for nonparallel trends. The DDD estimator takes the following form: [6] ATT ^ DDD , T = 1 N M ∑ i I 0 { [ [ Y i , T M − Y i , T 1 M ] − [ Y i , T j , N M − Y i , T 1 j , N M ] ] − [ [ Y i , T 1 ′ M − Y i , T 0 M ] − [ Y i , T 1 ′ j , N M − Y i , T 0 j , N M ] ] ("
+          },
+          {
+            "segment_id": "S0149",
+            "quote": "Estimating Carbon Emissions. We obtain grid cell–level CO 2 -eq estimates by multiplying the average carbon stock (in tons of carbon per hectare) per grid cell by our ATT estimates of avoided deforestation (hectares). These results are then extrapolated to"
+          }
+        ],
+        "rationale": "The paper gives the matched DD and DDD estimator equations, matching variables, caliper, and the carbon conversion procedure, sufficient to implement without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0135",
+            "quote": "In each case, we use the Matching routine in R ( 81 )."
+          },
+          {
+            "segment_id": "S0142",
+            "quote": "We use the cem routine in R to undertake the matching, and the att routine in R to obtain this covariate-adjusted estimate of the ATT."
+          }
+        ],
+        "rationale": "The method uses R packages (Matching, cem, att, fixest) and no proprietary software is required."
+      }
+    },
+    "exact_target": "Cumulative avoided carbon dioxide emissions from dryland forest, 2011–2018, reported as 67.8 MtCO2-eq to 86.9 MtCO2-eq.",
+    "target_values": [
+      "67.8 MtCO 2 -eq",
+      "86.9 MtCO 2 -eq"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The cumulative quantity of carbon dioxide emissions avoided by the moratorium in dryland forest over the period from 2011 through 2018, expressed in megatonnes of carbon dioxide equivalent.",
+    "target_type": "interval",
+    "target_location": "Abstract; Results, National-Level Effects of the Moratorium; Fig. 2B; SI Appendix, Tables S5 and S6",
+    "location_quotes": [
+      {
+        "segment_id": "S0009",
+        "quote": "Cumulative avoided dryland deforestation from 2011 until 2018 translates into 67.8 million to 86.9 million tons of emissions reductions, implying an effective carbon price below Norway’s US$5 per ton price."
+      },
+      {
+        "segment_id": "S0049",
+        "quote": "and 67.8 MtCO 2 -eq to 86.9 MtCO 2 -eq in 2011–2018 ( SI Appendix , Tables"
+      },
+      {
+        "segment_id": "S0044",
+        "quote": "2012–2018 ( A ); dryland forest DDD, 2012–2018 ( B ); peatland forest DD, 2012–2017 ( C ); and peatland DDD, 2012–2017 ( D ). The blue columns and left-hand y axis in each panel show the quantity of avoided forest loss, while the red columns and right-hand y axis show the quantity of carbon emissions avoided. All quantities are aggregated up to the level of the whole moratorium. Error bars denote"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0128",
+        "quote": "The matched DD estimator takes the following form and estimates A T T D D , T for time horizon T using forest cover data Y i t M from the moratorium grid cell i matched with data Y i t j , N M in cell j from the nonmoratorium grid cells: [5] ATT ^ D D , T = 1 N M ∑"
+      },
+      {
+        "segment_id": "S0132",
+        "quote": "in the third step, we use a matched DDD estimator inspired by refs. 37 and 40 , which applies a correction for nonparallel trends. The DDD estimator takes the following form: [6] ATT ^ DDD , T = 1 N M ∑ i I 0 { [ [ Y i , T M − Y i , T 1 M ] − [ Y i , T j , N M − Y i , T 1 j , N M ] ] − [ [ Y i , T 1 ′ M − Y i , T 0 M ] − [ Y i , T 1 ′ j , N M − Y i , T 0 j , N M ] ] ("
+      },
+      {
+        "segment_id": "S0149",
+        "quote": "Estimating Carbon Emissions. We obtain grid cell–level CO 2 -eq estimates by multiplying the average carbon stock (in tons of carbon per hectare) per grid cell by our ATT estimates of avoided deforestation (hectares). These results are then extrapolated to"
+      },
+      {
+        "segment_id": "S0150",
+        "quote": "the total number of moratorium grid cells in the sample, and converted to tons of carbon equivalent, tCO 2 -eq, by applying a conversion factor of 3.67 ( 92 ). Belowground carbon stocks in Table 1 are approximated by multiplying aboveground carbon by 1.24 following ref. 27 ."
+      }
+    ],
+    "required_files": [
+      "conceclip_pop.RData",
+      "parametric_panel_revised.RData",
+      "virginclip_pop.RData",
+      "virginclip_pop_noelev.RData"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The deposit is Harvard Dataverse doi:10.7910/DVN/0EUW82. The .RData files are processed panel datasets containing grid-cell forest cover, treatment, matching covariates, and carbon stock variables. The .R files are the original implementation and are withheld. External raw geospatial inputs (Global Forest Change, peat depth, moratorium shapefiles, concession shapefiles, WorldPop, travel time, Landscan, aboveground biomass) are not in the deposit and must be obtained from the cited public sources.",
+    "leakage_files": [
+      {
+        "name": "table-s1-s4-2012-2015.R",
+        "reason": "R script that generates SI Appendix Tables S1–S4, which contain the ATT estimates underlying the target."
+      },
+      {
+        "name": "table-s1-s4-2016-2018.R",
+        "reason": "R script that generates SI Appendix Tables S1–S4, which contain the ATT estimates underlying the target."
+      },
+      {
+        "name": "table-s5-s6.R",
+        "reason": "R script that generates SI Appendix Tables S5 and S6, which report the cumulative avoided forest loss and carbon emissions including the target values."
+      },
+      {
+        "name": "table-s7-s8.R",
+        "reason": "R script that generates SI Appendix Tables S7 and S8, which report peatland cumulative avoided forest loss and carbon emissions."
+      },
+      {
+        "name": "table-s9-s12.R",
+        "reason": "R script that generates SI Appendix Tables S9–S12, robustness tables containing ATT and emissions estimates."
+      },
+      {
+        "name": "table-s13-2017.R",
+        "reason": "R script that generates SI Appendix Table S13, a robustness table containing ATT estimates."
+      },
+      {
+        "name": "table-s14-2017.R",
+        "reason": "R script that generates SI Appendix Table S14, a robustness table containing ATT estimates."
+      },
+      {
+        "name": "table-s15-s16-2012-2015-0001.R",
+        "reason": "R script that generates SI Appendix Tables S15 and S16, robustness tables containing ATT estimates."
+      },
+      {
+        "name": "table-s15-s16-2016-2018-0001.R",
+        "reason": "R script that generates SI Appendix Tables S15 and S16, robustness tables containing ATT estimates."
+      },
+      {
+        "name": "table-s17.R",
+        "reason": "R script that generates SI Appendix Table S17, a robustness table containing ATT estimates."
+      },
+      {
+        "name": "table-s18.R",
+        "reason": "R script that generates SI Appendix Table S18, a robustness table containing ATT estimates."
+      },
+      {
+        "name": "table-s19-s22-2012-2015.R",
+        "reason": "R script that generates SI Appendix Tables S19–S22, robustness tables containing ATT and emissions estimates."
+      },
+      {
+        "name": "table-s19-s22-2016-2018.R",
+        "reason": "R script that generates SI Appendix Tables S19–S22, robustness tables containing ATT and emissions estimates."
+      },
+      {
+        "name": "table-s35-a.R",
+        "reason": "R script that generates SI Appendix Table S35, model selection table containing ATT estimates."
+      },
+      {
+        "name": "table-s35-b.R",
+        "reason": "R script that generates SI Appendix Table S35, model selection table containing ATT estimates."
+      },
+      {
+        "name": "table-s36-s37-s38-s39.R",
+        "reason": "R script that generates SI Appendix Tables S36–S39, placebo test tables containing ATT estimates."
+      },
+      {
+        "name": "table-s40.R",
+        "reason": "R script that generates SI Appendix Table S40, placebo test table containing ATT estimates."
+      },
+      {
+        "name": "table-s41-s42.R",
+        "reason": "R script that generates SI Appendix Tables S41 and S42, spatial placebo test tables containing ATT estimates."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "Global Forest Change dataset (Hansen et al. 2013)",
+        "version": "v1.6 or as used in the paper"
+      },
+      {
+        "name": "Tropical and subtropical wetlands distribution version 2 (Gumbricht et al.)",
+        "version": "version 2"
+      },
+      {
+        "name": "Moratorium shapefiles (Ministry of Forestry, Indicative map of new revised permit delays 5, 2011)",
+        "version": "2011 boundaries"
+      },
+      {
+        "name": "Concession shapefiles (Ministry of Forestry, Ministerial Decree SK 5984/Menhut-VI/BRPUK/2014)",
+        "version": "2014"
+      },
+      {
+        "name": "WorldPop Global High Resolution Population Denominators Project",
+        "version": "as accessed 21 October 2019"
+      },
+      {
+        "name": "Travel time to major cities (Nelson)",
+        "version": "as accessed 2 November 2019"
+      },
+      {
+        "name": "Landscan high-resolution population data set",
+        "version": "2005–2019"
+      },
+      {
+        "name": "Global Forest Watch aboveground live woody biomass density",
+        "version": "as accessed 13 December 2019"
+      }
+    ],
+    "comparison_metric": "The observed cumulative avoided emissions interval is compared with the reported interval; the solver's computed interval should match the reported lower and upper bounds within the displayed rounding bin.",
+    "numerical_agreement_criterion": "Interval by component: the lower bound must equal 67.8 MtCO2-eq and the upper bound must equal 86.9 MtCO2-eq, each within the displayed rounding bin (one decimal place).",
+    "specification_gaps": "The paper does not fully specify the exact version of the Global Forest Change dataset, the precise processing steps used to construct the .RData panel files, the random seed or tie-breaking rules in the propensity score matching, the exact carbon stock values per grid cell, or the handling of missing values.",
+    "alternatives_considered": [
+      {
+        "target": "Cumulative avoided dryland forest loss, 2011–2018 (117,053 ha to 150,089 ha)",
+        "reason": "This is an intermediate result; the paper's headline result is the carbon emissions reduction, which is the policy-relevant endpoint."
+      },
+      {
+        "target": "Effective carbon price (US$0.6–US$5.4/tCO2-eq)",
+        "reason": "This is a derived economic metric, not the principal physical outcome; the paper emphasizes emissions reductions as the main result."
+      },
+      {
+        "target": "Contribution to Indonesia's NDC (3 to 4%)",
+        "reason": "This is a contextual comparison, not the primary quantitative result of the evaluation."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

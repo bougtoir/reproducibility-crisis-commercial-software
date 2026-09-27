@@ -1,0 +1,321 @@
+{
+  "paper_id": "PMID:36310873",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "3211b99bbccbb9e0e88ac718c9c17a21eec2f0ce3869a02e234271847e63c232",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "bioproject",
+      "accession": "PRJNA865167",
+      "files": [
+        {
+          "name": "SRR20749332",
+          "bytes": 72407667
+        },
+        {
+          "name": "SRR20749333",
+          "bytes": 35913045
+        },
+        {
+          "name": "SRR20749334",
+          "bytes": 15757115
+        },
+        {
+          "name": "SRR20749335",
+          "bytes": 104808898
+        },
+        {
+          "name": "SRR20749336",
+          "bytes": 25841768
+        },
+        {
+          "name": "SRR20749337",
+          "bytes": 48791083
+        },
+        {
+          "name": "SRR20749338",
+          "bytes": 97682636
+        },
+        {
+          "name": "SRR20749339",
+          "bytes": 72991584
+        },
+        {
+          "name": "SRR20749340",
+          "bytes": 25287328
+        },
+        {
+          "name": "SRR20749341",
+          "bytes": 47153770
+        },
+        {
+          "name": "SRR20749342",
+          "bytes": 29276672
+        },
+        {
+          "name": "SRR20749343",
+          "bytes": 63835386
+        },
+        {
+          "name": "SRR20749344",
+          "bytes": 67555340
+        },
+        {
+          "name": "SRR20749345",
+          "bytes": 41560432
+        },
+        {
+          "name": "SRR20749346",
+          "bytes": 79014149
+        },
+        {
+          "name": "SRR20749347",
+          "bytes": 174687522
+        },
+        {
+          "name": "SRR20749348",
+          "bytes": 148472236
+        },
+        {
+          "name": "SRR20749349",
+          "bytes": 13587864
+        },
+        {
+          "name": "SRR20749350",
+          "bytes": 69610634
+        },
+        {
+          "name": "SRR20749351",
+          "bytes": 73601420
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T03:59:52.447994+00:00",
+  "api": {
+    "response_id": "198b1ffc-2056-4a39-b9d2-a07beb6bfd14",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 14745,
+    "completion_tokens": 3068
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0034",
+            "quote": "Qualified libraries were sequenced by the Illumina 550 platform. (3) High-quality sequencing data were generated, followed by computational subtraction of human host sequences mapping to the human reference genome (hg19) using Kraken2 2.1.2 and Burrows-Wheeler Alignment (BWA)."
+          },
+          {
+            "segment_id": "S0035",
+            "quote": "The remaining data were aligned to the Pathogenic Microbial Genome Databases, including bacteria, viruses, fungi, and parasites."
+          },
+          {
+            "segment_id": "S0094",
+            "quote": "The data sets presented in this study can be found in online repositories. The names of the repository/repositories and accession number(s) can be"
+          }
+        ],
+        "rationale": "The principal etiological results are produced by computational analysis (host subtraction, alignment, abundance calculation) of sequencing data deposited under PRJNA865167, so a third party can re-run the computation."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0009",
+            "quote": "broader pathogen spectrum and can more sensitively detect C. psittaci and other low-abundance pathogens with a higher positive detection rate (100%, 13/13 vs. 46%, 6/13, P < 0.05) than conventional culture methods."
+          },
+          {
+            "segment_id": "S0068",
+            "quote": "mNGS yields a higher positive detection rate for pathogens compared with the culture method (100%, 13/13 vs. 46%, 6/13) ( Figure 5C ) and tends"
+          }
+        ],
+        "rationale": "The paper states a principal quantitative comparison: mNGS positive detection rate 100% (13/13) versus culture 46% (6/13), P<0.05, reported in the abstract and Results and shown in Figure 5C."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0027",
+            "quote": "Of the 25 patients diagnosed with C. psittaci infection by mNGS, 10 patients whose mNGS fastq data were lost were excluded. Further etiological analysis and suspected coinfection analysis were"
+          },
+          {
+            "segment_id": "S0028",
+            "quote": "performed only for 15 patients. Specifically, we analyzed 20 samples [13 bronchoalveolar lavage fluid (BALF) and seven blood samples] from 15 patients."
+          },
+          {
+            "segment_id": "S0094",
+            "quote": "The data sets presented in this study can be found in online repositories. The names of the repository/repositories and accession number(s) can be"
+          }
+        ],
+        "rationale": "The deposited run accessions are the raw mNGS fastq inputs for the 20 samples from 15 patients used in the etiological/coinfection analysis; the target is computed from these raw reads."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0034",
+            "quote": "High-quality sequencing data were generated, followed by computational subtraction of human host sequences mapping to the human reference genome (hg19) using Kraken2 2.1.2 and Burrows-Wheeler Alignment (BWA). Low-quality and short reads (length < 50 bp) were removed by fastp 0.20.1."
+          },
+          {
+            "segment_id": "S0035",
+            "quote": "The remaining data were aligned to the Pathogenic Microbial Genome Databases, including bacteria, viruses, fungi, and parasites. The classification reference databases were downloaded from National Center of Biotechnology Information (NCBI) ( ftp://ftp.ncbi.nlm.nih.gov/genomes/ ) and the mapped data were processed for advanced analysis."
+          },
+          {
+            "segment_id": "S0037",
+            "quote": "At least two reads were mapped to the pathogens, except for specific pathogens such as Bacillus anthracis, Orientia tsutsugamushi, Chlamydia pneumoniae, Brucella, Cryptococcus neoformans, Coronavirus, Human Immunodeficiency Virus (HIV) , and Toxoplasma , whose relative abundances would be surpassed ( Formula ) ( Zhang et al., 2020 )."
+          },
+          {
+            "segment_id": "S0038",
+            "quote": "Pathogens with the highest absolute abundance in their genus (Top 5) and (2) Species with relative abundance ≥ 5% for bacteria, ≥ 50% for fungi, and ≥ 10% for viruses, were considered dominant species."
+          }
+        ],
+        "rationale": "The paper describes read QC, host subtraction, alignment databases, read thresholds, and relative-abundance formulas sufficiently to implement the mNGS analysis without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0034",
+            "quote": "using Kraken2 2.1.2 and Burrows-Wheeler Alignment (BWA). Low-quality and short reads (length < 50 bp) were removed by fastp 0.20.1."
+          },
+          {
+            "segment_id": "S0035",
+            "quote": "The classification reference databases were downloaded from National Center of Biotechnology Information (NCBI) ( ftp://ftp.ncbi.nlm.nih.gov/genomes/ )"
+          }
+        ],
+        "rationale": "The computational pipeline uses free/open-source tools (Kraken2, BWA, fastp) and public NCBI reference databases; no proprietary software is required."
+      }
+    },
+    "exact_target": "Positive detection rate of mNGS versus conventional culture for pathogens in C. psittaci pneumonia patients: mNGS 100% (13/13) vs. culture 46% (6/13), P < 0.05.",
+    "target_values": [
+      "100%",
+      "13/13",
+      "46%",
+      "6/13",
+      "P < 0.05"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The proportion of patients or samples in which the mNGS method detected the pathogen compared with the proportion detected by conventional culture, among the C. psittaci pneumonia cases analyzed.",
+    "target_type": "proportion",
+    "target_location": "Abstract; Results section 'Etiological diagnostic performance of mNGS in C. psittaci patients' and 'Coinfection with other pathogens...'; Figure 5C.",
+    "location_quotes": [
+      {
+        "segment_id": "S0009",
+        "quote": "broader pathogen spectrum and can more sensitively detect C. psittaci and other low-abundance pathogens with a higher positive detection rate (100%, 13/13 vs. 46%, 6/13, P < 0.05) than conventional culture methods."
+      },
+      {
+        "segment_id": "S0068",
+        "quote": "mNGS yields a higher positive detection rate for pathogens compared with the culture method (100%, 13/13 vs. 46%, 6/13) ( Figure 5C ) and tends"
+      },
+      {
+        "segment_id": "S0072",
+        "quote": "(C) The ratio of mNGS-positive patients and conventional culture-positive patients."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0033",
+        "quote": "A 1.5–3 mL of the BALF sample or 5 mL of blood sample was collected from each patient. Nucleic acid extraction took place using a TIANamp Micro DNA Kit (DP316, Tiangen Biotech Co., Beijing, China)."
+      },
+      {
+        "segment_id": "S0034",
+        "quote": "Qualified libraries were sequenced by the Illumina 550 platform. (3) High-quality sequencing data were generated, followed by computational subtraction of human host sequences mapping to the human reference genome (hg19) using Kraken2 2.1.2 and Burrows-Wheeler Alignment (BWA)."
+      },
+      {
+        "segment_id": "S0035",
+        "quote": "The remaining data were aligned to the Pathogenic Microbial Genome Databases, including bacteria, viruses, fungi, and parasites."
+      },
+      {
+        "segment_id": "S0037",
+        "quote": "At least two reads were mapped to the pathogens, except for specific pathogens such as Bacillus anthracis, Orientia tsutsugamushi, Chlamydia pneumoniae, Brucella, Cryptococcus neoformans, Coronavirus, Human Immunodeficiency Virus (HIV) , and Toxoplasma , whose relative abundances would be surpassed ( Formula ) ( Zhang et al., 2020 )."
+      },
+      {
+        "segment_id": "S0038",
+        "quote": "Pathogens with the highest absolute abundance in their genus (Top 5) and (2) Species with relative abundance ≥ 5% for bacteria, ≥ 50% for fungi, and ≥ 10% for viruses, were considered dominant species."
+      }
+    ],
+    "required_files": [
+      "SRR20749332",
+      "SRR20749333",
+      "SRR20749334",
+      "SRR20749335",
+      "SRR20749336",
+      "SRR20749337",
+      "SRR20749338",
+      "SRR20749339",
+      "SRR20749340",
+      "SRR20749341",
+      "SRR20749342",
+      "SRR20749343",
+      "SRR20749344",
+      "SRR20749345",
+      "SRR20749346",
+      "SRR20749347",
+      "SRR20749348",
+      "SRR20749349",
+      "SRR20749350",
+      "SRR20749351"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "BioProject PRJNA865167 contains 20 SRA runs (SRR20749332–SRR20749351), corresponding to the 20 samples (13 BALF and 7 blood) from 15 patients used for the etiological/coinfection analysis. The paper states that 10 patients' mNGS fastq data were lost and excluded, so the deposit is the subset of raw sequencing reads available for the target analysis. No sample-to-run mapping is provided in the paper; the run accessions are the smallest sufficient input set.",
+    "leakage_files": [
+      {
+        "name": "Supplementary Table 1",
+        "reason": "Contains per-sample mNGS relative abundance/read results from which the positive detection counts and coinfection calls are derived."
+      },
+      {
+        "name": "Supplementary Table 2",
+        "reason": "Lists the 62 dominant species identified among patients, a derived result of the mNGS analysis."
+      },
+      {
+        "name": "Supplementary Table 3",
+        "reason": "Contains the per-patient suspected coinfection assessment and potential pathogens, i.e., derived target-related results."
+      },
+      {
+        "name": "Supplementary Table 5",
+        "reason": "Contains the comparison of numbers of pathogens detected by mNGS versus culture, directly related to the target comparison."
+      },
+      {
+        "name": "Supplementary Table 6",
+        "reason": "Contains the comparison of pathogens detected by culture and mNGS reports, a derived result table."
+      },
+      {
+        "name": "Figure 5C",
+        "reason": "Directly displays the ratio of mNGS-positive patients and conventional culture-positive patients, i.e., the target value."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "NCBI Pathogenic Microbial Genome Databases (bacteria, viruses, fungi, parasites)",
+        "version": "as downloaded from ftp://ftp.ncbi.nlm.nih.gov/genomes/ (no version stated)"
+      },
+      {
+        "name": "Human reference genome hg19",
+        "version": "hg19"
+      }
+    ],
+    "comparison_metric": "Compare the reported mNGS positive detection proportion (13/13) and culture positive detection proportion (6/13) with the solver's recomputed counts from the deposited raw reads using the described mNGS pipeline and thresholds.",
+    "numerical_agreement_criterion": "Proportions compared by numerator/denominator: mNGS 13/13 and culture 6/13 must match exactly; the reported P < 0.05 is compared at the reported precision.",
+    "specification_gaps": "No mapping of the 20 SRA runs to the 20 samples/15 patients is given; the exact version of the NCBI pathogen reference database is not stated; the exact Kraken2/BWA/fastp parameters beyond read length <50 bp and the ≥2-read threshold are not fully specified; the formula for relative abundance is given but the exact denominator handling for bacteria/fungi/viruses/parasites is not fully detailed; the culture method details and how the 13 culture-tested samples were selected are not fully described.",
+    "alternatives_considered": [
+      {
+        "target": "Coinfection rate 73.3% (11/15) and severe-group coinfection rate 91.7% (11/12)",
+        "reason": "Rejected because it depends on clinical integration and Supplementary Table 3 judgments, not solely on re-runnable computation from the deposited reads."
+      },
+      {
+        "target": "Number of dominant species (62: 33 bacteria, 8 fungi, 21 viruses)",
+        "reason": "Rejected because it is a descriptive count from the mNGS analysis and the paper's stated principal comparison is the mNGS-versus-culture positive detection rate."
+      },
+      {
+        "target": "Mortality rate 27.3% (3/11) in coinfected patients",
+        "reason": "Rejected because it is a clinical outcome not directly computable from the deposited sequencing reads."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

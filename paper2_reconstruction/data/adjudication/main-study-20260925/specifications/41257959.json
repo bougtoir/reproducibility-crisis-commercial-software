@@ -1,0 +1,203 @@
+{
+  "paper_id": "PMID:41257959",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "a4496320ceeb4e37a5ed79d8d543565fd1392314f854287963c0ff62afea578a",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE132465",
+      "files": [
+        {
+          "name": "GSE132465_GEO_processed_CRC_10X_cell_annotation.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE132465_GEO_processed_CRC_10X_natural_log_TPM_matrix.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE132465_GEO_processed_CRC_10X_raw_UMI_count_matrix.txt.gz",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE103479",
+      "files": [
+        {
+          "name": "GSE103479_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "GSE103479_log2_RMA_annotated.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T05:06:20.451094+00:00",
+  "api": {
+    "response_id": "05f94636-3a5f-4125-9067-65f07557b5f2",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 10417,
+    "completion_tokens": 1663
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0007",
+            "quote": "Prognosis-associated characteristic genes were identified using univariate Cox, Lasso–Cox, and random survival forest (RSF) methods. These genes were incorporated into a multivariate Cox regression model to calculate risk scores."
+          },
+          {
+            "segment_id": "S0046",
+            "quote": "with the formula: Riskscore = 1.7883 × UNC5D + 1.3766 × SPOCK3 + 0.6312 × GPC2."
+          }
+        ],
+        "rationale": "The principal result (risk score formula and model performance) is produced by statistical computations on public expression datasets that a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0046",
+            "quote": "with the formula: Riskscore = 1.7883 × UNC5D + 1.3766 × SPOCK3 + 0.6312 × GPC2."
+          },
+          {
+            "segment_id": "S0050",
+            "quote": "yielding areas under the curve (AUC) of 0.67, 0.75, and 0.67 at 1, 3, and 5 years, respectively."
+          }
+        ],
+        "rationale": "The paper states the risk score formula as the central quantitative result and reports AUCs as the principal performance metric of the final model."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0020",
+            "quote": "the CRC chip sequencing data set ( GSE103479 ) was retrieved from the GEO database, comprising 155 tumor samples and corresponding clinical data."
+          },
+          {
+            "segment_id": "S0021",
+            "quote": "The single-cell sequencing data set ( GSE132465 ) includes 23 tumor tissues and 10 normal tissues."
+          }
+        ],
+        "rationale": "The deposit listing contains processed matrices for GSE132465 and a processed annotated file for GSE103479, but it is unclear whether these are the exact analysis inputs (raw or minimally processed) used for the target; the TCGA-COAD data from Xena is not in the deposit."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0028",
+            "quote": "Riskscore was calculated by integrating the characteristic genes into a multivariate Cox regression model (Riskscore = Σβi * Expi), where βi represents regression coefficients and Expi denotes the expression of each gene."
+          },
+          {
+            "segment_id": "S0031",
+            "quote": "Five survival models were constructed, including support vector machine (SVM), extreme gradient boost (Xgboost), random forest, and Cox regression model. After hyperparameter tuning, internal validation was performed using the remaining 25% of the data."
+          }
+        ],
+        "rationale": "The method for computing the risk score and constructing/validating the prognostic model is described with enough detail (formula, model types, split) to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0021",
+            "quote": "The single-cell data set ( GSE132465 ) was processed using the R package Seurat (Version 4.3.0)"
+          },
+          {
+            "segment_id": "S0027",
+            "quote": "Differential gene analysis between tumor and normal samples in the TCGA–COAD data set was conducted using the “Deseq2” R package."
+          }
+        ],
+        "rationale": "All described software (Seurat, DESeq2, mlr3, etc.) are free/open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "Risk score formula: Riskscore = 1.7883 × UNC5D + 1.3766 × SPOCK3 + 0.6312 × GPC2; external validation AUCs of 0.67, 0.75, and 0.67 at 1, 3, and 5 years.",
+    "target_values": [
+      "1.7883",
+      "1.3766",
+      "0.6312",
+      "0.67",
+      "0.75",
+      "0.67"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "A multivariate Cox regression model combining three basement membrane-related genes to compute a risk score for colorectal cancer prognosis, with performance evaluated by time-dependent AUC in an external dataset.",
+    "target_type": "performance",
+    "target_location": "Results, Fig. 4F,G and Fig. 6F",
+    "location_quotes": [
+      {
+        "segment_id": "S0046",
+        "quote": "with the formula: Riskscore = 1.7883 × UNC5D + 1.3766 × SPOCK3 + 0.6312 × GPC2."
+      },
+      {
+        "segment_id": "S0050",
+        "quote": "yielding areas under the curve (AUC) of 0.67, 0.75, and 0.67 at 1, 3, and 5 years, respectively."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0028",
+        "quote": "Riskscore was calculated by integrating the characteristic genes into a multivariate Cox regression model (Riskscore = Σβi * Expi), where βi represents regression coefficients and Expi denotes the expression of each gene."
+      },
+      {
+        "segment_id": "S0031",
+        "quote": "Five survival models were constructed, including support vector machine (SVM), extreme gradient boost (Xgboost), random forest, and Cox regression model. After hyperparameter tuning, internal validation was performed using the remaining 25% of the data."
+      }
+    ],
+    "required_files": [
+      "GSE103479_log2_RMA_annotated.txt.gz",
+      "GSE132465_GEO_processed_CRC_10X_cell_annotation.txt.gz",
+      "GSE132465_GEO_processed_CRC_10X_raw_UMI_count_matrix.txt.gz"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "GSE103479_log2_RMA_annotated.txt.gz is the processed expression matrix for external validation; GSE132465 raw UMI count matrix and cell annotation are needed for single-cell analysis. TCGA-COAD data from Xena is not in the deposit listing and must be obtained separately.",
+    "leakage_files": [
+      {
+        "name": "GSE132465_GEO_processed_CRC_10X_natural_log_TPM_matrix.txt.gz",
+        "reason": "Processed expression matrix that may contain derived values used in the analysis."
+      },
+      {
+        "name": "GSE103479_RAW.tar",
+        "reason": "Raw data archive that may contain the target values or intermediate results."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "TCGA-COAD",
+        "version": "Xena database (xena.ucsc.edu)"
+      },
+      {
+        "name": "224 BMRGs list",
+        "version": "Jayadev et al. 2022 Sci Adv"
+      }
+    ],
+    "comparison_metric": "Compare reported risk score coefficients and AUC values to those computed from the same data and method.",
+    "numerical_agreement_criterion": "Coefficients within displayed rounding bin (4 decimal places); AUCs within displayed rounding bin (2 decimal places).",
+    "specification_gaps": "The exact random seed, hyperparameter tuning ranges, and precise data preprocessing steps (e.g., batch effect correction parameters) are not fully specified.",
+    "alternatives_considered": [
+      {
+        "target": "IHC scores for GPC2, SPOCK3, UNC5D",
+        "reason": "Not computationally testable from public data; requires new experiments."
+      },
+      {
+        "target": "Correlation coefficients (r = 0.94, 0.40)",
+        "reason": "Secondary result, not the principal quantitative endpoint."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

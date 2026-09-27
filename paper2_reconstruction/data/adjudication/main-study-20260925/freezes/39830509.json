@@ -1,0 +1,134 @@
+{
+  "paper_id": "PMID:39830509",
+  "sampling_stratum": "Social_Behavioral",
+  "amendment": "AMEND-2026-09-25-06",
+  "study": "MAIN-STUDY-2026-09-25",
+  "frozen_at_utc": "2026-09-27T04:42:45.824243+00:00",
+  "investigator_verification": "pending",
+  "exact_target": "Number of cells retained after quality control: 3,544 cells",
+  "target_location": "Results section 3.1, Figure 2B",
+  "location_evidence": [
+    {
+      "segment_id": "S0041",
+      "quote": "Following a quality control step, the dataset was further refined to 3,544 cells while retaining the same number of genes ( Figure 2B )."
+    }
+  ],
+  "blind_target": "The number of cells retained in the single-cell RNA sequencing dataset after quality control filtering.",
+  "target_type": "count",
+  "required_inputs": [
+    {
+      "name": "GSE152042_RAW.tar",
+      "served_as": "deposit/GSE152042/GSE152042_RAW.tar",
+      "identifier": "geo:GSE152042:GSE152042_RAW.tar",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/39830509/geo/0abb8690b9d74087b6ce524e280943a30312b1e6de5098c9aca3b94345cf17ad/body",
+      "bytes": 44800000,
+      "sha256": "c91e564c4002309cc24ab0810e54d10b78f149a528ae65c9d78028fc741b94ca",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    }
+  ],
+  "excluded_inputs": [],
+  "allowed_resources": [
+    "worker image paper2-science:pilot-2026-09-25: Python scientific stack, R packages and PATH tools",
+    "served publication text and served deposited inputs only"
+  ],
+  "blocked_original_artifacts": [
+    "original implementation, repositories, notebooks, scripts",
+    "processed results, supplementary result tables, figures of the study",
+    "any author communication"
+  ],
+  "comparison_metric": "Exact count comparison.",
+  "numerical_agreement_criterion": "Counts must match exactly.",
+  "conclusion_criterion": "Conclusion agreement is scored only when the numerical criterion is met or when the publication states a directional claim that the observed value can be compared with; otherwise the conclusion component is not_assessable.",
+  "resource_ceiling": {
+    "slots_per_paper": 3,
+    "wall_seconds_per_slot": 14400,
+    "step_seconds": 3600,
+    "provider_tokens_per_slot": 1500000,
+    "tool_calls_per_slot": 40,
+    "max_completion_tokens": 8192,
+    "worker_cpus": 1,
+    "worker_memory": "3g",
+    "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+    "network": "none",
+    "image": "paper2-science:pilot-2026-09-25"
+  },
+  "stopping_rule": [
+    "final report submitted by the slot",
+    "wall, step, token, tool-call or output ceiling reached (recorded as the stop reason)",
+    "required input absent from the served package: report null observation with F01/F18",
+    "specification gap that cannot be closed from the served text: report null with F04-F08",
+    "controller or worker error: recorded as harness stop, never as an outcome",
+    "no rerun, no extension and no rule change after the slot starts"
+  ],
+  "specification_gaps": "The exact order of filtering steps and whether the cell count is before or after normalization is not fully specified.",
+  "gate_reviews": {
+    "G1": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0006",
+          "quote": "Data derived from the GSE152042 dataset underwent rigorous quality control, normalization, and dimensionality reduction using Seurat and the MonacoImmuneData framework."
+        },
+        {
+          "segment_id": "S0024",
+          "quote": "The single-cell transcriptomic data utilized in this study was obtained from the GSE152042 dataset, which is accessible in the GEO database."
+        }
+      ],
+      "rationale": "The principal scRNA-seq results are produced by computational analysis of the public GSE152042 dataset, which a third party can re-run."
+    },
+    "G2": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0040",
+          "quote": "After filtering out cells with fewer than 200 genes and genes detected in fewer than 3 cells, a total of 4,564 cells and 18,697 genes were retained ( Figure 2A )."
+        },
+        {
+          "segment_id": "S0041",
+          "quote": "Following a quality control step, the dataset was further refined to 3,544 cells while retaining the same number of genes ( Figure 2B )."
+        }
+      ],
+      "rationale": "A principal quantitative result is the number of cells retained after quality control, reported as 3,544 cells."
+    },
+    "G3": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0024",
+          "quote": "The single-cell transcriptomic data utilized in this study was obtained from the GSE152042 dataset, which is accessible in the GEO database."
+        },
+        {
+          "segment_id": "S0095",
+          "quote": "The datasets generated and analyzed in this study are available in the GEO data repository ( https://www.ncbi.nlm.nih.gov/geo ): GSE152042 ."
+        }
+      ],
+      "rationale": "The deposit lists GSE152042_RAW.tar, which contains the raw scRNA-seq data used as input for the analysis."
+    },
+    "G4": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0025",
+          "quote": "First, cells with fewer than 200 or more than 4,000 genes were excluded to eliminate damaged cells. Second, cells with mitochondrial gene expression accounting for more than 10% of total expression were removed to eliminate those in an abnormal state."
+        },
+        {
+          "segment_id": "S0026",
+          "quote": "the raw gene expression counts were first normalized to ensure that the total expression level for each cell equaled 10,000. Then, the NormalizeData function from Seurat was used to perform log transformation"
+        }
+      ],
+      "rationale": "The quality control and normalization steps are described in sufficient detail to implement the method without original code."
+    },
+    "G5": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0022",
+          "quote": "This study obtained single-cell transcriptomic data from the Gene Expression Omnibus (GEO) database and analyzed it using R and the Seurat package."
+        }
+      ],
+      "rationale": "The method uses R and Seurat, which are free and open-source software."
+    }
+  }
+}

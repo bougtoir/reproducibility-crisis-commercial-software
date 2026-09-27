@@ -1,0 +1,231 @@
+{
+  "paper_id": "PMID:41573549",
+  "sampling_stratum": "Chemistry_Materials",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "846a4af77a215b267d98e8c57ebbdbaa440ee38ad8bed11328d7491e8cd0761d",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "osf",
+      "accession": "kfmcn",
+      "files": [
+        {
+          "name": "osfstorage:Rawdata-neg2.md5",
+          "bytes": 667
+        },
+        {
+          "name": "osfstorage:Rawdata-neg_13.tar.gz",
+          "bytes": 390687526
+        },
+        {
+          "name": "osfstorage:Rawdata-neg_9.tar.gz",
+          "bytes": 390120494
+        },
+        {
+          "name": "osfstorage:Rawdata-pos.md5",
+          "bytes": 927
+        },
+        {
+          "name": "osfstorage:Rawdata-pos_3.tar.gz",
+          "bytes": 575873088
+        },
+        {
+          "name": "osfstorage:Rawdata22.tar.gz",
+          "bytes": 350859215
+        },
+        {
+          "name": "osfstorage:Rawdata27.tar.gz",
+          "bytes": 345529114
+        },
+        {
+          "name": "osfstorage:Rawdata_21.tar.gz",
+          "bytes": 445043178
+        },
+        {
+          "name": "osfstorage:Rawdata_22.tar.gz",
+          "bytes": 592945033
+        },
+        {
+          "name": "osfstorage:Rawdata_23.tar.gz",
+          "bytes": 584443353
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:28:02.755574+00:00",
+  "api": {
+    "response_id": "f84273f1-2f5c-492f-abcd-eea5e65d6061",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 19111,
+    "completion_tokens": 2496
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0056",
+            "quote": "Fold change (FC) ≥1.2, VIP ≥1, and P value <0.05 were used as parameters to screen the metabolites and plot the volcano diagrams, and the results shown in Figure 1C indicated a total of 183 differential"
+          },
+          {
+            "segment_id": "S0062",
+            "quote": "FC ≥1.2 and P-value <0.05 were the conditions for the screening of differential proteins. Subsequently, a volcano plot of"
+          }
+        ],
+        "rationale": "The principal results are counts of differential metabolites/proteins produced by computational screening of mass-spectrometry data with stated thresholds, re-runnable by a third party from deposited raw data."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0056",
+            "quote": "Fold change (FC) ≥1.2, VIP ≥1, and P value <0.05 were used as parameters to screen the metabolites and plot the volcano diagrams, and the results shown in Figure 1C indicated a total of 183 differential"
+          },
+          {
+            "segment_id": "S0057",
+            "quote": "metabolites between the two groups, with 75 metabolites significantly upregulated in the hypothyroidism group, 108 metabolites significantly downregulated, and sphingosine (Sph) was significantly upregulated.The permutation test results show no signs of overfitting ( Figure 1D )."
+          }
+        ],
+        "rationale": "The first quantitative result reported is the metabolomics differential count (183 total, 75 up, 108 down), a primary numerical endpoint stated in the Results before the proteomics count."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0121",
+            "quote": "Data availability statement The datasets presented in this study can be found in online repositories. The names of the repository/repositories and accession number(s) can be found below: http://www.proteomexchange.org/ , PXD058969 https://osf.io/kfmcn/?view_only=a076baadf44f4714aaf37869995f30ea , 10.17605/OSF.IO/KFMCN."
+          }
+        ],
+        "rationale": "The OSF deposit lists only tar.gz archives with generic names (Rawdata-neg/pos, Rawdata22/27, Rawdata_21/22/23) and md5 files; the listing does not identify which archive contains the metabolomics raw files, so it cannot be confirmed that the listed files are the inputs rather than processed outputs."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0030",
+            "quote": "2.4 Metabolomics analysis and data processing For all participants in this study (30 pregnant women in the hypothyroidism group and 30 in the control group) maternal peripheral blood was collected in EDTA anticoagulant tubes at enrollment for metabolomic analysis. A Waters UPLC I-Class Plus (Waters, USA) in tandem with a Q Exactive high-resolution mass spectrometer (Thermo Fisher"
+          },
+          {
+            "segment_id": "S0035",
+            "quote": "Mass spectrometry data were imported into Compound Discoverer 3.3 (Thermo Fisher Scientific, USA) software and analyzed in conjunction with the BMDB (UW Metabolome Database, BGI Metabolome"
+          },
+          {
+            "segment_id": "S0056",
+            "quote": "Fold change (FC) ≥1.2, VIP ≥1, and P value <0.05 were used as parameters to screen the metabolites and plot the volcano diagrams, and the results shown in Figure 1C indicated a total of 183 differential"
+          }
+        ],
+        "rationale": "Instrument, chromatography, MS parameters, identification databases, and the differential-screening thresholds are described sufficiently to re-implement the metabolomics differential analysis."
+      },
+      "G5": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0035",
+            "quote": "Mass spectrometry data were imported into Compound Discoverer 3.3 (Thermo Fisher Scientific, USA) software and analyzed in conjunction with the BMDB (UW Metabolome Database, BGI Metabolome"
+          }
+        ],
+        "rationale": "The described processing pipeline relies on Compound Discoverer 3.3, a proprietary Thermo Fisher software package, so the method as published is not feasible with free software alone."
+      }
+    },
+    "exact_target": "Number of differential metabolites between hypothyroidism and control groups: 183 total, 75 significantly upregulated, 108 significantly downregulated.",
+    "target_values": [
+      "183",
+      "75",
+      "108"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The count of metabolites whose abundance differs between the hypothyroidism group and the control group, together with the counts in each direction of change, obtained by screening the metabolomics data matrix with the paper's fold-change, VIP and P-value thresholds.",
+    "target_type": "count",
+    "target_location": "Results section 3.2 Metabolomics, reported in the text accompanying Figure 1C.",
+    "location_quotes": [
+      {
+        "segment_id": "S0056",
+        "quote": "Fold change (FC) ≥1.2, VIP ≥1, and P value <0.05 were used as parameters to screen the metabolites and plot the volcano diagrams, and the results shown in Figure 1C indicated a total of 183 differential"
+      },
+      {
+        "segment_id": "S0057",
+        "quote": "metabolites between the two groups, with 75 metabolites significantly upregulated in the hypothyroidism group, 108 metabolites significantly downregulated, and sphingosine (Sph) was significantly upregulated.The permutation test results show no signs of overfitting ( Figure 1D )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0030",
+        "quote": "2.4 Metabolomics analysis and data processing For all participants in this study (30 pregnant women in the hypothyroidism group and 30 in the control group) maternal peripheral blood was collected in EDTA anticoagulant tubes at enrollment for metabolomic analysis. A Waters UPLC I-Class Plus (Waters, USA) in tandem with a Q Exactive high-resolution mass spectrometer (Thermo Fisher"
+      },
+      {
+        "segment_id": "S0035",
+        "quote": "Mass spectrometry data were imported into Compound Discoverer 3.3 (Thermo Fisher Scientific, USA) software and analyzed in conjunction with the BMDB (UW Metabolome Database, BGI Metabolome"
+      },
+      {
+        "segment_id": "S0036",
+        "quote": "Database), mzCloud database, and ChemSpider online database. After analyzing the mass spectrometry data, a data matrix containing information on metabolite peak areas and identification results was obtained, and the table was further analyzed and processed. 2.5 Proteomics analysis and data processing Eighteen patients from each group were randomly selected for proteomic analysis. The random"
+      },
+      {
+        "segment_id": "S0051",
+        "quote": "All statistical analyses of metabolomic and proteomic data were performed using metaX ( 21 ). Graphpad Prism 8.2 (GraphPad, La Jolla, CA, USA) was used for the statistical analysis of clinical"
+      },
+      {
+        "segment_id": "S0056",
+        "quote": "Fold change (FC) ≥1.2, VIP ≥1, and P value <0.05 were used as parameters to screen the metabolites and plot the volcano diagrams, and the results shown in Figure 1C indicated a total of 183 differential"
+      }
+    ],
+    "required_files": [
+      "osfstorage:Rawdata-neg_13.tar.gz",
+      "osfstorage:Rawdata-neg_9.tar.gz",
+      "osfstorage:Rawdata-pos_3.tar.gz",
+      "osfstorage:Rawdata22.tar.gz",
+      "osfstorage:Rawdata27.tar.gz",
+      "osfstorage:Rawdata_21.tar.gz",
+      "osfstorage:Rawdata_22.tar.gz",
+      "osfstorage:Rawdata_23.tar.gz"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The OSF deposit (10.17605/OSF.IO/KFMCN) lists only tar.gz archives with non-descriptive names; the paper does not map archive names to metabolomics vs proteomics runs, so the exact subset needed for the metabolomics differential count cannot be determined from the listing. The md5 files (Rawdata-neg2.md5, Rawdata-pos.md5) are checksums, not data. Proteomics raw data are additionally deposited at ProteomeXchange under PXD058969.",
+    "leakage_files": [
+      {
+        "name": "osfstorage:Rawdata-neg2.md5",
+        "reason": "Checksum file for the negative-mode raw archive; does not contain the target value but is not an analysis input."
+      },
+      {
+        "name": "osfstorage:Rawdata-pos.md5",
+        "reason": "Checksum file for the positive-mode raw archive; does not contain the target value but is not an analysis input."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "BMDB (UW Metabolome Database / BGI Metabolome Database)",
+        "version": "not stated"
+      },
+      {
+        "name": "mzCloud database",
+        "version": "not stated"
+      },
+      {
+        "name": "ChemSpider online database",
+        "version": "not stated"
+      }
+    ],
+    "comparison_metric": "Exact match of the reported counts (total differential metabolites, upregulated count, downregulated count) against the counts obtained by re-running the described screening (FC ≥1.2, VIP ≥1, P < 0.05) on the deposited metabolomics data matrix.",
+    "numerical_agreement_criterion": "Counts must match exactly: 183 total, 75 upregulated, 108 downregulated.",
+    "specification_gaps": "The paper does not state: which OSF archive corresponds to the metabolomics dataset; the exact metaX version and parameter settings (normalization, imputation, missing-value handling); how VIP was computed; whether P values were FDR-adjusted; the exact database versions for BMDB, mzCloud and ChemSpider; and the precise preprocessing steps between Compound Discoverer output and the final data matrix.",
+    "alternatives_considered": [
+      {
+        "target": "Proteomics differential protein count (79 total, 35 up, 44 down)",
+        "reason": "Rejected because it appears later in the Results (section 3.3) than the metabolomics count, and the paper's stated priority is the metabolomics finding."
+      },
+      {
+        "target": "Th17/Treg ratio comparison (Table 2)",
+        "reason": "Rejected because it is a secondary clinical/flow-cytometry endpoint reported after the omics results, not the principal computational result."
+      },
+      {
+        "target": "Sphingolipid signaling pathway enrichment",
+        "reason": "Rejected because it is a qualitative pathway-level conclusion without a single principal numerical endpoint."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

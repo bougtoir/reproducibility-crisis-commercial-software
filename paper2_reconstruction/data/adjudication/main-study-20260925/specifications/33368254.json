@@ -1,0 +1,221 @@
+{
+  "paper_id": "PMID:33368254",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "6fcb1abc697e7a2a0b136ed3067b8cb869b8ecafb34c4dda922a52a3e66af4bf",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "dryad",
+      "accession": "0p2ngf1zn",
+      "files": []
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:11:52.304821+00:00",
+  "api": {
+    "response_id": "5cd39a60-529d-464f-a66e-a20a97957365",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 27305,
+    "completion_tokens": 3840
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0090",
+            "quote": "The overall explanatory power (measured as AUC) of the joint species distribution model fitted to the parasitoid data consisting of 32 species was 0.83."
+          },
+          {
+            "segment_id": "S0063",
+            "quote": "To model the parasitoid community consisting of 32 species, we applied Hierarchical Modelling of Species Communities (HMSC; Ovaskainen & Abrego, 2020b ; Ovaskainen et al.,"
+          }
+        ],
+        "rationale": "The principal result is an AUC value from a joint species distribution model (HMSC) fitted to parasitoid occurrence data, which is a computation that can be re-run by a third party given the data and method."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0090",
+            "quote": "The overall explanatory power (measured as AUC) of the joint species distribution model fitted to the parasitoid data consisting of 32 species was 0.83."
+          }
+        ],
+        "rationale": "The AUC value 0.83 is a principal performance metric reported in the Results section, and it is the first quantitative result presented for the community-level model."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0156",
+            "quote": "The data collected for this publication by the authors are available in the accompanying Dryad"
+          },
+          {
+            "segment_id": "S0157",
+            "quote": "dataset: https://doi.org/10.5061/dryad.0p2ngf1zn (Kankaanpää, Abrego, et al., 2020 ). Data used in the supplementary time series analysis of tachinid abundance were produced by the Zackenberg monitoring programs and are available at https://data.g‐e‐m.dk ."
+          }
+        ],
+        "rationale": "The paper states data are in Dryad, but the deposit listing shows no files, so it is uncertain whether the analysis inputs are deposited."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0063",
+            "quote": "To model the parasitoid community consisting of 32 species, we applied Hierarchical Modelling of Species Communities (HMSC; Ovaskainen & Abrego, 2020b ; Ovaskainen et al.,"
+          },
+          {
+            "segment_id": "S0064",
+            "quote": "2017 ) using Hmsc‐R software (Tikhonov et al., 2019 ). HMSC is a joint species distribution modelling framework (Warton et al., 2015 ) that enables the integration of data on species occurrences, environmental covariates, species traits and phylogenetic relationships in a single encompassing model (Ovaskainen & Abrego, 2020b ; Ovaskainen et al., 2017 ). In HMSC, the response variable is the vector"
+          },
+          {
+            "segment_id": "S0066",
+            "quote": "As response data, we used a presence–absence matrix of the parasitoid species detected in each sampling unit (trap sampling event). We used occurrence rather than abundance, because the data showed only limited variation in species‐specific abundances among occupied traps. As a consequence, the main information was in whether the species were present or absent in a trap (Figure S3 ). As fixed"
+          },
+          {
+            "segment_id": "S0067",
+            "quote": "explanatory variables, we included (a) the site‐specific component of mean temperature (see below) as a continuous variable (b) the snow melt day in the sampling sites as a continuous variable, (c) the site‐level mean air humidity as a continuous variable, (d) the trap type as a categorical variable with two levels (sticky trap or emergence trap), (e) year as categorical variable with two levels"
+          },
+          {
+            "segment_id": "S0068",
+            "quote": "(2015 or 2016), and (f) the week‐specific component of temperature (see below) in each sampling site as a continuous variable. The spatiotemporal structure of the data was accounted for by including one random effect representing the study site and another random effect representing the sampling weeks. In the latter, the sampling weeks of different years were treated as unique levels. As"
+          },
+          {
+            "segment_id": "S0069",
+            "quote": "species‐specific traits, we included the parasitoid strategy of the species as a categorical variable with two levels (koino‐ or idiobiont life cycle strategy) and the phenology of the species as a categorical variable with three levels (early, medium and late). Additionally, to explore whether the responses of species with different traits were constrained by their phylogeny, we included a"
+          },
+          {
+            "segment_id": "S0070",
+            "quote": "taxonomic tree which included eight levels ranging from species to class. For analyses, this tree was then converted to a taxonomic distance matrix. To decompose the raw temperature data measured during the study period into its spatial and temporal components, we partitioned the raw temperatures recorded for 6‐day trapping periods (ranging between 7.6.–30.7.2015 and 7.6.–25.7.2016 for the"
+          },
+          {
+            "segment_id": "S0071",
+            "quote": "earliest sites and 12.7.‐2.8.2015 and 28.6.‐28.7.2016 for the latest site) into variation at the site and week levels by the following approach. We first modelled temperatures as a function of site, week and year and the interactions of site and week with year using linear regression. Site temperature was then predicted for each site from this model with year and week at mean values. Weekly"
+          },
+          {
+            "segment_id": "S0072",
+            "quote": "temperatures were correspondingly predicted for each week while giving the site a constant value. The residuals of the model fit were added back to the weekly temperatures as these contain the transect‐specific differences in the only partially overlapping trapping periods. Site‐specific humidity was produced from the measurements of relative humidity by subsequently removing the effects of"
+          },
+          {
+            "segment_id": "S0073",
+            "quote": "temperature, snowmelt and elevation, reaching an independent covariate which reflects the soil water content (for a validation of this metric, see Figure S4 ). We fitted the model with the Hmsc‐R software (Tikhonov et al., 2019 ) assuming the default priors and Markov chain Monte Carlo (MCMC) setting, which, as explained in Ovaskainen and Abrego ( 2020a ), have been chosen to be generally"
+          },
+          {
+            "segment_id": "S0074",
+            "quote": "applicable. For each of two MCMC chains, we sampled the posterior distribution for 45,000 iterations, of which the first 15,000 iterations were discarded and the remaining were thinned by 100 to yield 300 posterior samples per chain and thus 600 posterior samples in total. We assessed satisfactory convergence of the MCMC chains through the potential scale reduction factors of the estimated"
+          },
+          {
+            "segment_id": "S0075",
+            "quote": "parameters. To quantify how much the explanatory variables as well as random effects part of the model explained the variation in the parasitoid community, we applied the variance partitioning approach of Ovaskainen et al. ( 2017 ). Likewise, we quantified how much the responses of the species were explained by their parasitic strategy and phenology. The overall explanatory power of the model was"
+          },
+          {
+            "segment_id": "S0076",
+            "quote": "assessed by computing the area under the curve (AUC) value, which measures the model performace in terms of discrimination (Norberg et al., 2019 ). Finally, we used the fitted model to predict how species with different traits respond to abiotic gradients along the elevational gradient. For these predictions, we used the ranges of the environmental data (i.e. interpolation). We specifically"
+          }
+        ],
+        "rationale": "The method for the HMSC model, including response data, covariates, traits, random effects, MCMC settings, and AUC calculation, is described in sufficient detail to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0064",
+            "quote": "2017 ) using Hmsc‐R software (Tikhonov et al., 2019 ). HMSC is a joint species distribution modelling framework (Warton et al., 2015 ) that enables the integration of data on species occurrences, environmental covariates, species traits and phylogenetic relationships in a single encompassing model (Ovaskainen & Abrego, 2020b ; Ovaskainen et al., 2017 ). In HMSC, the response variable is the vector"
+          }
+        ],
+        "rationale": "The method uses Hmsc-R software, which is free and open-source, and no proprietary software is mentioned."
+      }
+    },
+    "exact_target": "The overall explanatory power (measured as AUC) of the joint species distribution model fitted to the parasitoid data consisting of 32 species was 0.83.",
+    "target_values": [
+      "0.83"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The overall explanatory power of the joint species distribution model fitted to the parasitoid data consisting of 32 species, measured as AUC.",
+    "target_type": "performance",
+    "target_location": "Results section 3.1, first paragraph",
+    "location_quotes": [
+      {
+        "segment_id": "S0090",
+        "quote": "The overall explanatory power (measured as AUC) of the joint species distribution model fitted to the parasitoid data consisting of 32 species was 0.83."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0063",
+        "quote": "To model the parasitoid community consisting of 32 species, we applied Hierarchical Modelling of Species Communities (HMSC; Ovaskainen & Abrego, 2020b ; Ovaskainen et al.,"
+      },
+      {
+        "segment_id": "S0064",
+        "quote": "2017 ) using Hmsc‐R software (Tikhonov et al., 2019 ). HMSC is a joint species distribution modelling framework (Warton et al., 2015 ) that enables the integration of data on species occurrences, environmental covariates, species traits and phylogenetic relationships in a single encompassing model (Ovaskainen & Abrego, 2020b ; Ovaskainen et al., 2017 ). In HMSC, the response variable is the vector"
+      },
+      {
+        "segment_id": "S0066",
+        "quote": "As response data, we used a presence–absence matrix of the parasitoid species detected in each sampling unit (trap sampling event). We used occurrence rather than abundance, because the data showed only limited variation in species‐specific abundances among occupied traps. As a consequence, the main information was in whether the species were present or absent in a trap (Figure S3 ). As fixed"
+      },
+      {
+        "segment_id": "S0067",
+        "quote": "explanatory variables, we included (a) the site‐specific component of mean temperature (see below) as a continuous variable (b) the snow melt day in the sampling sites as a continuous variable, (c) the site‐level mean air humidity as a continuous variable, (d) the trap type as a categorical variable with two levels (sticky trap or emergence trap), (e) year as categorical variable with two levels"
+      },
+      {
+        "segment_id": "S0068",
+        "quote": "(2015 or 2016), and (f) the week‐specific component of temperature (see below) in each sampling site as a continuous variable. The spatiotemporal structure of the data was accounted for by including one random effect representing the study site and another random effect representing the sampling weeks. In the latter, the sampling weeks of different years were treated as unique levels. As"
+      },
+      {
+        "segment_id": "S0069",
+        "quote": "species‐specific traits, we included the parasitoid strategy of the species as a categorical variable with two levels (koino‐ or idiobiont life cycle strategy) and the phenology of the species as a categorical variable with three levels (early, medium and late). Additionally, to explore whether the responses of species with different traits were constrained by their phylogeny, we included a"
+      },
+      {
+        "segment_id": "S0070",
+        "quote": "taxonomic tree which included eight levels ranging from species to class. For analyses, this tree was then converted to a taxonomic distance matrix. To decompose the raw temperature data measured during the study period into its spatial and temporal components, we partitioned the raw temperatures recorded for 6‐day trapping periods (ranging between 7.6.–30.7.2015 and 7.6.–25.7.2016 for the"
+      },
+      {
+        "segment_id": "S0071",
+        "quote": "earliest sites and 12.7.‐2.8.2015 and 28.6.‐28.7.2016 for the latest site) into variation at the site and week levels by the following approach. We first modelled temperatures as a function of site, week and year and the interactions of site and week with year using linear regression. Site temperature was then predicted for each site from this model with year and week at mean values. Weekly"
+      },
+      {
+        "segment_id": "S0072",
+        "quote": "temperatures were correspondingly predicted for each week while giving the site a constant value. The residuals of the model fit were added back to the weekly temperatures as these contain the transect‐specific differences in the only partially overlapping trapping periods. Site‐specific humidity was produced from the measurements of relative humidity by subsequently removing the effects of"
+      },
+      {
+        "segment_id": "S0073",
+        "quote": "temperature, snowmelt and elevation, reaching an independent covariate which reflects the soil water content (for a validation of this metric, see Figure S4 ). We fitted the model with the Hmsc‐R software (Tikhonov et al., 2019 ) assuming the default priors and Markov chain Monte Carlo (MCMC) setting, which, as explained in Ovaskainen and Abrego ( 2020a ), have been chosen to be generally"
+      },
+      {
+        "segment_id": "S0074",
+        "quote": "applicable. For each of two MCMC chains, we sampled the posterior distribution for 45,000 iterations, of which the first 15,000 iterations were discarded and the remaining were thinned by 100 to yield 300 posterior samples per chain and thus 600 posterior samples in total. We assessed satisfactory convergence of the MCMC chains through the potential scale reduction factors of the estimated"
+      },
+      {
+        "segment_id": "S0075",
+        "quote": "parameters. To quantify how much the explanatory variables as well as random effects part of the model explained the variation in the parasitoid community, we applied the variance partitioning approach of Ovaskainen et al. ( 2017 ). Likewise, we quantified how much the responses of the species were explained by their parasitic strategy and phenology. The overall explanatory power of the model was"
+      },
+      {
+        "segment_id": "S0076",
+        "quote": "assessed by computing the area under the curve (AUC) value, which measures the model performace in terms of discrimination (Norberg et al., 2019 ). Finally, we used the fitted model to predict how species with different traits respond to abiotic gradients along the elevational gradient. For these predictions, we used the ranges of the environmental data (i.e. interpolation). We specifically"
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The Dryad deposit (0p2ngf1zn) is listed but contains no files in the provided listing. The paper states data are available in Dryad, but the specific files needed for the HMSC model (presence-absence matrix, environmental covariates, traits, taxonomic tree) are not listed. Therefore, required files cannot be determined from the listing.",
+    "leakage_files": [],
+    "required_public_references": [],
+    "comparison_metric": "The observed AUC value from re-running the HMSC model is compared to the reported AUC value of 0.83.",
+    "numerical_agreement_criterion": "The AUC value should match the reported value within the displayed rounding bin (0.83, i.e., two decimal places).",
+    "specification_gaps": "The exact composition of the presence-absence matrix, the specific values of environmental covariates, the taxonomic tree structure, and the random effects implementation are not fully specified in the text; the paper refers to Supporting Information for some details.",
+    "alternatives_considered": [
+      {
+        "target": "Variance partitioning percentages (e.g., fixed effects 57.3%, random effects 42.7%)",
+        "reason": "These are secondary results and not the principal performance metric; the AUC is the overall explanatory power and is presented first."
+      },
+      {
+        "target": "Proportion of koinobiont species increasing with temperature",
+        "reason": "This is a qualitative result without a single numeric value; the AUC is a clear quantitative endpoint."
+      }
+    ]
+  },
+  "eligibility": "required_inputs_not_in_public_listing"
+}

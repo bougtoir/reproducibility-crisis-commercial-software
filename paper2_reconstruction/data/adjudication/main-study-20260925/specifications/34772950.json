@@ -1,0 +1,204 @@
+{
+  "paper_id": "PMID:34772950",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "5951779e2b2589e27da93e5fe803bf2b48ac3e97b1dd2672fb4517e86b62df1f",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE109732",
+      "files": [
+        {
+          "name": "GSE109732_GeneExpression_DZ_Fraction1-3_GC-PB.txt.gz",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE82003",
+      "files": [
+        {
+          "name": "GSE82003_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE80669",
+      "files": [
+        {
+          "name": "GSE80669_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE62148",
+      "files": [
+        {
+          "name": "GSE62148_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T05:06:12.652048+00:00",
+  "api": {
+    "response_id": "7d0db65f-5802-4e68-aa2e-6e85fb374e7b",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 25676,
+    "completion_tokens": 1984
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0075",
+            "quote": "Differential gene expression analysis showed that the expression of >2000 genes changed between DZ and LZ GC B cells (false discovery rate (FDR) < 0.05) (Fig. 5a and Supplementary Data 1 )."
+          },
+          {
+            "segment_id": "S0168",
+            "quote": "Sequencing reads were trimmed using TrimGalore (v0.4.4) and aligned to the mouse genome (GRCm38) with HiSat (v2.1.0)."
+          }
+        ],
+        "rationale": "The principal result is a differential expression count produced by computational analysis of RNA-seq data, which a third party can re-run from deposited raw sequencing data."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0075",
+            "quote": "Differential gene expression analysis showed that the expression of >2000 genes changed between DZ and LZ GC B cells (false discovery rate (FDR) < 0.05) (Fig. 5a and Supplementary Data 1 )."
+          },
+          {
+            "segment_id": "S0080",
+            "quote": "Further comparison of control and HuR KO GC B cells identified changes in the expression of 177 genes in LZ GC B cells and 122 genes in DZ GC B cells in the absence of HuR (Fig. 5b and Supplementary Data 1 )."
+          }
+        ],
+        "rationale": "The paper's stated priority is the transcriptomic analysis; the first principal quantitative result is the number of genes differentially expressed between DZ and LZ GC B cells."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0181",
+            "quote": "The RNAseq data that support the findings in this study have been deposited in Gene Omnibus (GEO) with the primary accession code GSE145413 ."
+          },
+          {
+            "segment_id": "S0168",
+            "quote": "Sequencing reads were trimmed using TrimGalore (v0.4.4) and aligned to the mouse genome (GRCm38) with HiSat (v2.1.0)."
+          }
+        ],
+        "rationale": "The deposit GSE145413 contains raw RNA-seq reads (FASTQ) that are the analysis inputs for the differential expression target."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0168",
+            "quote": "Sequencing reads were trimmed using TrimGalore (v0.4.4) and aligned to the mouse genome (GRCm38) with HiSat (v2.1.0). Alignment rate was >93%. Bam files were merged using SamTools (v1.8) and counted using FeatureCounts (v1.6.3), Mus_musculus .GRCm38.89.gtf annotation"
+          },
+          {
+            "segment_id": "S0169",
+            "quote": "R (v3.4.1) and DESeq2 (v1.24.0) was used for differential expression analysis. Conditions included genotype, sex of animals and sample preparation day to control for variation in the data due to these parameters. Changes in gene expression with a FDR < 0.05 was considered as significant."
+          }
+        ],
+        "rationale": "The methods section describes the full computational pipeline (trimming, alignment, counting, DESeq2) with software versions and parameters, sufficient to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0168",
+            "quote": "Sequencing reads were trimmed using TrimGalore (v0.4.4) and aligned to the mouse genome (GRCm38) with HiSat (v2.1.0)."
+          },
+          {
+            "segment_id": "S0169",
+            "quote": "R (v3.4.1) and DESeq2 (v1.24.0) was used for differential expression analysis."
+          }
+        ],
+        "rationale": "All software used (TrimGalore, HiSat, SamTools, FeatureCounts, R, DESeq2) is free and open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "Number of genes differentially expressed between DZ and LZ GC B cells: >2000 genes (FDR < 0.05).",
+    "target_values": [
+      ">2000"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "Number of genes whose expression changes between dark zone and light zone germinal centre B cells.",
+    "target_type": "count",
+    "target_location": "Results, section 'HuR controls RNA splicing and abundance in DZ and LZ GC B cells', Fig. 5a and Supplementary Data 1.",
+    "location_quotes": [
+      {
+        "segment_id": "S0075",
+        "quote": "Differential gene expression analysis showed that the expression of >2000 genes changed between DZ and LZ GC B cells (false discovery rate (FDR) < 0.05) (Fig. 5a and Supplementary Data 1 )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0168",
+        "quote": "Sequencing reads were trimmed using TrimGalore (v0.4.4) and aligned to the mouse genome (GRCm38) with HiSat (v2.1.0). Alignment rate was >93%. Bam files were merged using SamTools (v1.8) and counted using FeatureCounts (v1.6.3), Mus_musculus .GRCm38.89.gtf annotation"
+      },
+      {
+        "segment_id": "S0169",
+        "quote": "R (v3.4.1) and DESeq2 (v1.24.0) was used for differential expression analysis. Conditions included genotype, sex of animals and sample preparation day to control for variation in the data due to these parameters. Changes in gene expression with a FDR < 0.05 was considered as significant."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [
+      "GSE145413_RAW.tar"
+    ],
+    "input_notes": "GSE145413 is the primary accession for the RNA-seq data generated in this study; the deposit listing provided does not include GSE145413 files, but the paper states the data are deposited there. The listed GSE109732, GSE82003, GSE80669, and GSE62148 are public source datasets used for reanalysis, not the primary input for this target. The required input is the raw RNA-seq data from GSE145413 (e.g., GSE145413_RAW.tar).",
+    "leakage_files": [
+      {
+        "name": "GSE145413_RAW.tar",
+        "reason": "Contains raw sequencing reads; however, if processed files (e.g., count matrices) are included, they may contain the target value. The deposit listing does not specify file contents, but any processed data files would leak the result."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "Mus musculus genome",
+        "version": "GRCm38"
+      },
+      {
+        "name": "Mus musculus annotation",
+        "version": "GRCm38.89.gtf"
+      }
+    ],
+    "comparison_metric": "The observed number of differentially expressed genes (FDR < 0.05) between DZ and LZ GC B cells is compared to the reported value of >2000.",
+    "numerical_agreement_criterion": "Counts exact: the observed count must be >2000 to match the reported '>2000'.",
+    "specification_gaps": "The exact number of genes is not specified (only '>2000'); the paper does not provide the precise count in the main text. The analysis includes genotype, sex, and sample preparation day as covariates, but the exact model formula is not fully specified. The threshold for significance is FDR < 0.05, but the method for multiple testing correction (Benjamini-Hochberg) is implied but not explicitly stated for this analysis.",
+    "alternatives_considered": [
+      {
+        "target": "Number of genes differentially expressed between control and HuR KO GC B cells (177 in LZ, 122 in DZ)",
+        "reason": "This is a secondary result, not the first principal quantitative result; the paper's primary focus is on the transcriptomic differences between DZ and LZ GC B cells."
+      },
+      {
+        "target": "Number of alternative splicing events (333 in WT, 595 in DZ KO, 991 in LZ KO)",
+        "reason": "This is a later result in the paper and not the first principal quantitative result."
+      }
+    ]
+  },
+  "eligibility": "required_inputs_not_in_public_listing"
+}

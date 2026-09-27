@@ -1,0 +1,148 @@
+{
+  "paper_id": "PMID:36156134",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "c6805e50deecbcf9570d498b3c742628cb6c84a6f755f4123c2d95465bee3796",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "dryad",
+      "accession": "0618v",
+      "files": []
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:00:10.046450+00:00",
+  "api": {
+    "response_id": "b5e90193-7cda-4d84-a86f-5639d05b6364",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 11642,
+    "completion_tokens": 1740
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0007",
+            "quote": "Utilizing high molecular weight DNA and linked-read sequencing technology, we assembled a draft high-quality genome"
+          },
+          {
+            "segment_id": "S0008",
+            "quote": "with highly contiguous scaffolds (scaffold N50 = 19 Mb). Based on universal single-copy orthologs, we estimated a gene space completeness of 96.6% for the draft genome assembly."
+          }
+        ],
+        "rationale": "The principal result is a genome assembly and its metrics, produced by computational assembly and BUSCO analysis of sequencing reads that can be re-run by a third party."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0008",
+            "quote": "with highly contiguous scaffolds (scaffold N50 = 19 Mb). Based on universal single-copy orthologs, we estimated a gene space completeness of 96.6% for the draft genome assembly."
+          },
+          {
+            "segment_id": "S0035",
+            "quote": "The contig N50 was 155 kb and the scaffold N50 was 19 Mb. We found 96.6% complete single-copy genes relative to the BUSCO v. 5 aves_odb10 database [BUSCO score: C: 96.6% (S: 94.7%, D: 1.9%), F: 0.7%, M: 2.7%, n : 8,338],"
+          }
+        ],
+        "rationale": "The paper states the scaffold N50 and BUSCO completeness as principal assembly metrics in the abstract and results; scaffold N50 is the primary numerical endpoint for assembly contiguity."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0065",
+            "quote": "All data for this project are available publicly at NCBI under BioProject Accession PRJNA851081, including raw Illumina reads (SRA SRR21604398) and the genome contig assembly (WGS JANVCC000000000 )."
+          }
+        ],
+        "rationale": "The deposit listing provided is empty, so it cannot be confirmed that the listed files are the raw analysis inputs; the paper points to NCBI accessions instead."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0022",
+            "quote": "We assembled the genome using 10X Supernova ( Weisenfeld et al. 2017 ) with default options. To fill gaps in the reference genome, we used the ABySS Sealer program ( Paulino et al. 2015 ) with"
+          },
+          {
+            "segment_id": "S0023",
+            "quote": "We further assessed genome completeness using BUSCO v. 5 ( Manni et al. 2021 ) and by aligning our draft genome assembly to 2 related species in the Afroaves clade with high-quality chromosome-level assemblies available on GenBank"
+          }
+        ],
+        "rationale": "The assembly and BUSCO methods are described with software names, versions, and default options, sufficient to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0022",
+            "quote": "We assembled the genome using 10X Supernova ( Weisenfeld et al. 2017 ) with default options. To fill gaps in the reference genome, we used the ABySS Sealer program ( Paulino et al. 2015 ) with"
+          },
+          {
+            "segment_id": "S0023",
+            "quote": "We further assessed genome completeness using BUSCO v. 5 ( Manni et al. 2021 ) and by aligning our draft genome assembly to 2 related species in the Afroaves clade with high-quality chromosome-level assemblies available on GenBank"
+          }
+        ],
+        "rationale": "Supernova, ABySS Sealer, and BUSCO are freely available software; no proprietary software is required for the target."
+      }
+    },
+    "exact_target": "Scaffold N50 of the collared kingfisher draft genome assembly, reported as 19 Mb.",
+    "target_values": [
+      "19 Mb"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The scaffold N50 of the collared kingfisher draft genome assembly.",
+    "target_type": "scalar",
+    "target_location": "Abstract and Results, Genome assembly section",
+    "location_quotes": [
+      {
+        "segment_id": "S0008",
+        "quote": "with highly contiguous scaffolds (scaffold N50 = 19 Mb). Based on universal single-copy orthologs, we estimated a gene space completeness of 96.6% for the draft genome assembly."
+      },
+      {
+        "segment_id": "S0035",
+        "quote": "The contig N50 was 155 kb and the scaffold N50 was 19 Mb. We found 96.6% complete single-copy genes relative to the BUSCO v. 5 aves_odb10 database [BUSCO score: C: 96.6% (S: 94.7%, D: 1.9%), F: 0.7%, M: 2.7%, n : 8,338],"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0022",
+        "quote": "We assembled the genome using 10X Supernova ( Weisenfeld et al. 2017 ) with default options. To fill gaps in the reference genome, we used the ABySS Sealer program ( Paulino et al. 2015 ) with"
+      },
+      {
+        "segment_id": "S0023",
+        "quote": "We further assessed genome completeness using BUSCO v. 5 ( Manni et al. 2021 ) and by aligning our draft genome assembly to 2 related species in the Afroaves clade with high-quality chromosome-level assemblies available on GenBank"
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [
+      "SRR21604398"
+    ],
+    "input_notes": "The deposit listing is empty; the paper states raw Illumina reads are available under SRA accession SRR21604398 and the assembly under WGS JANVCC000000000. The raw reads are the minimal input to re-run assembly and compute scaffold N50.",
+    "leakage_files": [
+      {
+        "name": "JANVCC000000000",
+        "reason": "This is the genome contig assembly, which is the output of the assembly process and contains the scaffold N50 value."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "The reported scaffold N50 value is compared to the scaffold N50 computed from a re-assembly of the raw reads.",
+    "numerical_agreement_criterion": "Scalars within displayed rounding bin: the computed scaffold N50 must round to 19 Mb at the reported precision.",
+    "specification_gaps": "The exact assembly parameters (e.g., Supernova default options) and any filtering of raw reads are not fully specified; the precise definition of scaffold N50 (e.g., inclusion of scaffolds >1 kb) is not stated.",
+    "alternatives_considered": [
+      {
+        "target": "BUSCO completeness of 96.6%",
+        "reason": "This is a principal result but is a proportion/performance metric; scaffold N50 is the primary numerical endpoint for assembly contiguity and appears first in the abstract."
+      },
+      {
+        "target": "Contig N50 of 155 kb",
+        "reason": "This is a secondary assembly metric; scaffold N50 is emphasized as the key contiguity measure."
+      }
+    ]
+  },
+  "eligibility": "required_inputs_not_in_public_listing"
+}

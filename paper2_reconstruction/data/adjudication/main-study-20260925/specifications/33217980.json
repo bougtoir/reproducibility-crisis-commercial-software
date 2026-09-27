@@ -1,0 +1,229 @@
+{
+  "paper_id": "PMID:33217980",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "e044d0958cacfd090c02ed02bdc92c53f1f5bd1c5b3723fc38d547350bdd66f6",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE40779",
+      "files": [
+        {
+          "name": "GSE40779_ANOVA_Welch_0.05_all_35.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE40779_ANOVA_Welch_custom_selection_HG_vs_HL20.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE40779_ANOVA_Welch_custom_selection_Veh_vs_HG_5.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE40779_ANOVA_Welch_custom_selection_Veh_vs_HL_30.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE40779_Filtered_25.0_50_samples_1of_3_condition_rno-miR_149.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE40779_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:49:30.529666+00:00",
+  "api": {
+    "response_id": "bfa7dd47-0d79-4234-aab3-6a0b6dc9141f",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 25006,
+    "completion_tokens": 2689
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0090",
+            "quote": "using the hypergeometric distribution, the likelihood of meeting the name of this gene, together with the terms denoting GV in full-text of PubMed Central articles, was estimated ( Table S11 ). At the next step, the Spearman’s rank correlation coefficient was calculated between the prioritization rank of a gene and the probability to discover the gene in articles together with the terms describing"
+          },
+          {
+            "segment_id": "S0091",
+            "quote": "GV by chance. The correlation coefficient was found to be 0.3 and the statistical significance of the correlation was 1.6 × 10 −8 . This indirectly confirms the adequacy of the gene prioritization."
+          }
+        ],
+        "rationale": "The principal quantitative result (Spearman correlation between prioritization rank and co-occurrence probability) is produced by a computation (hypergeometric + Spearman) on data (PubMed Central co-occurrence counts) that a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0091",
+            "quote": "GV by chance. The correlation coefficient was found to be 0.3 and the statistical significance of the correlation was 1.6 × 10 −8 . This indirectly confirms the adequacy of the gene prioritization."
+          }
+        ],
+        "rationale": "One principal quantitative result is explicitly named: the Spearman rank correlation coefficient (0.3) with its significance (1.6 × 10^-8), reported as the validation of the prioritization."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0090",
+            "quote": "using the hypergeometric distribution, the likelihood of meeting the name of this gene, together with the terms denoting GV in full-text of PubMed Central articles, was estimated ( Table S11 )."
+          },
+          {
+            "segment_id": "S0107",
+            "quote": "All articles mentioning GV were found in PubMed Central interface ( https://www.ncbi.nlm.nih.gov/pmc/ ) by the query: “glucose variability” OR “glycemic variability” OR “glycemia variability” OR “glucose fluctuations” OR “glycemic fluctuations” OR “sugar"
+          }
+        ],
+        "rationale": "The inputs for the principal target are PubMed Central full-text article counts, not the GEO deposit files. The GEO deposit (GSE40779) is used only for a secondary miRNA-target overlap analysis, not for the principal correlation target."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0107",
+            "quote": "All articles mentioning GV were found in PubMed Central interface ( https://www.ncbi.nlm.nih.gov/pmc/ ) by the query: “glucose variability” OR “glycemic variability” OR “glycemia variability” OR “glucose fluctuations” OR “glycemic fluctuations” OR “sugar"
+          },
+          {
+            "segment_id": "S0109",
+            "quote": "Further, using these numbers, statistical significance of the co-occurrence of names of genes-candidates and GV was assessed. For this, a hypergeometric distribution, implemented in the hypergeom.sf function of the scipy.stats package [ 124 ] of the Python programming language, was used."
+          },
+          {
+            "segment_id": "S0110",
+            "quote": "The correlation between the rank of a candidate gene and the probability of meeting the name of this gene together with terms denoting glycemic variability in full-text articles of PubMed Central was estimated using Spearman’s rank correlation coefficient. For this, the stats.spearmanr function of the"
+          }
+        ],
+        "rationale": "The method is described in sufficient detail: the exact PubMed Central query, the hypergeometric test (scipy.stats.hypergeom.sf), and the Spearman correlation (scipy.stats.spearmanr) are specified."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0109",
+            "quote": "For this, a hypergeometric distribution, implemented in the hypergeom.sf function of the scipy.stats package [ 124 ] of the Python programming language, was used."
+          },
+          {
+            "segment_id": "S0110",
+            "quote": "For this, the stats.spearmanr function of the"
+          }
+        ],
+        "rationale": "The method uses Python scipy.stats (free, open-source) and public PubMed Central data; no proprietary software is required."
+      }
+    },
+    "exact_target": "Spearman's rank correlation coefficient between the prioritization rank of a gene and the probability to discover the gene in articles together with the terms describing GV by chance, reported as 0.3 with statistical significance 1.6 × 10^-8.",
+    "target_values": [
+      "0.3",
+      "1.6 × 10 −8"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The Spearman's rank correlation coefficient between the prioritization rank of a gene and the probability of discovering the gene in articles together with the terms describing glucose variability by chance, and its statistical significance.",
+    "target_type": "scalar",
+    "target_location": "Section 2.3 (Identification of New Candidate Genes in the GV Network), text paragraph; also Table S11 (co-occurrence of candidates with glycemic variability in PubMed Central).",
+    "location_quotes": [
+      {
+        "segment_id": "S0091",
+        "quote": "GV by chance. The correlation coefficient was found to be 0.3 and the statistical significance of the correlation was 1.6 × 10 −8 . This indirectly confirms the adequacy of the gene prioritization."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0107",
+        "quote": "All articles mentioning GV were found in PubMed Central interface ( https://www.ncbi.nlm.nih.gov/pmc/ ) by the query: “glucose variability” OR “glycemic variability” OR “glycemia variability” OR “glucose fluctuations” OR “glycemic fluctuations” OR “sugar"
+      },
+      {
+        "segment_id": "S0108",
+        "quote": "fluctuations” OR “glucose fluctuation” OR “glycemic fluctuation” OR “sugar fluctuation” OR “glucose excursions” OR “glycemic excursions” OR “unstable blood glucose” OR “fluctuating blood glucose”. For each candidate gene, all articles in PubMed Central mentioning this gene were counted. All articles in which the candidate gene name and a list of terms denoting GV occurred simultaneously were"
+      },
+      {
+        "segment_id": "S0109",
+        "quote": "Further, using these numbers, statistical significance of the co-occurrence of names of genes-candidates and GV was assessed. For this, a hypergeometric distribution, implemented in the hypergeom.sf function of the scipy.stats package [ 124 ] of the Python programming language, was used."
+      },
+      {
+        "segment_id": "S0110",
+        "quote": "The correlation between the rank of a candidate gene and the probability of meeting the name of this gene together with terms denoting glycemic variability in full-text articles of PubMed Central was estimated using Spearman’s rank correlation coefficient. For this, the stats.spearmanr function of the"
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The principal target's inputs are PubMed Central full-text article counts (co-occurrence of candidate gene names with GV terms), which are not part of the GEO deposit. The GEO deposit GSE40779 is used only for a secondary analysis (miRNA-target overlap) and does not contain the inputs for the principal correlation target. No version/identifier details for the PubMed Central data are provided.",
+    "leakage_files": [
+      {
+        "name": "GSE40779_ANOVA_Welch_0.05_all_35.txt.gz",
+        "reason": "Contains differential expression results (ANOVA Welch) from the GSE40779 experiment, which is used in the secondary analysis and may contain derived results related to the target."
+      },
+      {
+        "name": "GSE40779_ANOVA_Welch_custom_selection_HG_vs_HL20.txt.gz",
+        "reason": "Contains differential expression results (ANOVA Welch) from the GSE40779 experiment, which is used in the secondary analysis and may contain derived results related to the target."
+      },
+      {
+        "name": "GSE40779_ANOVA_Welch_custom_selection_Veh_vs_HG_5.txt.gz",
+        "reason": "Contains differential expression results (ANOVA Welch) from the GSE40779 experiment, which is used in the secondary analysis and may contain derived results related to the target."
+      },
+      {
+        "name": "GSE40779_ANOVA_Welch_custom_selection_Veh_vs_HL_30.txt.gz",
+        "reason": "Contains differential expression results (ANOVA Welch) from the GSE40779 experiment, which is used in the secondary analysis and may contain derived results related to the target."
+      },
+      {
+        "name": "GSE40779_Filtered_25.0_50_samples_1of_3_condition_rno-miR_149.txt.gz",
+        "reason": "Contains filtered miRNA expression data from the GSE40779 experiment, which is used in the secondary analysis and may contain derived results related to the target."
+      },
+      {
+        "name": "GSE40779_RAW.tar",
+        "reason": "Contains raw data from the GSE40779 experiment, which is used in the secondary analysis and may contain derived results related to the target."
+      },
+      {
+        "name": "filelist.txt",
+        "reason": "May contain a list of files including derived results or metadata that could leak the target."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "PubMed Central",
+        "version": "not specified"
+      },
+      {
+        "name": "miRTarBase",
+        "version": "2020"
+      },
+      {
+        "name": "NCBI Orthologs",
+        "version": "not specified"
+      }
+    ],
+    "comparison_metric": "The observed Spearman correlation coefficient and its p-value are compared to the reported values (0.3 and 1.6 × 10^-8) by exact numerical match within the reported precision.",
+    "numerical_agreement_criterion": "Scalars within displayed rounding bin: correlation coefficient 0.3 (one decimal place); p-value 1.6 × 10^-8 (two significant figures).",
+    "specification_gaps": "The exact set of candidate genes used in the correlation analysis is not fully specified in the main text (only the top ten are shown in Table 5; the full list is in Table S10). The exact number of PubMed Central articles and the exact counts of co-occurrences are not provided in the main text (they are in Table S11). The version of PubMed Central data used is not specified. The exact query for counting articles mentioning each candidate gene is not specified (only the GV terms query is given).",
+    "alternatives_considered": [
+      {
+        "target": "Number of genes/proteins in the GV network (37)",
+        "reason": "This is a count from network reconstruction, but it is not the principal quantitative result; the paper's stated priority is the validation of gene prioritization via correlation."
+      },
+      {
+        "target": "Number of candidate genes (334)",
+        "reason": "This is an intermediate count, not the principal result; the paper emphasizes the correlation analysis as validation."
+      },
+      {
+        "target": "p-value for enrichment of candidate genes by miRNA targets (0.006)",
+        "reason": "This is a secondary result from the GSE40779 analysis, not the principal target; the paper's main validation is the Spearman correlation."
+      },
+      {
+        "target": "Betweenness centrality coefficients in Table 3",
+        "reason": "These are descriptive statistics of network properties, not the principal quantitative result; the paper's stated priority is the gene prioritization validation."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

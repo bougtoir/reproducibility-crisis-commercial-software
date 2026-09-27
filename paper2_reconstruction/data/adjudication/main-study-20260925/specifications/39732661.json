@@ -1,0 +1,1040 @@
+{
+  "paper_id": "PMID:39732661",
+  "sampling_stratum": "Social_Behavioral",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "b963aeea1cdd23c256b70742b596be159e92fe6caac13bd5d2832f99bb8a0bfa",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "zenodo",
+      "accession": "7982217",
+      "files": [
+        {
+          "name": "F-1.fd.txt",
+          "bytes": 658361
+        },
+        {
+          "name": "F-1.mht.png",
+          "bytes": 98044
+        },
+        {
+          "name": "F-10.fd.txt",
+          "bytes": 656835
+        },
+        {
+          "name": "F-10.mht.png",
+          "bytes": 89609
+        },
+        {
+          "name": "F-11.fd.txt",
+          "bytes": 658005
+        },
+        {
+          "name": "F-11.mht.png",
+          "bytes": 122646
+        },
+        {
+          "name": "F-12.fd.txt",
+          "bytes": 658090
+        },
+        {
+          "name": "F-12.mht.png",
+          "bytes": 107880
+        },
+        {
+          "name": "F-13.fd.txt",
+          "bytes": 656509
+        },
+        {
+          "name": "F-13.mht.png",
+          "bytes": 421554
+        },
+        {
+          "name": "F-2.fd.txt",
+          "bytes": 656800
+        },
+        {
+          "name": "F-2.mht.png",
+          "bytes": 97389
+        },
+        {
+          "name": "F-3.fd.txt",
+          "bytes": 658093
+        },
+        {
+          "name": "F-3.mht.png",
+          "bytes": 98059
+        },
+        {
+          "name": "F-4.fd.txt",
+          "bytes": 656661
+        },
+        {
+          "name": "F-4.mht.png",
+          "bytes": 116184
+        },
+        {
+          "name": "F-5.fd.txt",
+          "bytes": 658249
+        },
+        {
+          "name": "F-5.mht.png",
+          "bytes": 124786
+        },
+        {
+          "name": "F-6.fd.txt",
+          "bytes": 658086
+        },
+        {
+          "name": "F-6.mht.png",
+          "bytes": 91047
+        },
+        {
+          "name": "F-7.fd.txt",
+          "bytes": 658132
+        },
+        {
+          "name": "F-7.mht.png",
+          "bytes": 100453
+        },
+        {
+          "name": "F-8.fd.txt",
+          "bytes": 656474
+        },
+        {
+          "name": "F-8.mht.png",
+          "bytes": 483015
+        },
+        {
+          "name": "F-9.fd.txt",
+          "bytes": 658155
+        },
+        {
+          "name": "F-9.mht.png",
+          "bytes": 111805
+        },
+        {
+          "name": "O-1.fd.txt",
+          "bytes": 657993
+        },
+        {
+          "name": "O-1.mht.png",
+          "bytes": 107566
+        },
+        {
+          "name": "O-2.fd.txt",
+          "bytes": 656423
+        },
+        {
+          "name": "O-2.mht.png",
+          "bytes": 148999
+        },
+        {
+          "name": "O-3.fd.txt",
+          "bytes": 656565
+        },
+        {
+          "name": "O-3.mht.png",
+          "bytes": 93361
+        },
+        {
+          "name": "O-4.fd.txt",
+          "bytes": 658113
+        },
+        {
+          "name": "O-4.mht.png",
+          "bytes": 121964
+        },
+        {
+          "name": "O-5.fd.txt",
+          "bytes": 656846
+        },
+        {
+          "name": "O-5.mht.png",
+          "bytes": 89471
+        },
+        {
+          "name": "O-6.fd.txt",
+          "bytes": 656731
+        },
+        {
+          "name": "O-6.mht.png",
+          "bytes": 94123
+        },
+        {
+          "name": "O-7.fd.txt",
+          "bytes": 656537
+        },
+        {
+          "name": "O-7.mht.png",
+          "bytes": 675536
+        },
+        {
+          "name": "O-7.png",
+          "bytes": 2491937
+        },
+        {
+          "name": "O-8.fd.txt",
+          "bytes": 656708
+        },
+        {
+          "name": "O-8.mht.png",
+          "bytes": 99137
+        },
+        {
+          "name": "O-9.fd.txt",
+          "bytes": 656325
+        },
+        {
+          "name": "O-9.mht.png",
+          "bytes": 589669
+        },
+        {
+          "name": "O-9.png",
+          "bytes": 2015309
+        },
+        {
+          "name": "T-1.fd.txt",
+          "bytes": 656655
+        },
+        {
+          "name": "T-1.mht.png",
+          "bytes": 97049
+        },
+        {
+          "name": "T-2.fd.txt",
+          "bytes": 656527
+        },
+        {
+          "name": "T-2.mht.png",
+          "bytes": 102374
+        },
+        {
+          "name": "T-3.fd.txt",
+          "bytes": 658083
+        },
+        {
+          "name": "T-3.mht.png",
+          "bytes": 121433
+        },
+        {
+          "name": "T-4.fd.txt",
+          "bytes": 656887
+        },
+        {
+          "name": "T-4.mht.png",
+          "bytes": 122546
+        },
+        {
+          "name": "T-5.fd.txt",
+          "bytes": 657873
+        },
+        {
+          "name": "T-5.mht.png",
+          "bytes": 110483
+        },
+        {
+          "name": "T-5.png",
+          "bytes": 46233
+        },
+        {
+          "name": "T-6.fd.txt",
+          "bytes": 657950
+        },
+        {
+          "name": "T-6.mht.png",
+          "bytes": 102408
+        },
+        {
+          "name": "T-6.png",
+          "bytes": 48216
+        },
+        {
+          "name": "T-7.fd.txt",
+          "bytes": 658536
+        },
+        {
+          "name": "T-7.mht.png",
+          "bytes": 142573
+        },
+        {
+          "name": "T-8.fd.txt",
+          "bytes": 656939
+        },
+        {
+          "name": "T-8.mht.png",
+          "bytes": 134604
+        },
+        {
+          "name": "U-1.fd.txt",
+          "bytes": 658148
+        },
+        {
+          "name": "U-1.mht.png",
+          "bytes": 103339
+        },
+        {
+          "name": "U-2.fd.txt",
+          "bytes": 658131
+        },
+        {
+          "name": "U-2.mht.png",
+          "bytes": 92466
+        },
+        {
+          "name": "U-3.fd.txt",
+          "bytes": 658084
+        },
+        {
+          "name": "U-3.mht.png",
+          "bytes": 121668
+        }
+      ]
+    },
+    {
+      "kind": "bioproject",
+      "accession": "PRJNA865023",
+      "files": [
+        {
+          "name": "SRR20761393",
+          "bytes": 2158798
+        },
+        {
+          "name": "SRR20761394",
+          "bytes": 2457314
+        },
+        {
+          "name": "SRR20761395",
+          "bytes": 3856229
+        },
+        {
+          "name": "SRR20761396",
+          "bytes": 63152545
+        },
+        {
+          "name": "SRR20761397",
+          "bytes": 27261552
+        },
+        {
+          "name": "SRR20761398",
+          "bytes": 61561784
+        },
+        {
+          "name": "SRR20761399",
+          "bytes": 3380676
+        },
+        {
+          "name": "SRR20761400",
+          "bytes": 55612700
+        },
+        {
+          "name": "SRR20761401",
+          "bytes": 6640664
+        },
+        {
+          "name": "SRR20761402",
+          "bytes": 6264420
+        },
+        {
+          "name": "SRR20761403",
+          "bytes": 40080780
+        },
+        {
+          "name": "SRR20761404",
+          "bytes": 19150253
+        },
+        {
+          "name": "SRR20761405",
+          "bytes": 42549102
+        },
+        {
+          "name": "SRR20761406",
+          "bytes": 28205195
+        },
+        {
+          "name": "SRR20761407",
+          "bytes": 74750085
+        },
+        {
+          "name": "SRR20761408",
+          "bytes": 14188208
+        },
+        {
+          "name": "SRR20761409",
+          "bytes": 16053526
+        },
+        {
+          "name": "SRR20761410",
+          "bytes": 3628531
+        },
+        {
+          "name": "SRR20761411",
+          "bytes": 5899416
+        },
+        {
+          "name": "SRR20761412",
+          "bytes": 9426912
+        },
+        {
+          "name": "SRR20761413",
+          "bytes": 222120
+        },
+        {
+          "name": "SRR20761414",
+          "bytes": 25772451
+        },
+        {
+          "name": "SRR20761415",
+          "bytes": 10841461
+        },
+        {
+          "name": "SRR20761416",
+          "bytes": 24307932
+        },
+        {
+          "name": "SRR20761417",
+          "bytes": 11108033
+        },
+        {
+          "name": "SRR20761418",
+          "bytes": 3640243
+        },
+        {
+          "name": "SRR20761419",
+          "bytes": 3558625
+        },
+        {
+          "name": "SRR20761420",
+          "bytes": 6311121
+        },
+        {
+          "name": "SRR20761421",
+          "bytes": 4755583
+        },
+        {
+          "name": "SRR20761422",
+          "bytes": 5517773
+        },
+        {
+          "name": "SRR20761423",
+          "bytes": 4041453
+        },
+        {
+          "name": "SRR20761424",
+          "bytes": 11119298
+        },
+        {
+          "name": "SRR20761425",
+          "bytes": 11487136
+        },
+        {
+          "name": "SRR20761426",
+          "bytes": 32782251
+        },
+        {
+          "name": "SRR20761427",
+          "bytes": 6239858
+        },
+        {
+          "name": "SRR20761428",
+          "bytes": 72586474
+        },
+        {
+          "name": "SRR20761429",
+          "bytes": 19360910
+        },
+        {
+          "name": "SRR20761430",
+          "bytes": 5555803
+        },
+        {
+          "name": "SRR20761431",
+          "bytes": 5287797
+        },
+        {
+          "name": "SRR20761432",
+          "bytes": 6692921
+        },
+        {
+          "name": "SRR20761433",
+          "bytes": 4277442
+        },
+        {
+          "name": "SRR20761434",
+          "bytes": 4674808
+        },
+        {
+          "name": "SRR20761435",
+          "bytes": 6868985
+        },
+        {
+          "name": "SRR20761436",
+          "bytes": 5450302
+        },
+        {
+          "name": "SRR20761437",
+          "bytes": 3177172
+        },
+        {
+          "name": "SRR20761438",
+          "bytes": 3535781
+        },
+        {
+          "name": "SRR20761439",
+          "bytes": 5279390
+        },
+        {
+          "name": "SRR20761440",
+          "bytes": 6550690
+        },
+        {
+          "name": "SRR20761441",
+          "bytes": 4250709
+        },
+        {
+          "name": "SRR20761442",
+          "bytes": 3572431
+        },
+        {
+          "name": "SRR20761443",
+          "bytes": 7509176
+        },
+        {
+          "name": "SRR20761444",
+          "bytes": 3770156
+        },
+        {
+          "name": "SRR20761445",
+          "bytes": 2684717
+        },
+        {
+          "name": "SRR20761446",
+          "bytes": 3585110
+        },
+        {
+          "name": "SRR20761447",
+          "bytes": 4521167
+        },
+        {
+          "name": "SRR20761448",
+          "bytes": 2757868
+        },
+        {
+          "name": "SRR20761449",
+          "bytes": 3930823
+        },
+        {
+          "name": "SRR20761450",
+          "bytes": 8794335
+        },
+        {
+          "name": "SRR20761451",
+          "bytes": 4367444
+        },
+        {
+          "name": "SRR20761452",
+          "bytes": 5395088
+        },
+        {
+          "name": "SRR20761453",
+          "bytes": 17268494
+        },
+        {
+          "name": "SRR20761454",
+          "bytes": 2816689
+        },
+        {
+          "name": "SRR20761455",
+          "bytes": 17543202
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:39:39.732669+00:00",
+  "api": {
+    "response_id": "0f20927d-87a7-47cd-a2a4-49efec2f48ac",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 13929,
+    "completion_tokens": 4561
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0007",
+            "quote": "Infection-related pathogenic detection efficiency rose from 25% (control group) to 48.48% (experimental group)."
+          },
+          {
+            "segment_id": "S0038",
+            "quote": "Based on the Onco-mNGS results, 20 pathogens were found to be causative in the experimental group (48.48%, 16/33), while 6 were found in the control group (25%, 8/32)."
+          }
+        ],
+        "rationale": "The principal result is a computational detection rate derived from sequencing data and culture results, which can be re-run by a third party using the deposited raw sequencing reads and metadata."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0007",
+            "quote": "Infection-related pathogenic detection efficiency rose from 25% (control group) to 48.48% (experimental group)."
+          },
+          {
+            "segment_id": "S0038",
+            "quote": "Based on the Onco-mNGS results, 20 pathogens were found to be causative in the experimental group (48.48%, 16/33), while 6 were found in the control group (25%, 8/32)."
+          }
+        ],
+        "rationale": "The paper's stated priority is the infection-related pathogenic detection efficiency, a proportion, reported first in the abstract and results."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0082",
+            "quote": "The datasets presented in this study can be found in NCBI with the SRA accession no. PRJNA865023."
+          },
+          {
+            "segment_id": "S0026",
+            "quote": "Clean reads obtained after raw data demultiplexing, adapter trimming and human reads removing were subjected to microbial identification based on a reference database containing over 20,000 microorganisms."
+          }
+        ],
+        "rationale": "The deposited SRA run accessions are the raw sequencing reads, which are the analysis inputs for pathogen detection; the Zenodo files are outputs (CNV data and images)."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0026",
+            "quote": "Clean reads obtained after raw data demultiplexing, adapter trimming and human reads removing were subjected to microbial identification based on a reference database containing over 20,000 microorganisms."
+          },
+          {
+            "segment_id": "S0027",
+            "quote": "All species detected in clinical samples using mNGS are first filtered with all microorganisms detected in the parallel no template control (NTC) (background microorganisms) with a ratio of unique reads per million"
+          },
+          {
+            "segment_id": "S0028",
+            "quote": "pathogenic microorganisms were defined as pathogens. Filtration is considered for human colonizing microorganisms, rather than pathogenic bacteria, such as oral anaerobic bacteria, enterobacter cloaca, human herpes virus, etc."
+          }
+        ],
+        "rationale": "The method for pathogen detection is described in sufficient detail, including read processing, reference database, filtering criteria, and pathogen definition, to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0023",
+            "quote": "Sequenced reads were first compared to the human reference genome (hg19) from the NCBI database, and only uniquely positioned reads were selected for subsequent analysis."
+          },
+          {
+            "segment_id": "S0026",
+            "quote": "Clean reads obtained after raw data demultiplexing, adapter trimming and human reads removing were subjected to microbial identification based on a reference database containing over 20,000 microorganisms."
+          }
+        ],
+        "rationale": "The method relies on standard bioinformatics tools (e.g., alignment to hg19, microbial identification) that are freely available; no proprietary software is required."
+      }
+    },
+    "exact_target": "Infection-related pathogenic detection efficiency in the experimental group (Onco-mNGS) and control group (culture), reported as 48.48% (16/33) and 25% (8/32), respectively.",
+    "target_values": [
+      "48.48%",
+      "25%",
+      "16/33",
+      "8/32"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The proportion of patients in the experimental group (Onco-mNGS) and control group (culture) for whom a causative pathogen was identified.",
+    "target_type": "proportion",
+    "target_location": "Abstract and Results section, subsection 'mNGS improves pathogen detection rate'",
+    "location_quotes": [
+      {
+        "segment_id": "S0007",
+        "quote": "Infection-related pathogenic detection efficiency rose from 25% (control group) to 48.48% (experimental group)."
+      },
+      {
+        "segment_id": "S0038",
+        "quote": "Based on the Onco-mNGS results, 20 pathogens were found to be causative in the experimental group (48.48%, 16/33), while 6 were found in the control group (25%, 8/32)."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0026",
+        "quote": "Clean reads obtained after raw data demultiplexing, adapter trimming and human reads removing were subjected to microbial identification based on a reference database containing over 20,000 microorganisms."
+      },
+      {
+        "segment_id": "S0027",
+        "quote": "All species detected in clinical samples using mNGS are first filtered with all microorganisms detected in the parallel no template control (NTC) (background microorganisms) with a ratio of unique reads per million"
+      },
+      {
+        "segment_id": "S0028",
+        "quote": "pathogenic microorganisms were defined as pathogens. Filtration is considered for human colonizing microorganisms, rather than pathogenic bacteria, such as oral anaerobic bacteria, enterobacter cloaca, human herpes virus, etc."
+      }
+    ],
+    "required_files": [
+      "SRR20761393",
+      "SRR20761394",
+      "SRR20761395",
+      "SRR20761396",
+      "SRR20761397",
+      "SRR20761398",
+      "SRR20761399",
+      "SRR20761400",
+      "SRR20761401",
+      "SRR20761402",
+      "SRR20761403",
+      "SRR20761404",
+      "SRR20761405",
+      "SRR20761406",
+      "SRR20761407",
+      "SRR20761408",
+      "SRR20761409",
+      "SRR20761410",
+      "SRR20761411",
+      "SRR20761412",
+      "SRR20761413",
+      "SRR20761414",
+      "SRR20761415",
+      "SRR20761416",
+      "SRR20761417",
+      "SRR20761418",
+      "SRR20761419",
+      "SRR20761420",
+      "SRR20761421",
+      "SRR20761422",
+      "SRR20761423",
+      "SRR20761424",
+      "SRR20761425",
+      "SRR20761426",
+      "SRR20761427",
+      "SRR20761428",
+      "SRR20761429",
+      "SRR20761430",
+      "SRR20761431",
+      "SRR20761432",
+      "SRR20761433",
+      "SRR20761434",
+      "SRR20761435",
+      "SRR20761436",
+      "SRR20761437",
+      "SRR20761438",
+      "SRR20761439",
+      "SRR20761440",
+      "SRR20761441",
+      "SRR20761442",
+      "SRR20761443",
+      "SRR20761444",
+      "SRR20761445",
+      "SRR20761446",
+      "SRR20761447",
+      "SRR20761448",
+      "SRR20761449",
+      "SRR20761450",
+      "SRR20761451",
+      "SRR20761452",
+      "SRR20761453",
+      "SRR20761454",
+      "SRR20761455"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The SRA run accessions under PRJNA865023 are the raw sequencing reads. The Zenodo deposit (7982217) contains processed CNV data and images, which are outputs. No version is specified for the SRA data.",
+    "leakage_files": [
+      {
+        "name": "F-1.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient F-1, which may include pathogen detection results or derived metrics."
+      },
+      {
+        "name": "F-1.mht.png",
+        "reason": "Image of CNV plot for patient F-1, which may visually display results."
+      },
+      {
+        "name": "F-10.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient F-10."
+      },
+      {
+        "name": "F-10.mht.png",
+        "reason": "Image of CNV plot for patient F-10."
+      },
+      {
+        "name": "F-11.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient F-11."
+      },
+      {
+        "name": "F-11.mht.png",
+        "reason": "Image of CNV plot for patient F-11."
+      },
+      {
+        "name": "F-12.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient F-12."
+      },
+      {
+        "name": "F-12.mht.png",
+        "reason": "Image of CNV plot for patient F-12."
+      },
+      {
+        "name": "F-13.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient F-13."
+      },
+      {
+        "name": "F-13.mht.png",
+        "reason": "Image of CNV plot for patient F-13."
+      },
+      {
+        "name": "F-2.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient F-2."
+      },
+      {
+        "name": "F-2.mht.png",
+        "reason": "Image of CNV plot for patient F-2."
+      },
+      {
+        "name": "F-3.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient F-3."
+      },
+      {
+        "name": "F-3.mht.png",
+        "reason": "Image of CNV plot for patient F-3."
+      },
+      {
+        "name": "F-4.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient F-4."
+      },
+      {
+        "name": "F-4.mht.png",
+        "reason": "Image of CNV plot for patient F-4."
+      },
+      {
+        "name": "F-5.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient F-5."
+      },
+      {
+        "name": "F-5.mht.png",
+        "reason": "Image of CNV plot for patient F-5."
+      },
+      {
+        "name": "F-6.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient F-6."
+      },
+      {
+        "name": "F-6.mht.png",
+        "reason": "Image of CNV plot for patient F-6."
+      },
+      {
+        "name": "F-7.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient F-7."
+      },
+      {
+        "name": "F-7.mht.png",
+        "reason": "Image of CNV plot for patient F-7."
+      },
+      {
+        "name": "F-8.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient F-8."
+      },
+      {
+        "name": "F-8.mht.png",
+        "reason": "Image of CNV plot for patient F-8."
+      },
+      {
+        "name": "F-9.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient F-9."
+      },
+      {
+        "name": "F-9.mht.png",
+        "reason": "Image of CNV plot for patient F-9."
+      },
+      {
+        "name": "O-1.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient O-1."
+      },
+      {
+        "name": "O-1.mht.png",
+        "reason": "Image of CNV plot for patient O-1."
+      },
+      {
+        "name": "O-2.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient O-2."
+      },
+      {
+        "name": "O-2.mht.png",
+        "reason": "Image of CNV plot for patient O-2."
+      },
+      {
+        "name": "O-3.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient O-3."
+      },
+      {
+        "name": "O-3.mht.png",
+        "reason": "Image of CNV plot for patient O-3."
+      },
+      {
+        "name": "O-4.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient O-4."
+      },
+      {
+        "name": "O-4.mht.png",
+        "reason": "Image of CNV plot for patient O-4."
+      },
+      {
+        "name": "O-5.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient O-5."
+      },
+      {
+        "name": "O-5.mht.png",
+        "reason": "Image of CNV plot for patient O-5."
+      },
+      {
+        "name": "O-6.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient O-6."
+      },
+      {
+        "name": "O-6.mht.png",
+        "reason": "Image of CNV plot for patient O-6."
+      },
+      {
+        "name": "O-7.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient O-7."
+      },
+      {
+        "name": "O-7.mht.png",
+        "reason": "Image of CNV plot for patient O-7."
+      },
+      {
+        "name": "O-7.png",
+        "reason": "Image of CNV plot for patient O-7."
+      },
+      {
+        "name": "O-8.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient O-8."
+      },
+      {
+        "name": "O-8.mht.png",
+        "reason": "Image of CNV plot for patient O-8."
+      },
+      {
+        "name": "O-9.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient O-9."
+      },
+      {
+        "name": "O-9.mht.png",
+        "reason": "Image of CNV plot for patient O-9."
+      },
+      {
+        "name": "O-9.png",
+        "reason": "Image of CNV plot for patient O-9."
+      },
+      {
+        "name": "T-1.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient T-1."
+      },
+      {
+        "name": "T-1.mht.png",
+        "reason": "Image of CNV plot for patient T-1."
+      },
+      {
+        "name": "T-2.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient T-2."
+      },
+      {
+        "name": "T-2.mht.png",
+        "reason": "Image of CNV plot for patient T-2."
+      },
+      {
+        "name": "T-3.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient T-3."
+      },
+      {
+        "name": "T-3.mht.png",
+        "reason": "Image of CNV plot for patient T-3."
+      },
+      {
+        "name": "T-4.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient T-4."
+      },
+      {
+        "name": "T-4.mht.png",
+        "reason": "Image of CNV plot for patient T-4."
+      },
+      {
+        "name": "T-5.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient T-5."
+      },
+      {
+        "name": "T-5.mht.png",
+        "reason": "Image of CNV plot for patient T-5."
+      },
+      {
+        "name": "T-5.png",
+        "reason": "Image of CNV plot for patient T-5."
+      },
+      {
+        "name": "T-6.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient T-6."
+      },
+      {
+        "name": "T-6.mht.png",
+        "reason": "Image of CNV plot for patient T-6."
+      },
+      {
+        "name": "T-6.png",
+        "reason": "Image of CNV plot for patient T-6."
+      },
+      {
+        "name": "T-7.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient T-7."
+      },
+      {
+        "name": "T-7.mht.png",
+        "reason": "Image of CNV plot for patient T-7."
+      },
+      {
+        "name": "T-8.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient T-8."
+      },
+      {
+        "name": "T-8.mht.png",
+        "reason": "Image of CNV plot for patient T-8."
+      },
+      {
+        "name": "U-1.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient U-1."
+      },
+      {
+        "name": "U-1.mht.png",
+        "reason": "Image of CNV plot for patient U-1."
+      },
+      {
+        "name": "U-2.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient U-2."
+      },
+      {
+        "name": "U-2.mht.png",
+        "reason": "Image of CNV plot for patient U-2."
+      },
+      {
+        "name": "U-3.fd.txt",
+        "reason": "Contains processed CNV data (output) for patient U-3."
+      },
+      {
+        "name": "U-3.mht.png",
+        "reason": "Image of CNV plot for patient U-3."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "human reference genome hg19",
+        "version": "hg19"
+      },
+      {
+        "name": "microbial reference database",
+        "version": "over 20,000 microorganisms (version not specified)"
+      }
+    ],
+    "comparison_metric": "The observed proportion of patients with detected pathogens in each group is compared to the reported proportions (48.48% and 25%).",
+    "numerical_agreement_criterion": "Proportions are compared by numerator/denominator: 16/33 for experimental group and 8/32 for control group, matching the reported percentages exactly.",
+    "specification_gaps": "The exact composition and version of the microbial reference database is not specified; the threshold for pathogen positivity (e.g., RPM cutoff) is not fully detailed; the handling of contamination and colonizers is described but may require subjective judgment.",
+    "alternatives_considered": "Other candidate targets included the time to diagnosis (7.3 days shorter) and tumor detection concordance (100%), but these are secondary outcomes or not the principal quantitative result; the pathogen detection efficiency is the primary endpoint stated in the abstract and results."
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

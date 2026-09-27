@@ -1,0 +1,184 @@
+{
+  "paper_id": "PMID:34584066",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "a7407096f49231320e3234fc9dbbf764f04950c962d5e3045b3c37dd20eaef6e",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE153982",
+      "files": [
+        {
+          "name": "GSE153982_readcount.txt.gz",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE111247",
+      "files": [
+        {
+          "name": "GSE111247_all_counts.csv.gz",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE152147",
+      "files": [
+        {
+          "name": "GSE152147_Picard_Ahmadov_Jun2020.txt.gz",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:49:47.155304+00:00",
+  "api": {
+    "response_id": "a47d93e9-1833-49fd-aaf5-cdb9c75d945e",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 22028,
+    "completion_tokens": 1679
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0058",
+            "quote": "RNA sequencing data has been deposited in the NCBI GEO dataset repository under the identifyer GSE152147."
+          },
+          {
+            "segment_id": "S0074",
+            "quote": "GeneSet Enrichment Analysis was performed using the t-value from the paired t-test for both RNA sequencing and proteomics data of the siRNA-mediated knockdown and"
+          }
+        ],
+        "rationale": "The principal result is produced by computational analysis (RNA-seq and proteomics) of data deposited in GEO/PRIDE, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0112",
+            "quote": "Importantly, however, we found that HOTAIRM1 knock-down LN-229-bearing mice survived significantly longer following radiotherapy when compared to mice transplanted with control-transfected LN-229, as indicated by median overall survivals of 80 versus 38 days, respectively (Fig. 4E )."
+          }
+        ],
+        "rationale": "One principal quantitative result can be named: median overall survival of mice with HOTAIRM1 knock-down versus control after radiotherapy."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0058",
+            "quote": "RNA sequencing data has been deposited in the NCBI GEO dataset repository under the identifyer GSE152147."
+          },
+          {
+            "segment_id": "S0066",
+            "quote": "The mass spectrometry proteomics data has been deposited to the ProteomeXchange Consortium via the PRIDE [ 31 ]"
+          }
+        ],
+        "rationale": "The deposit listing includes GEO files (GSE153982, GSE111247, GSE152147) but the target (mouse survival) is not derived from these files; the proteomics data (PXD020141) is not in the listing. The listed files are not the analysis inputs of the target."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0050",
+            "quote": "Eleven 6-10-week-old mice per group were used in all experiments. Mice were anaesthetized using an intraperitoneal 3 component injection consisting of fentanyl, midazolam and medetomidin, fixed under a stereotactic device (Stoelting, Wood Dale, IL, USA) and a burr hole was drilled in the skull 2 mm lateral and 1 mm posterior to"
+          },
+          {
+            "segment_id": "S0051",
+            "quote": "Local cranial radiotherapy with a single dose of 12 Gy was performed at day 15 after tumor implantation using a Gulmay 200 kV X-ray unit at 1 Gy/min at room temperature. The mice were observed daily"
+          },
+          {
+            "segment_id": "S0052",
+            "quote": "and euthanized when neurological symptoms developed. No blinding was done for mouse experiments."
+          }
+        ],
+        "rationale": "The method for the mouse survival experiment is described well enough to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0069",
+            "quote": "Statistical analyses were preformed by using GraphPad Prism (version 5.0) ( https://www.graphpad.com/scientific-software/prism/ )."
+          }
+        ],
+        "rationale": "The method needs no proprietary software; GraphPad Prism is commercial but the analysis can be done with free software."
+      }
+    },
+    "exact_target": "Median overall survival of mice with HOTAIRM1 knock-down versus control after radiotherapy: 80 versus 38 days.",
+    "target_values": [
+      "80",
+      "38"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "Median overall survival of mice bearing HOTAIRM1 knock-down versus control LN-229 orthotopic xenografts following radiotherapy.",
+    "target_type": "scalar",
+    "target_location": "Fig. 4E and text in Results section",
+    "location_quotes": [
+      {
+        "segment_id": "S0112",
+        "quote": "Importantly, however, we found that HOTAIRM1 knock-down LN-229-bearing mice survived significantly longer following radiotherapy when compared to mice transplanted with control-transfected LN-229, as indicated by median overall survivals of 80 versus 38 days, respectively (Fig. 4E )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0050",
+        "quote": "Eleven 6-10-week-old mice per group were used in all experiments. Mice were anaesthetized using an intraperitoneal 3 component injection consisting of fentanyl, midazolam and medetomidin, fixed under a stereotactic device (Stoelting, Wood Dale, IL, USA) and a burr hole was drilled in the skull 2 mm lateral and 1 mm posterior to"
+      },
+      {
+        "segment_id": "S0051",
+        "quote": "Local cranial radiotherapy with a single dose of 12 Gy was performed at day 15 after tumor implantation using a Gulmay 200 kV X-ray unit at 1 Gy/min at room temperature. The mice were observed daily"
+      },
+      {
+        "segment_id": "S0052",
+        "quote": "and euthanized when neurological symptoms developed. No blinding was done for mouse experiments."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "No data files in the deposit listing are inputs for the mouse survival target. The target is based on in vivo experiments not represented in the listed GEO files.",
+    "leakage_files": [
+      {
+        "name": "GSE152147_Picard_Ahmadov_Jun2020.txt.gz",
+        "reason": "Contains RNA sequencing data that may include derived results or expression values related to the study, but not the target value."
+      },
+      {
+        "name": "GSE153982_readcount.txt.gz",
+        "reason": "Contains read count data from a related study, not the target value."
+      },
+      {
+        "name": "GSE111247_all_counts.csv.gz",
+        "reason": "Contains count data from a related study, not the target value."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "Compare the reported median overall survival values (80 and 38 days) to the values obtained from re-analysis of the in vivo experiment.",
+    "numerical_agreement_criterion": "Scalars within displayed rounding bin (e.g., exact integer days).",
+    "specification_gaps": "The exact statistical method for calculating median survival and the handling of censored observations are not fully specified. The number of mice per group is stated as eleven, but the exact survival times are not provided in the text.",
+    "alternatives_considered": [
+      {
+        "target": "Median overall survival without radiotherapy (43 and 44.5 days)",
+        "reason": "Rejected because the principal result emphasized is the radiotherapy effect."
+      },
+      {
+        "target": "HOTAIRM1 knock-down efficiency (>80%)",
+        "reason": "Rejected because it is a methodological control, not the principal result."
+      },
+      {
+        "target": "Cell viability reduction (20-30%)",
+        "reason": "Rejected because it is an in vitro result, not the principal in vivo finding."
+      }
+    ]
+  },
+  "eligibility": "required_inputs_not_in_public_listing"
+}

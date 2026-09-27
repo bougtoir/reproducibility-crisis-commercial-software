@@ -1,0 +1,159 @@
+{
+  "paper_id": "PMID:33329590",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "a347cfe9d234ab4ddffeeeed2498f36fdabd8e1c37ad7eca8693e50940c02391",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE158395",
+      "files": [
+        {
+          "name": "GSE158395_exp_fin_geo.csv.gz",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:00:16.816559+00:00",
+  "api": {
+    "response_id": "bfa8bd88-49cb-4718-9030-0179a779c9cf",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 16004,
+    "completion_tokens": 1913
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0028",
+            "quote": "We performed RNA-seq global profiling ( GSE158395 ),"
+          },
+          {
+            "segment_id": "S0031",
+            "quote": "Using criteria of fold-change (FCH)>2 and false discovery rate (FDR)<0.05 to define differentially expressed genes (DEGs), we detected 3,044 DEGs (1,437 up-regulated and 1,607 down-regulated) in lesional keloid versus normal skin, 2,929 DEGs between lesional and non-lesional skin, and few DEGs between non-lesional and normal skin, as depicted in a heatmap in Figure S1 ( Table S3 )."
+          }
+        ],
+        "rationale": "The principal result is a count of differentially expressed genes produced by a computational RNA-seq analysis on deposited data (GSE158395), which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0031",
+            "quote": "Using criteria of fold-change (FCH)>2 and false discovery rate (FDR)<0.05 to define differentially expressed genes (DEGs), we detected 3,044 DEGs (1,437 up-regulated and 1,607 down-regulated) in lesional keloid versus normal skin, 2,929 DEGs between lesional and non-lesional skin, and few DEGs between non-lesional and normal skin, as depicted in a heatmap in Figure S1 ( Table S3 )."
+          }
+        ],
+        "rationale": "The first quantitative result in the Results section is the number of DEGs for the primary comparison (lesional vs normal skin), which is a primary numerical endpoint."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0073",
+            "quote": "The original contributions presented in the study are publicly available. This data can be found here: https://www.ncbi.nlm.nih.gov/geo with accession number GSE158395 ."
+          }
+        ],
+        "rationale": "The deposit contains a GEO series with a processed expression matrix (GSE158395_exp_fin_geo.csv.gz), which is the input for the DEG analysis; it is not an output of the target computation."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0023",
+            "quote": "Data were pre-processed using standard pipeline incorporating quality control metrics, such as FastQC and MultiQC, sequence alignment based on STAR RNA-sequencing aligner, and sequencing reads assignment to genomic features by featureCounts"
+          },
+          {
+            "segment_id": "S0024",
+            "quote": "and voom -transformed."
+          },
+          {
+            "segment_id": "S0027",
+            "quote": "Gene expression profiles were modeled by linear models using R’s lme function. limma framework was used for RNA-sequencing data, and p-values were adjusted for multiple hypotheses using the Benjamini-Hochberg procedure. Fold changes (FCHs)>2.0 and false discovery rates (FDR)<0.05 were considered differentially expressed."
+          }
+        ],
+        "rationale": "The method for the DEG analysis is described: preprocessing (STAR, featureCounts, voom), linear modeling with limma, and thresholds for significance."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0027",
+            "quote": "Analyses were performed using R-language (R-project.org) and Bioconductor Project packages ( www.bioconductor.org )."
+          }
+        ],
+        "rationale": "The analysis uses R and Bioconductor, which are free and open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "Number of differentially expressed genes (DEGs) in lesional keloid versus normal skin: 3,044 DEGs (1,437 up-regulated and 1,607 down-regulated).",
+    "target_values": [
+      "3,044",
+      "1,437",
+      "1,607"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of genes differentially expressed between lesional keloid skin and normal skin, using defined fold-change and false-discovery rate criteria.",
+    "target_type": "count",
+    "target_location": "Results, first paragraph of 'RNA-Seq Molecular Profiling Shows Immune Dysregulation With Significant Th2, Th1, Th17/Th22, and JAK3-Skewing in Keloid Lesions'",
+    "location_quotes": [
+      {
+        "segment_id": "S0031",
+        "quote": "Using criteria of fold-change (FCH)>2 and false discovery rate (FDR)<0.05 to define differentially expressed genes (DEGs), we detected 3,044 DEGs (1,437 up-regulated and 1,607 down-regulated) in lesional keloid versus normal skin, 2,929 DEGs between lesional and non-lesional skin, and few DEGs between non-lesional and normal skin, as depicted in a heatmap in Figure S1 ( Table S3 )."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0023",
+        "quote": "Data were pre-processed using standard pipeline incorporating quality control metrics, such as FastQC and MultiQC, sequence alignment based on STAR RNA-sequencing aligner, and sequencing reads assignment to genomic features by featureCounts"
+      },
+      {
+        "segment_id": "S0024",
+        "quote": "and voom -transformed."
+      },
+      {
+        "segment_id": "S0027",
+        "quote": "Gene expression profiles were modeled by linear models using R’s lme function. limma framework was used for RNA-sequencing data, and p-values were adjusted for multiple hypotheses using the Benjamini-Hochberg procedure. Fold changes (FCHs)>2.0 and false discovery rates (FDR)<0.05 were considered differentially expressed."
+      }
+    ],
+    "required_files": [
+      "GSE158395_exp_fin_geo.csv.gz"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The GEO series GSE158395 contains a processed expression matrix (GSE158395_exp_fin_geo.csv.gz) that is the input for the DEG analysis. The file size is listed as 0 bytes, which may indicate a placeholder; the actual data should be downloaded from GEO. The matrix likely includes samples: 4 keloid lesions from 3 patients and 6 healthy controls (as per S0024).",
+    "leakage_files": [
+      {
+        "name": "GSE158395_exp_fin_geo.csv.gz",
+        "reason": "This file contains the processed expression matrix from which the DEG counts are derived; serving it would allow direct computation of the target without re-running the full analysis pipeline."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "STAR",
+        "version": "not specified"
+      },
+      {
+        "name": "featureCounts",
+        "version": "not specified"
+      },
+      {
+        "name": "limma",
+        "version": "not specified"
+      },
+      {
+        "name": "voom",
+        "version": "not specified"
+      }
+    ],
+    "comparison_metric": "The observed number of DEGs (total, up-regulated, down-regulated) from re-analysis is compared to the reported counts.",
+    "numerical_agreement_criterion": "Counts must match exactly: 3,044 total DEGs, 1,437 up-regulated, 1,607 down-regulated.",
+    "specification_gaps": "The exact version of the reference genome used for alignment is not specified. The exact parameters for STAR alignment and featureCounts are not provided. The voom transformation details (e.g., normalization factors) are not fully described. The lme function usage is mentioned but not detailed. The criteria for 'few DEGs' between non-lesional and normal skin are not quantified.",
+    "alternatives_considered": "Other candidate targets include: the number of DEGs between lesional and non-lesional skin (2,929), but this is not the primary comparison; the number of DEGs between non-lesional and normal skin (not quantified); specific gene fold-changes (e.g., JAK3), but these are not the principal numerical endpoint; the heatmap in Figure 1, but it is a figure without a single quantitative value; the qRT-PCR results, but they are validation and not the primary computational result."
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

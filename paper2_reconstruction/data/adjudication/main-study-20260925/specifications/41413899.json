@@ -1,0 +1,191 @@
+{
+  "paper_id": "PMID:41413899",
+  "sampling_stratum": "Chemistry_Materials",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "a5b170cc797edc9feec7584d538ff5f7dd0585791a0fae21afc2934fdb0cdb65",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "sra_study",
+      "accession": "SRP369472",
+      "files": [
+        {
+          "name": "SRR18713742",
+          "bytes": 2759343382
+        }
+      ]
+    },
+    {
+      "kind": "sra_study",
+      "accession": "SRP369500",
+      "files": [
+        {
+          "name": "SRR18713739",
+          "bytes": 1597037827
+        }
+      ]
+    },
+    {
+      "kind": "sra_study",
+      "accession": "SRP448957",
+      "files": [
+        {
+          "name": "SRR25252729",
+          "bytes": 1295849359
+        }
+      ]
+    },
+    {
+      "kind": "sra_study",
+      "accession": "SRP448974",
+      "files": [
+        {
+          "name": "SRR25252712",
+          "bytes": 3207266694
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:28:12.483094+00:00",
+  "api": {
+    "response_id": "bacc3fbb-0e43-46a8-96da-ebc62d126c8b",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 22166,
+    "completion_tokens": 1801
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0027",
+            "quote": "DESeq. 2 v1.20 (Love et al. 2014 ) was used to determine differentially expressed genes (DEGs) in comparisons of different growth conditions. Raw counts were used as DESeq.2 input."
+          },
+          {
+            "segment_id": "S0031",
+            "quote": "The RNA‐seq data generated in this study are available at the NCBI SRA database, with accession IDs:"
+          }
+        ],
+        "rationale": "The principal results are produced by computational analysis (DESeq2, GSVA, etc.) of RNA-seq data deposited in SRA, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0068",
+            "quote": "Using a computational analysis of the conserved ST domain (L. Xu et al. 2024 ), 90, 83, 117, 52, and 23 STs for A. niger , A. nidulans , P. subrubescens , T. reesei and P. chrysosporium were identified, respectively."
+          }
+        ],
+        "rationale": "A principal quantitative result is the number of sugar transporters identified per species, reported as primary numerical endpoints."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0031",
+            "quote": "The RNA‐seq data generated in this study are available at the NCBI SRA database, with accession IDs:"
+          },
+          {
+            "segment_id": "S0032",
+            "quote": "SRP369472–SRP369500 for P. subrubescens ; SRP448957–SRP448974 for A. niger ; SRP448919–SRP448936 for A. nidulans ; SRP448939–SRP448956 for T. reesei ; and SRP369438–SRP369455 for P. chrysosporium ."
+          }
+        ],
+        "rationale": "The listed SRA files are raw RNA-seq reads, which are the analysis inputs for the transcriptome-based ST identification."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0032",
+            "quote": "STs were extracted from our previous study (L. Xu et al. 2025 ). Protein sequences of STs were aligned using Muscle"
+          },
+          {
+            "segment_id": "S0033",
+            "quote": "v5.3 (Edgar 2022 ). The positions that contained > 20% gaps were removed from alignment using trimAl (Capella‐Gutiérrez et al. 2009 ). The phylogenetic analysis was performed with maximum likelihood method using IQ‐TREE v2.4.0 (Minh et al. 2020 ) with 1000 UFBoot2 bootstrapping and the best‐fit model determined by ModelFinder."
+          }
+        ],
+        "rationale": "The method for ST identification and phylogenetic analysis is described with sufficient detail (tools, parameters) to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0033",
+            "quote": "The phylogenetic analysis was performed with maximum likelihood method using IQ‐TREE v2.4.0 (Minh et al. 2020 ) with 1000 UFBoot2 bootstrapping and the best‐fit model determined by ModelFinder."
+          }
+        ],
+        "rationale": "All software used (Muscle, trimAl, IQ-TREE, DESeq2, etc.) are free and open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "Number of sugar transporters (STs) identified in each of five fungi: 90 for A. niger, 83 for A. nidulans, 117 for P. subrubescens, 52 for T. reesei, and 23 for P. chrysosporium.",
+    "target_values": [
+      "90",
+      "83",
+      "117",
+      "52",
+      "23"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of sugar transporters identified in each of the five fungal species using computational analysis of the conserved ST domain.",
+    "target_type": "count",
+    "target_location": "Section 3.2.2, text",
+    "location_quotes": [
+      {
+        "segment_id": "S0068",
+        "quote": "Using a computational analysis of the conserved ST domain (L. Xu et al. 2024 ), 90, 83, 117, 52, and 23 STs for A. niger , A. nidulans , P. subrubescens , T. reesei and P. chrysosporium were identified, respectively."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0032",
+        "quote": "STs were extracted from our previous study (L. Xu et al. 2025 ). Protein sequences of STs were aligned using Muscle"
+      },
+      {
+        "segment_id": "S0033",
+        "quote": "v5.3 (Edgar 2022 ). The positions that contained > 20% gaps were removed from alignment using trimAl (Capella‐Gutiérrez et al. 2009 ). The phylogenetic analysis was performed with maximum likelihood method using IQ‐TREE v2.4.0 (Minh et al. 2020 ) with 1000 UFBoot2 bootstrapping and the best‐fit model determined by ModelFinder."
+      }
+    ],
+    "required_files": [
+      "SRR18713739",
+      "SRR18713742",
+      "SRR25252712",
+      "SRR25252729"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The SRA accessions listed are SRP369472, SRP369500, SRP448957, SRP448974, each with one run. These correspond to RNA-seq data for P. subrubescens and A. niger. The paper also mentions other accessions (SRP448919–SRP448936 for A. nidulans, SRP448939–SRP448956 for T. reesei, SRP369438–SRP369455 for P. chrysosporium) not in the deposit listing. The ST identification also requires protein sequences from MycoCosm (not in deposit).",
+    "leakage_files": [
+      {
+        "name": "SRR18713742",
+        "reason": "This is raw RNA-seq data; however, it is an input, not a leakage. No leakage files identified in the deposit listing."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "MycoCosm",
+        "version": "not specified"
+      },
+      {
+        "name": "CAZy database",
+        "version": "not specified"
+      }
+    ],
+    "comparison_metric": "The observed number of STs identified per species is compared to the reported counts.",
+    "numerical_agreement_criterion": "Counts must match exactly.",
+    "specification_gaps": "The exact version of MycoCosm and CAZy databases used is not specified. The method for extracting STs from previous study (L. Xu et al. 2025) is not fully described. The threshold for ST identification is not given.",
+    "alternatives_considered": [
+      {
+        "target": "Number of DEGs in Figure 1B",
+        "reason": "This is a central quantitative table/figure, but the exact numbers are not printed in the text and are only in figures, making it less directly extractable."
+      },
+      {
+        "target": "Number of extracellular and intracellular metabolites (89 and 112)",
+        "reason": "This is a count, but it is not the principal result; the ST counts are more central to the study's focus on sugar transporters."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

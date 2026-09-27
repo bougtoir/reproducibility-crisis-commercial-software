@@ -1,0 +1,372 @@
+{
+  "paper_id": "PMID:36590690",
+  "sampling_stratum": "Physics_Engineering",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "d321ab5e0b6b6030ec9a725a1c27a58afe1c90698e09f80b7526af064375ed1a",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "figshare",
+      "accession": "21259287",
+      "files": [
+        {
+          "name": "0806.jpg",
+          "bytes": 831490
+        },
+        {
+          "name": "0806.png",
+          "bytes": 9232305
+        },
+        {
+          "name": "0807.jpg",
+          "bytes": 873090
+        },
+        {
+          "name": "0808.jpg",
+          "bytes": 898147
+        },
+        {
+          "name": "0813.jpg",
+          "bytes": 768336
+        },
+        {
+          "name": "0816.jpg",
+          "bytes": 793606
+        },
+        {
+          "name": "0848.jpg",
+          "bytes": 533585
+        },
+        {
+          "name": "0849.jpg",
+          "bytes": 565726
+        },
+        {
+          "name": "0853.jpg",
+          "bytes": 878246
+        },
+        {
+          "name": "0857.jpg",
+          "bytes": 749236
+        },
+        {
+          "name": "0866.jpg",
+          "bytes": 1008914
+        },
+        {
+          "name": "0872.jpg",
+          "bytes": 813680
+        },
+        {
+          "name": "0894.jpg",
+          "bytes": 620872
+        },
+        {
+          "name": "0895.jpg",
+          "bytes": 686704
+        },
+        {
+          "name": "0897.jpg",
+          "bytes": 819880
+        },
+        {
+          "name": "0927.jpg",
+          "bytes": 726802
+        },
+        {
+          "name": "0930.jpg",
+          "bytes": 723140
+        },
+        {
+          "name": "1026.jpg",
+          "bytes": 813165
+        },
+        {
+          "name": "1027.jpg",
+          "bytes": 761687
+        },
+        {
+          "name": "1032.jpg",
+          "bytes": 788830
+        },
+        {
+          "name": "1276.jpg",
+          "bytes": 818076
+        },
+        {
+          "name": "1332.jpg",
+          "bytes": 700435
+        },
+        {
+          "name": "1333.jpg",
+          "bytes": 724084
+        },
+        {
+          "name": "1435.jpg",
+          "bytes": 875783
+        },
+        {
+          "name": "1484.jpg",
+          "bytes": 700987
+        },
+        {
+          "name": "1537.jpg",
+          "bytes": 857897
+        },
+        {
+          "name": "1540.jpg",
+          "bytes": 850521
+        },
+        {
+          "name": "1583.jpg",
+          "bytes": 826409
+        },
+        {
+          "name": "1584.jpg",
+          "bytes": 996886
+        },
+        {
+          "name": "1725.jpg",
+          "bytes": 844678
+        },
+        {
+          "name": "1729.jpg",
+          "bytes": 536030
+        },
+        {
+          "name": "1732.jpg",
+          "bytes": 526442
+        },
+        {
+          "name": "1733.jpg",
+          "bytes": 510373
+        },
+        {
+          "name": "1784.jpg",
+          "bytes": 564366
+        },
+        {
+          "name": "2108.jpg",
+          "bytes": 523630
+        },
+        {
+          "name": "2109.jpg",
+          "bytes": 531594
+        },
+        {
+          "name": "2110.jpg",
+          "bytes": 525755
+        },
+        {
+          "name": "2164.jpg",
+          "bytes": 788261
+        },
+        {
+          "name": "2226.jpg",
+          "bytes": 507785
+        }
+      ]
+    },
+    {
+      "kind": "figshare",
+      "accession": "21259464",
+      "files": [
+        {
+          "name": "cell_culture_training_set.xlsx",
+          "bytes": 57489
+        },
+        {
+          "name": "lung_dataset.xlsx",
+          "bytes": 205210
+        },
+        {
+          "name": "ubc_training_set.xlsx",
+          "bytes": 57100
+        }
+      ]
+    },
+    {
+      "kind": "figshare",
+      "accession": "21259398",
+      "files": [
+        {
+          "name": "README.md",
+          "bytes": 1825
+        },
+        {
+          "name": "_fisheye_transform.py",
+          "bytes": 4821
+        },
+        {
+          "name": "_image_widget.py",
+          "bytes": 629
+        },
+        {
+          "name": "requirements.txt",
+          "bytes": 268
+        },
+        {
+          "name": "transform.py",
+          "bytes": 8807
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T04:29:02.880400+00:00",
+  "api": {
+    "response_id": "b94006d8-7074-413d-961b-ce0e4963741a",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 15296,
+    "completion_tokens": 2051
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0097",
+            "quote": "Our best result (accuracy: 91.38%) for this dataset with the fisheye-transformation appears with a window size of 543 pixels with a focal length of 130 arbitrary units when we used ResNet50."
+          },
+          {
+            "segment_id": "S0098",
+            "quote": "Deep learning calculations were run 5–5 times on both the baseline and the fisheye transformed data. At the 0.05 level, the 7.07% difference in accuracy is significant."
+          }
+        ],
+        "rationale": "The principal result is a classification accuracy produced by training and evaluating deep-learning models on image data; a third party can re-run the computation if the images and labels are available."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0097",
+            "quote": "Our best result (accuracy: 91.38%) for this dataset with the fisheye-transformation appears with a window size of 543 pixels with a focal length of 130 arbitrary units when we used ResNet50."
+          }
+        ],
+        "rationale": "The paper's stated priority is the best classification accuracy achieved with the fisheye transformation; the first such result reported is the MCF-7 accuracy of 91.38%."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0064",
+            "quote": "Phenotypic classes and coordinates of cells This paper https://doi.org/10.6084/m9.figshare.21259464.v1"
+          },
+          {
+            "segment_id": "S0063",
+            "quote": "UBC dataset This paper https://doi.org/10.6084/m9.figshare.21259287.v1"
+          }
+        ],
+        "rationale": "The deposit listing includes image files (figshare 21259287) and spreadsheet files with phenotypic classes and coordinates (figshare 21259464), but it is not clear from the listing alone whether these are the exact raw inputs used for the reported MCF-7 accuracy or only derived/annotated data."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0092",
+            "quote": "For image classification we used Matlab R2019b and its Deep Learning Toolbox (version 13.0). This toolbox provides a framework to design or implement networks, pre-trained models, and apps. Two networks pre-trained on ImageNet, ResNet50 and InceptionV3 were utilised for transfer learning."
+          },
+          {
+            "segment_id": "S0096",
+            "quote": "The deep-learning parameters used: MiniBatchSize: 64, MaxEpochs: 100, InitialLearnRate: 3e-4, LearnRateDropFactor: 0.3, LearnRateDropPeriod: 50, Shuffle: every epoch."
+          }
+        ],
+        "rationale": "The method section describes the network architectures, training parameters, data augmentation, and evaluation procedure in sufficient detail to implement without the original code."
+      },
+      "G5": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0092",
+            "quote": "For image classification we used Matlab R2019b and its Deep Learning Toolbox (version 13.0)."
+          }
+        ],
+        "rationale": "The method requires Matlab and its Deep Learning Toolbox, which are proprietary software."
+      }
+    },
+    "exact_target": "Best classification accuracy for the MCF-7 cell culture dataset using fisheye transformation with ResNet50, window size 543 pixels, focal length 130 arbitrary units: 91.38%.",
+    "target_values": [
+      "91.38%"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The best classification accuracy achieved on the MCF-7 cell culture dataset when using the fisheye transformation with the ResNet50 model, at the optimal window size and focal length.",
+    "target_type": "performance",
+    "target_location": "Results section, subsection 'Increased classification accuracy on images of cell cultures' and STAR Methods 'Quantification and statistical analysis' subsection 'MCF-7'.",
+    "location_quotes": [
+      {
+        "segment_id": "S0035",
+        "quote": "The best performance was achieved when we applied a window size of 543 pixels (211.91 μm) with a focal length of 130 arbitrary units (where 1 unit corresponds to the size of a pixel), using the ResNet50 model. In this case, accuracy reached 91.38%, which is 7% better than that achieved when using deep learning only (84.31%)."
+      },
+      {
+        "segment_id": "S0097",
+        "quote": "Our best result (accuracy: 91.38%) for this dataset with the fisheye-transformation appears with a window size of 543 pixels with a focal length of 130 arbitrary units when we used ResNet50."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0092",
+        "quote": "For image classification we used Matlab R2019b and its Deep Learning Toolbox (version 13.0). This toolbox provides a framework to design or implement networks, pre-trained models, and apps. Two networks pre-trained on ImageNet, ResNet50 and InceptionV3 were utilised for transfer learning."
+      },
+      {
+        "segment_id": "S0096",
+        "quote": "The deep-learning parameters used: MiniBatchSize: 64, MaxEpochs: 100, InitialLearnRate: 3e-4, LearnRateDropFactor: 0.3, LearnRateDropPeriod: 50, Shuffle: every epoch."
+      },
+      {
+        "segment_id": "S0094",
+        "quote": "Three independent trials were run for each dataset."
+      },
+      {
+        "segment_id": "S0095",
+        "quote": "We applied the following standard geometry transformations on our training datasets: reflection in the left-right and a top-bottom directions, rotation, horizontal and vertical scaling."
+      }
+    ],
+    "required_files": [
+      "cell_culture_training_set.xlsx",
+      "lung_dataset.xlsx",
+      "ubc_training_set.xlsx"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "The MCF-7 dataset is from the Broad Bioimage Benchmark Collection (BBBC021) and is not included in the deposit listing. The listed files are for UBC, LC, and iWildCam datasets. The MCF-7 images and annotations are external and must be obtained separately.",
+    "leakage_files": [
+      {
+        "name": "cell_culture_training_set.xlsx",
+        "reason": "Contains phenotypic classes and coordinates for the MCF-7 dataset, which are the labels used to compute the target accuracy; serving this file would leak the target values."
+      },
+      {
+        "name": "lung_dataset.xlsx",
+        "reason": "Contains phenotypic classes and coordinates for the LC dataset, which are labels for a different dataset but could leak information about the annotation scheme and potentially the target if the target were for LC."
+      },
+      {
+        "name": "ubc_training_set.xlsx",
+        "reason": "Contains phenotypic classes and coordinates for the UBC dataset, which are labels for a different dataset but could leak information about the annotation scheme and potentially the target if the target were for UBC."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "Broad Bioimage Benchmark Collection (BBBC021)",
+        "version": "as available at https://bbbc.broadinstitute.org/BBBC021/"
+      }
+    ],
+    "comparison_metric": "The observed accuracy from re-running the method is compared to the reported accuracy of 91.38%.",
+    "numerical_agreement_criterion": "Performance metrics on the identical split: the re-run accuracy should match the reported value within the displayed rounding bin (i.e., 91.38% to two decimal places).",
+    "specification_gaps": "The exact train/validation split for the MCF-7 dataset is not specified in the paper; the random seed for data augmentation and training is not given; the exact preprocessing steps for the MCF-7 images (e.g., cropping, resizing) are described but not fully detailed; the number of training epochs and early stopping criteria are not specified.",
+    "alternatives_considered": [
+      {
+        "target": "Best accuracy for UBC dataset (98.14%)",
+        "reason": "This is a principal result but not the first reported; the paper's stated priority is the MCF-7 result, which appears first in the Results section."
+      },
+      {
+        "target": "Best accuracy for LC dataset (99.46%)",
+        "reason": "This is a principal result but not the first reported; the paper's stated priority is the MCF-7 result."
+      },
+      {
+        "target": "Best accuracy for iWildCam2020 dataset (95.48%)",
+        "reason": "This is a principal result but not the first reported; the paper's stated priority is the MCF-7 result."
+      }
+    ]
+  },
+  "eligibility": "gate_failed_delegated"
+}

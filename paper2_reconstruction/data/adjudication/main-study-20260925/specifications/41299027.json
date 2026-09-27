@@ -1,0 +1,211 @@
+{
+  "paper_id": "PMID:41299027",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "022855bb95ee8de498278e74867d7efe00c8f113e1da26cbaf0067e0bb863193",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE51425",
+      "files": [
+        {
+          "name": "GSE51425_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:11:08.931013+00:00",
+  "api": {
+    "response_id": "77125f4a-91ab-4fb6-b71c-4a42de1334df",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 30657,
+    "completion_tokens": 2513
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0035",
+            "quote": "We contextualised this analysis to the prototypical chronic IMIDs of UC and CD by utilising genotype data from a large cohort of CD ( n = 1695) and UC patients ( n = 941) from the Leuven IBD Center as the input for the workflow"
+          },
+          {
+            "segment_id": "S0174",
+            "quote": "SNP-affected proteins identified for each patient were selected as seeds to construct patient-specific SNP-propagated cellular signalling networks using a directed HotNet2 heat-propagation algorithm (Leiserson et al, 2015 ) from the implementation of Huang et al. (Huang et al, 2018 ), over a prior-knowledge network of human signalling interactions from OmniPath."
+          }
+        ],
+        "rationale": "The principal results are produced by a computational network-propagation pipeline applied to patient genotype data, which a third party can re-run given the data and method."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0051",
+            "quote": "We found 38 SNP-affected proteins in our cohort of 1695 CD patients (Dataset EV1 ). Using these proteins as seeds for the heat diffusion algorithm, we reconstructed a SNP-propagated signalling network comprising 82 proteins (nodes) and 208 signalling interactions (edges)."
+          },
+          {
+            "segment_id": "S0058",
+            "quote": "The CD SNP-propagated gene regulatory network comprised 1278 genes in total of which 8 were TFs, 1268 were target genes, and 2 were both TFs and target genes. These genes formed 1598 TF-TG interactions."
+          }
+        ],
+        "rationale": "The paper reports multiple principal quantitative network results; the first reported primary numerical endpoint is the CD SNP-propagated signalling network size (82 proteins, 208 edges), with the CD gene regulatory network size also a candidate."
+      },
+      "G3": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0162",
+            "quote": "Source of SNP data Existing Immunochip data from the Leuven IBD unit were used for the current analysis ( n = 1695 Crohn’s disease, n = 941 ulcerative colitis)."
+          },
+          {
+            "segment_id": "S0172",
+            "quote": "H3K27ac ChIP-Seq profiles from intestinal epithelial samples of suspected IBD patients, retrieved from the Gene Expression Omnibus ( https://www.ncbi.nlm.nih.gov/geo/ ) under accession number GSE51425 (Mokry et al, 2014 )"
+          }
+        ],
+        "rationale": "The deposit listing contains only GSE51425, which is an epigenetic input for SNP filtering, not the patient genotype data that are the primary analysis input. The genotype data are not listed as deposited."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0174",
+            "quote": "SNP-affected proteins identified for each patient were selected as seeds to construct patient-specific SNP-propagated cellular signalling networks using a directed HotNet2 heat-propagation algorithm (Leiserson et al, 2015 ) from the implementation of Huang et al. (Huang et al, 2018 ), over a prior-knowledge network of human signalling interactions from OmniPath."
+          },
+          {
+            "segment_id": "S0175",
+            "quote": "the algorithm creates a kernel from the degree-weighted adjacency matrix with an alpha retain parameter, which describes how much heat is retained at each node (Eq. ( 1 )). 1 K = ( 1 − α ) I ⋅ ( I − α A w ) − 1"
+          },
+          {
+            "segment_id": "S0176",
+            "quote": "α retain parameter was calculated using the following equation: 2 α = m * log 10 e d g e n u m + b Here edgenum is the number of edges in the graph m and b are parameters, which were used as proposed by Huang et al m = −0.02935302 and b = 0.74842057 (Huang et al, 2018 )."
+          },
+          {
+            "segment_id": "S0179",
+            "quote": "Here, for each patient, exactly the same number of seed genes were used to construct random SNP-propagated signalling and gene regulatory networks. After 10,000 repetitions from these random seeds, a distribution of heat was produced for each protein in the network for each patient."
+          },
+          {
+            "segment_id": "S0180",
+            "quote": "If Z was >2 then the protein was significantly affected. The Z-score was similarly calculated in the case of TF-TG analysis."
+          }
+        ],
+        "rationale": "The method is described with equations, parameters, thresholds, and database versions sufficient to implement without the original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0158",
+            "quote": "Software Cytoscape version 3.10.1 Shannon et al, 2003 Python version 3.11.5 https://www.python.org/doc/versions/ ; https://docs.python.org/3/whatsnew/3.8.html R version 4.2.2 R Core Team, 2015"
+          },
+          {
+            "segment_id": "S0182",
+            "quote": "The analytical code is accessible in the GitHub repository of the Korcsmaros lab at https://github.com/korcsmarosgroup/iSNP ."
+          }
+        ],
+        "rationale": "All listed software and databases are free/open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "CD SNP-propagated signalling network size: 82 proteins (nodes) and 208 signalling interactions (edges)",
+    "target_values": [
+      "82",
+      "208"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of proteins and signalling interactions in the SNP-propagated signalling network reconstructed for the Crohn's disease patient cohort.",
+    "target_type": "count",
+    "target_location": "Results, section 'Non-coding SNPs in CD impact downstream signalling processes involving key immune pathways, DNA repair, and autophagy'",
+    "location_quotes": [
+      {
+        "segment_id": "S0051",
+        "quote": "We found 38 SNP-affected proteins in our cohort of 1695 CD patients (Dataset EV1 ). Using these proteins as seeds for the heat diffusion algorithm, we reconstructed a SNP-propagated signalling network comprising 82 proteins (nodes) and 208 signalling interactions (edges)."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0174",
+        "quote": "SNP-affected proteins identified for each patient were selected as seeds to construct patient-specific SNP-propagated cellular signalling networks using a directed HotNet2 heat-propagation algorithm (Leiserson et al, 2015 ) from the implementation of Huang et al. (Huang et al, 2018 ), over a prior-knowledge network of human signalling interactions from OmniPath."
+      },
+      {
+        "segment_id": "S0175",
+        "quote": "the algorithm creates a kernel from the degree-weighted adjacency matrix with an alpha retain parameter, which describes how much heat is retained at each node (Eq. ( 1 )). 1 K = ( 1 − α ) I ⋅ ( I − α A w ) − 1"
+      },
+      {
+        "segment_id": "S0176",
+        "quote": "α retain parameter was calculated using the following equation: 2 α = m * log 10 e d g e n u m + b Here edgenum is the number of edges in the graph m and b are parameters, which were used as proposed by Huang et al m = −0.02935302 and b = 0.74842057 (Huang et al, 2018 )."
+      },
+      {
+        "segment_id": "S0179",
+        "quote": "Here, for each patient, exactly the same number of seed genes were used to construct random SNP-propagated signalling and gene regulatory networks. After 10,000 repetitions from these random seeds, a distribution of heat was produced for each protein in the network for each patient."
+      },
+      {
+        "segment_id": "S0180",
+        "quote": "If Z was >2 then the protein was significantly affected. The Z-score was similarly calculated in the case of TF-TG analysis."
+      }
+    ],
+    "required_files": [
+      "GSE51425_RAW.tar"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "GSE51425 is the H3K27ac ChIP-seq dataset from intestinal epithelial samples of suspected IBD patients (Mokry et al, 2014), used as an epigenetic filter for SNP selection. The primary patient genotype data (Leuven IBD Immunochip) are not in the deposit listing and are not publicly available. Other required inputs (OmniPath, DoRothEA, JASPAR, HEDD, ReMap, ENCODE) are external databases, not in the deposit.",
+    "leakage_files": [
+      {
+        "name": "filelist.txt",
+        "reason": "May list files or metadata that could reveal the target value or derived results."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "OmniPath",
+        "version": "downloaded 27/10/2021"
+      },
+      {
+        "name": "DoRothEA",
+        "version": "downloaded 27/10/2021"
+      },
+      {
+        "name": "JASPAR",
+        "version": "downloaded 10/10/2023"
+      },
+      {
+        "name": "HEDD",
+        "version": "downloaded 13/08/2023"
+      },
+      {
+        "name": "ReMap",
+        "version": "2022"
+      },
+      {
+        "name": "ENCODE",
+        "version": "hg19 pseudoreplicated peak files"
+      }
+    ],
+    "comparison_metric": "Exact match of reported counts (number of proteins and number of signalling interactions) to the solver's reconstructed network.",
+    "numerical_agreement_criterion": "Counts must match exactly: 82 proteins and 208 signalling interactions.",
+    "specification_gaps": "The exact set of IBD-associated SNPs and their fine-mapping is not fully specified; the precise filtering steps for epigenetically active regions are not fully detailed; the random seed control procedure is described but not the exact random seeds; the network propagation convergence criteria are not fully specified.",
+    "alternatives_considered": [
+      {
+        "target": "CD SNP-propagated gene regulatory network size (1278 genes, 1598 TF-TG interactions)",
+        "reason": "Reported later in the Results and is a downstream result; the signalling network size is the first principal quantitative result."
+      },
+      {
+        "target": "Number of SNP-affected proteins in CD (38)",
+        "reason": "This is an input count, not the principal network result."
+      },
+      {
+        "target": "Number of CD patient clusters (5)",
+        "reason": "This is a clustering result, not the primary network reconstruction endpoint."
+      }
+    ]
+  },
+  "eligibility": "external_reference_resource_required_not_served"
+}

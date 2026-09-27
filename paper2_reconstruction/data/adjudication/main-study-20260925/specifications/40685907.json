@@ -1,0 +1,141 @@
+{
+  "paper_id": "PMID:40685907",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "d7ca482da444b458c3b13717e730f77f648a38db50600bf7df9c421a7ccf90b1",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "bioproject",
+      "accession": "PRJEB59938",
+      "files": [
+        {
+          "name": "ERR10901426",
+          "bytes": 25789952
+        },
+        {
+          "name": "ERR10901427",
+          "bytes": 23575517
+        },
+        {
+          "name": "ERR10901428",
+          "bytes": 8130696
+        },
+        {
+          "name": "ERR10901429",
+          "bytes": 36539644
+        },
+        {
+          "name": "ERR10901430",
+          "bytes": 16104751
+        },
+        {
+          "name": "ERR10901431",
+          "bytes": 14693192
+        },
+        {
+          "name": "ERR10901432",
+          "bytes": 14278951
+        },
+        {
+          "name": "ERR10901433",
+          "bytes": 7878499
+        },
+        {
+          "name": "ERR10901434",
+          "bytes": 23469559
+        },
+        {
+          "name": "ERR10901435",
+          "bytes": 22102775
+        },
+        {
+          "name": "ERR10901436",
+          "bytes": 13414548
+        },
+        {
+          "name": "ERR10901437",
+          "bytes": 25328340
+        },
+        {
+          "name": "ERR10901438",
+          "bytes": 28620356
+        },
+        {
+          "name": "ERR10901439",
+          "bytes": 22923151
+        },
+        {
+          "name": "ERR10901440",
+          "bytes": 11077110
+        },
+        {
+          "name": "ERR10901441",
+          "bytes": 26482855
+        },
+        {
+          "name": "ERR12719443",
+          "bytes": 23759198
+        },
+        {
+          "name": "ERR12719447",
+          "bytes": 21842873
+        },
+        {
+          "name": "ERR12719450",
+          "bytes": 20688758
+        },
+        {
+          "name": "ERR12719454",
+          "bytes": 19543724
+        },
+        {
+          "name": "ERR12719456",
+          "bytes": 17664196
+        },
+        {
+          "name": "ERR12719464",
+          "bytes": 20097903
+        },
+        {
+          "name": "ERR12719472",
+          "bytes": 24289750
+        },
+        {
+          "name": "ERR12719474",
+          "bytes": 20921598
+        },
+        {
+          "name": "ERR12719476",
+          "bytes": 20848780
+        }
+      ]
+    },
+    {
+      "kind": "zenodo",
+      "accession": "15766199",
+      "files": [
+        {
+          "name": "BergmanOded/Yedoma_GCB2025-Yedoma_GCB2025.zip",
+          "bytes": 8305880
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:12:59.557590+00:00",
+  "api": {
+    "response_id": "bdddef39-3c8f-43a0-b28e-7042db2a9c54",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 26724,
+    "completion_tokens": 1873
+  },
+  "specification": null,
+  "eligibility": "specification_not_obtained",
+  "error": {
+    "type": "ValueError",
+    "detail": "PMID:40685907 G5: quote not found verbatim in S0058"
+  }
+}

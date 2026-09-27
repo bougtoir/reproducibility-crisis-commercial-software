@@ -1,0 +1,142 @@
+{
+  "paper_id": "PMID:41677189",
+  "sampling_stratum": "Computational_Science",
+  "amendment": "AMEND-2026-09-25-06",
+  "study": "MAIN-STUDY-2026-09-25",
+  "frozen_at_utc": "2026-09-27T04:50:02.114671+00:00",
+  "investigator_verification": "pending",
+  "exact_target": "Number of differentially expressed genes between VWAT-HFD and SWAT-HFD: 1374 upregulated and 1291 downregulated genes in VWAT-HFD compared to SWAT-HFD.",
+  "target_location": "Results, Section 3.1, Differentially expressed gene analysis; Figure 3E",
+  "location_evidence": [
+    {
+      "segment_id": "S0052",
+      "quote": "Based on this criterion, we have 1374 upregulated and 1291 downregulated genes in VWAT‐HFD compared to SWAT‐HFD (Figure 3E )."
+    },
+    {
+      "segment_id": "S0060",
+      "quote": "Among mice fed HFD, we identified 1374 VWAT upregulated and 1291 downregulated genes compared to SWAT (E)."
+    }
+  ],
+  "blind_target": "Number of genes identified as upregulated and downregulated in visceral white adipose tissue (VWAT) compared to subcutaneous white adipose tissue (SWAT) among mice fed a high-fat diet, using the ERSAtool differential expression analysis.",
+  "target_type": "count",
+  "required_inputs": [
+    {
+      "name": "GSE273569_Males_Unnormalized_Count_Matrix.txt.gz",
+      "served_as": "deposit/GSE273569/GSE273569_Males_Unnormalized_Count_Matrix.txt.gz",
+      "identifier": "geo:GSE273569:GSE273569_Males_Unnormalized_Count_Matrix.txt.gz",
+      "role": "deposited_analysis_input",
+      "source_path": "/home/ubuntu/paper2_evidence/main-inputs-20260925/41677189/geo/057f74654a240675841a1cef5fd5877b202e2d1e8240cbd2951e50743f1ef995/body",
+      "bytes": 367652,
+      "sha256": "ea879d883c5cf2ade76b55220384afec98556af0faee0220ad04e8ee7a3c30a2",
+      "target_value_tokens_found": [],
+      "result_like_header_columns": []
+    }
+  ],
+  "excluded_inputs": [],
+  "allowed_resources": [
+    "worker image paper2-science:pilot-2026-09-25: Python scientific stack, R packages and PATH tools",
+    "served publication text and served deposited inputs only"
+  ],
+  "blocked_original_artifacts": [
+    "original implementation, repositories, notebooks, scripts",
+    "processed results, supplementary result tables, figures of the study",
+    "any author communication"
+  ],
+  "comparison_metric": "Exact match of the reported upregulated and downregulated gene counts.",
+  "numerical_agreement_criterion": "Counts must match exactly: 1374 upregulated and 1291 downregulated genes.",
+  "conclusion_criterion": "Conclusion agreement is scored only when the numerical criterion is met or when the publication states a directional claim that the observed value can be compared with; otherwise the conclusion component is not_assessable.",
+  "resource_ceiling": {
+    "slots_per_paper": 3,
+    "wall_seconds_per_slot": 14400,
+    "step_seconds": 3600,
+    "provider_tokens_per_slot": 1500000,
+    "tool_calls_per_slot": 40,
+    "max_completion_tokens": 8192,
+    "worker_cpus": 1,
+    "worker_memory": "3g",
+    "worker_work_storage": "disk-backed /work, exported artifacts capped at 64 MiB",
+    "network": "none",
+    "image": "paper2-science:pilot-2026-09-25"
+  },
+  "stopping_rule": [
+    "final report submitted by the slot",
+    "wall, step, token, tool-call or output ceiling reached (recorded as the stop reason)",
+    "required input absent from the served package: report null observation with F01/F18",
+    "specification gap that cannot be closed from the served text: report null with F04-F08",
+    "controller or worker error: recorded as harness stop, never as an outcome",
+    "no rerun, no extension and no rule change after the slot starts"
+  ],
+  "specification_gaps": "The exact sample metadata (which samples are VWAT-HFD and SWAT-HFD) is not in the deposit listing; the paper does not specify whether independent filtering or other DESeq2 options were used; the exact DESeq2 version is not stated; the treatment of low-count genes beyond the 1-count filter is not fully specified.",
+  "gate_reviews": {
+    "G1": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0052",
+          "quote": "Based on this criterion, we have 1374 upregulated and 1291 downregulated genes in VWAT‐HFD compared to SWAT‐HFD (Figure 3E )."
+        },
+        {
+          "segment_id": "S0047",
+          "quote": "We downloaded the unnormalized count and sample matrix files from the Gene Expression Omnibus (GEO). We provided those files as a training dataset (Supporting Information 3 and 4 )."
+        }
+      ],
+      "rationale": "The principal result is a count of DEGs produced by a DESeq2 computation on a public GEO count matrix that a third party can re-run."
+    },
+    "G2": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0052",
+          "quote": "Based on this criterion, we have 1374 upregulated and 1291 downregulated genes in VWAT‐HFD compared to SWAT‐HFD (Figure 3E )."
+        },
+        {
+          "segment_id": "S0060",
+          "quote": "Among mice fed HFD, we identified 1374 VWAT upregulated and 1291 downregulated genes compared to SWAT (E)."
+        }
+      ],
+      "rationale": "The paper's stated primary goal is to evaluate DEGs in APCs; the first reported quantitative endpoint is the DEG count in the HFD comparison."
+    },
+    "G3": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0047",
+          "quote": "We downloaded the unnormalized count and sample matrix files from the Gene Expression Omnibus (GEO). We provided those files as a training dataset (Supporting Information 3 and 4 )."
+        },
+        {
+          "segment_id": "S0069",
+          "quote": "Supporting Information 3. Example raw count matrix file (GSE273569_Males_Unnormalized_Count_Matrix.txt)."
+        }
+      ],
+      "rationale": "The deposited GSE273569 file is the unnormalized count matrix used as input, not an output of the DEG analysis."
+    },
+    "G4": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0027",
+          "quote": "Low‐expressed genes are filtered using a minimum threshold of 1 count per sample. The DESeq2 core algorithm then estimates library size factors of each sample, calculates dispersion values, and fits negative binomial generalized linear models for each gene, storing results for visualization and analysis."
+        },
+        {
+          "segment_id": "S0052",
+          "quote": "We identified differentially expressed genes between VWAT‐HFD and SWAT‐HFD that exhibit at least 1.5‐fold differences with an adjusted p ‐value of 0.05."
+        }
+      ],
+      "rationale": "The method (DESeq2 with 1-count filter, 1.5-fold and adjusted p<0.05 thresholds) is described sufficiently to implement without the original code."
+    },
+    "G5": {
+      "value": "yes",
+      "quotes": [
+        {
+          "segment_id": "S0034",
+          "quote": "ERSAtool requires R (version 4.1 or later), RStudio (recommended), and an internet connection for initial package installation and retrieval of GEO data."
+        },
+        {
+          "segment_id": "S0008",
+          "quote": "ERSAtool is available for free at https://github.com/SuzukiLabTAMU/ERSAtool ."
+        }
+      ],
+      "rationale": "The analysis uses R/Bioconductor packages (DESeq2, clusterProfiler) that are free and open-source; no proprietary software is required."
+    }
+  }
+}

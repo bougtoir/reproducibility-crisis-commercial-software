@@ -1,0 +1,162 @@
+{
+  "paper_id": "PMID:32238776",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "ef24cd3b3ad9982987838f18a0178f1c4e9aa9fc7257ae125d1bf956b077006e",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "bioproject",
+      "accession": "PRJNA522349",
+      "files": [
+        {
+          "name": "SRR8575422",
+          "bytes": 1072391344
+        },
+        {
+          "name": "SRR8575423",
+          "bytes": 939387215
+        },
+        {
+          "name": "SRR8575424",
+          "bytes": 1068037508
+        },
+        {
+          "name": "SRR8575425",
+          "bytes": 592440052
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:13:14.220521+00:00",
+  "api": {
+    "response_id": "b681c462-a3da-4101-9ff3-a63ce4ff9f39",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 6118,
+    "completion_tokens": 1479
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0014",
+            "quote": "The processing of raw reads clustered at 97% identity revealed 5,881 and 2,417 bacterial operational taxonomic units (OTUs), whereas 258 and 172 fungal OTUs were identified for PM and TM, respectively."
+          },
+          {
+            "segment_id": "S0013",
+            "quote": "The extracted DNA was amplified using primers targeting the V3-V4 region of the bacterial 16S rRNA gene (primers, 341F and 518R) and fungal internal transcribed spacer (primers, ITS5F and ITS2R) [ 11 , 12 ]. Sequencing was performed using the Illumina"
+          }
+        ],
+        "rationale": "The principal result (OTU counts and diversity indices) is produced by computational processing of 16S/ITS amplicon sequencing data, which a third party can re-run from the deposited raw reads."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0014",
+            "quote": "The processing of raw reads clustered at 97% identity revealed 5,881 and 2,417 bacterial operational taxonomic units (OTUs), whereas 258 and 172 fungal OTUs were identified for PM and TM, respectively."
+          },
+          {
+            "segment_id": "S0016",
+            "quote": "The Shannon and Simpson diversity indices, and richness estimator (Chao) of bacteria and fungi were relatively higher for"
+          }
+        ],
+        "rationale": "The paper's stated priority is the OTU counts and diversity indices; the first quantitative result reported is the OTU counts in S0014, making it the principal target."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0014",
+            "quote": "Resulted sequence data were deposited in SRA archives under accession number PRJNA522349."
+          },
+          {
+            "segment_id": "S0029",
+            "quote": "The raw reads were deposited in SRA archives and can be accessed by accession"
+          }
+        ],
+        "rationale": "The deposited files are raw sequencing reads (SRR accessions under PRJNA522349), which are the analysis inputs for OTU clustering, not the outputs."
+      },
+      "G4": {
+        "value": "uncertain",
+        "quotes": [
+          {
+            "segment_id": "S0014",
+            "quote": "The raw reads were processed as described elsewhere [ 13 ]."
+          },
+          {
+            "segment_id": "S0013",
+            "quote": "The extracted DNA was amplified using primers targeting the V3-V4 region of the bacterial 16S rRNA gene (primers, 341F and 518R) and fungal internal transcribed spacer (primers, ITS5F and ITS2R) [ 11 , 12 ]."
+          }
+        ],
+        "rationale": "The method for OTU clustering is not fully described in the paper; it refers to 'described elsewhere [13]', so implementation without the original code is uncertain."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0014",
+            "quote": "The raw reads were processed as described elsewhere [ 13 ]."
+          }
+        ],
+        "rationale": "The method involves standard bioinformatics tools (e.g., OTU clustering) that are freely available; no proprietary software is mentioned."
+      }
+    },
+    "exact_target": "Number of bacterial operational taxonomic units (OTUs) for PM and TM: 5,881 and 2,417; number of fungal OTUs for PM and TM: 258 and 172.",
+    "target_values": [
+      "5,881",
+      "2,417",
+      "258",
+      "172"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The number of bacterial and fungal operational taxonomic units (OTUs) identified for papaya mealybug (PM) and two-tailed mealybug (TM) after processing raw sequencing reads clustered at 97% identity.",
+    "target_type": "count",
+    "target_location": "Results section, paragraph describing raw read processing (S0014).",
+    "location_quotes": [
+      {
+        "segment_id": "S0014",
+        "quote": "The processing of raw reads clustered at 97% identity revealed 5,881 and 2,417 bacterial operational taxonomic units (OTUs), whereas 258 and 172 fungal OTUs were identified for PM and TM, respectively."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0013",
+        "quote": "The extracted DNA was amplified using primers targeting the V3-V4 region of the bacterial 16S rRNA gene (primers, 341F and 518R) and fungal internal transcribed spacer (primers, ITS5F and ITS2R) [ 11 , 12 ]. Sequencing was performed using the Illumina"
+      },
+      {
+        "segment_id": "S0014",
+        "quote": "The raw reads were processed as described elsewhere [ 13 ]."
+      }
+    ],
+    "required_files": [
+      "SRR8575422",
+      "SRR8575423",
+      "SRR8575424",
+      "SRR8575425"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "Raw sequencing reads from SRA under BioProject PRJNA522349. The four runs (SRR8575422-SRR8575425) correspond to PM and TM samples for 16S and ITS amplicon sequencing. No version or additional identifiers provided.",
+    "leakage_files": [],
+    "required_public_references": [],
+    "comparison_metric": "Exact match of reported OTU counts.",
+    "numerical_agreement_criterion": "Counts must match exactly as printed.",
+    "specification_gaps": "The paper does not specify the exact bioinformatics pipeline, clustering algorithm, or reference database used for OTU picking; it refers to 'described elsewhere [13]'. The assignment of runs to PM/TM and 16S/ITS is not explicitly stated in the paper.",
+    "alternatives_considered": [
+      {
+        "target": "Shannon and Simpson diversity indices from Table 1",
+        "reason": "These are secondary results reported after the OTU counts, and the paper's stated priority is the OTU counts."
+      },
+      {
+        "target": "Relative abundance of Proteobacteria classes (e.g., Betaproteobacteria 83.41% in PM)",
+        "reason": "These are descriptive results from figures, not the principal quantitative endpoint."
+      }
+    ]
+  },
+  "eligibility": "specifiable"
+}

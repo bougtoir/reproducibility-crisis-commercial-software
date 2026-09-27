@@ -1,0 +1,208 @@
+{
+  "paper_id": "PMID:34495251",
+  "sampling_stratum": "Biomedical_Basic",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "54f150e5222644ea49ba549698015b010c603c4318ff102111ee65d800a78857",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "geo",
+      "accession": "GSE47472",
+      "files": [
+        {
+          "name": "GSE47472_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "GSE47472_Rawdata_GEO_AAA_Neck.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE57691",
+      "files": [
+        {
+          "name": "GSE57691_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "GSE57691_non-normalized_data.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "kind": "geo",
+      "accession": "GSE98278",
+      "files": [
+        {
+          "name": "GSE98278_Non-normalized_data.txt.gz",
+          "bytes": 0
+        },
+        {
+          "name": "GSE98278_RAW.tar",
+          "bytes": 0
+        },
+        {
+          "name": "filelist.txt",
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "specified_at_utc": "2026-09-27T03:48:37.194947+00:00",
+  "api": {
+    "response_id": "79668565-72d2-4b62-96b4-608befb2942e",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 10137,
+    "completion_tokens": 1540
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0004",
+            "quote": "We evaluated the composition of immune infiltrates through microenvironment cell populations (MCP)-counter."
+          },
+          {
+            "segment_id": "S0019",
+            "quote": "The MCP-counter package in R ( https://github.com ) was applied to evaluate the immune infiltration of each tissue sample from transcriptomic data."
+          }
+        ],
+        "rationale": "The principal result is produced by MCP-counter computation on public microarray data, which a third party can re-run."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0033",
+            "quote": "the red module had a strong positive correlation with the infiltrating levels of T cells and cytotoxic lymphocytes (r=0.90 and 0.84 respectively, all P<0.05)"
+          }
+        ],
+        "rationale": "One principal quantitative result can be named: the correlation coefficients of the red module with T cells and cytotoxic lymphocytes."
+      },
+      "G3": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0018",
+            "quote": "Three chips ( GSE47472 , GSE57691 , and GSE98278 ) related to AAA were annotated with Illumina HumanHT-12 v4.0 expression bead chip"
+          }
+        ],
+        "rationale": "The listed GEO deposit files are the raw/non-normalized microarray inputs used for the analysis."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0019",
+            "quote": "the original datasets underwent background correction and quantile normalization by “Limma” package"
+          },
+          {
+            "segment_id": "S0021",
+            "quote": "Gene co-expression network was constructed by the weighted gene correlation network analysis (WGCNA) R software package"
+          },
+          {
+            "segment_id": "S0022",
+            "quote": "The criterion of co-expression weight >2.5 was used to select the candidate network."
+          }
+        ],
+        "rationale": "The published method describes normalization, WGCNA construction, and module selection sufficiently to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0025",
+            "quote": "All analyses were conducted with R version 3.5 ( https://www.r-project.org/ ) and its several open packages."
+          }
+        ],
+        "rationale": "The method uses R and open-source packages; no proprietary software is required."
+      }
+    },
+    "exact_target": "Correlation of the red WGCNA module with infiltrating levels of T cells and cytotoxic lymphocytes in AAA, reported as r=0.90 and 0.84 respectively (all P<0.05).",
+    "target_values": [
+      "0.90",
+      "0.84",
+      "P<0.05"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The correlation between the most relevant WGCNA module and the infiltrating levels of T cells and cytotoxic lymphocytes in AAA tissues.",
+    "target_type": "scalar",
+    "target_location": "Results, subsection 'AAA-related gene co-expression network construction', Figure 2C",
+    "location_quotes": [
+      {
+        "segment_id": "S0033",
+        "quote": "the red module had a strong positive correlation with the infiltrating levels of T cells and cytotoxic lymphocytes (r=0.90 and 0.84 respectively, all P<0.05) ( Figure 2C )"
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0018",
+        "quote": "Three chips ( GSE47472 , GSE57691 , and GSE98278 ) related to AAA were annotated with Illumina HumanHT-12 v4.0 expression bead chip"
+      },
+      {
+        "segment_id": "S0019",
+        "quote": "the original datasets underwent background correction and quantile normalization by “Limma” package"
+      },
+      {
+        "segment_id": "S0019",
+        "quote": "The MCP-counter package in R ( https://github.com ) was applied to evaluate the immune infiltration of each tissue sample from transcriptomic data."
+      },
+      {
+        "segment_id": "S0021",
+        "quote": "Gene co-expression network was constructed by the weighted gene correlation network analysis (WGCNA) R software package"
+      },
+      {
+        "segment_id": "S0022",
+        "quote": "The criterion of co-expression weight >2.5 was used to select the candidate network."
+      },
+      {
+        "segment_id": "S0022",
+        "quote": "We calculated the correlation between modules and AAA risk-related immune infiltrating components."
+      }
+    ],
+    "required_files": [
+      "GSE47472_RAW.tar",
+      "GSE57691_RAW.tar",
+      "GSE98278_RAW.tar"
+    ],
+    "required_files_not_in_listing": [],
+    "input_notes": "GEO accessions GSE47472, GSE57691, GSE98278; Illumina HumanHT-12 v4.0 expression bead chip. The RAW.tar files contain raw data; non-normalized data files are also listed but RAW.tar is sufficient for re-running normalization.",
+    "leakage_files": [
+      {
+        "name": "GSE47472_Rawdata_GEO_AAA_Neck.txt.gz",
+        "reason": "Contains processed expression data that may include normalized values used to derive the target correlation."
+      },
+      {
+        "name": "GSE57691_non-normalized_data.txt.gz",
+        "reason": "Contains non-normalized expression data that may be used to compute the target correlation."
+      },
+      {
+        "name": "GSE98278_Non-normalized_data.txt.gz",
+        "reason": "Contains non-normalized expression data that may be used to compute the target correlation."
+      }
+    ],
+    "required_public_references": [],
+    "comparison_metric": "The reported correlation coefficients (r) are compared to the solver's computed correlation coefficients between the red module eigengene and MCP-counter scores for T cells and cytotoxic lymphocytes.",
+    "numerical_agreement_criterion": "Scalars within displayed rounding bin: r values rounded to two decimal places (0.90 and 0.84).",
+    "specification_gaps": "The exact method for selecting the red module (e.g., module-trait correlation threshold) is not fully specified; the MCP-counter version and parameters are not given; the WGCNA soft threshold selection details are incomplete; the handling of batch effects across datasets is not fully described.",
+    "alternatives_considered": "Other candidate targets included the differential infiltration P-values (Figure 1C) and the core gene correlation table (Table 2), but these are secondary to the principal module-trait correlation result."
+  },
+  "eligibility": "specifiable"
+}

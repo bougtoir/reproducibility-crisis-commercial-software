@@ -1,0 +1,154 @@
+{
+  "paper_id": "PMID:37935364",
+  "sampling_stratum": "Environmental_Earth",
+  "amendment": "AMEND-2026-09-25-06",
+  "article_source_sha256": "f1860ead5ed07c09dafc3da38706ad9b5aff8261da1857d8b22efcf241efd363",
+  "assessor": "delegated_model_specifier",
+  "investigator_verification": "pending",
+  "human_adjudication": "pending",
+  "listing": [
+    {
+      "kind": "dryad",
+      "accession": "rn8pk0phg",
+      "files": []
+    }
+  ],
+  "specified_at_utc": "2026-09-27T06:11:39.413728+00:00",
+  "api": {
+    "response_id": "47a31856-d0fc-4eed-bd32-362fa5a1a72e",
+    "reported_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "prompt_tokens": 16911,
+    "completion_tokens": 1740
+  },
+  "specification": {
+    "gates": {
+      "G1": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0039",
+            "quote": "We leveraged this dataset to identify regional and seasonal variation in thermal sensitivity for 21 species, fitting SDMs within a spatio-temporal exploratory model (STEM) wrapper [ 34 , 35 ] ( figure 2 )."
+          },
+          {
+            "segment_id": "S0060",
+            "quote": "For each species, we fitted a set of dynamic SDMs using RF ( ranger package; [ 42 ]), a flexible machine learning method used in a number of species distribution modelling problems [ 43 ]"
+          }
+        ],
+        "rationale": "The principal results are produced by computational modeling (random forest SDMs within STEM) on eBird observational data, which a third party could re-run if data were available."
+      },
+      "G2": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0092",
+            "quote": "Bird typically exhibited greater peaks (mean sample difference = 14.74°C ±1.01) and narrower ranges (−2.69°C ± 0.43) in summer than in winter."
+          }
+        ],
+        "rationale": "One principal quantitative result is clearly stated: the mean seasonal difference in thermal peak (14.74°C ±1.01) and thermal range (−2.69°C ±0.43)."
+      },
+      "G3": {
+        "value": "no",
+        "quotes": [
+          {
+            "segment_id": "S0123",
+            "quote": "The code supporting the results is available from Dryad ( doi:10.5061/dryad.rn8pk0phg ) [ 56 ] and the data are accessible via http://www.ebird.org ."
+          },
+          {
+            "segment_id": "S0082",
+            "quote": "Code associated with the study is available via Dryad ( https://doi.org/10.5061/dryad.rn8pk0phg ) [ 56 ] and data is available via www.ebird.org ."
+          }
+        ],
+        "rationale": "The Dryad deposit contains code, not the analysis input data; the data are only accessible via eBird, which is not a static deposit. The deposit listing shows no files."
+      },
+      "G4": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0062",
+            "quote": "We used STEMs to generate a randomized ensemble of partially overlapping regional models consisting of 10° × 10° cells (stixels) across our spatial extent ( figure 2 ) and fitted independent RF models within each cell with a minimum of 20 000 checklists"
+          },
+          {
+            "segment_id": "S0070",
+            "quote": "We derived two measures of thermal sensitivity from partial dependence plots fitted for temperature–occurrence relationships within each stixel: (1) thermal peak, the value of daily temperature at which predicted occurrence is maximized; (2) thermal range, equal to the difference"
+          }
+        ],
+        "rationale": "The method is described in sufficient detail (data filtering, model type, stixel size, partial dependence, thermal peak/range definitions) to implement without original code."
+      },
+      "G5": {
+        "value": "yes",
+        "quotes": [
+          {
+            "segment_id": "S0060",
+            "quote": "For each species, we fitted a set of dynamic SDMs using RF ( ranger package; [ 42 ]), a flexible machine learning method used in a number of species distribution modelling problems [ 43 ]"
+          }
+        ],
+        "rationale": "The method uses R packages (ranger, tidyverse, etc.) which are free and open-source; no proprietary software is required."
+      }
+    },
+    "exact_target": "Mean seasonal difference in thermal peak (summer minus winter) across 21 bird species: 14.74°C ±1.01 (s.e.)",
+    "target_values": [
+      "14.74°C ±1.01"
+    ],
+    "target_values_located_verbatim": true,
+    "blind_target": "The mean difference in thermal peak between summer and winter seasons across the studied bird species.",
+    "target_type": "scalar",
+    "target_location": "Results, section (b) 'Do birds vary in thermal sensitivity across summer and winter seasons?'",
+    "location_quotes": [
+      {
+        "segment_id": "S0092",
+        "quote": "Bird typically exhibited greater peaks (mean sample difference = 14.74°C ±1.01) and narrower ranges (−2.69°C ± 0.43) in summer than in winter."
+      }
+    ],
+    "method_quotes": [
+      {
+        "segment_id": "S0062",
+        "quote": "We used STEMs to generate a randomized ensemble of partially overlapping regional models consisting of 10° × 10° cells (stixels) across our spatial extent ( figure 2 ) and fitted independent RF models within each cell with a minimum of 20 000 checklists"
+      },
+      {
+        "segment_id": "S0070",
+        "quote": "We derived two measures of thermal sensitivity from partial dependence plots fitted for temperature–occurrence relationships within each stixel: (1) thermal peak, the value of daily temperature at which predicted occurrence is maximized; (2) thermal range, equal to the difference"
+      },
+      {
+        "segment_id": "S0074",
+        "quote": "To estimate seasonal variation, we recorded the mean stixel-level difference in thermal peak or range between seasons and computed a Welch's two-sample t -test [ 49 ] to evaluate whether the difference in thermal peak or range between winter and summer is statistically different."
+      }
+    ],
+    "required_files": [],
+    "required_files_not_in_listing": [],
+    "input_notes": "The analysis inputs are eBird observational data (2004–2018) and environmental covariates (MODIS, Daymet, Worldclim, GMTED2010). These are not included in the Dryad deposit (rn8pk0phg), which contains only code. The data are accessible via eBird but not as a static deposit.",
+    "leakage_files": [
+      {
+        "name": "Dryad deposit rn8pk0phg",
+        "reason": "Contains code that may generate the target value or derived result tables."
+      }
+    ],
+    "required_public_references": [
+      {
+        "name": "eBird",
+        "version": "2004-2018"
+      },
+      {
+        "name": "MODIS Land Cover Type (MCD12Q1)",
+        "version": "6"
+      },
+      {
+        "name": "Daymet",
+        "version": "3"
+      },
+      {
+        "name": "WorldClim",
+        "version": "2"
+      },
+      {
+        "name": "GMTED2010",
+        "version": "2010"
+      }
+    ],
+    "comparison_metric": "The reported mean difference (14.74°C) and its standard error (±1.01) are compared to the solver's computed mean seasonal difference in thermal peak across species.",
+    "numerical_agreement_criterion": "Scalars within displayed rounding bin: the computed mean difference should round to 14.74°C and the standard error to 1.01.",
+    "specification_gaps": "The exact set of stixels used, the precise filtering steps for eBird data, the random seed for model fitting, and the method for aggregating stixel-level differences to a species-level mean are not fully specified.",
+    "alternatives_considered": "Other candidate targets include the mean seasonal difference in thermal range (−2.69°C ±0.43) and the spatial variation slopes (e.g., summer mean β = 0.59 ±0.09). The thermal peak difference was chosen as it is the first principal quantitative result reported in the Results section and is a clear scalar endpoint."
+  },
+  "eligibility": "gate_failed_delegated"
+}
