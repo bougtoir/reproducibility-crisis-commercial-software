@@ -9,6 +9,7 @@ from pathlib import Path
 from paper2.core import FIELDS, Row, paper_registry, read_csv, sha256, snapshot, wilson, write_csv
 from paper2.frame import confirm_frame
 from paper2.main_analysis import analyse, write_tables
+from paper2.verification_layer import IMPORT_DIR, Importer, verification_values, without_d_status
 
 ROOT = Path(__file__).resolve().parents[2]
 REPO = ROOT.parent
@@ -345,13 +346,16 @@ def build() -> dict[str, object]:
         }
         for key, value in metrics.items()
     ]
-    write_csv(results / "manuscript_values.csv", values, list(values[0]))
     analysis = analyse()
     (results / "main_analysis.json").write_text(json.dumps(analysis, indent=2) + "\n")
     write_tables(analysis)
     denominators = analysis["denominators"]
     if not isinstance(denominators, dict):
         raise ValueError("main analysis denominators missing")
+    audit = Importer(IMPORT_DIR).run()
+    values.extend(verification_values(audit, analysis))
+    write_csv(results / "manuscript_values.csv", values, list(values[0]))
+    without_d_status(audit, analysis)
     status: dict[str, object] = {
         "study_status": "MAIN_STUDY_SEALED_DELEGATED_ADJUDICATION_NOT_SUBMISSION_READY",
         "corpus_identity": "VOR-linked deposited corpus located and commit pinned",
@@ -392,6 +396,10 @@ def build() -> dict[str, object]:
         ),
         "human_validation": (
             "NOT_COMPLETED (human adjudication and investigator verification pending)"
+        ),
+        "verification_adjusted_layer": (
+            "A/B/C/E AI-assisted evidence review imported as a separate provisional sensitivity "
+            "layer (results/verification_adjusted/); investigator sign-off absent; D excluded"
         ),
         "firewall_harness": (
             "custodian_broker_telemetry_dependency_freeze_controls_pass; "

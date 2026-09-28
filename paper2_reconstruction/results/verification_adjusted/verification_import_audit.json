@@ -1,0 +1,430 @@
+{
+  "layer": "verification_adjusted_sensitivity_layer",
+  "review_role": "AI-assisted independent evidence review, provisional, for investigator approval",
+  "human_participant_validation": "Not human-participant validation (Section D); D remains pending and external.",
+  "investigator_signoff": "not recorded; fields left empty pending explicit investigator approval",
+  "source_files_sha256": {
+    "PaperII_A_30slots_independent_review_PROPOSED.csv": "4081edbc6f1d3a7ea2d5767c8d0e23f50a194bb2d6f42b3dcd596f7bf871d9f7",
+    "PaperII_B_90papers_investigator_verification_PROPOSED.csv": "7b718eb949a9cf6aed6a5615f1793e1fcee3c359624c9d1dbab78d0aa9c79464",
+    "PaperII_C_G1G5_pilot_candidate_verification_PROPOSED.csv": "3c67925b7608aa6470c49f93c6547e242d550a734f425b3cb653758abd3620fa",
+    "PaperII_E_reveal_review_PROPOSED.csv": "ea9674b146e33eab366416dc4c18113b2ef19dceadfb314c3830dd864519375e"
+  },
+  "frozen_inputs_sha256": {
+    "blind_outcome": "350a0e7dcedbb74ccad2472c642318c87cc7d272f1b6c88186a1419dc858ea5a",
+    "primary_adjudication": "6fd42b8964e055606cbd24ebddb44f42fa09147fa80bfa2d5bcaa161766c5b28",
+    "reveal_ledger": "358a46e055368f9ecbb5efe4bc75ee486871968d462747c11f50e9dbb443489f",
+    "main_cohort": "c93708937c2ccf7f67d2e9c79b30db549caf6112ef7e5f82dd93e2becb286b4f"
+  },
+  "frozen_inputs_modified": false,
+  "rows": {
+    "A": 30,
+    "B": 90,
+    "C": 25,
+    "E": 130
+  },
+  "evidence_references": {
+    "total": 698,
+    "by_resolution": {
+      "descriptor": 132,
+      "evidence_package_file": 305,
+      "repository_file": 250,
+      "segment_id": 11
+    },
+    "unresolved": 0,
+    "evidence_package_root": "/home/ubuntu/paper2_evidence/PaperII_independent_adjudication_LIGHT",
+    "note": "package-relative references were resolved against the local private evidence package when mounted; otherwise they are recorded as evidence_package_not_mounted"
+  },
+  "validation_errors": [],
+  "A": {
+    "slots_reviewed": 30,
+    "slots_mechanical_supported": 27,
+    "slots_proposed_changed": 3,
+    "papers": [
+      {
+        "paper_id": "PMID:33072212",
+        "frozen_successful_slots": "0/3",
+        "adjusted_successful_slots": "0/3",
+        "frozen_majority": "failure",
+        "adjusted_majority": "failure",
+        "adjusted_strict": "failure",
+        "adjusted_permissive": "failure",
+        "changed": "no"
+      },
+      {
+        "paper_id": "PMID:34495251",
+        "frozen_successful_slots": "0/3",
+        "adjusted_successful_slots": "0/3",
+        "frozen_majority": "failure",
+        "adjusted_majority": "failure",
+        "adjusted_strict": "failure",
+        "adjusted_permissive": "failure",
+        "changed": "no"
+      },
+      {
+        "paper_id": "PMID:34731224",
+        "frozen_successful_slots": "0/3",
+        "adjusted_successful_slots": "0/3",
+        "frozen_majority": "failure",
+        "adjusted_majority": "failure",
+        "adjusted_strict": "failure",
+        "adjusted_permissive": "failure",
+        "changed": "no"
+      },
+      {
+        "paper_id": "PMID:39830509",
+        "frozen_successful_slots": "0/3",
+        "adjusted_successful_slots": "0/3",
+        "frozen_majority": "failure",
+        "adjusted_majority": "failure",
+        "adjusted_strict": "failure",
+        "adjusted_permissive": "failure",
+        "changed": "no"
+      },
+      {
+        "paper_id": "PMID:39895948",
+        "frozen_successful_slots": "0/3",
+        "adjusted_successful_slots": "0/3",
+        "frozen_majority": "failure",
+        "adjusted_majority": "failure",
+        "adjusted_strict": "failure",
+        "adjusted_permissive": "failure",
+        "changed": "no"
+      },
+      {
+        "paper_id": "PMID:40956867",
+        "frozen_successful_slots": "0/3",
+        "adjusted_successful_slots": "0/3",
+        "frozen_majority": "failure",
+        "adjusted_majority": "failure",
+        "adjusted_strict": "failure",
+        "adjusted_permissive": "failure",
+        "changed": "no"
+      },
+      {
+        "paper_id": "PMID:41091855",
+        "frozen_successful_slots": "0/3",
+        "adjusted_successful_slots": "0/3",
+        "frozen_majority": "failure",
+        "adjusted_majority": "failure",
+        "adjusted_strict": "failure",
+        "adjusted_permissive": "failure",
+        "changed": "no"
+      },
+      {
+        "paper_id": "PMID:41472739",
+        "frozen_successful_slots": "0/3",
+        "adjusted_successful_slots": "0/3",
+        "frozen_majority": "failure",
+        "adjusted_majority": "failure",
+        "adjusted_strict": "failure",
+        "adjusted_permissive": "failure",
+        "changed": "no"
+      },
+      {
+        "paper_id": "PMID:41563087",
+        "frozen_successful_slots": "1/3",
+        "adjusted_successful_slots": "2/3",
+        "frozen_majority": "failure",
+        "adjusted_majority": "success",
+        "adjusted_strict": "failure",
+        "adjusted_permissive": "success",
+        "changed": "yes"
+      },
+      {
+        "paper_id": "PMID:41677189",
+        "frozen_successful_slots": "0/3",
+        "adjusted_successful_slots": "0/3",
+        "frozen_majority": "failure",
+        "adjusted_majority": "failure",
+        "adjusted_strict": "failure",
+        "adjusted_permissive": "failure",
+        "changed": "no"
+      }
+    ],
+    "distribution": [
+      {
+        "successful_slots": "0/3",
+        "frozen_papers": 9,
+        "adjusted_papers": 9
+      },
+      {
+        "successful_slots": "1/3",
+        "frozen_papers": 1,
+        "adjusted_papers": 0
+      },
+      {
+        "successful_slots": "2/3",
+        "frozen_papers": 0,
+        "adjusted_papers": 1
+      },
+      {
+        "successful_slots": "3/3",
+        "frozen_papers": 0,
+        "adjusted_papers": 0
+      }
+    ],
+    "adjusted_endpoints": {
+      "PMID:33072212": "failure",
+      "PMID:34495251": "failure",
+      "PMID:34731224": "failure",
+      "PMID:39830509": "failure",
+      "PMID:39895948": "failure",
+      "PMID:40956867": "failure",
+      "PMID:41091855": "failure",
+      "PMID:41472739": "failure",
+      "PMID:41563087": "success",
+      "PMID:41677189": "failure"
+    },
+    "levels": {
+      "L1_specification_extracted": {
+        "frozen": {
+          "no": 20,
+          "yes": 10
+        },
+        "adjusted": {
+          "no": 20,
+          "yes": 10
+        }
+      },
+      "L2_implementation_created": {
+        "frozen": {
+          "yes": 29,
+          "not_reached": 1
+        },
+        "adjusted": {
+          "yes": 29,
+          "not_reached": 1
+        }
+      },
+      "L3_execution_successful": {
+        "frozen": {
+          "not_established": 26,
+          "not_reached": 1,
+          "yes": 3
+        },
+        "adjusted": {
+          "not_established": 25,
+          "not_reached": 1,
+          "yes": 4
+        }
+      },
+      "L4_numerical_target_reproduced": {
+        "frozen": {
+          "not_established": 27,
+          "no": 2,
+          "yes": 1
+        },
+        "adjusted": {
+          "not_established": 26,
+          "no": 2,
+          "yes": 2
+        }
+      },
+      "L5_conclusion_preserved": {
+        "frozen": {
+          "not_assessable": 29,
+          "pending_human_adjudication": 1
+        },
+        "adjusted": {
+          "not_assessable": 28,
+          "yes": 2
+        }
+      }
+    },
+    "failure_codes_runs": {
+      "frozen": {
+        "F01": 5,
+        "F03": 2,
+        "F13": 19,
+        "F15": 3,
+        "F20": 2
+      },
+      "adjusted": {
+        "F01": 5,
+        "F03": 2,
+        "F13": 19,
+        "F15": 2,
+        "F20": 2
+      }
+    }
+  },
+  "B": {
+    "papers_reviewed": 90,
+    "confirmed": 81,
+    "state_incorrect": 7,
+    "unknown": 2,
+    "corrections_by_frozen_state": {
+      "all_inputs_leak_target": 9
+    },
+    "funnel": {
+      "frozen": {
+        "all_inputs_leak_target": 10,
+        "external_reference_resource_required_not_served": 28,
+        "gate_failed_delegated": 24,
+        "no_input_retained": 1,
+        "required_inputs_not_in_public_listing": 16,
+        "slots_completed": 10,
+        "specification_not_obtained": 7,
+        "target_value_not_located_verbatim": 4
+      },
+      "adjusted": {
+        "all_inputs_leak_target": 1,
+        "external_reference_resource_required_not_served": 28,
+        "gate_failed_delegated": 25,
+        "no_input_retained": 1,
+        "required_inputs_not_in_public_listing": 17,
+        "slots_completed": 10,
+        "specifiable_runnable": 5,
+        "specification_not_obtained": 7,
+        "target_value_not_located_verbatim": 4,
+        "unresolved": 2
+      },
+      "envelope": {
+        "all_inputs_leak_target": 1,
+        "external_reference_resource_required_not_served": 28,
+        "gate_failed_delegated": 24,
+        "no_input_retained": 1,
+        "required_inputs_not_in_public_listing": 16,
+        "slots_completed": 10,
+        "specification_not_obtained": 7,
+        "target_value_not_located_verbatim": 4,
+        "unresolved": 9
+      }
+    },
+    "leakage_detector_audit": {
+      "classifications": 10,
+      "confirmed": 1,
+      "corrected": 7,
+      "unresolved": 2,
+      "corrected_to": {
+        "specifiable_runnable": 5,
+        "gate_failed_delegated": 1,
+        "required_inputs_not_in_public_listing": 1
+      },
+      "methodological_finding": "whole-token matches inside compressed or binary deposited content and raw input matrices produced false-positive target-leakage flags"
+    },
+    "reruns_performed": 0,
+    "note": "corrections are attrition interpretation only; no reclassified paper was executed"
+  },
+  "C": {
+    "records_reviewed": 25,
+    "confirmed": 25,
+    "by_layer": {
+      "access_layer": 7,
+      "pilot": 7,
+      "primary_plus_second_pass": 11
+    },
+    "post_outcome_corrections": 0,
+    "pilot_in_main_denominator": false,
+    "accessibility_gate_failed_role": "auxiliary access-barrier layer"
+  },
+  "E": {
+    "papers": 10,
+    "papers_with_code_route": 3,
+    "papers_without_code_route": 7,
+    "dimension_rows": 130,
+    "proposed_corrections": 5,
+    "completeness_described_papers": {
+      "frozen": {
+        "ambiguous": 1,
+        "explicit": 15,
+        "not_reported": 13,
+        "partial": 9
+      },
+      "adjusted": {
+        "ambiguous": 1,
+        "explicit": 10,
+        "not_reported": 14,
+        "partial": 13
+      }
+    },
+    "original_code_executed": false,
+    "blind_scores_revised_from_reveal": false
+  },
+  "estimands": {
+    "attempt_reachability": {
+      "numerator": 10,
+      "denominator": 100,
+      "proportion": 0.1,
+      "wilson_95_lower": 0.0552291370606751,
+      "wilson_95_upper": 0.17436566150491345,
+      "frame": "identical under frozen and adjusted layers"
+    },
+    "conditional_success_among_attempted": {
+      "frozen_mechanical": {
+        "numerator": 0,
+        "denominator": 10,
+        "proportion": 0.0,
+        "wilson_95_lower": 0.0,
+        "wilson_95_upper": 0.2775327998628892
+      },
+      "verification_adjusted": {
+        "numerator": 1,
+        "denominator": 10,
+        "proportion": 0.1,
+        "wilson_95_lower": 0.017876213095072896,
+        "wilson_95_upper": 0.4041500267952385
+      },
+      "label": "secondary; conditional on attempt; unweighted binomial reference"
+    },
+    "observed_end_to_end_yield_100": {
+      "frozen_mechanical": {
+        "numerator": 0,
+        "denominator": 100,
+        "proportion": 0.0,
+        "wilson_95_lower": 0.0,
+        "wilson_95_upper": 0.03699349820698568
+      },
+      "verification_adjusted": {
+        "numerator": 1,
+        "denominator": 100,
+        "proportion": 0.01,
+        "wilson_95_lower": 0.0017674320641406505,
+        "wilson_95_upper": 0.054486196178705315
+      },
+      "label": "observed yield under the frozen workflow, not an intrinsic reproducibility probability"
+    },
+    "policy_estimate_eligible_population": {
+      "verification_adjusted_states": {
+        "analysis": "verification_adjusted_policy",
+        "eligible_population": 461,
+        "attemptable_population": 461,
+        "unknown_gates": 0,
+        "verified_barriers": 0,
+        "lower_success_total": 4.833333333333333,
+        "upper_success_total": 36.81644026471613,
+        "lower_sampling_total": 1,
+        "upper_sampling_total": 173,
+        "lower_policy_rate": 0.010484454085321764,
+        "upper_policy_rate": 0.07986212638767055,
+        "lower_sampling_policy_rate": 0.0021691973969631237,
+        "upper_sampling_policy_rate": 0.3752711496746204,
+        "interval_label": "sampling_and_identification_envelope"
+      },
+      "verification_adjusted_unresolved_envelope": {
+        "analysis": "verification_adjusted_envelope",
+        "eligible_population": 461,
+        "attemptable_population": 461,
+        "unknown_gates": 0,
+        "verified_barriers": 0,
+        "lower_success_total": 4.833333333333333,
+        "upper_success_total": 46.11947056774643,
+        "lower_sampling_total": 1,
+        "upper_sampling_total": 185,
+        "lower_policy_rate": 0.010484454085321764,
+        "upper_policy_rate": 0.10004223550487296,
+        "lower_sampling_policy_rate": 0.0021691973969631237,
+        "upper_sampling_policy_rate": 0.40130151843817785,
+        "interval_label": "sampling_and_identification_envelope"
+      }
+    },
+    "non_executed_papers_are_reconstruction_failures": false
+  },
+  "prohibited_actions_not_performed": [
+    "blind slot rerun",
+    "original code execution",
+    "sealed outcome modification",
+    "human validation D",
+    "reveal-informed rescoring of blind runs"
+  ]
+}

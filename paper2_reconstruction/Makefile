@@ -9,6 +9,7 @@ setup:
 build:
 	$(PYTHON) -m paper2.build
 	$(PYTHON) -m paper2.documents
+	$(PYTHON) -m paper2.verification_qc
 
 check:
 	$(PYTHON) -m ruff check src tests

@@ -17,6 +17,7 @@
   "blind_freeze": "MAIN blind_outcome.json sealed and RFC3161 timestamped; delegated mechanical primary adjudication AMEND-2026-09-25-07",
   "descriptive_reveal": "recorded after seal: data/adjudication/main-study-20260925/reveal/reveal_ledger.json (3 described, 7 missing); no original code executed",
   "human_validation": "NOT_COMPLETED (human adjudication and investigator verification pending)",
+  "verification_adjusted_layer": "A/B/C/E AI-assisted evidence review imported as a separate provisional sensitivity layer (results/verification_adjusted/); investigator sign-off absent; D excluded",
   "firewall_harness": "custodian_broker_telemetry_dependency_freeze_controls_pass; results/firewall_qualification.json; model_side_tool_restriction_three_slot_scheduling_and_human_adjudicator_governance_unqualified",
   "primary_success_rate": "delegated_mechanical_only_pending_human_validation; results/main_analysis.json",
   "sources_verified": 8

@@ -20,8 +20,13 @@ from pptx.util import Pt as SlidePt
 
 from paper2.build import ROOT
 from paper2.core import Row, read_csv, sha256
+from paper2.main_analysis import listed, mapping
 
-STATUS = "PREPARATION DRAFT — NOT SUBMISSION READY"
+STATUS = (
+    "DRAFT — NOT SUBMISSION READY: main study sealed; delegated mechanical adjudication; "
+    "A/B/C/E AI-assisted review imported as a provisional sensitivity layer; investigator "
+    "sign-off, human adjudication and human validation (Section D) pending"
+)
 BUILD_TIME = datetime.fromtimestamp(
     int(os.environ.get("SOURCE_DATE_EPOCH", "315532800")), timezone.utc
 )
@@ -437,6 +442,156 @@ def main_study_paragraphs(analysis: dict[str, object]) -> list[str]:
     ]
 
 
+def pct(item: dict[str, object]) -> str:
+    return (
+        f"{item['numerator']}/{item['denominator']} ({100 * float(str(item['proportion'])):.1f}%; "
+        f"Wilson 95% CI {100 * float(str(item['wilson_95_lower'])):.1f}–"
+        f"{100 * float(str(item['wilson_95_upper'])):.1f}%)"
+    )
+
+
+def verification_paragraphs(audit: dict[str, object]) -> list[str]:
+    est = mapping(audit["estimands"])
+    a = mapping(audit["A"])
+    b = mapping(audit["B"])
+    c = mapping(audit["C"])
+    e = mapping(audit["E"])
+    refs = mapping(audit["evidence_references"])
+    detector = mapping(b["leakage_detector_audit"])
+    funnel = mapping(b["funnel"])
+    adjusted = mapping(funnel["adjusted"])
+    cond = mapping(est["conditional_success_among_attempted"])
+    yield_ = mapping(est["observed_end_to_end_yield_100"])
+    policy = mapping(est["policy_estimate_eligible_population"])
+    adj_policy = mapping(policy["verification_adjusted_states"])
+    env_policy = mapping(policy["verification_adjusted_unresolved_envelope"])
+    changed = [p for p in listed(a["papers"]) if p["changed"] == "yes"]
+    changed_text = "; ".join(
+        f"{p['paper_id']} {p['frozen_successful_slots']} → {p['adjusted_successful_slots']}"
+        for p in changed
+    )
+    barriers = sum(
+        int(str(v))
+        for k, v in adjusted.items()
+        if k not in {"slots_completed", "specifiable_runnable", "unresolved"}
+    )
+    completeness = mapping(e["completeness_described_papers"])
+    return [
+        "Status: this section reports a separate verification-adjusted sensitivity layer built "
+        "from an AI-assisted independent evidence review of sections A (30 sealed slots), B (90 "
+        "non-executed papers), C (historical G1–G5, pilot and access-barrier layers) and E "
+        "(descriptive reveal). The review is provisional and awaits investigator approval; it "
+        "is not human-participant validation, no investigator sign-off field was populated, and "
+        f"the sealed blind outcome is byte-identical (SHA-256 "
+        f"{str(mapping(audit['frozen_inputs_sha256'])['blind_outcome'])[:16]}…). Every reviewed "
+        f"paper/slot identifier validated against the frozen records and {refs['total']} cited "
+        f"evidence references resolved ({refs['unresolved']} unresolved).",
+        f"Three estimands are kept separate. Attempt reachability among the 100 selected papers "
+        f"was {pct(mapping(est['attempt_reachability']))} under both layers. Conditional majority "
+        f"success among attempted papers was {pct(mapping(cond['frozen_mechanical']))} under the "
+        f"frozen mechanical adjudication and {pct(mapping(cond['verification_adjusted']))} under "
+        f"the verification-adjusted layer, in which {a['slots_proposed_changed']} of "
+        f"{a['slots_reviewed']} slot classifications were proposed for change and "
+        f"{a['slots_mechanical_supported']} were supported ({changed_text}; Table 6). The observed "
+        "end-to-end yield under the frozen workflow was "
+        f"{pct(mapping(yield_['frozen_mechanical']))} "
+        f"frozen and {pct(mapping(yield_['verification_adjusted']))} adjusted. None of these is an "
+        "intrinsic probability that a publication is scientifically reproducible.",
+        f"Verification of the {b['papers_reviewed']} non-executed papers confirmed "
+        f"{b['confirmed']} recorded states, proposed {b['state_incorrect']} state corrections and "
+        f"left {b['unknown']} unresolved (Table 7). Non-confirmed states by frozen category: "
+        + ", ".join(f"{k} {v}" for k, v in mapping(b["corrections_by_frozen_state"]).items())
+        + f". Of {detector['classifications']} all_inputs_leak_target flags, "
+        f"{detector['confirmed']} confirmed, {detector['corrected']} corrected and "
+        f"{detector['unresolved']} unresolved. Whole-token matches inside compressed or binary "
+        "deposited content and raw input matrices produced false-positive target-leakage flags; "
+        "this is reported as a methodological finding. Under the adjusted layer the cohort "
+        f"comprises 10 attempted papers, {barriers} verified pre-reconstruction barriers, "
+        f"{adjusted.get('specifiable_runnable', 0)} papers reclassified as specifiable and "
+        f"runnable but never executed, and {adjusted.get('unresolved', 0)} unknown. "
+        "Reclassified papers were "
+        "not run; the correction is attrition interpretation only, and non-executed papers are "
+        "not reconstruction failures.",
+        "For the eligible-population policy estimand, treating reclassified and unknown papers as "
+        f"unresolved gives a simultaneous sampling-and-identification envelope of "
+        f"{adj_policy['lower_sampling_policy_rate']:.3f}–"
+        f"{adj_policy['upper_sampling_policy_rate']:.3f} (weighted point range "
+        f"{adj_policy['lower_policy_rate']:.3f}–{adj_policy['upper_policy_rate']:.3f}); "
+        "treating every non-confirmed leakage classification as unresolved widens the upper "
+        f"bound to {env_policy['upper_sampling_policy_rate']:.3f}. These are bounds, not "
+        "estimates.",
+        f"Section C reviewed {c['records_reviewed']} historical G1–G5, pilot and "
+        f"ACCESSIBILITY_GATE_FAILED records and supported {c['confirmed']}; no post-outcome "
+        "change was made, the pilot stays outside the main denominator and the access-barrier "
+        f"layer remains auxiliary. Section E reviewed {e['dimension_rows']} reveal dimension rows "
+        f"for {e['papers']} attempted papers ({e['papers_with_code_route']} with a code route) and "
+        f"proposed {e['proposed_corrections']} conservative completeness corrections, chiefly "
+        "where "
+        "deposited downstream scripts start from pre-computed inputs and cannot establish upstream "
+        "normalisation, filtering or exclusion completeness (Table 8; explicit "
+        f"{mapping(completeness['frozen']).get('explicit', 0)} → "
+        f"{mapping(completeness['adjusted']).get('explicit', 0)} dimensions). The reveal remains "
+        "descriptive; no original code was executed and no blind score was revisited.",
+    ]
+
+
+def verification_tables(document: WordDocument, results: Path) -> None:
+    caption(
+        document,
+        "Table 6. Paper-level successful-slot distribution among 10 attempted papers: frozen "
+        "mechanical versus verification-adjusted (AI-assisted review, provisional).",
+    )
+    table(
+        document,
+        read_csv(results / "adjusted_A_distribution.csv"),
+        [
+            ("successful_slots", "Successful slots"),
+            ("frozen_papers", "Frozen papers"),
+            ("adjusted_papers", "Adjusted papers"),
+        ],
+    )
+    caption(
+        document,
+        "Table 7. 100-paper funnel by state: frozen record, verification-adjusted state and "
+        "unresolved envelope (no reclassified paper was executed).",
+    )
+    table(
+        document,
+        read_csv(results / "adjusted_B_funnel.csv"),
+        [
+            ("state", "State"),
+            ("frozen", "Frozen"),
+            ("verification_adjusted", "Adjusted"),
+            ("unresolved_envelope", "Envelope"),
+        ],
+    )
+    caption(
+        document,
+        "Table 8. Descriptive reveal completeness corrections proposed by the E review "
+        "(papers with a code route only; descriptive, not executed).",
+    )
+    table(
+        document,
+        [r for r in read_csv(results / "adjusted_E_reveal_ledger.csv") if r["changed"] == "yes"],
+        [
+            ("paper_id", "Paper"),
+            ("dimension", "Dimension"),
+            ("frozen_completeness", "Frozen"),
+            ("adjusted_completeness", "Adjusted"),
+        ],
+    )
+    caption(
+        document,
+        "Table 9. Human validation (Section D): PENDING — no participant, case or outcome "
+        "data exist.",
+    )
+    table(
+        document,
+        [{"item": "Cases completed", "value": "0 (pending external human validation)"}],
+        [("item", "Item"), ("value", "Value")],
+    )
+
+
 def main_study_tables(
     document: WordDocument,
     dispositions: list[Row],
@@ -480,6 +635,8 @@ def build_documents() -> None:
     run_levels = read_csv(ROOT / "results/main_run_levels.csv")
     failure_codes = read_csv(ROOT / "results/main_failure_codes.csv")
     reveal = read_csv(ROOT / "results/reveal_ledger.csv")
+    verification_dir = ROOT / "results/verification_adjusted"
+    audit = json.loads((verification_dir / "verification_import_audit.json").read_text())
     framework(output)
     slides(output, characteristics)
     document = Document()
@@ -489,7 +646,7 @@ def build_documents() -> None:
     paragraph(document, STATUS)
     paragraph(document, "Authors, affiliations and corresponding author: NOT FINALIZED.")
     paragraph(document, "Working journal: EPJ Research Infrastructures.")
-    heading(document, "Preparation abstract")
+    heading(document, "Abstract (draft)")
     paragraph(
         document,
         "Access to research artifacts does not establish whether the published scientific "
@@ -503,14 +660,21 @@ def build_documents() -> None:
         "text detections rather than validated access assessments. The proposed design "
         "separates eligibility, input and resource access, specification, implementation, "
         "execution, numerical agreement and target-linked conclusion preservation. Three "
-        "fixed independent run slots per sampled paper will support majority, strict and "
+        "fixed independent run slots per sampled paper support majority, strict and "
         "permissive outcome definitions while retaining missing or contaminated slots as "
-        "unresolved. Targets, tolerances and resource ceilings must be frozen prospectively. "
-        "This document contains only preparation findings and proposed methods. No pilot, "
-        "reconstruction experiment, human validation or descriptive original-code reveal "
-        "has been completed. No reconstructability rate or empirical conclusion is available. "
-        "A qualified information firewall, verified study inputs and real validation remain "
-        "necessary before this work can support a completed-study submission.",
+        "unresolved. Targets, tolerances and resource ceilings were frozen prospectively. "
+        "After a seven-paper prospective pilot and protocol freeze, 100 papers were sampled "
+        "from 461 route-eligible papers. Only 10 reached blinded independent reconstruction "
+        "under the prespecified access, input and specification rules; 90 stopped before "
+        "reconstruction with machine-readable barrier states. Delegated mechanical adjudication "
+        "of the 30 sealed slots found no paper meeting the majority criterion; a separate "
+        "AI-assisted verification review, provisional and not investigator-signed, proposes one. "
+        "Verification of the 90 non-executed papers supported most recorded barriers and "
+        "identified a small number of pre-execution misclassifications from an overly "
+        "conservative target-leakage detector. Large pre-reconstruction attrition is the primary "
+        "empirical finding; the reconstruction result is conditional on attempt, bounded by the "
+        "resource ceiling, and does not show human impossibility. Human validation has not been "
+        "performed and remains a limitation until real validators complete it.",
     )
     paragraph(
         document,
@@ -559,7 +723,9 @@ def build_documents() -> None:
     document.add_picture(str(output / "figure1_framework.png"), width=Inches(6.65))
     document.paragraphs[-1].paragraph_format.keep_with_next = True
     caption(document, CAPTION)
-    heading(document, "2 Prospective methods — not yet performed")
+    heading(
+        document, "2 Methods — prospectively frozen (protocol text; see supplement for amendments)"
+    )
     for title, text in (
         (
             "2.1 Source frame and eligibility",
@@ -659,22 +825,42 @@ def build_documents() -> None:
     heading(document, "4 Main-study execution and delegated mechanical results")
     for text in main_study_paragraphs(analysis):
         paragraph(document, text)
-    heading(document, "5 Discussion boundary and submission hold")
+    heading(document, "5 Verification-adjusted sensitivity layer (A/B/C/E; D excluded)")
+    for text in verification_paragraphs(audit):
+        paragraph(document, text)
     paragraph(
         document,
-        "The source audit supports identity and denominator statements only. It cannot "
-        "establish that publications are reconstructable or unreconstructable. A completed "
-        "study must separate infrastructure barriers, scientific specification and agent "
-        "limitations; agent failure is not human impossibility. Original-code availability "
-        "may correlate with reporting practice but cannot be interpreted causally here. "
-        "Methods-linter development and robustness analysis remain future work.",
+        "Tables 6–9 are supplied separately in the editable tables file and the supplement.",
+    )
+    heading(document, "6 Human validation (Section D) — pending")
+    paragraph(
+        document,
+        "No human validator has been recruited, no institutional ethics determination has been "
+        "obtained and no human case has been scored. The Results text, table and figure for "
+        "Section D are intentionally empty (Table 9). The AI-assisted review in Section 5 is not "
+        "a substitute for human validation.",
+    )
+    heading(document, "7 Discussion boundary and submission hold")
+    paragraph(
+        document,
+        "The primary empirical message is the large pre-reconstruction attrition: 90 of 100 "
+        "sampled papers stopped at access, input or specification barriers before any blinded "
+        "reconstruction under the frozen rules, and verification supported most of these "
+        "barriers. The 10-paper reconstruction result is conditional on attempt, obtained under "
+        "frozen resource ceilings and a fixed agent, and is reported side by side as a frozen "
+        "mechanical value and a provisional verification-adjusted value. Non-executed papers "
+        "are pre-reconstruction non-executions, not reconstruction failures. Verification "
+        "identified a small number of pre-execution classification problems, chiefly leakage "
+        "false positives from whole-token matching in compressed or binary content; the "
+        "detector's conservatism is a methodological limitation and finding. Agent failure does "
+        "not prove human impossibility. Original-code availability may correlate with reporting "
+        "practice but cannot be interpreted causally here.",
     )
     paragraph(
         document,
-        "Submission is on hold for qualification of an enforced "
-        "information firewall, pilot and prospective freeze, actual classification and "
-        "reconstruction evidence, and human-validation status. This document must not be "
-        "submitted as a completed empirical study or presented as a frozen protocol.",
+        "Submission is on hold: investigator verification and sign-off of the A/B/C/E "
+        "proposals, human adjudication of the 30 sealed slots and human validation (Section D) "
+        "are incomplete. This document must not be submitted as a completed empirical study.",
     )
     heading(document, "Statements and declarations — pending author completion")
     paragraph(
@@ -727,6 +913,7 @@ def build_documents() -> None:
         ],
     )
     main_study_tables(supplement, dispositions, run_levels, failure_codes, reveal)
+    verification_tables(supplement, verification_dir)
     for path in sorted((ROOT / "protocols").glob("*.md")):
         supplement.add_page_break()
         markdown(supplement, path.read_text())
@@ -747,6 +934,7 @@ def build_documents() -> None:
         ],
     )
     main_study_tables(tables, dispositions, run_levels, failure_codes, reveal)
+    verification_tables(tables, verification_dir)
     caption(tables, "Table S1. Analytic Wilson precision planning.")
     table(
         tables,
@@ -783,6 +971,9 @@ def build_documents() -> None:
         *sorted((ROOT / "protocols").glob("*.md")),
         *sorted((ROOT / "results").glob("*.csv")),
         *sorted((ROOT / "results").glob("*.json")),
+        *sorted((ROOT / "results/verification_adjusted").glob("*")),
+        *sorted((ROOT / "data/adjudication/main-study-20260925/verification_adjusted").glob("*")),
+        ROOT / "WITHOUT_D_STATUS.md",
         *sorted((ROOT / "src/paper2").glob("*.py")),
         *sorted((ROOT / "data/derived").glob("*.csv")),
         *sorted((ROOT / "data").glob("*.csv")),
@@ -805,7 +996,8 @@ def build_documents() -> None:
             "sha256": sha256(path.read_bytes()),
         }
         for path in files
-        if path.is_file() and path.name != "preparation_artifact_manifest.json"
+        if path.is_file()
+        and path.name not in {"preparation_artifact_manifest.json", "VERIFICATION_ADJUSTED_QC.md"}
     }
     (ROOT / "results/preparation_artifact_manifest.json").write_text(
         json.dumps(manifest, indent=2) + "\n",
