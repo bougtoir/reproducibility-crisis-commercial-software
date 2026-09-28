@@ -7,7 +7,7 @@ file list/schema,ACCESS,fix input composition/structure
 SHA-256/content hash,ACCESS / REPRODUCE,verify byte-level identity
 transformation log,RECONSTRUCT / REPRODUCE,trace derivation from raw to analytical input
 license/redistribution status,ACCESS,explain why exact snapshot can or cannot be redistributed
-code availability,ACCESS,locate the original implementation (not used in Paper II)
+code availability,ACCESS (artifact access),"locate the original implementation; artifact reproducibility only, deliberately excluded from the Paper II blind intervention and used solely as a descriptive characteristic and post-seal reveal resource"
 software/version reporting,ACCESS / EXECUTE,identify the executable environment
 container/environment,EXECUTE,reinstate the execution environment
 detailed Methods,RECONSTRUCT,specify the procedure well enough to implement

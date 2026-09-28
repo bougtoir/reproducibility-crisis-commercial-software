@@ -3,8 +3,8 @@ repository/accession recorded,100/100 papers,delegated specification listing (10
 repository kinds in listings,bioproject 10; dataverse 4; dryad 13; figshare 25; geo 70; osf 2; sra_study 5; zenodo 19,delegated specification listing (100 papers)
 file list recorded in listing,89/100 papers,delegated specification listing (100 papers)
 external public reference resources named by specifier,119 entries in 51 papers,delegated specification listing (100 papers)
-reference version/release stated in publication text,100/119 entries,delegated specification listing (100 papers)
-reference version/release not specified,19/119 entries (11 papers with at least one),delegated specification listing (100 papers)
+reference version/release recorded by the specifier from publication text,100/119 entries,delegated specification listing (100 papers)
+reference version/release not specified in publication text,19/119 entries (11 papers with at least one),delegated specification listing (100 papers)
 not run because an external public reference resource was required,"28/100 papers (frozen barrier state, unchanged)",paper_status.json
 served inputs with SHA-256 recorded,21/21 files,frozen target packages and retrieval ledger (10 attempted papers)
 served inputs with retrieval timestamp recorded,21/21 files,frozen target packages and retrieval ledger (10 attempted papers)

@@ -41,7 +41,10 @@ ARTIFACT_NAMES = (
     "figure1_framework.png",
 )
 TITLE = "From scientific description to independent computational reconstruction"
-SUBTITLE = "Prospective Paper II study linked to the EPJ commercial-software corpus"
+SUBTITLE = (
+    "Paper II: a prospectively frozen reconstruction study linked to the EPJ "
+    "commercial-software corpus (main study sealed; human validation pending)"
+)
 CAPTION = (
     "Figure 1. Conceptual Wet/Dry framework. ACCESS is refined internally into three "
     "questions (resource accessible; exact input state identifiable; historical input state "
@@ -104,7 +107,7 @@ def style_document(document: WordDocument) -> None:
     normal.font.name = "Calibri"
     normal.font.size = Pt(10)
     normal.paragraph_format.space_after = Pt(6)
-    document.core_properties.author = "Paper II preparation; authorship not finalized"
+    document.core_properties.author = "Paper II draft; authorship not finalized"
     document.core_properties.subject = STATUS
     document.core_properties.created = BUILD_TIME
     document.core_properties.modified = BUILD_TIME
@@ -187,7 +190,9 @@ def framework(output: Path) -> None:
         weight="bold",
         color="#0F172A",
     )
-    axis.text(0.2, 6.65, "Conceptual framework • Paper II preparation", fontsize=13)
+    axis.text(
+        0.2, 6.65, "Conceptual framework • Paper II focus: RECONSTRUCT", fontsize=13
+    )
     for index, (name, color) in enumerate(zip(STAGES, STAGE_COLORS, strict=False)):
         x = 0.2 + index * 2.6
         axis.add_patch(
@@ -214,9 +219,9 @@ def framework(output: Path) -> None:
             axis.text(x + 2.47, 5.7, "→", ha="center", va="center", fontsize=19)
     axis.add_patch(
         FancyBboxPatch(
-            (0.2, 4.28),
-            2.35,
-            0.82,
+            (0.2, 4.1),
+            2.75,
+            1.0,
             boxstyle="round,pad=0.02",
             facecolor="#F8FAFC",
             edgecolor="#94A3B8",
@@ -224,10 +229,12 @@ def framework(output: Path) -> None:
         )
     )
     for index, question in enumerate(ACCESS_QUESTIONS):
-        axis.text(0.32, 4.95 - index * 0.26, f"├ {question}", fontsize=8.6, color="#0F172A")
-    axis.text(3.0, 4.88, "Paper II focus and downstream observations", fontsize=12, color="#0F766E")
-    axis.text(10.6, 4.88, "Paper III: excluded", fontsize=12, color="#92400E")
-    axis.text(3.0, 4.45, ACCESS_NOTE, fontsize=9.5, color="#475569", style="italic")
+        axis.text(0.32, 4.93 - index * 0.31, f"├ {question}", fontsize=10.5, color="#0F172A")
+    axis.text(
+        3.2, 4.88, "Paper II focus; EXECUTE and REPRODUCE observed", fontsize=12, color="#0F766E"
+    )
+    axis.text(10.6, 4.88, "ROBUST: future Paper III (excluded)", fontsize=12, color="#92400E")
+    axis.text(3.2, 4.45, ACCESS_NOTE, fontsize=10.5, color="#475569", style="italic")
     for name, items, y, fill in (("WET", WET, 3.0, "#EFF6FF"), ("DRY", DRY, 1.45, "#F0FDFA")):
         axis.text(0.2, y + 1.0, name, fontsize=14, weight="bold", color="#0F172A")
         for index, label in enumerate(items):
@@ -255,7 +262,7 @@ def framework(output: Path) -> None:
     axis.text(
         0.2,
         0.45,
-        "Conceptual analogy only. No robustness or multiverse analysis.",
+        "Wet/Dry pathways are a conceptual analogy only. No robustness or multiverse analysis.",
         fontsize=12,
         color="#475569",
     )
@@ -321,10 +328,10 @@ def slides(output: Path, characteristics: list[Row]) -> None:
         line.font.color.rgb = SlideColor.from_string("FFFFFF" if index == 1 else "0F172A")
         if index < 4:
             textbox(2.58 + index * 2.6, 1.13, 0.3, 0.5, "→", 20)
-    textbox(0.3, 1.82, 2.4, 0.9, "\n".join(f"├ {q}" for q in ACCESS_QUESTIONS), 9)
-    textbox(3.0, 1.82, 7.5, 0.4, "Paper II focus and downstream observations", 15)
-    textbox(3.0, 2.22, 7.5, 0.4, ACCESS_NOTE, 11)
-    textbox(10.7, 1.82, 2.3, 0.5, "Paper III: excluded", 14)
+    textbox(0.3, 1.82, 2.8, 0.95, "\n".join(f"├ {q}" for q in ACCESS_QUESTIONS), 11)
+    textbox(3.2, 1.82, 7.3, 0.4, "Paper II focus; EXECUTE and REPRODUCE observed", 15)
+    textbox(3.2, 2.22, 7.3, 0.4, ACCESS_NOTE, 11)
+    textbox(10.2, 1.82, 3.0, 0.5, "ROBUST: future Paper III (excluded)", 13)
     for name, items, y in (("WET", WET, 2.85), ("DRY", DRY, 4.5)):
         textbox(0.3, y - 0.5, 2.0, 0.4, name, 18)
         for index, label in enumerate(items):
@@ -703,31 +710,32 @@ def build_documents() -> None:
     paragraph(
         document,
         "Access to research artifacts does not establish whether the published scientific "
-        "description supports an independent implementation. This prospective study will "
-        "estimate publication-grounded computational reconstructability under a specified "
+        "description supports an independent implementation. This prospectively frozen study "
+        "estimated publication-grounded computational reconstructability under a specified "
         "agent, information boundary and resource budget, without consulting the original "
         "implementation or purchasing study-specific commercial software. The source audit "
         f"identified {values['source_records']:,} deposited records representing "
-        f"{values['unique_pmids']:,} distinct PMIDs. The author approved the unique-PMID "
-        "frame while preserving every deposited row. Existing variables remain historical "
-        "text detections rather than validated access assessments. The proposed design "
-        "separates eligibility, input and resource access, specification, implementation, "
-        "execution, numerical agreement and target-linked conclusion preservation. Three "
-        "fixed independent run slots per sampled paper support majority, strict and "
-        "permissive outcome definitions while retaining missing or contaminated slots as "
-        "unresolved. Targets, tolerances and resource ceilings were frozen prospectively. "
-        "After a seven-paper prospective pilot and protocol freeze, 100 papers were sampled "
-        "from 461 route-eligible papers. Only 10 reached blinded independent reconstruction "
-        "under the prespecified access, input and specification rules; 90 stopped before "
-        "reconstruction with machine-readable barrier states. Delegated mechanical adjudication "
-        "of the 30 sealed slots found no paper meeting the majority criterion; a separate "
-        "AI-assisted verification review, provisional and not investigator-signed, proposes one. "
-        "Verification of the 90 non-executed papers supported most recorded barriers and "
-        "identified a small number of pre-execution misclassifications from an overly "
-        "conservative target-leakage detector. Large pre-reconstruction attrition is the primary "
-        "empirical finding; the reconstruction result is conditional on attempt, bounded by the "
-        "resource ceiling, and does not show human impossibility. Human validation has not been "
-        "performed and remains a limitation until real validators complete it.",
+        f"{values['unique_pmids']:,} distinct PMIDs; the unique-PMID frame was approved while "
+        "every deposited row was preserved. Within ACCESS, resource availability was "
+        "distinguished from input-state identifiability and historical-state retrievability. "
+        "Eligibility, input and resource access, specification, implementation, execution, "
+        "numerical agreement and target-linked conclusion preservation were assessed as "
+        "separate levels. Three fixed independent blind run slots per paper supported "
+        "majority, strict and permissive outcome definitions while missing or contaminated "
+        "slots were retained as unresolved. Targets, tolerances and resource ceilings were "
+        "frozen before every run. After a seven-paper prospective pilot and protocol freeze, "
+        "100 papers were sampled from 461 route-eligible papers in seven strata. Only 10 "
+        "reached blinded independent reconstruction under the prespecified access, input and "
+        "specification rules; 90 stopped before reconstruction with machine-readable barrier "
+        "states. Delegated mechanical adjudication of the 30 sealed slots found no paper "
+        "meeting the majority criterion; a separate AI-assisted verification review, "
+        "provisional and not investigator-signed, proposes one and does not overwrite the "
+        "sealed result. Verification of the 90 non-executed papers supported most recorded "
+        "barriers and identified a small number of pre-execution misclassifications from an "
+        "overly conservative target-leakage detector. Large pre-reconstruction attrition is "
+        "the primary empirical finding; the reconstruction result is conditional on attempt, "
+        "bounded by the resource ceiling, and does not show human impossibility. Human "
+        "validation (Section D) has not been performed and remains pending.",
     )
     paragraph(
         document,
@@ -768,26 +776,35 @@ def build_documents() -> None:
     )
     paragraph(
         document,
-        "The proposed contribution is a finite-corpus estimation study with an explicit "
+        "The contribution is a finite-corpus estimation study with an explicit "
         "publication-only information boundary and zero study-specific software expenditure. "
         "It makes no first-study or terminological novelty claim. Figure 1 shows the "
-        "proposed framework and the exclusion of robustness experiments.",
+        "conceptual framework and the exclusion of robustness experiments.",
     )
     document.add_picture(str(output / "figure1_framework.png"), width=Inches(6.65))
     document.paragraphs[-1].paragraph_format.keep_with_next = True
     caption(document, CAPTION)
     heading(
-        document, "2 Methods — prospectively frozen (protocol text; see supplement for amendments)"
+        document,
+        "2 Methods (procedures as executed under the prospectively frozen protocol; "
+        "amendments in the supplement)",
     )
     for title, text in (
         (
             "2.1 Source frame and eligibility",
-            "Preserve deposited source records and derive paper identity separately. G1 assesses "
-            "whether a central claim depends on a computational procedure with a potentially "
-            "objective output. G2 identifies the principal target; G3/G4 assess lawful input and "
-            "zero-purchase resource access; G5 describes specification sufficiency. Neither access "
-            "nor specification failures exclude otherwise eligible papers from the all-eligible "
-            "policy estimand. Historical code/data flags cannot replace these assessments.",
+            "Deposited source records were preserved and paper identity was derived separately. "
+            "G1 assessed whether a central claim depends on a computational procedure with a "
+            "potentially objective output; G2 identified the principal target; G3/G4 assessed "
+            "lawful input and zero-purchase resource access; G5 described specification "
+            "sufficiency. Under the amended candidate criterion (AMEND-2026-09-24-03) primary "
+            "reconstruction required deposited input data that a third party can legally and "
+            "immediately obtain without contacting the original authors. Exhaustive route "
+            "screening of the unique-PMID frame identified 461 route-eligible papers; every "
+            "screening failure, including the seven ACCESSIBILITY_GATE_FAILED papers, was retained "
+            "as an auditable attrition layer. Neither access nor specification failures excluded "
+            "otherwise eligible papers from the all-eligible policy estimand. Historical code/data "
+            "flags were not used in place of these assessments. G1–G5 were recorded as delegated "
+            "mechanical adjudications; investigator verification is pending.",
         ),
         (
             "2.1a Input accessibility versus input-state identifiability",
@@ -809,56 +826,81 @@ def build_documents() -> None:
         ),
         (
             "2.2 Sampling and target selection",
-            "Using the approved frame, a diverse pilot will finalize operational rules. The "
-            "main sample is approximately 100 papers, stratified using a deterministic disjoint "
-            "assignment of the seven overlapping EPJ fields. Save within-field sampling "
-            "probabilities and weights. Before each run, select one central target by the frozen "
-            "hierarchy and encode its associated claim. No outcome-informed target replacement "
-            "is permitted. Planning precision in the supplement is not empirical evidence.",
+            "A seven-paper prospective pilot (one paper per field, three blind slots each, 21 "
+            "slots) was executed under prospectively frozen specifications and used only to "
+            "identify procedural defects; its prespecified review recorded one defect (PD-01, an "
+            "internally inconsistent token ceiling) and did not change target-selection, "
+            "tolerance, conclusion or taxonomy rules, and no pilot success rate was computed. The "
+            "final protocol and SAP were then frozen with hashes and RFC 3161 timestamps "
+            "(PROTOCOL-FREEZE-2026-09-25). From the 461 route-eligible papers, 100 were sampled "
+            "by stratified random sampling using a deterministic disjoint assignment of the seven "
+            "overlapping EPJ fields; within-field sampling probabilities and weights were saved. "
+            "Before any run, one central target per paper was selected by the frozen hierarchy "
+            "and its associated claim, input identifiers, allowed and blocked resources, metric, "
+            "numerical and conclusion criteria, resource ceiling and stopping rule were frozen. "
+            "No outcome-informed target replacement occurred. Planning precision in the "
+            "supplement is analytic, not empirical evidence.",
         ),
         (
             "2.3 Independent reconstruction intervention",
-            "Use three clean, fixed slots per paper with the same target, package and permissions "
-            "and equivalent model and resource settings. Permitted materials are the publication, "
-            "methodological supplement, vetted inputs and general documentation. Original "
-            "implementations and other runs are prohibited. The broker must restrict model-side "
-            "tools and execution networking. Separate VMs alone are insufficient. Prior model "
-            "training exposure cannot be certified absent. No qualified harness currently exists.",
+            "Each attempted paper received three clean, fixed blind slots with the same target, "
+            "input package and permissions and equivalent model and resource settings (per slot: "
+            "40 tool calls, 1.5 million provider tokens, 3,600 s per step, 14,400 s wall, one CPU, "
+            "3 GB, no network). Permitted materials were the publication, methodological "
+            "supplement, vetted deposited inputs and general documentation; original "
+            "implementations and other runs were blocked. A functioning reconstruction harness "
+            "was implemented and used: a custodian/broker served only manifest-listed items to "
+            "an isolated worker, enforced resource stops and denied author implementation "
+            "material and reveal-class items to the solver, with sealed event chains and "
+            "per-slot isolation. These controls passed synthetic qualification probes; "
+            "model-side retrieval-tool restriction for provider-hosted tools and cross-slot "
+            "budget comparability were not formally qualified, and complete exclusion of prior "
+            "model-training exposure cannot be certified. Papers that failed a frozen "
+            "pre-execution rule were recorded as non-executed with a machine-readable state and "
+            "were not run.",
         ),
         (
             "2.4 Outcomes and comparison",
             "L1 specification, L2 implementation, L3 execution, L4 numerical reproduction and L5 "
-            "conclusion preservation remain separate. A run succeeds only when an independent "
-            "implementation executes and meets the frozen target-specific numerical rule. Majority "
-            "paper success requires two clean successes among three fixed slots. Missing or "
-            "contaminated slots remain unresolved, with bounds rather than reduced denominators. "
+            "conclusion preservation were scored separately. A run succeeded only when an "
+            "independent implementation executed and met the frozen target-specific numerical "
+            "rule. Majority paper success required two clean successes among three fixed slots; "
+            "strict and permissive definitions were prespecified sensitivities. Missing or "
+            "contaminated slots remained unresolved, with bounds rather than reduced denominators. "
             "Exact counts, displayed-precision scalar comparisons and target-specific stochastic "
-            "rules avoid arbitrary universal tolerances. Matching numbers do not by themselves "
+            "rules replaced arbitrary universal tolerances. Matching numbers do not by themselves "
             "prove implementation fidelity.",
         ),
         (
             "2.5 Statistical analysis and failure attribution",
-            "Use design-weighted finite-corpus estimates and separately reported uncertainty and "
-            "unknown-status bounds. Fixed-frame census counts do not have paper-sampling error. "
-            "Report complete-triple consistency, hierarchical outcomes, failures and burden. "
-            "Do not fit unjustified multivariable models or interpret code-sharing associations "
-            "causally. Distinguish observed reconstruction failure from demonstrated publication "
-            "inadequacy. The proposed weighted interval is not yet implemented; details and "
-            "prespecified sensitivities are in the draft SAP.",
+            "Design-weighted finite-corpus estimates were computed with separately reported "
+            "sampling uncertainty and unknown-status identification bounds; fixed-frame census "
+            "counts carry no paper-sampling error. Complete-triple consistency, hierarchical "
+            "outcomes, failure codes and burden were reported. No multivariable model was fitted "
+            "and code-sharing associations were not interpreted causally. Observed reconstruction "
+            "failure was distinguished from demonstrated publication inadequacy; the resource "
+            "ceiling has its own failure code. Details and prespecified sensitivities are in the "
+            "frozen SAP.",
         ),
         (
             "2.6 Freeze, reveal and human validation",
-            "Seal targets before runs and all outcomes before any original-code reveal. Reveal is "
-            "descriptive only; no perturbation or revised score is allowed. Prepare approximately "
-            "15 outcome-balanced human cases after agent freeze, with validators masked to agent "
-            "and reveal results. Actual human work, institutional determination and participation "
-            "records are indispensable. No human outcome is simulated. No robustness or multiverse "
-            "analysis is part of Paper II.",
+            "Targets were sealed before runs and all outcomes were sealed before any original-code "
+            "reveal. Delegated mechanical adjudication of the sealed slots followed the frozen "
+            "tolerance rules (AMEND-2026-09-25-07). The reveal was descriptive only: no original "
+            "code was executed and no blind score was revised. A separate AI-assisted evidence "
+            "review of the sealed slots (A), the non-executed states (B), the historical G1–G5 "
+            "and pilot records (C) and the reveal (E) was imported as a provisional "
+            "verification-adjusted sensitivity layer that awaits investigator sign-off. Human "
+            "validation (Section D) is prespecified as outcome-balanced human cases scored by "
+            "validators masked to agent and reveal results; the frozen records support ten "
+            "cases. It has not been performed: no validator has been recruited and no "
+            "institutional determination obtained. No human outcome is simulated. No robustness "
+            "or multiverse analysis is part of Paper II.",
         ),
     ):
         heading(document, title, 2)
         paragraph(document, text)
-    heading(document, "3 Observed preparation findings")
+    heading(document, "3 Source corpus audit")
     paragraph(
         document,
         f"The two pinned source CSVs contain {values['source_records']:,} rows and "
@@ -893,10 +935,20 @@ def build_documents() -> None:
         "audit. Main-study outcomes below are delegated mechanical adjudications that await "
         "human adjudication; no human-validated reconstruction rate exists.",
     )
-    heading(document, "4 Main-study execution and delegated mechanical results")
+    heading(document, "4 Main-study execution and sealed delegated mechanical results (frozen)")
     for text in main_study_paragraphs(analysis):
         paragraph(document, text)
-    heading(document, "5 Verification-adjusted sensitivity layer (A/B/C/E; D excluded)")
+    heading(
+        document,
+        "5 Verification-adjusted sensitivity layer (A/B/C/E; provisional, separate from "
+        "Section 4; D excluded)",
+    )
+    paragraph(
+        document,
+        "Section 4 is frozen. Section 5 is a separate provisional layer pending investigator "
+        "approval; it does not overwrite Section 4, no reclassified non-executed paper was "
+        "executed, and the reveal never changed a blind score.",
+    )
     for text in verification_paragraphs(audit):
         paragraph(document, text)
     paragraph(
@@ -925,7 +977,11 @@ def build_documents() -> None:
         "false positives from whole-token matching in compressed or binary content; the "
         "detector's conservatism is a methodological limitation and finding. Agent failure does "
         "not prove human impossibility. Original-code availability may correlate with reporting "
-        "practice but cannot be interpreted causally here.",
+        "practice but cannot be interpreted causally here. Data/code availability requirements "
+        "address only selected stages of the reproducibility chain; reconstructability also "
+        "depends on explicit specification, stable input identity, executable environments and "
+        "target-linked evaluation rules. This framework is conceptual and is not presented as "
+        "an empirically validated universal model.",
     )
     heading(document, "7.1 Dynamic public datasets and input-state identifiability", 2)
     paragraph(
@@ -991,18 +1047,22 @@ def build_documents() -> None:
         document,
         "Funding, competing interests, author contributions, affiliations and correspondence: "
         "not provided. Human-validation ethics/consent determination: not completed. "
-        "Data/code: the public EPJ-linked repository contains the source and preparation "
-        "pipeline; no Paper II reconstruction dataset exists. Third-party full text is "
-        "retained internally under its applicable rights and is not redistributed.",
+        "Data/code: the public EPJ-linked repository contains the source audit, frozen "
+        "protocols, sealed outcome records, adjudication and verification layers and the "
+        "analysis pipeline. Deposited third-party inputs and full text are retained internally "
+        "under their applicable rights with hashes and retrieval receipts and are not "
+        "redistributed.",
     )
     paragraph(
         document,
-        "AI assistance: Devin performed source, literature and design audits and generated "
-        "preparation code and draft materials. These preparation sessions are not blind "
-        "reconstruction replicates. Human investigators must validate the design, factual "
-        "claims, interpretation and final manuscript, and retain scientific responsibility.",
+        "AI assistance: Devin performed source, literature and design audits, generated the "
+        "pipeline and draft materials, recorded the delegated G1–G5 and mechanical adjudications, "
+        "and produced the AI-assisted A/B/C/E review; the blind slots were executed by a "
+        "separate API-hosted model inside the isolated harness. Human investigators must "
+        "validate the design, factual claims, adjudications, interpretation and final "
+        "manuscript, and retain scientific responsibility.",
     )
-    heading(document, "References used in this preparation draft")
+    heading(document, "References")
     paragraph(
         document,
         "Antecedent author names follow the supplied author specification. Publisher/"

@@ -32,6 +32,30 @@ UNCALIBRATED = (
     "measured dataset drift",
 )
 RERUN_TERMS = ("reran", "re-ran", "rerun slot", "executed the original code")
+STALE_PREPARATION_PHRASES = (
+    "this prospective study will",
+    "will finalize",
+    "approximately 100 papers",
+    "use three clean",
+    "prepare approximately 15",
+    "no qualified harness currently exists",
+    "not yet implemented",
+    "draft sap",
+    "proposed design",
+)
+OVERCLAIM_PHRASES = (
+    "guarantees reconstructab",
+    "final adjudication",
+    "investigator-validated",
+    "validated universal framework",
+    "multiverse analysis was",
+    "perturbation analysis was",
+)
+AVAILABILITY_SENTENCE = (
+    "Data/code availability requirements address only selected stages of the "
+    "reproducibility chain"
+)
+HARNESS_SENTENCE = "A functioning reconstruction harness was implemented and used"
 
 
 def tree_sha(directory: Path) -> str:
@@ -186,7 +210,90 @@ def run() -> list[tuple[str, bool, str]]:
         ),
     ]
     checks.extend(input_state_checks(manuscript, tables_doc, supplement))
+    checks.extend(revision_checks(manuscript, tables_doc, values))
     return checks
+
+
+def revision_checks(
+    manuscript: str, tables_doc: str, values: dict[str, dict[str, str]]
+) -> list[tuple[str, bool, str]]:
+    lower = manuscript.lower()
+    abstract = manuscript.split("Abstract (draft)", 1)[1].split("1 Introduction", 1)[0]
+    frozen = values["frozen_majority_successes_among_attempted"]["value"]
+    adjusted = values["adjusted_majority_successes_among_attempted"]["value"]
+    changelog = ROOT / "REVISION_CHANGELOG.md"
+    return [
+        (
+            "no stale preparation-only wording",
+            not any(p in lower for p in STALE_PREPARATION_PHRASES),
+            "; ".join(p for p in STALE_PREPARATION_PHRASES if p in lower),
+        ),
+        (
+            "harness statement corrected and calibrated",
+            HARNESS_SENTENCE in manuscript
+            and "cannot be certified" in manuscript
+            and "not formally qualified" in manuscript,
+            "",
+        ),
+        (
+            "Abstract in completed tense with frozen/provisional separation and D pending",
+            "estimated" in abstract
+            and "100 papers were sampled from 461" in abstract
+            and "Only 10" in abstract
+            and "30 sealed slots" in abstract
+            and "found no paper meeting the majority criterion" in abstract
+            and "provisional and not investigator-signed, proposes one" in abstract
+            and "Section D) has not been performed" in abstract
+            and frozen == "0"
+            and adjusted == "1",
+            "",
+        ),
+        (
+            "Section 4 frozen / Section 5 provisional and separate",
+            "sealed delegated mechanical results (frozen)" in manuscript
+            and "provisional, separate from Section 4; D excluded" in manuscript
+            and "does not overwrite Section 4" in manuscript
+            and "no reclassified non-executed paper was executed" in manuscript
+            and "reveal never changed a blind score" in manuscript,
+            "",
+        ),
+        (
+            "code availability row clarified as artifact access, excluded from blind intervention",
+            "artifact reproducibility only" in tables_doc
+            and "excluded from the Paper II blind intervention" in tables_doc,
+            "",
+        ),
+        ("availability-chain sentence present", AVAILABILITY_SENTENCE in manuscript, ""),
+        (
+            "no overclaim (guarantee, final adjudication, Paper III analyses)",
+            not any(p in lower for p in OVERCLAIM_PHRASES),
+            "; ".join(p for p in OVERCLAIM_PHRASES if p in lower),
+        ),
+        (
+            "Methods structure preserved",
+            all(
+                h in manuscript
+                for h in (
+                    "2.1 Source frame and eligibility",
+                    "2.1a Input accessibility versus input-state identifiability",
+                    "2.2 Sampling and target selection",
+                    "2.3 Independent reconstruction intervention",
+                    "2.4 Outcomes and comparison",
+                    "2.5 Statistical analysis and failure attribution",
+                    "2.6 Freeze, reveal and human validation",
+                )
+            ),
+            "",
+        ),
+        (
+            "revision changelog present and references frozen hashes",
+            changelog.exists()
+            and FROZEN_ABCE_SHA in changelog.read_text()
+            and "350a0e7dcedbb74ccad2472c642318c87cc7d272f1b6c88186a1419dc858ea5a"
+            in changelog.read_text(),
+            "",
+        ),
+    ]
 
 
 def input_state_checks(

@@ -63,7 +63,13 @@ STAGE_TABLE: tuple[tuple[str, str, str], ...] = (
         "ACCESS",
         "explain why exact snapshot can or cannot be redistributed",
     ),
-    ("code availability", "ACCESS", "locate the original implementation (not used in Paper II)"),
+    (
+        "code availability",
+        "ACCESS (artifact access)",
+        "locate the original implementation; artifact reproducibility only, deliberately "
+        "excluded from the Paper II blind intervention and used solely as a descriptive "
+        "characteristic and post-seal reveal resource",
+    ),
     ("software/version reporting", "ACCESS / EXECUTE", "identify the executable environment"),
     ("container/environment", "EXECUTE", "reinstate the execution environment"),
     ("detailed Methods", "RECONSTRUCT", "specify the procedure well enough to implement"),
@@ -187,12 +193,12 @@ def descriptives() -> list[Row]:
             source,
         ),
         (
-            "reference version/release stated in publication text",
+            "reference version/release recorded by the specifier from publication text",
             f"{version_stated}/{reference_entries} entries",
             source,
         ),
         (
-            "reference version/release not specified",
+            "reference version/release not specified in publication text",
             f"{version_unspecified}/{reference_entries} entries "
             f"({papers_with_unspecified} papers with at least one)",
             source,
