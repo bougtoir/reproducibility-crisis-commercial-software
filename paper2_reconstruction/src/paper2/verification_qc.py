@@ -1,5 +1,6 @@
 """QC for the verification-adjusted layer: frozen preservation, arithmetic, consistency."""
 
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -7,12 +8,39 @@ from pathlib import Path
 from docx import Document
 
 from paper2.core import read_csv, sha256
+from paper2.documents import REFERENCES, STAGES
+from paper2.input_state import ACCESS_QUESTIONS, KEY_STATEMENT, STAGE_TABLE
 from paper2.main_analysis import mapping
-from paper2.verification_layer import ADJUDICATION, BLIND, RESULTS, REVEAL_LEDGER, ROOT
+from paper2.verification_layer import (
+    ADJUDICATION,
+    BLIND,
+    IMPORT_DIR,
+    RESULTS,
+    REVEAL_LEDGER,
+    ROOT,
+)
 
 FROZEN_BLIND_SHA = "350a0e7dcedbb74ccad2472c642318c87cc7d272f1b6c88186a1419dc858ea5a"
 FROZEN_ADJUDICATION_SHA = "6fd42b8964e055606cbd24ebddb44f42fa09147fa80bfa2d5bcaa161766c5b28"
+FROZEN_ABCE_SHA = "f6b374b74c48c297e4c68dcdd780a4d2c1f162e8dcfc058111c524408961f78a"
 D_TERMS = ("validator_id", "consent_record", "human_results")
+STAGE_SEQUENCE = "ACCESS → RECONSTRUCT → EXECUTE → REPRODUCE → ROBUST"
+UNCALIBRATED = (
+    "public datasets are not reproducible",
+    "all public databases change",
+    "quantified dataset drift",
+    "measured dataset drift",
+)
+RERUN_TERMS = ("reran", "re-ran", "rerun slot", "executed the original code")
+
+
+def tree_sha(directory: Path) -> str:
+    digest = hashlib.sha256()
+    for path in sorted(directory.rglob("*")):
+        if path.is_file():
+            digest.update(path.relative_to(directory).as_posix().encode())
+            digest.update(bytes.fromhex(sha256(path.read_bytes())))
+    return digest.hexdigest()
 
 
 def docx_text(path: Path) -> str:
@@ -157,7 +185,93 @@ def run() -> list[tuple[str, bool, str]]:
             "",
         ),
     ]
+    checks.extend(input_state_checks(manuscript, tables_doc, supplement))
     return checks
+
+
+def input_state_checks(
+    manuscript: str, tables_doc: str, supplement: str
+) -> list[tuple[str, bool, str]]:
+    svg = (ROOT / "manuscript/figure1_framework.svg").read_text()
+    readme = (ROOT / "README.md").read_text()
+    note = (ROOT / "INPUT_STATE_IDENTIFIABILITY_NOTE.md").read_text()
+    stage_rows = read_csv(ROOT / "results/requirement_stage_table.csv")
+    descriptives = read_csv(ROOT / "results/input_state_descriptives.csv")
+    ledger = {r["reference_id"]: r for r in read_csv(ROOT / "data/verified_references.csv")}
+    verification = (ROOT / "review/INPUT_STATE_CITATION_VERIFICATION.md").read_text()
+    new_ids = [
+        "fair_principles",
+        "force11_data_citation",
+        "rda_dynamic_data_citation",
+        "rauber_dynamic_subsets",
+        "proll_rauber_dynamic",
+        "klump_versioning",
+        "pasquier_provenance",
+        "swhid_content_hash",
+        "sandve_ten_rules",
+        "stodden_enhancing",
+        "zhao_annotation_versions",
+    ]
+    lower = manuscript.lower()
+    return [
+        ("top-level stage order unchanged", " → ".join(STAGES) == STAGE_SEQUENCE, STAGE_SEQUENCE),
+        (
+            "ACCESS subcomponents in Figure 1, README and note",
+            all(q in svg and q in readme and q in note for q in ACCESS_QUESTIONS),
+            "; ".join(ACCESS_QUESTIONS),
+        ),
+        (
+            "requirement-to-stage table complete",
+            [(r["requirement"], r["stage"], r["purpose"]) for r in stage_rows] == list(STAGE_TABLE)
+            and all(row[0] in tables_doc and row[0] in supplement for row in STAGE_TABLE),
+            f"{len(STAGE_TABLE)} rows",
+        ),
+        (
+            "input-state descriptives carry no invented fields",
+            all(
+                any(w in r["value"] for w in ("not recorded", "not assessed"))
+                for r in descriptives
+                if r["item"] in ("schema/release identifier", "historical version check")
+            )
+            and "not recorded (live service snapshots)" in tables_doc,
+            "",
+        ),
+        (
+            "calibrated wording present and uncalibrated wording absent",
+            KEY_STATEMENT in manuscript
+            and "not by itself establish" in manuscript
+            and "did not quantify dataset drift" in manuscript
+            and not any(term in lower for term in UNCALIBRATED),
+            "",
+        ),
+        (
+            "no novelty claim for provisional terms",
+            "no novelty is claimed" in manuscript and "novel" not in note.lower(),
+            "",
+        ),
+        (
+            "new citations verified in ledger and verification table",
+            all(
+                i in REFERENCES
+                and i in ledger
+                and ledger[i]["DOI"] in manuscript
+                and ledger[i]["DOI"] in verification
+                for i in new_ids
+            ),
+            f"{len(new_ids)} references",
+        ),
+        (
+            "A/B/C/E adjudication records unchanged",
+            tree_sha(IMPORT_DIR) == FROZEN_ABCE_SHA,
+            "",
+        ),
+        (
+            "no rerun or original-code execution introduced",
+            not any(t in lower for t in RERUN_TERMS)
+            and "no original code was executed" in manuscript,
+            "",
+        ),
+    ]
 
 
 def write_report() -> None:

@@ -20,6 +20,7 @@ from pptx.util import Pt as SlidePt
 
 from paper2.build import ROOT
 from paper2.core import Row, read_csv, sha256
+from paper2.input_state import ACCESS_QUESTIONS, KEY_STATEMENT, MINIMUM_REPORTING
 from paper2.main_analysis import listed, mapping
 
 STATUS = (
@@ -42,10 +43,14 @@ ARTIFACT_NAMES = (
 TITLE = "From scientific description to independent computational reconstruction"
 SUBTITLE = "Prospective Paper II study linked to the EPJ commercial-software corpus"
 CAPTION = (
-    "Figure 1. Conceptual Wet/Dry framework. Paper II focuses on RECONSTRUCT and "
-    "observes EXECUTE and REPRODUCE. ROBUST belongs to future Paper III and is excluded. "
-    "The two pathways are an analogy, not a literal equivalence or an empirical result."
+    "Figure 1. Conceptual Wet/Dry framework. ACCESS is refined internally into three "
+    "questions (resource accessible; exact input state identifiable; historical input state "
+    "retrievable) because public resources can drift over time. Paper II focuses on "
+    "RECONSTRUCT and observes EXECUTE and REPRODUCE. ROBUST belongs to future Paper III and "
+    "is excluded. The two pathways are an analogy, not a literal equivalence or an empirical "
+    "result."
 )
+ACCESS_NOTE = "Public resources can drift over time; availability ≠ identity of the input state."
 STAGES = ["ACCESS", "RECONSTRUCT", "EXECUTE", "REPRODUCE", "ROBUST"]
 STAGE_COLORS = ["#E2E8F0", "#0F766E", "#CCFBF1", "#CCFBF1", "#FEF3C7"]
 WET = [
@@ -67,14 +72,25 @@ DRY = [
 REFERENCES = (
     "acm_terms",
     "corebench",
+    "fair_principles",
+    "force11_data_citation",
     "goodman_crossref",
+    "klump_versioning",
     "nasem_metadata",
     "paper2code",
     "paperbench_arxiv",
     "parent_crossref",
+    "pasquier_provenance",
+    "proll_rauber_dynamic",
+    "rauber_dynamic_subsets",
+    "rda_dynamic_data_citation",
     "replicationbench",
+    "sandve_ten_rules",
     "scienceagentbench_arxiv",
+    "stodden_enhancing",
+    "swhid_content_hash",
     "wet_crossref",
+    "zhao_annotation_versions",
 )
 
 
@@ -196,10 +212,24 @@ def framework(output: Path) -> None:
         )
         if index < len(STAGES) - 1:
             axis.text(x + 2.47, 5.7, "→", ha="center", va="center", fontsize=19)
-    axis.text(4.0, 4.88, "Paper II focus and downstream observations", fontsize=12, color="#0F766E")
+    axis.add_patch(
+        FancyBboxPatch(
+            (0.2, 4.28),
+            2.35,
+            0.82,
+            boxstyle="round,pad=0.02",
+            facecolor="#F8FAFC",
+            edgecolor="#94A3B8",
+            linestyle="--",
+        )
+    )
+    for index, question in enumerate(ACCESS_QUESTIONS):
+        axis.text(0.32, 4.95 - index * 0.26, f"├ {question}", fontsize=8.6, color="#0F172A")
+    axis.text(3.0, 4.88, "Paper II focus and downstream observations", fontsize=12, color="#0F766E")
     axis.text(10.6, 4.88, "Paper III: excluded", fontsize=12, color="#92400E")
-    for name, items, y, fill in (("WET", WET, 3.3, "#EFF6FF"), ("DRY", DRY, 1.7, "#F0FDFA")):
-        axis.text(0.2, y + 1.08, name, fontsize=14, weight="bold", color="#0F172A")
+    axis.text(3.0, 4.45, ACCESS_NOTE, fontsize=9.5, color="#475569", style="italic")
+    for name, items, y, fill in (("WET", WET, 3.0, "#EFF6FF"), ("DRY", DRY, 1.45, "#F0FDFA")):
+        axis.text(0.2, y + 1.0, name, fontsize=14, weight="bold", color="#0F172A")
         for index, label in enumerate(items):
             x = 0.2 + index * 2.17
             axis.add_patch(
@@ -217,14 +247,14 @@ def framework(output: Path) -> None:
                 axis.text(x + 2.06, y + 0.44, "→", ha="center", va="center", fontsize=16)
     axis.text(
         0.2,
-        0.8,
+        0.85,
         "Independent implementation ≠ access to the original code",
         fontsize=13,
         color="#0F172A",
     )
     axis.text(
         0.2,
-        0.35,
+        0.45,
         "Conceptual analogy only. No robustness or multiverse analysis.",
         fontsize=12,
         color="#475569",
@@ -291,8 +321,10 @@ def slides(output: Path, characteristics: list[Row]) -> None:
         line.font.color.rgb = SlideColor.from_string("FFFFFF" if index == 1 else "0F172A")
         if index < 4:
             textbox(2.58 + index * 2.6, 1.13, 0.3, 0.5, "→", 20)
-    textbox(3.0, 1.88, 7.5, 0.45, "Paper II focus and downstream observations", 15)
-    textbox(10.7, 1.88, 2.3, 0.5, "Paper III: excluded", 14)
+    textbox(0.3, 1.82, 2.4, 0.9, "\n".join(f"├ {q}" for q in ACCESS_QUESTIONS), 9)
+    textbox(3.0, 1.82, 7.5, 0.4, "Paper II focus and downstream observations", 15)
+    textbox(3.0, 2.22, 7.5, 0.4, ACCESS_NOTE, 11)
+    textbox(10.7, 1.82, 2.3, 0.5, "Paper III: excluded", 14)
     for name, items, y in (("WET", WET, 2.85), ("DRY", DRY, 4.5)):
         textbox(0.3, y - 0.5, 2.0, 0.4, name, 18)
         for index, label in enumerate(items):
@@ -590,6 +622,27 @@ def verification_tables(document: WordDocument, results: Path) -> None:
         [{"item": "Cases completed", "value": "0 (pending external human validation)"}],
         [("item", "Item"), ("value", "Value")],
     )
+    caption(
+        document,
+        "Table 10. Conceptual mapping of reproducibility requirements to framework stages. "
+        "ACCESS is refined into resource accessibility, input-state identifiability and "
+        "historical-state retrievability; the mapping is conceptual, not an empirical result.",
+    )
+    table(
+        document,
+        read_csv(results.parent / "requirement_stage_table.csv"),
+        [("requirement", "Requirement"), ("stage", "Stage"), ("purpose", "Purpose")],
+    )
+    caption(
+        document,
+        "Table 11. ACCESS-stage input-state fields as recorded in the frozen main-study records "
+        "(descriptive; fields not recorded are reported as such; no dataset drift was measured).",
+    )
+    table(
+        document,
+        read_csv(results.parent / "input_state_descriptives.csv"),
+        [("item", "Item"), ("value", "Value as recorded"), ("source", "Source")],
+    )
 
 
 def main_study_tables(
@@ -737,6 +790,24 @@ def build_documents() -> None:
             "policy estimand. Historical code/data flags cannot replace these assessments.",
         ),
         (
+            "2.1a Input accessibility versus input-state identifiability",
+            "Input accessibility was distinguished from input-state identifiability. Within ACCESS "
+            "three questions were kept separate: whether a named resource is accessible; whether "
+            "the exact state of the input data used in the original analysis can be uniquely "
+            "identified from the publication and associated records (input-state "
+            "identifiability); and whether that exact previously used state can still be "
+            "obtained by an independent third party (historical-state retrievability). For "
+            "externally maintained public datasets that authors could not necessarily "
+            "redistribute or freeze, we recorded, where available, the repository or accession, "
+            "release or version, retrieval date or timestamp, query parameters, file identity, "
+            "schema or release identifier, and cryptographic checksum. Public availability alone "
+            "was not treated as evidence that the exact historical analytical input remained "
+            "identifiable or retrievable. This refinement is descriptive: the frozen G1–G5 gates "
+            "and barrier states were not rescored, and no dataset drift was measured. Table 10 "
+            "maps these reporting requirements to framework stages; Table 11 summarizes the "
+            "fields actually recorded in the frozen main-study records.",
+        ),
+        (
             "2.2 Sampling and target selection",
             "Using the approved frame, a diverse pilot will finalize operational rules. The "
             "main sample is approximately 100 papers, stratified using a deterministic disjoint "
@@ -830,7 +901,7 @@ def build_documents() -> None:
         paragraph(document, text)
     paragraph(
         document,
-        "Tables 6–9 are supplied separately in the editable tables file and the supplement.",
+        "Tables 6–11 are supplied separately in the editable tables file and the supplement.",
     )
     heading(document, "6 Human validation (Section D) — pending")
     paragraph(
@@ -855,6 +926,59 @@ def build_documents() -> None:
         "detector's conservatism is a methodological limitation and finding. Agent failure does "
         "not prove human impossibility. Original-code availability may correlate with reporting "
         "practice but cannot be interpreted causally here.",
+    )
+    heading(document, "7.1 Dynamic public datasets and input-state identifiability", 2)
+    paragraph(
+        document,
+        f"{KEY_STATEMENT} Externally maintained public datasets, registries, genomic and "
+        "administrative databases and APIs may be updated, corrected, reannotated or "
+        "restructured, and query or API responses may change over time, while retaining the "
+        "same repository, accession, endpoint or dataset name (Klump et al., 2021; Rauber et "
+        "al., 2016; Rauber et al., 2021). The same repository, accession or URL therefore does "
+        "not necessarily denote the same version, and the same version label does not by "
+        "itself establish the same bytes. This does not imply that all same-accession "
+        "resources change; it means that public availability does not by itself establish "
+        "that the exact historical analytical input remains identifiable or retrievable. Three "
+        "abilities are distinct: the ability to redistribute an input, which authors may lack "
+        "for third-party data under licence or legal constraints; the ability to identify the "
+        "exact state that was used; and the ability to retrieve that historical state later. "
+        "A content hash verifies byte-level identity when the bytes are available (Di Cosmo et "
+        "al., 2020) but does not recover historical bytes that are no longer archived. Where "
+        "direct archival redistribution is not permitted, reproducibility must rely on "
+        "sufficient state identification and provenance: repository or accession, release or "
+        "version, retrieval timestamp, query parameters, file identity, checksum and "
+        "transformation provenance (Wilkinson et al., 2016; Data Citation Synthesis Group, "
+        "2014; Pasquier et al., 2017; Sandve et al., 2013; Stodden et al., 2016).",
+    )
+    paragraph(
+        document,
+        "Software-version drift, the concern of the EPJ antecedent (Onishi and Ikenoue, 2026), "
+        "and dataset-version drift are analogous but distinct: both can separate a nominally "
+        "available resource from the state actually used, but versioned software can usually "
+        "be redistributed or rebuilt, whereas third-party data states may be neither "
+        "redistributable nor recoverable. Paper II did not quantify dataset drift and makes no "
+        "empirical claim about its frequency. The frozen records show only that repository or "
+        "accession identity was recorded for every sampled paper, that the delegated specifier "
+        "named external public reference resources for about half of the specified papers "
+        "with a minority of those entries lacking a version in the publication text, that 28 "
+        "papers stopped at the frozen barrier requiring an unserved external public reference "
+        "resource (a state that the frozen protocol defined and this refinement leaves "
+        "unchanged), and that the served inputs were logged with retrieval timestamps and "
+        "SHA-256 digests but without repository version identifiers (Table 11). Reference "
+        "resource identity can matter for results (Zhao and Zhang, 2015). Input-state "
+        "identifiability is therefore presented as a conceptual implication, a reporting "
+        "requirement and a limitation relevant to reconstructability, not as a measured "
+        "outcome. A focused bibliographic search found no established use of the terms "
+        "input-state identifiability or historical-state retrievability; they are used "
+        "provisionally and no novelty is claimed. Data-state reproducibility was not adopted "
+        "because no established compatible usage was found.",
+    )
+    paragraph(
+        document,
+        "Proposed minimum reporting set for third-party or public input data (a recommendation, "
+        "not an empirically validated standard), where available: "
+        + "; ".join(f"({i}) {item}" for i, item in enumerate(MINIMUM_REPORTING, 1))
+        + ". Table 10 assigns each element to the framework stage it serves.",
     )
     paragraph(
         document,

@@ -1,0 +1,18 @@
+requirement,stage,purpose
+repository/accession,ACCESS,identify data source
+release/version,ACCESS,identify exact dataset state
+retrieval date/time,ACCESS,anchor dynamic resource state in time
+exact query/API parameters,ACCESS,reconstruct query-generated input
+file list/schema,ACCESS,fix input composition/structure
+SHA-256/content hash,ACCESS / REPRODUCE,verify byte-level identity
+transformation log,RECONSTRUCT / REPRODUCE,trace derivation from raw to analytical input
+license/redistribution status,ACCESS,explain why exact snapshot can or cannot be redistributed
+code availability,ACCESS,locate the original implementation (not used in Paper II)
+software/version reporting,ACCESS / EXECUTE,identify the executable environment
+container/environment,EXECUTE,reinstate the execution environment
+detailed Methods,RECONSTRUCT,specify the procedure well enough to implement
+parameters/defaults,RECONSTRUCT,fix analytical choices that change results
+random seed,EXECUTE / REPRODUCE,control stochastic variation
+resource requirements,EXECUTE,"state compute, memory and time needed"
+independent reconstruction,RECONSTRUCT → REPRODUCE,test the description itself
+robustness testing,ROBUST,vary reasonable choices (Paper III; excluded here)

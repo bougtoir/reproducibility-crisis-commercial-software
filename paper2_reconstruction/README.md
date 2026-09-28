@@ -51,6 +51,30 @@ draft, with prospective Methods and an observed source audit, not Paper II resul
   redistributed publicly. The public reference ledger contains metadata and
   short analytical summaries only.
 
+## Conceptual framework: ACCESS refinement
+
+The top-level framework is unchanged: ACCESS → RECONSTRUCT → EXECUTE →
+REPRODUCE → ROBUST. ACCESS is refined internally into three questions —
+`resource accessible?`, `exact input state identifiable?`,
+`historical input state retrievable?` — because publicly available data, the
+exact historical data state used in the original analysis, and the state an
+independent third party can still retrieve are not the same thing (same
+repository/accession/URL ≠ same version ≠ same bytes). Public availability does
+not by itself establish that the exact historical analytical input remains
+identifiable or retrievable; it also does not follow that every same-accession
+resource changes, and Paper II did not quantify dataset drift. Definitions,
+the relation to the EPJ software-version work, the proposed (not validated)
+minimum reporting set and claim calibration are in
+`INPUT_STATE_IDENTIFIABILITY_NOTE.md`. `src/paper2/input_state.py` writes the
+conceptual requirement-to-stage table (`results/requirement_stage_table.csv`,
+Table 10) and the descriptive summary of fields actually recorded in the
+frozen records (`results/input_state_descriptives.csv`, Table 11) from the
+public retrieval ledger `data/adjudication/main-study-20260925/input_state_ledger.csv`
+(extracted once from the private acquisition receipts with
+`python -m paper2.input_state --extract-ledger <private main-inputs dir>`).
+Fields that were never recorded are reported as such; no gate, barrier state,
+sealed outcome or A/B/C/E record was rescored.
+
 ## Implementation boundary
 
 Implemented: source snapshot/integrity checks, duplicate/conflict detection,
