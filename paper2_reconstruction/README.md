@@ -1,5 +1,18 @@
 # Paper II — preparation package, not a completed empirical study
 
+> **Current state (revision 2026-10):** the main study has run under the
+> prospectively frozen protocol — 10 attempted papers, 30 sealed slots,
+> frozen delegated-mechanical outcome 0/10 vs provisional verification-adjusted
+> 1/10 pending Human Validation D. `results/manuscript_values.csv` is the
+> canonical numeric layer; `WITHOUT_D_STATUS.md` is authoritative for what is
+> complete vs pending. Earlier sentences in this file describing
+> "no reconstruction rates / no frozen outcomes" document the *pre-execution*
+> state and are superseded for current status; they are kept as provenance.
+> To run tests on a clean checkout: `make setup && make fetch-vetted-wheels &&
+> make check`. The package remains **NOT SUBMISSION READY** (D pending,
+> no investigator sign-off).
+
+
 This branch preserves the EPJ source and creates a prospective reconstruction study
 workspace. No reconstruction rates, human results, or protocol-freeze claims are
 generated. `results/readiness.json` is authoritative for the current study status.

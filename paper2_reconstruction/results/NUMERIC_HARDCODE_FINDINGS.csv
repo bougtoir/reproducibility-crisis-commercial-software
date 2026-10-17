@@ -1,0 +1,9 @@
+id,file,category,literal_or_claim,resolution
+H1,src/paper2/documents.py,D,"Abstract corpus counts (100/461/10,000/9,935/64/7)",Replaced by values[] lookups from manuscript_values.csv
+H2,src/paper2/documents.py,D,"""Only 10"" / ""30 sealed slots"" / ""proposes one"" in Abstract",Derived from main_attempted_papers/main_blind_slots/adjusted_majority_successes_among_attempted
+H3,src/paper2/documents.py,D,"Section 5 B/C/E/leakage tallies (81,7,2 / 25 / 130,5,3 / 10,1,7,2)",Derived from B_*/C_*/E_*/leakage_* canonical rows
+H4,src/paper2/documents.py,D,Input-state numbers (119/51/19/11/28/21/7) in Section 5 text,Derived from new input_state_values() canonical rows
+H5,src/paper2/verification_qc.py,D,QC asserted literal abstract substrings duplicating results,QC now builds expected substrings from manuscript_values.csv
+H6,src/paper2/verification_layer.py,C,Pilot/gate/external-reference counts lacked canonical rows,Added 3 frozen rows with out-of-denominator scopes
+H7,src/paper2/input_state.py,C,Input-state descriptives not in canonical layer,Added input_state_values() emitting frozen descriptive rows
+H8,tests/*.py,E,"Invariant assertions (0 unresolved refs, empty leak set)","Accepted: structural invariants, not copied results"

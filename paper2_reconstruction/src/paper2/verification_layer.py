@@ -681,11 +681,17 @@ class Importer:
         ]
         write_csv(RESULTS / "adjusted_B_funnel.csv", funnel_table, list(funnel_table[0]))
         write_csv(RESULTS / "adjusted_E_reveal_ledger.csv", e_rows, list(e_rows[0]))
-        write_csv(
-            RESULTS / "evidence_reference_resolution.csv",
-            self.reference_rows,
-            list(self.reference_rows[0]),
-        )
+        # Environment-dependent outputs: without the private evidence package
+        # the resolution table can only record "evidence_package_not_mounted".
+        # Do not clobber the authoritative private-mount bytes on a public
+        # rebuild; only write when evidence is mounted or nothing exists yet.
+        resolution_path = RESULTS / "evidence_reference_resolution.csv"
+        if self.evidence is not None or not resolution_path.exists():
+            write_csv(
+                resolution_path,
+                self.reference_rows,
+                list(self.reference_rows[0]),
+            )
         policy = mapping(estimands["policy_estimate_eligible_population"])
         policy_rows = [mapping(v) for v in policy.values()]
         write_csv(RESULTS / "adjusted_policy_estimates.csv", policy_rows, list(policy_rows[0]))
@@ -733,9 +739,9 @@ class Importer:
                 "reveal-informed rescoring of blind runs",
             ],
         }
-        (RESULTS / "verification_import_audit.json").write_text(
-            json.dumps(audit, indent=2, default=str) + "\n"
-        )
+        audit_path = RESULTS / "verification_import_audit.json"
+        if self.evidence is not None or not audit_path.exists():
+            audit_path.write_text(json.dumps(audit, indent=2, default=str) + "\n")
         return audit
 
 
@@ -777,6 +783,26 @@ def verification_values(audit: dict[str, object], analysis: dict[str, object]) -
             "pre_reconstruction_non_execution",
         ),
         ("main_blind_slots", denominators["runs"], FROZEN_STATUS, "runs"),
+        (
+            "prospective_pilot_papers",
+            denominators["prospective_pilot_papers_excluded"],
+            FROZEN_STATUS,
+            "excluded_layer_outside_denominator",
+        ),
+        (
+            "accessibility_gate_failed_papers",
+            denominators["accessibility_gate_failed_papers_excluded"],
+            FROZEN_STATUS,
+            "excluded_layer_outside_denominator",
+        ),
+        (
+            "not_attempted_external_reference_resource_required",
+            mapping(analysis["paper_dispositions"])[
+                "not_attempted_external_reference_resource_required_not_served"
+            ],
+            FROZEN_STATUS,
+            "pre_reconstruction_non_execution",
+        ),
         (
             "frozen_majority_successes_among_attempted",
             mapping(cond["frozen_mechanical"])["numerator"],

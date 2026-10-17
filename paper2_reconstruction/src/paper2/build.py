@@ -8,6 +8,7 @@ from pathlib import Path
 
 from paper2.core import FIELDS, Row, paper_registry, read_csv, sha256, snapshot, wilson, write_csv
 from paper2.frame import confirm_frame
+from paper2.input_state import input_state_values
 from paper2.input_state import write_outputs as write_input_state_outputs
 from paper2.main_analysis import analyse, write_tables
 from paper2.verification_layer import IMPORT_DIR, Importer, verification_values, without_d_status
@@ -355,6 +356,7 @@ def build() -> dict[str, object]:
         raise ValueError("main analysis denominators missing")
     audit = Importer(IMPORT_DIR).run()
     values.extend(verification_values(audit, analysis))
+    values.extend(input_state_values())
     write_csv(results / "manuscript_values.csv", values, list(values[0]))
     without_d_status(audit, analysis)
     write_input_state_outputs()

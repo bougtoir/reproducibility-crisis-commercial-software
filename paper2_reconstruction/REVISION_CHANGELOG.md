@@ -92,3 +92,36 @@ analyses); Methods structure; changelog present with frozen hashes.
 
 DRAFT — NOT SUBMISSION READY. Investigator verification/sign-off, human adjudication and Human
 Validation D remain pending; `make submission-check` remains non-zero by design.
+
+---
+
+# Revision 2026-10 — hostile review / hard-code elimination pass
+
+No empirical result, denominator, sealed outcome, adjudication record, protocol,
+SAP, tolerance rule, sampling decision, or human-validation status changed.
+No blind slot rerun; no reveal-code execution; no Paper III work.
+
+## Code / provenance
+- `documents.py`: all empirical literals in prose/captions/tables replaced by
+  canonical `values` lookups; Section 7.1 software-redistribution claim softened
+  per H5; `scripts/` added to shipped file list.
+- `input_state.py`: `input_state_stats()` + `input_state_values()` — input-state
+  counts now canonical frozen-descriptive rows (not empirical drift claims).
+- `verification_layer.py`: 3 new canonical rows (pilot cohort, gate-failed
+  cohort, external-reference barrier) marked out-of-denominator.
+- `verification_qc.py`: abstract assertions derive expected substrings from
+  `manuscript_values.csv` instead of duplicating literal results.
+- `build.py`: emits the new canonical rows.
+- `Makefile` + `scripts/fetch_vetted_wheels.sh`: hash-verified fetch of the
+  pinned vetted wheels; fixes the one failing test on clean checkouts.
+
+## New audit artifacts
+- review/HARDCODE_AUDIT.md, results/NUMERIC_HARDCODE_FINDINGS.csv,
+  results/NUMERIC_PROVENANCE.csv, results/MANUSCRIPT_NUMERIC_TRACEABILITY.csv
+- review/HOSTILE_REVIEW.md (C1–C10), review/HOSTILE_REVIEW_ACTION_LOG.md,
+  review/FINAL_ADVERSARIAL_DECISION.md (SUBMISSION-READY EXCEPT D)
+- review/DATA_TEXT_FIGURE_CONSISTENCY.md, review/DOCUMENTATION_STALENESS_AUDIT.md,
+  review/PACKAGE_SELF_CONSISTENCY.md, review/REFERENCE_AUDIT.md,
+  results/CITATION_CLAIM_MAP.csv, review/TEST_REPORT.md, FINAL_HANDOFF.md
+- README.md: dated "Current state" banner; review/EVIDENCE.md and
+  review/REVIEWER_AUDIT.md: SUPERSEDED banners (provenance retained).

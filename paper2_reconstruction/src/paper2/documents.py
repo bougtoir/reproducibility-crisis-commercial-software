@@ -19,7 +19,7 @@ from pptx.util import Inches as SlideInches
 from pptx.util import Pt as SlidePt
 
 from paper2.build import ROOT
-from paper2.core import Row, read_csv, sha256
+from paper2.core import FIELDS, Row, read_csv, sha256
 from paper2.input_state import ACCESS_QUESTIONS, KEY_STATEMENT, MINIMUM_REPORTING
 from paper2.main_analysis import listed, mapping
 
@@ -444,11 +444,13 @@ def main_study_paragraphs(analysis: dict[str, object]) -> list[str]:
     return [
         "Status: every number in this section is a delegated mechanical adjudication of "
         "sealed blind outcomes under frozen rules (AMEND-2026-09-25-07). Human adjudication "
-        "and investigator verification are pending, and the seven prospective pilot papers "
-        "and seven ACCESSIBILITY_GATE_FAILED papers are outside every denominator below.",
+        "and investigator verification are pending, and the "
+        f"{denominators['prospective_pilot_papers_excluded']} prospective pilot papers "
+        f"and {denominators['accessibility_gate_failed_papers_excluded']} "
+        "ACCESSIBILITY_GATE_FAILED papers are outside every denominator below.",
         f"Exhaustive route screening of the unique-PMID frame left "
         f"{denominators['route_eligible_population_E']} route-eligible papers, from which "
-        f"{denominators['sampled_main_cohort']} were sampled in seven frozen strata. "
+        f"{denominators['sampled_main_cohort']} were sampled in {len(FIELDS)} frozen strata. "
         f"{denominators['attempted_papers_complete_triples']} sampled papers completed three "
         f"blind slots ({denominators['runs']} runs); {denominators['not_attempted_papers']} "
         "were not run and retain machine-readable states (Table 2): external public reference "
@@ -517,7 +519,8 @@ def verification_paragraphs(audit: dict[str, object]) -> list[str]:
     completeness = mapping(e["completeness_described_papers"])
     return [
         "Status: this section reports a separate verification-adjusted sensitivity layer built "
-        "from an AI-assisted independent evidence review of sections A (30 sealed slots), B (90 "
+        "from an AI-assisted independent evidence review of sections A "
+        f"({a['slots_reviewed']} sealed slots), B ({b['papers_reviewed']} "
         "non-executed papers), C (historical G1–G5, pilot and access-barrier layers) and E "
         "(descriptive reveal). The review is provisional and awaits investigator approval; it "
         "is not human-participant validation, no investigator sign-off field was populated, and "
@@ -525,7 +528,8 @@ def verification_paragraphs(audit: dict[str, object]) -> list[str]:
         f"{str(mapping(audit['frozen_inputs_sha256'])['blind_outcome'])[:16]}…). Every reviewed "
         f"paper/slot identifier validated against the frozen records and {refs['total']} cited "
         f"evidence references resolved ({refs['unresolved']} unresolved).",
-        f"Three estimands are kept separate. Attempt reachability among the 100 selected papers "
+        f"Three estimands are kept separate. Attempt reachability among the "
+        f"{mapping(est['attempt_reachability'])['denominator']} selected papers "
         f"was {pct(mapping(est['attempt_reachability']))} under both layers. Conditional majority "
         f"success among attempted papers was {pct(mapping(cond['frozen_mechanical']))} under the "
         f"frozen mechanical adjudication and {pct(mapping(cond['verification_adjusted']))} under "
@@ -545,7 +549,8 @@ def verification_paragraphs(audit: dict[str, object]) -> list[str]:
         f"{detector['unresolved']} unresolved. Whole-token matches inside compressed or binary "
         "deposited content and raw input matrices produced false-positive target-leakage flags; "
         "this is reported as a methodological finding. Under the adjusted layer the cohort "
-        f"comprises 10 attempted papers, {barriers} verified pre-reconstruction barriers, "
+        f"comprises {adjusted.get('slots_completed', 0)} attempted papers, "
+        f"{barriers} verified pre-reconstruction barriers, "
         f"{adjusted.get('specifiable_runnable', 0)} papers reclassified as specifiable and "
         f"runnable but never executed, and {adjusted.get('unresolved', 0)} unknown. "
         "Reclassified papers were "
@@ -574,10 +579,13 @@ def verification_paragraphs(audit: dict[str, object]) -> list[str]:
     ]
 
 
-def verification_tables(document: WordDocument, results: Path) -> None:
+def verification_tables(
+    document: WordDocument, results: Path, values: dict[str, int]
+) -> None:
     caption(
         document,
-        "Table 6. Paper-level successful-slot distribution among 10 attempted papers: frozen "
+        f"Table 6. Paper-level successful-slot distribution among "
+        f"{values['main_attempted_papers']} attempted papers: frozen "
         "mechanical versus verification-adjusted (AI-assisted review, provisional).",
     )
     table(
@@ -658,12 +666,16 @@ def main_study_tables(
     run_levels: list[Row],
     failure_codes: list[Row],
     reveal: list[Row],
+    values: dict[str, int],
 ) -> None:
     caption(
         document, "Table 2. Main-cohort paper dispositions (delegated; human adjudication pending)."
     )
     table(document, dispositions, [("disposition", "Disposition"), ("papers", "Papers")])
-    caption(document, "Table 3. Run-level L1–L5 states across 30 sealed slots.")
+    caption(
+        document,
+        f"Table 3. Run-level L1–L5 states across {values['main_blind_slots']} sealed slots.",
+    )
     table(document, run_levels, [("level", "Level"), ("state", "State"), ("runs", "Runs")])
     caption(document, "Table 4. Failure taxonomy codes by run and by paper.")
     table(document, failure_codes, [("code", "Code"), ("runs", "Runs"), ("papers", "Papers")])
@@ -723,14 +735,21 @@ def build_documents() -> None:
         "separate levels. Three fixed independent blind run slots per paper supported "
         "majority, strict and permissive outcome definitions while missing or contaminated "
         "slots were retained as unresolved. Targets, tolerances and resource ceilings were "
-        "frozen before every run. After a seven-paper prospective pilot and protocol freeze, "
-        "100 papers were sampled from 461 route-eligible papers in seven strata. Only 10 "
+        "frozen before every run. After a "
+        f"{values['prospective_pilot_papers']}-paper prospective pilot and protocol freeze, "
+        f"{values['main_cohort_selected']} papers were sampled from "
+        f"{values['main_eligible_population']} route-eligible papers in "
+        f"{values['epj_fields']} strata. Only {values['main_attempted_papers']} "
         "reached blinded independent reconstruction under the prespecified access, input and "
-        "specification rules; 90 stopped before reconstruction with machine-readable barrier "
-        "states. Delegated mechanical adjudication of the 30 sealed slots found no paper "
+        f"specification rules; {values['main_non_executed_papers']} stopped before "
+        "reconstruction with machine-readable barrier "
+        f"states. Delegated mechanical adjudication of the {values['main_blind_slots']} "
+        "sealed slots found no paper "
         "meeting the majority criterion; a separate AI-assisted verification review, "
-        "provisional and not investigator-signed, proposes one and does not overwrite the "
-        "sealed result. Verification of the 90 non-executed papers supported most recorded "
+        "provisional and not investigator-signed, proposes "
+        f"{values['adjusted_majority_successes_among_attempted']} and does not overwrite the "
+        "sealed result. Verification of the "
+        f"{values['main_non_executed_papers']} non-executed papers supported most recorded "
         "barriers and identified a small number of pre-execution misclassifications from an "
         "overly conservative target-leakage detector. Large pre-reconstruction attrition is "
         "the primary empirical finding; the reconstruction result is conditional on attempt, "
@@ -799,8 +818,10 @@ def build_documents() -> None:
             "sufficiency. Under the amended candidate criterion (AMEND-2026-09-24-03) primary "
             "reconstruction required deposited input data that a third party can legally and "
             "immediately obtain without contacting the original authors. Exhaustive route "
-            "screening of the unique-PMID frame identified 461 route-eligible papers; every "
-            "screening failure, including the seven ACCESSIBILITY_GATE_FAILED papers, was retained "
+            f"screening of the unique-PMID frame identified "
+            f"{values['main_eligible_population']} route-eligible papers; every "
+            f"screening failure, including the {values['accessibility_gate_failed_papers']} "
+            "ACCESSIBILITY_GATE_FAILED papers, was retained "
             "as an auditable attrition layer. Neither access nor specification failures excluded "
             "otherwise eligible papers from the all-eligible policy estimand. Historical code/data "
             "flags were not used in place of these assessments. G1–G5 were recorded as delegated "
@@ -826,14 +847,17 @@ def build_documents() -> None:
         ),
         (
             "2.2 Sampling and target selection",
-            "A seven-paper prospective pilot (one paper per field, three blind slots each, 21 "
+            f"A {values['prospective_pilot_papers']}-paper prospective pilot (one paper per "
+            f"field, three blind slots each, {values['prospective_pilot_papers'] * 3} "
             "slots) was executed under prospectively frozen specifications and used only to "
             "identify procedural defects; its prespecified review recorded one defect (PD-01, an "
             "internally inconsistent token ceiling) and did not change target-selection, "
             "tolerance, conclusion or taxonomy rules, and no pilot success rate was computed. The "
             "final protocol and SAP were then frozen with hashes and RFC 3161 timestamps "
-            "(PROTOCOL-FREEZE-2026-09-25). From the 461 route-eligible papers, 100 were sampled "
-            "by stratified random sampling using a deterministic disjoint assignment of the seven "
+            f"(PROTOCOL-FREEZE-2026-09-25). From the {values['main_eligible_population']} "
+            f"route-eligible papers, {values['main_cohort_selected']} were sampled "
+            "by stratified random sampling using a deterministic disjoint assignment of the "
+            f"{values['epj_fields']} "
             "overlapping EPJ fields; within-field sampling probabilities and weights were saved. "
             "Before any run, one central target per paper was selected by the frozen hierarchy "
             "and its associated claim, input identifiers, allowed and blocked resources, metric, "
@@ -892,8 +916,9 @@ def build_documents() -> None:
             "and pilot records (C) and the reveal (E) was imported as a provisional "
             "verification-adjusted sensitivity layer that awaits investigator sign-off. Human "
             "validation (Section D) is prespecified as outcome-balanced human cases scored by "
-            "validators masked to agent and reveal results; the frozen records support ten "
-            "cases. It has not been performed: no validator has been recruited and no "
+            "validators masked to agent and reveal results; the frozen records support "
+            f"{values['main_attempted_papers']} cases (one per attempted paper). It has not "
+            "been performed: no validator has been recruited and no "
             "institutional determination obtained. No human outcome is simulated. No robustness "
             "or multiverse analysis is part of Paper II.",
         ),
@@ -966,10 +991,12 @@ def build_documents() -> None:
     heading(document, "7 Discussion boundary and submission hold")
     paragraph(
         document,
-        "The primary empirical message is the large pre-reconstruction attrition: 90 of 100 "
+        "The primary empirical message is the large pre-reconstruction attrition: "
+        f"{values['main_non_executed_papers']} of {values['main_cohort_selected']} "
         "sampled papers stopped at access, input or specification barriers before any blinded "
         "reconstruction under the frozen rules, and verification supported most of these "
-        "barriers. The 10-paper reconstruction result is conditional on attempt, obtained under "
+        f"barriers. The {values['main_attempted_papers']}-paper reconstruction result is "
+        "conditional on attempt, obtained under "
         "frozen resource ceilings and a fixed agent, and is reported side by side as a frozen "
         "mechanical value and a provisional verification-adjusted value. Non-executed papers "
         "are pre-reconstruction non-executions, not reconstruction failures. Verification "
@@ -1010,13 +1037,19 @@ def build_documents() -> None:
         document,
         "Software-version drift, the concern of the EPJ antecedent (Onishi and Ikenoue, 2026), "
         "and dataset-version drift are analogous but distinct: both can separate a nominally "
-        "available resource from the state actually used, but versioned software can usually "
-        "be redistributed or rebuilt, whereas third-party data states may be neither "
-        "redistributable nor recoverable. Paper II did not quantify dataset drift and makes no "
+        "available resource from the state actually used. Versioned software may in some "
+        "settings be preserved or rebuilt more readily than third-party historical data "
+        "states, although licensing and legacy-version access can also prevent software "
+        "redistribution. Paper II did not quantify dataset drift and makes no "
         "empirical claim about its frequency. The frozen records show only that repository or "
         "accession identity was recorded for every sampled paper, that the delegated specifier "
-        "named external public reference resources for about half of the specified papers "
-        "with a minority of those entries lacking a version in the publication text, that 28 "
+        f"named external public reference resources for {values['input_state_reference_papers']} "
+        f"of the {values['main_cohort_selected']} sampled papers "
+        f"({values['input_state_reference_entries']} entries, of which "
+        f"{values['input_state_version_unspecified_entries']} across "
+        f"{values['input_state_papers_with_unspecified_version']} papers lacked a version in "
+        "the publication text), that "
+        f"{values['not_attempted_external_reference_resource_required']} "
         "papers stopped at the frozen barrier requiring an unserved external public reference "
         "resource (a state that the frozen protocol defined and this refinement leaves "
         "unchanged), and that the served inputs were logged with retrieval timestamps and "
@@ -1039,7 +1072,8 @@ def build_documents() -> None:
     paragraph(
         document,
         "Submission is on hold: investigator verification and sign-off of the A/B/C/E "
-        "proposals, human adjudication of the 30 sealed slots and human validation (Section D) "
+        f"proposals, human adjudication of the {values['main_blind_slots']} sealed slots and "
+        "human validation (Section D) "
         "are incomplete. This document must not be submitted as a completed empirical study.",
     )
     heading(document, "Statements and declarations — pending author completion")
@@ -1096,8 +1130,8 @@ def build_documents() -> None:
             ("half_width", "Half-width"),
         ],
     )
-    main_study_tables(supplement, dispositions, run_levels, failure_codes, reveal)
-    verification_tables(supplement, verification_dir)
+    main_study_tables(supplement, dispositions, run_levels, failure_codes, reveal, values)
+    verification_tables(supplement, verification_dir, values)
     for path in sorted((ROOT / "protocols").glob("*.md")):
         supplement.add_page_break()
         markdown(supplement, path.read_text())
@@ -1117,8 +1151,8 @@ def build_documents() -> None:
             ("unique_pmids_within_field", "Unique PMIDs within field"),
         ],
     )
-    main_study_tables(tables, dispositions, run_levels, failure_codes, reveal)
-    verification_tables(tables, verification_dir)
+    main_study_tables(tables, dispositions, run_levels, failure_codes, reveal, values)
+    verification_tables(tables, verification_dir, values)
     caption(tables, "Table S1. Analytic Wilson precision planning.")
     table(
         tables,
@@ -1158,6 +1192,9 @@ def build_documents() -> None:
         *sorted((ROOT / "results/verification_adjusted").glob("*")),
         *sorted((ROOT / "data/adjudication/main-study-20260925/verification_adjusted").glob("*")),
         ROOT / "WITHOUT_D_STATUS.md",
+        ROOT / "INPUT_STATE_IDENTIFIABILITY_NOTE.md",
+        ROOT / "REVISION_CHANGELOG.md",
+        ROOT / "FINAL_HANDOFF.md",
         *sorted((ROOT / "src/paper2").glob("*.py")),
         *sorted((ROOT / "data/derived").glob("*.csv")),
         *sorted((ROOT / "data").glob("*.csv")),
@@ -1171,6 +1208,7 @@ def build_documents() -> None:
         ROOT / "pyproject.toml",
         ROOT / "README.md",
         ROOT / "Makefile",
+        *sorted((ROOT / "scripts").glob("*")),
         *sorted((ROOT / "review").glob("*.md")),
         *sorted((ROOT / "tests").glob("*.py")),
     ]

@@ -144,8 +144,12 @@ def extract_ledger(private_root: Path) -> list[Row]:
     return rows
 
 
-def descriptives() -> list[Row]:
-    """Descriptive ACCESS-stage metadata as recorded in the frozen main-study records."""
+def input_state_stats() -> dict[str, int]:
+    """Structured ACCESS-stage counts behind input_state_descriptives.csv.
+
+    Single computation for both the descriptive table and the manuscript values
+    layer: every number the prose cites must come from this dict.
+    """
     status = load(STUDY_DIR / "paper_status.json")
     kinds: Counter[str] = Counter()
     accession_papers = listing_papers = 0
@@ -177,47 +181,101 @@ def descriptives() -> list[Row]:
         if isinstance(value, dict)
         and value.get("eligibility") == "external_reference_resource_required_not_served"
     )
-    source = "delegated specification listing (100 papers)"
-    frozen = "frozen target packages and retrieval ledger (10 attempted papers)"
+    return {
+        "status_papers": len(status),
+        "accession_papers": accession_papers,
+        "listing_papers": listing_papers,
+        "repository_kinds": sum(kinds.values()),
+        "reference_papers": reference_papers,
+        "reference_entries": reference_entries,
+        "version_stated_entries": version_stated,
+        "version_unspecified_entries": version_unspecified,
+        "papers_with_unspecified_version": papers_with_unspecified,
+        "external_reference_barrier_papers": external,
+        "served_files": len(ledger),
+        "served_files_timestamped": sum(bool(r["retrieved_at_utc"]) for r in ledger),
+        "served_files_announced_checksum": sum(
+            r["announced_checksum"] == "md5 announced" for r in ledger
+        ),
+        "served_files_checksum_matched": sum(
+            r["announced_checksum_matches"] == "yes" for r in ledger
+        ),
+    }
+
+
+def descriptives() -> list[Row]:
+    """Descriptive ACCESS-stage metadata as recorded in the frozen main-study records."""
+    stats = input_state_stats()
+    status_papers = stats["status_papers"]
+    ledger_rows = stats["served_files"]
+    kinds: Counter[str] = Counter()
+    status = load(STUDY_DIR / "paper_status.json")
+    for paper_id in status:
+        record = load(STUDY_DIR / "specifications" / f"{paper_id.removeprefix('PMID:')}.json")
+        for entry in dicts(record.get("listing")):
+            kinds[str(entry.get("kind"))] += 1
+    analysis = load(RESULTS / "main_analysis.json")
+    denominators = analysis.get("denominators")
+    if not isinstance(denominators, dict):
+        raise ValueError("main_analysis.json denominators missing")
+    attempted = int(str(denominators["attempted_papers_complete_triples"]))
+    source = f"delegated specification listing ({status_papers} papers)"
+    frozen = (
+        "frozen target packages and retrieval ledger "
+        f"({attempted} attempted papers)"
+    )
     rows = [
-        ("repository/accession recorded", f"{accession_papers}/{len(status)} papers", source),
+        (
+            "repository/accession recorded",
+            f"{stats['accession_papers']}/{status_papers} papers",
+            source,
+        ),
         (
             "repository kinds in listings",
             "; ".join(f"{kind} {count}" for kind, count in sorted(kinds.items())),
             source,
         ),
-        ("file list recorded in listing", f"{listing_papers}/{len(status)} papers", source),
+        (
+            "file list recorded in listing",
+            f"{stats['listing_papers']}/{status_papers} papers",
+            source,
+        ),
         (
             "external public reference resources named by specifier",
-            f"{reference_entries} entries in {reference_papers} papers",
+            f"{stats['reference_entries']} entries in {stats['reference_papers']} papers",
             source,
         ),
         (
             "reference version/release recorded by the specifier from publication text",
-            f"{version_stated}/{reference_entries} entries",
+            f"{stats['version_stated_entries']}/{stats['reference_entries']} entries",
             source,
         ),
         (
             "reference version/release not specified in publication text",
-            f"{version_unspecified}/{reference_entries} entries "
-            f"({papers_with_unspecified} papers with at least one)",
+            f"{stats['version_unspecified_entries']}/{stats['reference_entries']} entries "
+            f"({stats['papers_with_unspecified_version']} papers with at least one)",
             source,
         ),
         (
             "not run because an external public reference resource was required",
-            f"{external}/{len(status)} papers (frozen barrier state, unchanged)",
+            f"{stats['external_reference_barrier_papers']}/{status_papers} papers "
+            "(frozen barrier state, unchanged)",
             "paper_status.json",
         ),
-        ("served inputs with SHA-256 recorded", f"{len(ledger)}/{len(ledger)} files", frozen),
+        (
+            "served inputs with SHA-256 recorded",
+            f"{ledger_rows}/{ledger_rows} files",
+            frozen,
+        ),
         (
             "served inputs with retrieval timestamp recorded",
-            f"{sum(bool(r['retrieved_at_utc']) for r in ledger)}/{len(ledger)} files",
+            f"{stats['served_files_timestamped']}/{ledger_rows} files",
             frozen,
         ),
         (
             "served inputs with repository-announced checksum",
-            f"{sum(r['announced_checksum'] == 'md5 announced' for r in ledger)}/{len(ledger)} "
-            f"files; {sum(r['announced_checksum_matches'] == 'yes' for r in ledger)} matched",
+            f"{stats['served_files_announced_checksum']}/{ledger_rows} "
+            f"files; {stats['served_files_checksum_matched']} matched",
             frozen,
         ),
         (
@@ -230,6 +288,46 @@ def descriptives() -> list[Row]:
         ("historical version check", "not assessed", frozen),
     ]
     return [{"item": item, "value": value, "source": src} for item, value, src in rows]
+
+
+def input_state_values() -> list[Row]:
+    """manuscript_values.csv rows for the ACCESS-stage descriptives (frozen records)."""
+    stats = input_state_stats()
+    entries = (
+        ("input_state_reference_entries", stats["reference_entries"]),
+        ("input_state_reference_papers", stats["reference_papers"]),
+        (
+            "input_state_version_unspecified_entries",
+            stats["version_unspecified_entries"],
+        ),
+        (
+            "input_state_papers_with_unspecified_version",
+            stats["papers_with_unspecified_version"],
+        ),
+        (
+            "input_state_external_reference_barrier_papers",
+            stats["external_reference_barrier_papers"],
+        ),
+        ("input_state_served_files", stats["served_files"]),
+        (
+            "input_state_served_files_checksum_matched",
+            stats["served_files_checksum_matched"],
+        ),
+    )
+    return [
+        {
+            "claim_id": key,
+            "value": str(value),
+            "unit": "count",
+            "status": "frozen_record_descriptive_not_rescored",
+            "source_id": "data/adjudication/main-study-20260925/",
+            "source_sha256": "",
+            "analysis": "src/paper2/input_state.py:input_state_stats",
+            "derived_file": "results/input_state_descriptives.csv",
+            "claim_scope": "access_stage_descriptive_not_empirical_drift_measurement",
+        }
+        for key, value in entries
+    ]
 
 
 def save(path: Path, rows: list[Row]) -> None:

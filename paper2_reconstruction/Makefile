@@ -1,7 +1,9 @@
 PYTHON ?= .venv/bin/python
 export PYTHONPATH := src
 
-.PHONY: setup build check submission-check
+.PHONY: setup build check submission-check fetch-vetted-wheels
+fetch-vetted-wheels:
+	bash scripts/fetch_vetted_wheels.sh
 setup:
 	python3 -m venv .venv
 	.venv/bin/python -m pip install --require-hashes -r requirements.lock

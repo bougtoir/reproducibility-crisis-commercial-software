@@ -238,11 +238,19 @@ def revision_checks(
         (
             "Abstract in completed tense with frozen/provisional separation and D pending",
             "estimated" in abstract
-            and "100 papers were sampled from 461" in abstract
-            and "Only 10" in abstract
-            and "30 sealed slots" in abstract
+            and (
+                f"{values['main_cohort_selected']['value']} papers were sampled from "
+                f"{values['main_eligible_population']['value']}"
+            )
+            in abstract
+            and f"Only {values['main_attempted_papers']['value']}" in abstract
+            and f"{values['main_blind_slots']['value']} sealed slots" in abstract
             and "found no paper meeting the majority criterion" in abstract
-            and "provisional and not investigator-signed, proposes one" in abstract
+            and (
+                "provisional and not investigator-signed, proposes "
+                f"{values['adjusted_majority_successes_among_attempted']['value']}"
+            )
+            in abstract
             and "Section D) has not been performed" in abstract
             and frozen == "0"
             and adjusted == "1",

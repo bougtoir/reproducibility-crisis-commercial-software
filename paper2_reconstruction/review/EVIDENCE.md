@@ -1,5 +1,8 @@
 # Evidence handoff and acquisition limits
 
+> **SUPERSEDED for current status (revision 2026-10):** this document was written before the main-study execution under the prospectively frozen protocol. Statements such as "no main runs", "no pilot", "no frozen outcomes", "no reveal", "funnel NOT_STARTED" describe the pre-execution state only. For current status see `WITHOUT_D_STATUS.md`, `results/manuscript_values.csv` and this audit's successor `review/HOSTILE_REVIEW.md`. Retained as provenance; not deleted.
+
+
 The preparation workflow ran five read-only audits on separate VMs; all completed.
 They did not run Paper II experiments. Raw evidence was handed back as attachments,
 downloaded and verified in the parent session. This is an internal evidence archive

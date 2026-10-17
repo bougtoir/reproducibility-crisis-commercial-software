@@ -1,5 +1,8 @@
 # Reviewer-perspective preparation review
 
+> **SUPERSEDED for current status (revision 2026-10):** this document was written before the main-study execution under the prospectively frozen protocol. Statements such as "no main runs", "no pilot", "no frozen outcomes", "no reveal", "funnel NOT_STARTED" describe the pre-execution state only. For current status see `WITHOUT_D_STATUS.md`, `results/manuscript_values.csv` and this audit's successor `review/HOSTILE_REVIEW.md`. Retained as provenance; not deleted.
+
+
 **Submission verdict: HOLD. Review performed before document-format QC.**
 
 ## 必須 / Critical before submission
