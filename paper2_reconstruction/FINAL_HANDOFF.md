@@ -5,9 +5,13 @@
 - Branch: `devin/1790076395-paper2-reconstruction` (PR #1), repo
   `bougtoir/reproducibility-crisis-commercial-software`, dir
   `paper2_reconstruction/`.
-- Status: **NOT SUBMISSION READY — SUBMISSION-READY EXCEPT D** per
-  `review/FINAL_ADVERSARIAL_DECISION.md`. Human Validation D, human
-  adjudication sign-off, and investigator sign-off remain pending by design.
+- Status: **NOT SUBMISSION READY — SUBMISSION-READY EXCEPT D AND
+  INVESTIGATOR SIGN-OFF** per `review/FINAL_ADVERSARIAL_DECISION.md`.
+- Investigator sign-off package prepared at `investigator_signoff/` — 275
+  proposed records (A 30 / B 90 / C 25 / E 130), decision fields empty.
+- Final delivery artifacts: `manuscript/*_FINAL_PRE_D.*` and
+  `dist/PaperII_FINAL_PRE_D_PACKAGE.zip` (rebuild:
+  `make build && .venv/bin/python scripts/make_final_pred_package.py`).
 - Frozen records unchanged: sealed blind outcome
   `350a0e7d…58ea5a`, primary mechanical adjudication `6fd42b89…65b28`,
   A/B/C/E import tree `f6b374b7…f78a1`. Zero slot reruns; zero reveal-code

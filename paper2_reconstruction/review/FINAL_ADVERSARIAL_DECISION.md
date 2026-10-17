@@ -1,17 +1,21 @@
-# Final adversarial decision (revision round)
+# Final adversarial decision (pre-D finalization pass)
 
-**Classification: SUBMISSION-READY EXCEPT D.**
+**Classification: SUBMISSION-READY EXCEPT D AND INVESTIGATOR SIGN-OFF.**
 
-The package is internally consistent, all empirical numbers trace to the
-canonical numeric layer, tests pass on a clean checkout after
-`make fetch-vetted-wheels`, and the hostile-review findings C1–C10 are either
-fixed or documented as inherent design properties. The manuscript remains
-NOT SUBMISSION READY overall — correctly and intentionally — because Human
-Validation D, human adjudication, and investigator sign-off are pending; the
-DRAFT banner stays until those gates are satisfied.
+(Downgraded one notch from the earlier "EXCEPT D": the provisional A/B/C/E
+verification layer also lacks investigator sign-off, and that is a distinct
+pending gate.)
 
-Residual desk-reject risks (inherent, not fixable by editing):
-- Small executed denominator (10) — mitigated by the barriers-census framing.
-- Provisional vs frozen dual reporting — enforced by QC phrase checks.
-- Private evidence required to regenerate two verification artifacts — the
-  committed outputs are authoritative; documented in PACKAGE_SELF_CONSISTENCY.md.
+## Remaining work — exactly
+
+| Remaining task | Responsible party | Devin can do? | Investigator action? | Real humans? | Ethics determination? |
+|---|---|---|---|---|---|
+| Review & sign off 275 proposed A/B/C/E records (investigator_signoff/) | Investigator | No | Yes | No | No |
+| Institutional ethics determination for human-participant validation | Investigator + institution | No | Yes | No | Yes |
+| Recruit/run Human Validation D per frozen protocol | Investigator + participants | No | Yes | Yes | Yes |
+| Convert provisional layer to investigator-signed status after sign-off | Investigator (Devin can apply mechanical update once signed) | Partially | Yes | No | No |
+| Final journal submission | Investigator | No | Yes | No | No |
+
+Everything technically/scientifically completable before those external
+actions is done: canonical numbers, audits, tests (146 pass), sign-off
+package, final artifacts, DRAFT marking retained.

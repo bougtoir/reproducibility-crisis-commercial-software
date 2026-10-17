@@ -1209,6 +1209,8 @@ def build_documents() -> None:
         ROOT / "README.md",
         ROOT / "Makefile",
         *sorted((ROOT / "scripts").glob("*")),
+        *sorted((ROOT / "docs").rglob("*")),
+        *sorted((ROOT / "investigator_signoff").glob("*")),
         *sorted((ROOT / "review").glob("*.md")),
         *sorted((ROOT / "tests").glob("*.py")),
     ]
