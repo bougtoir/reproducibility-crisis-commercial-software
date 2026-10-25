@@ -296,12 +296,12 @@
     "sha256": "94304907698a7c31c11c6d6ef7edf6b79553e08b84bb287c665a4b23aeae54bb"
   },
   "REVISION_CHANGELOG.md": {
-    "bytes": 12139,
-    "sha256": "a9c5ed28798a43e306e251f04aebcd873da6f75b7893603d88378875f57b2189"
+    "bytes": 12833,
+    "sha256": "9fe08efdf5f48bd5b29adab01880085b6d99ef78b545acd1fa88d7e5a7ea2919"
   },
   "FINAL_HANDOFF.md": {
-    "bytes": 2829,
-    "sha256": "58a971a01664793093b732b577107ec762f8b89f8b05d87a8871846466169600"
+    "bytes": 3154,
+    "sha256": "d591e90b91bf5b5519a3791899961aef78ba37ae3cceb974551dade9abb147df"
   },
   "src/paper2/__init__.py": {
     "bytes": 63,
@@ -568,8 +568,8 @@
     "sha256": "1debc90bc6b412bae35628e9a6ac54fd1c36f6021206c33b5f2a8b3e4538896a"
   },
   "Makefile": {
-    "bytes": 537,
-    "sha256": "e151aee16427f83088bc47630697abc71cb754e9b6aa4b8b6ba8b7bbaae4eaa2"
+    "bytes": 1025,
+    "sha256": "03d54945284517dc031d37dd570b927fba07176a5b3ae3f84c436992085ff499"
   },
   "scripts/fetch_vetted_wheels.sh": {
     "bytes": 1183,
@@ -636,8 +636,8 @@
     "sha256": "33bf106f513277edf3cf79491c502745756d9f6624f397b408a52b6ba459b729"
   },
   "review/DATA_TEXT_FIGURE_CONSISTENCY.md": {
-    "bytes": 2605,
-    "sha256": "990482f01be51bcf4bcfc1366d5c63c27d8dba799c55851a0f1b25a4c1b23390"
+    "bytes": 2806,
+    "sha256": "22c837bc288f50af00bac821e5988e71ec80f8ff9b824525364389ae8fb4c39a"
   },
   "review/DOCUMENTATION_FINALIZATION_AUDIT.md": {
     "bytes": 958,
@@ -652,8 +652,8 @@
     "sha256": "805c827dc524bb8fbc95bb807aaeb3529555c543bc17d4613c4ebde39835bad6"
   },
   "review/FIGURE_TABLE_ORDER_AUDIT.md": {
-    "bytes": 1912,
-    "sha256": "807c1717bbf01abecf429a3a022beb681d9c8436adbb9a11a8ca365d3e990023"
+    "bytes": 2015,
+    "sha256": "e5e56957c31e6f43e589a82ab1e776e3b5ebcb10cd1b86b75263fe248b525a5a"
   },
   "review/FINAL_ADVERSARIAL_DECISION.md": {
     "bytes": 1238,
@@ -671,9 +671,13 @@
     "bytes": 1273,
     "sha256": "6ea3696099c0865236864921dd5ead162f487d817cf8ab57c38577f7fe3f4464"
   },
+  "review/FINAL_PUBLIC_END_TO_END_REPRODUCIBILITY_AUDIT.md": {
+    "bytes": 2846,
+    "sha256": "a12c7b53bcca5dc64f992ea23466ebaf4af9e97fa1a12be1ac39eb0d56ce5437"
+  },
   "review/FINAL_TEST_REPORT.md": {
-    "bytes": 863,
-    "sha256": "5da5badbbabf250ca731f60c6709a1cc51500c75ea808e15cb699ec9a97088f0"
+    "bytes": 1081,
+    "sha256": "553da4ba28a7250ee7fbe1614e59b98af9ac5a90a9320abd2e9777ab81a09801"
   },
   "review/HARDCODE_AUDIT.md": {
     "bytes": 4137,

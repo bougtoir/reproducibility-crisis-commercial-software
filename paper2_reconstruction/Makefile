@@ -20,3 +20,18 @@ check:
 
 submission-check:
 	$(PYTHON) -m paper2.build --require-submission-ready
+
+public-check:
+	$(MAKE) build
+	$(MAKE) check
+
+private-evidence-check:
+	@if [ -d /home/ubuntu/paper2_evidence ]; then \
+		echo "evidence package mounted: regenerating private-dependent outputs"; \
+		$(PYTHON) -m paper2.verification_layer; \
+		$(PYTHON) -m paper2.documents; \
+		$(PYTHON) -m paper2.verification_qc; \
+	else \
+		echo "evidence package NOT mounted: committed bytes are authoritative;"; \
+		echo "mount /home/ubuntu/paper2_evidence and rerun to validate private refs."; \
+	fi

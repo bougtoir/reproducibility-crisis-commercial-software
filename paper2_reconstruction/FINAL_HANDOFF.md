@@ -60,3 +60,10 @@ OMML equations, asterisk removal, line-wrap joining). Classification
 unchanged: SUBMISSION-READY EXCEPT D AND INVESTIGATOR SIGN-OFF. Remaining
 tasks are exclusively human-dependent (sign-off, ethics determination, Human
 Validation D, submission).
+
+## Update — FINAL NON-HUMAN COMPLETION PATCH applied
+
+Main-text S11 citation added; clean-clone public reproducibility demonstrated
+(PASS WITH DOCUMENTED PRIVATE-EVIDENCE BOUNDARY). `make public-check` and
+`make private-evidence-check` added. Classification unchanged:
+SUBMISSION-READY EXCEPT D AND INVESTIGATOR SIGN-OFF.

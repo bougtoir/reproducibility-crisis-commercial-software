@@ -201,3 +201,16 @@ estimate changed; this patch corrected audit taxonomy only.**
   ASTERISK_AUDIT.md + ASTERISK_OCCURRENCES.csv, LINE_BREAK_AUDIT.md.
 - No scientific result, denominator, estimate, interval, figure or table value
   changed; sealed outcomes untouched.
+
+## FINAL NON-HUMAN COMPLETION PATCH (this commit)
+
+- Added main-text citation of Supplementary Table S11 (Methods, precision
+  planning); every supplementary object S1–S11 now cited from the main text.
+- Fresh clean-clone reproducibility check from the pushed public branch:
+  make setup → fetch-vetted-wheels → build → check, 146 tests passed.
+- Added `make public-check` / `make private-evidence-check` targets to make
+  the public/private boundary operational.
+- New artifacts: PUBLIC_REPRODUCIBILITY_MATRIX.csv,
+  FINAL_PUBLIC_END_TO_END_REPRODUCIBILITY_AUDIT.md.
+- No scientific result, denominator, estimate, interval, figure or table value
+  changed; sealed outcomes untouched.

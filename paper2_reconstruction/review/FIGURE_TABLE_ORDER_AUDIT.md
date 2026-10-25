@@ -36,8 +36,11 @@ input-state fields, S3 dispositions, S4 run-level states, S5 failure codes,
 S6 reveal ledger, S7 slot distribution, S8 funnel, S9 reveal completeness,
 S10 Human Validation D pending, S11 Wilson analytic planning. The Wilson
 planning table was renumbered S1→S11 so the supplement sequence is strict.
-Table S11 is the only object never directly cited from the main text; it is
-referenced from the supplement intro and the editable-tables intro, which is
-acceptable for a planning-only supplement table and is recorded here.
+
+Update (COMPLETION PATCH): Table S11 is now cited from the main manuscript
+(§2.2 Methods, "Planning precision across candidate sample sizes is reported
+in Supplementary Table S11"). Every supplementary table S1–S11 is now cited
+from the main text. Supplementary figures: none exist — Figure 1 is the only
+figure object.
 
 STATUS: PASS — renumber map in FIGURE_TABLE_RENUMBER_MAP.csv.

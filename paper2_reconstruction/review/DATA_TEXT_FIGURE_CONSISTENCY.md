@@ -45,3 +45,9 @@ citations converted to [1]–[21] by first appearance (review/REFERENCE_*
 artifacts). No numeric claim, denominator, estimate, interval, figure value or
 conclusion changed — the renumbering is presentational only. DATA–TEXT–FIGURE
 consistency re-verified after renumbering: all canonical values unchanged.
+
+## COMPLETION PATCH addendum
+
+Table S11 is now cited from the main manuscript (Methods, precision planning
+sentence). All supplementary tables S1–S11 are cited from the main text;
+no value changed.

@@ -18,3 +18,9 @@ Nothing hidden; no expected failures beyond `make submission-check`
 (intentionally non-zero: D + investigator sign-off pending).
 
 Private-evidence-dependent artifacts: see PRIVATE_EVIDENCE_CHECK.md.
+
+## COMPLETION PATCH test record
+
+- Clean public clone @ e9f1479: make setup + fetch-vetted-wheels + build +
+  check → ruff PASS, mypy PASS, pytest 146 passed. See
+  FINAL_PUBLIC_END_TO_END_REPRODUCIBILITY_AUDIT.md.
