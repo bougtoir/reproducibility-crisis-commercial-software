@@ -1066,8 +1066,9 @@ def build_documents() -> None:
             "Before any run, one central target per paper was selected by the frozen hierarchy "
             "and its associated claim, input identifiers, allowed and blocked resources, metric, "
             "numerical and conclusion criteria, resource ceiling and stopping rule were frozen. "
-            "No outcome-informed target replacement occurred. Planning precision in the "
-            "supplement is analytic, not empirical evidence.",
+            "No outcome-informed target replacement occurred. Planning precision across "
+            "candidate sample sizes is reported in Supplementary Table S11; it is "
+            "analytic, not empirical evidence.",
         ),
         (
             "2.3 Independent reconstruction intervention",
