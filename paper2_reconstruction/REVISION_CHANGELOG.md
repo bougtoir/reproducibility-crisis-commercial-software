@@ -161,3 +161,18 @@ human validation fabricated; no sign-off recorded.
 - `make check`: 146 passed. `make submission-check`: non-zero by design.
 - Rendering QC: 10-page PDF, title/abstract/tables legible, DRAFT banner on
   every page.
+
+---
+
+# Patch 2026-10 — hard-code audit taxonomy correction (documentation only)
+
+The numeric hard-code audit now distinguishes: A design/protocol constants;
+B source-derived observed values; C analysis-derived empirical values;
+D external-source values; E implementation/formatting constants. Dual-role
+values (planned N=100 vs 100 sampled; 3 slots/paper vs 30 executed) documented
+in both roles. Updated: HARDCODE_AUDIT.md, NUMERIC_HARDCODE_FINDINGS.csv
+(taxonomy column), NUMERIC_PROVENANCE.csv, MANUSCRIPT_NUMERIC_TRACEABILITY.csv
+(taxonomy+role columns), DATA_TEXT_FIGURE_CONSISTENCY.md.
+
+**No scientific result changed; no sealed outcome changed; no manuscript
+estimate changed; this patch corrected audit taxonomy only.**

@@ -96,16 +96,16 @@
     "sha256": "9c62ac0e80b382329ae5722327f4d81fcfef9278bc472e6362b562d521d1d6f5"
   },
   "results/MANUSCRIPT_NUMERIC_TRACEABILITY.csv": {
-    "bytes": 10652,
-    "sha256": "aed4186a9bfaeb8784be82ebfbffd6170dec6e25a5a1b4d7cefe8c279c84eeeb"
+    "bytes": 11176,
+    "sha256": "b468b2ecebe85f9c4dc84fcc6241ec6e87a3d07761992e27009e7350cfc3f31f"
   },
   "results/NUMERIC_HARDCODE_FINDINGS.csv": {
-    "bytes": 1247,
-    "sha256": "fce3a3f7c2758c5017fb04bddcb566215e5fa5b301f05802b55179462ffe623f"
+    "bytes": 1801,
+    "sha256": "9bc7d65f2667d0a40dde92cd1bcd017745071180291289a2bd2e78bdabc47328"
   },
   "results/NUMERIC_PROVENANCE.csv": {
-    "bytes": 14865,
-    "sha256": "4e21a12d6e5cfbaefc39fd38e16d510ac91d38963279858760db2c0d853562db"
+    "bytes": 14974,
+    "sha256": "47ada6f5f7ab454382212052139bc8a6974dd620b56565372fb4b9eeb23f3388"
   },
   "results/amended_candidate_selection.csv": {
     "bytes": 3362,
@@ -296,12 +296,12 @@
     "sha256": "45e3b7bdbdcfb4c893b46b073181157dd94dbbaeb699c724d62900a5ad807be9"
   },
   "REVISION_CHANGELOG.md": {
-    "bytes": 9933,
-    "sha256": "6fe26855e8b26b1b0d8b1aa7331bd84305e6a8a8e2a1a5166bc8fc35fdfe0f1b"
+    "bytes": 10664,
+    "sha256": "9c7ba16677783e46108213e91266b8d28fbfc0e486c8fa5119aaa3d98e334238"
   },
   "FINAL_HANDOFF.md": {
-    "bytes": 2126,
-    "sha256": "a186e31e6e3fca5ac9fde29db794768a15d69e40e574a5245fa5200ce630ef49"
+    "bytes": 2458,
+    "sha256": "246afe6a4a32d269895f7c70d4f33d437d47a8bb3d6b82b17a71766ed308a6b8"
   },
   "src/paper2/__init__.py": {
     "bytes": 63,
@@ -632,8 +632,8 @@
     "sha256": "b9e51250e83d520c33c95ecb6f25b222cccd5a8ff7d8c06cde95cd7f2f500051"
   },
   "review/DATA_TEXT_FIGURE_CONSISTENCY.md": {
-    "bytes": 1475,
-    "sha256": "1a9ee7e4ff8080973274b70d7436d517ac69a9b8cfe69fcac88b4376a92a1024"
+    "bytes": 1986,
+    "sha256": "9d266f1cb46b5f7ec449fef40ec847ac926621008c6719e26cc3ab9570135b94"
   },
   "review/DOCUMENTATION_FINALIZATION_AUDIT.md": {
     "bytes": 958,
@@ -664,8 +664,8 @@
     "sha256": "5da5badbbabf250ca731f60c6709a1cc51500c75ea808e15cb699ec9a97088f0"
   },
   "review/HARDCODE_AUDIT.md": {
-    "bytes": 3513,
-    "sha256": "f3bf49e4e909a9a6be0478e12b3c7e463a152da1708ec2df92161ad8ffad93e3"
+    "bytes": 4137,
+    "sha256": "0d8cfc9aad4b040783e857544a7d8b7c3a925f07784b4270139b0bf882b39e2e"
   },
   "review/HOSTILE_REVIEW.md": {
     "bytes": 4364,

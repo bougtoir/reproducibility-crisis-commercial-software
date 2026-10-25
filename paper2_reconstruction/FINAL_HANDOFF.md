@@ -44,3 +44,10 @@ instead of committing not-mounted output.
   investigator sign-off → then remove DRAFT banner, flip readiness, retarget
   journal.
 - `make submission-check` stays non-zero until D completes.
+
+## Taxonomy patch (documentation only)
+
+The final numeric audit distinguishes A design/protocol constants, B
+source-derived observed, C analysis-derived empirical, D external-source,
+E implementation/formatting constants (dual-role N=100 / 3-slots documented).
+No scientific result, sealed outcome, or manuscript estimate changed.

@@ -24,3 +24,13 @@ Sections 4–7, captions) and every figure/table cell now originates from
    copies) is structurally removed.
 
 Status: PASS.
+
+## Taxonomy patch (2026-10)
+
+Re-verified after the audit-taxonomy correction: every manuscript number
+remains generated from `manuscript_values.csv`. Classification now
+distinguishes design/protocol constants (A), source-derived observed values
+(B), analysis-derived empirical values (C), external-source values (D), and
+implementation/formatting constants (E); N=100 and 3-slots documented in
+both design and realized roles. No scientific result, sealed outcome, or
+manuscript estimate changed. Status: PASS.

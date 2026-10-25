@@ -1,64 +1,85 @@
-# Numeric hard-code audit (revision pass)
+# Numeric hard-code audit — corrected taxonomy (2026-10 patch)
 
-Scope: `src/paper2/*.py`, `tests/*.py`, `review/*.md`, manuscript generator
-(`documents.py`), figure/table builders, root docs. Method: regex sweep for
-empirical literals (counts, percentages, "N/M" fractions, the frozen corpus
-numbers) cross-checked against `results/manuscript_values.csv` (the canonical
-numeric layer, 50 claims).
+Scope: `src/paper2/*.py`, `tests/*.py`, `review/*.md`, root docs, manuscript
+generator, figure/table builders. Method: repository-wide numeric-literal
+scan cross-checked against the canonical layer
+(`results/manuscript_values.csv`, 50 claims) and the frozen protocol/SAP.
 
-## Categories (per revision prompt section D)
+## Taxonomy (corrected)
 
-- **A — design constant**: fixed by protocol/SAP (30 slots, 10 attempts, 100
-  sampled, 461 route-eligible, 7 EPJ fields, 10,000 source rows). These are
-  protocol parameters, not results; they are stored once in
-  `results/main_analysis.json` / frozen protocol and read by the generator.
-- **B — external source**: numbers from cited external work (references).
-  None are computed by this package; all live in the bibliography.
-- **C — derived empirical**: numbers computed by the pipeline (A/B/C/E counts,
-  leakage tallies, input-state descriptives, corpus dedup counts). **Rule:
-  must appear only in `manuscript_values.csv`-producing code.**
-- **D — suspicious**: literal in prose/rendering code that duplicates a
-  derived value.
-- **E — documentation example**: illustrative numbers in docs, not claims.
+### A — DESIGN / PROTOCOL CONSTANTS (fixed before outcome observation)
 
-## Findings and resolutions
+Legitimately hard-coded when identified as design constants. In this repo
+they live in the frozen protocol/SAP and the code that enforces them:
 
-Before this pass, `documents.py` (manuscript generator) contained category-D
-literals in prose strings — e.g. "100", "461", "Only 10", "30 sealed slots",
-"81", "7", "2", "25/25", "130", "119", "51", "19", "11", "28", "21", "7"
-rendered as fixed text in the Abstract, Methods 2.1/2.1a/2.2/2.6, Section 5
-text, Discussion, and captions, plus literal denominators in table builders.
-All were replaced by lookups into the canonical `values` dict built from
-`manuscript_values.csv` (see `NUMERIC_HARDCODE_FINDINGS.csv`).
+- 3 blind slots per paper (`core.py` slot validation;
+  `PROTOCOL-FREEZE-2026-09-25`)
+- prospectively planned main sample size N = 100
+- sampling seed (recorded in `results/frame_manifest.json`)
+- per-slot tool-call / token / wall-clock / CPU-memory ceilings
+- frozen alpha / tolerance thresholds; strict–majority–permissive
+  success definitions
 
-`verification_qc.py` asserted literal substrings ("100 papers were sampled
-from 461", "proposes one", ...), i.e. the QC itself duplicated derived
-numbers; it now derives expected substrings from `manuscript_values.csv`,
-so the QC validates provenance rather than a second copy of the result.
+These are **inputs**, not results; they do not appear in
+`manuscript_values.csv`.
 
-`verification_layer.py` had no separate canonical rows for the pilot cohort,
-the accessibility-gate failures, and the external-reference barrier count;
-three rows were added so every number rendered in Methods 2.1a/Section 5
-traces to a frozen source with scope `excluded_layer_outside_denominator`
-or `pre_reconstruction_non_execution`.
+### B — SOURCE-DERIVED OBSERVED VALUES (corpus audit)
 
-`input_state.py` gained `input_state_values()` emitting frozen descriptive
-rows (status `frozen_record_descriptive_not_rescored`, scope
-`access_stage_descriptive_not_empirical_drift_measurement`) so the
-INPUT-STATE numbers used in Section 5 and the identifiability note are
-canonical, not restated.
+Observed properties of the deposited corpus, **not** design constants.
+Canonical rows carry `observed_source_audit` status and trace to the
+source-corpus audit (11 claims): source_records 10,000; unique_pmids 9,935;
+duplicated 64 (double/triple occurrence, within-field excess); EPJ fields 7;
+unique PMID–field pairs; multi-field PMIDs; missing-DOI records.
 
-## Remaining literals (audited, accepted)
+### C — ANALYSIS-DERIVED EMPIRICAL VALUES (pipeline outputs)
 
-- Category A constants appear inside protocol/screen code where they are
-  *inputs* (slot count, sample size). Kept — they are the design, and the
-  generator reads them from the frozen analysis outputs, not from code.
-- Zero/one literals in tests asserting structural properties (e.g. "empty
-  leak set", "no unresolved references") are test assertions on pipeline
-  invariants, not copied empirical results.
-- `paper_status.json` eligibility counts and `main_analysis.json`
-  denominators are sources, not duplicates.
+Everything computed downstream: 461 route-eligible; 100 actually sampled;
+10 attempted; 90 non-executed; 30 realized slots; non-execution-state counts;
+L1–L5 run levels; stop reasons; failure codes; frozen 0/10; provisional
+adjusted 1/10; 10/100 reachability; end-to-end yields; all confidence
+intervals; B 81/7/2; leakage 1/7/2 of 10; C 25/25; E 130/5/3; policy-envelope
+bounds; weighted ranges; Table 10/11 counts; input-state descriptives
+(frozen-record descriptive, not a drift measurement); evidence refs 698/0;
+D pending counter (0, `pending_external_not_performed`).
 
-Machine-readable findings: `results/NUMERIC_HARDCODE_FINDINGS.csv`.
-Provenance map: `results/NUMERIC_PROVENANCE.csv` (regenerated from
-`manuscript_values.csv`). Render map: `results/MANUSCRIPT_NUMERIC_TRACEABILITY.csv`.
+**Rule: must be generated from canonical outputs — never hand-copied.**
+Enforced: `documents.py` renders all such numbers from `manuscript_values.csv`
+lookups; `verification_qc.py` derives expected substrings from the same
+layer, so a broken derivation fails the build.
+
+### D — EXTERNAL-SOURCE VALUES
+
+Target values extracted from source publications and external bibliographic
+data (published coefficients, counts, thresholds being reconstructed;
+verified-references metadata). These live in the adjudication/specification
+records and `data/verified_references.csv`, are linked to publication
+evidence, and are **not** study-derived quantities. No manuscript claim is
+generated from them as if it were a study result.
+
+### E — IMPLEMENTATION / FORMATTING CONSTANTS
+
+Figure geometry, font sizes, margins, slide dimensions, schema versions —
+non-scientific constants in `documents.py` (e.g. `Inches(0.7)`,
+`figsize=(13.333, 7.5)`, fontsize values). Audited; all are layout only.
+
+## Dual-role values (both roles documented)
+
+- **N = 100**: planned sample size = A (design, protocol-frozen); "100
+  papers were actually sampled" (`main_cohort_selected`) = C (realized).
+- **3 slots**: slots-per-paper = A (design); "30 slots executed"
+  (`main_blind_slots`) = C (realized).
+- **10 / 90**: realized counts only — C (no design role).
+
+## Re-scan results (post-taxonomy)
+
+- No empirical result literal found in generator prose, tables, captions or
+  figure labels — all render from canonical rows.
+- Remaining hard-coded numbers are A (frozen protocol inputs, in
+  protocol/build code, documented) or E (formatting). No C/B literal
+  duplicates a canonical value.
+- External-source targets are confined to evidence/specification records.
+- Nothing was reclassified in `manuscript_values.csv`; the single source of
+  truth is untouched — this patch corrected audit **taxonomy**, not results.
+
+Machine-readable: `results/NUMERIC_HARDCODE_FINDINGS.csv` (taxonomy column),
+`results/NUMERIC_PROVENANCE.csv`, `results/MANUSCRIPT_NUMERIC_TRACEABILITY.csv`.
