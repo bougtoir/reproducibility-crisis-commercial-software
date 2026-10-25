@@ -1,0 +1,5 @@
+document,location,text,classification
+Supplement_protocols_DRAFT_EN.docx,para 45,"Papers excluded for access reasons after G1 = yes and G2 != no are retained in `data/adjudication/accessibility_gate_failed_*.json` with class, route evidence a",legitimate_code_or_filename
+Supplement_protocols_DRAFT_EN.docx,para 107,The document hashed by the final freeze (SHA-256 `fc879735acc5698093d1476db7e4d87ac4174807f5cbea0eb2068e91162a99da`) still carried the header line `**DRAFT — NO,legitimate_code_or_filename
+Supplement_protocols_DRAFT_EN.docx,para 112,"Only the files the specification names are retrieved, anonymously, from the public deposit route retained at Stage B, streamed to `/home/ubuntu/paper2_evidence/",legitimate_code_or_filename
+Supplement_protocols_DRAFT_EN.docx,para 185,"Amendment AMEND-2026-09-24-03 (`AMENDMENT_AMEND-2026-09-24-03_deposited_data_criterion.md`, hash-frozen and RFC 3161 timestamped before any screening under it) ",legitimate_code_or_filename

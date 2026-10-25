@@ -1,0 +1,14 @@
+object_type,old_number,new_number,first_citation_location,caption,source_file,status
+Table,Table 1,Table 1,§5 Results — 'Table 1 presents the deposited corpus structure',Observed deposited corpus structure.,Preparation_draft_EN.docx,renumbered? no — already first-cited
+Figure,Figure 1,Figure 1,§2 Framework — first cited before Table 1,Conceptual Wet/Dry framework.,figure1_framework.svg,unchanged
+Table,Table 10 (old),Table S1,§7.1 text 'Table S1 maps these reporting requirements',Conceptual mapping of reproducibility requirements to framework stages.,Supplement/Editable_tables,renumbered T10→S1
+Table,Table 11 (old),Table S2,§7.1 text 'Table S2 summarizes the fields actually recorded',ACCESS-stage input-state fields in frozen main-study records.,Supplement/Editable_tables,renumbered T11→S2
+Table,Table 2 (old),Table S3,§5 text 'states (Table S3)',Main-cohort paper dispositions (delegated; human adjudication pending).,Supplement/Editable_tables,renumbered T2→S3
+Table,Table 3 (old),Table S4,§5 text 'are in Table S4',Run-level L1–L5 states.,Supplement/Editable_tables,renumbered T3→S4
+Table,Table 4 (old),Table S5,§5 text 'by run (Table S5)',Failure taxonomy codes by run and by paper.,Supplement/Editable_tables,renumbered T4→S5
+Table,Table 5 (old),Table S6,§5 text 'reveal (Table S6)',"Descriptive original-code reveal ledger (post-seal, not executed).",Supplement/Editable_tables,renumbered T5→S6
+Table,Table 6 (old),Table S7,§6 text 'Table S7',Paper-level successful-slot distribution.,Supplement/Editable_tables,renumbered T6→S7
+Table,Table 7 (old),Table S8,§6 text 'unresolved (Table S8)',100-paper funnel by state.,Supplement/Editable_tables,renumbered T7→S8
+Table,Table 8 (old),Table S9,§6 text 'completeness (Table S9)',Descriptive reveal completeness corrections.,Supplement/Editable_tables,renumbered T8→S9
+Table,Table 9 (old),Table S10,§6 text 'empty (Table S10)',Human validation (Section D): PENDING (not performed).,Supplement/Editable_tables,renumbered T9→S10
+Table,"Table S1 (old, Wilson)",Table S11,supplement intro + editable-tables intro,Analytic Wilson precision planning (planning only).,Supplement/Editable_tables,renumbered S1→S11 to keep supplement order sequential

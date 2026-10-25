@@ -48,7 +48,7 @@ The EPJ Research Infrastructures antecedent (Onishi and Ikenoue, 2026) concerns 
 
 ## What Paper II actually recorded
 
-The frozen main-study records (Table 11 in the editable tables; `results/input_state_descriptives.csv`; `data/adjudication/main-study-20260925/input_state_ledger.csv`) contain, as recorded:
+The frozen main-study records (Table S2 in the editable tables; `results/input_state_descriptives.csv`; `data/adjudication/main-study-20260925/input_state_ledger.csv`) contain, as recorded:
 
 - repository or accession for every sampled paper (delegated specification listings);
 - a file list for most papers;
@@ -72,7 +72,7 @@ For third-party or public input data, report where available:
 8. transformation log (raw → analytical input);
 9. licence/redistribution status (why an exact snapshot can or cannot be redistributed).
 
-Table 10 (`results/requirement_stage_table.csv`) assigns each element to the framework stage it serves and retains the existing rows for code availability, software/version reporting, container/environment, detailed Methods, parameters/defaults, random seed, resource requirements, independent reconstruction and robustness testing.
+Table S1 (`results/requirement_stage_table.csv`) assigns each element to the framework stage it serves and retains the existing rows for code availability, software/version reporting, container/environment, detailed Methods, parameters/defaults, random seed, resource requirements, independent reconstruction and robustness testing.
 
 ## Claim calibration
 

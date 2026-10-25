@@ -17,3 +17,13 @@
 - Corpus-side evidence references: 698 total, 0 unresolved
   (`evidence_refs_total` / `evidence_refs_unresolved` canonical rows) —
   unchanged this revision.
+
+
+## Addendum — numeric citation conversion (FINAL NON-HUMAN QC PATCH)
+
+Author–year citations were converted to numeric [1]–[21] in first-appearance
+order (EPJ numeric square-bracket default). proll_rauber_dynamic, previously
+uncited, is now cited as [13] in the §7.1 cluster [11–14]. Reference list is
+numeric; all 21 entries cited; all citations resolve. See
+REFERENCE_ORDER_AUDIT.md, REFERENCE_RENUMBER_MAP.csv, CITATION_SEQUENCE_CHECK.csv.
+Existence/status verdicts from the original audit are unchanged.

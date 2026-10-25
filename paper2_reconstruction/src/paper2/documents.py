@@ -1,14 +1,19 @@
 import json
 import os
+import re
 import zipfile
 from datetime import datetime, timezone
 from io import BytesIO
 from pathlib import Path
+from xml.sax.saxutils import escape
 
 import matplotlib
 from docx import Document
 from docx.document import Document as WordDocument
+from docx.oxml import parse_xml
 from docx.shared import Inches, Pt, RGBColor
+from docx.table import Table
+from docx.text.paragraph import Paragraph
 from matplotlib import pyplot as plt
 from matplotlib.patches import FancyBboxPatch
 from pptx import Presentation
@@ -73,26 +78,26 @@ DRY = [
     "Numerical result /\nconclusion",
 ]
 REFERENCES = (
-    "acm_terms",
-    "corebench",
-    "fair_principles",
-    "force11_data_citation",
     "goodman_crossref",
-    "klump_versioning",
     "nasem_metadata",
-    "paper2code",
-    "paperbench_arxiv",
+    "acm_terms",
     "parent_crossref",
-    "pasquier_provenance",
+    "wet_crossref",
+    "paperbench_arxiv",
+    "replicationbench",
+    "paper2code",
+    "scienceagentbench_arxiv",
+    "corebench",
+    "klump_versioning",
+    "rda_dynamic_data_citation",
     "proll_rauber_dynamic",
     "rauber_dynamic_subsets",
-    "rda_dynamic_data_citation",
-    "replicationbench",
-    "sandve_ten_rules",
-    "scienceagentbench_arxiv",
-    "stodden_enhancing",
     "swhid_content_hash",
-    "wet_crossref",
+    "fair_principles",
+    "force11_data_citation",
+    "pasquier_provenance",
+    "sandve_ten_rules",
+    "stodden_enhancing",
     "zhao_annotation_versions",
 )
 
@@ -133,9 +138,12 @@ def caption(document: WordDocument, text: str) -> None:
     line.runs[0].italic = True
 
 
-def table(document: WordDocument, rows: list[Row], columns: list[tuple[str, str]]) -> None:
-    result = document.add_table(rows=1, cols=len(columns))
-    result.style = "Table Grid"
+def table(
+    document: WordDocument, rows: list[Row], columns: list[tuple[str, str]]
+) -> Table:
+    result: Table = document.add_table(
+        rows=1, cols=len(columns), style="Table Grid"
+    )
     for cell, (_, label) in zip(result.rows[0].cells, columns, strict=False):
         cell.text = label
     for row in rows:
@@ -147,6 +155,176 @@ def table(document: WordDocument, rows: list[Row], columns: list[tuple[str, str]
                 line.paragraph_format.keep_with_next = row_index < len(result.rows) - 1
                 for run in line.runs:
                     run.font.size = Pt(9)
+    return result
+
+
+MATH_NS = 'xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"'
+
+
+def _mr(text: str, sty: str = "i") -> str:
+    return (
+        f'<m:r><m:rPr><m:sty m:val="{sty}"/></m:rPr>'
+        f'<m:t xml:space="preserve">{escape(text)}</m:t></m:r>'
+    )
+
+
+def _msub(base: str, sub: str) -> str:
+    return f"<m:sSub><m:e>{base}</m:e><m:sub>{sub}</m:sub></m:sSub>"
+
+
+def _msup(base: str, sup: str) -> str:
+    return f"<m:sSup><m:e>{base}</m:e><m:sup>{sup}</m:sup></m:sSup>"
+
+
+def _mfrac(num: str, den: str) -> str:
+    return f"<m:f><m:num>{num}</m:num><m:den>{den}</m:den></m:f>"
+
+
+def _macc(base: str, chr_: str = "̂") -> str:
+    return (
+        f'<m:acc><m:accPr><m:chr m:val="{chr_}"/></m:accPr><m:e>{base}</m:e></m:acc>'
+    )
+
+
+def _md(inner: str, beg: str = "(", end: str = ")") -> str:
+    return (
+        f'<m:d><m:dPr><m:begChr m:val="{beg}"/><m:endChr m:val="{end}"/></m:dPr>'
+        f"<m:e>{inner}</m:e></m:d>"
+    )
+
+
+def _mnary(base: str, sub: str, chr_: str = "∑") -> str:
+    return (
+        f'<m:nary><m:naryPr><m:chr m:val="{chr_}"/><m:limLoc m:val="undOvr"/></m:naryPr>'
+        f"<m:sub>{sub}</m:sub><m:sup/><m:e>{base}</m:e></m:nary>"
+    )
+
+
+_ABS_E = _md(_mr("E"), "|", "|")
+_ABS_U = _md(_mr("U"), "|", "|")
+_ABS_EPU = _md(_mr("E") + _mr("+") + _mr("U"), "|", "|")
+_S_HAT = _macc(_mr("S"))
+_Y_HAT = _macc(_mr("y"))
+
+# Exact plain-text pseudo-equations rendered as native OMML. Keys are matched
+# literally in protocol-derived prose; longest keys are applied first.
+EQUATIONS: list[tuple[str, str]] = [
+    (
+        "S_hat = sum_h N_h*ybar_h",
+        _S_HAT + _mr(" = ") + _mnary(_msub(_mr("N"), _mr("h")) + _Y_HAT, _mr("h")),
+    ),
+    (
+        "[L_E/(|E|+|U|), (U_E+|U|)/(|E|+|U|)]",
+        _md(
+            _mfrac(_msub(_mr("L"), _mr("E")), _ABS_E + _mr("+") + _ABS_U)
+            + _mr(", ")
+            + _mfrac(_msub(_mr("U"), _mr("E")) + _mr("+") + _ABS_U, _ABS_E + _mr("+") + _ABS_U),
+            "[",
+            "]",
+        ),
+    ),
+    (
+        "S_hat/sum_h N_h",
+        _mfrac(_S_HAT, _mnary(_msub(_mr("N"), _mr("h")), _mr("h"))),
+    ),
+    ("S_hat/|E|", _mfrac(_S_HAT, _ABS_E)),
+    (
+        "pi_h=n_h/N_h",
+        _msub(_mr("π"), _mr("h"))
+        + _mr("=")
+        + _mfrac(_msub(_mr("n"), _mr("h")), _msub(_mr("N"), _mr("h"))),
+    ),
+    ("N_h/n_h", _mfrac(_msub(_mr("N"), _mr("h")), _msub(_mr("n"), _mr("h")))),
+    ("alpha/(2H)", _mfrac(_mr("α"), _mr("2") + _mr("H"))),
+    ("sum_h N_h", _mnary(_msub(_mr("N"), _mr("h")), _mr("h"))),
+    ("pi_h", _msub(_mr("π"), _mr("h"))),
+    ("π_h", _msub(_mr("π"), _mr("h"))),
+    ("N_h", _msub(_mr("N"), _mr("h"))),
+    ("n_h", _msub(_mr("n"), _mr("h"))),
+    ("K_h", _msub(_mr("K"), _mr("h"))),
+    ("L_E", _msub(_mr("L"), _mr("E"))),
+    ("U_E", _msub(_mr("U"), _mr("E"))),
+    ("|E|+|U|", _ABS_E + _mr("+") + _ABS_U),
+    ("|E|", _ABS_E),
+    ("|U|", _ABS_U),
+    ("k+m<t", _mr("k") + _mr("+") + _mr("m") + _mr("<") + _mr("t")),
+    ("k>=t", _mr("k") + _mr("≥") + _mr("t")),
+    ("alpha=0.05", _mr("α") + _mr(" = 0.05")),
+    (
+        "target selected < run start < run stop <= blind freeze",
+        _mr("target selected < run start < run stop ≤ blind freeze"),
+    ),
+    ("t=2", _mr("t") + _mr(" = 2")),
+    ("t=3", _mr("t") + _mr(" = 3")),
+    ("t=1", _mr("t") + _mr(" = 1")),
+    (
+        "[v−0.5*10^-d, v+0.5*10^-d)",
+        _md(
+            _mr("v") + _mr("−") + _mr("0.5") + _msup(_mr("10"), _mr("−d"))
+            + _mr(", ")
+            + _mr("v") + _mr("+") + _mr("0.5") + _msup(_mr("10"), _mr("−d")),
+            "[",
+            ")",
+        ),
+    ),
+]
+EQUATION_RE = re.compile(
+    "|".join(re.escape(key) for key, _ in sorted(EQUATIONS, key=lambda kv: -len(kv[0])))
+)
+EQUATION_MAP = dict(EQUATIONS)
+EMPHASIS_RE = re.compile(r"(\*\*[^*]+\*\*|\*[^*]+\*)")
+
+
+def _emit_omml(paragraph_obj: Paragraph, xml_inner: str) -> None:
+    paragraph_obj._p.append(parse_xml(f"<m:oMath {MATH_NS}>{xml_inner}</m:oMath>"))
+
+
+def _emit_rich(paragraph_obj: Paragraph, text: str) -> None:
+    """Render backticks literally, **bold** bold, *italic* italic, equations as OMML."""
+    position = 0
+    for match in EQUATION_RE.finditer(text):
+        if match.start() > position:
+            _emit_text(paragraph_obj, text[position : match.start()])
+        _emit_omml(paragraph_obj, EQUATION_MAP[match.group(0)])
+        position = match.end()
+    _emit_text(paragraph_obj, text[position:])
+
+
+def _emit_text(paragraph_obj: Paragraph, text: str) -> None:
+    code_spans = [match.span() for match in re.finditer(r"`[^`]*`", text)]
+
+    def in_code(index: int) -> bool:
+        return any(start <= index < end for start, end in code_spans)
+
+    tokens: list[tuple[bool, str]] = []
+    position = 0
+    for match in re.finditer(r"\*\*", text):
+        if in_code(match.start()):
+            continue
+        if match.start() > position:
+            tokens.append((False, text[position : match.start()]))
+        tokens.append((True, ""))
+        position = match.end()
+    tokens.append((False, text[position:]))
+
+    bold = False
+    for toggle, segment in tokens:
+        if toggle:
+            bold = not bold
+            continue
+        for piece in re.finditer(r"`[^`]*`|[^`]+", segment):
+            value = piece.group(0)
+            if value.startswith("`"):
+                run = paragraph_obj.add_run(value)
+                run.bold = bold or None
+                continue
+            for index, italic_segment in enumerate(re.split(r"\*", value)):
+                if not italic_segment:
+                    continue
+                run = paragraph_obj.add_run(italic_segment)
+                run.bold = bold or None
+                if index % 2 == 1:
+                    run.italic = True
 
 
 def markdown(document: WordDocument, text: str) -> None:
@@ -161,16 +339,38 @@ def markdown(document: WordDocument, text: str) -> None:
                 index += 1
             columns = [(str(column), name) for column, name in enumerate(cells[0])]
             rows = [{str(column): cell for column, cell in enumerate(row)} for row in cells[2:]]
-            table(document, rows, columns)
+            rendered = table(document, rows, columns)
+            for table_row in rendered.rows:
+                for cell in table_row.cells:
+                    cell_paragraph = cell.paragraphs[0]
+                    cell_text = cell_paragraph.text
+                    for run in list(cell_paragraph.runs):
+                        run._r.getparent().remove(run._r)
+                    _emit_rich(cell_paragraph, cell_text)
+                    for run in cell_paragraph.runs:
+                        run.font.size = Pt(9)
             continue
         if line.startswith("# "):
             heading(document, line[2:], 1)
         elif line.startswith("## "):
             heading(document, line[3:], 2)
         elif line.startswith("- "):
-            document.add_paragraph(line[2:], style="List Bullet")
+            bullet = document.add_paragraph(style="List Bullet")
+            _emit_rich(bullet, line[2:])
         elif line.strip():
-            paragraph(document, line.strip("*"))
+            block = [line.strip()]
+            index += 1
+            while (
+                index < len(lines)
+                and lines[index].strip()
+                and not lines[index].startswith(("#", "- ", "|"))
+                and not re.match(r"\d+\.", lines[index])
+            ):
+                block.append(lines[index].strip())
+                index += 1
+            rich = document.add_paragraph()
+            _emit_rich(rich, " ".join(block))
+            continue
         index += 1
 
 
@@ -453,7 +653,7 @@ def main_study_paragraphs(analysis: dict[str, object]) -> list[str]:
         f"{denominators['sampled_main_cohort']} were sampled in {len(FIELDS)} frozen strata. "
         f"{denominators['attempted_papers_complete_triples']} sampled papers completed three "
         f"blind slots ({denominators['runs']} runs); {denominators['not_attempted_papers']} "
-        "were not run and retain machine-readable states (Table 2): external public reference "
+        "were not run and retain machine-readable states (Table S3): external public reference "
         "resource required, delegated G1–G5 negative, required inputs absent from the public "
         "listing, specification rejected by the quote/leakage validator, target value not "
         "located verbatim, every candidate input leaking the target, or no input retained.",
@@ -461,9 +661,9 @@ def main_study_paragraphs(analysis: dict[str, object]) -> list[str]:
         f"{conditional['attempted']} (secondary conditional rate; Wilson reference "
         f"{conditional['wilson_95_lower']:.2f}–{conditional['wilson_95_upper']:.2f}). "
         f"Prespecified thresholds — {thresholds}. "
-        "Run-level L1–L5 frequencies are in Table 3. Stop reasons: "
+        "Run-level L1–L5 frequencies are in Table S4. Stop reasons: "
         + ", ".join(f"{k} {v}" for k, v in stop.items())
-        + ". Failure codes by run (Table 4): "
+        + ". Failure codes by run (Table S5): "
         + ", ".join(f"{k} {v}" for k, v in code_runs.items())
         + ". F13 denotes the frozen resource ceiling, not demonstrated publication inadequacy.",
         "Under the frozen SAP the headline policy estimand retains non-attempted papers as "
@@ -475,7 +675,7 @@ def main_study_paragraphs(analysis: dict[str, object]) -> list[str]:
         f"unresolved reaches {pending['upper_sampling_policy_rate']:.3f}; it is a bound, not an "
         "estimate. No random-intercept model, perturbation, multiverse or alternative-"
         "implementation analysis was performed.",
-        "Descriptive original-code reveal (Table 5) was recorded only after the seal: "
+        "Descriptive original-code reveal (Table S6) was recorded only after the seal: "
         f"{reveal_counts['described']} attempted papers named public code routes or shipped "
         "scripts inside the data deposit (withheld from the solver) and are described; "
         f"{reveal_counts['missing']} named none and receive a missing reveal assessment. "
@@ -535,14 +735,15 @@ def verification_paragraphs(audit: dict[str, object]) -> list[str]:
         f"frozen mechanical adjudication and {pct(mapping(cond['verification_adjusted']))} under "
         f"the verification-adjusted layer, in which {a['slots_proposed_changed']} of "
         f"{a['slots_reviewed']} slot classifications were proposed for change and "
-        f"{a['slots_mechanical_supported']} were supported ({changed_text}; Table 6). The observed "
+        f"{a['slots_mechanical_supported']} were supported ({changed_text}; Table S7). The "
+        "observed "
         "end-to-end yield under the frozen workflow was "
         f"{pct(mapping(yield_['frozen_mechanical']))} "
         f"frozen and {pct(mapping(yield_['verification_adjusted']))} adjusted. None of these is an "
         "intrinsic probability that a publication is scientifically reproducible.",
         f"Verification of the {b['papers_reviewed']} non-executed papers confirmed "
         f"{b['confirmed']} recorded states, proposed {b['state_incorrect']} state corrections and "
-        f"left {b['unknown']} unresolved (Table 7). Non-confirmed states by frozen category: "
+        f"left {b['unknown']} unresolved (Table S8). Non-confirmed states by frozen category: "
         + ", ".join(f"{k} {v}" for k, v in mapping(b["corrections_by_frozen_state"]).items())
         + f". Of {detector['classifications']} all_inputs_leak_target flags, "
         f"{detector['confirmed']} confirmed, {detector['corrected']} corrected and "
@@ -572,7 +773,7 @@ def verification_paragraphs(audit: dict[str, object]) -> list[str]:
         f"proposed {e['proposed_corrections']} conservative completeness corrections, chiefly "
         "where "
         "deposited downstream scripts start from pre-computed inputs and cannot establish upstream "
-        "normalisation, filtering or exclusion completeness (Table 8; explicit "
+        "normalisation, filtering or exclusion completeness (Table S9; explicit "
         f"{mapping(completeness['frozen']).get('explicit', 0)} → "
         f"{mapping(completeness['adjusted']).get('explicit', 0)} dimensions). The reveal remains "
         "descriptive; no original code was executed and no blind score was revisited.",
@@ -584,7 +785,7 @@ def verification_tables(
 ) -> None:
     caption(
         document,
-        f"Table 6. Paper-level successful-slot distribution among "
+        f"Table S7. Paper-level successful-slot distribution among "
         f"{values['main_attempted_papers']} attempted papers: frozen "
         "mechanical versus verification-adjusted (AI-assisted review, provisional).",
     )
@@ -599,7 +800,7 @@ def verification_tables(
     )
     caption(
         document,
-        "Table 7. 100-paper funnel by state: frozen record, verification-adjusted state and "
+        "Table S8. 100-paper funnel by state: frozen record, verification-adjusted state and "
         "unresolved envelope (no reclassified paper was executed).",
     )
     table(
@@ -614,7 +815,7 @@ def verification_tables(
     )
     caption(
         document,
-        "Table 8. Descriptive reveal completeness corrections proposed by the E review "
+        "Table S9. Descriptive reveal completeness corrections proposed by the E review "
         "(papers with a code route only; descriptive, not executed).",
     )
     table(
@@ -629,7 +830,7 @@ def verification_tables(
     )
     caption(
         document,
-        "Table 9. Human validation (Section D): PENDING — no participant, case or outcome "
+        "Table S10. Human validation (Section D): PENDING — no participant, case or outcome "
         "data exist.",
     )
     table(
@@ -639,7 +840,7 @@ def verification_tables(
     )
     caption(
         document,
-        "Table 10. Conceptual mapping of reproducibility requirements to framework stages. "
+        "Table S1. Conceptual mapping of reproducibility requirements to framework stages. "
         "ACCESS is refined into resource accessibility, input-state identifiability and "
         "historical-state retrievability; the mapping is conceptual, not an empirical result.",
     )
@@ -650,7 +851,7 @@ def verification_tables(
     )
     caption(
         document,
-        "Table 11. ACCESS-stage input-state fields as recorded in the frozen main-study records "
+        "Table S2. ACCESS-stage input-state fields as recorded in the frozen main-study records "
         "(descriptive; fields not recorded are reported as such; no dataset drift was measured).",
     )
     table(
@@ -669,17 +870,21 @@ def main_study_tables(
     values: dict[str, int],
 ) -> None:
     caption(
-        document, "Table 2. Main-cohort paper dispositions (delegated; human adjudication pending)."
+        document,
+        "Table S3. Main-cohort paper dispositions (delegated; human adjudication pending).",
     )
     table(document, dispositions, [("disposition", "Disposition"), ("papers", "Papers")])
     caption(
         document,
-        f"Table 3. Run-level L1–L5 states across {values['main_blind_slots']} sealed slots.",
+        f"Table S4. Run-level L1–L5 states across {values['main_blind_slots']} sealed slots.",
     )
     table(document, run_levels, [("level", "Level"), ("state", "State"), ("runs", "Runs")])
-    caption(document, "Table 4. Failure taxonomy codes by run and by paper.")
+    caption(document, "Table S5. Failure taxonomy codes by run and by paper.")
     table(document, failure_codes, [("code", "Code"), ("runs", "Runs"), ("papers", "Papers")])
-    caption(document, "Table 5. Descriptive original-code reveal ledger (post-seal, not executed).")
+    caption(
+        document,
+        "Table S6. Descriptive original-code reveal ledger (post-seal, not executed).",
+    )
     table(
         document,
         reveal,
@@ -764,20 +969,19 @@ def build_documents() -> None:
     heading(document, "1 Introduction")
     paragraph(
         document,
-        "Computational reproducibility terminology varies across communities (Goodman et al., "
-        "2016; National Academies of Sciences, Engineering, and Medicine, 2019). ACM's "
+        "Computational reproducibility terminology varies across communities [1, 2]. ACM's "
         "post-2020 terminology distinguishes execution of authors' artifacts from results "
-        "obtained using independently developed artifacts (ACM Publications Board, 2020). "
+        "obtained using independently developed artifacts [3]. "
         "We therefore use publication-grounded independent computational reconstruction "
         "as an operational description rather than proposing a universal definition.",
     )
     paragraph(
         document,
         "The EPJ antecedent examines commercial software and version accessibility "
-        "(Onishi and Ikenoue, 2026). Those conditions motivate, but do not answer, whether "
+        "[4]. Those conditions motivate, but do not answer, whether "
         "the scientific description contains enough operational detail to implement the "
         "reported method independently. The Wet antecedent concerns environmental "
-        "confounding in clonal systems (Onishi, 2026). Its extension here is a conceptual "
+        "confounding in clonal systems [5]. Its extension here is a conceptual "
         "analogy: nominal materials or data may be available while operational specification "
         "remains incomplete. The Wet full text was not accessible in the preparation audit; "
         "no detailed empirical claim is imported from it.",
@@ -786,11 +990,11 @@ def build_documents() -> None:
         document,
         "Independent paper-to-code reconstruction already has substantial precedent. "
         "PaperBench restricts original implementations but supplies author clarifications "
-        "(Starace et al., 2025); ReplicationBench uses curated astrophysics tasks and supplied "
-        "execution information (Ye et al., 2025). Paper2Code studies repository generation "
-        "(Seo et al., 2026), while ScienceAgentBench evaluates curated scientific programming "
-        "tasks (Chen et al., 2025). CORE-Bench instead supplies original code and data "
-        "(Siegel et al., 2024; revised 2026). Their endpoints and information packages differ "
+        "[6]; ReplicationBench uses curated astrophysics tasks and supplied "
+        "execution information [7]. Paper2Code studies repository generation "
+        "[8], while ScienceAgentBench evaluates curated scientific programming "
+        "tasks [9]. CORE-Bench instead supplies original code and data "
+        "[10]. Their endpoints and information packages differ "
         "and must not be pooled as a publication-level reconstructability rate.",
     )
     paragraph(
@@ -841,8 +1045,8 @@ def build_documents() -> None:
             "schema or release identifier, and cryptographic checksum. Public availability alone "
             "was not treated as evidence that the exact historical analytical input remained "
             "identifiable or retrievable. This refinement is descriptive: the frozen G1–G5 gates "
-            "and barrier states were not rescored, and no dataset drift was measured. Table 10 "
-            "maps these reporting requirements to framework stages; Table 11 summarizes the "
+            "and barrier states were not rescored, and no dataset drift was measured. Table S1 "
+            "maps these reporting requirements to framework stages; Table S2 summarizes the "
             "fields actually recorded in the frozen main-study records.",
         ),
         (
@@ -978,14 +1182,14 @@ def build_documents() -> None:
         paragraph(document, text)
     paragraph(
         document,
-        "Tables 6–11 are supplied separately in the editable tables file and the supplement.",
+        "Tables S1–S10 are supplied separately in the editable tables file and the supplement.",
     )
     heading(document, "6 Human validation (Section D) — pending")
     paragraph(
         document,
         "No human validator has been recruited, no institutional ethics determination has been "
         "obtained and no human case has been scored. The Results text, table and figure for "
-        "Section D are intentionally empty (Table 9). The AI-assisted review in Section 5 is not "
+        "Section D are intentionally empty (Table S10). The AI-assisted review in Section 5 is not "
         "a substitute for human validation.",
     )
     heading(document, "7 Discussion boundary and submission hold")
@@ -1016,8 +1220,8 @@ def build_documents() -> None:
         f"{KEY_STATEMENT} Externally maintained public datasets, registries, genomic and "
         "administrative databases and APIs may be updated, corrected, reannotated or "
         "restructured, and query or API responses may change over time, while retaining the "
-        "same repository, accession, endpoint or dataset name (Klump et al., 2021; Rauber et "
-        "al., 2016; Rauber et al., 2021). The same repository, accession or URL therefore does "
+        "same repository, accession, endpoint or dataset name [11–14]. The same "
+        "repository, accession or URL therefore does "
         "not necessarily denote the same version, and the same version label does not by "
         "itself establish the same bytes. This does not imply that all same-accession "
         "resources change; it means that public availability does not by itself establish "
@@ -1025,17 +1229,16 @@ def build_documents() -> None:
         "abilities are distinct: the ability to redistribute an input, which authors may lack "
         "for third-party data under licence or legal constraints; the ability to identify the "
         "exact state that was used; and the ability to retrieve that historical state later. "
-        "A content hash verifies byte-level identity when the bytes are available (Di Cosmo et "
-        "al., 2020) but does not recover historical bytes that are no longer archived. Where "
+        "A content hash verifies byte-level identity when the bytes are available [15] "
+        "but does not recover historical bytes that are no longer archived. Where "
         "direct archival redistribution is not permitted, reproducibility must rely on "
         "sufficient state identification and provenance: repository or accession, release or "
         "version, retrieval timestamp, query parameters, file identity, checksum and "
-        "transformation provenance (Wilkinson et al., 2016; Data Citation Synthesis Group, "
-        "2014; Pasquier et al., 2017; Sandve et al., 2013; Stodden et al., 2016).",
+        "transformation provenance [16–20].",
     )
     paragraph(
         document,
-        "Software-version drift, the concern of the EPJ antecedent (Onishi and Ikenoue, 2026), "
+        "Software-version drift, the concern of the EPJ antecedent [4], "
         "and dataset-version drift are analogous but distinct: both can separate a nominally "
         "available resource from the state actually used. Versioned software may in some "
         "settings be preserved or rebuilt more readily than third-party historical data "
@@ -1053,8 +1256,8 @@ def build_documents() -> None:
         "papers stopped at the frozen barrier requiring an unserved external public reference "
         "resource (a state that the frozen protocol defined and this refinement leaves "
         "unchanged), and that the served inputs were logged with retrieval timestamps and "
-        "SHA-256 digests but without repository version identifiers (Table 11). Reference "
-        "resource identity can matter for results (Zhao and Zhang, 2015). Input-state "
+        "SHA-256 digests but without repository version identifiers (Table S2). Reference "
+        "resource identity can matter for results [21]. Input-state "
         "identifiability is therefore presented as a conceptual implication, a reporting "
         "requirement and a limitation relevant to reconstructability, not as a measured "
         "outcome. A focused bibliographic search found no established use of the terms "
@@ -1067,7 +1270,7 @@ def build_documents() -> None:
         "Proposed minimum reporting set for third-party or public input data (a recommendation, "
         "not an empirically validated standard), where available: "
         + "; ".join(f"({i}) {item}" for i, item in enumerate(MINIMUM_REPORTING, 1))
-        + ". Table 10 assigns each element to the framework stage it serves.",
+        + ". Table S1 assigns each element to the framework stage it serves.",
     )
     paragraph(
         document,
@@ -1104,9 +1307,9 @@ def build_documents() -> None:
         "bibliographic form before submission. Preprints and version-specific claims "
         "are identified in the reference ledger.",
     )
-    chosen = [row for row in references if row["reference_id"] in REFERENCES]
-    for row in sorted(chosen, key=reference_text):
-        paragraph(document, reference_text(row))
+    chosen = {row["reference_id"]: row for row in references}
+    for number, reference_id in enumerate(REFERENCES, start=1):
+        paragraph(document, f"[{number}] {reference_text(chosen[reference_id])}")
     document.save(str(output / "Preparation_draft_EN.docx"))
 
     supplement = Document()
@@ -1115,10 +1318,10 @@ def build_documents() -> None:
     paragraph(supplement, STATUS)
     paragraph(
         supplement,
-        "Table S1 gives analytic precision planning at assumed proportions. These values "
+        "Table S11 gives analytic precision planning at assumed proportions. These values "
         "are not observed outcomes and do not replace design-based intervals.",
     )
-    caption(supplement, "Table S1. Wilson planning intervals (unweighted binomial reference).")
+    caption(supplement, "Table S11. Wilson planning intervals (unweighted binomial reference).")
     table(
         supplement,
         precision,
@@ -1140,7 +1343,7 @@ def build_documents() -> None:
     tables = Document()
     style_document(tables)
     heading(tables, "Editable preparation tables", 0)
-    paragraph(tables, "Table 1 is the observed source audit; Table S1 is analytic planning only.")
+    paragraph(tables, "Table 1 is the observed source audit; Table S11 is analytic planning only.")
     caption(tables, "Table 1. Observed deposited corpus structure.")
     table(
         tables,
@@ -1153,7 +1356,7 @@ def build_documents() -> None:
     )
     main_study_tables(tables, dispositions, run_levels, failure_codes, reveal, values)
     verification_tables(tables, verification_dir, values)
-    caption(tables, "Table S1. Analytic Wilson precision planning.")
+    caption(tables, "Table S11. Analytic Wilson precision planning.")
     table(
         tables,
         precision,

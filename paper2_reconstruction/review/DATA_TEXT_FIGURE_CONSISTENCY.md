@@ -34,3 +34,14 @@ distinguishes design/protocol constants (A), source-derived observed values
 implementation/formatting constants (E); N=100 and 3-slots documented in
 both design and realized roles. No scientific result, sealed outcome, or
 manuscript estimate changed. Status: PASS.
+
+
+## FINAL NON-HUMAN QC PATCH addendum (figure/table + citation renumbering)
+
+Object numbering changed: all supplement/editable tables are now numbered
+S1–S11 (mapping in review/FIGURE_TABLE_RENUMBER_MAP.csv); main text retains
+Table 1 and Figure 1. All in-text citations updated to the S-scheme; numeric
+citations converted to [1]–[21] by first appearance (review/REFERENCE_*
+artifacts). No numeric claim, denominator, estimate, interval, figure value or
+conclusion changed — the renumbering is presentational only. DATA–TEXT–FIGURE
+consistency re-verified after renumbering: all canonical values unchanged.

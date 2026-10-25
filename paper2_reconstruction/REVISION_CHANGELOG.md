@@ -176,3 +176,28 @@ in both roles. Updated: HARDCODE_AUDIT.md, NUMERIC_HARDCODE_FINDINGS.csv
 
 **No scientific result changed; no sealed outcome changed; no manuscript
 estimate changed; this patch corrected audit taxonomy only.**
+
+
+## FINAL NON-HUMAN QC PATCH (this commit)
+
+- Renumbered supplement/editable tables to S1–S11 in first-citation order;
+  fixed the Methods-cites-Tables-10/11-before-Table-1 bug; Wilson planning
+  table S1→S11 to keep the supplement sequence strict.
+- Converted author–year citations to numeric [1]–[21] numbered by first
+  appearance; reference list now numeric; proll_rauber_dynamic now cited [13].
+- Converted all true equations in the supplement to native OMML (m:oMath):
+  Ŝ = Σ_h N_h·ȳ_h, Ŝ/|E|, Ŝ/Σ_h N_h, π_h = n_h/N_h, weights, |E|/|U|
+  cardinalities, k ≥ t / k + m < t, t = 1/2/3 thresholds, α = 0.05, α/(2H),
+  eligibility interval, rounding-bin interval. Code/JSON/CLI/glob tokens left
+  as literal text.
+- Removed all formatting `*` from Word deliverables: **bold**/*italic* now
+  render as real runs (including emphasis spanning code spans and wrapped
+  source lines); hard-wrapped protocol lines joined into single paragraphs.
+- Updated generator, verification_qc table checks, INPUT_STATE note and audit
+  docs to the S-numbering. New audit artifacts:
+  FIGURE_TABLE_ORDER_AUDIT.md + FIGURE_TABLE_RENUMBER_MAP.csv,
+  REFERENCE_ORDER_AUDIT.md + REFERENCE_RENUMBER_MAP.csv +
+  CITATION_SEQUENCE_CHECK.csv, OMML_EQUATION_AUDIT.md + OMML_EQUATION_MAP.csv,
+  ASTERISK_AUDIT.md + ASTERISK_OCCURRENCES.csv, LINE_BREAK_AUDIT.md.
+- No scientific result, denominator, estimate, interval, figure or table value
+  changed; sealed outcomes untouched.

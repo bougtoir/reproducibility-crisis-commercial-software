@@ -29,11 +29,19 @@ subprocess.run(
 final_pdf = final_docx.with_suffix(".pdf")
 assert final_pdf.exists(), "PDF conversion failed"
 
+subprocess.run(
+    ["soffice", "--headless", "--convert-to", "pdf",
+     "--outdir", str(MAN), str(final_supp)],
+    check=True, capture_output=True, timeout=300,
+)
+final_supp_pdf = final_supp.with_suffix(".pdf")
+assert final_supp_pdf.exists(), "supplement PDF conversion failed"
+
 manifest = json.loads(
     (ROOT / "results/preparation_artifact_manifest.json").read_text()
 )
 files = [ROOT / rel for rel in manifest] + [
-    final_docx, final_pdf, final_supp,
+    final_docx, final_pdf, final_supp, final_supp_pdf,
     ROOT / "results/preparation_artifact_manifest.json",
 ]
 out = DIST / "PaperII_FINAL_PRE_D_PACKAGE.zip"

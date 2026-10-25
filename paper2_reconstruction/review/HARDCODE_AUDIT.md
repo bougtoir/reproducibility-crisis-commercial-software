@@ -38,7 +38,7 @@ Everything computed downstream: 461 route-eligible; 100 actually sampled;
 L1–L5 run levels; stop reasons; failure codes; frozen 0/10; provisional
 adjusted 1/10; 10/100 reachability; end-to-end yields; all confidence
 intervals; B 81/7/2; leakage 1/7/2 of 10; C 25/25; E 130/5/3; policy-envelope
-bounds; weighted ranges; Table 10/11 counts; input-state descriptives
+bounds; weighted ranges; Table S1/S2 counts; input-state descriptives
 (frozen-record descriptive, not a drift measurement); evidence refs 698/0;
 D pending counter (0, `pending_external_not_performed`).
 

@@ -1,0 +1,22 @@
+old_reference_identity,new_reference_number,first_citation_location,verified_doi_or_url,status
+What does research reproducibility mean?,1,first citation token #1,10.1126/scitranslmed.aaf5027,verified in ledger; cited
+Reproducibility and Replicability in Science,2,first citation token #2,10.17226/25303,verified in ledger; cited
+New Changes to Badging Terminology,3,first citation token #3,not_reported,verified in ledger; cited
+The Hidden Cost of Reproducibility: Commercial Software Dependency in Published Research and the Version Accessibility Gap,4,first citation token #4,10.1007/s41781-026-00180-9,verified in ledger; cited
+The Invisible Variables: Why Clonal Systems are not Immune to Environmental Confounding,5,first citation token #5,10.1007/s12015-026-11239-w,verified in ledger; cited
+PaperBench: Evaluating AI's Ability to Replicate AI Research,6,first citation token #6,10.48550/arXiv.2504.01848,verified in ledger; cited
+ReplicationBench: Can AI Agents Replicate Astrophysics Research Papers?,7,first citation token #7,10.48550/arXiv.2510.24591,verified in ledger; cited
+Paper2Code: Automating Code Generation from Scientific Papers in Machine Learning,8,first citation token #8,10.48550/arXiv.2504.17192,verified in ledger; cited
+ScienceAgentBench: Toward Rigorous Assessment of Language Agents for Data-Driven Scientific Discovery,9,first citation token #9,10.48550/arXiv.2410.05080,verified in ledger; cited
+CORE-Bench: Fostering the Credibility of Published Research Through a Computational Reproducibility Agent Benchmark,10,first citation token #10,10.48550/arXiv.2409.11363,verified in ledger; cited
+Versioning Data Is About More than Revisions: A Conceptual Framework and Proposed Principles,11,first citation token #11,10.5334/dsj-2021-012,verified in ledger; cited
+Data Citation of Evolving Data: Recommendations of the RDA Working Group on Data Citation (WGDC),12,first citation token #12,10.15497/RDA00016,verified in ledger; cited
+"Scalable data citation in dynamic, large databases: Model and reference implementation",13,first citation token #13,10.1109/BigData.2013.6691588,verified in ledger; cited
+Precisely and Persistently Identifying and Citing Arbitrary Subsets of Dynamic Data,14,first citation token #14,10.1162/99608f92.be565013,verified in ledger; cited
+Referencing Source Code Artifacts: A Separate Concern in Software Citation,15,first citation token #15,10.1109/MCSE.2019.2963148,verified in ledger; cited
+The FAIR Guiding Principles for scientific data management and stewardship,16,first citation token #16,10.1038/sdata.2016.18,verified in ledger; cited
+Joint Declaration of Data Citation Principles,17,first citation token #17,10.25490/a97f-egyk,verified in ledger; cited
+If these data could talk,18,first citation token #18,10.1038/sdata.2017.114,verified in ledger; cited
+Ten Simple Rules for Reproducible Computational Research,19,first citation token #19,10.1371/journal.pcbi.1003285,verified in ledger; cited
+Enhancing reproducibility for computational methods,20,first citation token #20,10.1126/science.aah6168,verified in ledger; cited
+"A comprehensive evaluation of ensembl, RefSeq, and UCSC annotations in the context of RNA-seq read mapping and gene quantification",21,first citation token #21,10.1186/s12864-015-1308-8,verified in ledger; cited

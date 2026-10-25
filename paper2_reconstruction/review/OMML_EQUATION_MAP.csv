@@ -1,0 +1,27 @@
+document,location,original_text,equation_meaning,converted_to_omml,reason_if_not,verification_status
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,S_hat = sum_h N_h*ybar_h,stratified success-total estimator Ŝ = Σ_h N_h·ȳ_h,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,"[L_E/(|E|+|U|), (U_E+|U|)/(|E|+|U|)]","worst-case eligibility interval [L_E/(|E|+|U|), (U_E+|U|)/(|E|+|U|)]",yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,S_hat/sum_h N_h,conditional attemptable-domain estimate Ŝ/Σ_h N_h,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,S_hat/|E|,all-eligible policy estimate Ŝ/|E|,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,pi_h=n_h/N_h,stratum sampling fraction π_h = n_h/N_h,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,N_h/n_h,design weight N_h/n_h,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,alpha/(2H),Bonferroni-type tail probability α/(2H),yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,sum_h N_h,conditional-domain population Σ_h N_h,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,pi_h,stratum sampling fraction π_h,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,π_h,stratum sampling fraction π_h,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,N_h,stratum population N_h,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,n_h,stratum sample n_h,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,K_h,stratum possible-success total K_h,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,L_E,eligible-set lower success total L_E,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,U_E,eligible-set upper success total U_E,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,|E|+|U|,eligible + unresolved cardinality |E|+|U|,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,|E|,eligible-set cardinality |E|,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,|U|,unresolved-set cardinality |U|,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,k+m<t,insufficient clean+missing slots for threshold t,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,k>=t,threshold achievement k ≥ t,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,alpha=0.05,significance level α = 0.05,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,target selected < run start < run stop <= blind freeze,prospective ordering constraint (blind freeze after run),yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,t=2,majority threshold t = 2,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,t=3,strict threshold t = 3,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,t=1,permissive threshold t = 1,yes,,converted; no plain-text remnant
+Supplement_protocols_DRAFT_EN.docx (from protocols/SAP.md / protocols/*.md),protocol prose / tables,"[v−0.5*10^-d, v+0.5*10^-d)","rounding bin [v−0.5×10^−d, v+0.5×10^−d)",yes,,converted; no plain-text remnant

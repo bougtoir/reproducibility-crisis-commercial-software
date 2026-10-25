@@ -51,3 +51,12 @@ The final numeric audit distinguishes A design/protocol constants, B
 source-derived observed, C analysis-derived empirical, D external-source,
 E implementation/formatting constants (dual-role N=100 / 3-slots documented).
 No scientific result, sealed outcome, or manuscript estimate changed.
+
+
+## Update — FINAL NON-HUMAN QC PATCH applied
+
+Presentation-layer corrections completed (S-numbering, numeric citations,
+OMML equations, asterisk removal, line-wrap joining). Classification
+unchanged: SUBMISSION-READY EXCEPT D AND INVESTIGATOR SIGN-OFF. Remaining
+tasks are exclusively human-dependent (sign-off, ethics determination, Human
+Validation D, submission).

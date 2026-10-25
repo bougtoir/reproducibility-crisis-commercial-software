@@ -180,10 +180,17 @@ def run() -> list[tuple[str, bool, str]]:
             and f"{mapping(cond['verification_adjusted'])['numerator']}/10 (" in manuscript,
             "",
         ),
-        ("manuscript cites Tables 6-9", all(f"Table {n}" in manuscript for n in (6, 7, 8, 9)), ""),
         (
-            "Tables 6-9 present in editable tables and supplement",
-            all(f"Table {n}." in tables_doc and f"Table {n}." in supplement for n in (6, 7, 8, 9)),
+            "manuscript cites Tables S7-S10",
+            all(f"Table S{n}" in manuscript for n in (7, 8, 9, 10)),
+            "",
+        ),
+        (
+            "Tables S1-S11 present in editable tables and supplement",
+            all(
+                f"Table S{n}." in tables_doc and f"Table S{n}." in supplement
+                for n in range(1, 12)
+            ),
             "",
         ),
         (
